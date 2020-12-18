@@ -60,8 +60,22 @@ Factors limiting the number of registers:
 - microprogram counter
 - pipeline registers
 
+### Pipelining
+Pipelining (*pol.* potokowość) - technology of building processors consisting in the division of the processor logic responsible for the program execution process (processor instructions) into specialized groups in such a way that each group performs a part of the work related to the execution of the instruction. These groups are linked sequentially - into a *pipe* and perform their work simultaneously download data from the previous element in the sequence. In each of these groups, the task is in a different stage of execution. Processor instruction execution phases can be as follows:
+1. Get instructions from memory - instruction fetch (IF)
+2. Decode the instruction - instruction decode (ID)
+3. Execute the instruction - execute (EX)
+4. Memory access (MEM)
+5. Save the results of the instruction - store; write back (WB)
 
-last page: 20
+| ![pipeline](https://user-images.githubusercontent.com/43972902/102655285-5a2e6800-4172-11eb-99c2-eff0dd2317c7.png) |
+|:--:|
+| Source: *Architektura komputerów, Andrzej Smolarz, Politechnika Lubelska*  [18.12.2020] |
+
+
+
+
+last page: 21
 
 
 
