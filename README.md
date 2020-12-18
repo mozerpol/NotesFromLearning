@@ -29,7 +29,7 @@ The amount of work that aprocessor can complete in a single cycle is measured in
 ### Von Neumann Architecture (a.k.a. Princeton)
 It was developed for [ENIAC](https://en.wikipedia.org/wiki/ENIAC). It uses the same memory and data paths for both program and data storage. In other words Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.
 
-| ![von1](https://user-images.githubusercontent.com/43972902/102547890-255eda00-40ba-11eb-92a2-02efd58b855e.png) |
+ ![von1](https://user-images.githubusercontent.com/43972902/102547890-255eda00-40ba-11eb-92a2-02efd58b855e.png) 
 | ![von2](https://user-images.githubusercontent.com/43972902/102547956-3dcef480-40ba-11eb-956e-d3d3e922b339.png) |
 |:--:|
 | Source: *https://www.computerscience.gcse.guru/theory/von-neumann-architecture*  [17.12.2020] |
@@ -40,8 +40,45 @@ Computer architecture with separate storage and signal pathways for instructions
 |:--:|
 | Source: *https://en.wikipedia.org/wiki/Harvard_architecture*  [17.12.2020] |
 
+**Programmer-visible registers (User-Visible Registers)** - are the registers which are used during application programming and are directly used in the instructions. For example reserved registers like *UCSRA* (for *AVR*) or general purpose registers X1, ..., x31. 
+
+The registers are the fastest accessible memory locations, and because they are so fast, there are typically very few of them. In most processors, there are fewer than 32 registers. The size of the registers defines the size of the computer. For instance, a ”32 bit computer” has registers that are 32 bits long. The length of a register is known as the **word length** of the computer.
+
+Factors limiting the number of registers:
+- new CPU should be software-compatible with an old CPU. This requires the new chip to have exactly the same number of programmer-visible registersas the old chip.
+- Doubling the number general-purpose registers requires adding another bit to each in-struction that selects a particular register. Each 3-operand instruction (that specify 2source operands and a destination operand) would expand by 3 bits. 
+- Adding more registers adds more wires to the critical path, adding capacitance, which reduces the maximum clock speed of the CPU.
+
+*General purpose registers* - registers that can be used by the programmerto store arbitrary data. <br/>
+*Reserved registers* - registers thatcannot be accessed by the programmer directly.
+
+*Microarchitectural registers (physical registers)* - registers that are not programmer-visible these registers include:
+- memory address register
+- memory data register
+- instruction register
+- microinstruction register
+- microprogram counter
+- pipeline registers
+
+
+last page: 20
 
 
 
 
-last page: 17 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
