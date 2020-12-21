@@ -80,9 +80,16 @@ In the above 5-step pipeline, it takes five clock cycles to go through all the s
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
 #### Pipeline Hazards
-**Control Hazard** - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
+[Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html)) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
+The reduction of this problem can be achived by using the prediction of branching (jumps). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
 
+#### Methods of increasing the efficiency of pipeline processing in case of conditional jump instruction:
+1. Program fragment caching - consists in storing a program fragment in the processor's cache memory. This method is useful for handling loops. If the buffer is large enough to accommodate all loops, these commands only need to be fetched once. 
+2. out-of-order execution
+3. branch prediction
 
+[Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data.
+[Struktural Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Structural_hazards) - (pol. *konflikt zasobow*) - simultaneously requesting access to memory or other unique resource in the computer.
 
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
 
