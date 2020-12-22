@@ -118,8 +118,8 @@ Most computer architectures include at least a register that is usually reserved
 *CISC* - Complex Instruction Set Computer. The most well known/commoditized CISC ISAs are the Motorola 68k and Intel x86 architectures. <br/>
 *RISC* - Reduced Instruction Set Computer. The most well known/commoditized RISC ISAs are the PowerPC, ARM, MIPS and SPARC
 architectures. <br/>
-
-
+*Program Counter* (PC) - a register inside the microprocessor, that contains the address of the current instruction. During the fetch cycle, the instruction from the address indicated by the program counter is read from memory into the instruction
+register (IR), and the program counter is incremented by n , where n is the word length of the machine (in bytes). <br/>
 
 
 
