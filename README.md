@@ -107,12 +107,17 @@ faster than external RAM).
 | Source: *https://en.wikipedia.org/wiki/Endianness*  [22.12.2020] |
 
 #### NUXI problem 
-NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string ?UNIX? might look like ?NUXI? on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). (source: **https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem**) 
+NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string **UNIX** might look like **NUXI** on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). (source: **https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem**) 
 
-last page: 21
+### Stack 
+Stack - The stack is a sequential set of memory locations that is set to act like a LIFO (last in, first out) buffer. <br/>
+*push* operation add data to the top of the stack <br/>
+*pop* remove add data from the top of the stack <br/>
+Most computer architectures include at least a register that is usually reserved for the stack pointer.
 
-
-
+*CISC* - Complex Instruction Set Computer. The most well known/commoditized CISC ISAs are the Motorola 68k and Intel x86 architectures. <br/>
+*RISC* - Reduced Instruction Set Computer. The most well known/commoditized RISC ISAs are the PowerPC, ARM, MIPS and SPARC
+architectures. <br/>
 
 
 
