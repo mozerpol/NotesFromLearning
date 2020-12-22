@@ -80,7 +80,7 @@ In the above 5-step pipeline, it takes five clock cycles to go through all the s
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
 #### Pipeline Hazards
-[Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html)) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
+[Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
 The reduction of this problem can be achived by using the prediction of branching (jumps). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
 
 #### Methods of increasing the efficiency of pipeline processing in case of conditional jump instruction:
@@ -88,14 +88,23 @@ The reduction of this problem can be achived by using the prediction of branchin
 2. out-of-order execution
 3. branch prediction
 
-[Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data.
+[Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data. <br/>
 [Struktural Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Structural_hazards) - (pol. *konflikt zasobow*) - simultaneously requesting access to memory or other unique resource in the computer.
 #### Superscalar processing
-[Superscalar processing](https://en.wikipedia.org/wiki/Superscalar_processor) - (pol. *przetwarzanie superskalarne*) - it's based on the use of several scalar data processing pipelines run in parallel, which allows for the execution of more than one instruction in one clock cycle.
-
+[Superscalar processing](https://en.wikipedia.org/wiki/Superscalar_processor) - (pol. *przetwarzanie superskalarne*) - it's based on the use of several scalar data processing pipelines run in parallel, which allows for the execution of more than one instruction in one clock cycle. <br/>
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
+### Cache
+Most CPUs manufactured do not have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller
+and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3
+(L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much
+faster than external RAM).
 
+### Endianness
+[Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
 
+| ![endian](https://user-images.githubusercontent.com/43972902/102886883-3a3ec300-4456-11eb-8abf-990583caa77e.png) |
+|:--:|
+| Source: *https://en.wikipedia.org/wiki/Endianness*  [22.12.2020] |
 
 last page: 21
 
