@@ -106,6 +106,9 @@ faster than external RAM).
 |:--:|
 | Source: *https://en.wikipedia.org/wiki/Endianness*  [22.12.2020] |
 
+#### NUXI problem 
+NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string ?UNIX? might look like ?NUXI? on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). (source: **https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem**) 
+
 last page: 21
 
 
