@@ -107,28 +107,34 @@ faster than external RAM).
 | Source: *https://en.wikipedia.org/wiki/Endianness*  [22.12.2020] |
 
 #### NUXI problem 
-NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string **UNIX** might look like **NUXI** on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). (source: **https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem**) 
+NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string **UNIX** might look like **NUXI** on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). [source](https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem) 
 
 ### Stack 
-Stack - The stack is a sequential set of memory locations that is set to act like a LIFO (last in, first out) buffer. <br/>
-*push* operation add data to the top of the stack <br/>
-*pop* remove add data from the top of the stack <br/>
-Most computer architectures include at least a register that is usually reserved for the stack pointer.
-
-*CISC* - Complex Instruction Set Computer. The most well known/commoditized CISC ISAs are the Motorola 68k and Intel x86 architectures. <br/>
-*RISC* - Reduced Instruction Set Computer. The most well known/commoditized RISC ISAs are the PowerPC, ARM, MIPS and SPARC
+**Stack** - The stack is a sequential set of memory locations that is set to act like a LIFO (last in, first out) buffer. Most computer architectures include at least a register that is usually reserved for the stack pointer.<br/>
+**push** operation add data to the top of the stack <br/>
+**pop** remove add data from the top of the stack <br/>
+**CISC** - Complex Instruction Set Computer. The most well known/commoditized CISC ISAs are the Motorola 68k and Intel x86 architectures. <br/>
+**RISC** - Reduced Instruction Set Computer. The most well known/commoditized RISC ISAs are the PowerPC, ARM, MIPS and SPARC
 architectures. <br/>
-*Program Counter* (PC) - a register inside the microprocessor, that contains the address of the current instruction. During the fetch cycle, the instruction from the address indicated by the program counter is read from memory into the instruction
+**Program Counter** (PC) - a register inside the microprocessor, that contains the address of the current instruction. During the fetch cycle, the instruction from the address indicated by the program counter is read from memory into the instruction
 register (IR), and the program counter is incremented by n , where n is the word length of the machine (in bytes). <br/>
 
+Branching and Jumping is the ability to load the PC register with a new address that isnot the next sequential address. In general, a **jump** or **call** occurs unconditionally, and a **branch** occurs on a given condition. A **call** instruction is a branch instruction with the additional effect of storing the current address in a specific location, e.g. pushing it on the stack, to allow for easy return to continue execution. In many programs, ”call” is the second-most-frequently used instruction (after ”move”). 
+
+**NOP**, short for ”no operation” is an instruction that produces no result and causes no side effects. NOPs are useful for timing and preventing hazards.
+
+**Random Access Memory** (RAM), also known as *main memory*. Dynamic RAM (DRAM) is a type of RAM that contains a single transistor anda capacitor. DRAM is smaller than SRAM, and therefore can store more data in a smaller area. Because of the charge and discharge times of the capacitor, however, DRAM tends to be slower than SRAM. Many modern types of Main Memory are based on DRAM design because of the high memory densities. Because DRAM is simpler than SRAM, it is typically cheaper to produce.
+
+**Static RAM** (SRAM) is a type of memory storage that uses 6 transistors to storedata. These transistors store data so long as power is supplied to the RAM and do not needto be refreshed. SRAM is typically used in processor caches because of its faster speed, but not in main memory because it takes up more space.
+| ![sram](https://user-images.githubusercontent.com/43972902/103000615-ab03df00-452b-11eb-8ac3-f5ac6a4c7baa.png) |
+|:--:|
+| Source: *https://pl.wikipedia.org/wiki/Pami%C4%99%C4%87_statyczna*  [23.12.2020] |
+
+Most processors and other complicated hardware circuits are typically divided into two components: a **datapath** and a **control unit**. The **datapath** contains all the hardware necessary to perform all the necessary operations. In many cases, these hardware modules are parallel to one another, and the final result is determined by multiplexing all the partial results. The **control unit** determines the operation of the datapath, by activating switches and passing control signals to the various multiplexers. In this way, **the control unit can specify how the data flows through the datapath**.
 
 
 
-
-
-
-
-
+page 37
 
 
 
