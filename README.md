@@ -161,9 +161,18 @@ Lay out the basic arithmetic operations you want your chip to have:
 List other capabilities that your machine has:
 - Unconditional jumps•Conditional Jumps (and what conditions?)
 - Stack operations (Push, pop)
+##### 2. Design the datapath
+We need to determine what ALU architecture that our processor will use:
+- Accumulator
+- Stack
+- Register
+- A combination of the above 3
+##### 3. Create ISA
+There are a few thingsthat we need to consider:
+- Is this processor RISC, CISC, or VLIW?
+- How long is a machine word?
+- How do you deal with immediate values? What kinds of instructions can accept immediate values?
 
-
-
-
+finish later: CREATE ISA !!!!!!!!
 
 
