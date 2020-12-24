@@ -132,9 +132,15 @@ Branching and Jumping is the ability to load the PC register with a new address 
 
 Most processors and other complicated hardware circuits are typically divided into two components: a **datapath** and a **control unit**. The **datapath** contains all the hardware necessary to perform all the necessary operations. In many cases, these hardware modules are parallel to one another, and the final result is determined by multiplexing all the partial results. The **control unit** determines the operation of the datapath, by activating switches and passing control signals to the various multiplexers. In this way, **the control unit can specify how the data flows through the datapath**.
 
+**Relative jump** - the instruction’s operand tells how many bytes the program counter should be increased or decreased. <br/> 
+**Absolute jump** - the instruction’s operand is copied to the program counter; the operand is an absolute memory address where the execution should continue. 
 
+### Design Steps microprocessor or microcontroller unit:
+- Determine the capabilities the new processor should have.
+- Lay out the datapath to handle the necessary capabilities.
+- Define the machine code instruction format (ISA)
+- Construct the necessary logic to control the datapath.
 
-page 37
 
 
 
