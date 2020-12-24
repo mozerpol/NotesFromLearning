@@ -136,11 +136,31 @@ Most processors and other complicated hardware circuits are typically divided in
 **Absolute jump** - the instruction’s operand is copied to the program counter; the operand is an absolute memory address where the execution should continue. 
 
 ### Design Steps microprocessor or microcontroller unit:
-- Determine the capabilities the new processor should have.
-- Lay out the datapath to handle the necessary capabilities.
-- Define the machine code instruction format (ISA)
-- Construct the necessary logic to control the datapath.
+1. Determine the capabilities the new processor should have.
+2. Lay out the datapath to handle the necessary capabilities.
+3. Define the machine code instruction format (ISA)
+4. Construct the necessary logic to control the datapath.
+##### 1. Determine machine capabilities
+Some questions to start:
+1. Is this chip an embedded chip, a general-purpose chip, or a different type entirely? 
+2. What, if any, are the limitations in terms of resources, price, power, or speed?
+3. With that in mind, we need to ask what our chip will do:
+    - Does it have integer, floating-point, or fixed point arithmetic, or a combination of allthree?
+    - Does it have scalar or vector operation abilities?
+    - Is it self-contained, or must it interface with a number of external peripherals?
+    - Will it support interrupts? If so, How much interrupt latency is tolerable? How muchinterrupt-response jitter is tolerable?
+    - We also need to ask ourselves whether the machine will support a wide array of instructions, or if it will have a limited set of instructions. More instructions make the design more difficult, but make programming and using the chip easier. On the other hand, having fewer instructions is easier to design, but can be harder and more costly to program.
 
+Lay out the basic arithmetic operations you want your chip to have:
+- Addition/Subtraction
+- Multiplication
+- Division 
+- Shifting and Rotating
+- Logical Operations: AND, OR, XOR, NOR, NOT, etc. 
+
+List other capabilities that your machine has:
+- Unconditional jumps•Conditional Jumps (and what conditions?)
+- Stack operations (Push, pop)
 
 
 
