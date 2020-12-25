@@ -179,11 +179,23 @@ A **register file** is a whole collection of registers, typically all of which a
 ### Multiplexers
 | ![mux](https://user-images.githubusercontent.com/43972902/103135238-38276f00-46b7-11eb-86f4-eacf6f62a873.png)|
 |:--:|
+| A 2-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
 
 A multiplexer is an input selector. A multiplexer has 1 output, a control input, and several data inputs. For ease, we number multiplexer inputs from zero, at the top. If the control signal is ”0”, the 0th input is moved to the output. If the control signal is ”3”, the 3rd inputis moved to the output.A multiplexer with *N* control signal bits can support <img src="https://render.githubusercontent.com/render/math?math=2^{N}"> inputs. For example, a multiplexer with 3 control signals can support <img src="https://render.githubusercontent.com/render/math?math=2^{3} = 8"> inputs. Multiplexers are typically abbreviated as *”MUX”*.
 
+| ![mux441](https://user-images.githubusercontent.com/43972902/103135454-bb959000-46b8-11eb-9202-fd5b04be5052.png) |
+|:--:|
+| A 4-to-1 mux |
+| Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
+<br/>
+| ![mux81](https://user-images.githubusercontent.com/43972902/103135424-8a1cc480-46b8-11eb-9fe0-a1040dc84e7e.png)|
+|:--:|
+| A 8-to-1 mux |
+| Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
 
+
+# ADD VERILOG FILE WITH MUX!!!!!
 
 
 
