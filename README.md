@@ -168,11 +168,22 @@ We need to determine what ALU architecture that our processor will use:
 - Register
 - A combination of the above 3
 ##### 3. Create ISA
-There are a few thingsthat we need to consider:
+There are a few things that we need to consider:
 - Is this processor RISC, CISC, or VLIW?
 - How long is a machine word?
 - How do you deal with immediate values? What kinds of instructions can accept immediate values?
 
-finish later: CREATE ISA !!!!!!!!
+A **register** is a storage element typically composed of an array of flip-flops. <br/>
+A **register file** is a whole collection of registers, typically all of which are the same length. A register file takes three inputs, an index address value, a data value, and an enable signal.A signaldecoderis used to pass the data value from the register file input to the particular register with the specified address.
+
+### Multiplexers
+| ![mux](https://user-images.githubusercontent.com/43972902/103135238-38276f00-46b7-11eb-86f4-eacf6f62a873.png)|
+|:--:|
+| Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
+
+A multiplexer is an input selector. A multiplexer has 1 output, a control input, and several data inputs. For ease, we number multiplexer inputs from zero, at the top. If the control signal is ”0”, the 0th input is moved to the output. If the control signal is ”3”, the 3rd inputis moved to the output.A multiplexer with *N* control signal bits can support <img src="https://render.githubusercontent.com/render/math?math=2^{N}"> inputs. For example, a multiplexer with 3 control signals can support <img src="https://render.githubusercontent.com/render/math?math=2^{3} = 8"> inputs. Multiplexers are typically abbreviated as *”MUX”*.
+
+
+
 
 
