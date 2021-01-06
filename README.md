@@ -189,13 +189,33 @@ A multiplexer is an input selector. A multiplexer has 1 output, a control input,
 | A 4-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
 <br/>
-| ![mux81](https://user-images.githubusercontent.com/43972902/103135424-8a1cc480-46b8-11eb-9fe0-a1040dc84e7e.png)|
+| ![81](https://user-images.githubusercontent.com/43972902/103786157-681e2d00-503c-11eb-8c88-b5e0778b5f30.png) |
 |:--:|
 | A 8-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
 
+I'll translate it once again, but in different way. <br/>
+It will be easier use this true table for four input mux:
+| ![mul](https://user-images.githubusercontent.com/43972902/103803417-d0770980-5050-11eb-92b1-65bae9c80bae.png) |
+|:--:|
+| A 4-to-1 mux |
+| Source: *https://i1.wp.com/technobyte.org/wp-content/uploads/2020/01/TRUTH-TABLE-4X1-MUX.png?ssl=1*  [06.01.2021] |
 
-# ADD VERILOG FILE WITH MUX!!!!!
+We have four outputs and four inputs. If we have four inputs we need two select lines, because:
+- 0b00 means first input
+- 0b01 means second input
+- 0b10 means third input
+- 0b11 means fourth input
+If we select second input (s1 = 0, s0 = 0), then we must carry input to output like on this pseudocode:
+
+```
+if((s0 == 0) && (s1 == 1)) then (out == second_input)
+```
+
+
+
+
+
 
 
 
