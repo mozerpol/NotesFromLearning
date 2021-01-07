@@ -7,6 +7,7 @@ module fullAdder(
 );
   
   /*
+  // This part is diffrent way for creating full adder using gates
   wire xor1_out;
   wire and1_out;
   wire and2_out;
@@ -21,3 +22,17 @@ module fullAdder(
   assign {Cout, S} = A + B + Cin;  
   
 endmodule
+
+/*
+he truth table for mux looks like:
+| A | B | Cin |Cout | S |
+-------------------------
+| 0 | 0 |  0  |  0  | 0 |
+| 0 | 1 |  0  |  0  | 1 |
+| 1 | 0 |  0  |  0  | 1 |
+| 1 | 1 |  0  |  1  | 0 |
+| 0 | 0 |  1  |  0  | 1 |
+| 0 | 1 |  1  |  1  | 0 |
+| 1 | 0 |  1  |  1  | 0 |
+| 1 | 1 |  1  |  1  | 1 |
+*/
