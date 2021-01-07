@@ -212,6 +212,7 @@ If we select second input (s1 = 0, s0 = 0), then we must carry input to output l
 ```
 if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
+You can find verilog file for mux [here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/multiplexer)
 ### Adder
 An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indices, increment and decrement operators and similar operations. 
 Adders can be divided into:
@@ -226,17 +227,32 @@ Each adder has a completion type:
 
 Each full full adder consists of two half adders.
 
-###### Haf adder
+###### Half adder
 The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
 | ![halfAdder](https://user-images.githubusercontent.com/43972902/103895819-492da280-50f1-11eb-8409-38ec5e2aa301.png) |
 |:--:|
 | Half adder |
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
+| ![halfAdderDiagram](https://user-images.githubusercontent.com/43972902/103943954-45bb0b00-5133-11eb-8088-c986e5057c83.png) |
+|:--:|
+| Half adder logic diagram |
+| Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
+###### Full adder
+Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as A, B, and Cin
+The truth table:
+| ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
+|:--:|
+| Half adder |
+| Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
+| ![fullAdderDiagram](https://user-images.githubusercontent.com/43972902/103944001-57041780-5133-11eb-8c73-f792a7446a0d.png) |
+|:--:|
+| Full adder logic diagram |
+| Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
-
+[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
 
 
 
