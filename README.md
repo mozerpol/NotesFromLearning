@@ -206,11 +206,49 @@ We have four outputs and four inputs. If we have four inputs we need two select 
 - 0b01 means second input
 - 0b10 means third input
 - 0b11 means fourth input
+
 If we select second input (s1 = 0, s0 = 0), then we must carry input to output like on this pseudocode:
 
 ```
 if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
+### Adder
+An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indices, increment and decrement operators and similar operations. 
+Adders can be divided into:
+1. serial adder - during each operation, they add two component bits and a carry bit
+2. parallel adder - they add together the bits from all positions, and the carry bit is performed depending on how the one-bit adders are connected.
+    - ripple-carry adder
+    - carry look-ahead adder
+    
+Each adder has a completion type:
+- full adder
+- half adder
+
+Each full full adder consists of two half adders.
+
+###### Haf adder
+The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
+| ![halfAdder](https://user-images.githubusercontent.com/43972902/103895819-492da280-50f1-11eb-8409-38ec5e2aa301.png) |
+|:--:|
+| Half adder |
+| Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
