@@ -253,6 +253,24 @@ The truth table:
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
+### ALU
+ALU - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
+| ![alu](https://user-images.githubusercontent.com/43972902/103954812-4a88ba80-5145-11eb-9e76-ac0dcff442a6.png) |
+|:--:|
+| A symbolic representation of an ALU |
+| Source: *https://en.wikipedia.org/wiki/Arithmetic_logic_unit*  [08.01.2021] |
+
+**Signals:**
+1. Data - A basic ALU has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising each bus) are identical and match the native word size of the external circuitry.
+2. Opcode - The opcode input is a parallel bus that conveys to the ALU an operation selection code, which is an enumerated value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
+3. Status - The status outputs are various individual signals that convey supplemental information about the result of the current ALU operation. General-purpose ALUs commonly have status signals such as: 
+    - Carry-out - conveys the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
+    - Zero - indicates all bits of Y are logic zero.
+    - Negative - indicates the result of an arithmetic operation is negative.
+    - Overflow - indicates the result of an arithmetic operation has exceeded the numeric range of Y.
+    - Parity - indicates whether an even or odd number of bits in Y are logic one.
+
+
 
 
 
