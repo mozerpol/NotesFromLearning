@@ -270,6 +270,7 @@ ALU - arithmetic logic unit is a combinational digital circuit that performs ari
     - Overflow - indicates the result of an arithmetic operation has exceeded the numeric range of Y.
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
+[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/alu) you can find code in verilog for simple ALU.
 
 
 
