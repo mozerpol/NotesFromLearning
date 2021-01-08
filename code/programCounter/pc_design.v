@@ -1,3 +1,5 @@
+// Actually program counter is a simple counter
+
 module program_counter(
   input clk, // the clock
   input reset, // it resets the counter synchronously
