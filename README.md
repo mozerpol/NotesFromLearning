@@ -293,6 +293,7 @@ Microcode - is a computer hardware technique that inser a layer of organisation 
 - Set the ALU to perform two's-complement addition
 - Store the result value in register 8
 
+Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult).
 
 
 ##### Instruction Decoder
