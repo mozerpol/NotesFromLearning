@@ -286,7 +286,17 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 **Offset and Non-Offset Branching** - many systems have capabilities to use both offset and non-offset branching:
 ![branching3](https://user-images.githubusercontent.com/43972902/104107847-0a9a1280-52c0-11eb-910a-43b1af898596.png)
 
+##### Microcode
+Microcode - is a computer hardware technique that inser a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying electronics so that instructions can be designed and altered more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
+- Connect register 1 to the A side of the ALU
+- Connect register 7 to the B side of the ALU
+- Set the ALU to perform two's-complement addition
+- Store the result value in register 8
 
+
+
+##### Instruction Decoder
+Instruction Decoder - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. 
 
 
 
