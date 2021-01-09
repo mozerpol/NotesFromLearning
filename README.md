@@ -271,8 +271,20 @@ ALU - arithmetic logic unit is a combinational digital circuit that performs ari
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/alu) you can find code in verilog for simple ALU.
+### Program counter
+Program counter - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instructionb decoder and the program counter is updated to point to the next instruction. 
 
+**RISC computer have all the instructions are the same length.** <br/>
+**In CISC computers each instruction can be a different length.**
+##### Branching
+Branching occurs at one of a set of special instructions known collectively as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded and a new PC value is loaded from an external source:
+![branching](https://user-images.githubusercontent.com/43972902/104107763-3ec10380-52bf-11eb-93c6-7f6feb8a2031.png)
 
+An **offset branch** is a branch where a value is added (or subtracted) to the current PC valueto produce the new value:
+![branching2](https://user-images.githubusercontent.com/43972902/104107819-ceff4880-52bf-11eb-9346-53c02a36b111.png)
+
+**Offset and Non-Offset Branching** - many systems have capabilities to use both offset and non-offset branching:
+![branching3](https://user-images.githubusercontent.com/43972902/104107847-0a9a1280-52c0-11eb-910a-43b1af898596.png)
 
 
 
