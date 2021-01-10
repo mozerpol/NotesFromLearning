@@ -317,7 +317,7 @@ Ok, once again, but using different words. The microcode usually implements the 
 ##### Instruction Decoder
 *Instruction Decoder* - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. Its purpose is to translate an instruction code into the address in the micro memory where the micro code for the instruction starts.
 
-##### Register File
+### Register File
 Registers are temporary storage locations inside the CPU that hold data and addresses. The register file is the component that contains all the general purpose registers of the microprocessor. A few CPUs also place special registers such as the PC and the status register in the register file. Other CPUs keep them separate. A simple register file is a set of registers and a decoder. The register file requires an address and a data input:
 ![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
 
@@ -329,9 +329,12 @@ A *register bank* contains a number of register files or pages. Only one page ca
 If the register bank has *N* registers, and a page can only show *M* registers (with N > M), we can address registers with two values, *n* and *m* respectively. We can define these values as:
 ![reg](https://user-images.githubusercontent.com/43972902/104124513-90b26980-5351-11eb-86f2-0cd4c441b40c.png)
 
+In other words, *n* and *m* are the number of bits required to address *N* and *M* registers, respectively. We can break down the address into a single value as such:
+![reg2](https://user-images.githubusercontent.com/43972902/104124580-e9820200-5351-11eb-9242-787dad79213c.png)
 
+Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the pageaddress and the register address.
 
-
+[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
 
 
 
