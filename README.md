@@ -293,8 +293,20 @@ Microcode - is a computer hardware technique that inser a layer of organisation 
 - Set the ALU to perform two's-complement addition
 - Store the result value in register 8
 
-Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult).
+Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
 
+##### Microarchitecture
+Microarchitecture - also called computer organization and sometimes abbreviated as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
+- 8086
+- i386
+- Intel Core
+- Sandy Bridge
+- Haswell
+- Skylake
+| ![microarchitecture](https://user-images.githubusercontent.com/43972902/104111760-798a6200-52e6-11eb-93be-7e6a75f1dd97.png) |
+|:--:|
+| Block diagram of the i386 microarchitecture |
+| Source: *https://en.wikipedia.org/wiki/Intel_80386*  [10.01.2021] |
 
 ##### Instruction Decoder
 Instruction Decoder - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. 
