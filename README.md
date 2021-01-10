@@ -311,6 +311,9 @@ Ok, once again, but using different words. The microcode usually implements the 
 ##### Machine state register
 *Machine state register (MSR)* - is one of three process control registers present in the [PowerPC](https://en.wikipedia.org/wiki/PowerPC) processor architecture. 
 
+##### Control store
+*Control store* - part of a CPU's control unit that stores the CPU's microprogram. 
+
 ##### Instruction Decoder
 *Instruction Decoder* - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. 
 
