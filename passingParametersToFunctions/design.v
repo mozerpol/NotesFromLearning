@@ -1,18 +1,18 @@
-module wyswietlLiczbe;
-  parameter liczba = 0;
-  parameter znak = "A"; 
+module showNumber;
+  parameter number = 0;
+  parameter character = "A"; 
   
   initial
-    $display("Wartosc liczby: %d; Znak: %c", liczba, znak);
+    $display("Value of the number: %d; Character: %c", number, character);
 endmodule
 
-module pierwszySposob;
-  defparam jeden.liczba = 1, dwa.liczba = 2;
-  wyswietlLiczbe jeden();
-  wyswietlLiczbe dwa();
+module firstWay;
+  defparam one.number = 1, two.number = 2;
+  showNumber one();
+  showNumber two();
 endmodule
 
-module drugiSposob;
-  wyswietlLiczbe #(13, "B") wywolajFunkcje();
-  wyswietlLiczbe #(.liczba(14), .znak("C")) jakasFunkcja();
+module secondWay;
+  showNumber #(13, "B") callFunction();
+  showNumber #(.number(14), .character("C")) anyFunction();
 endmodule
