@@ -254,7 +254,7 @@ The truth table:
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
 ### ALU
-ALU - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
+*ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
 | ![alu](https://user-images.githubusercontent.com/43972902/103954812-4a88ba80-5145-11eb-9e76-ac0dcff442a6.png) |
 |:--:|
 | A symbolic representation of an ALU |
@@ -272,7 +272,7 @@ ALU - arithmetic logic unit is a combinational digital circuit that performs ari
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/alu) you can find code in verilog for simple ALU.
 ### Program counter
-Program counter - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instructionb decoder and the program counter is updated to point to the next instruction. 
+*Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instructionb decoder and the program counter is updated to point to the next instruction. 
 
 **RISC computer have all the instructions are the same length.** <br/>
 **In CISC computers each instruction can be a different length.**
@@ -287,7 +287,7 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 ![branching3](https://user-images.githubusercontent.com/43972902/104107847-0a9a1280-52c0-11eb-910a-43b1af898596.png)
 
 ##### Microcode
-Microcode - is a computer hardware technique that inser a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying electronics so that instructions can be designed and altered more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
+*Microcode* - is a computer hardware technique that inser a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying electronics so that instructions can be designed and altered more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
 - Connect register 1 to the A side of the ALU
 - Connect register 7 to the B side of the ALU
 - Set the ALU to perform two's-complement addition
@@ -296,7 +296,7 @@ Microcode - is a computer hardware technique that inser a layer of organisation 
 Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
 
 ##### Microarchitecture
-Microarchitecture - also called computer organization and sometimes abbreviated as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
+*Microarchitecture* - also called computer organization and sometimes abbreviated as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
 - 8086
 - i386
 - Intel Core
@@ -308,8 +308,11 @@ Microarchitecture - also called computer organization and sometimes abbreviated 
 | Block diagram of the i386 microarchitecture |
 | Source: *https://en.wikipedia.org/wiki/Intel_80386*  [10.01.2021] |
 
+##### Machine state register
+*Machine state register (MSR)* - is one of three process control registers present in the [PowerPC](https://en.wikipedia.org/wiki/PowerPC) processor architecture. 
+
 ##### Instruction Decoder
-Instruction Decoder - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. 
+*Instruction Decoder* - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. 
 
 
 
