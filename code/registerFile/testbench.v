@@ -73,3 +73,4 @@ module regFile_tb;
     end 
 
 endmodule
+//https://esrd2014.blogspot.com/p/register-file.html
