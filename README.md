@@ -345,14 +345,17 @@ The memory unit is typically one of the slowest components of a microcontroller,
 ![alu2_1](https://user-images.githubusercontent.com/43972902/104484629-cbbed200-55c9-11eb-842d-e3b8968b3ed7.png)
 
 CPU designers have used a variety of names for the arithmetic logic unit, including *ALU*, *integerexecution unit*, and *E-box*.
+
 ##### Example: 2-Bit ALU
 This is an example of a basic 2-bit ALU. The boxes on the right hand side of the image are multiplexers and are used to select between various operations: OR, AND, XOR, and addition.
 ![alu2_2](https://user-images.githubusercontent.com/43972902/104485370-b4341900-55ca-11eb-92f6-577594152da2.png)
 
 Notice that all the operations are performed in parallel, and the select signal (*OP*) is usedto determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
 Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. In all images below, the orange represents memory structures internal to the CPU (registers), and the purple represents external memory (RAM).
+##### Accumulator
+![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
-
+An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator.
 
 
 
