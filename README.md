@@ -357,6 +357,27 @@ Each category of instruction set architecture (ISA): *stack*, *accumulator*, *re
 ![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
 An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator.
+##### Register-to-Register
+![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
+
+One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length. 
+##### Register Stack
+![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
+
+In a register stack, the ALU reads the operands from the top of the stack, and the result is pushed onto the top of the stack. Complicated mathematical operations required ecomposition into [Reverse-Polish](https://en.wikipedia.org/wiki/Reverse_Polish_notation) form. The benefit comes from a highly simplified ISA. These machines are called *0-operand* or *zero address machines* because operands don’t need to be specified, because all operations act on specified stack locations. In the diagram, *SP* is the pointer to the top of the stack.
+##### Register-and-Memory
+![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
+One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
+
+
+
+
+
+
+
+
+
+
 
 
 
