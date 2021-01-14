@@ -377,7 +377,10 @@ Where *AX* and *BX* are the names of the registers, so the result is stored back
 `ADD R1, R2, R3` <br/>
 Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
 
-
+### FPU
+The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
+#### Floating point numbers
+Floating point numbers are specified in two parts: the exponent (*e*), and the mantissa (*m*). The value of a floating point number, *v*, is generally calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=m*2^{e}">
 
 
 
