@@ -368,11 +368,14 @@ In a register stack, the ALU reads the operands from the top of the stack, and t
 ##### Register-and-Memory
 ![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
 One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
-
-
-
-
-
+##### IA-32
+*The Intel IA-32* ISA (*x86* processors) use a **register stack architecture for the floating point unit**, but it uses a **modified Register-to-Register structure for integer operations**. All integer operations can specify a register as the first operand, and a register or memory location as the second operand. The first operand acts as an accumulator, so that the result is stored in the first operand register. The downside (pol. *minusem*) to this is that the instruction words are not uniform in length, which means that the instruction fetch and decode modules of the processor need to be very complex. A typical IA-32 instruction is written as: <br/>
+`ADD AX, BX` <br/>
+Where *AX* and *BX* are the names of the registers, so the result is stored back into *AX*.
+##### MIPS
+*MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
+`ADD R1, R2, R3` <br/>
+Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
 
 
 
