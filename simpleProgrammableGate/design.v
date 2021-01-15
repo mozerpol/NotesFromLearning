@@ -1,32 +1,24 @@
-module programmable_gate(
-  input wire a,
-  input wire b,
-  input wire f0,
-  input wire f1,
-  output wire y
+// Code is exactly the same as in https://github.com/mozerpol/learningVerilog/blob/main/twoSeparateGates/design.v repository
+module and_area( // after keyword "module" is its name and portlist
+  input wire in1,
+  input wire in2,
+  output wire out1_and
 );
-  
-  wire b1y, b2y, b3y, b4y;
-  wire b5y, b8y, b10y, b13y, b15y;
-  wire b6y, b7y, b9y, b11y, b12y, b14y;
-  
-  not(b1y, f1);
-  not(b2y, f0);
-  not(b3y, a);
-  not(b4y, b);
-  
-  or(b5y, b, a);
-  and(b6y, b, a);
-  and(b7y, b5y, f0);
-  or(b8y, b7y, b6y);
-  and(b9y, b8y, b1y);
 
-  or(b10y, b4y, b3y);
-  and(b11y, b4y, b3y);
-  and(b12y, b10y, b2y);
-  or(b13y, b12y, b11y);
-  and(b14y, b13y, f1);
-  
-  or(y, b9y, b14y);
-  
+  // If we see "assign" it means, that it's register level
+  assign out1_and = in1 & in2;
+  // and(out1_and, in1, in2); // If we see gates, it means that it's gate level.
+endmodule
+
+module gates_area(
+  input wire in1,
+  input wire in2,
+  input wire in3,
+  output wire out_or
+);
+
+  wire internal_wire; // Variable for our internal purposes
+
+  and_area A1(in1, in2, internal_wire);
+  or(out_or, in3, internal_wire); // It's gate level, gate_name(output,input,input);
 endmodule
