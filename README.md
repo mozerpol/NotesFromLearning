@@ -381,6 +381,26 @@ Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is 
 The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
 #### Floating point numbers
 Floating point numbers are specified in two parts: the exponent (*e*), and the mantissa (*m*). The value of a floating point number, *v*, is generally calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=m*2^{e}">
+##### IEEE 754
+IEEE 754 format numbers are calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=(1%2Bm)*2^{e}">
+The mantissa, *m*, is normalized in this standard, so that it falls between the numbers *1.0* and *2.0*.
+| ![ieee754](https://user-images.githubusercontent.com/43972902/104811649-49b6ef00-57fd-11eb-8c79-e798fb0b6d32.png) |
+|:--:|
+| Source: *https://pl.wikipedia.org/wiki/IEEE_754*  [16.01.2021] |
+
+| ![ieee7542](https://user-images.githubusercontent.com/43972902/104811790-48d28d00-57fe-11eb-9e61-b9a2a5f42c3d.png) |
+|:--:|
+| Source: *https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/*  [16.01.2021] |
+
+We write a single precision number in *IEEE-754* format on 32 bits. The first bit is the *S* bit. If the number is negative, it means *S* will be equal to *1*. If it is positive, *S* is *0*. Then we have *8* bits which represent the exponent, wherein (pol. *przy czym*) we have range of exponent from *-127* to *128*. The next 23 bits are the mantissa of the number, the leading non-zero bit is omitted (pol. *pominięty*). This gives about 7-8 decimal significant places. Ok, it's time for example. Let's convert single-precision IEEE 754 number into a floating-point decimal value. Let's take: <br/> `1 10000001 10110011001100110011010` <br/>
+But exceptionally I will not write an example by yourself, but will just paste the screenshot.
+| ![exampleiee](https://user-images.githubusercontent.com/43972902/104812255-589fa080-5801-11eb-9676-a5ec1a520247.png) |
+|:--:|
+| Source: *https://class.ece.iastate.edu/arun/CprE281_F05/ieee754/ie5.html*  [16.01.2021] |
+
+[Here](https://babbage.cs.qc.cuny.edu/IEEE-754/) is calcualtor, which can help converts floating point numbers in the IEEE 754 standard. 
+
+
 
 
 
