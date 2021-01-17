@@ -400,10 +400,24 @@ But exceptionally I will not write an example by yourself, but will just paste t
 
 [Here](https://babbage.cs.qc.cuny.edu/IEEE-754/) is calcualtor, which can help converts floating point numbers in the IEEE 754 standard. 
 
+Multiplying two floating point numbers is done as such:
+![mult](https://user-images.githubusercontent.com/43972902/104842083-dc6f9080-58c6-11eb-95f5-4b39fedb011e.png)
 
+Likewise, division can be performed by:
+![div](https://user-images.githubusercontent.com/43972902/104842488-f9a45f00-58c6-11eb-97ff-2ae9bf238e9b.png)
 
+**Floating point addition and subtraction is more difficult than multiplication**. The only way that floating point numbers can be added together is if the exponents of both numbers are the same. This means that when we add two numbers together, we need first to scale the numbers so that they have the same exponent. 
 
+##### Floating Point Unit Design
+FPU needs the following components: <br/>
+**For addition/Subtraction:**
+- A comparator (subtractor) to determine the difference between exponents, and to determine the smaller of the two exponents,
+- An adder unit to add that difference to the smaller exponent,
+- A shift unit, to shift the mantissa the specified number of spaces.
 
+**An adder to add the mantissas together:**
+- A multiplier (or a divider) for the mantissa part,
+- An adder for the exponent prts.
 
 
 
