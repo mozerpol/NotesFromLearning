@@ -228,7 +228,7 @@ Each adder has a completion type:
 
 Each full full adder consists of two half adders.
 
-###### Half adder
+##### Half adder
 The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
 | ![halfAdder](https://user-images.githubusercontent.com/43972902/103895819-492da280-50f1-11eb-8409-38ec5e2aa301.png) |
 |:--:|
@@ -240,7 +240,7 @@ The half adder adds two single binary digits A and B. It has two outputs, sum (S
 | Half adder logic diagram |
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
-###### Full adder
+##### Full adder
 Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as A, B, and Cin
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
@@ -254,6 +254,21 @@ The truth table:
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
+
+##### Serial Adder
+Serial Adder - serial binary adder performs binary addition bit by bit. Serial binary addition is done by a flip-flop and a full adder. The flip-flop takes the signal on each clock cycle and provides its value as the carry-in signal on the next clock cycle. After all of the bits of the input operands have arrived, all of the bits of the sum have come out of the sum output. <br/>
+**Example:** <br/>
+Decimal: 5 + 9 = 14 <br/>
+X = 5, Y = 9, Sum = 14 <br/>
+Binary: 0101 + 1001 = 1110 <br/>
+Addition of each step: <br/>
+![adderres](https://user-images.githubusercontent.com/43972902/104843852-03c95c00-58cd-11eb-9b24-1dac58177fd3.png)
+
+Result = 1110 or 14
+
+// finish desc https://verilogcodes.blogspot.com/2017/11/verilog-code-for-n-bit-serial-adder.html
+
+
 ### ALU
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
 | ![alu](https://user-images.githubusercontent.com/43972902/103954812-4a88ba80-5145-11eb-9e76-ac0dcff442a6.png) |
@@ -306,6 +321,7 @@ Ok, once again, but using different words. The microcode usually implements the 
 - Sandy Bridge
 - Haswell
 - Skylake
+
 | ![microarchitecture](https://user-images.githubusercontent.com/43972902/104111760-798a6200-52e6-11eb-93be-7e6a75f1dd97.png) |
 |:--:|
 | Block diagram of the i386 microarchitecture |
@@ -418,6 +434,19 @@ FPU needs the following components: <br/>
 **An adder to add the mantissas together:**
 - A multiplier (or a divider) for the mantissa part,
 - An adder for the exponent prts.
+
+### Control Unit
+*Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components toperform the desired task.
+
+
+
+
+
+
+
+
+
+
 
 
 
