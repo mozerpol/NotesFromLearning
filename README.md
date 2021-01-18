@@ -266,7 +266,51 @@ Addition of each step: <br/>
 
 Result = 1110 or 14
 
-// finish desc https://verilogcodes.blogspot.com/2017/11/verilog-code-for-n-bit-serial-adder.html
+Ok, I'll try explain how it works, but using different words. I think it's easy. Everything is based on *XOR* gate. Let's look at truth table for two input *XOR*: <br/>
+
+| A | B | Output |
+|:--:|:--:|:--:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+So, if we have only one *true*, then the result is *true*. Let's look at truth table for three input *XOR*: <br/>
+| A | B | C | Output |
+|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+Situation is almost the same like in two input case. If we have odd *true* in our input then we have *true* on output. Why am I talking about this? Because *serial adder* works similarly. 
+| ![serialAdder2](https://user-images.githubusercontent.com/43972902/104928523-0ac29e00-59a3-11eb-9fb9-f8be726f219e.png) |
+|:--:|
+| Full adder logic diagram |
+| Source: *https://beingelectricalengineer.blogspot.com/2019/03/serial-adder.html*  [18.01.2021] |
+
+
+DObra chyba wiem wstepnie jak to dziala. Wszystko opiera sie o XOR. Tablica prawdy dla XOR dwa wejscia:
+00 - 0
+01 - 1
+10 - 1
+11 - 0
+Czyli tam gdzie jest jeden element prawdziwy mamy prawde
+Dla XOR trojelementowego
+000 - 0
+001 - 1
+010 - 1
+011 - 0
+100 - 1
+101 - 0
+110 - 0
+111 - 1
+Czyli znowu: jezeli wystepuje tylko jeden element prawdziwy to mamy prawde.
+I na tym polega dzialanie szeregowego sumatora pelnego. Jak mamy jeden element prawdziwy to na wyjsciu jest prawda, jak dwa elementy prawdziwe to na wyjsciu jest falsz, ale uwaga! na wyjsciu przeniesienia bitu pojawia sie prawda i wchodzi ona pozniej na trzecie wejscie sumatora.
+
 
 
 ### ALU
