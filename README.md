@@ -305,6 +305,13 @@ Let's look at truth table for *serial adder*: <br/>
 | 1 | 0 | 0 | 0 | 1 |
 | 1 | 1 | 0 | 1 | 0 |
 | 0 | 0 | 1 | 0 | 1 |
+If we have odd *true* in our input, then we have *true* on output. Below is a more accuracy diagram:
+| ![serialAdder3](https://user-images.githubusercontent.com/43972902/104935129-2467e380-59ab-11eb-9bce-13d021a7c5b3.png) |
+|:--:|
+| Serial adder logic diagram |
+| Source: *https://www.ece.mcmaster.ca/~shirani/2di4/chapter8p2.pdf*  [18.01.2021] |
+
+[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) is implementatnion in Verilog for serial adder.
 
 ### ALU
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
