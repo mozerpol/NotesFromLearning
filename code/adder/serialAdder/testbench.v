@@ -1,58 +1,28 @@
-module tb;
+module serial_adder_tb();
+  
+  reg clk_tb;
+  reg in_A_tb;
+  reg in_B_tb;
 
-  // Inputs
-  reg clk;
-  reg reset;
-  reg a;
-  reg b;
-  reg cin;
-
-  // Outputs
-  wire s;
-  wire cout;
-
-  // Instantiate the Unit Under Test (UUT)
-  serial_adder uut (
-    .clk(clk), 
-    .reset(reset), 
-    .a(a), 
-    .b(b), 
-    .cin(cin), 
-    .s(s), 
-    .cout(cout)
+  serial_adder UUT(
+    .clk(clk_tb), 
+    .in_A(in_A_tb), 
+    .in_B(in_B_tb)
   );
 
   initial begin
     $dumpfile("tb.vcd");
     $dumpvars;
-    // Initialize Inputs
-    clk = 1;
-    reset = 0;
-    a = 0;
-    b = 0;
-    cin = 0;
-    reset = 1;  
-    #20;
-    reset = 0;
-    //add two 4 bit numbers, 1111 + 1011 = 11101
-    a = 1; b = 1; cin = 1;  #10;
-    a = 1; b = 0; cin = 0;  #10;
-    a = 1; b = 1; cin = 0;  #10;
-    a = 1; b = 1; cin = 0;  #10;
-    reset = 1;
-    #10;
-    reset = 0;
-    //add two 5 bit numbers, 11011 + 10001 = 101101
-    a = 1; b = 1; cin = 1;  #10;
-    a = 1; b = 0; cin = 0;  #10;
-    a = 0; b = 0; cin = 0;  #10;
-    a = 1; b = 0; cin = 0;  #10;
-    a = 1; b = 1; cin = 0;  #10;
-    reset = 1;
-    #10;
-    $finish;
+
+    clk_tb = 1;
+    in_A_tb = 0; in_B_tb = 0;
+    #10 in_A_tb = 0; in_B_tb = 1;
+    #10 in_A_tb = 1; in_B_tb = 0;
+    #10 in_A_tb = 1; in_B_tb = 1;
+	#10 in_A_tb = 0; in_B_tb = 0;
+    #20 $finish;
   end
 
-  always #5 clk = ~clk; //generate clock with 10 ns clock period.
+  always #5 clk_tb = ~clk_tb;
 
 endmodule

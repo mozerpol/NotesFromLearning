@@ -1,29 +1,20 @@
-// Serial adder for N bits. Note that we don't have to mention N here. 
 module serial_adder(   
-  input clk, reset, // Clock and reset
-  input a, b, cin,  // Note that cin is used for only first iteration.
-  output reg s, cout  // Note that s comes out at every clock cycle and cout is valid only for last clock cycle.
+  input clk,
+  input in_A, in_B,
+  output reg out
 );
 
-  reg c, flag;
+  reg cin = 0, cout = 0;
 
-  always@(posedge clk or posedge reset)
+  always@(posedge clk)
     begin
-      if(reset == 1) begin //active high reset
-        s = 0;
-        cout = c;
-        flag = 0;
-      end 
-      else begin
-        if(flag == 0) 
-          begin
-            c = cin;  //on first iteration after reset, assign cin to c.
-            flag = 1;  //then make flag 1, so that this if statement isnt executed any more.
-          end 
-        cout = 0;
-        s = a ^ b ^ c;  //SUM
-        c = (a & b) | (c & b) | (a & c);  //CARRY
-      end 
-    end
+      // (condition) ? conditionFulfilled : conditionNotFulfilled ;
+      if(in_A & in_B) cout = 1;
+      else cin = 0;
+      if(cout) cin = 1;
+      else cout = 0;
+      out = in_A ^ in_B ^ cin;
+      //   cout = (in_A & in_B) | (cin & in_B) | (in_A & cin); 
+    end 
 
 endmodule 
