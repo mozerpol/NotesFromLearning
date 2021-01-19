@@ -358,7 +358,7 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
 
 ##### Microarchitecture
-*Microarchitecture* - also called computer organization and sometimes abbreviated as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
+*Microarchitecture* - also called computer organization and sometimes abbreviated (pol. *w skrocie*) as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular (pol. *szczególny*) processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
 - 8086
 - i386
 - Intel Core
@@ -378,18 +378,19 @@ Ok, once again, but using different words. The microcode usually implements the 
 *Control store* - part of a CPU's control unit that stores the CPU's microprogram. 
 
 ##### Instruction Decoder
-*Instruction Decoder* - reads the next instruction from memory, and sends thecomponent pieces of that instruction to the necessary destinations. A CISC decoder is typically set up as a state machine. The RISC instruction decoder is typically a very simple device. Its purpose is to translate an instruction code into the address in the micro memory where the micro code for the instruction starts.
+*Instruction Decoder* - reads the next instruction from memory, and sends the component pieces of that instruction to the necessary destinations. A CISC decoder is typically set up (*typically set up* - *zwykle skonfigurowane
+*) as a state machine. The RISC instruction decoder is typically a very simple device. Its purpose is to translate an instruction code into the address in the micro memory where the micro code for the instruction starts.
 
 ### Register File
 Registers are temporary storage locations inside the CPU that hold data and addresses. The register file is the component that contains all the general purpose registers of the microprocessor. A few CPUs also place special registers such as the PC and the status register in the register file. Other CPUs keep them separate. A simple register file is a set of registers and a decoder. The register file requires an address and a data input:
 ![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
 
 ##### Register Bank
-Consider a situation where the machine word is very small, and therefore the available address space for registers is very limited. If we have a machine word that can only accommodate 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
+Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
 A *register bank* contains a number of register files or pages. Only one page can be active at a time, and there are additional instructions added to the ISA to switch between the available register pages. Data values can only be written to and read from the currently active register page, but instructions can exist to move data from one page to another.
 ![registerBank](https://user-images.githubusercontent.com/43972902/104124348-bee37980-5350-11eb-8b9d-81467cb88db9.png) 
 
-If the register bank has *N* registers, and a page can only show *M* registers (with N > M), we can address registers with two values, *n* and *m* respectively. We can define these values as:
+If the register bank has *N* registers, and a page can only show *M* registers (with *N* > *M*), we can address registers with two values, *n* and *m* respectively. We can define these values as:
 ![reg](https://user-images.githubusercontent.com/43972902/104124513-90b26980-5351-11eb-86f2-0cd4c441b40c.png)
 
 In other words, *n* and *m* are the number of bits required to address *N* and *M* registers, respectively. We can break down the address into a single value as such:
