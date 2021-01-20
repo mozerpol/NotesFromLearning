@@ -50,7 +50,7 @@ Factors (pol. *czynniki*) limiting the number of registers:
 - Doubling the number general-purpose registers requires adding another bit to each instruction that selects a particular register. Each 3-operand instruction (that specify 2-source operands and a destination operand) would expand by 3 bits. 
 - Adding more registers adds more wires to the critical path, adding capacitance, which reduces the maximum clock speed of the CPU.
 
-*General purpose registers* - registers that can be used by the programmerto store arbitrary data. <br/>
+*General purpose registers* - registers that can be used by the programmer to store arbitrary data (pol. *dowolne dane*). <br/>
 *Reserved registers* - registers that cannot be accessed by the programmer directly.
 
 *Microarchitectural registers (physical registers)* - registers that are not programmer-visible these registers include:
@@ -62,7 +62,7 @@ Factors (pol. *czynniki*) limiting the number of registers:
 - pipeline registers
 
 ### Pipelining
-Pipelining (*pol.* potokowość) - technology of building processors consisting in the division of the processor logic responsible for the program execution process (processor instructions) into specialized groups in such a way that each group performs a part of the work related to the execution of the instruction. These groups are linked sequentially - into a *pipe* and perform their work simultaneously (czyt. *simultejnisli*) download data from the previous element in the sequence. In each of these groups, the task is in a different stage of execution. Processor instruction execution phases can be as follows:
+Pipelining (*pol.* potokowość) - technology of building processors consisting in the division (pol. *polegający na podziale*) of the processor logic responsible for the program execution process (processor instructions) into specialized groups in such a way that each group performs a part of the work related to the execution of the instruction. These groups are linked sequentially - into a *pipe* and perform their work simultaneously (czyt. *simultejnisli*) download data from the previous element in the sequence. In each of these groups, the task is in a different stage of execution. Processor instruction execution phases can be as follows:
 1. Get instructions from memory - instruction fetch (IF)
 2. Decode the instruction - instruction decode (ID)
 3. Execute the instruction - execute (EX)
@@ -76,7 +76,7 @@ Pipelining (*pol.* potokowość) - technology of building processors consisting 
 In the above 5-step pipeline, it takes five clock cycles to go through all the steps in the pipeline. In other words, executing one instruction take 5 clock cycles, because instruciotn must go to through all five steps. However, due to the simultaneous operation of all stages of the pipeline, 5 instructions are executed simultaneously, each at a different stage of execution. This means that processor starts and stops one instruction every one clock cycle and *statistically* executes the one instruction in every clock cycle. Each stage from the pipeline does less work compared to a single logic, so it can do it faster - with greater frequency - so by increasing the number of stages additionally, it can achieve ever higher operating frequencies.
 
 **Features of the pipeline architecture:**
-- instructions are executed "overlapped" (but not in parallel!). The execution of the next instruction begins before the current instruction finishes executing.
+- Instructions are executed "overlapped" (but not in parallel!). The execution of the next instruction begins before the current instruction finishes executing.
 - Each block of processor is used on each clock cycle, processing different phases of different instructions. 
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
@@ -86,8 +86,8 @@ The reduction of this problem can be achived by using the prediction of branchin
 
 #### Methods of increasing the efficiency of pipeline processing in case of conditional jump instruction:
 1. Program fragment caching - consists in storing a program fragment in the processor's cache memory. This method is useful for handling loops. If the buffer is large enough to accommodate all loops, these commands only need to be fetched once. 
-2. out-of-order execution
-3. branch prediction
+2. Out-of-order execution
+3. Branch prediction
 
 [Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data. <br/>
 [Struktural Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Structural_hazards) - (pol. *konflikt zasobow*) - simultaneously requesting access to memory or other unique resource in the computer.
@@ -108,25 +108,25 @@ faster than external RAM).
 | Source: *https://en.wikipedia.org/wiki/Endianness*  [22.12.2020] |
 
 #### NUXI problem 
-NUXI problem -  Refers to the problem of transferring data between machines with differingbyte-order. The string **UNIX** might look like **NUXI** on a machine with adifferent byte sex (e.g., when transferring data from a little-endian toa big-endian, or vice-versa). [source](https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem) 
+NUXI problem -  Refers to the problem of transferring data between machines with differing byte-order. The string **UNIX** might look like **NUXI** on a machine with a different byte sex (e.g., when transferring data from a little-endian to a big-endian, or vice-versa). [source](https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem) 
 
 ### Stack 
 **Stack** - The stack is a sequential set of memory locations that is set to act like a LIFO (last in, first out) buffer. Most computer architectures include at least a register that is usually reserved for the stack pointer.<br/>
-**push** operation add data to the top of the stack <br/>
-**pop** remove add data from the top of the stack <br/>
+**push** - operation add data to the top of the stack <br/>
+**pop** - remove add data from the top of the stack <br/>
 **CISC** - Complex Instruction Set Computer. The most well known/commoditized CISC ISAs are the Motorola 68k and Intel x86 architectures. <br/>
 **RISC** - Reduced Instruction Set Computer. The most well known/commoditized RISC ISAs are the PowerPC, ARM, MIPS and SPARC
 architectures. <br/>
 **Program Counter** (PC) - a register inside the microprocessor, that contains the address of the current instruction. During the fetch cycle, the instruction from the address indicated by the program counter is read from memory into the instruction
-register (IR), and the program counter is incremented by n , where n is the word length of the machine (in bytes). <br/>
+register (IR), and the program counter is incremented by *n* , where *n* is the word length of the machine (in bytes). <br/>
 
-Branching and Jumping is the ability to load the PC register with a new address that isnot the next sequential address. In general, a **jump** or **call** occurs unconditionally, and a **branch** occurs on a given condition. A **call** instruction is a branch instruction with the additional effect of storing the current address in a specific location, e.g. pushing it on the stack, to allow for easy return to continue execution. In many programs, ”call” is the second-most-frequently used instruction (after ”move”). 
+Branching and Jumping is the ability to load the PC register with a new address that is not the next sequential address. In general, a **jump** or **call** occurs unconditionally, and a **branch** occurs on a given condition. A **call** instruction is a branch instruction with the additional effect of storing the current address in a specific location, e.g. pushing it on the stack, to allow for easy return to continue execution. In many programs, ”call” is the second-most-frequently used instruction (after ”move”). 
 
 **NOP**, short for ”no operation” is an instruction that produces no result and causes no side effects. NOPs are useful for timing and preventing hazards.
 
-**Random Access Memory** (RAM), also known as *main memory*. Dynamic RAM (DRAM) is a type of RAM that contains a single transistor anda capacitor. DRAM is smaller than SRAM, and therefore can store more data in a smaller area. Because of the charge and discharge times of the capacitor, however, DRAM tends to be slower than SRAM. Many modern types of Main Memory are based on DRAM design because of the high memory densities. Because DRAM is simpler than SRAM, it is typically cheaper to produce.
+**Random Access Memory** (RAM), also known as *main memory*. Dynamic RAM (DRAM) is a type of RAM that contains a single transistor and a capacitor. DRAM is smaller than SRAM, and therefore can store more data in a smaller area. Because of the charge and discharge times of the capacitor, however, DRAM tends to be slower than SRAM. Many modern types of Main Memory are based on DRAM design because of the high memory densities. Because DRAM is simpler than SRAM, it is typically cheaper to produce.
 
-**Static RAM** (SRAM) is a type of memory storage that uses 6 transistors to storedata. These transistors store data so long as power is supplied to the RAM and do not needto be refreshed. SRAM is typically used in processor caches because of its faster speed, but not in main memory because it takes up more space.
+**Static RAM** (SRAM) is a type of memory storage that uses 6 transistors to store data. These transistors store data so long as power is supplied to the RAM and do not need to be refreshed. SRAM is typically used in processor caches because of its faster speed, but not in main memory because it takes up more space.
 | ![sram](https://user-images.githubusercontent.com/43972902/103000615-ab03df00-452b-11eb-8ac3-f5ac6a4c7baa.png) |
 |:--:|
 | Source: *https://pl.wikipedia.org/wiki/Pami%C4%99%C4%87_statyczna*  [23.12.2020] |
@@ -138,18 +138,18 @@ Most processors and other complicated hardware circuits are typically divided in
 
 ### Design Steps microprocessor or microcontroller unit:
 1. Determine the capabilities the new processor should have.
-2. Lay out the datapath to handle the necessary capabilities.
+2. Lay out (pol. *rozlozyc*) the datapath to handle the necessary capabilities (pol. *do obsługi niezbędnych możliwości*).
 3. Define the machine code instruction format (ISA)
 4. Construct the necessary logic to control the datapath.
 ##### 1. Determine machine capabilities
 Some questions to start:
 1. Is this chip an embedded chip, a general-purpose chip, or a different type entirely? 
 2. What, if any, are the limitations in terms of resources, price, power, or speed?
-3. With that in mind, we need to ask what our chip will do:
-    - Does it have integer, floating-point, or fixed point arithmetic, or a combination of allthree?
+3. With that in mind (pol. *Pamiętając o tym*), we need to ask what our chip will do:
+    - Does it have integer, floating-point, or fixed point arithmetic, or a combination of all three?
     - Does it have scalar or vector operation abilities?
-    - Is it self-contained, or must it interface with a number of external peripherals?
-    - Will it support interrupts? If so, How much interrupt latency is tolerable? How muchinterrupt-response jitter is tolerable?
+    - Is it self-contained (pol. *samowystarczalny*), or must it interface with a number of external peripherals?
+    - Will it support interrupts? If so, How much interrupt latency is tolerable? How much interrupt-response jitter (pol. *drganie*) is tolerable?
     - We also need to ask ourselves whether the machine will support a wide array of instructions, or if it will have a limited set of instructions. More instructions make the design more difficult, but make programming and using the chip easier. On the other hand, having fewer instructions is easier to design, but can be harder and more costly to program.
 
 Lay out the basic arithmetic operations you want your chip to have:
@@ -160,8 +160,9 @@ Lay out the basic arithmetic operations you want your chip to have:
 - Logical Operations: AND, OR, XOR, NOR, NOT, etc. 
 
 List other capabilities that your machine has:
-- Unconditional jumps•Conditional Jumps (and what conditions?)
-- Stack operations (Push, pop)
+- Unconditional jumps
+- Conditional Jumps (and what conditions?)
+- Stack operations (push, pop)
 ##### 2. Design the datapath
 We need to determine what ALU architecture that our processor will use:
 - Accumulator
@@ -175,7 +176,7 @@ There are a few things that we need to consider:
 - How do you deal with immediate values? What kinds of instructions can accept immediate values?
 
 A **register** is a storage element typically composed of an array of flip-flops. <br/>
-A **register file** is a whole collection of registers, typically all of which are the same length. A register file takes three inputs, an index address value, a data value, and an enable signal.A signaldecoderis used to pass the data value from the register file input to the particular register with the specified address.
+A **register file** is a whole collection of registers, typically all of which (pol. *z których każda*) are the same length. A register file takes three inputs, an index address value, a data value, and an enable signal. A signal decoder is used to pass the data value from the register file input to the particular register with the specified address.
 
 ### Multiplexers
 | ![mux](https://user-images.githubusercontent.com/43972902/103135238-38276f00-46b7-11eb-86f4-eacf6f62a873.png)|
@@ -183,14 +184,15 @@ A **register file** is a whole collection of registers, typically all of which a
 | A 2-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
 
-A multiplexer is an input selector. A multiplexer has 1 output, a control input, and several data inputs. For ease, we number multiplexer inputs from zero, at the top. If the control signal is ”0”, the 0th input is moved to the output. If the control signal is ”3”, the 3rd inputis moved to the output.A multiplexer with *N* control signal bits can support <img src="https://render.githubusercontent.com/render/math?math=2^{N}"> inputs. For example, a multiplexer with 3 control signals can support <img src="https://render.githubusercontent.com/render/math?math=2^{3} = 8"> inputs. Multiplexers are typically abbreviated as *”MUX”*.
+A multiplexer is an input selector. A multiplexer has 1 output, a control input, and several data inputs. For ease, we number multiplexer inputs from zero, at the top. If the control signal is ”0”, the 0th input is moved to the output. If the control signal is ”3”, the 3rd input is moved to the output. A multiplexer with *N* control signal bits can support <img src="https://render.githubusercontent.com/render/math?math=2^{N}"> inputs. For example, a multiplexer with 3 control signals can support <img src="https://render.githubusercontent.com/render/math?math=2^{3} = 8"> inputs. Multiplexers are typically abbreviated as *”MUX”*.
 
 | ![mux441](https://user-images.githubusercontent.com/43972902/103135454-bb959000-46b8-11eb-9202-fd5b04be5052.png) |
 |:--:|
 | A 4-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
-<br/>
-| ![81](https://user-images.githubusercontent.com/43972902/103786157-681e2d00-503c-11eb-8c88-b5e0778b5f30.png) |
+
+
+| ![asdfaa](https://user-images.githubusercontent.com/43972902/105250764-96daee00-5b7a-11eb-9092-522be527bf9a.png) |
 |:--:|
 | A 8-to-1 mux |
 | Source: *https://en.wikipedia.org/wiki/Multiplexer*  [25.12.2020] |
@@ -215,7 +217,7 @@ if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
 You can find verilog file for mux [here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/multiplexer)
 ### Adder
-An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indices, increment and decrement operators and similar operations. 
+An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indexes, increment and decrement operators and similar operations. 
 Adders can be divided into:
 1. serial adder - during each operation, they add two component bits and a carry bit
 2. parallel adder - they add together the bits from all positions, and the carry bit is performed depending on how the one-bit adders are connected.
@@ -274,7 +276,9 @@ Ok, I'll try explain how it works, but using different words. I think it's easy.
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
+
 So, if we have only one *true*, then the result is *true*. Let's look at truth table for three input *XOR*: <br/>
+
 | A | B | C | Output |
 |:--:|:--:|:--:|:--:|
 | 0 | 0 | 0 | 0 |
@@ -305,7 +309,9 @@ Let's look at truth table for *serial adder*: <br/>
 | 1 | 0 | 0 | 0 | 1 |
 | 1 | 1 | 0 | 1 | 0 |
 | 0 | 0 | 1 | 0 | 1 |
+
 If we have odd *true* in our input, then we have *true* on output. Below is a more accuracy diagram:
+
 | ![serialAdder3](https://user-images.githubusercontent.com/43972902/104935129-2467e380-59ab-11eb-9bce-13d021a7c5b3.png) |
 |:--:|
 | Serial adder logic diagram |
