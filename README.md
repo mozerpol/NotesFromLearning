@@ -2,6 +2,9 @@
 Notes from reading the Microprocessor Design book, which is availble on the wiki 
 https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 
+!!!!!add table of contents
+
+
 ### Processor classification
 
 #### Purpose
@@ -15,7 +18,8 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 3. Throughput and Routing - An example is an internet router, that reads in data packets and sends them out on a different port. (Throughput - *wydajnosc*)
 4. General Computing - general purpose processor is like the kind of processor that is typically found inside a desktop PC.
 
-Assembly Language - small language that contains a short word or ”mnemonic” for each individual command that a microcontroller can follow. Each command gets a single mnemonic, and each mnemonic corresponds to a single machine command. Assembly language gets converted (by a program called an ”assembler”) into the binary machine code. Examples of ISA:
+### Assembly Language
+*Assembly Language* - small language that contains a short word or ”mnemonic” for each individual command that a microcontroller can follow. Each command gets a single mnemonic, and each mnemonic corresponds to a single machine command. Assembly language gets converted (by a program called an ”assembler”) into the binary machine code. Examples of ISA:
 - ARM
 - IA-32 (Intel x86)
 - MIPS 
@@ -24,7 +28,8 @@ Assembly Language - small language that contains a short word or ”mnemonic” 
 - Hitachi SH
 - SPARC
 
-Moore’s Law - the number of transistors on a single chip at the same price will double every 18 to 24 months. This law has held (has held - *orzekl*) without fail since it was originally stated in 1965. Moore’s Law has been used incorrectly to calculate the speed of an integrated circuit. <br/>
+### Moore’s Law
+*Moore’s Law* - the number of transistors on a single chip at the same price will double every 18 to 24 months. This law has held (has held - *orzekl*) without fail since it was originally stated in 1965. Moore’s Law has been used incorrectly to calculate the speed of an integrated circuit. <br/>
 The amount of work that a processor can complete in a single cycle is measured in **cycles per instruction**. For somesystems, such as MIPS, there is 1 cycle per instruction. For other systems, such as modern *x86* chips, there are typically very many cycles per instruction.
 ### Von Neumann Architecture (a.k.a. Princeton)
 It was developed for [ENIAC](https://en.wikipedia.org/wiki/ENIAC). It uses the same memory and data paths for both program and data storage. In other words Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.
@@ -243,7 +248,7 @@ The half adder adds two single binary digits A and B. It has two outputs, sum (S
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 ##### Full adder
-Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as A, B, and Cin
+Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
 |:--:|
@@ -329,23 +334,24 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 The ALU will be explain also later.
 
 **Signals:**
-1. Data - A basic ALU has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising each bus) are identical and match the native word size of the external circuitry.
-2. Opcode - The opcode input is a parallel bus that conveys to the ALU an operation selection code, which is an enumerated value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
-3. Status - The status outputs are various individual signals that convey supplemental information about the result of the current ALU operation. General-purpose ALUs commonly have status signals such as: 
-    - Carry-out - conveys the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
+1. Data - A basic ALU has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys (pol. *przekazuje*) one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising (pol. *zawierający*) each bus) are identical and match the native word size of the external circuitry (pol. *obwody*).
+2. Opcode - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the ALU an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
+3. Status - The status outputs are various individual signals that convey supplemental (pol. *uzupełniający*) information about the result of the current ALU operation. General-purpose ALUs commonly have status signals such as: 
+    - Carry-out - conveys (pol. *przekazuje*) the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
     - Zero - indicates all bits of Y are logic zero.
     - Negative - indicates the result of an arithmetic operation is negative.
-    - Overflow - indicates the result of an arithmetic operation has exceeded the numeric range of Y.
+    - Overflow - indicates the result of an arithmetic operation has exceeded (pol. *przekroczony*) the numeric range of Y.
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/alu) you can find code in verilog for simple ALU.
 ### Program counter
-*Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instructionb decoder and the program counter is updated to point to the next instruction. 
+*Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instruction decoder and the program counter is updated to point to the next instruction. 
 
 **RISC computer have all the instructions are the same length.** <br/>
 **In CISC computers each instruction can be a different length.**
 ##### Branching
-Branching occurs at one of a set of special instructions known collectively as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded and a new PC value is loaded from an external source:
+Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
+
 ![branching](https://user-images.githubusercontent.com/43972902/104107763-3ec10380-52bf-11eb-93c6-7f6feb8a2031.png)
 
 An **offset branch** is a branch where a value is added (or subtracted) to the current PC valueto produce the new value:
@@ -355,13 +361,13 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 ![branching3](https://user-images.githubusercontent.com/43972902/104107847-0a9a1280-52c0-11eb-910a-43b1af898596.png)
 
 ##### Microcode
-*Microcode* - is a computer hardware technique that inser a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying electronics so that instructions can be designed and altered more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
+*Microcode* - is a computer hardware technique that insert a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying (pol. *zasadniczy*) electronics, so that instructions can be designed and altered (pol. *zmieniony*) more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated (pol. *rozróżniać*) by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
 - Connect register 1 to the A side of the ALU
 - Connect register 7 to the B side of the ALU
-- Set the ALU to perform two's-complement addition
+- Set the ALU to perform [two's-complement](https://en.wikipedia.org/wiki/Two%27s_complement) addition
 - Store the result value in register 8
 
-Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like PCMPISTRI will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
+Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like *PCMPISTRI* will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
 
 ##### Microarchitecture
 *Microarchitecture* - also called computer organization and sometimes abbreviated (pol. *w skrocie*) as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular (pol. *szczególny*) processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
@@ -440,7 +446,7 @@ One complicated structure is a *Register-and-Memory* structure. In this structur
 `ADD AX, BX` <br/>
 Where *AX* and *BX* are the names of the registers, so the result is stored back into *AX*.
 ##### MIPS
-*MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
+*MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside (pol. *minusem*) is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
 `ADD R1, R2, R3` <br/>
 Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
 
@@ -487,7 +493,7 @@ FPU needs the following components: <br/>
 - An adder for the exponent prts.
 
 ### Control Unit
-*Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components toperform the desired task.
+*Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components to perform the desired task.
 
 
 
