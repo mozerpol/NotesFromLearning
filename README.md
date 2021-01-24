@@ -8,22 +8,29 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 3. [Von Neumann Architecture](#neumann)
 4. [Harvard Architecture](#harvard)
 5. [Pipelining](#Pipelining)
+    1. [Pipeline Hazards](#pipehaz)
+    2. [Superscalar processing](#superScal)
 6. [Cache](#Cache)
 7. [Endianness](#Endianness)
 8. [Stack](#Stack)
 9. [Design steps MCU](#design)
 10. [Multiplexers](#Multiplexers)
 11. [Adder](#Adder)
+    1. [Half adder](#half)
+    2. [Full adder](#full)
+    3. [Serial Adder](#serial)
 12. [ALU](#ALU)
     1. [Program counter](#counter)
     2. [Branching](#Branching)
     3. [Microcode](#Microcode)
-    4. [Machine state register](#msr)
-    5. [Instruction Decoder](#instr)
+    4. [Microarchitecture](#Microarchitecture)
+    5. [Machine state register](#msr)
+    6. [Instruction Decoder](#instr)
 13. [Register File](#regf)
-
-
-
+    1. [Register Bank](#regbank)
+14. [ALU](#alu2) --> Another, different description of ALU
+    1. [2-Bit ALU](#bit2alu)
+    2. [Accumulator](#accum)
 
 ### Processor classification <a name="procclas"></a>
 
@@ -86,7 +93,7 @@ Factors (pol. *czynniki*) limiting the number of registers:
 - microprogram counter
 - pipeline registers
 
-### Pipelining [UP↑](#tof)
+### Pipelining <a name="Pipelining"></a> [UP↑](#tof)
 Pipelining (*pol.* potokowość) - technology of building processors consisting in the division (pol. *polegający na podziale*) of the processor logic responsible for the program execution process (processor instructions) into specialized groups in such a way that each group performs a part of the work related to the execution of the instruction. These groups are linked sequentially - into a *pipe* and perform their work simultaneously (czyt. *simultejnisli*) download data from the previous element in the sequence. In each of these groups, the task is in a different stage of execution. Processor instruction execution phases can be as follows:
 1. Get instructions from memory - instruction fetch (IF)
 2. Decode the instruction - instruction decode (ID)
@@ -105,7 +112,7 @@ In the above 5-step pipeline, it takes five clock cycles to go through all the s
 - Each block of processor is used on each clock cycle, processing different phases of different instructions. 
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
-#### Pipeline Hazards
+#### Pipeline Hazards <a name="pipehaz"></a> [UP↑](#tof)
 [Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
 The reduction of this problem can be achived by using the prediction of branching (jumps). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
 
@@ -116,16 +123,16 @@ The reduction of this problem can be achived by using the prediction of branchin
 
 [Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data. <br/>
 [Struktural Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Structural_hazards) - (pol. *konflikt zasobow*) - simultaneously requesting access to memory or other unique resource in the computer.
-#### Superscalar processing
+#### Superscalar processing <a name="superScal"></a> [UP↑](#tof)
 [Superscalar processing](https://en.wikipedia.org/wiki/Superscalar_processor) - (pol. *przetwarzanie superskalarne*) - it's based on the use of several scalar data processing pipelines run in parallel, which allows for the execution of more than one instruction in one clock cycle. <br/>
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
-### Cache [UP↑](#tof)
+### Cache <a name="Cache"></a> [UP↑](#tof)
 Most CPUs manufactured do not have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller
 and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3
 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much
 faster than external RAM).
 
-### Endianness [UP↑](#tof)
+### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
 
 | ![endian](https://user-images.githubusercontent.com/43972902/102886883-3a3ec300-4456-11eb-8abf-990583caa77e.png) |
@@ -135,7 +142,7 @@ faster than external RAM).
 #### NUXI problem 
 NUXI problem -  Refers to the problem of transferring data between machines with differing byte-order. The string **UNIX** might look like **NUXI** on a machine with a different byte sex (e.g., when transferring data from a little-endian to a big-endian, or vice-versa). [source](https://ckziumragowo.pl/pub/app/Jargon/index.php/word/NUXI+problem) 
 
-### Stack [UP↑](#tof)
+### Stack <a name="Stack"></a> [UP↑](#tof)
 **Stack** - The stack is a sequential set of memory locations that is set to act like a LIFO (last in, first out) buffer. Most computer architectures include at least a register that is usually reserved for the stack pointer.<br/>
 **push** - operation add data to the top of the stack <br/>
 **pop** - remove add data from the top of the stack <br/>
@@ -203,7 +210,7 @@ There are a few things that we need to consider:
 A **register** is a storage element typically composed of an array of flip-flops. <br/>
 A **register file** is a whole collection of registers, typically all of which (pol. *z których każda*) are the same length. A register file takes three inputs, an index address value, a data value, and an enable signal. A signal decoder is used to pass the data value from the register file input to the particular register with the specified address.
 
-### Multiplexers [UP↑](#tof)
+### Multiplexers <a name="Multiplexers"></a> [UP↑](#tof)
 | ![mux](https://user-images.githubusercontent.com/43972902/103135238-38276f00-46b7-11eb-86f4-eacf6f62a873.png)|
 |:--:|
 | A 2-to-1 mux |
@@ -241,7 +248,7 @@ If we select second input (s1 = 0, s0 = 0), then we must carry input to output l
 if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
 You can find verilog file for mux [here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/multiplexer)
-### Adder [UP↑](#tof)
+### Adder <a name="Adder"></a> [UP↑](#tof)
 An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indexes, increment and decrement operators and similar operations. 
 Adders can be divided into:
 1. serial adder - during each operation, they add two component bits and a carry bit
@@ -255,7 +262,7 @@ Each adder has a completion type:
 
 Each full full adder consists of two half adders.
 
-#### Half adder
+#### Half adder <a name="half"></a> [UP↑](#tof)
 The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
 | ![halfAdder](https://user-images.githubusercontent.com/43972902/103895819-492da280-50f1-11eb-8409-38ec5e2aa301.png) |
 |:--:|
@@ -267,7 +274,7 @@ The half adder adds two single binary digits A and B. It has two outputs, sum (S
 | Half adder logic diagram |
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
-#### Full adder
+#### Full adder <a name="full"></a> [UP↑](#tof)
 Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
@@ -282,7 +289,7 @@ The truth table:
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
 
-#### Serial Adder
+#### Serial Adder <a name="serial"></a> [UP↑](#tof)
 Serial Adder - serial binary adder performs binary addition bit by bit. Serial binary addition is done by a flip-flop and a full adder. The flip-flop takes the signal on each clock cycle and provides its value as the carry-in signal on the next clock cycle. After all of the bits of the input operands have arrived, all of the bits of the sum have come out of the sum output. <br/>
 **Example:** <br/>
 Decimal: 5 + 9 = 14 <br/>
@@ -344,7 +351,7 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) is implementatnion in Verilog for serial adder.
 
-### ALU [UP↑](#tof)
+### ALU <a name="ALU"></a> [UP↑](#tof)
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
 | ![alu](https://user-images.githubusercontent.com/43972902/103954812-4a88ba80-5145-11eb-9e76-ac0dcff442a6.png) |
 |:--:|
@@ -369,7 +376,7 @@ The ALU will be explain also later.
 
 **RISC computer have all the instructions are the same length.** <br/>
 **In CISC computers each instruction can be a different length.**
-#### Branching [UP↑](#tof)
+#### Branching <a name="Branching"></a> [UP↑](#tof)
 Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
 
 ![branching](https://user-images.githubusercontent.com/43972902/104107763-3ec10380-52bf-11eb-93c6-7f6feb8a2031.png)
@@ -380,7 +387,7 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 **Offset and Non-Offset Branching** - many systems have capabilities to use both offset and non-offset branching:
 ![branching3](https://user-images.githubusercontent.com/43972902/104107847-0a9a1280-52c0-11eb-910a-43b1af898596.png)
 
-#### Microcode [UP↑](#tof)
+#### Microcode <a name="Microcode"></a> [UP↑](#tof)
 *Microcode* - is a computer hardware technique that insert a layer of organisation between the CPU hardware and the programmer-visible instruction set architecture of the computer. Microcode typically resides in special high-speed memory and translates machine instructions. It separates the machine instructions from the underlying (pol. *zasadniczy*) electronics, so that instructions can be designed and altered (pol. *zmieniony*) more freely. The lowest layer in a computer's software stack is traditionally raw binary machine code instructions for the processor. Microcode sits one level below this. To avoid confusion, each microprogram-related element is differentiated (pol. *rozróżniać*) by the micro prefix: microinstruction, microassembler, microprogrammer, microarchitecture, etc. A high-level programmer, or even an assembly programmer, does not normally see or change microcode. Some hardware vendors, especially IBM, use the term microcode as a synonym for firmware. Microprograms consist of series of microinstructions, which control the CPU at a very fundamental level of hardware circuitry. For example, a single typical horizontal microinstruction might specify the following operations: 
 - Connect register 1 to the A side of the ALU
 - Connect register 7 to the B side of the ALU
@@ -389,7 +396,7 @@ An **offset branch** is a branch where a value is added (or subtracted) to the c
 
 Ok, once again, but using different words. The microcode usually implements the more complicated instructions - the rest is in silicon. For example: the instruction `XOR r32, r32` will be in silicon, but some inventions like *PCMPISTRI* will not. One of the goals of the microcode was to break down the CISC instructions into a series of pseudo-RISC instructions, which are easier to optimize (they can be changed among themselves in some cases, performed simultaneously, etc; CISC is also possible, but it is more difficult). 
 
-#### Microarchitecture 
+#### Microarchitecture <a name="Microarchitecture"></a> [UP↑](#tof)
 *Microarchitecture* - also called computer organization and sometimes abbreviated (pol. *w skrocie*) as µarch or uarch, is the way a given instruction set architecture (ISA) is implemented in a particular (pol. *szczególny*) processor. A given ISA may be implemented with different microarchitectures. **Computer architecture is the combination of microarchitecture and instruction set architecture.** Examples of Intel microarchitectures:
 - 8086
 - i386
@@ -413,11 +420,11 @@ Ok, once again, but using different words. The microcode usually implements the 
 *Instruction Decoder* - reads the next instruction from memory, and sends the component pieces of that instruction to the necessary destinations. A CISC decoder is typically set up (*typically set up* - *zwykle skonfigurowane
 *) as a state machine. The RISC instruction decoder is typically a very simple device. Its purpose is to translate an instruction code into the address in the micro memory where the micro code for the instruction starts.
 
-### Register File <a name="regf"></a> [UP↑](#tof) [UP↑](#tof)
+### Register File <a name="regf"></a> [UP↑](#tof)
 Registers are temporary storage locations inside the CPU that hold data and addresses. The register file is the component that contains all the general purpose registers of the microprocessor. A few CPUs also place special registers such as the PC and the status register in the register file. Other CPUs keep them separate. A simple register file is a set of registers and a decoder. The register file requires an address and a data input:
 ![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
 
-#### Register Bank
+#### Register Bank <a name="regbank"></a> [UP↑](#tof)
 Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
 A *register bank* contains a number of register files or pages. Only one page can be active at a time, and there are additional instructions added to the ISA to switch between the available register pages. Data values can only be written to and read from the currently active register page, but instructions can exist to move data from one page to another.
 ![registerBank](https://user-images.githubusercontent.com/43972902/104124348-bee37980-5350-11eb-8b9d-81467cb88db9.png) 
@@ -432,40 +439,40 @@ Where *p* is the number of bits reserved to specify the current register page. A
 
 [Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
 
-### Memory unit
+#### Memory unit
 Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
 The memory unit is typically one of the slowest components of a microcontroller, becausethe external interface with RAM is typically much slower than the speed of the processor.
-### ALU
+### ALU <a name="alu2"></a> [UP↑](#tof)
 ![alu2_1](https://user-images.githubusercontent.com/43972902/104484629-cbbed200-55c9-11eb-842d-e3b8968b3ed7.png)
 
 CPU designers have used a variety of names for the arithmetic logic unit, including *ALU*, *integerexecution unit*, and *E-box*.
 
-##### Example: 2-Bit ALU
+#### Example: 2-Bit ALU <a name="bit2alu"></a> [UP↑](#tof)
 This is an example of a basic 2-bit ALU. The boxes on the right hand side of the image are multiplexers and are used to select between various operations: OR, AND, XOR, and addition.
 ![alu2_2](https://user-images.githubusercontent.com/43972902/104485370-b4341900-55ca-11eb-92f6-577594152da2.png)
 
 Notice that all the operations are performed in parallel, and the select signal (*OP*) is usedto determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
 Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. In all images below, the orange represents memory structures internal to the CPU (registers), and the purple represents external memory (RAM).
-##### Accumulator
+#### Accumulator <a name="accum"></a> [UP↑](#tof)
 ![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
 An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator.
-##### Register-to-Register
+#### Register-to-Register
 ![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
 
 One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length. 
-##### Register Stack
+#### Register Stack
 ![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
 
 In a register stack, the ALU reads the operands from the top of the stack, and the result is pushed onto the top of the stack. Complicated mathematical operations required ecomposition into [Reverse-Polish](https://en.wikipedia.org/wiki/Reverse_Polish_notation) form. The benefit comes from a highly simplified ISA. These machines are called *0-operand* or *zero address machines* because operands don’t need to be specified, because all operations act on specified stack locations. In the diagram, *SP* is the pointer to the top of the stack.
-##### Register-and-Memory
+#### Register-and-Memory
 ![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
 One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
-##### IA-32
+#### IA-32
 *The Intel IA-32* ISA (*x86* processors) use a **register stack architecture for the floating point unit**, but it uses a **modified Register-to-Register structure for integer operations**. All integer operations can specify a register as the first operand, and a register or memory location as the second operand. The first operand acts as an accumulator, so that the result is stored in the first operand register. The downside (pol. *minusem*) to this is that the instruction words are not uniform in length, which means that the instruction fetch and decode modules of the processor need to be very complex. A typical IA-32 instruction is written as: <br/>
 `ADD AX, BX` <br/>
 Where *AX* and *BX* are the names of the registers, so the result is stored back into *AX*.
-##### MIPS
+#### MIPS
 *MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside (pol. *minusem*) is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
 `ADD R1, R2, R3` <br/>
 Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
