@@ -31,6 +31,14 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 14. [ALU](#alu2) --> Another, different description of ALU
     1. [2-Bit ALU](#bit2alu)
     2. [Accumulator](#accum)
+    3. [Register Stack](#regstac)
+    4. [Register-and-Memory](#regMem)
+    5. [IA-32](#iatrz)
+    6. [MIPS](#mips)
+15. [FPU](#fpu)
+    1. [IEEE 754](#ieeesev)
+    2. [Design FPU](#fpudesign)
+16. [Control Unit](#cu)
 
 ### Processor classification <a name="procclas"></a>
 
@@ -461,27 +469,27 @@ An *accumulator machine* has one special register, called the *accumulator*. The
 ![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
 
 One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length. 
-#### Register Stack
+#### Register Stack <a name="regstac"></a> [UP↑](#tof)
 ![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
 
 In a register stack, the ALU reads the operands from the top of the stack, and the result is pushed onto the top of the stack. Complicated mathematical operations required ecomposition into [Reverse-Polish](https://en.wikipedia.org/wiki/Reverse_Polish_notation) form. The benefit comes from a highly simplified ISA. These machines are called *0-operand* or *zero address machines* because operands don’t need to be specified, because all operations act on specified stack locations. In the diagram, *SP* is the pointer to the top of the stack.
-#### Register-and-Memory
+#### Register-and-Memory <a name="regMem"></a> [UP↑](#tof)
 ![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
 One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
-#### IA-32
+#### IA-32 <a name="iatrz"></a> [UP↑](#tof)
 *The Intel IA-32* ISA (*x86* processors) use a **register stack architecture for the floating point unit**, but it uses a **modified Register-to-Register structure for integer operations**. All integer operations can specify a register as the first operand, and a register or memory location as the second operand. The first operand acts as an accumulator, so that the result is stored in the first operand register. The downside (pol. *minusem*) to this is that the instruction words are not uniform in length, which means that the instruction fetch and decode modules of the processor need to be very complex. A typical IA-32 instruction is written as: <br/>
 `ADD AX, BX` <br/>
 Where *AX* and *BX* are the names of the registers, so the result is stored back into *AX*.
-#### MIPS
+#### MIPS <a name="mips"></a> [UP↑](#tof)
 *MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside (pol. *minusem*) is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
 `ADD R1, R2, R3` <br/>
 Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
 
-### FPU
+### FPU <a name="fpu"></a> [UP↑](#tof)
 The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
 #### Floating point numbers
 Floating point numbers are specified in two parts: the exponent (*e*), and the mantissa (*m*). The value of a floating point number, *v*, is generally calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=m*2^{e}">
-##### IEEE 754
+#### IEEE 754 <a name="ieeesev"></a> [UP↑](#tof)
 IEEE 754 format numbers are calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=(1%2Bm)*2^{e}">
 The mantissa, *m*, is normalized in this standard, so that it falls between the numbers *1.0* and *2.0*.
 | ![ieee754](https://user-images.githubusercontent.com/43972902/104811649-49b6ef00-57fd-11eb-8c79-e798fb0b6d32.png) |
@@ -508,7 +516,7 @@ Likewise, division can be performed by:
 
 **Floating point addition and subtraction is more difficult than multiplication**. The only way that floating point numbers can be added together is if the exponents of both numbers are the same. This means that when we add two numbers together, we need first to scale the numbers so that they have the same exponent. 
 
-##### Floating Point Unit Design
+#### Floating Point Unit Design <a name="fpudesign"></a> [UP↑](#tof)
 FPU needs the following components: <br/>
 **For addition/Subtraction:**
 - A comparator (subtractor) to determine the difference between exponents, and to determine the smaller of the two exponents,
@@ -519,7 +527,7 @@ FPU needs the following components: <br/>
 - A multiplier (or a divider) for the mantissa part,
 - An adder for the exponent prts.
 
-### Control Unit
+### Control Unit <a name="cu"></a> [UP↑](#tof)
 *Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components to perform the desired task.
 
 
