@@ -44,6 +44,10 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     1. [IEEE 754](#ieeesev)
     2. [Design FPU](#fpudesign)
 16. [Control Unit](#cu)
+17. [Shift and Rotate Blocks](#sarb)
+    1. [Logical Shift](#logshft)
+    2. [Arithmetic shift](#artshft)
+18. [Multiplication and Division](#mulanddiv) 
 
 ### Processor classification <a name="procclas"></a>
 
@@ -545,11 +549,17 @@ FPU needs the following components: <br/>
 ### Control Unit <a name="cu"></a> [UP↑](#tof)
 *Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components to perform the desired task.
 
+### Shift and Rotate Blocks <a name="sarb"></a> [UP↑](#tof)
 
+#### Logical Shift <a name="logshft"></a> [UP↑](#tof)
 
+#### Arithmetic shift <a name="artshft"></a> [UP↑](#tof)
 
+#### Rotations
 
+#### Fast Shift Implementations
 
+### Multiply and Divide Blocks <a name="mulanddiv"></a> [UP↑](#tof)
 
 
 
