@@ -18,7 +18,12 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 11. [Adder](#Adder)
     1. [Half adder](#half)
     2. [Full adder](#full)
-    3. [Serial Adder](#serial)
+    3. [Serial Adder](#serial) --> finish!
+    4. [Parallel Adder](#paradder) --> finish!
+    5. [Ripple Carry Adder](#rcadder) --> finish!
+    6. [Carry Skip Adder](#csadder) --> finish!
+    7. [Carry Lookahead Adder](#cladder) --> finish!
+    8. [Cascading Adders](#cadders) --> finish!
 12. [ALU](#ALU)
     1. [Program counter](#counter)
     2. [Branching](#Branching)
@@ -255,7 +260,7 @@ If we select second input (s1 = 0, s0 = 0), then we must carry input to output l
 ```
 if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
-You can find verilog file for mux [here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/multiplexer)
+You can find verilog file for mux [here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/multiplexer)
 ### Adder <a name="Adder"></a> [UP↑](#tof)
 An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indexes, increment and decrement operators and similar operations. 
 Adders can be divided into:
@@ -295,7 +300,7 @@ The truth table:
 | Full adder logic diagram |
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
-[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) you can find code in verilog for full and half adder.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) you can find code in verilog for full and half adder.
 
 #### Serial Adder <a name="serial"></a> [UP↑](#tof)
 Serial Adder - serial binary adder performs binary addition bit by bit. Serial binary addition is done by a flip-flop and a full adder. The flip-flop takes the signal on each clock cycle and provides its value as the carry-in signal on the next clock cycle. After all of the bits of the input operands have arrived, all of the bits of the sum have come out of the sum output. <br/>
@@ -357,7 +362,17 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 | Serial adder logic diagram |
 | Source: *https://www.ece.mcmaster.ca/~shirani/2di4/chapter8p2.pdf*  [18.01.2021] |
 
-[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/adder) is implementatnion in Verilog for serial adder.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for serial adder.
+
+#### Parallel Adder <a name="paradder"></a> [UP↑](#tof)
+
+#### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
+
+#### Carry Skip Adder <a name="csadder"></a> [UP↑](#tof)
+
+#### Carry Lookahead Adder <a name="cladder"></a> [UP↑](#tof)
+
+#### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
 ### ALU <a name="ALU"></a> [UP↑](#tof)
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
@@ -378,7 +393,7 @@ The ALU will be explain also later.
     - Overflow - indicates the result of an arithmetic operation has exceeded (pol. *przekroczony*) the numeric range of Y.
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
-[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/alu) you can find code in verilog for simple ALU.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/alu) you can find code in verilog for simple ALU.
 #### Program counter <a name="counter"></a> [UP↑](#tof)
 *Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instruction decoder and the program counter is updated to point to the next instruction. 
 
@@ -445,7 +460,7 @@ In other words, *n* and *m* are the number of bits required to address *N* and *
 
 Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the pagea ddress and the register address.
 
-[Here](https://github.com/mozerpol/Microprocessor-Design/tree/main/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
 
 #### Memory unit
 Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
