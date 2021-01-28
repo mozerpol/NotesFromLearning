@@ -56,6 +56,7 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 2. DSP - is a chip that is specifically designed for fast arithmetic operations, especially addition and multiplication.
 3. Embedded Controller or microcontroller - **not microprocessor**, it's microprocessor with additional hardware integrated into a single chip. 
 4. Programmable State Machine - it's minimalist microprocessor that is designed for very small and simple operations. Usually it's embedded directly into the design of a larger chip.
+
 #### Type of use
 1. Signal Processing - Signal processing systems typically need to have low latency (pol. *czas oczekiwania*), and are very deadline driven (pol. *terminowy*). An example of a signal processing applicationis the decoding of digital television and radio signals.
 2. Real Time Applications - timing is of the utmost (utmost - *najwyzszy*) importance. An example of a real-time system is the anti-lock braking system (ABS) controller in modern automobiles.
@@ -75,6 +76,7 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 ### Moore’s Law
 *Moore’s Law* - the number of transistors on a single chip at the same price will double every 18 to 24 months. This law has held (has held - *orzekl*) without fail since it was originally stated in 1965. Moore’s Law has been used incorrectly to calculate the speed of an integrated circuit. <br/>
 The amount of work that a processor can complete in a single cycle is measured in **cycles per instruction**. For somesystems, such as MIPS, there is 1 cycle per instruction. For other systems, such as modern *x86* chips, there are typically very many cycles per instruction.
+
 ### Von Neumann Architecture (a.k.a. Princeton) <a name="neumann"></a> [UP↑](#tof)
 It was developed for [ENIAC](https://en.wikipedia.org/wiki/ENIAC). It uses the same memory and data paths for both program and data storage. In other words Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.
 
@@ -129,6 +131,7 @@ In the above 5-step pipeline, it takes five clock cycles to go through all the s
 - Each block of processor is used on each clock cycle, processing different phases of different instructions. 
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
+
 #### Pipeline Hazards <a name="pipehaz"></a> [UP↑](#tof)
 [Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
 The reduction of this problem can be achived by using the prediction of branching (jumps). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
@@ -141,8 +144,10 @@ The reduction of this problem can be achived by using the prediction of branchin
 [Data Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Data_hazards) - (pol. *konflikt danych*) - simultaneous use of the same data. <br/>
 [Struktural Hazard](https://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Structural_hazards) - (pol. *konflikt zasobow*) - simultaneously requesting access to memory or other unique resource in the computer.
 #### Superscalar processing <a name="superScal"></a> [UP↑](#tof)
+
 [Superscalar processing](https://en.wikipedia.org/wiki/Superscalar_processor) - (pol. *przetwarzanie superskalarne*) - it's based on the use of several scalar data processing pipelines run in parallel, which allows for the execution of more than one instruction in one clock cycle. <br/>
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
+
 ### Cache <a name="Cache"></a> [UP↑](#tof)
 Most CPUs manufactured do not have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller
 and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3
@@ -190,6 +195,7 @@ Most processors and other complicated hardware circuits are typically divided in
 2. Lay out (pol. *rozlozyc*) the datapath to handle the necessary capabilities (pol. *do obsługi niezbędnych możliwości*).
 3. Define the machine code instruction format (ISA)
 4. Construct the necessary logic to control the datapath.
+
 #### 1. Determine machine capabilities
 Some questions to start:
 1. Is this chip an embedded chip, a general-purpose chip, or a different type entirely? 
@@ -212,12 +218,14 @@ List other capabilities that your machine has:
 - Unconditional jumps
 - Conditional Jumps (and what conditions?)
 - Stack operations (push, pop)
+
 #### 2. Design the datapath
 We need to determine what ALU architecture that our processor will use:
 - Accumulator
 - Stack
 - Register
 - A combination of the above 3
+
 #### 3. Create ISA
 There are a few things that we need to consider:
 - Is this processor RISC, CISC, or VLIW?
@@ -265,6 +273,7 @@ If we select second input (s1 = 0, s0 = 0), then we must carry input to output l
 if((s0 == 0) && (s1 == 1)) then (out == second_input)
 ```
 You can find verilog file for mux [here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/multiplexer)
+
 ### Adder <a name="Adder"></a> [UP↑](#tof)
 An adder is a digital circuit that performs addition of numbers. They are also used in other parts of the processor, where they are used to calculate addresses, table indexes, increment and decrement operators and similar operations. 
 Adders can be divided into:
@@ -398,11 +407,13 @@ The ALU will be explain also later.
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
 [Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/alu) you can find code in verilog for simple ALU.
+
 #### Program counter <a name="counter"></a> [UP↑](#tof)
 *Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instruction decoder and the program counter is updated to point to the next instruction. 
 
 **RISC computer have all the instructions are the same length.** <br/>
 **In CISC computers each instruction can be a different length.**
+
 #### Branching <a name="Branching"></a> [UP↑](#tof)
 Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
 
@@ -469,6 +480,7 @@ Where *p* is the number of bits reserved to specify the current register page. A
 #### Memory unit
 Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
 The memory unit is typically one of the slowest components of a microcontroller, becausethe external interface with RAM is typically much slower than the speed of the processor.
+
 ### ALU <a name="alu2"></a> [UP↑](#tof)
 ![alu2_1](https://user-images.githubusercontent.com/43972902/104484629-cbbed200-55c9-11eb-842d-e3b8968b3ed7.png)
 
@@ -480,25 +492,31 @@ This is an example of a basic 2-bit ALU. The boxes on the right hand side of the
 
 Notice that all the operations are performed in parallel, and the select signal (*OP*) is usedto determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
 Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. In all images below, the orange represents memory structures internal to the CPU (registers), and the purple represents external memory (RAM).
+
 #### Accumulator <a name="accum"></a> [UP↑](#tof)
 ![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
 An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator.
+
 #### Register-to-Register
 ![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
 
-One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length. 
+One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length.
+ 
 #### Register Stack <a name="regstac"></a> [UP↑](#tof)
 ![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
 
 In a register stack, the ALU reads the operands from the top of the stack, and the result is pushed onto the top of the stack. Complicated mathematical operations required ecomposition into [Reverse-Polish](https://en.wikipedia.org/wiki/Reverse_Polish_notation) form. The benefit comes from a highly simplified ISA. These machines are called *0-operand* or *zero address machines* because operands don’t need to be specified, because all operations act on specified stack locations. In the diagram, *SP* is the pointer to the top of the stack.
+
 #### Register-and-Memory <a name="regMem"></a> [UP↑](#tof)
 ![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
 One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
+
 #### IA-32 <a name="iatrz"></a> [UP↑](#tof)
 *The Intel IA-32* ISA (*x86* processors) use a **register stack architecture for the floating point unit**, but it uses a **modified Register-to-Register structure for integer operations**. All integer operations can specify a register as the first operand, and a register or memory location as the second operand. The first operand acts as an accumulator, so that the result is stored in the first operand register. The downside (pol. *minusem*) to this is that the instruction words are not uniform in length, which means that the instruction fetch and decode modules of the processor need to be very complex. A typical IA-32 instruction is written as: <br/>
 `ADD AX, BX` <br/>
 Where *AX* and *BX* are the names of the registers, so the result is stored back into *AX*.
+
 #### MIPS <a name="mips"></a> [UP↑](#tof)
 *MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside (pol. *minusem*) is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
 `ADD R1, R2, R3` <br/>
@@ -506,8 +524,10 @@ Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is 
 
 ### FPU <a name="fpu"></a> [UP↑](#tof)
 The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
+
 #### Floating point numbers
 Floating point numbers are specified in two parts: the exponent (*e*), and the mantissa (*m*). The value of a floating point number, *v*, is generally calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=m*2^{e}">
+
 #### IEEE 754 <a name="ieeesev"></a> [UP↑](#tof)
 IEEE 754 format numbers are calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=(1%2Bm)*2^{e}">
 The mantissa, *m*, is normalized in this standard, so that it falls between the numbers *1.0* and *2.0*.
