@@ -1,20 +1,15 @@
 module serial_adder(   
   input clk,
   input in_A, in_B,
-  output reg out
+  output out
 );
 
-  reg cin = 0, cout = 0;
+  reg flag = 0;
+  reg out = 0;
 
   always@(posedge clk)
     begin
-      // (condition) ? conditionFulfilled : conditionNotFulfilled ;
-      if(in_A & in_B) cout = 1;
-      else cin = 0;
-      if(cout) cin = 1;
-      else cout = 0;
-      out = in_A ^ in_B ^ cin;
-      //   cout = (in_A & in_B) | (cin & in_B) | (in_A & cin); 
+      if(!flag) flag = 1;
+      else out = (!(in_A & in_B)) ? 1 : in_A ^ in_B;
     end 
-
 endmodule 

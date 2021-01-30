@@ -20,7 +20,7 @@ module serial_adder_tb();
     #10 in_A_tb = 1; in_B_tb = 0;
     #10 in_A_tb = 1; in_B_tb = 1;
 	#10 in_A_tb = 0; in_B_tb = 0;
-    #20 $finish;
+    #10 $finish;
   end
 
   always #5 clk_tb = ~clk_tb;
