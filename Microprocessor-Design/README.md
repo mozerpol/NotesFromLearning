@@ -379,6 +379,16 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 
 #### Parallel Adder <a name="paradder"></a> [UP↑](#tof)
 
+**Parallel Adder** is a digital circuit capable calculate the arithmetic sum of two binary numbers that is greater than one bit in length by operating on corresponding pairs of bits in parallel. <br/>
+A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. **Parallel Adder** consists of full adders connected in a chain where the output carry from each full adder is connected to the carry input of the next higher order full adder in the chain. For the two-bit number, two adders are needed while for four bit number, four adders are needed and so on.
+
+| ![parAdder](https://user-images.githubusercontent.com/43972902/106361838-e27e5c00-631f-11eb-949d-96a047fa2128.png) |
+|:--:|
+| Paraller adder |
+| Source: *https://media.geeksforgeeks.org/wp-content/cdn-uploads/full_adder.png*  [30.01.2021] |
+
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for paraller adder.
+
 #### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
 
 #### Carry Skip Adder <a name="csadder"></a> [UP↑](#tof)
