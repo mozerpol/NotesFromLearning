@@ -397,17 +397,25 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 *Ripple carry adder* is nice, but is slow. Each adder block waits for the carry to arrive from its previous block. So there will be a considerable time delay which is carry propagation delay. A *carry look-ahead adder* reduces the propagation delay by introducing more complex hardware, but I think the operation is simple. <br/>
 First, let's remember how the *full adder* works. 
 
-| ![fulladderrec](https://user-images.githubusercontent.com/43972902/106389364-33a35400-63e3-11eb-9b94-92bbc0751641.png) |
-|:--:|
-| Full adder logic diagram |
-| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
-
 | ![fulltruthtable](https://user-images.githubusercontent.com/43972902/106389450-a90f2480-63e3-11eb-9654-575c892a60c0.png) |
 |:--:|
 | The truth table full adder  |
 | Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
 
+| ![fulladderrec](https://user-images.githubusercontent.com/43972902/106389364-33a35400-63e3-11eb-9b94-92bbc0751641.png) |
+|:--:|
+| Full adder logic diagram |
+| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
 
+Ok, so now define some auxiliary variables:
+- Pi = Ai ⊕ Bi - it's easy I think. It's simple XOR, if we have two the same inputs (like 1,1 or 0,0), then we have 0. **Pi means carry propagate**.
+- Gi = Ai * Bi - simple multiplication. **Gi means carry generate**. *Gi* produces the carry when both *Ai*, *Bi* are logic one, independently of the input carry.
+- Si = Pi ⊕ Ci - it's sum output.
+- Ci + 1 = Gi + Pi*Ci - carry output.
+
+Ok, let's assume we have a four bit *Carry Lookahead Adder*. Let's create now boolean function of each carry output:
+- C1 = G0 + (P0 * Cin)
+- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin)
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
