@@ -20,10 +20,9 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     2. [Full adder](#full)
     3. [Serial Adder](#serial)
     4. [Parallel Adder](#paradder)
-    5. [Ripple Carry Adder](#rcadder) --> finish!
-    6. [Carry Skip Adder](#csadder) --> finish!
-    7. [Carry Lookahead Adder](#cladder) --> finish!
-    8. [Cascading Adders](#cadders) --> finish!
+    5. [Ripple Carry Adder](#rcadder)
+    6. [Carry Lookahead Adder](#cladder) --> finish!
+    7. [Cascading Adders](#cadders) --> finish!
 12. [ALU](#ALU)
     1. [Program counter](#counter)
     2. [Branching](#Branching)
@@ -306,7 +305,7 @@ Each full full adder consists of two half adders. A one-bit full-adder adds thre
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
 |:--:|
-| Half adder |
+| The truth table half adder  |
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 | ![fullAdderDiagram](https://user-images.githubusercontent.com/43972902/103944001-57041780-5133-11eb-8c73-f792a7446a0d.png) |
@@ -381,7 +380,7 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 #### Parallel Adder <a name="paradder"></a> [UP↑](#tof)
 
 **Parallel Adder** is a digital circuit that compute the addition of variable binary strings of equivalent or different size in parallel.<br/>
-A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. The *parallel adder* is a group of different adders, which work in parallel, like *ripple carry Adder*.
+A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. The *parallel adder* is a group of different adders, which work in parallel, like *ripple carry adder* or *carry-lookahead adder*.
 
 #### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
 **Ripple-Carry adder** consists of full adders connected in a chain where the output carry from each *full adder* is connected to the carry input of the next higher order full adder in the chain. For the two-bit number, two adders are needed while for four bit number, four adders are needed and so on.
@@ -393,9 +392,22 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 
 [Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for Ripple-Carry adder.
 
-#### Carry Skip Adder <a name="csadder"></a> [UP↑](#tof)
-
 #### Carry Lookahead Adder <a name="cladder"></a> [UP↑](#tof)
+
+*Ripple carry adder* is nice, but is slow. Each adder block waits for the carry to arrive from its previous block. So there will be a considerable time delay which is carry propagation delay. A *carry look-ahead adder* reduces the propagation delay by introducing more complex hardware, but I think the operation is simple. <br/>
+First, let's remember how the *full adder* works. 
+
+| ![fulladderrec](https://user-images.githubusercontent.com/43972902/106389364-33a35400-63e3-11eb-9b94-92bbc0751641.png) |
+|:--:|
+| Full adder logic diagram |
+| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
+
+| ![fulltruthtable](https://user-images.githubusercontent.com/43972902/106389450-a90f2480-63e3-11eb-9654-575c892a60c0.png) |
+|:--:|
+| The truth table full adder  |
+| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
+
+
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
