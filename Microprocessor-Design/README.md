@@ -18,8 +18,8 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 11. [Adder](#Adder)
     1. [Half adder](#half)
     2. [Full adder](#full)
-    3. [Serial Adder](#serial) --> finish!
-    4. [Parallel Adder](#paradder) --> finish!
+    3. [Serial Adder](#serial)
+    4. [Parallel Adder](#paradder)
     5. [Ripple Carry Adder](#rcadder) --> finish!
     6. [Carry Skip Adder](#csadder) --> finish!
     7. [Carry Lookahead Adder](#cladder) --> finish!
@@ -64,7 +64,8 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 4. General Computing - general purpose processor is like the kind of processor that is typically found inside a desktop PC.
 
 ### Assembly Language <a name="asemb"></a> [UP↑](#tof)
-*Assembly Language* - small language that contains a short word or ”mnemonic” for each individual command that a microcontroller can follow. Each command gets a single mnemonic, and each mnemonic corresponds to a single machine command. Assembly language gets converted (by a program called an ”assembler”) into the binary machine code. Examples of ISA:
+*Assembly Language* - small language that contains a short word or ”mnemonic” for each individual command that a microcontroller can follow. Each command gets a single mnemonic, and each mnemonic corresponds to a single machine command. Assembly language gets converted (by a program called an ”assembler”) into the binary machine code. <br/>
+Examples of ISA:
 - ARM
 - IA-32 (Intel x86)
 - MIPS 
@@ -379,17 +380,18 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 
 #### Parallel Adder <a name="paradder"></a> [UP↑](#tof)
 
-**Parallel Adder** is a digital circuit capable calculate the arithmetic sum of two binary numbers that is greater than one bit in length by operating on corresponding pairs of bits in parallel. <br/>
-A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. **Parallel Adder** consists of full adders connected in a chain where the output carry from each full adder is connected to the carry input of the next higher order full adder in the chain. For the two-bit number, two adders are needed while for four bit number, four adders are needed and so on.
+**Parallel Adder** is a digital circuit that compute the addition of variable binary strings of equivalent or different size in parallel.<br/>
+A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. The *parallel adder* is a group of different adders, which work in parallel, like *ripple carry Adder*.
+
+#### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
+**Ripple-Carry adder** consists of full adders connected in a chain where the output carry from each *full adder* is connected to the carry input of the next higher order full adder in the chain. For the two-bit number, two adders are needed while for four bit number, four adders are needed and so on.
 
 | ![parAdder](https://user-images.githubusercontent.com/43972902/106361838-e27e5c00-631f-11eb-949d-96a047fa2128.png) |
 |:--:|
-| Paraller adder |
+| Ripple-Carry adder |
 | Source: *https://media.geeksforgeeks.org/wp-content/cdn-uploads/full_adder.png*  [30.01.2021] |
 
-[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for paraller adder.
-
-#### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for Ripple-Carry adder.
 
 #### Carry Skip Adder <a name="csadder"></a> [UP↑](#tof)
 
