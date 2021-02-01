@@ -382,7 +382,7 @@ If we have odd *true* in our input, then we have *true* on output. Below is a mo
 **Parallel Adder** is a digital circuit that compute the addition of variable binary strings of equivalent or different size in parallel.<br/>
 A *single full adder* performs the addition of two one bit numbers and an input carry. It's easy I think. The *parallel adder* is a group of different adders, which work in parallel, like *ripple carry adder* or *carry-lookahead adder*.
 
-#### Ripple Carry Adder <a name="rcadder"></a> [UP↑](#tof)
+#### Ripple-Carry Adder <a name="rcadder"></a> [UP↑](#tof)
 **Ripple-Carry adder** consists of full adders connected in a chain where the output carry from each *full adder* is connected to the carry input of the next higher order full adder in the chain. For the two-bit number, two adders are needed while for four bit number, four adders are needed and so on.
 
 | ![parAdder](https://user-images.githubusercontent.com/43972902/106361838-e27e5c00-631f-11eb-949d-96a047fa2128.png) |
@@ -396,7 +396,7 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 
 *Ripple carry adder* is nice, but is slow. Each adder block waits for the carry to arrive from its previous block. So there will be a considerable time delay which is carry propagation delay. A *carry look-ahead adder* reduces the propagation delay by introducing more complex hardware, but I think the operation is simple. <br/>
 Let's look on the truth table for full adder:
-![claadder3](https://user-images.githubusercontent.com/43972902/106480599-daebbe00-64ab-11eb-98ec-8c8642aa1df5.png)
+![claasdf](https://user-images.githubusercontent.com/43972902/106494891-47ba8480-64bb-11eb-9f3b-d980e69443fd.png)
 
 Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
 **Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G* <br/>
@@ -405,7 +405,6 @@ Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and**
 Let's summarize and it's very very important, thanks to this we know when we have carry output: </br>
 Carry output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P * Ci** <br/>
 Ok, I said that *Carry Lookahead Adder* is faster than *Ripple-Carry adder* and it's true. In *Ripple-Carry adder* we must wait for carry output from last position like on this picture:
-
 | ![parAdder](https://user-images.githubusercontent.com/43972902/106361838-e27e5c00-631f-11eb-949d-96a047fa2128.png) |
 |:--:|
 | Ripple-Carry adder |
@@ -415,9 +414,14 @@ Ok, I said that *Carry Lookahead Adder* is faster than *Ripple-Carry adder* and 
 Ok, let's create now boolean function of each carry output:
 - C1 = G0 + (P0 * Cin) --> here we calculate carry otput for first module
 - C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry otput from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
-- C3 = G2 + (P2 * C2) = G2 + (P2 * G1) + (P2 * P1 * G0) + (P2 * P1 * P0 * Cin) -->  the same situation like above, we don't have to wait for the previous module, because we can calculate carry output from previous module.
+- C3 = G2 + (P2 * C2) = G2 + (P2 * G1) + (P2 * P1 * G0) + (P2 * P1 * P0 * Cin) -->  the same situation like above, we don't have to wait for the previous module, because we can calculate carry output from previous module. <br/>
+As we can see *Carry Lookahead Adder* can be faster than *Ripple-Carry adder*, because we can calculate carry output from previous module and we don't have to wait, but there is one problem. *Carry Lookahead Adder* requires a lot more logic gates :(
 
-As we can see 
+| ![claadder5](https://user-images.githubusercontent.com/43972902/106494590-e7c3de00-64ba-11eb-8f63-286fd3f8e791.png) |
+|:--:|
+| 4bit Carry Lookahead Adder |
+| Source: *https://www.researchgate.net/publication/225594280_Modeling_leakage_power_reduction_in_VLSI_as_optimization_problems*  [01.02.2021] |
+
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
