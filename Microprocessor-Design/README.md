@@ -402,24 +402,22 @@ Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* 
 **Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G* <br/>
 Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
 **Ci+1 = A ⊕ B * Ci** - we can name this case **carry propagate**. So in this case output depends on *Ci* and this part we call *P*. <br/>
-Let's summarize: </br>
-Output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P** <br/>
+Let's summarize and it's very very important, thanks to this we know when we have carry output: </br>
+Carry output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P * Ci** <br/>
+Ok, I said that *Carry Lookahead Adder* is faster than *Ripple-Carry adder* and it's true. In *Ripple-Carry adder* we must wait for carry output from last position like on this picture:
 
-
-| ![fulladderrec](https://user-images.githubusercontent.com/43972902/106389364-33a35400-63e3-11eb-9b94-92bbc0751641.png) |
+| ![parAdder](https://user-images.githubusercontent.com/43972902/106361838-e27e5c00-631f-11eb-949d-96a047fa2128.png) |
 |:--:|
-| Full adder logic diagram |
-| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
+| Ripple-Carry adder |
+| Source: *https://media.geeksforgeeks.org/wp-content/cdn-uploads/full_adder.png*  [30.01.2021] |
 
-Ok, so now define some auxiliary variables:
-- Pi = Ai ⊕ Bi - it's easy I think. It's simple XOR, if we have two the same inputs (like 1,1 or 0,0), then we have 0. **Pi means carry propagate**.
-- Gi = Ai * Bi - simple multiplication. **Gi means carry generate**. *Gi* produces the carry when both *Ai*, *Bi* are logic one, independently of the input carry.
-- Si = Pi ⊕ Ci - it's sum output.
-- Ci + 1 = Gi + Pi*Ci - carry output.
+**BUT** we know when we have carry output from last position, because we can calculate: `G + P * Ci*`, thanks to this it's not necessary wait for last module for carry output. Just add more logic gates which calculate `G + P * Ci*`. <br/>
+Ok, let's create now boolean function of each carry output:
+- C1 = G0 + (P0 * Cin) --> here we calculate carry otput for first module
+- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry otput from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
+- C3 = G2 + (P2 * C2) = G2 + (P2 * G1) + (P2 * P1 * G0) + (P2 * P1 * P0 * Cin) -->  the same situation like above, we don't have to wait for the previous module, because we can calculate carry output from previous module.
 
-Ok, let's assume we have a four bit *Carry Lookahead Adder*. Let's create now boolean function of each carry output:
-- C1 = G0 + (P0 * Cin)
-- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin)
+As we can see 
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
