@@ -395,12 +395,16 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 #### Carry Lookahead Adder <a name="cladder"></a> [UP↑](#tof)
 
 *Ripple carry adder* is nice, but is slow. Each adder block waits for the carry to arrive from its previous block. So there will be a considerable time delay which is carry propagation delay. A *carry look-ahead adder* reduces the propagation delay by introducing more complex hardware, but I think the operation is simple. <br/>
-First, let's remember how the *full adder* works. 
+Let's look on the truth table for full adder:
+![claadder3](https://user-images.githubusercontent.com/43972902/106480599-daebbe00-64ab-11eb-98ec-8c8642aa1df5.png)
 
-| ![fulltruthtable](https://user-images.githubusercontent.com/43972902/106389450-a90f2480-63e3-11eb-9654-575c892a60c0.png) |
-|:--:|
-| The truth table full adder  |
-| Source: *https://www.electronicshub.org/carry-look-ahead-adder/* [31.01.2021] |
+Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
+**Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G* <br/>
+Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
+**Ci+1 = A ⊕ B * Ci** - we can name this case **carry propagate**. So in this case output depends on *Ci* and this part we call *P*. <br/>
+Let's summarize: </br>
+Output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P** <br/>
+
 
 | ![fulladderrec](https://user-images.githubusercontent.com/43972902/106389364-33a35400-63e3-11eb-9b94-92bbc0751641.png) |
 |:--:|
