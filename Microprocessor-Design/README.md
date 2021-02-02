@@ -21,8 +21,8 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     3. [Serial Adder](#serial)
     4. [Parallel Adder](#paradder)
     5. [Ripple Carry Adder](#rcadder)
-    6. [Carry Lookahead Adder](#cladder) --> finish!
-    7. [Cascading Adders](#cadders) --> finish!
+    6. [Carry Lookahead Adder](#cladder)
+    7. [Cascading Adders](#cadders)
 12. [ALU](#ALU)
     1. [Program counter](#counter)
     2. [Branching](#Branching)
@@ -424,6 +424,8 @@ As we can see *Carry Lookahead Adder* can be faster than *Ripple-Carry adder*, b
 
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
+
+A basic carry-lookahead adder is very fast but has the disadvantage that it takes a very large amount of logic hardware to implement. In fact, the amount of hardware needed is approximately quadratic with n, and begins to get very complicated for n greater than 4. Due to this, most CLAs are constructed from "blocks" contain 4-bit CLAs, which are cascaded to produce a larger CLA. 
 
 ### ALU <a name="ALU"></a> [UP↑](#tof)
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
