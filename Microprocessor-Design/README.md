@@ -611,9 +611,30 @@ FPU needs the following components: <br/>
 
 ### Shift and Rotate Blocks <a name="sarb"></a> [UP↑](#tof)
 
+They are useful on their own (pol. *są przydatne same w sobie *), but they also are used in multiplication and division modules. In a binary computer, a left shift has the same effect as a multiplication by 2 and a right shift has the same effect as a division by 2. **Since shift and rotate operations perform much more quickly then multiplication and division**.
+
 #### Logical Shift <a name="logshft"></a> [UP↑](#tof)
 
+Logical shift is easy to understand. When shifting left, the most-significant bit is lost, and a 0 bit is inserted on the other end. A single **left shift multiplies a binary number by 2**:
+1. We have: `0010 << 1`
+2. After this we have: `0100`. `0010` is 2, `0100` is 4.
+
+When shifting right with a logical right shift, the least-significant bit is lost and a 0 is inserted on the other end. **For positive numbers, a single logical right shift divides a number by 2**
+
+| ![logshft](https://user-images.githubusercontent.com/43972902/106618536-da1c6000-656f-11eb-9e61-9898d97aa4f4.png) |
+|:--:|
+| Source: *https://open4tech.com/wp-content/uploads/2016/11/Logical_Shift.jpg*  [02.02.2021] |
+
 #### Arithmetic shift <a name="artshft"></a> [UP↑](#tof)
+
+| ![artshift](https://user-images.githubusercontent.com/43972902/106618180-7f830400-656f-11eb-9f4b-b8b5fb9f9796.png) |
+|:--:|
+| Source: *https://open4tech.com/wp-content/uploads/2016/11/Arithmetic_Shift.jpg*  [02.02.2021] |
+
+#### Arithmetic Shift vs. Logical Shift
+
+przesuniecie arytmetyczne w lewo jest takie samo jak logiczne
+arytmetyczne i logiczne w prawo jest inne
 
 #### Rotations
 
