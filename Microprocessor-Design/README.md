@@ -619,7 +619,9 @@ Logical shift is easy to understand. When shifting left, the most-significant bi
 1. We have: `0010 << 1`
 2. After this we have: `0100`. `0010` is 2, `0100` is 4.
 
-When shifting right with a logical right shift, the least-significant bit is lost and a 0 is inserted on the other end. **For positive numbers, a single logical right shift divides a number by 2**
+When shifting right with a logical right shift, the least-significant bit is lost and a 0 is inserted on the other end. **For positive numbers, a single logical right shift divides a number by 2**:
+1. We have: `0101 >> 1`
+2. After this we have: `0010`. `0101` is 5, `0010` is 2.
 
 | ![logshft](https://user-images.githubusercontent.com/43972902/106618536-da1c6000-656f-11eb-9e61-9898d97aa4f4.png) |
 |:--:|
@@ -627,14 +629,22 @@ When shifting right with a logical right shift, the least-significant bit is los
 
 #### Arithmetic shift <a name="artshft"></a> [UP↑](#tof)
 
+When shifting right with an **arithmetic right shift**, the least-significant bit is lost and the **most-significant bit is copiedThe arithmetic and logical shift to the left are the same. **. The result of a Right Shift operation is a division by *2^n* , where *n* is the number of shifted bit positions.
+1. We have: `1010 >> 1`
+2. After this we have: `1101`. `1010` is *-6*, `1101` is *-3*.
+
+The result of a **Left Shift** operation is a multiplication by *2*.
+1. We have: `0010 << 1`
+2. After this we have: `0100`. `0010` is 2, `0100` is 4.
+
 | ![artshift](https://user-images.githubusercontent.com/43972902/106618180-7f830400-656f-11eb-9f4b-b8b5fb9f9796.png) |
 |:--:|
 | Source: *https://open4tech.com/wp-content/uploads/2016/11/Arithmetic_Shift.jpg*  [02.02.2021] |
 
 #### Arithmetic Shift vs. Logical Shift
 
-przesuniecie arytmetyczne w lewo jest takie samo jak logiczne
-arytmetyczne i logiczne w prawo jest inne
+The arithmetic and logical shift to the left are the same. <br/>
+Arithmetic right shift save the most-significant bit.
 
 #### Rotations
 
