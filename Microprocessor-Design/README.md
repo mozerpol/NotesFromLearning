@@ -30,23 +30,22 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     4. [Microarchitecture](#Microarchitecture)
     5. [Machine state register](#msr)
     6. [Instruction Decoder](#instr)
+    7. [2-Bit ALU](#bit2alu)
+    8. [Accumulator](#accum)
+    9. [Register Stack](#regstac)
+    10. [Register-and-Memory](#regMem)
+    11. [IA-32](#iatrz)
+    12. [MIPS](#mips)
 13. [Register File](#regf)
     1. [Register Bank](#regbank)
-14. [ALU](#alu2) --> Another, different description of ALU
-    1. [2-Bit ALU](#bit2alu)
-    2. [Accumulator](#accum)
-    3. [Register Stack](#regstac)
-    4. [Register-and-Memory](#regMem)
-    5. [IA-32](#iatrz)
-    6. [MIPS](#mips)
-15. [FPU](#fpu)
+14. [FPU](#fpu)
     1. [IEEE 754](#ieeesev)
     2. [Design FPU](#fpudesign)
-16. [Control Unit](#cu)
-17. [Shift and Rotate Blocks](#sarb)
+15. [Control Unit](#cu)
+16. [Shift and Rotate Blocks](#sarb)
     1. [Logical Shift](#logshft)
     2. [Arithmetic shift](#artshft)
-18. [Multiplication and Division](#mulanddiv) 
+17. [Multiplication and Division](#mulanddiv) 
 
 ### Processor classification <a name="procclas"></a>
 
@@ -498,35 +497,12 @@ Ok, once again, but using different words. The microcode usually implements the 
 *Instruction Decoder* - reads the next instruction from memory, and sends the component pieces of that instruction to the necessary destinations. A CISC decoder is typically set up (*typically set up* - *zwykle skonfigurowane
 *) as a state machine. The RISC instruction decoder is typically a very simple device. Its purpose is to translate an instruction code into the address in the micro memory where the micro code for the instruction starts.
 
-### Register File <a name="regf"></a> [UP↑](#tof)
-Registers are temporary storage locations inside the CPU that hold data and addresses. The register file is the component that contains all the general purpose registers of the microprocessor. A few CPUs also place special registers such as the PC and the status register in the register file. Other CPUs keep them separate. A simple register file is a set of registers and a decoder. The register file requires an address and a data input:
-![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
+#### Example: 2-Bit ALU <a name="bit2alu"></a> [UP↑](#tof)
 
-#### Register Bank <a name="regbank"></a> [UP↑](#tof)
-Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
-A *register bank* contains a number of register files or pages. Only one page can be active at a time, and there are additional instructions added to the ISA to switch between the available register pages. Data values can only be written to and read from the currently active register page, but instructions can exist to move data from one page to another.
-![registerBank](https://user-images.githubusercontent.com/43972902/104124348-bee37980-5350-11eb-8b9d-81467cb88db9.png) 
-
-If the register bank has *N* registers, and a page can only show *M* registers (with *N* > *M*), we can address registers with two values, *n* and *m* respectively. We can define these values as:
-![reg](https://user-images.githubusercontent.com/43972902/104124513-90b26980-5351-11eb-86f2-0cd4c441b40c.png)
-
-In other words, *n* and *m* are the number of bits required to address *N* and *M* registers, respectively. We can break down the address into a single value as such:
-![reg2](https://user-images.githubusercontent.com/43972902/104124580-e9820200-5351-11eb-9242-787dad79213c.png)
-
-Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the pagea ddress and the register address.
-
-[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
-
-#### Memory unit
-Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
-The memory unit is typically one of the slowest components of a microcontroller, becausethe external interface with RAM is typically much slower than the speed of the processor.
-
-### ALU <a name="alu2"></a> [UP↑](#tof)
 ![alu2_1](https://user-images.githubusercontent.com/43972902/104484629-cbbed200-55c9-11eb-842d-e3b8968b3ed7.png)
 
 CPU designers have used a variety of names for the arithmetic logic unit, including *ALU*, *integerexecution unit*, and *E-box*.
 
-#### Example: 2-Bit ALU <a name="bit2alu"></a> [UP↑](#tof)
 This is an example of a basic 2-bit ALU. The boxes on the right hand side of the image are multiplexers and are used to select between various operations: OR, AND, XOR, and addition.
 ![alu2_2](https://user-images.githubusercontent.com/43972902/104485370-b4341900-55ca-11eb-92f6-577594152da2.png)
 
@@ -561,6 +537,29 @@ Where *AX* and *BX* are the names of the registers, so the result is stored back
 *MIPS* uses a **Register-to-Register structure**. Each operation can specify two register operands, and a third destination register. The downside (pol. *minusem*) is that memory reads need to be made in separate operations, and the small format of the instruction words means that space is at a premium, and some tasks are difficult to perform. An example of a MIPS instruction is: <br/>
 `ADD R1, R2, R3` <br/>
 Where *R1*, *R2* and *R3* are the names of registers. The resulting equation is save into *R1* register.
+
+### Register File <a name="regf"></a> [UP↑](#tof)
+Registers are temporary storage locations inside the CPU that hold data and addresses. The register file is the component that contains all the general purpose registers of the microprocessor. A few CPUs also place special registers such as the PC and the status register in the register file. Other CPUs keep them separate. A simple register file is a set of registers and a decoder. The register file requires an address and a data input:
+![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
+
+#### Register Bank <a name="regbank"></a> [UP↑](#tof)
+Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
+A *register bank* contains a number of register files or pages. Only one page can be active at a time, and there are additional instructions added to the ISA to switch between the available register pages. Data values can only be written to and read from the currently active register page, but instructions can exist to move data from one page to another.
+![registerBank](https://user-images.githubusercontent.com/43972902/104124348-bee37980-5350-11eb-8b9d-81467cb88db9.png) 
+
+If the register bank has *N* registers, and a page can only show *M* registers (with *N* > *M*), we can address registers with two values, *n* and *m* respectively. We can define these values as:
+![reg](https://user-images.githubusercontent.com/43972902/104124513-90b26980-5351-11eb-86f2-0cd4c441b40c.png)
+
+In other words, *n* and *m* are the number of bits required to address *N* and *M* registers, respectively. We can break down the address into a single value as such:
+![reg2](https://user-images.githubusercontent.com/43972902/104124580-e9820200-5351-11eb-9242-787dad79213c.png)
+
+Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the pagea ddress and the register address.
+
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
+
+#### Memory unit
+Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
+The memory unit is typically one of the slowest components of a microcontroller, becausethe external interface with RAM is typically much slower than the speed of the processor.
 
 ### FPU <a name="fpu"></a> [UP↑](#tof)
 The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
