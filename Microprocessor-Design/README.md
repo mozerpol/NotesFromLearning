@@ -646,11 +646,14 @@ The arithmetic and logical shift to the left are the same. <br/>
 Arithmetic right shift save the most-significant bit.
 
 #### Rotations
-
-#### Fast Shift Implementations
+A rotation is like a shift, except the bit shifted off the end of the register is then shiftedinto the new spot. It's very easy I think.
+![rotation](https://user-images.githubusercontent.com/43972902/106793593-f09de680-6657-11eb-9618-c146e4744941.png)
 
 ### Multiply and Divide Blocks <a name="mulanddiv"></a> [UP↑](#tof)
 
+Multiplication and division operations are significantly more complicated then addition or subtraction operations. This additional complexity leads to more hardware, more complicated hardware, and longer processing time. In hardware, multiplication and division are performed by a series of sequential additions and arithmetic shifts. It is typically not possible, or not desirable (pol. *pożądane*) to use the main adder and shifter units of the ALU, so a microprocessorwill typically have multiple ALU units.
+
+#### Booth’s Algorithm
 
 
 
