@@ -660,13 +660,23 @@ I'll show the analytical method below: <br/>
 Let's assume we want to multiply *-12* and *-14*. 
 1. The first thing is change *-12* and *-14* to the two's complement code. For *-12* is *10100* and for *-14* is *10010*.
 2. The second thing is also change *12* and *14* to the two's complement code. I know, that we want multiply *-12* and *-14*, but in this method we need positive and negative numbers. So, for *12* is *01100* and for *14* is *01110*.
-3. Then create a table that will facilitate (pol. *ułatwi*) multiplication. In the picture we can see four numbers: -12, 12, -14 and 14. Also we can see the table we'll fill. *L.P.:* means ordinal number (pol. *liczba porządkowa*), it determines how many steps we have taken: 
+3. Then create a table that will facilitate (pol. *ułatwi*) multiplication. In the picture we can see four numbers: -12, 12, -14 and 14. Also we can see the table we'll fill. *L.P.:* means ordinal number (pol. ***L**iczba **P**orządkowa*), it determines how many steps we have taken. We also have five columns: *I*, *II*, *III*, *IV*, *V* and next five columns: *A*, *B*, *C*, *D*, *E*. Why five columns? Because our number *-14* has five bits. <br/>
 ![ba1](https://user-images.githubusercontent.com/43972902/106901715-62c60800-66f8-11eb-8436-67a3c456fa08.png)
-4. Ok, we have two numbers that we want to multiply: *-12* and *-14*. Now we must select one number, any, it doesn't matter. In this case I selected *-14*. *-14* in two's complement code is equal *10010* and this number we must write in *ABCDE* cells. We can see, that *-14* has five bits, so we create also *I*, *II*, *III*, *IV*, *V* and fill this part with zeros: 
+4. Ok, we have two numbers that we want to multiply: *-12* and *-14*. Now we must select one number, any, it doesn't matter. In this case I selected *-14*. *-14* in two's complement code is equal *10010* and this number we must write in *ABCDE* cells. We can see, that *-14* has five bits, so we create also *I*, *II*, *III*, *IV*, *V* and fill this part with zeros: <br/>
 ![ba2](https://user-images.githubusercontent.com/43972902/106907392-7e341180-66fe-11eb-9ce9-128b3eb1345f.png)
-5. The algorithm is to shift our number (*-14*) when it is done it means that we have found a solution, so we should underline it (our number). Additionally, we must, after this red line add zero.
+5. The algorithm is to shift our number (*-14*) to the right when it is done it means that we have found a solution, so we should underline it (our number), for convenience, to know when is the end. Additionally, we must, after this red line add zero. <br/>
 ![ba3](https://user-images.githubusercontent.com/43972902/106909334-7aa18a00-6700-11eb-8eed-9039eab331a8.png)
-6. Now a very important thing. 
+6. Now a very important thing. There are several rules that govern what we do. To know what to do, look at the two numbers that are between the red dotted line. <br/>
+![ba4](https://user-images.githubusercontent.com/43972902/106910571-a40ee580-6701-11eb-99b0-43e36259af7e.png)
+7. In our case we have 0 and 0, it means that we should shift the number to the right one position.  
+
+
+
+
+
+
+
+
 
 
 
