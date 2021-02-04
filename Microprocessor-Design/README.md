@@ -655,6 +655,24 @@ Multiplication and division operations are significantly more complicated then a
 
 #### Booth’s Algorithm
 
+**Booth's algorithm** is a multiplication algorithm that multiplies two signed binary numbers in two's complement notation in efficient way. <br/>
+I'll show the analytical method below: <br/>
+Let's assume we want to multiply *-12* and *-14*. 
+1. The first thing is change *-12* and *-14* to the two's complement code. For *-12* is *10100* and for *-14* is *10010*.
+2. The second thing is also change *12* and *14* to the two's complement code. I know, that we want multiply *-12* and *-14*, but in this method we need positive and negative numbers. So, for *12* is *01100* and for *14* is *01110*.
+3. Then create a table that will facilitate (pol. *ułatwi*) multiplication. ![ba1](https://user-images.githubusercontent.com/43972902/106901715-62c60800-66f8-11eb-8436-67a3c456fa08.png)
+
+deasdadsa
+4. sadsa asfsd f
+
+
+
+
+
+
+
+
+
 
 
 
