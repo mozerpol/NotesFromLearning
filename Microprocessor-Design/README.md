@@ -609,7 +609,6 @@ FPU needs the following components: <br/>
 *Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components to perform the desired task.
 
 ### Shift and Rotate Blocks <a name="sarb"></a> [UP↑](#tof)
-
 They are useful on their own (pol. *są przydatne same w sobie *), but they also are used in multiplication and division modules. In a binary computer, a left shift has the same effect as a multiplication by 2 and a right shift has the same effect as a division by 2. **Since shift and rotate operations perform much more quickly then multiplication and division**.
 
 #### Logical Shift <a name="logshft"></a> [UP↑](#tof)
@@ -668,7 +667,9 @@ Let's assume we want to multiply *-12* and *-14*.
 ![ba3](https://user-images.githubusercontent.com/43972902/106909334-7aa18a00-6700-11eb-8eed-9039eab331a8.png)
 6. Now a very important thing. There are several rules that govern what we do. To know what to do, look at the two numbers that are between the red dotted line. <br/>
 ![ba4](https://user-images.githubusercontent.com/43972902/106910571-a40ee580-6701-11eb-99b0-43e36259af7e.png)
-7. In our case we have 0 and 0, it means that we should shift the number to the right one position.  
+7. In our case we have 0 and 0, it means that we should shift the number to the right one position. If we have a zero on the left side, we add next zero, as in this case. After shifting we should underline our number, for convenience, to know when wll be the end. 
+![bas1](https://user-images.githubusercontent.com/43972902/107104979-648cea00-6824-11eb-8305-7ded72d37362.png)
+
 
 
 
