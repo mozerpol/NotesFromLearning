@@ -46,6 +46,7 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     1. [Logical Shift](#logshft)
     2. [Arithmetic shift](#artshft)
 17. [Multiplication and Division](#mulanddiv) 
+    1. [Booth’s Algorithm](#both) <-- finish
 
 ### Processor classification <a name="procclas"></a>
 
@@ -652,7 +653,7 @@ A rotation is like a shift, except the bit shifted off the end of the register i
 
 Multiplication and division operations are significantly more complicated then addition or subtraction operations. This additional complexity leads to more hardware, more complicated hardware, and longer processing time. In hardware, multiplication and division are performed by a series of sequential additions and arithmetic shifts. It is typically not possible, or not desirable (pol. *pożądane*) to use the main adder and shifter units of the ALU, so a microprocessorwill typically have multiple ALU units.
 
-#### Booth’s Algorithm
+#### Booth’s Algorithm  <a name="both"></a> [UP↑](#tof)
 
 **Booth's algorithm** is a multiplication algorithm that multiplies two signed binary numbers in two's complement notation in efficient way. <br/>
 I'll show the analytical method below: <br/>
@@ -670,6 +671,14 @@ Let's assume we want to multiply *-12* and *-14*.
 7. In our case we have 0 and 0, it means that we should shift the number to the right one position. If we have a zero on the left side, we add next zero, as in this case. After shifting we should underline our number, for convenience, to know when wll be the end. 
 ![bas1](https://user-images.githubusercontent.com/43972902/107104979-648cea00-6824-11eb-8305-7ded72d37362.png)
 
+#### Multiply and Accumulate
+**Multiply and Accumulate (MAC)** - consists in multiplying the contents of two registers and adding third value and after this three operations save result to another register, most often the accumulator. *MAC* is the basic operation of signal processors. This operation is performed in one instruction cycle. For instance, the instruction: <br/>
+`MAC A, B, C`, will perform the operation: <br/>
+`A = A + (B×C)` <br/>
+In a processor with an accumulator architecture, MAC operations will use the accumulatoras the destination register, so the instruction: <br/>
+`MAC B, C` <br/>
+Will perform the operation: <br/>
+`ACC = ACC + (B×C)` <br/>
 
 
 
