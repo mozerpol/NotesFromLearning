@@ -684,10 +684,10 @@ Will perform the operation: <br/>
 #### Zero Flag <a name="zeroflag"></a> [UP↑](#tof)
 The **zero flag** is a single bit flag that is a central feature on most conventional CPU architectures (including *x86*, *ARM*, *PDP-11*, *68000*, *6502*, and numerous others). It is often stored in a dedicated register, typically called *status register* or *flag register*, along with other flags. The zero flag is typically abbreviated **Z** or **ZF**. The zero flag is used to check the result of an arithmetic operation, if is set to *1*, then arithmetic result is *zero*. In most processors, the zero flag is mainly used in conditional branch instructions.
 
+#### Overflow Flag <a name="overflowflag"></a> [UP↑](#tof)
+It is good to know when the result of an addition or multiplication is larger than the maximum result size. For this *overflow flag* is used to indicate when an arithmetic overflow has occurred in an operation, indicating that the signed two's-complement result would not fit in the number of bits used for the result. 
 
-
-
-
+#### Carry/Borrow Flag <a name="carborflag"></a> [UP↑](#tof)
 
 
 
