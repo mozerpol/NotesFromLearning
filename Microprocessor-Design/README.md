@@ -47,9 +47,9 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
     2. [Arithmetic shift](#artshft)
 17. [Multiplication and Division](#mulanddiv) 
     1. [Booth’s Algorithm](#both) <-- finish
+18. [ALU Flags](#aluflag) 
 
 ### Processor classification <a name="procclas"></a>
-
 #### Purpose
 1. general purpose - typical processor, which is designed to be integrated into a larger system with peripherals and external RAM.
 2. DSP - is a chip that is specifically designed for fast arithmetic operations, especially addition and multiplication.
@@ -680,9 +680,9 @@ In a processor with an accumulator architecture, MAC operations will use the acc
 Will perform the operation: <br/>
 `ACC = ACC + (B×C)` <br/>
 
-
-
-
+### ALU Flags <a name="aluflag"></a> [UP↑](#tof)
+#### Zero Flag <a name="zeroflag"></a> [UP↑](#tof)
+The **zero flag** is a single bit flag that is a central feature on most conventional CPU architectures (including *x86*, *ARM*, *PDP-11*, *68000*, *6502*, and numerous others). It is often stored in a dedicated register, typically called *status register* or *flag register*, along with other flags. The zero flag is typically abbreviated **Z** or **ZF**. The zero flag is used to check the result of an arithmetic operation, if is set to *1*, then arithmetic result is *zero*. In most processors, the zero flag is mainly used in conditional branch instructions.
 
 
 
