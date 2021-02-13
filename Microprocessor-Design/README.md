@@ -705,8 +705,15 @@ Summarizing: </br>
 Single-cycle processors suffer from poor speed performance. Control signals and data must pass completely through the processor in one cycle, it means hat cycle times need to be long, and many parts of the hardware are inactive for most of the cycle. 
 
 ### Multi Cycle Processors <a name="multicycpro"></a> [UP↑](#tof)
+Multi-cycle processors break up the instruction into its fundamental parts, and executes each part of the instruction in a different clock cycle. Since signals have less distance to travel in a single cycle, so the cycle times can be sped up. <br/>
+Typically, an instruction is executed over at least 5 cycles, which are named as such:
+- IF - fetch (pol. *sprowadzać*) the instruction from memory,
+- ID - decode the instruction, and generate the necessary control signals,
+- EX - feed the necessary control signals into the ALU and produce a result,
+- MEM - read from memory,
+- WB - write the result back to the register file or to memory.
 
-
+In a multicycle processor, a single ALU can be used to update the instruction pointer (in the *IF* cycle), perform the operation (in the *EX* cycle), and calculate a necessary memory address (in the *MEM* cycle). 
 
 
 
