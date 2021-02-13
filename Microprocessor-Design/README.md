@@ -689,9 +689,10 @@ The **zero flag** is a single bit flag that is a central feature on most convent
 It is good to know when the result of an addition or multiplication is larger than the maximum result size. For this *overflow flag* is used to indicate when an arithmetic overflow has occurred in an operation, indicating that the signed two's-complement result would not fit in the number of bits used for the result. 
 
 #### Carry/Borrow Flag <a name="carborflag"></a> [UP↑](#tof)
+**Carry flag** (usually indicated as the C flag) - is used to indicate when an arithmetic carry or borrow (pol. *pożyczać*) has been generated for the most significant bit position in ALU.
 
-
-
+#### Comparisons fag <a name="compflag"></a> [UP↑](#tof)
+Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second. I
 
 
 
