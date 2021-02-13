@@ -673,7 +673,8 @@ Let's assume we want to multiply *-12* and *-14*.
 
 #### Multiply and Accumulate
 **Multiply and Accumulate (MAC)** - consists in multiplying the contents of two registers and adding third value and after this three operations save result to another register, most often the accumulator. *MAC* is the basic operation of signal processors. This operation is performed in one instruction cycle. For instance, the instruction: <br/>
-`MAC A, B, C`, will perform the operation: <br/>
+`MAC A, B, C`, <br/>
+will perform the operation: <br/>
 `A = A + (B×C)` <br/>
 In a processor with an accumulator architecture, MAC operations will use the accumulatoras the destination register, so the instruction: <br/>
 `MAC B, C` <br/>
