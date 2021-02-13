@@ -692,9 +692,19 @@ It is good to know when the result of an addition or multiplication is larger th
 **Carry flag** (usually indicated as the C flag) - is used to indicate when an arithmetic carry or borrow (pol. *pożyczać*) has been generated for the most significant bit position in ALU.
 
 #### Comparisons fag <a name="compflag"></a> [UP↑](#tof)
-Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second. I
+Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second.
 
+### Single Cycle Processors <a name="singlecycpr"></a> [UP↑](#tof)
+Single-cycle processors: an instruction is fetched from memory, it's executed, and the results are stored, all in a single clock cycle. Single-cycle processors are the most simple in terms (in terms - *w odniesieniu*) of hardware requirements, and they are easy to design. Unfortunately, they tend to have poor data throughput (poor data throughput - *słaba przepustowość danych*), and require long clock cycles (slow clock rate) in order to perform all the necessary computations in time. Why single-cycle processors need long clock cycles? Because you need to consider the longest possible delay in the processor. This means that some instructions (typically the arithmetic instructions) will complete quickly, and time will be wasted each cycle. Other instructions (typically memory read or write instructions) will have a much longer propagation delay.
 
+#### Critical path
+![cruticalpath](https://user-images.githubusercontent.com/43972902/107860107-ca3d2f80-6e3d-11eb-93a6-609849a61b4f.png)
+
+As you can see in the picture, the instruction will finish when all 5 components work. This means that the length of the cycle must be the length of the longest instruction. The longest path from one end of the processor to the other is called the **critical path** and is used to determine the cycle time. <br/> <br/>
+Summarizing: </br> 
+Single-cycle processors suffer from poor speed performance. Control signals and data must pass completely through the processor in one cycle, it means hat cycle times need to be long, and many parts of the hardware are inactive for most of the cycle. 
+
+### Multi Cycle Processors <a name="multicycpro"></a> [UP↑](#tof)
 
 
 
