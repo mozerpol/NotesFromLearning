@@ -715,8 +715,13 @@ Typically, an instruction is executed over at least 5 cycles, which are named as
 
 In a multicycle processor, a single ALU can be used to update the instruction pointer (in the *IF* cycle), perform the operation (in the *EX* cycle), and calculate a necessary memory address (in the *MEM* cycle). 
 
+### Pipelined Processors <a name="pipelineproc"></a> [UP↑](#tof)
+*Pipelining Philosophy*: <br/>
+- Use multi-cycle methodologies to reduce the amount of computation (pol. *obliczen*) in a single cycle.
+- Shorter computations per cycle allow for faster clock cycles.
+- Throughput (pol. *wydajność *) is increased by having instructions complete more frequently
 
-
+#### Pipelining Hardware
 
 
 
