@@ -724,11 +724,12 @@ In a multicycle processor, a single ALU can be used to update the instruction po
 #### Pipelining Hardware
 
 Okay, it's simple. We have a processor which is made from many elements. Pipelining is about making every element in the processor do some work. In *pipelinig* is about that every element in the processor does some work. We don't want any part of the CPU to be unemployed. 
-
 ![pipel](https://user-images.githubusercontent.com/43972902/107888389-371efb00-6f0c-11eb-93a3-1b0df87ce6b3.png)
 
-As this diagram above shows, each element in the processor is active in every cycle.
+As this diagram above shows, each element in the processor is active in every cycle. Rows represent instructions, so we have in this case five instructions loaded to our CPU, and every instruction is divided by five parts. Ok, but what extra do we need to implement this? The answer is adding storage registers between each pipeline state to store the partial results between cycles.
+![pipel2](https://user-images.githubusercontent.com/43972902/107888542-27ec7d00-6f0d-11eb-9cef-8e38821b8c57.png)
 
+It's easy, between each item such as *IF*, *ID* or *WB* we must add additional storage register to remebmer last result.
 
 
 
