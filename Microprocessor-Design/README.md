@@ -722,17 +722,23 @@ In a multicycle processor, a single ALU can be used to update the instruction po
 - Throughput (pol. *wydajność *) is increased by having instructions complete more frequently
 
 #### Pipelining Hardware
-
 Okay, it's simple. We have a processor which is made from many elements. Pipelining is about making every element in the processor do some work. In *pipelinig* is about that every element in the processor does some work. We don't want any part of the CPU to be unemployed. 
 ![pipel](https://user-images.githubusercontent.com/43972902/107888389-371efb00-6f0c-11eb-93a3-1b0df87ce6b3.png)
 
 As this diagram above shows, each element in the processor is active in every cycle. Rows represent instructions, so we have in this case five instructions loaded to our CPU, and every instruction is divided by five parts. Ok, but what extra do we need to implement this? The answer is adding storage registers between each pipeline state to store the partial results between cycles.
 ![pipel2](https://user-images.githubusercontent.com/43972902/107888542-27ec7d00-6f0d-11eb-9cef-8e38821b8c57.png)
 
-It's easy, between each item such as *IF*, *ID* or *WB* we must add additional storage register to remebmer last result.
+It's easy, between each item such as *IF*, *ID* or *WB* we must add additional storage register to remebmer last result. <br/>
+If we have 5 instructions, we can show them in our pipeline using different colors. In the diagram below, white corresponds to a NOP, and the different colors correspond to other instructions in the pipeline. Each stage, the instructions shift forward through the pipeline.
+![pipel3](https://user-images.githubusercontent.com/43972902/107888593-a2b59800-6f0d-11eb-813c-e326cb3beb3f.png)
 
+Pipelined processors generate the same results as a one-instruction-at-a-time processor does when running the same software -- they just generate those results much more quickly.
 
+#### Superpipeline
 
+Superpipelining is the technique of raising the pipeline depth in order to increase the clock speed and reduce the latency of individual stages. If the ALU takes three times longer than any other module, we can divide the ALU into three separate stages, which will reduce the amount of time wasted on shorter stages. <br/>
+In different words. Super-pipelining is the breaking of stages of a given pipeline into smaller stages (thus making the pipeline deeper). Superpipelined machines can do only one instruction per cycle, but they have cycle times shorter than the time required for any operation. <br/>
+It is not uncommon for modern high-end processors to have more than 20 pipeline stages.
 
 
 
