@@ -723,6 +723,21 @@ In a multicycle processor, a single ALU can be used to update the instruction po
 
 #### Pipelining Hardware
 
+Okay, it's simple. We have a processor which is made from many elements. Pipelining is about making every element in the processor do some work. In *pipelinig* is about that every element in the processor does some work. We don't want any part of the CPU to be unemployed. 
+
+![pipel](https://user-images.githubusercontent.com/43972902/107888389-371efb00-6f0c-11eb-93a3-1b0df87ce6b3.png)
+
+As this diagram above shows, each element in the processor is active in every cycle.
+
+
+
+
+
+
+
+
+
+
 
 
 
