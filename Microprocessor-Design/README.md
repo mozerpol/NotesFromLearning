@@ -48,6 +48,13 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 17. [Multiplication and Division](#mulanddiv) 
     1. [Booth’s Algorithm](#both) <-- finish
 18. [ALU Flags](#aluflag) 
+    1. [Zero Flag](#zeroflag)
+    2. [Overflow Flag](#overflowflag)
+    3. [Carry/Borrow Flag](#carborflag)
+    4. [Comparisons Flag](#compflag)
+19. [Single Cycle Processors](#singlecycpr)
+20. [Multi Cycle Processors](#multicycpro)
+21. [Pipelined Processors](#pipelineproc)
 
 ### Processor classification <a name="procclas"></a>
 #### Purpose
@@ -691,7 +698,7 @@ It is good to know when the result of an addition or multiplication is larger th
 #### Carry/Borrow Flag <a name="carborflag"></a> [UP↑](#tof)
 **Carry flag** (usually indicated as the C flag) - is used to indicate when an arithmetic carry or borrow (pol. *pożyczać*) has been generated for the most significant bit position in ALU.
 
-#### Comparisons fag <a name="compflag"></a> [UP↑](#tof)
+#### Comparisons Flag <a name="compflag"></a> [UP↑](#tof)
 Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second.
 
 ### Single Cycle Processors <a name="singlecycpr"></a> [UP↑](#tof)
