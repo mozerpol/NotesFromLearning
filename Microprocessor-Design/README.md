@@ -432,7 +432,7 @@ As we can see *Carry Lookahead Adder* can be faster than *Ripple-Carry adder*, b
 
 #### Cascading Adders <a name="cadders"></a> [UP↑](#tof)
 
-A basic carry-lookahead adder is very fast but has the disadvantage that it takes a very large amount of logic hardware to implement. In fact, the amount of hardware needed is approximately quadratic with n, and begins to get very complicated for n greater than 4. Due to this, most CLAs are constructed from "blocks" contain 4-bit CLAs, which are cascaded to produce a larger CLA. 
+A basic *carry-lookahead adder* is very fast but has the disadvantage that it takes a very large amount of logic hardware to implement. In fact, the amount of hardware needed is approximately quadratic with n, and begins to get very complicated for n greater than 4. Due to this, most *CLAs* are constructed from "blocks" contain 4-bit *CLAs*, which are cascaded to produce a larger *CLA*. 
 
 ### ALU <a name="ALU"></a> [UP↑](#tof)
 *ALU* - arithmetic logic unit is a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers. The inputs to an ALU are the data to be operated on, called *operands*.
@@ -441,19 +441,17 @@ A basic carry-lookahead adder is very fast but has the disadvantage that it take
 | A symbolic representation of an ALU |
 | Source: *https://en.wikipedia.org/wiki/Arithmetic_logic_unit*  [08.01.2021] |
 
-The ALU will be explain also later.
-
 **Signals:**
-1. Data - A basic ALU has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys (pol. *przekazuje*) one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising (pol. *zawierający*) each bus) are identical and match the native word size of the external circuitry (pol. *obwody*).
-2. Opcode - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the ALU an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
-3. Status - The status outputs are various individual signals that convey supplemental (pol. *uzupełniający*) information about the result of the current ALU operation. General-purpose ALUs commonly have status signals such as: 
+1. *Data* - A basic *ALU* has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys (pol. *przekazuje*) one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising (pol. *zawierający*) each bus) are identical and match the native word size of the external circuitry (pol. *obwody*).
+2. *Opcode* - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the *ALU* an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
+3. *Status* - The status outputs are various individual signals that convey supplemental (pol. *uzupełniający*) information about the result of the current *ALU* operation. General-purpose *ALUs* commonly have status signals such as: 
     - Carry-out - conveys (pol. *przekazuje*) the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
     - Zero - indicates all bits of Y are logic zero.
     - Negative - indicates the result of an arithmetic operation is negative.
     - Overflow - indicates the result of an arithmetic operation has exceeded (pol. *przekroczony*) the numeric range of Y.
     - Parity - indicates whether an even or odd number of bits in Y are logic one.
 
-[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/alu) you can find code in verilog for simple ALU.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/alu) you can find code in verilog for simple ALU and [here](#https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design#aluflag) you can find more details about these flags.
 
 #### Program counter <a name="counter"></a> [UP↑](#tof)
 *Program counter* - is a register structure that contains the address pointer value of the current instruction. Each cycle, the value at the pointer is read into the instruction decoder and the program counter is updated to point to the next instruction. 
@@ -512,9 +510,10 @@ Ok, once again, but using different words. The microcode usually implements the 
 CPU designers have used a variety of names for the arithmetic logic unit, including *ALU*, *integerexecution unit*, and *E-box*.
 
 This is an example of a basic 2-bit ALU. The boxes on the right hand side of the image are multiplexers and are used to select between various operations: OR, AND, XOR, and addition.
+
 ![alu2_2](https://user-images.githubusercontent.com/43972902/104485370-b4341900-55ca-11eb-92f6-577594152da2.png)
 
-Notice that all the operations are performed in parallel, and the select signal (*OP*) is usedto determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
+Notice that all the operations are performed in parallel, and the select signal (*OP*) is used to determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
 Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. In all images below, the orange represents memory structures internal to the CPU (registers), and the purple represents external memory (RAM).
 
 #### Accumulator <a name="accum"></a> [UP↑](#tof)
@@ -690,7 +689,7 @@ Will perform the operation: <br/>
 
 ### ALU Flags <a name="aluflag"></a> [UP↑](#tof)
 #### Zero Flag <a name="zeroflag"></a> [UP↑](#tof)
-The **zero flag** is a single bit flag that is a central feature on most conventional CPU architectures (including *x86*, *ARM*, *PDP-11*, *68000*, *6502*, and numerous others). It is often stored in a dedicated register, typically called *status register* or *flag register*, along with other flags. The zero flag is typically abbreviated **Z** or **ZF**. The zero flag is used to check the result of an arithmetic operation, if is set to *1*, then arithmetic result is *zero*. In most processors, the zero flag is mainly used in conditional branch instructions.
+The **zero flag** is a single bit flag that is a central feature on most conventional (pol. *standardowy/klasyczny*) CPU architectures (including *x86*, *ARM*, *PDP-11*, *68000*, *6502*, and numerous others). It is often stored in a dedicated register, typically called *status register* or *flag register*, along with other flags. The zero flag is typically abbreviated **Z** or **ZF**. The zero flag is used to check the result of an arithmetic operation, if is set to *1*, then arithmetic result is *zero*. In most processors, the zero flag is mainly used in conditional branch instructions.
 
 #### Overflow Flag <a name="overflowflag"></a> [UP↑](#tof)
 It is good to know when the result of an addition or multiplication is larger than the maximum result size. For this *overflow flag* is used to indicate when an arithmetic overflow has occurred in an operation, indicating that the signed two's-complement result would not fit in the number of bits used for the result. 
@@ -702,14 +701,14 @@ It is good to know when the result of an addition or multiplication is larger th
 Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second.
 
 ### Single Cycle Processors <a name="singlecycpr"></a> [UP↑](#tof)
-Single-cycle processors: an instruction is fetched from memory, it's executed, and the results are stored, all in a single clock cycle. Single-cycle processors are the most simple in terms (in terms - *w odniesieniu*) of hardware requirements, and they are easy to design. Unfortunately, they tend to have poor data throughput (poor data throughput - *słaba przepustowość danych*), and require long clock cycles (slow clock rate) in order to perform all the necessary computations in time. Why single-cycle processors need long clock cycles? Because you need to consider the longest possible delay in the processor. This means that some instructions (typically the arithmetic instructions) will complete quickly, and time will be wasted each cycle. Other instructions (typically memory read or write instructions) will have a much longer propagation delay.
+Single-cycle processors: an instruction is fetched from memory, it's executed, and the results are stored, all in a single clock cycle. Single-cycle processors are the most simple in terms (in terms - *w odniesieniu*) of hardware requirements, and they are easy to design. Unfortunately, they tend to (tend to - *mają tendencję do*) have poor data throughput (poor data throughput - *słaba przepustowość danych*), and require long clock cycles (slow clock rate) in order to perform all the necessary computations in time. Why single-cycle processors need long clock cycles? Because you need to consider the longest possible delay in the processor. This means that some instructions (typically the arithmetic instructions) will complete quickly, and time will be wasted each cycle. Other instructions (typically memory read or write instructions) will have a much longer propagation delay.
 
 #### Critical path
 ![cruticalpath](https://user-images.githubusercontent.com/43972902/107860107-ca3d2f80-6e3d-11eb-93a6-609849a61b4f.png)
 
 As you can see in the picture, the instruction will finish when all 5 components work. This means that the length of the cycle must be the length of the longest instruction. The longest path from one end of the processor to the other is called the **critical path** and is used to determine the cycle time. <br/> <br/>
 Summarizing: </br> 
-Single-cycle processors suffer from poor speed performance. Control signals and data must pass completely through the processor in one cycle, it means hat cycle times need to be long, and many parts of the hardware are inactive for most of the cycle. 
+Single-cycle processors suffer from poor speed performance. Control signals and data must pass completely through the processor in one cycle, it means that cycle times need to be long, and many parts of the hardware are inactive for most of the cycle. 
 
 ### Multi Cycle Processors <a name="multicycpro"></a> [UP↑](#tof)
 Multi-cycle processors break up the instruction into its fundamental parts, and executes each part of the instruction in a different clock cycle. Since signals have less distance to travel in a single cycle, so the cycle times can be sped up. <br/>
@@ -726,7 +725,7 @@ In a multicycle processor, a single ALU can be used to update the instruction po
 *Pipelining Philosophy*: <br/>
 - Use multi-cycle methodologies to reduce the amount of computation (pol. *obliczen*) in a single cycle.
 - Shorter computations per cycle allow for faster clock cycles.
-- Throughput (pol. *wydajność *) is increased by having instructions complete more frequently
+- Throughput (pol. *wydajność*) is increased by having instructions complete more frequently.
 
 #### Pipelining Hardware
 Okay, it's simple. We have a processor which is made from many elements. Pipelining is about making every element in the processor do some work. In *pipelinig* is about that every element in the processor does some work. We don't want any part of the CPU to be unemployed. 
