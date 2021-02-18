@@ -746,9 +746,16 @@ Superpipelining is the technique of raising the pipeline depth in order to incre
 In different words. Super-pipelining is the breaking of stages of a given pipeline into smaller stages (thus making the pipeline deeper). Superpipelined machines can do only one instruction per cycle, but they have cycle times shorter than the time required for any operation. <br/>
 It is not uncommon for modern high-end processors to have more than 20 pipeline stages.
 
+### Superscalar Processors <a name="superscalar"></a> [UP↑](#tof)
+In a superscalar design, the processor actually has multiple datapaths, and multiple in-structions can be exectuted simultaneously, one in each datapath. <br/>
+Ok, but in brief what is difference between superscalar and pipeline processor? <br/>
+- **Pipelining** divides an instruction into steps, and since each step is executed in a different part of the processor.
+- **Superscalar design** involves the processor being able to do multiple instructions in a single clock. <br/>
+We're talking about within a single core -- multicore processing is different. They're almost always used together. <br/>
 
+![scalar](https://user-images.githubusercontent.com/43972902/108430477-b892c800-7241-11eb-9b34-dda94b0fa48e.png)
 
-
+We can see in the picture above, that we have two instructions in the same time, In all the stages highlighted in green are executing simultaneously.
 
 
 
