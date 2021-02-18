@@ -761,6 +761,19 @@ We can see in the picture above, that we have two instructions in the same time,
 *VLIW* - *Very Long Instruction Words*. In this srchitecture also instructions can be executing simultaneously. So what is difference between *VLIW* and *Superscalar*. <br/>
 In a *superscalar design*, the microprocessor will have multiple independant execution units. An instruction scheduler determines which instructions will be executed on which execution unit, at what time. This scheduler unit requires large amounts of additional hardware complexity. VLIW is similar to superscalar architecture except that instead of using scheduling hardware to map instructions to available execution units, instructions for all units are provided in every instruction word. The scheduling is performed by the compiler at compile time. The term VLIW comes from the fact that multiple instructions typically requires large instruction words. If each instruction is 32 bits (including opcode, source and destination registers, etc), and the processor has 4 execution cores, then the total instruction word length is 128 bits long!
 
+### Vector Processors <a name="vectorproc"></a> [UP↑](#tof)
+*Vector processors*, or (like [SIMD](#https://en.wikipedia.org/wiki/SIMD)) processors are microprocessors that are specialized for operatingon vector or matrix data elements. These processors have specialized hardware for performing vector operations such as vector addition, vector multiplication, and other operations. <br/>
+Modern graphics processors tend to (pol. *mają tendencję do*) be vector-based processors. Modern Intel-based chips also have *Vector Processors* capabilities known as [SSE](#https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions) or [MMX](#https://en.wikipedia.org/wiki/MMX_(instruction_set)) operations. 
+
+
+
+
+
+
+
+
+
+
 
 
 
