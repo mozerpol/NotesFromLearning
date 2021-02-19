@@ -574,7 +574,7 @@ The FPU performs arithmetic operations on floating point numbers. An FPU is comp
 #### Floating point numbers
 Floating point numbers are specified in two parts: the exponent (*e*), and the mantissa (*m*). The value of a floating point number, *v*, is generally calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=m*2^{e}">
 
-#### IEEE 754 <a name="ieeesev"></a> [UP↑](#tof)
+#### IEEE 754 <a name="ieeesev"></a> [UP↑](#tof) 
 IEEE 754 format numbers are calculated as: <img src="https://render.githubusercontent.com/render/math?math=v=(1%2Bm)*2^{e}">
 The mantissa, *m*, is normalized in this standard, so that it falls between the numbers *1.0* and *2.0*.
 | ![ieee754](https://user-images.githubusercontent.com/43972902/104811649-49b6ef00-57fd-11eb-8c79-e798fb0b6d32.png) |
