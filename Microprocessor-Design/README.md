@@ -779,6 +779,9 @@ An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* proc
 ### Exceptions
 *Exceptions*, are situations where the processor needs to stop executing the current code because of an error. In these cases, the processor typically begins running an exception handling routine to resolve the error, and then returns to the normal program flow. For instance, if the *ALU* attempts to divide by zero, or if an addition causes overflow, an exception might be triggered. 
 
+### Interrupts
+An interrupt is a condition that causes the microprocessor to temporarily work on a different task, and then later return to its previous task. <br/> 
+What happens when external hardware requests another interrupt while the processor is already in the middle of executing the *ISR* for a previous interrupt request? When the first interrupt was requested, hardware in the processor causes it to finish the current instruction, disable further interrupts, and jump to the interrupt handler. The processor ignores further interrupts until it gets to the part of the (until it gets to the part of the - *dopóki nie dotrze do części*) ”return from interrupt” instruction, which re-enables interrupts.
 
 
 
