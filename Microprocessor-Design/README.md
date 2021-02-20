@@ -765,14 +765,16 @@ In a *superscalar design*, the microprocessor will have multiple independant exe
 *Vector processors*, or (like [SIMD](#https://en.wikipedia.org/wiki/SIMD)) processors are microprocessors that are specialized for operatingon vector or matrix data elements. These processors have specialized hardware for performing vector operations such as vector addition, vector multiplication, and other operations. <br/>
 Modern graphics processors tend to (pol. *mają tendencję do*) be vector-based processors. Modern Intel-based chips also have *Vector Processors* capabilities known as [SSE](#https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions) or [MMX](#https://en.wikipedia.org/wiki/MMX_(instruction_set)) operations. 
 
-### Multicore Processors
+### Multicore Processors <a name="multicore"></a> [UP↑](#tof)
 Taking the idea of superscalar operations to the next level, it is possible to put multiple microprocessor cores onto a single chip, and have the cores operatein parallel with one another. 
 
 #### Symmetric Multi-core
-A symmetric multi-core processor is one that has multiple cores on a single chip, and all of those cores are identical. For example *Intel Core 2*. The Core 2 can have either 2 cores on chip (*Core 2 Duo*) or 4 cores on chip (*Core 2 Quad*). Each core in the *Core 2* chip is symmetrical, and can function independently of one another. <br/>
+A symmetric multi-core processor is one that has multiple cores on a single chip, and all of those cores are identical. Each core has the same capabilities, so it requires that there is an arbitration unit to give each core a specific task. Software that uses techniques like [multithreading](#https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) makes the best use of a multi-core processor. For example *Intel Core 2*. The Core 2 can have either 2 cores on chip (*Core 2 Duo*) or 4 cores on chip (*Core 2 Quad*). Each core in the *Core 2* chip is symmetrical, and can function independently of one another. <br/>
 Another example *symmetric multi-core* is [Parallax Propeller](#https://en.wikipedia.org/wiki/Parallax_Propeller). The *Parallax Propeller* has 8 cores on chip, each one a 32-bit RISC processor. Each core in the *Parallax Propeller* chip is symmetrical, and can function independently of one another.
 
-
+#### Asymmetric Multi-core
+An asymmetric multi-core processor is one that has multiple cores on a single chip, but those cores might be different designs. For instance, there could be 2 general purpose cores and 2 vector cores on a single chip. <br/>
+An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* processor, used in the Sony PlayStation 3 video game console is an asymmetrical multi-core processor. The Cell has 9 processor cores on board, one general purpose processor, and 8 data-processing cores. <br/> Another example *asymmetric multi-core* is *Kilocore*. The [Kilocore](#https://en.wikipedia.org/wiki/Kilocore) has one general purpose processor, a PowerPC processing core, and either 256 or 1024 data processing cores on-chip. The cores are designed to run at extremely low power, so the overall chip is faster and yet uses less power than typical desktop CPU.
 
 
 
