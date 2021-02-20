@@ -776,6 +776,8 @@ Another example *symmetric multi-core* is [Parallax Propeller](#https://en.wikip
 An asymmetric multi-core processor is one that has multiple cores on a single chip, but those cores might be different designs. For instance, there could be 2 general purpose cores and 2 vector cores on a single chip. <br/>
 An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* processor, used in the Sony PlayStation 3 video game console is an asymmetrical multi-core processor. The Cell has 9 processor cores on board, one general purpose processor, and 8 data-processing cores. <br/> Another example *asymmetric multi-core* is *Kilocore*. The [Kilocore](#https://en.wikipedia.org/wiki/Kilocore) has one general purpose processor, a PowerPC processing core, and either 256 or 1024 data processing cores on-chip. The cores are designed to run at extremely low power, so the overall chip is faster and yet uses less power than typical desktop CPU.
 
+### Exceptions
+*Exceptions*, are situations where the processor needs to stop executing the current code because of an error. In these cases, the processor typically begins running an exception handling routine to resolve the error, and then returns to the normal program flow. For instance, if the *ALU* attempts to divide by zero, or if an addition causes overflow, an exception might be triggered. 
 
 
 
