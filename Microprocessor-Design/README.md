@@ -776,12 +776,26 @@ Another example *symmetric multi-core* is [Parallax Propeller](#https://en.wikip
 An asymmetric multi-core processor is one that has multiple cores on a single chip, but those cores might be different designs. For instance, there could be 2 general purpose cores and 2 vector cores on a single chip. <br/>
 An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* processor, used in the Sony PlayStation 3 video game console is an asymmetrical multi-core processor. The Cell has 9 processor cores on board, one general purpose processor, and 8 data-processing cores. <br/> Another example *asymmetric multi-core* is *Kilocore*. The [Kilocore](#https://en.wikipedia.org/wiki/Kilocore) has one general purpose processor, a PowerPC processing core, and either 256 or 1024 data processing cores on-chip. The cores are designed to run at extremely low power, so the overall chip is faster and yet uses less power than typical desktop CPU.
 
-### Exceptions
+### Exceptions <a name="exceptions"></a> [UP↑](#tof)
 *Exceptions*, are situations where the processor needs to stop executing the current code because of an error. In these cases, the processor typically begins running an exception handling routine to resolve the error, and then returns to the normal program flow. For instance, if the *ALU* attempts to divide by zero, or if an addition causes overflow, an exception might be triggered. 
 
-### Interrupts
+### Interrupts <a name="interrupts"></a> [UP↑](#tof)
 An interrupt is a condition that causes the microprocessor to temporarily work on a different task, and then later return to its previous task. <br/> 
 What happens when external hardware requests another interrupt while the processor is already in the middle of executing the *ISR* for a previous interrupt request? When the first interrupt was requested, hardware in the processor causes it to finish the current instruction, disable further interrupts, and jump to the interrupt handler. The processor ignores further interrupts until it gets to the part of the (until it gets to the part of the - *dopóki nie dotrze do części*) ”return from interrupt” instruction, which re-enables interrupts.
+
+### Hazards <a name="hazards"></a> [UP↑](#tof)
+A hazardis an error in the operation of the microcontroller, caused by the simultaneous execution of multiple stages in a pipelined processor.
+
+#### Data Hazards
+Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of datahazards:
+1. *Read After Write (RAW)* <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
+
+
+
+
+
+
+
 
 
 
