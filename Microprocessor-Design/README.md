@@ -55,6 +55,15 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 19. [Single Cycle Processors](#singlecycpr)
 20. [Multi Cycle Processors](#multicycpro)
 21. [Pipelined Processors](#pipelineproc)
+22. [Superscalar Processors](#superscalar)
+23. [VLIW Processors](#vilw)
+24. [Vector Processors](#vectorproc)
+25. [Multicore Processors](#multicore)
+    1. [Symmetric Multi-core](#symetric)
+    2. [Asymmetric Multi-core](#asymetric)
+26. [Exceptions](#exceptions)
+27. [Interrupts](#interrupts)
+28. [Hazards](#hazards)
 
 ### Processor classification <a name="procclas"></a>
 #### Purpose
