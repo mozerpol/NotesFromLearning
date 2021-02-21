@@ -788,8 +788,9 @@ A hazardis an error in the operation of the microcontroller, caused by the simul
 
 #### Data Hazards
 Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of datahazards:
-1. *Read After Write (RAW)* <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
-
+1. **Read After Write (RAW)** <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
+2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value,not the correct current value.
+3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at thesame time. 
 
 
 
