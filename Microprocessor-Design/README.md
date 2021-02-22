@@ -409,7 +409,6 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 [Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/adder) is implementatnion in Verilog for Ripple-Carry adder.
 
 #### Carry Lookahead Adder <a name="cladder"></a> [UP↑](#tof)
-
 *Ripple carry adder* is nice, but is slow. Each adder block waits for the carry to arrive from its previous block. So there will be a considerable time delay which is carry propagation delay. A *carry look-ahead adder* reduces the propagation delay by introducing more complex hardware, but I think the operation is simple. <br/>
 Let's look on the truth table for full adder:
 ![claasdf](https://user-images.githubusercontent.com/43972902/106494891-47ba8480-64bb-11eb-9f3b-d980e69443fd.png)
