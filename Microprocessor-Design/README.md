@@ -39,7 +39,7 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 13. [Register File](#regf)
     1. [Register Bank](#regbank)
 14. [FPU](#fpu)
-    1. [IEEE 754](#ieeesev)
+    1. [IEEE 754](#ieeesev) <-- finish
     2. [Design FPU](#fpudesign)
 15. [Control Unit](#cu)
 16. [Shift and Rotate Blocks](#sarb)
@@ -795,11 +795,16 @@ What happens when external hardware requests another interrupt while the process
 A hazardis an error in the operation of the microcontroller, caused by the simultaneous execution of multiple stages in a pipelined processor.
 
 #### Data Hazards
-Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of datahazards:
+Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of data hazards:
 1. **Read After Write (RAW)** <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
 2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value,not the correct current value.
-3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at thesame time. 
+3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at thesame time.
+4. 
+**Race condition** or **race hazard** - it will be easy to explain with an example. Consider, for example, a two-input AND gate with a logic signal *A* on one input and its negation, *NOT A*, on another input:
 
+![hazardrace](https://user-images.githubusercontent.com/43972902/113597925-b394a700-963c-11eb-954e-415611f53d85.png)
+
+In theory the output (*A* AND *NOT A*) should never be true. If, however, change the value of *A* take longer to propagate to the second input than the first when *A* changes from false to true then a short period will ensue during (will ensue during - *nastąpi w trakcie*) which both inputs are true, and so the gate's output will also be true. Using different words... We have two inputs in out gate: *A* and *NOT A*. Imagine that we have logic *1* on our input (*A* and *NOT A*). Before we get result we have short time when the result is wrong, because we have *NOT* gate, which need a few time to prepare the result.
 
 
 
