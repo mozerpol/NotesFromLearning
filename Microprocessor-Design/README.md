@@ -812,8 +812,20 @@ In theory the output (*A* AND *NOT A*) should never be true. If, however, change
 ##### Stall
 A *stall* (pol. **ugrzęznąć**), or a ”bubble” in the pipeline occurs when the control unit detects that a hazard will occur. When this happens, the control unit stops the instruction fetch mechanism and puts *NOP*s into the pipeline instead. In this way, the sensitive instructions will be forced to occur alone, without any other instructions being processed at the same time. 
 
+![bubhazard](https://user-images.githubusercontent.com/43972902/113710180-ada5d100-96e3-11eb-9487-12132382aebb.png)
 
+In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
 
+##### Forwarding
+When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding anadditional *forwarding unit* to control this mechanism.
+
+##### Register renaming
+
+##### Speculative execution
+
+##### Branch delay
+
+##### Branch Predication
 
 
 
