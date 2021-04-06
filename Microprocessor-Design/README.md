@@ -820,11 +820,12 @@ In this image we can see ”bubbles” drawn where data hazards occur. A bubble 
 When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding anadditional *forwarding unit* to control this mechanism.
 
 ##### Register renaming
-
 Register renaming - Przemianowanie rejestrów <br/>
 Register renaming is a renaming technique that separate logical registers from physical registers. Every logical register has a set of physical registers associated with it. While a programmer in assembly language refers for instance to a logical register *accu*, the processor transposes (pol. *przeniesc*) this name to one specific physical register on the fly. The physical registers are opaque (pol. *nieprzejrzysty*) and cannot be referenced directly but only via the canonical names. Register renaming can be used to prevent hazards caused by *out-of-order execution* (OOOE).
 
 ##### Speculative execution
+Speculative execution - Wykonywanie spekulatywne (ale beznadziejnie brzmi po polsku) <br/>
+It's the ability of pipelined microprocessors, which can execute instruction which is directly after conditional jump, even is not yet known whether occur (I mean that conditional jump can occur or not). Using different words. Some task can be done before it is known whether it is actually needed. However, if the guess is right, no time is wasted and the processor continues operation as normal. [Speculative multithreading](https://en.wikipedia.org/wiki/Speculative_multithreading) is a special case of speculative execution. 
 
 ##### Branch delay
 
