@@ -39,7 +39,7 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 13. [Register File](#regf)
     1. [Register Bank](#regbank)
 14. [FPU](#fpu)
-    1. [IEEE 754](#ieeesev) <-- finish
+    1. [IEEE 754](#ieeesev)
     2. [Design FPU](#fpudesign)
 15. [Control Unit](#cu)
 16. [Shift and Rotate Blocks](#sarb)
@@ -804,10 +804,13 @@ Data hazards are caused by attempting to access data or modify data simultaneous
 
 ![hazardrace](https://user-images.githubusercontent.com/43972902/113597925-b394a700-963c-11eb-954e-415611f53d85.png)
 
-In theory the output (*A* AND *NOT A*) should never be true. If, however, change the value of *A* take longer to propagate to the second input than the first when *A* changes from false to true then a short period will ensue during (will ensue during - *nastąpi w trakcie*) which both inputs are true, and so the gate's output will also be true. Using different words... We have two inputs in out gate: *A* and *NOT A*. Imagine that we have logic *1* on our input (*A* and *NOT A*). Before we get result we have short time when the result is wrong, because we have *NOT* gate, which need a few time to prepare the result.
+In theory the output (*A* AND *NOT A*) should never be true. If, however, change the value of *A* take longer to propagate to the second input than the first when *A* changes from false to true then a short period will ensue during (will ensue during - *nastąpi w trakcie*) which both inputs are true, and so the gate's output will also be true. Using different words... We have two inputs in our gate: *A* and *NOT A*. Imagine that we have logic *1* on our input (*A* and *NOT A*). Before we get result we have short time when the result is wrong, because we have *NOT* gate, which need a few time to prepare the result. 
 
-
-
+**Control Hazard** - *Control hazard* occurs when we have *branch* instructions. <br/>
+**Structural Hazard** - it occurs when two separate instructions attempt to access a particular hardware module at the same time. <br/>
+#### Fixing Hazards
+##### Stall
+A *stall* (pol. **ugrzęznąć**), or a ”bubble” in the pipeline occurs when the control unit detects that a hazard will occur. When this happens, the control unit stops the instruction fetch mechanism and puts *NOP*s into the pipeline instead. In this way, the sensitive instructions will be forced to occur alone, without any other instructions being processed at the same time. 
 
 
 
