@@ -833,15 +833,21 @@ A branch delay is an **instruction written in the assembly code** after the bran
 ##### Branch Predication
 In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not toexecute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
 
+### Performance Metrics <a name="PerfMetr"></a> [UP↑](#tof)
 
+#### Runtime
+Runtime is the time it takes to run a program. For any program running on any computer: <br/>
+`time per program = clock period * cycles per instruction * instructions executed per program` <br/>
+If you can reduce any one of those factors, then the time will be shorter, it means better.
 
+##### Clock rate
+Clock rate (often called ”clock speed”) is one of the easiest to measure performance metrics.
 
+##### Cycles per Instruction
+*CPI* is a throughput (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
 
-
-
-
-
-
+#### Instructions executed per program
+If the program you need to run is a binary executable, this number can’t be changed. Early CPU designers attempted to reduce this number by adding new, more complicated instructions, that did more work. (Later this idea was called *CISC*). When a given program (perhaps a benchmark program) is re-compiled for this new instruction set and executed, it requires fewer total executed instructions to finish. Alas, these more complicated instructions often require more cycles to execute - or worse, a longer clock period, which slows down every instruction - so the net benefit was not as great as was hoped. 
 
 
 
