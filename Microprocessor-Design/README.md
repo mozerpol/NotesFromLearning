@@ -827,7 +827,8 @@ When an result from one instruction is using as the input to the *ALU* in the ne
 
 ##### Register renaming
 Register renaming - Przemianowanie rejestrów <br/>
-Register renaming is a renaming technique that separate logical registers from physical registers. Every logical register has a set of physical registers associated with it. While a programmer in assembly language refers for instance to a logical register *accu*, the processor transposes (pol. *przeniesc*) this name to one specific physical register on the fly. The physical registers are opaque (pol. *nieprzejrzysty*) and cannot be referenced directly but only via the canonical names. Register renaming can be used to prevent hazards caused by *out-of-order execution* (OOOE).
+Register renaming is a renaming technique that separate logical registers from physical registers. Every logical register has a set of physical registers associated with it. While a programmer in assembly language refers for instance to a logical register *accu*, the processor transposes (pol. *przeniesc*) this name to one specific physical register on the fly. The physical registers are opaque (pol. *nieprzejrzysty*) and cannot be referenced directly but only via the canonical names. Register renaming can be used to prevent hazards caused by *out-of-order execution* (OOOE). <br/>
+**Out of order execution (OOOE)** is when a processor is capable of executing instructions out of their original order, in an attempt to do more work in parallel, and execute programs more quickly.
 
 ##### Speculative execution
 Speculative execution - Wykonywanie spekulatywne (ale beznadziejnie brzmi po polsku) <br/>
