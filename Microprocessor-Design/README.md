@@ -857,8 +857,8 @@ If the program you need to run is a binary executable, this number can’t be ch
 
 Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
 
-### Benchmarking <a name="Benchmarking"></a> [UP↑](#tof)
-
+### Memory-Level Parallelism <a name="mlp"></a> [UP↑](#tof)
+**Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
 
 
 
