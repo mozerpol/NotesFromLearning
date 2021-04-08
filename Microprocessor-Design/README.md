@@ -782,7 +782,13 @@ Another example *symmetric multi-core* is [Parallax Propeller](#https://en.wikip
 
 #### Asymmetric Multi-core
 An asymmetric multi-core processor is one that has multiple cores on a single chip, but those cores might be different designs. For instance, there could be 2 general purpose cores and 2 vector cores on a single chip. <br/>
-An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* processor, used in the Sony PlayStation 3 video game console is an asymmetrical multi-core processor. The Cell has 9 processor cores on board, one general purpose processor, and 8 data-processing cores. <br/> Another example *asymmetric multi-core* is *Kilocore*. The [Kilocore](#https://en.wikipedia.org/wiki/Kilocore) has one general purpose processor, a PowerPC processing core, and either 256 or 1024 data processing cores on-chip. The cores are designed to run at extremely low power, so the overall chip is faster and yet uses less power than typical desktop CPU.
+An example of this type a processor could be *IBM’s Cell*. *IBM’s Cell* processor, used in the Sony PlayStation 3 video game console is an asymmetrical multi-core processor. The Cell has 9 processor cores on board, one general purpose processor, and 8 data-processing cores. The one multipurpose core, known as the *Power Processor Element (PPE)* controls the communication between the other cores, and distributes computing tasks to the other cores for processing. The other 8 cores are known as *Synergistic Processor Elements (SPE)*, and are specially designed to have high floating-point throughput, especially with vector operations.
+
+| ![asmulti](https://user-images.githubusercontent.com/43972902/114079823-ee9c1200-98aa-11eb-941f-9943fff735b1.png) |
+|:--:|
+| *Notice how the SPE cores only connect to the PPE, and not to each other. Notice also that the PPE core is much larger then the individual SPE cores.* |
+
+Another example *asymmetric multi-core* is *Kilocore*. The [Kilocore](#https://en.wikipedia.org/wiki/Kilocore) has one general purpose processor, a PowerPC processing core, and either 256 or 1024 data processing cores on-chip. The cores are designed to run at extremely low power, so the overall chip is faster and yet uses less power than typical desktop CPU.
 
 ### Exceptions <a name="exceptions"></a> [UP↑](#tof)
 *Exceptions*, are situations where the processor needs to stop executing the current code because of an error. In these cases, the processor typically begins running an exception handling routine to resolve the error, and then returns to the normal program flow. For instance, if the *ALU* attempts to divide by zero, or if an addition causes overflow, an exception might be triggered. 
@@ -848,6 +854,20 @@ Clock rate (often called ”clock speed”) is one of the easiest to measure per
 
 #### Instructions executed per program
 If the program you need to run is a binary executable, this number can’t be changed. Early CPU designers attempted to reduce this number by adding new, more complicated instructions, that did more work. (Later this idea was called *CISC*). When a given program (perhaps a benchmark program) is re-compiled for this new instruction set and executed, it requires fewer total executed instructions to finish. Alas, these more complicated instructions often require more cycles to execute - or worse, a longer clock period, which slows down every instruction - so the net benefit was not as great as was hoped. 
+
+Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
+
+### Benchmarking <a name="Benchmarking"></a> [UP↑](#tof)
+
+
+
+
+
+
+
+
+
+
 
 
 
