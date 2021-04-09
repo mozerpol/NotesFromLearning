@@ -172,6 +172,9 @@ Cache helps to speed up processors because it works on the **principle of locali
 1. Spatial - for better understandign consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
 2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good ideato keep recently used items in the cache, and not over-write data that has been recently used.
 
+#### Hit or Miss
+A **hit** when talking about cache is when the processor finds data in the cache that it is looking for. A **miss** is when the processor looks for data in the cache, but the data is not available.
+
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
 
