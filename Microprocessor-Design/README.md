@@ -173,7 +173,21 @@ Cache helps to speed up processors because it works on the **principle of locali
 2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good ideato keep recently used items in the cache, and not over-write data that has been recently used.
 
 #### Hit or Miss
-A **hit** when talking about cache is when the processor finds data in the cache that it is looking for. A **miss** is when the processor looks for data in the cache, but the data is not available.
+When the processor needs data, it looks in the cache. If the data is not in the cache, it will then go to memory to find the data. <br/>
+A **hit** when talking about cache is when the processor finds data in the cache that it is looking for. A **miss** is when the processor looks for data in the cache, but the data is not available. <br/>
+A processor with a cache first looks in the cache for data (or instructions). On a miss, the processor then fetches the data (or instructions) from main memory. On a miss, this process takes longer than an equivalent processor without a cache. So we can say that sometimes processor without cache is faster than processor with cache. A processor without a cache has a constant memory reference time *T* of: <br/>
+|*T = Tm + E*|
+|:--:|
+
+A processor with a cache has an average memory access time of: <br/>
+|*T = m∗Tm + Th + E*|
+|:--:|
+, where: <br/>
+• *m* is the miss ratio <br/>
+• *Tm* is the time to make a main memory reference <br/>
+• *Th* is the time to make a cache reference on a hit <br/>
+• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention, etc.) <br/>
+Sometimes the entire cache contains useless or old data, and it needs to be flushed. Flushing occurs when the cache controller determines that the cache contains more potential misses than hits. Flushing the cache takes several processor cycles.
 
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
