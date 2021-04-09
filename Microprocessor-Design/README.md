@@ -165,10 +165,12 @@ The reduction of this problem can be achived by using the prediction of branchin
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
 
 ### Cache <a name="Cache"></a> [UP↑](#tof)
-Most CPUs manufactured do not have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller
-and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3
-(L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much
-faster than external RAM).
+Most processors today, such as the processors inside standard keyboards and mice, don’thave any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction.
+
+#### Principal of Locality
+Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
+1. spatial - 
+2. temporal - 
 
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
