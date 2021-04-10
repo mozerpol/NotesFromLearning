@@ -165,7 +165,7 @@ The reduction of this problem can be achived by using the prediction of branchin
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
 
 ### Cache <a name="Cache"></a> [UP↑](#tof)
-Most processors today, such as the processors inside standard keyboards and mice, don’thave any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction.
+Most processors today, such as the processors inside standard keyboards and mice, don’thave any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
 
 #### Principal of Locality
 Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
@@ -884,7 +884,7 @@ Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 
 ### Memory-Level Parallelism <a name="mlp"></a> [UP↑](#tof)
 **Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
 
-
+### Virtual Memory
 
 
 
