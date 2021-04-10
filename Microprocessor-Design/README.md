@@ -874,7 +874,7 @@ If you can reduce any one of those factors, then the time will be shorter, it me
 Clock rate (often called ”clock speed”) is one of the easiest to measure performance metrics.
 
 ##### Cycles per Instruction
-*CPI* is a throughput (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
+*CPI* is a throughpuVirtual Memoryis a computer concept where the main memory is broken up into a seriesof individualpages. Those pages can be moved in memory as a unit, or they can evenbe moved to secondary storage to make room in main memory for new data. In essence,virtual memory allows a computer to use more RAM then it has available.t (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
 
 #### Instructions executed per program
 If the program you need to run is a binary executable, this number can’t be changed. Early CPU designers attempted to reduce this number by adding new, more complicated instructions, that did more work. (Later this idea was called *CISC*). When a given program (perhaps a benchmark program) is re-compiled for this new instruction set and executed, it requires fewer total executed instructions to finish. Alas, these more complicated instructions often require more cycles to execute - or worse, a longer clock period, which slows down every instruction - so the net benefit was not as great as was hoped. 
@@ -885,6 +885,9 @@ Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 
 **Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
 
 ### Virtual Memory
+**Virtual Memory** is a computer concept where the main memory is broken up into a series of individual pages. Those pages can be moved in memory even moved to secondary storage like hard disc drive to make room in main memory for new data. In essence virtual memory allows a computer to use more RAM then it has available. The hardware part of virtual memory is called the memory management unit (**MMU**). Most *MMU*s have a granularity (pol. *szczegółowość*) of one page. <br/> 
+A *page* is a basic unit of memory, typically several kilobytes or larger. A page may be moved in memory to different locations, or if it is not being used, it can frequently be moved to secondary storage instead. The area in the secondary storage is typically known as the **page file**. <br>
+The addresses of the various pages are stored in a **paging table**. The *paging table* can be stored in a memory unit inside the processor, or it can reside in a dedicated area of main memory.
 
 
 
