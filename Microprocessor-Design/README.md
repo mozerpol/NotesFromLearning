@@ -893,8 +893,8 @@ Memory addresses correspond (pol. *odpowiadać*) to a particular (pol. *szczegó
 #### Translation Look-Aside Buffer
 The *translation look-aside buffer* (TLB) (look-aside - *patrzeć na bok*) is a small structure, similar to a cache, that stores the addresses of the most recently used pages. Looking up a page in the *TLB* is much faster then searching for the page in the page table. When the processor cannot find a particular page in the *TLB*, it is known as a ”TLB Miss”. When the TLB misses, the processor looks for the page in the page table. If the page is not in the table either, there is a page fault. Notice that even though the TLB can be considered a kind of cache. 
 
-
-
+### Power Dissipation <a name="powdisp"></a> [UP↑](#tof)
+**Gene’s Law** - the power dissipation in embedded DSP processors will decrease by half every18 months. As transistors get smaller, the depletion region (pol. *region zubożenia*) gets smaller, and current leaks through the transistor even when it is off. This leakage produces additional heat, and wastes additional power. As power is a function of the square of the voltage, approximately, if you can reduce the power supply voltage by half, you can reduce the power dissipation by possibly three quarters (pol. *trzy czwarte*). It should be noted that, in order to prevent uncontrollable heat buildup (pol. *gromadzenie się ciepła*), many modern general-purpose microprocessors dynamically turn off parts of the chip. A computer that is being used for only integer calculations does not need its floating point unit, and so power to the entire FPU, except possibly the register stack, is turned off. Major sections of the microprocessor, then, can be turned on and off several times per millisecond. 
 
 
 
