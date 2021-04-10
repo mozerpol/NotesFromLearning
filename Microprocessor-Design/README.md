@@ -884,13 +884,14 @@ Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 
 ### Memory-Level Parallelism <a name="mlp"></a> [UP↑](#tof)
 **Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
 
-### Virtual Memory
+### Virtual Memory <a name="vimem"></a> [UP↑](#tof)
 **Virtual Memory** is a computer concept where the main memory is broken up into a series of individual pages. Those pages can be moved in memory even moved to secondary storage like hard disc drive to make room in main memory for new data. In essence virtual memory allows a computer to use more RAM then it has available. The hardware part of virtual memory is called the memory management unit (**MMU**). Most *MMU*s have a granularity (pol. *szczegółowość*) of one page. <br/> 
 A *page* is a basic unit of memory, typically several kilobytes or larger. A page may be moved in memory to different locations, or if it is not being used, it can frequently be moved to secondary storage instead. The area in the secondary storage is typically known as the **page file**. <br>
 The addresses of the various pages are stored in a **paging table**. The *paging table* can be stored in a memory unit inside the processor, or it can reside in a dedicated area of main memory. <br/>
 Memory addresses correspond (pol. *odpowiadać*) to a particular (pol. *szczególny*) page, and an offset within (pol. *w ciągu*) that page. If a page is <img src="https://render.githubusercontent.com/render/math?math=2^{12}"> bytes in a 32-bit computer, then the first 20 bits of the memory address are the page address, and the lower 12 bits are the offset of the data inside that page. 
 
-
+#### Translation Look-Aside Buffer
+The *translation look-aside buffer* (TLB) (look-aside - *patrzeć na bok*) is a small structure, similar to a cache, that stores the addresses of the most recently used pages. Looking up a page in the *TLB* is much faster then searching for the page in the page table. When the processor cannot find a particular page in the *TLB*, it is known as a ”TLB Miss”. When the TLB misses, the processor looks for the page in the page table. If the page is not in the table either, there is a page fault. Notice that even though the TLB can be considered a kind of cache. 
 
 
 
