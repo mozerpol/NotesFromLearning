@@ -64,6 +64,11 @@ https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 26. [Exceptions](#exceptions)
 27. [Interrupts](#interrupts)
 28. [Hazards](#hazards)
+29. [Fixing Hazards](#fixhazards)
+30. [Performance Metrics](#PerfMetr)
+31. [Memory-Level Parallelism](#mlp)
+32. [Virtual Memory](#vimem)
+33. [Power Dissipation](#powdisp)
 
 ### Processor classification <a name="procclas"></a>
 #### Purpose
@@ -545,20 +550,24 @@ This is an example of a basic 2-bit ALU. The boxes on the right hand side of the
 ![alu2_2](https://user-images.githubusercontent.com/43972902/104485370-b4341900-55ca-11eb-92f6-577594152da2.png)
 
 Notice that all the operations are performed in parallel, and the select signal (*OP*) is used to determine which result to pass on to the rest of the datapath. Notice that the carry signal, which is only used for addition, is generated and passed out of the ALU for every operation, so it is important that if we aren’t performing addition that we ignore the carry flag. <br/>
-Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. In all images below, the orange represents memory structures internal to the CPU (registers), and the purple represents external memory (RAM).
+Each category of instruction set architecture (ISA): *stack*, *accumulator*, *register-memory* or *register-register-load-store* requires a different way of connecting the *ALU*. 
 
-#### Accumulator <a name="accum"></a> [UP↑](#tof)
+POPRAWIC TO GOWNO - ale czy na pewno? No moze byc, ze ram to purpurowy, a pomarancz to accu
+In all images below, the orange represents internal memory structures in the CPU (like accumulator or general purpose registers), and the purple represents external memory (RAM).
+
+#### Accumulator machine <a name="accum"></a> [UP↑](#tof)
 ![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
+In Computer Science an *accumulator* is a register for short-term, intermediate storage of arithmetic and logic data in a CPU. The term *accumulator* is rarely used in reference to CPUs, having been replaced around the turn of the millennium by the term *register*. In a modern computers, any register can function as an accumulator. <br/>
 An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator. <br/>
-Ok, once again, because it's very important. *Accumulator* is the name for special register, almost each architecture which uses this register is called *accumulator machine*. In this machine one of the arguments must be from accumulator (we can see it in the picture, one data in *ALU* comes from accumulator register). Very popular *accumulator machine* is [PIC](https://en.wikipedia.org/wiki/PIC_microcontrollers) or [8051](https://en.wikipedia.org/wiki/Intel_8051). If processor doesn't have accumulator then it can save result of calculations in general purpose register like in *ARM* architecure. Without a accumulator, it would be necessary to write the result of each calculation in main memory.
+Ok, once again, because it's very important. *Accumulator* is the name for special register, almost each architecture which uses this register is called *accumulator machine*. In this machine one of the arguments must be from accumulator (we can see it in the picture, one data in *ALU* comes from accumulator register). Very popular *accumulator machine* is [PIC](https://en.wikipedia.org/wiki/PIC_microcontrollers) or [8051](https://en.wikipedia.org/wiki/Intel_8051). If processor doesn't have accumulator then it can save result of calculations in general purpose register like in *ARM* architecure. Without a accumulator, it would be necessary to write the result of each calculation in main memory. Access to main memory is slower than access to a register like an accumulator. **An accumulator machine, can be called a 1-operand machine, or a CPU with accumulator-based architecture**. Modern CPUs are typically 2-operand or 3-operand machines.
 
-#### Register-to-Register
+#### Register-to-Register machine
 ![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
 
 One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length.
  
-#### Register Stack <a name="regstac"></a> [UP↑](#tof)
+#### Register Stack machine <a name="regstac"></a> [UP↑](#tof)
 ![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
 
 In a register stack, the ALU reads the operands from the top of the stack, and the result is pushed onto the top of the stack. Complicated mathematical operations required ecomposition into [Reverse-Polish](https://en.wikipedia.org/wiki/Reverse_Polish_notation) form. The benefit comes from a highly simplified ISA. These machines are called *0-operand* or *zero address machines* because operands don’t need to be specified, because all operations act on specified stack locations. In the diagram, *SP* is the pointer to the top of the stack.
@@ -838,30 +847,30 @@ In theory the output (*A* AND *NOT A*) should never be true. If, however, change
 
 **Control Hazard** - *Control hazard* occurs when we have *branch* instructions. <br/>
 **Structural Hazard** - it occurs when two separate instructions attempt to access a particular hardware module at the same time. <br/>
-#### Fixing Hazards
-##### Stall
+### Fixing Hazards <a name="fixhazards"></a> [UP↑](#tof)
+#### Stall
 A *stall* (pol. **ugrzęznąć**), or a ”bubble” in the pipeline occurs when the control unit detects that a hazard will occur. When this happens, the control unit stops the instruction fetch mechanism and puts *NOP*s into the pipeline instead. In this way, the sensitive instructions will be forced to occur alone, without any other instructions being processed at the same time. 
 
 ![bubhazard](https://user-images.githubusercontent.com/43972902/113710180-ada5d100-96e3-11eb-9487-12132382aebb.png)
 
 In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
 
-##### Forwarding
+#### Forwarding
 When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding anadditional *forwarding unit* to control this mechanism.
 
-##### Register renaming
+#### Register renaming
 Register renaming - Przemianowanie rejestrów <br/>
 Register renaming is a renaming technique that separate logical registers from physical registers. Every logical register has a set of physical registers associated with it. While a programmer in assembly language refers for instance to a logical register *accu*, the processor transposes (pol. *przeniesc*) this name to one specific physical register on the fly. The physical registers are opaque (pol. *nieprzejrzysty*) and cannot be referenced directly but only via the canonical names. Register renaming can be used to prevent hazards caused by *out-of-order execution* (OOOE). <br/>
 **Out of order execution (OOOE)** is when a processor is capable of executing instructions out of their original order, in an attempt to do more work in parallel, and execute programs more quickly.
 
-##### Speculative execution
+#### Speculative execution
 Speculative execution - Wykonywanie spekulatywne (ale beznadziejnie brzmi po polsku) <br/>
 It's the ability of pipelined microprocessors, which can execute instruction which is directly after conditional jump, even is not yet known whether occur (I mean that conditional jump can occur or not). Using different words. Some task can be done before it is known whether it is actually needed. However, if the guess is right, no time is wasted and the processor continues operation as normal. [Speculative multithreading](https://en.wikipedia.org/wiki/Speculative_multithreading) is a special case of speculative execution. 
 
-##### Branch delay
+#### Branch delay
 A branch delay is an **instruction written in the assembly code** after the branch, that is designed to execute whether the branch is taken or not. If there are no instructions that can be executed without a dependency (pol. *zależność*) on the branch, then a NOP should be inserted instead.
 
-##### Branch Predication
+#### Branch Predication
 In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not toexecute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
 
 ### Performance Metrics <a name="PerfMetr"></a> [UP↑](#tof)
