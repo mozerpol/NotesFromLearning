@@ -96,7 +96,7 @@ Examples of ISA:
 
 ### Moore’s Law
 *Moore’s Law* - the number of transistors on a single chip at the same price will double every 18 to 24 months. This law has held (has held - *orzekl*) without fail since it was originally stated in 1965. Moore’s Law has been used incorrectly to calculate the speed of an integrated circuit. <br/>
-The amount of work that a processor can complete in a single cycle is measured in **cycles per instruction**. For somesystems, such as MIPS, there is 1 cycle per instruction. For other systems, such as modern *x86* chips, there are typically very many cycles per instruction.
+The amount of work that a processor can complete in a single cycle is measured in **cycles per instruction**. For some systems, such as MIPS, there is 1 cycle per instruction. For other systems, such as modern *x86* chips, there are typically very many cycles per instruction.
 
 ### Von Neumann Architecture (a.k.a. Princeton) <a name="neumann"></a> [UP↑](#tof)
 It was developed for [ENIAC](https://en.wikipedia.org/wiki/ENIAC). It uses the same memory and data paths for both program and data storage. In other words Von Neumann architecture is based on the stored-program computer concept, where instruction data and program data are stored in the same memory.
@@ -115,10 +115,10 @@ Computer architecture with separate storage and signal path ways for instruction
 | Source: *https://en.wikipedia.org/wiki/Harvard_architecture*  [17.12.2020] |
 
 **Programmer-visible registers (User-Visible Registers)** - are the registers which are used during application programming and are directly used in the instructions. For example reserved registers like *UCSRA* (for *AVR*) or general purpose registers X1, ..., x31.  <br/>
-The registers are the fastest accessible memory locations, and because they are so fast, there are typically very few of them. In most processors, there are fewer than 32 registers. The size of the registers defines the size of the computer. For instance, a ”32 bit computer” has registers that are 32 bits long. The length of a register is known as the **word length** of the computer.
+The registers are the fastest accessible memory locations and there are typically very few of them. In most processors, there are fewer than 32 registers. The size of the registers defines the size of the computer. For instance, a ”32 bit computer” has registers that are 32 bits long. The length of a register is known as the **word length** of the computer.
 
 Factors (pol. *czynniki*) limiting the number of registers:
-- new CPU should be software-compatible with an old CPU. This requires the new chip to have exactly the same number of programmer-visible registers as the old chip.
+- new CPU should be software-compatible with old CPU. This requires the new chip to have exactly the same number of programmer-visible registers as the old chip.
 - Doubling the number general-purpose registers requires adding another bit to each instruction that selects a particular register. Each 3-operand instruction (that specify 2-source operands and a destination operand) would expand by 3 bits. 
 - Adding more registers adds more wires to the critical path, adding capacitance, which reduces the maximum clock speed of the CPU.
 
@@ -149,13 +149,13 @@ In the above 5-step pipeline, it takes five clock cycles to go through all the s
 
 **Features of the pipeline architecture:**
 - Instructions are executed "overlapped" (but not in parallel!). The execution of the next instruction begins before the current instruction finishes executing.
-- Each block of processor is used on each clock cycle, processing different phases of different instructions. 
+- Each processor block is used every clock cycle, processing different phases of different instructions. 
 - The execution time for all instructions must be the same. If the instruction can be executed earlier, the processor must wait to complete instruction.
 - The performance grows in a pipeline architecture over traditional architecture are proportional to the number of instruction phases.
 
 #### Pipeline Hazards <a name="pipehaz"></a> [UP↑](#tof)
 [Control Hazard](https://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/controlHaz.html) - (pol. *konflikt sterowania*) - disturbance of the processing sequence at branching.
-The reduction of this problem can be achived by using the prediction of branching (jumps). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
+The reduction of this problem can be achived by using the [prediction of branching] (#fixhazards). The prediction can be static (based on the command code analysis) or dynamic (based on processing history - branching chance analysis). 
 
 #### Methods of increasing the efficiency of pipeline processing in case of conditional jump instruction:
 1. Program fragment caching - consists in storing a program fragment in the processor's cache memory. This method is useful for handling loops. If the buffer is large enough to accommodate all loops, these commands only need to be fetched once. 
@@ -170,7 +170,7 @@ The reduction of this problem can be achived by using the prediction of branchin
 Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/risc/pipelining/index.html
 
 ### Cache <a name="Cache"></a> [UP↑](#tof)
-Most processors today, such as the processors inside standard keyboards and mice, don’thave any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
+Most processors today, such as the processors inside standard keyboards and mice, don’t have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
 
 #### Principal of Locality
 Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
@@ -558,14 +558,14 @@ In all images below, the orange represents internal memory structures in the CPU
 #### Accumulator machine <a name="accum"></a> [UP↑](#tof)
 ![acu](https://user-images.githubusercontent.com/43972902/104486744-7d5f0280-55cc-11eb-9001-66b1ab929c18.png)
 
-In Computer Science an *accumulator* is a register for short-term, intermediate storage of arithmetic and logic data in a CPU. The term *accumulator* is rarely used in reference to CPUs, having been replaced around the turn of the millennium by the term *register*. In a modern computers, any register can function as an accumulator. <br/>
-An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandow kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator. <br/>
+In Computer Science an *accumulator* is a register for short-term (pol. *krótkoterminowe*), intermediate (pol. *pośredni*) storage of arithmetic and logic data in a CPU. The term *accumulator* is rarely used in reference to CPUs, having been replaced around the turn of the millennium by the term *register*. In a modern computers, any register can function as an accumulator. <br/>
+An *accumulator machine* has one special register, called the *accumulator*. The accumulator stores the result of every ALU operation, and is also one of the operands to every instruction (pol. *jest takze jednym z operandów kazdej instrukcji*). This means that our ISA can be less complicated, because instructions only need to specify one operand, instead of two operands and a destination. Accumulator architectures have simple ISAs and are typically very fast. Unfortunately, accumulator machines are difficult to pipeline. One example of a type of computer system that is likely to use an accumulator is a common desk calculator. <br/>
 Ok, once again, because it's very important. *Accumulator* is the name for special register, almost each architecture which uses this register is called *accumulator machine*. In this machine one of the arguments must be from accumulator (we can see it in the picture, one data in *ALU* comes from accumulator register). Very popular *accumulator machine* is [PIC](https://en.wikipedia.org/wiki/PIC_microcontrollers) or [8051](https://en.wikipedia.org/wiki/Intel_8051). If processor doesn't have accumulator then it can save result of calculations in general purpose register like in *ARM* architecure. Without a accumulator, it would be necessary to write the result of each calculation in main memory. Access to main memory is slower than access to a register like an accumulator. **An accumulator machine, can be called a 1-operand machine, or a CPU with accumulator-based architecture**. Modern CPUs are typically 2-operand or 3-operand machines.
 
 #### Register-to-Register machine
 ![regtoreg](https://user-images.githubusercontent.com/43972902/104588861-4be84480-5669-11eb-9f5e-a258659b406f.png)
 
-One of the more common architectures is a Register-to-register architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length.
+One of the more common architectures is a *register-to-register* architecture, also called a 3 register operand machine. In this configuration, the programmer can specify both source operands, and a destination register. Unfortunately, the ISA needs to be expanded to include fields for both source operands and the destination operands. This requires longer instruction word length.
  
 #### Register Stack machine <a name="regstac"></a> [UP↑](#tof)
 ![regstack](https://user-images.githubusercontent.com/43972902/104589436-26a80600-566a-11eb-9677-a948f1794bee.png)
@@ -574,6 +574,7 @@ In a register stack, the ALU reads the operands from the top of the stack, and t
 
 #### Register-and-Memory <a name="regMem"></a> [UP↑](#tof)
 ![regMem](https://user-images.githubusercontent.com/43972902/104590418-9a96de00-566b-11eb-83af-41b86452bdea.png)
+
 One complicated structure is a *Register-and-Memory* structure. In this structure, one operand comes from a register file, and the other comes from external memory. In this structure, the ISA is complicated because each instruction word needs to be able to store a complete memory address, which can be very long. 
 
 #### IA-32 <a name="iatrz"></a> [UP↑](#tof)
@@ -591,23 +592,25 @@ Registers are temporary storage locations inside the CPU that hold data and addr
 ![registerFile](https://user-images.githubusercontent.com/43972902/104124091-08cb6000-534f-11eb-831c-a4bb5f77b26a.png)
 
 #### Register Bank <a name="regbank"></a> [UP↑](#tof)
-Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize a *register bank* which consists of a series of register files combined together. 
+Consider a situation where the machine word is very small, and therefore (pol. *w związku z tym*) the available address space for registers is very limited. If we have a machine word that can only accommodate (pol. *pomieścić*) 2 bits of register address, we can only address 4 registers. However, register files are small to implement, so we have enough space for 32 registers. The solution to this dilemma is to utilize (pol. *wykorzystanie*) a *register bank* which consists of a series of register files combined together. 
 A *register bank* contains a number of register files or pages. Only one page can be active at a time, and there are additional instructions added to the ISA to switch between the available register pages. Data values can only be written to and read from the currently active register page, but instructions can exist to move data from one page to another.
 ![registerBank](https://user-images.githubusercontent.com/43972902/104124348-bee37980-5350-11eb-8b9d-81467cb88db9.png) 
 
 If the register bank has *N* registers, and a page can only show *M* registers (with *N* > *M*), we can address registers with two values, *n* and *m* respectively. We can define these values as:
+
 ![reg](https://user-images.githubusercontent.com/43972902/104124513-90b26980-5351-11eb-86f2-0cd4c441b40c.png)
 
 In other words, *n* and *m* are the number of bits required to address *N* and *M* registers, respectively. We can break down the address into a single value as such:
+
 ![reg2](https://user-images.githubusercontent.com/43972902/104124580-e9820200-5351-11eb-9242-787dad79213c.png)
 
-Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the pagea ddress and the register address.
+Where *p* is the number of bits reserved to specify the current register page. As we can see from this graphic, the current register address is simply the concatenation of the page address and the register address.
 
-[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/programCounter) you can find code in verilog for simple 4 x 16 register file.
+[Here](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design/code/registerFile) you can find code in verilog for simple 4 x 16 register file.
 
 #### Memory unit
 Most modern PC computer systems are Princeton (von Neumann), not Harvard, so the memory unit must handle all instruction and data transactions. This can serve as a bottleneck (pol. *waskie gardlo*) in the design. <br/>
-The memory unit is typically one of the slowest components of a microcontroller, becausethe external interface with RAM is typically much slower than the speed of the processor.
+The memory unit is typically one of the slowest components of a microcontroller, because the external interface with RAM is typically much slower than the speed of the processor.
 
 ### FPU <a name="fpu"></a> [UP↑](#tof)
 The FPU performs arithmetic operations on floating point numbers. An FPU is complicated to design, although the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard helps to answer some of the specific questions about implementation.
@@ -637,7 +640,7 @@ But exceptionally I will not write an example by yourself, but will just paste t
 Multiplying two floating point numbers is done as such:
 ![mult](https://user-images.githubusercontent.com/43972902/104842083-dc6f9080-58c6-11eb-95f5-4b39fedb011e.png)
 
-Likewise, division can be performed by:
+Likewise (pol. *również*), division can be performed by:
 ![div](https://user-images.githubusercontent.com/43972902/104842488-f9a45f00-58c6-11eb-97ff-2ae9bf238e9b.png)
 
 **Floating point addition and subtraction is more difficult than multiplication**. The only way that floating point numbers can be added together is if the exponents of both numbers are the same. This means that when we add two numbers together, we need first to scale the numbers so that they have the same exponent. 
@@ -654,10 +657,10 @@ FPU needs the following components: <br/>
 - An adder for the exponent prts.
 
 ### Control Unit <a name="cu"></a> [UP↑](#tof)
-*Control Unit* - reads the opcode and instruction bits from the machine code instruction,and creates a series of control codes to activate and operate the various components to perform the desired task.
+*Control Unit* - reads the opcode and instruction bits from the machine code instruction, and creates a series of control codes to activate and operate the various components to perform the desired task.
 
 ### Shift and Rotate Blocks <a name="sarb"></a> [UP↑](#tof)
-They are useful on their own (pol. *są przydatne same w sobie *), but they also are used in multiplication and division modules. In a binary computer, a left shift has the same effect as a multiplication by 2 and a right shift has the same effect as a division by 2. **Since shift and rotate operations perform much more quickly then multiplication and division**.
+They are useful on their own (pol. *są przydatne same w sobie*), but they also are used in multiplication and division modules. In a binary computer, a left shift has the same effect as a multiplication by 2 and a right shift has the same effect as a division by 2. **Since shift and rotate operations perform much more quickly then multiplication and division**.
 
 #### Logical Shift <a name="logshft"></a> [UP↑](#tof)
 
@@ -675,7 +678,7 @@ When shifting right with a logical right shift, the least-significant bit is los
 
 #### Arithmetic shift <a name="artshft"></a> [UP↑](#tof)
 
-When shifting right with an **arithmetic right shift**, the least-significant bit is lost and the **most-significant bit is copiedThe arithmetic and logical shift to the left are the same. **. The result of a Right Shift operation is a division by *2^n* , where *n* is the number of shifted bit positions.
+When shifting right with an **arithmetic right shift**, the least-significant bit is lost and the most-significant bit is copied. **The arithmetic and logical shift to the left are the same.**. The result of a Right Shift operation is a division by *2^n* , where *n* is the number of shifted bit positions.
 1. We have: `1010 >> 1`
 2. After this we have: `1101`. `1010` is *-6*, `1101` is *-3*.
 
@@ -693,12 +696,12 @@ The arithmetic and logical shift to the left are the same. <br/>
 Arithmetic right shift save the most-significant bit.
 
 #### Rotations
-A rotation is like a shift, except the bit shifted off the end of the register is then shiftedinto the new spot. It's very easy I think.
+A rotation is like a shift, except the bit shifted off the end of the register is then shifted into the new spot. It's very easy I think.
 ![rotation](https://user-images.githubusercontent.com/43972902/106793593-f09de680-6657-11eb-9618-c146e4744941.png)
 
 ### Multiply and Divide Blocks <a name="mulanddiv"></a> [UP↑](#tof)
 
-Multiplication and division operations are significantly more complicated then addition or subtraction operations. This additional complexity leads to more hardware, more complicated hardware, and longer processing time. In hardware, multiplication and division are performed by a series of sequential additions and arithmetic shifts. It is typically not possible, or not desirable (pol. *pożądane*) to use the main adder and shifter units of the ALU, so a microprocessorwill typically have multiple ALU units.
+Multiplication and division operations are significantly more complicated then addition or subtraction operations. This additional complexity leads to more hardware, more complicated hardware, and longer processing time. In hardware, multiplication and division are performed by a series of sequential additions and arithmetic shifts. It is typically not possible, or not desirable (pol. *pożądane*) to use the main adder and shifter units of the ALU, so a microprocessor will typically have multiple ALU units.
 
 #### Booth’s Algorithm  <a name="both"></a> [UP↑](#tof)
 
@@ -739,7 +742,7 @@ It is good to know when the result of an addition or multiplication is larger th
 **Carry flag** (usually indicated as the C flag) - is used to indicate when an arithmetic carry or borrow (pol. *pożyczać*) has been generated for the most significant bit position in ALU.
 
 #### Comparisons Flag <a name="compflag"></a> [UP↑](#tof)
-Many ALUs need to compare data and determine if a value is greater tha nor less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second.
+Many ALUs need to compare data and determine if a value is greater than or less than another value. A comparison in a processor can typically be performed by a subtraction operation. If the result is a positive number, the first item is greater than the second item. If the result is a negative number, the first item is less than the second.
 
 ### Single Cycle Processors <a name="singlecycpr"></a> [UP↑](#tof)
 Single-cycle processors: an instruction is fetched from memory, it's executed, and the results are stored, all in a single clock cycle. Single-cycle processors are the most simple in terms (in terms - *w odniesieniu*) of hardware requirements, and they are easy to design. Unfortunately, they tend to (tend to - *mają tendencję do*) have poor data throughput (poor data throughput - *słaba przepustowość danych*), and require long clock cycles (slow clock rate) in order to perform all the necessary computations in time. Why single-cycle processors need long clock cycles? Because you need to consider the longest possible delay in the processor. This means that some instructions (typically the arithmetic instructions) will complete quickly, and time will be wasted each cycle. Other instructions (typically memory read or write instructions) will have a much longer propagation delay.
@@ -779,7 +782,7 @@ It's easy, between each item such as *IF*, *ID* or *WB* we must add additional s
 If we have 5 instructions, we can show them in our pipeline using different colors. In the diagram below, white corresponds to a NOP, and the different colors correspond to other instructions in the pipeline. Each stage, the instructions shift forward through the pipeline.
 ![pipel3](https://user-images.githubusercontent.com/43972902/107888593-a2b59800-6f0d-11eb-813c-e326cb3beb3f.png)
 
-Pipelined processors generate the same results as a one-instruction-at-a-time processor does when running the same software -- they just generate those results much more quickly.
+Pipelined processors generate the same results as a one-instruction at a time processor does when running the same software - they just generate those results much more quickly.
 
 #### Superpipeline
 
