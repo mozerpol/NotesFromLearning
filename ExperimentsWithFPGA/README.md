@@ -32,7 +32,7 @@ Select it (not exactly that, but your device that you have on your own board, it
 8. Now our main window looks like: <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116389086-db7ec100-a81c-11eb-907b-888077490e4f.png)
 9. Now it's time to add verilog file. To do this, click *File* -> *New...*, after this you'll see something like this: <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116430487-2d3c4100-a847-11eb-9c78-c518dabbb872.png) <br/>
 Click on *Verilog HDL File*
-10. Now, you should see empty page, where we can write some code. Just copy and paste below code: <br/>
+10. Now, you should see empty page, where we can write some code. Just copy and paste below code (will turn on some LEDs on my board): <br/>
 ```verilog
 module quartusFirstTest(
     output a,
@@ -45,9 +45,8 @@ assign b = 1'b1;
 assign c = 1'b1;
 
 endmodule
-``` 
-<br/>
-This code will turn on some LEDs on my board.
+```
+
 11. Save project by *ctrl + s*. It's very important filename and name after word `module` in our code must be the same as project name. So, if our project is called *quartusFirstTest*, then verilog file must be called *quartusFirstTest.v* and module in our code. Of course not every file or module must be called in this way :D. Only one file and one module.
 12. The next step: click on the icon *Start Compilation* or press *Ctrl + L*. Below is the picture, with icon which you should click: <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/116433590-f0257e00-a849-11eb-9dde-347f181e585e.png) <br/>
