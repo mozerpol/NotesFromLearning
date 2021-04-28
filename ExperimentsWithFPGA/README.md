@@ -17,7 +17,7 @@ In *bin* folder we should find a file called "quartus", only quartus, not quartu
 
 ### First project in Quartus
 I learned Verilog, so I will show on this. After running the program, we should see main window: <br/>
-![obraz](https://user-images.githubusercontent.com/43972902/116382240-fd287a00-a815-11eb-8081-e37320aabde3.png)
+![obraz](https://user-images.githubusercontent.com/43972902/116442136-704fe180-a852-11eb-9879-5698bf49f210.png)
 
 In the upper right corner click *File* -> *New Project Wizard...*. After whis we will see: 
 1. <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116383619-4927ee80-a817-11eb-992a-ba1c37493f1a.png)
@@ -45,7 +45,9 @@ assign b = 1'b1;
 assign c = 1'b1;
 
 endmodule
-```
+``` 
+<br/>
+This code will turn on some LEDs on my board.
 11. Save project by *ctrl + s*. It's very important filename and name after word `module` in our code must be the same as project name. So, if our project is called *quartusFirstTest*, then verilog file must be called *quartusFirstTest.v* and module in our code. Of course not every file or module must be called in this way :D. Only one file and one module.
 12. The next step: click on the icon *Start Compilation* or press *Ctrl + L*. Below is the picture, with icon which you should click: <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/116433590-f0257e00-a849-11eb-9dde-347f181e585e.png) <br/>
@@ -53,13 +55,20 @@ This start compilation. On the left side you should see bars with progress and b
 ![obraz](https://user-images.githubusercontent.com/43972902/116432967-58c02b00-a849-11eb-96d8-e426a4ea881b.png)
 13. Now click on the *Pin Planner* or press *Ctrl + Shift + N*, Below is the picture, with icon which you should click: <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/116435464-aa69b500-a84b-11eb-9b28-3e78ae14c10f.png)
-14. 
-
-
-
-
-
-
-
-
-
+14. In next step we must assign output pins from FPGA to our variables (variables from the code). To do this select from *Location* part (table on the bottom) the correct pins: <br/>
+![aaaaa](https://user-images.githubusercontent.com/43972902/116443770-56af9980-a854-11eb-9406-316232d1bdee.png) <br/>
+Ok, but how to know which output pins assign to our variables? It's easy, from datasheet our board. I'm using T-Core dev board, inside you can find info which pin on our board was connected to LED: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/116444162-bb6af400-a854-11eb-9e5a-d7431ac0c8db.png) 
+Thanks to this picture we ca notice that LEDs were connected to pin: *PIN_AA14*, *PIN_AA15*, *PIN_AA16* and *PIN_AA17*. It's very important. In datasheet we have double *PIN_AA15*, but it's mistake, should be *PIN_AA17* instead *PIN_AA15*.
+15. Now you must once again compile our project, so just repeat steps from point *12*.
+16. Connect board to computer.
+17. Double click on *Program Device*: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/116445346-18b37500-a856-11eb-9fbf-3f65570d53e8.png)
+18. On  the left side you have *Add File...*, click on it. After this navigate to *output_files* -> click on *projectName.sof*. Then click on *Open*: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/116445688-71830d80-a856-11eb-9582-6cfa82747312.png)
+19. Click on *Hardware Setup...* (left upper corner) -> from *Currently selected hardware* select your board: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/116446227-05ed7000-a857-11eb-80f8-03fe0b59aa98.png)
+20. Click *Start* (left upper corner), now the code will be upload to our board.
+21. In right upper corner you have status bar. Green bar with word *100% (Successful)* means that our code is inside our board.
+22. I'm happy, because it works for me ;p <br/>
+![179973020_3516412151792112_8148573461671603551_n](https://user-images.githubusercontent.com/43972902/116446954-c410f980-a857-11eb-8158-da1b11b2eeda.jpg)
