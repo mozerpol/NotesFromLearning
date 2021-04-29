@@ -71,3 +71,26 @@ Thanks to this picture we ca notice that LEDs were connected to pin: *PIN_AA14*,
 21. In right upper corner you have status bar. Green bar with word *100% (Successful)* means that our code is inside our board.
 22. I'm happy, because it works for me ;p <br/>
 ![179973020_3516412151792112_8148573461671603551_n](https://user-images.githubusercontent.com/43972902/116446954-c410f980-a857-11eb-8158-da1b11b2eeda.jpg)
+
+### About the FPGA chip usedIn my projects I used 
+In the picture above you can see which FPGA I use. It's *Intel (earlier Altera) 10M50DAF484C7G*. [Here](#https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_overview.pdf) can find datasheet for MAX 10 family. <br/>
+| ![obraz](https://user-images.githubusercontent.com/43972902/116540518-8e692080-a8ea-11eb-852c-aa3f6f137b9f.png) |
+|:--:|
+|*Meaning characters on the cover*|
+| source: *https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_overview.pdf*|
+
+As above, my device *10M50DAF484C7G* has:
+- 10M - family Intel MAX 10
+- 50 - 50k logic elements
+- DA - Dual supply - analog and flash features with RSU option (more about RSU below)
+- F - Package type: FBGA
+- 484 - package type, size and haw many pins: 484 pins 
+- C - operating temperature: 0°C - 85°C
+- 7 - Speed, average
+- G - nothing important
+
+
+
+
+
+
