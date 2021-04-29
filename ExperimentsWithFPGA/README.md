@@ -89,6 +89,25 @@ As above, my device *10M50DAF484C7G* has:
 - 7 - Speed, average
 - G - nothing important
 
+### More details about MAX 10
+Below I will explain some of the features from the datasheet that seem important. <br/>
+Core has *4-input look-up table (LUT)*. What is it? 
+
+opisac reszte tego datasheet ;/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
