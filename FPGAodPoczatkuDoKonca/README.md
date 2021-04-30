@@ -4,6 +4,14 @@ In this repo I will post my private notes from reading a series of two articles 
 ## FPGA od początku do końca - część pierwsza
 [Here](https://elektronikab2b.pl/technika/1315-fpga-od-poczatku-do-konca-czesc-pierwsza) is the link to the first article. Word "*pierwsza*" means *first*, "*od początku do końca*" means *from the beginning to the end*. So title in eng means *FPGA from the beginning to the end*. <br/>
 An extension of the acronym *VHDL* is *Very High Speed Integrated Circuit Hardware Description Language*. <br/>
+To understand article, you need to learn how cells are connected in FPGA. Below is picture of the [LUT](https://electronics.stackexchange.com/questions/169532/what-is-an-lut-in-fpga): <br/>
+| ![obraz](https://user-images.githubusercontent.com/43972902/116738433-b80d6f00-a9f2-11eb-984f-3b2807ed8838.png) |
+|:--:|
+| *A typical logical element* |
+| source: *https://pl.wikipedia.org/wiki/Bezpo%C5%9Brednio_programowalna_macierz_bramek#/media/Plik:Logic_block2.svg [30.04.2021]* |
+
+And imagine that our FPGA mainly consists of this type of logic elements. Inside you have a lot of these elements and they're connected together. We have many different types of connections between logic elements, such as *fuse*, *antifuse* or based on transistors. Type *fuse* and *antifuse* cannot be changed after programming, but connections created with transistors can be reprogrammed.
+
 #### FPGA can be divided according to the type of technology used to remember their configuration: 
 ##### Antifuse type 
 This type of device allows us to only program them only once. It's an old technological type. <br/>
@@ -17,6 +25,8 @@ Thanks to this advantages of antifuse FPGA over other technologies are losing im
 dokonczyc https://www.tempoautomation.com/blog/the-advantages-of-antifuse-technology-for-aerospace-applications/
  
 ##### SRAM type
+This type of device is based on static memory technology, because of this lose their configuration after a power loss. Unlike *antifuse* devices, these can be programmed multiple times. These deviecs don't require any additional technological processes, so these systems are designed based on the most advanced technologies. <br/>
+Unfortunately, SRAM chips are volatile, so it's necessary to load the configuration code inside the chip every time when the system boots up. Configuration code is oad from a special non-volatile memory chip such as EPROM or Flash. This additional requirement makes it necessary to reserve more space on the PCB surface. <br/>
 
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
