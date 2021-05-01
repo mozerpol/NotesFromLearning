@@ -27,6 +27,12 @@ This type of device is based on static memory technology, because of this lose t
 Unfortunately, SRAM chips are volatile, so it's necessary to load the configuration code inside the chip every time when the system boots up. Configuration code is oad from a special non-volatile memory chip such as EPROM or Flash. This additional requirement makes it necessary to reserve more space on the PCB surface. <br/>
 In addition, the process of uploading the program takes some time, which delay the start of the device. These data can be easily read, which makes the project easy to decode and duplicate on other devices. 
 
+##### Flash type
+*Flash* device combine the advantages of *SRAM* and *antifuse* devices. <br/>
+These devices remember the code, so there are no delays during startup. Their internal structure is less complicated than that *SRAM* devices, so they can be packed more densely (pol. *gęsto*). <br/>
+Due to the production problems, these systems are usually several generations older than their counterparts (pol. *odpowiedniki*) produced at the same time, which only require the use of methods typical for *CMOS*. <br/>
+Another disadvantage is the increased static power consumption, which is due to the pull-up resistors. 
+
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
 
