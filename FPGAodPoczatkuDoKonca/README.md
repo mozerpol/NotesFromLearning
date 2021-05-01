@@ -19,14 +19,13 @@ Device consists a lot of fuses inside which can only work after burnout (typical
 The lack of internal transistors responsible for the configuration, makes these circuits much less susceptible (pol. *podatny*) to radiation damage. Thanks to it, this type of device is using in aeronautics or aviation where FPGAs based on SRAM or Flash memory will be too insecure. Also these types of devices are also still used by the military, due to high resistance to an EMP (electromagnetic pulse) from nuclear weapons. <br/>
 Antifuse devices, due to the lack of configuration transistors, consume much less static power than the SRAM or Flash circuits manufactured in the same technology. This value is about 20% of the power consumed by the reprogrammable circuit. What's more, the lack of transistors also means no delays introduced by them, thanks to which the entire system is able to run much faster. <br/>
 A very important advantage is that such devices are very durable (pol. *wytrzymałe*). The internal connectivity of antifuse components and networks is practically impossible to break without the destruction of the device, board or component. This makes devices highly reliable. <br/>
-Big disadvantages of this system is high development costs and must (pol. *koniecznością*) to use a few steps less advanced technological process. Imagine situation when any errors are discovered... ;D
+Big disadvantages of this system is high development costs and must (pol. *koniecznością*) to use a few steps less advanced technological process. Imagine situation when any errors are discovered... ;D <br/>
 Thanks to this advantages of antifuse FPGA over other technologies are losing importance. 
-
-dokonczyc https://www.tempoautomation.com/blog/the-advantages-of-antifuse-technology-for-aerospace-applications/
  
 ##### SRAM type
 This type of device is based on static memory technology, because of this lose their configuration after a power loss. Unlike *antifuse* devices, these can be programmed multiple times. These deviecs don't require any additional technological processes, so these systems are designed based on the most advanced technologies. <br/>
 Unfortunately, SRAM chips are volatile, so it's necessary to load the configuration code inside the chip every time when the system boots up. Configuration code is oad from a special non-volatile memory chip such as EPROM or Flash. This additional requirement makes it necessary to reserve more space on the PCB surface. <br/>
+In addition, the process of uploading the program takes some time, which delay the start of the device. These data can be easily read, which makes the project easy to decode and duplicate on other devices. 
 
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
