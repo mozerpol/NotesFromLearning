@@ -4,7 +4,7 @@ In this repo I will post my private notes from reading a series of two articles 
 ## FPGA od początku do końca - część pierwsza
 [Here](https://elektronikab2b.pl/technika/1315-fpga-od-poczatku-do-konca-czesc-pierwsza) is the link to the first article. Word "*pierwsza*" means *first*, "*od początku do końca*" means *from the beginning to the end*. So title in eng means *FPGA from the beginning to the end*. <br/>
 An extension of the acronym *VHDL* is *Very High Speed Integrated Circuit Hardware Description Language*. <br/>
-To understand article, you need to learn how cells are connected in FPGA. Below is picture of the [LUT](https://electronics.stackexchange.com/questions/169 532/what-is-an-lut-in-fpga): <br/>
+To understand article, you need to learn how cells are connected in FPGA. Below is picture of the [LUT](https://electronics.stackexchange.com/questions/169532/what-is-an-lut-in-fpga): <br/>
 | ![obraz](https://user-images.githubusercontent.com/43972902/116738433-b80d6f00-a9f2-11eb-984f-3b2807ed8838.png) |
 |:--:|
 | *A typical logical element* |
@@ -51,11 +51,25 @@ A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as ad
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
 
+Sometimes we can find on the *FPGA* board additional hardware, to increase performance. It can be RAM blocks, subsystems that perform the most frequently performed operations (as [MAC](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation) blocks), hard cores or soft cores. location of the microcontroller outside the area where the logical cells are located - as shown in the figure below.
 
 
+### Built-in hard cores
+There are two options for placing hard cores on the FPGA board. <br/>
+First is location of the microcontroller outside the area where the logical cells are located - as shown in the figure below:
+||
+|:--:|
+| *FPGA with the microcontroller core placed outside of the semiconductor structure or on a separate structure* |
+| source: *https://elektronikab2b.pl/images/9/9/3/22993-41963technika_fpga2_8.jpg* |
 
+This can be made not only as a single silicon chip, but also as two or more integrated circuits connected to each other and closed in a single package. The separation of the classic part of FPGA from additional functions integrated in the same package makes it easier the use of programming tools. The designer's task is to assign the appropriate output ports in such a way that the desired signals are transferred between the microcontroller and the rest of the system. <br/>
+Second option is placing the cores inside the main area of the FPGA, and for their operation as input and output use adjacent (pol. *sąsiadujący*) blocks of memory and logical cells. We can see idea of this in the picture below:
+||
+|:--:|
+| *FPGA with the microcontroller core placed inside of the semiconductor structure* |
+| source: *https://elektronikab2b.pl/images/9/9/4/22994-41964technika_fpga2_9.jpg* |
 
-
+### Built-in soft cores
 
 
 
