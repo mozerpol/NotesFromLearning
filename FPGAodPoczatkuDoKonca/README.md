@@ -33,6 +33,24 @@ These devices remember the code, so there are no delays during startup. Their in
 Due to the production problems, these systems are usually several generations older than their counterparts (pol. *odpowiedniki*) produced at the same time, which only require the use of methods typical for *CMOS*. <br/>
 Another disadvantage is the increased static power consumption, which is due to the pull-up resistors. 
 
+#### Logical structure 
+To understand more from this part of the article, you need to know some defnitions. First is about **logic element**. <br/>
+**Logic element** or sometimes called **logic block** or **configurable logic block** (*CLB*) is a fundamental building block of FPGA, the *CLB* is duplicated hundreds or thousands of time. <br/>
+A **logic-cell** (don't confuse with *logic element*) is basically a small lookup table (*LUT*), a *D flip-flop* and a *2-to-1 mux* (to bypass the flip-flop if desired). The *LUT* can implement any logic function. *Logic blocks* typically contain a few *logic-cells*. *LUT* has typically a few inputs, example below: <br/>
+
+https://en.wikipedia.org/wiki/Logic_block
+https://www.fpga4fun.com/FPGAinfo2.html
+
+| |
+|:--:|
+| Logic-cell (LUT) example |
+| source: *https://lh3.googleusercontent.com/proxy/4q7g_bwYRy1Gxnl_gztiNq_eY4n0R9mR-4f7fPhTnnzm-zJ2X9Bpe0ZSGFSYwHA9T_MBex3OKLdxnrexRuGw6KWbu75GU1hnp_IrlfUERJTBDJ39lyRp5ly9gi90lRm0K4rZfnbGCw [02.05.2021]* |
+
+
+
+
+
+
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
 
