@@ -1,5 +1,5 @@
 # FPGAodPoczatkuDoKonca 
-In this repo I will post my private notes from reading a series of two articles from *elektronikab2b* website. They are written in my native language (Polish). 
+In this repo I will post my private notes from reading a series of two articles from [elektronikab2b](https://elektronikab2b.pl/) website. They are written in my native language (Polish). 
 
 ## FPGA od początku do końca - część pierwsza
 [Here](https://elektronikab2b.pl/technika/1315-fpga-od-poczatku-do-konca-czesc-pierwsza) is the link to the first article. Word "*pierwsza*" means *first*, "*od początku do końca*" means *from the beginning to the end*. So title in eng means *FPGA from the beginning to the end*. <br/>
@@ -34,44 +34,45 @@ Due to the production problems, these systems are usually several generations ol
 Another disadvantage is the increased static power consumption, which is due to the pull-up resistors. 
 
 #### Logical structure 
-To understand more from this part of the article, you need to know some defnitions. First of all, about **logic element** (for the**Logic element** or **logic cell** are sometimes called as *logic block* or **configurable logic block** (*CLB*). They're a fundamental building block of *FPGA*, the *CLB* is duplicated hundreds or thousands of time. <br/>
+To understand more from this part of the article, you need to know some defnitions. <br/>
+First of all, what is **logic element** (for the manufacturer Altera) and **logic cell** (for the manufacturer Xilinx). They are sometimes called as *logic block* or **configurable logic block** (*CLB*). *Logic element* and *logic cell* is exactly the same, but they have different names due to the manufacturers. <br/>
+They're a fundamental building block of *FPGA*, the *CLB* is duplicated hundreds or thousands of time. <br/>
 A **logic cell** is basically a small lookup table (*LUT*), a *D flip-flop* and a *2-to-1 mux* (to bypass the flip-flop if desired). The *LUT* can implement any logic function. *Logic blocks* typically contain a few *logic-cells*. *LUT* has typically a few inputs, example below: <br/>
- manufacturer Altera) and **logic cell** (for the manufacturer Xilinx). <br/>
 
-| |
+| ![obraz](https://user-images.githubusercontent.com/43972902/116868997-20856780-ac10-11eb-8720-86b9b0f7e967.png) |
 |:--:|
 | Logic-cell (LUT) example |
-| source: *https://lh3.googleusercontent.com/proxy/4q7g_bwYRy1Gxnl_gztiNq_eY4n0R9mR-4f7fPhTnnzm-zJ2X9Bpe0ZSGFSYwHA9T_MBex3OKLdxnrexRuGw6KWbu75GU1hnp_IrlfUERJTBDJ39lyRp5ly9gi90lRm0K4rZfnbGCw [02.05.2021]* |
+| source: *https://breadboardgremlins.files.wordpress.com/2013/01/logic-cell.png?w=640 [03.05.2021]* |
 
-As we can see above a typical cell consists of a 4-input *LUT*, a Full adder (FA) and a D-type flip-flop. In recent years, manufacturers have started moving to 6-input *LUTs* in their high performance parts (as in Intel Stratix). <br/>
+As we can see above a typical cell consists of a 4-input *LUT*, a Full adder (FA) and a D-type flip-flop. In recent years, manufacturers have started moving to 6-input *LUTs* in their high performance parts (as in Intel Stratix devices). <br/>
 Each *logic cell* can be connected to other *logic cells* through interconnect resources (wires/muxes placed around the logic cells). Each cell can do little, but with lots of them connected together, complex logic functions can be created. <br/>
 To sum up, the *FPGA* devices consists of logical blocks, which are placed between the data buses that enable the appropriate connections between cells. Each cell has several inputs and a little bit fewer outputs. Typically, block consist of sixteen logical elements with between them carry signals, common clocks, and some control signals are transferred. <br/>
 A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as additional memory - as long as it has no other logical function. Due to the way this memory is implemented, it is often referred as *distributed RAM*, to distinguish (pol. *rozróżnić*) it from typical built in memory blocks inside *FPGAs*. 
 
 ## FPGA od początku do końca - część druga
-[Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is the link to the article.
+[Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is a link to the second part of the article.
 
 Sometimes we can find on the *FPGA* board additional hardware, to increase performance. It can be RAM blocks, subsystems that perform the most frequently performed operations (as [MAC](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation) blocks), hard cores or soft cores. location of the microcontroller outside the area where the logical cells are located - as shown in the figure below.
-
 
 ### Built-in hard cores
 There are two options for placing hard cores on the FPGA board. <br/>
 First is the location of the microcontroller outside the area where the logical cells are located - as shown in the figure below:
-||
+| ![obraz](https://user-images.githubusercontent.com/43972902/116869973-fc2a8a80-ac11-11eb-9899-db0d3f656ef8.png) |
 |:--:|
 | *FPGA with the microcontroller core placed outside of the semiconductor structure or on a separate structure* |
-| source: *https://elektronikab2b.pl/images/9/9/3/22993-41963technika_fpga2_8.jpg* |
+| source: *https://elektronikab2b.pl/images/9/9/3/22993-41963technika_fpga2_8.jpg* [03.05.2021] |
 
 This can be made not only as a single silicon chip, but also as two or more integrated circuits connected to each other and closed in a single package. The separation of the classic part of FPGA from additional functions integrated in the same package makes it easier the use of programming tools. The designer's task is to assign the appropriate output ports in such a way that the desired signals are transferred between the microcontroller and the rest of the system. <br/>
 Second option is placing the cores inside the main area of the FPGA, and for their operation as input and output use adjacent (pol. *sąsiadujący*) blocks of memory and logical cells. We can see idea of this in the picture below:
-||
+| ![obraz](https://user-images.githubusercontent.com/43972902/116870049-14020e80-ac12-11eb-884b-a1bbdc3719a2.png) |
 |:--:|
 | *FPGA with the microcontroller core placed inside of the semiconductor structure* |
-| source: *https://elektronikab2b.pl/images/9/9/4/22994-41964technika_fpga2_9.jpg* |
+| source: *https://elektronikab2b.pl/images/9/9/4/22994-41964technika_fpga2_9.jpg* [03.05.2021] |
 
 ### Built-in soft cores
 Another type of core is the one created by software. The synthesizable core modules are sold by many different companies, so a very frequent procedure is to buy licenses for already existing projects. Programmable cores can be customized according to the user's needs, which was not possible with hard cores. The designer can practically freely change the width of the data bus or the size and number of registers, and even implement any number of the same or different cores inside one FPGA. 
 
+### Clock signal management
 
 
 
