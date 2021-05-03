@@ -82,10 +82,13 @@ The clock signal can be input through any of the pins of the circuit, but in ord
 OPISAC DLL I PLL
 
 ### Input/output systems 
+Another important parameter of programmable deices are the input/output ports. FPGA input and output ports were divided into blocks. Each block can work with a different voltage, so there is no need to use pull-up resistors on the PCB to communicate with devices working in different standards. <br/>
+Another part of the input/output devices are special serial interfaces designed to transmit a differential signal (pol. *sygnał różnicowy*). 
 
-
-
-
+### Manufacturers' offer
+In addition to the previously described program blocks (as built-in soft cores), which are entire microcontrollers or microprocessors, it is possible to use various types of smaller functional blocks. These blocks are available in two forms:
+1. As *soft IP* version - written in hardware description languages such as VHDL or Verilog. These modules can be implemented in devices of any company.
+2. As *firm IP* version - modules that have already been adapted to a specific family of FPGAs. These blocks contain a description of the connections and cell configurations of a given programmable device and their field of application is limited.
 
 
 
