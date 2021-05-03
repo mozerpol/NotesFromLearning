@@ -49,6 +49,8 @@ Each *logic cell* can be connected to other *logic cells* through interconnect r
 To sum up, the *FPGA* devices consists of logical blocks, which are placed between the data buses that enable the appropriate connections between cells. Each cell has several inputs and a little bit fewer outputs. Typically, block consist of sixteen logical elements with between them carry signals, common clocks, and some control signals are transferred. <br/>
 A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as additional memory - as long as it has no other logical function. Due to the way this memory is implemented, it is often referred as *distributed RAM*, to distinguish (pol. *rozróżnić*) it from typical built in memory blocks inside *FPGAs*. 
 
+OPISAC LUT!!!
+
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is a link to the second part of the article.
 
@@ -73,7 +75,13 @@ Second option is placing the cores inside the main area of the FPGA, and for the
 Another type of core is the one created by software. The synthesizable core modules are sold by many different companies, so a very frequent procedure is to buy licenses for already existing projects. Programmable cores can be customized according to the user's needs, which was not possible with hard cores. The designer can practically freely change the width of the data bus or the size and number of registers, and even implement any number of the same or different cores inside one FPGA. 
 
 ### Clock signal management
+*Jitter* - instability of the edges of the clock signal, the deviation of a clock edge from its ideal position in time. Simply speaking, it is the inability of a clock source to produce a clock with clean edges. So the parameters of the clock signal are very important for the efficiency/correctness of the entire system. To avoid jitter inside FPGA clock lines are designed in a tree-like manner (pol. *w sposób podobny do drzewa*), to minimize possible clock delays that can occur. <br/>
+Due to the possibility of implementing functionally separate logical units inside one system, as well to enable the reduction of energy consumption, producers created *clock domains* - areas clocked with the different clock. This allows the clock signal to be turned off for a small group of cells in the system, so the current consumed by all device is lower. In addition, every *clock domain* can operate at different frequencies, thanks to this, one *clock domain* can work with different clock than other in the same time. <br/>
+The clock signal can be input through any of the pins of the circuit, but in order to ensure its optimal work, you should use the designated ports for this.
 
+OPISAC DLL I PLL
+
+### Input/output systems 
 
 
 
