@@ -56,7 +56,7 @@ Sometimes we can find on the *FPGA* board additional hardware, to increase perfo
 
 ### Built-in hard cores
 There are two options for placing hard cores on the FPGA board. <br/>
-First is location of the microcontroller outside the area where the logical cells are located - as shown in the figure below:
+First is the location of the microcontroller outside the area where the logical cells are located - as shown in the figure below:
 ||
 |:--:|
 | *FPGA with the microcontroller core placed outside of the semiconductor structure or on a separate structure* |
@@ -70,6 +70,17 @@ Second option is placing the cores inside the main area of the FPGA, and for the
 | source: *https://elektronikab2b.pl/images/9/9/4/22994-41964technika_fpga2_9.jpg* |
 
 ### Built-in soft cores
+Another type of core is the one created by software. The synthesizable core modules are sold by many different companies, so a very frequent procedure is to buy licenses for already existing projects. Programmable cores can be customized according to the user's needs, which was not possible with hard cores. The designer can practically freely change the width of the data bus or the size and number of registers, and even implement any number of the same or different cores inside one FPGA. 
+
+
+
+
+
+
+
+
+
+
 
 
 
