@@ -49,7 +49,7 @@ Each *logic cell* can be connected to other *logic cells* through interconnect r
 To sum up, the *FPGA* devices consists of logical blocks, which are placed between the data buses that enable the appropriate connections between cells. Each cell has several inputs and a little bit fewer outputs. Typically, block consist of sixteen logical elements with between them carry signals, common clocks, and some control signals are transferred. <br/>
 A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as additional memory - as long as it has no other logical function. Due to the way this memory is implemented, it is often referred as *distributed RAM*, to distinguish (pol. *rozróżnić*) it from typical built in memory blocks inside *FPGAs*. 
 
-### LUT
+#### LUT
 *LUT* - lookup table (pol. *tablicowanie*) - in computer science is an array or data matrix that contains data structure created for the purpose of translating keys into values. In different words, *LUT* is basically a table that determines what the output is for any given input(s). Below we have example of simple two-dimensional (2D) lookup table: <br/>
 
 | ![obraz](https://user-images.githubusercontent.com/43972902/116984759-df528d80-accb-11eb-994c-bff5c67559de.png) |
@@ -95,7 +95,29 @@ Another type of core is the one created by software. The synthesizable core modu
 Due to the possibility of implementing functionally separate logical units inside one system, as well to enable the reduction of energy consumption, producers created *clock domains* - areas clocked with the different clock. This allows the clock signal to be turned off for a small group of cells in the system, so the current consumed by all device is lower. In addition, every *clock domain* can operate at different frequencies, thanks to this, one *clock domain* can work with different clock than other in the same time. <br/>
 The clock signal can be input through any of the pins of the circuit, but in order to ensure its optimal work, you should use the designated ports for this.
 
-OPISAC DLL I PLL
+
+
+#### PLL
+*PLL* - *Phase Locked Loop* (pl. *pętla synchronizacji fazy*) - in electronics is an electronic system based on a feedback loop for automatic frequency control. The simplest *PLL* is an electronic circuit consisting of a variable frequency oscillator (VCO) as clock source, a loop filter and a phase detector in a feedback loop. The oscillator generates a periodic signal, and the phase detector compares the phase of that signal with the phase of the input periodic signal, adjusting the oscillator to keep the phases the same. <br/>
+| ![obraz](https://user-images.githubusercontent.com/43972902/117001738-0072a880-ace3-11eb-91c2-cc9f48ffb58c.png) |
+|:--:|
+| *Simplest analog phase locked loop* |
+| source: *https://en.wikipedia.org/wiki/Phase-locked_loop#/media/File:Phase_locked_loop.svg* [04.05.2021]|
+
+In the feedback loop we can put also a frequency devider: <br/>
+| ![obraz](https://user-images.githubusercontent.com/43972902/117005834-fef7af00-ace7-11eb-9862-f7a25f69967a.png) |
+|:--:|
+|*Simplest analog phase locked loop with a frequency devider*|
+|source: *https://www.design-reuse.com/news_img/20070705_cologne1.gif* [04.05.2021] |
+
+*PLLs* are used for 3 different tasks:
+- generation of high speed on chip clocks by frequency multiplication. This type are only used for generation of high speed stable clocks and are normally fed by quartz controlled oscillators so that there is no need for a jitter suppression (pol. *tłumienie drgań*, tych negatywnych).
+- clock wave correction to reduce clock skew (pol. *krzywy*), 
+- jitter suppression (pol. *tłumienie drgań*, tych negatywnych).
+
+A PLL is characterized by the frequency range, jitter, jitter attenuation and lock time. 
+
+#### DLL
 
 ### Input/output systems 
 Another important parameter of programmable deices are the input/output ports. FPGA input and output ports were divided into blocks. Each block can work with a different voltage, so there is no need to use pull-up resistors on the PCB to communicate with devices working in different standards. <br/>
