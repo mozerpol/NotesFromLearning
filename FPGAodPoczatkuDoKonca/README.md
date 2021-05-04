@@ -50,13 +50,22 @@ To sum up, the *FPGA* devices consists of logical blocks, which are placed betwe
 A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as additional memory - as long as it has no other logical function. Due to the way this memory is implemented, it is often referred as *distributed RAM*, to distinguish (pol. *rozróżnić*) it from typical built in memory blocks inside *FPGAs*. 
 
 ### LUT
-*LUT* - lookup table (pol. *tablicowanie*) - in computer science is an array or data matrix that contains data structure created for the purpose of translating keys into values. Below we have example of simple two-dimensional (2D) lookup table: <br/>
+*LUT* - lookup table (pol. *tablicowanie*) - in computer science is an array or data matrix that contains data structure created for the purpose of translating keys into values. In different words, *LUT* is basically a table that determines what the output is for any given input(s). Below we have example of simple two-dimensional (2D) lookup table: <br/>
 
 | ![obraz](https://user-images.githubusercontent.com/43972902/116984759-df528d80-accb-11eb-994c-bff5c67559de.png) |
 |:--:|
 | source: *https://help.goldsim.com/Modules/5/ImagesExt/image19_91.png* [04.05.2021] |
 
-As we can see it's simple array. In this case our input will be *Mass* and *Length* and output will be one value from table. Why are we using this? Imagine that we have very complicated mathematical formula and calculating the result can be very time consuming. So we can use the table where we put the results we calculated earlier this allow us to search the table for the appropriate input to find the result without computing. So imagine that in our case we have "*Mass*: 200" and "*Length*: 40", so the result is "8.6". Sometimes searching the table is much faster than calculating the result.
+As we can see it's simple array. In this case our input will be *Mass* and *Length* and output will be one value from table. Why are we using this? Imagine that we have very complicated mathematical formula and calculating the result can be very time consuming. So we can use the table where we put the results we calculated earlier this allow us to search the table for the appropriate input to find the result without computing. So imagine that in our case we have "*Mass*: 200" and "*Length*: 40", so the result is "8.6". Sometimes searching the table is much faster than calculating the result. <br/>
+Examples of faster use of look-up tables than the calculation of the result:
+- error correction
+- linearization
+- [wave table](https://en.wikipedia.org/wiki/Wavetable_synthesis#Table-lookup_synthesis)
+
+Simple exaple of *LUT* is the truth table in combinational logic. <br/>
+The *LUT* in an FPGA holds a custom truth table, which is loaded during configuration device. Think of the *LUT* as a small RAM. Instead of wiring up a bunch of logic gates that create the desired truth table, we can create own truth table. <br/>
+*LUT-Mask* - the way the FPGA fills the table's output values. So the same physical *LUT* can implement `Y=AB` and `Y=AB'`, but the *LUT-Mask* is different, because the truth table is different. <br/>
+In conclusion, we can build our own table for a complex mathematical function, which would work much faster than actually calculating the value by following an algorithm. 
 
 ## FPGA od początku do końca - część druga
 [Here](https://elektronikab2b.pl/technika/1468-fpga-od-poczatku-do-konca-czesc-druga) is a link to the second part of the article.
