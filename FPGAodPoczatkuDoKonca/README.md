@@ -49,7 +49,7 @@ Each *logic cell* can be connected to other *logic cells* through interconnect r
 To sum up, the FPGA devices consists of logical blocks, which are placed between the data buses that enable the appropriate connections between cells. Each cell has several inputs and a little bit fewer outputs. Typically, block consist of sixteen logical elements with between them carry signals, common clocks, and some control signals are transferred. <br/>
 A typical *LUT* matrix can be converted to *16-bit RAM*, so it can be seen as additional memory - as long as it has no other logical function. Due to the way this memory is implemented, it is often referred as *distributed RAM*, to distinguish (pol. *rozróżnić*) it from typical built in memory blocks inside FPGAs. 
 
-#### LUT
+#### LUT <a name="lut"></a>
 *LUT* - lookup table (pol. *tablicowanie*) - in computer science is an array or data matrix that contains data structure created for the purpose of translating keys into values. In different words, *LUT* is basically a table that determines what the output is for any given input(s). Below we have example of simple two-dimensional (2D) lookup table: <br/>
 
 | ![obraz](https://user-images.githubusercontent.com/43972902/116984759-df528d80-accb-11eb-994c-bff5c67559de.png) |
@@ -95,7 +95,7 @@ Another type of core is the one created by software. The synthesizable core modu
 Due to the possibility of implementing functionally separate logical units inside one system, as well to enable the reduction of energy consumption, producers created *clock domains* - areas clocked with the different clock. This allows the clock signal to be turned off for a small group of cells in the system, so the current consumed by all device is lower. In addition, every *clock domain* can operate at different frequencies, thanks to this, one *clock domain* can work with different clock than other in the same time. <br/>
 The clock signal can be input through any of the pins of the circuit, but in order to ensure its optimal work, you should use the designated ports for this.
 
-#### PLL
+#### PLL <a name="pll"></a>
 *PLL* - *Phase Locked Loop* (pl. *pętla synchronizacji fazy*) - in electronics is an electronic system based on a feedback loop for automatic frequency control. The simplest *PLL* is an electronic circuit consisting of a variable frequency oscillator (VCO) as clock source, a loop filter and a phase detector in a feedback loop. The oscillator generates a periodic signal, and the phase detector compares the phase of that signal with the phase of the input periodic signal, adjusting the oscillator to keep the phases the same. In different words, the VCO clock is divided by an integer divider and then compared to a reference clock which is input to the *PLL*. The compare result as phase/frequency difference is converted into a voltage which controls the VCO. This converter normally is a simple low pass filter. It is called “loop filter”. <br/>
 | ![obraz](https://user-images.githubusercontent.com/43972902/117001738-0072a880-ace3-11eb-91c2-cc9f48ffb58c.png) |
 |:--:|
