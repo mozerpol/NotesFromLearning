@@ -117,9 +117,19 @@ Memories classification: <br/>
 The **difference between single port RAM and dual port RAM** is that single port RAM can be accessed at one address at one time, thus you can read/write only one memory cell during each clock cycle. Dual port RAM has ability to simultaneously read and write different memory cells at different addresses. Single port uses a 6 transistor basic RAM cell, while the dual port RAM cell uses 8 transistor cell for memory. <br/>
 Sum up, a dual-port memory has two independent access ports to a common storage array. Some dual-port memories can use one port only for write, the other one only for read but better designs have no such restriction, they allow read or write on both ports.
 
+![obraz](https://user-images.githubusercontent.com/43972902/117044500-c9b28780-ad0e-11eb-9de9-7580f92b758d.png)
 
+**Successive-approximation ADC** - *SAR* - is a type of analog-to-digital converter that converts a continuous analog waveform into a discrete digital representation using a binary search (pol. *wyszukiwania binarnego*) through all possible quantization levels before finally result a digital output for each conversion. More about it on [wikipedia](https://en.wikipedia.org/wiki/Successive-approximation_ADC).
 
+![obraz](https://user-images.githubusercontent.com/43972902/117045133-768d0480-ad0f-11eb-9b81-e6c511e58783.png)
 
+**JTAG** - *Joint Test Action Group* - s an industry standard (IEEE 1149.1) for verifying designs and testing printed circuit boards after manufacture. If we want use *JTAG* for testing or programming, integrated circuits placed in the tested system must have an appropriate hardware layer of this interface inside. One of the most important feature of the *JTAG* standard is the ability to program the circuit in a ready device without disconnecting it (it's called *In-System Programming*, *ISP* for short). JTAG works on the principle  (pol. *działa na zasadzie*) of a 16-state [deterministic finite automaton](https://en.wikipedia.org/wiki/Deterministic_finite_automaton). It is possible to program several systems at the same time - then we must connect devices in a series. <br/>
+JTAG signal lines are:
+- TDI - Test Data In – data input,
+- TDO - Test Data Out – data output,
+- TCK - Test Clock – clock signal input,
+- TMS - Test Mode Select – operating mode selection,
+- TRST - Test Reset – reset (optional).
 
 
 
