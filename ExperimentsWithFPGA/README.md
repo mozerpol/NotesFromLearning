@@ -72,7 +72,7 @@ Thanks to this picture we ca notice that LEDs were connected to pin: *PIN_AA14*,
 22. I'm happy, because it works for me ;p <br/>
 ![179973020_3516412151792112_8148573461671603551_n](https://user-images.githubusercontent.com/43972902/116446954-c410f980-a857-11eb-8158-da1b11b2eeda.jpg)
 
-### About the FPGA chip usedIn my projects I used 
+### About the FPGA chip used in my projects
 In the picture above you can see which FPGA I use. It's *Intel (earlier Altera) 10M50DAF484C7G*. [Here](#https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_overview.pdf) can find datasheet for MAX 10 family. <br/>
 | ![obraz](https://user-images.githubusercontent.com/43972902/116540518-8e692080-a8ea-11eb-852c-aa3f6f137b9f.png) |
 |:--:|
@@ -91,18 +91,31 @@ As above, my device *10M50DAF484C7G* has:
 
 ### More details about MAX 10
 Below I will explain some of the features from the datasheet that seem important. <br/>
-Core has *4-input look-up table (LUT)*. What is it? 
 
-opisac reszte tego datasheet ;/
+![obraz](https://user-images.githubusercontent.com/43972902/117030700-2eb2b100-ad00-11eb-8bf8-8904363aa483.png)
 
+**TSMC** - Taiwan Semiconductor Manufacturing Company - is a Taiwanese manufacturing and design company. It is one of Taiwan's largest companies.
 
+![obraz](https://user-images.githubusercontent.com/43972902/117031165-9cf77380-ad00-11eb-8e8b-7f47c2843ca7.png)
 
+**LUT** was described [here](https://github.com/mozerpol/NotesFromLearning/tree/main/FPGAodPoczatkuDoKonca#lut). <br/>
+**PLL** was described [here](https://github.com/mozerpol/NotesFromLearning/tree/main/FPGAodPoczatkuDoKonca#pll). <br/>
+**LE** - was described [here](https://github.com/mozerpol/NotesFromLearning/tree/main/FPGAodPoczatkuDoKonca#logical-structure). <br/>
+Bro remember, *LUT* is part of *LE*.
 
+![obraz](https://user-images.githubusercontent.com/43972902/117031589-04152800-ad01-11eb-826d-6ed1656b141c.png)
 
+**M9K** - is a synchronous memory block. The *M9K* block is useful for storing processor code, implementing lookup schemes, and implementing large memory applications. Each block contains 9,216 programmable bits, including parity bits. You can configure the *M9K* block as true dual-port, dual-port, and single-port RAM, and ROM. More [here](https://www.intel.com/content/www/us/en/programmable/quartushelp/17.0/reference/glossary/def_m9k.htm).
 
+**True dual-port** - it's the ability of some circuit to read and write simultaneously. So for example, if we have a RAM cell to which we can simultaneously write and read some data, we can say that this cell is *true dual-port* capability. Or we can read simultaneously two different datas or write two different datas in the same time. <br/>
+Typically, this feature is discussed in the context of memory. To understand this better, we need to say more about memories. <br/>
+Memories classification: <br/>
+| ![obraz](https://user-images.githubusercontent.com/43972902/117035618-d205c500-ad04-11eb-9eba-d451a9ba9526.png) |
+|:--:|
+|source: *http://dejazzer.com/ee478/lecture_notes/lec15_memories.pdf* [04.04.2021]|
 
-
-
+The **difference between single port RAM and dual port RAM** is that single port RAM can be accessed at one address at one time, thus you can read/write only one memory cell during each clock cycle. Dual port RAM has ability to simultaneously read and write different memory cells at different addresses. Single port uses a 6 transistor basic RAM cell, while the dual port RAM cell uses 8 transistor cell for memory. <br/>
+Sum up, a dual-port memory has two independent access ports to a common storage array. Some dual-port memories can use one port only for write, the other one only for read but better designs have no such restriction, they allow read or write on both ports.
 
 
 
