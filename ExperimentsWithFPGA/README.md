@@ -131,6 +131,32 @@ JTAG signal lines are:
 - TMS - Test Mode Select – operating mode selection,
 - TRST - Test Reset – reset (optional).
 
+**Vertical migration support** - is a *Quartus II* software feature that allows a design to be able to migrate to all supported migration path devices in the same package. You should refer to the Quartus II software Pin Migration window in the Pin Planner to see the pin migration results for all devices in the migration path.
+
+**Logic Elements and Logic Array Blocks** <br/>
+The *LAB* (logic array block) consists of 16 logic elements (*LE*) and a *LAB*-wide control block. An *LE* is the smallest unit of logic in the Intel MAX 10 device architecture. Each *LE* has four inputs, a four-input *look-up table* (LUT), a register, and output logic. The four-input *LUT* is a function generator that can implement any function with four variables. Picture of it, below: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117125541-f2cc2a00-ad99-11eb-890e-a1a396baa570.png)
+
+**User Flash Memory** - *UFM* - this block in Intel MAX 10 devices stores non-volatile information. <br/>
+**Avalon Memory-Mapped Interface** - *Avalon-MM* - mapping I/O interface in address space. *Avalon* is Intel interface family, which can help connect components suitable for streaming high-speed data, reading and writing registers and memory, and controlling off-chip devices. We have *Avalon* components such as:
+- Avalon Streaming Interface (Avalon-ST) — an interface that supports the unidirectional flow of data, including multiplexed streams, packets, and DSP data.
+- Avalon Memory Mapped Interface (Avalon-MM) — an address-based read/write interface typical of master–slave connections.
+- Avalon Conduit Interface — an interface type that accommodates individual signals or groups of signals that do not fit into any of the other Avalon types. You can connect conduit (pol. *przewód*) interfaces inside a Platform Designer system. Alternatively, you can export them to connect to other modules in the design or to FPGA pins.
+- Avalon Interrupt Interface — an interface that allows components to signal events to other components.
+- And much more.
+More about Avalon is in [Avalon® Interface Specifications](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/manual/mnl_avalon_spec.pdf) pdf file.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
