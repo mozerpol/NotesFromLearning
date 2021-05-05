@@ -105,7 +105,9 @@ Bro remember, *LUT* is part of *LE*.
 
 ![obraz](https://user-images.githubusercontent.com/43972902/117031589-04152800-ad01-11eb-826d-6ed1656b141c.png)
 
-**M9K** - is a synchronous memory block. The *M9K* block is useful for storing processor code, implementing lookup schemes, and implementing large memory applications. Each block contains 9,216 programmable bits, including parity bits. You can configure the *M9K* block as true dual-port, dual-port, and single-port RAM, and ROM. More [here](https://www.intel.com/content/www/us/en/programmable/quartushelp/17.0/reference/glossary/def_m9k.htm).
+**M9K** - is a synchronous memory block. We can say (it'll be more precisely), that embedded memory structure consists of *M9K* memory blocks columns. The *M9K* block is useful for storing processor code, implementing lookup schemes, and implementing large memory applications. Each block contains 9,216 programmable bits, including parity bits, capable of operating at up to 284 MHz. You can configure the *M9K* block as true dual-port, dual-port, single-port RAM, RAM, FIFO buffers, or ROM. More about *M9K* [here](https://www.intel.com/content/www/us/en/programmable/quartushelp/17.0/reference/glossary/def_m9k.htm).
+M9K Operation Modes and Port Widths: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117128701-0d080700-ad9e-11eb-941f-1f8bda51eed7.png)
 
 **True dual-port** - it's the ability of some circuit to read and write simultaneously. So for example, if we have a RAM cell to which we can simultaneously write and read some data, we can say that this cell is *true dual-port* capability. Or we can read simultaneously two different datas or write two different datas in the same time. <br/>
 Typically, this feature is discussed in the context of memory. To understand this better, we need to say more about memories. <br/>
