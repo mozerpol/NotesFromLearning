@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/modelSimSimulation
+vADS8588H
+Z1 !s110 1620557861
+!i10b 1
+!s100 Dd`^kf2>?3Gj^PJbPz6ll1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IDVSdTP0RM>KjeSegO2M0F1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1610744946
+8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/design.v
+F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/design.v
+!i122 1
+L0 5 84
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1620557861.000000
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/design.v|
+!s90 -reportprogress|300|-work|passAlaboratory|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/design.v|
+!i113 1
+Z6 o-work passAlaboratory
+Z7 tCvgOpt 0
+n@a@d@s8588@h
+vADS8588H_tb
+R1
+!i10b 1
+!s100 ZF3<=E^Pb:QbOYYEk7J2S2
+R2
+I33zANBD3K;AW:4Cl`DZ]71
+R3
+R0
+w1610744953
+8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/testbench.v
+F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/testbench.v
+!i122 0
+L0 12 79
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/testbench.v|
+!s90 -reportprogress|300|-work|passAlaboratory|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/passAlaboratory/testbench.v|
+!i113 1
+R6
+R7
+n@a@d@s8588@h_tb
