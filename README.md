@@ -34,4 +34,22 @@ Ok, so how to run *ModelSim*? After installation, you can find it in: <br/>
 When you are in *bin* folder run `./vsim` command. Then you'll see the main window <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/117305629-3cdb0b80-ae7f-11eb-8081-fe239caa535f.png)
 
-The first steps, how to run and test the first project, are described very well in the tutorial created especially for this purpose. You can find [here](https://www.microsemi.com/document-portal/doc_view/131618-modelsim-tutorial) pdf file or just paste in google *ModelSim tutorial microsemi*. The tutorial is about 81 pages.
+The first steps, how to run and test the first project, are described very well in the tutorial created especially for this purpose. You can find [here](https://www.microsemi.com/document-portal/doc_view/131618-modelsim-tutorial) pdf file or just paste in google *ModelSim tutorial microsemi*. The tutorial is about 81 pages. <br/>
+But for my convenience I'll put a few screenshots how to show the waveform if we have code in Verilog (in other languages steps will be probably the same).
+1. Run ModelSim
+2. *File* -> *Change Directory...* -> set appropriate folder in which you want save results from simulation. This folder can be diffferent than with the code.
+3. *File* -> *New* -> *Library...* -> set the foder name for results from simulation. This folder will be inside folder from previous step. Usually I name this folder the same as the project name. Additionally check *a new library and a logical mapping to it* option and set the same name for *Library Physical Name* as for *Library name*: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574053-8aec4b00-b0db-11eb-8567-efc3722b7328.png)
+4. *Compile* -> *Compile...* -> set a name for library, the name must be the same as in the previous step -> in the same window go to folder with your code and select all code files. Click *Compile* and after compiling click *Done*: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574157-1665dc00-b0dc-11eb-8a4f-3313bc6b65de.png)
+5. Expand the library and double click on file which you want open and see the waveform: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574257-912ef700-b0dc-11eb-8f34-3f69f0d2ea07.png)
+6. Right click on main instance and select *Add Wave*: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574370-0bf81200-b0dd-11eb-85bf-01a0a494b699.png)
+7. If you have in your testbench `$finish` instruction, I mean, if your testbench is not a infinite loop, then better will be click on *Run -All* icon. Otherwise, set the simulation time and click on *Run* icon: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574577-19fa6280-b0de-11eb-9a52-07b3c7ac15e7.png)
+8. After this probably you will see short waveforms, to extend the waveform to the whole window, just click the *Zoom Full* icon: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574673-87a68e80-b0de-11eb-8277-115e99f9d69c.png)
+9. After these steps you will see waveforms: <br/>
+![obraz](https://user-images.githubusercontent.com/43972902/117574719-b3297900-b0de-11eb-8d45-3469172f7b65.png)
+10. If you want load new file to see the waveforms you must once again change the direcotry and repeat all steps, but before this you must write in the console (at bottom) `quit -sim`. 
