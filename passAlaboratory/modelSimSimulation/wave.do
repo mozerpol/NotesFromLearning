@@ -1,23 +1,13 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /ADS8588H_tb/sys_clk
-add wave -noupdate /ADS8588H_tb/refsel_tb
-add wave -noupdate /ADS8588H_tb/stby_tb
-add wave -noupdate /ADS8588H_tb/convsta_tb
-add wave -noupdate /ADS8588H_tb/convstb_tb
-add wave -noupdate /ADS8588H_tb/reset_tb
-add wave -noupdate /ADS8588H_tb/range_tb
-add wave -noupdate /ADS8588H_tb/cs_tb
-add wave -noupdate /ADS8588H_tb/rd_sclk_tb
-add wave -noupdate /ADS8588H_tb/par_ser_tb
-add wave -noupdate /ADS8588H_tb/db_tb
-add wave -noupdate /ADS8588H_tb/os_tb
-add wave -noupdate /ADS8588H_tb/db_bus_ctrl
-add wave -noupdate /ADS8588H_tb/i
+add wave -noupdate /comb_complex_tb/b1_i_tb
+add wave -noupdate /comb_complex_tb/b2_i_tb
+add wave -noupdate /comb_complex_tb/b3_i_tb
+add wave -noupdate /comb_complex_tb/b4_o_tb
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
-quietly wave cursor active 0
-configure wave -namecolwidth 150
+WaveRestoreCursors {{Cursor 1} {1 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 177
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -29,6 +19,6 @@ configure wave -gridoffset 0
 configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
-configure wave -timelineunits ns
+configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ns} {633581 ns}
+WaveRestoreZoom {0 ps} {5 ps}
