@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/modelSimSimulation
+vand_area
+Z1 !s110 1620558842
+!i10b 1
+!s100 4AoGjbG@kR14iB_VR67Q81
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IVnHYkENDEBdh0F`YzO6X91
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1610743526
+Z5 8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/design.v
+Z6 F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/design.v
+!i122 1
+L0 2 10
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1620558842.000000
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/design.v|
+Z9 !s90 -reportprogress|300|-work|simpleProgrammableGate|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/design.v|
+!i113 1
+Z10 o-work simpleProgrammableGate
+Z11 tCvgOpt 0
+vgates_area
+R1
+!i10b 1
+!s100 8[bMkcbT<[h4g9T`6j_Ph3
+R2
+INaNk?ICYKh3TaoeMPiLnQ2
+R3
+R0
+R4
+R5
+R6
+!i122 1
+L0 13 12
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/design.v|
+R9
+!i113 1
+R10
+R11
+vgates_area_tb
+R1
+!i10b 1
+!s100 e<0>57cITVk;kWnnaOQAM1
+R2
+I5SH?U3X:e:gjCa00Bd<TF1
+R3
+R0
+w1610743516
+8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/testbench.v
+F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/testbench.v
+!i122 0
+L0 1 37
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/testbench.v|
+!s90 -reportprogress|300|-work|simpleProgrammableGate|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/simpleProgrammableGate/testbench.v|
+!i113 1
+R10
+R11

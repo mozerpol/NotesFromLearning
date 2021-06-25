@@ -1,0 +1,63 @@
+$date
+	Sun May  9 15:48:09 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module gates_area_tb $end
+$var reg 1 ! in1_tb $end
+$var reg 1 " in2_tb $end
+$var reg 1 # in3_tb $end
+$var wire 1 $ out_tb $end
+
+$scope module UUT1 $end
+$var wire 1 % in1 $end
+$var wire 1 & in2 $end
+$var wire 1 ' in3 $end
+$var wire 1 $ out_or $end
+$var wire 1 ( internal_wire $end
+
+$scope module A1 $end
+$var wire 1 % in1 $end
+$var wire 1 & in2 $end
+$var wire 1 ( out1_and $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0(
+0'
+0&
+0%
+$end
+#1
+1"
+1#
+1&
+1'
+1$
+#2
+1!
+0"
+0#
+1%
+0&
+0'
+0$
+#3
+1"
+1#
+1&
+1'
+1(
+1$

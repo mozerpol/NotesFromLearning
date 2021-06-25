@@ -1,0 +1,20 @@
+$date
+	Sat May  8 15:39:13 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module testbench $end
+$var reg 1 ! switch $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+$end
+#100
+0!

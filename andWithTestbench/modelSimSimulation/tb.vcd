@@ -1,0 +1,42 @@
+$date
+	Sat May  8 15:20:52 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module gate_tb $end
+$var reg 1 ! in1_tb $end
+$var reg 1 " in2_tb $end
+$var wire 1 # out1_tb $end
+
+$scope module UUT $end
+$var wire 1 $ in1 $end
+$var wire 1 % in2 $end
+$var wire 1 # out1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0%
+0$
+$end
+#1
+1"
+1%
+#2
+1!
+0"
+1$
+0%
+#3
+1"
+1%
+1#

@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/modelSimSimulation
+vcomb_complex
+Z1 !s110 1620565156
+!i10b 1
+!s100 d<U4N<jZAU9H<WQZNWjGf3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@DjW183QW08UnVlT9PzeE0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1610563867
+Z5 8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/design.v
+Z6 F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/design.v
+!i122 1
+L0 17 9
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1620565156.000000
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/design.v|
+Z9 !s90 -reportprogress|300|-work|twoEmbeddedModules|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/design.v|
+!i113 1
+Z10 o-work twoEmbeddedModules
+Z11 tCvgOpt 0
+vcomb_complex_tb
+R1
+!i10b 1
+!s100 DC?0B5dXj8NT7=S0DgYTH2
+R2
+I`;YFTk3c;`b]l4@cSDU=C3
+R3
+R0
+w1610565048
+8/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/testbench.v
+F/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/testbench.v
+!i122 0
+L0 1 50
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/testbench.v|
+!s90 -reportprogress|300|-work|twoEmbeddedModules|/home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/testbench.v|
+!i113 1
+R10
+R11
+vcomb_simple
+R1
+!i10b 1
+!s100 Ck5KQEzM`3k2i`Y51_OK:1
+R2
+Ig>eYLma?9QomVIb@7FM^D0
+R3
+R0
+R4
+R5
+R6
+!i122 1
+L0 1 15
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 /home/mozerpol/Documents/nauka/learningVerilog/learningVerilog/twoEmbeddedModules/design.v|
+R9
+!i113 1
+R10
+R11
