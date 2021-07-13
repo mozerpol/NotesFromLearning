@@ -10,6 +10,12 @@ Below I will describe how to start the first project with Quartus and upload pro
 
 ### How run Quartus
 I'm linux user (Debian buster 4.19), so everything will be shown on linux. I used **Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition**, *Patches Installed: None*. Unfortunately I will not show (maybe later) how to install Quartus with all drivers, but I remember that I had very very big problem with it :D <br/>
+Update 13.07.2021: I was forced to reinstall my system, so also I install once
+again Quartus with drivers for *T-core* (inside I have a MAX10). I found nice 
+tutor how to install everything: <br/>
+https://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/tekbots/docs/ece272/de10-lite-quartus.pdf <br/> 
+I remember that some time ago, durng installation, I had an error, which hasn't
+occured now, I don't know why. <br/> 
 So in first step from terminal in **superuser mode** we're going to destination where we installed Quartus: <br/>
 `/home/mozerpol/Documents/nauka/quartus/quartus/bin` <br/>
 In *bin* folder we should find a file called "quartus", only quartus, not quartus_asm or quartus_sh. When we find this file we can run it: <br/>
