@@ -172,10 +172,10 @@ Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts
 ### Cache <a name="Cache"></a> [UP↑](#tof)
 Most processors today, such as the processors inside standard keyboards and mice, don’t have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
 
-#### Principal of Locality
-Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
-1. Spatial - for better understandign consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
-2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good ideato keep recently used items in the cache, and not over-write data that has been recently used.
+#### Principle of locality
+Cache helps to speed up processors because it works on the [**principle of locality**](https://en.m.wikipedia.org/wiki/Locality_of_reference). <br/> *Locality of reference* is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
+1. Spatial - for better understandign consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (spatial - pol. *przestrzenny*) (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
+2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good idea to keep recently used items in the cache, and not over-write data that has been recently used.
 
 #### Hit or Miss
 When the processor needs data, it looks in the cache. If the data is not in the cache, it will then go to memory to find the data. <br/>
@@ -187,14 +187,15 @@ A processor with a cache first looks in the cache for data (or instructions). On
 A processor with a cache has an average memory access time of: <br/>
 |*T = m∗Tm + Th + E*|
 |:--:|
-, where: <br/>
+
+where: <br/>
 • *m* is the miss ratio <br/>
 • *Tm* is the time to make a main memory reference <br/>
 • *Th* is the time to make a cache reference on a hit <br/>
-• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention, etc.) <br/>
+• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention (pol. *twierdzenie*), etc.) <br/>
 Sometimes the entire cache contains useless or old data, and it needs to be flushed. Flushing occurs when the cache controller determines that the cache contains more potential misses than hits. Flushing the cache takes several processor cycles. <br/>
 When the processor looks for data in the cache, it sends a memory address to the cache controller. The cache controller checks the address against all the address fields in the cache. If there is a *hit*, the cache controller returns the data. If there is a *miss*, the cache controller must pass the request to the next level of cache or to the main memory unit. <br/>
-If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cachecan fetch the correct data from a higher level. The amount of time lost by the stall isdependent on a number of factors. 
+If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cache can fetch the correct data from a higher level. The amount of time lost by the stall is dependent on a number of factors. 
 
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
