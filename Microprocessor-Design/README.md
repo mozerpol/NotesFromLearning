@@ -172,10 +172,10 @@ Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts
 ### Cache <a name="Cache"></a> [UP↑](#tof)
 Most processors today, such as the processors inside standard keyboards and mice, don’t have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
 
-#### Principal of Locality
-Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
-1. Spatial - for better understandign consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
-2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good ideato keep recently used items in the cache, and not over-write data that has been recently used.
+#### Principle of locality
+Cache helps to speed up processors because it works on the [**principle of locality**](https://en.m.wikipedia.org/wiki/Locality_of_reference). <br/> *Locality of reference* is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
+1. Spatial (spatial - pol. *przestrzenny*) - for better understanding consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (spatial - pol. *przestrzenny*) (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
+2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good idea to keep recently used items in the cache, and not over-write data that has been recently used.
 
 #### Hit or Miss
 When the processor needs data, it looks in the cache. If the data is not in the cache, it will then go to memory to find the data. <br/>
@@ -187,14 +187,15 @@ A processor with a cache first looks in the cache for data (or instructions). On
 A processor with a cache has an average memory access time of: <br/>
 |*T = m∗Tm + Th + E*|
 |:--:|
-, where: <br/>
+
+where: <br/>
 • *m* is the miss ratio <br/>
 • *Tm* is the time to make a main memory reference <br/>
 • *Th* is the time to make a cache reference on a hit <br/>
-• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention, etc.) <br/>
+• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention (pol. *twierdzenie*), etc.) <br/>
 Sometimes the entire cache contains useless or old data, and it needs to be flushed. Flushing occurs when the cache controller determines that the cache contains more potential misses than hits. Flushing the cache takes several processor cycles. <br/>
 When the processor looks for data in the cache, it sends a memory address to the cache controller. The cache controller checks the address against all the address fields in the cache. If there is a *hit*, the cache controller returns the data. If there is a *miss*, the cache controller must pass the request to the next level of cache or to the main memory unit. <br/>
-If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cachecan fetch the correct data from a higher level. The amount of time lost by the stall isdependent on a number of factors. 
+If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cache can fetch the correct data from a higher level. The amount of time lost by the stall is dependent on a number of factors. 
 
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
@@ -303,7 +304,7 @@ It will be easier use this true table for four input mux:
 | A 4-to-1 mux |
 | Source: *https://i1.wp.com/technobyte.org/wp-content/uploads/2020/01/TRUTH-TABLE-4X1-MUX.png?ssl=1*  [06.01.2021] |
 
-We have four outputs and four inputs. If we have four inputs we need two select lines, because:
+We have two outputs and four inputs. If we have four inputs we need two select lines, because:
 - 0b00 means first input
 - 0b01 means second input
 - 0b10 means third input
@@ -328,7 +329,7 @@ Each adder has a completion type:
 - full adder
 - half adder
 
-Each full full adder consists of two half adders.
+Each full adder consists of two half adders.
 
 #### Half adder <a name="half"></a> [UP↑](#tof)
 The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
@@ -343,7 +344,7 @@ The half adder adds two single binary digits A and B. It has two outputs, sum (S
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 #### Full adder <a name="full"></a> [UP↑](#tof)
-Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
+Each full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
 |:--:|
@@ -390,7 +391,7 @@ So, if we have only one *true*, then the result is *true*. Let's look at truth t
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 |
 
-Situation is almost the same like in two input case. If we have odd *true* in our input, then we have *true* on output. Why am I talking about this? Because *serial adder* works similarly. <br/>
+Situation is almost the same like in two input *XOR*. If we have odd *true* in our input, then we have *true* on output. Why am I talking about this? Because *serial adder* works similarly. <br/>
 *Serial adder* is like three input *XOR*, but the third input/otuput is connected with *Memory element*, which is in our case is *flip-flop*:
 | ![serialAdder2](https://user-images.githubusercontent.com/43972902/104928523-0ac29e00-59a3-11eb-9fb9-f8be726f219e.png) |
 |:--:|
@@ -439,9 +440,9 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 Let's look on the truth table for full adder:
 ![claasdf](https://user-images.githubusercontent.com/43972902/106494891-47ba8480-64bb-11eb-9f3b-d980e69443fd.png)
 
-Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
-**Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G* <br/>
-Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
+Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can create formula: <br/>
+**Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G*. <br/>
+Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can create formula: <br/>
 **Ci+1 = A ⊕ B * Ci** - we can name this case **carry propagate**. So in this case output depends on *Ci* and this part we call *P*. <br/>
 Let's summarize and it's very very important, thanks to this we know when we have carry output: </br>
 Carry output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P * Ci** <br/>
@@ -451,10 +452,10 @@ Ok, I said that *Carry Lookahead Adder* is faster than *Ripple-Carry adder* and 
 | Ripple-Carry adder |
 | Source: *https://media.geeksforgeeks.org/wp-content/cdn-uploads/full_adder.png*  [30.01.2021] |
 
-**BUT** we know when we have carry output from last position, because we can calculate: `G + P * Ci*`, thanks to this it's not necessary wait for last module for carry output. Just add more logic gates which calculate `G + P * Ci*`. <br/>
+**BUT** we know when we have carry output from last position, because we can calculate: `G + P * Ci`, thanks to this it's not necessary wait for last module for carry output. Just add more logic gates which calculate `G + P * Ci`. <br/>
 Ok, let's create now boolean function of each carry output:
-- C1 = G0 + (P0 * Cin) --> here we calculate carry otput for first module
-- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry otput from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
+- C1 = G0 + (P0 * Cin) --> here we calculate carry output for first module
+- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry output from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
 - C3 = G2 + (P2 * C2) = G2 + (P2 * G1) + (P2 * P1 * G0) + (P2 * P1 * P0 * Cin) -->  the same situation like above, we don't have to wait for the previous module, because we can calculate carry output from previous module. <br/>
 As we can see *Carry Lookahead Adder* can be faster than *Ripple-Carry adder*, because we can calculate carry output from previous module and we don't have to wait, but there is one problem. *Carry Lookahead Adder* requires a lot more logic gates :(
 
@@ -477,7 +478,7 @@ A basic *carry-lookahead adder* is very fast but has the disadvantage that it ta
 
 **Signals:**
 1. *Data* - A basic *ALU* has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys (pol. *przekazuje*) one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising (pol. *zawierający*) each bus) are identical and match the native word size of the external circuitry (pol. *obwody*).
-2. *Opcode* - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the *ALU* an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
+2. *Opcode* - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the *ALU* an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (it's bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
 3. *Status* - The status outputs are various individual signals that convey supplemental (pol. *uzupełniający*) information about the result of the current *ALU* operation. General-purpose *ALUs* commonly have status signals such as: 
     - Carry-out - conveys (pol. *przekazuje*) the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
     - Zero - indicates all bits of Y are logic zero.
@@ -494,7 +495,7 @@ A basic *carry-lookahead adder* is very fast but has the disadvantage that it ta
 **In CISC computers each instruction can be a different length.**
 
 #### Branching <a name="Branching"></a> [UP↑](#tof)
-Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
+Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or from a register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
 
 ![branching](https://user-images.githubusercontent.com/43972902/104107763-3ec10380-52bf-11eb-93c6-7f6feb8a2031.png)
 
@@ -726,7 +727,7 @@ Let's assume we want to multiply *-12* and *-14*.
 `MAC A, B, C`, <br/>
 will perform the operation: <br/>
 `A = A + (B×C)` <br/>
-In a processor with an accumulator architecture, MAC operations will use the accumulatoras the destination register, so the instruction: <br/>
+In a processor with an accumulator architecture, MAC operations will use the accumulator as the destination register, so the instruction: <br/>
 `MAC B, C` <br/>
 Will perform the operation: <br/>
 `ACC = ACC + (B×C)` <br/>
