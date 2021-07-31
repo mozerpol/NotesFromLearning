@@ -792,7 +792,7 @@ In different words. Super-pipelining is the breaking of stages of a given pipeli
 It is not uncommon for modern high-end processors to have more than 20 pipeline stages.
 
 ### Superscalar Processors <a name="superscalar"></a> [UP↑](#tof)
-In a superscalar design, the processor actually has multiple datapaths, and multiple in-structions can be exectuted simultaneously, one in each datapath. <br/>
+In a superscalar design, the processor actually has multiple datapaths, and multiple instructions can be exectuted simultaneously, one in each datapath. <br/>
 Ok, but in brief what is difference between superscalar and pipeline processor? <br/>
 - **Pipelining** divides an instruction into steps, and since each step is executed in a different part of the processor.
 - **Superscalar design** involves the processor being able to do multiple instructions in a single clock. <br/>
@@ -803,7 +803,7 @@ We're talking about within a single core -- multicore processing is different. T
 We can see in the picture above, that we have two instructions in the same time, In all the stages highlighted in green are executing simultaneously.
 
 ### VLIW Processors <a name="vilw"></a> [UP↑](#tof)
-*VLIW* - *Very Long Instruction Words*. In this srchitecture also instructions can be executing simultaneously. So what is difference between *VLIW* and *Superscalar*. <br/>
+*VLIW* - *Very Long Instruction Words*. In this srchitecture also instructions can be executing simultaneously. So what is difference between *VLIW* and *Superscalar*? <br/>
 In a *superscalar design*, the microprocessor will have multiple independant execution units. An instruction scheduler determines which instructions will be executed on which execution unit, at what time. This scheduler unit requires large amounts of additional hardware complexity. VLIW is similar to superscalar architecture except that instead of using scheduling hardware to map instructions to available execution units, instructions for all units are provided in every instruction word. The scheduling is performed by the compiler at compile time. The term VLIW comes from the fact that multiple instructions typically requires large instruction words. If each instruction is 32 bits (including opcode, source and destination registers, etc), and the processor has 4 execution cores, then the total instruction word length is 128 bits long!
 
 ### Vector Processors <a name="vectorproc"></a> [UP↑](#tof)
@@ -811,7 +811,7 @@ In a *superscalar design*, the microprocessor will have multiple independant exe
 Modern graphics processors tend to (pol. *mają tendencję do*) be vector-based processors. Modern Intel-based chips also have *Vector Processors* capabilities known as [SSE](#https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions) or [MMX](#https://en.wikipedia.org/wiki/MMX_(instruction_set)) operations. 
 
 ### Multicore Processors <a name="multicore"></a> [UP↑](#tof)
-Taking the idea of superscalar operations to the next level, it is possible to put multiple microprocessor cores onto a single chip, and have the cores operatein parallel with one another. 
+Taking the idea of superscalar operations to the next level, it is possible to put multiple microprocessor cores onto a single chip, and have the cores operate in parallel with one another. 
 
 #### Symmetric Multi-core
 A symmetric multi-core processor is one that has multiple cores on a single chip, and all of those cores are identical. Each core has the same capabilities, so it requires that there is an arbitration unit to give each core a specific task. Software that uses techniques like [multithreading](#https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) makes the best use of a multi-core processor. For example *Intel Core 2*. The Core 2 can have either 2 cores on chip (*Core 2 Duo*) or 4 cores on chip (*Core 2 Quad*). Each core in the *Core 2* chip is symmetrical, and can function independently of one another. <br/>
@@ -840,9 +840,9 @@ A hazardis an error in the operation of the microcontroller, caused by the simul
 #### Data Hazards
 Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of data hazards:
 1. **Read After Write (RAW)** <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
-2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value,not the correct current value.
-3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at thesame time.
-4. 
+2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value, not the correct current value.
+3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at the same time.
+
 **Race condition** or **race hazard** - it will be easy to explain with an example. Consider, for example, a two-input AND gate with a logic signal *A* on one input and its negation, *NOT A*, on another input:
 
 ![hazardrace](https://user-images.githubusercontent.com/43972902/113597925-b394a700-963c-11eb-954e-415611f53d85.png)
@@ -857,10 +857,10 @@ A *stall* (pol. **ugrzęznąć**), or a ”bubble” in the pipeline occurs when
 
 ![bubhazard](https://user-images.githubusercontent.com/43972902/113710180-ada5d100-96e3-11eb-9487-12132382aebb.png)
 
-In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
+In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies (pol. *oznacza*) that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
 
 #### Forwarding
-When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding anadditional *forwarding unit* to control this mechanism.
+When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding an additional *forwarding unit* to control this mechanism.
 
 #### Register renaming
 Register renaming - Przemianowanie rejestrów <br/>
@@ -875,7 +875,7 @@ It's the ability of pipelined microprocessors, which can execute instruction whi
 A branch delay is an **instruction written in the assembly code** after the branch, that is designed to execute whether the branch is taken or not. If there are no instructions that can be executed without a dependency (pol. *zależność*) on the branch, then a NOP should be inserted instead.
 
 #### Branch Predication
-In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not toexecute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
+In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not to execute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
 
 ### Performance Metrics <a name="PerfMetr"></a> [UP↑](#tof)
 
@@ -888,12 +888,12 @@ If you can reduce any one of those factors, then the time will be shorter, it me
 Clock rate (often called ”clock speed”) is one of the easiest to measure performance metrics.
 
 ##### Cycles per Instruction
-*CPI* is a throughpuVirtual Memoryis a computer concept where the main memory is broken up into a seriesof individualpages. Those pages can be moved in memory as a unit, or they can evenbe moved to secondary storage to make room in main memory for new data. In essence,virtual memory allows a computer to use more RAM then it has available.t (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
+*CPI* is a throughput (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
 
 #### Instructions executed per program
 If the program you need to run is a binary executable, this number can’t be changed. Early CPU designers attempted to reduce this number by adding new, more complicated instructions, that did more work. (Later this idea was called *CISC*). When a given program (perhaps a benchmark program) is re-compiled for this new instruction set and executed, it requires fewer total executed instructions to finish. Alas, these more complicated instructions often require more cycles to execute - or worse, a longer clock period, which slows down every instruction - so the net benefit was not as great as was hoped. 
 
-Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
+Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately (pol. *celowo*) clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
 
 ### Memory-Level Parallelism <a name="mlp"></a> [UP↑](#tof)
 **Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
@@ -908,7 +908,7 @@ Memory addresses correspond (pol. *odpowiadać*) to a particular (pol. *szczegó
 The *translation look-aside buffer* (TLB) (look-aside - *patrzeć na bok*) is a small structure, similar to a cache, that stores the addresses of the most recently used pages. Looking up a page in the *TLB* is much faster then searching for the page in the page table. When the processor cannot find a particular page in the *TLB*, it is known as a ”TLB Miss”. When the TLB misses, the processor looks for the page in the page table. If the page is not in the table either, there is a page fault. Notice that even though the TLB can be considered a kind of cache. 
 
 ### Power Dissipation <a name="powdisp"></a> [UP↑](#tof)
-**Gene’s Law** - the power dissipation in embedded DSP processors will decrease by half every18 months. As transistors get smaller, the depletion region (pol. *region zubożenia*) gets smaller, and current leaks through the transistor even when it is off. This leakage produces additional heat, and wastes additional power. As power is a function of the square of the voltage, approximately, if you can reduce the power supply voltage by half, you can reduce the power dissipation by possibly three quarters (pol. *trzy czwarte*). It should be noted that, in order to prevent uncontrollable heat buildup (pol. *gromadzenie się ciepła*), many modern general-purpose microprocessors dynamically turn off parts of the chip. A computer that is being used for only integer calculations does not need its floating point unit, and so power to the entire FPU, except possibly the register stack, is turned off. Major sections of the microprocessor, then, can be turned on and off several times per millisecond. 
+**Gene’s Law** - the power dissipation in embedded DSP processors will decrease by half every 18 months. As transistors get smaller, the depletion region (pol. *region zubożenia*) gets smaller, and current leaks through the transistor even when it is off. This leakage produces additional heat, and wastes additional power. As power is a function of the square of the voltage, approximately, if you can reduce the power supply voltage by half, you can reduce the power dissipation by possibly three quarters (pol. *trzy czwarte*). It should be noted that, in order to prevent uncontrollable heat buildup (pol. *gromadzenie się ciepła*), many modern general-purpose microprocessors dynamically turn off parts of the chip. A computer that is being used for only integer calculations does not need its floating point unit, and so power to the entire FPU, except possibly the register stack, is turned off. Major sections of the microprocessor, then, can be turned on and off several times per millisecond. 
 
 
 
