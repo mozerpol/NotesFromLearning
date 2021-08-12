@@ -172,10 +172,10 @@ Nice link about pipelining [18.12.2020]: https://cs.stanford.edu/people/eroberts
 ### Cache <a name="Cache"></a> [UP↑](#tof)
 Most processors today, such as the processors inside standard keyboards and mice, don’t have any cache. The cache is used because reading external memory is very slow and reading a local cache is much faster. In modern processors, the cache can take up as much as 50% or more of the total area of the chip. Cache typically comes in 2 or 3 ”levels”, depending on the chip. Level 1 (L1) cache is smaller and faster than Level 2 (L2) cache, which is larger and slower. Some chips have Level 3 (L3) cache as well, which is larger still than the L2 cache (although L3 cache is still much faster than external RAM). Some chips that do have an L3 cache actually have an external L3 module that exists on the motherboard between the microprocessor and the RAM. Processors without a cache are usually limited in performance by the main memory access time. Without a cache, the processor fetches each instruction, one at a time, from main memory, and every *LOAD* or *STORE* goes to main memory before executing the next instruction. High-performance processors invariably (pol. *niezmiennie*) have 2 separate L1 caches, the instruction cache and the data cache (*I-cache* and *D-cache*). 
 
-#### Principal of Locality
-Cache helps to speed up processors because it works on the **principle of locality**. <br/> *Principle of locality*, is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
-1. Spatial - for better understandign consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
-2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good ideato keep recently used items in the cache, and not over-write data that has been recently used.
+#### Principle of locality
+Cache helps to speed up processors because it works on the [**principle of locality**](https://en.m.wikipedia.org/wiki/Locality_of_reference). <br/> *Locality of reference* is the tendency of a processor to access to the same set of memory locations repetitively in a short period of time. There are two types of locality:
+1. Spatial (spatial - pol. *przestrzenny*) - for better understanding consider simple array with elements. In these cases, when one data item is accessed, it is a good idea to load the surrounding memory area into the cache at the same time. So *spatial locality* (spatial - pol. *przestrzenny*) (also termed as *data locality*) refers to the use of data elements within relatively close storage locations.
+2. Temporal - when data item is accessed, it is likely that the same data item will be accessed again. It is a good idea to keep recently used items in the cache, and not over-write data that has been recently used.
 
 #### Hit or Miss
 When the processor needs data, it looks in the cache. If the data is not in the cache, it will then go to memory to find the data. <br/>
@@ -187,14 +187,15 @@ A processor with a cache first looks in the cache for data (or instructions). On
 A processor with a cache has an average memory access time of: <br/>
 |*T = m∗Tm + Th + E*|
 |:--:|
-, where: <br/>
+
+where: <br/>
 • *m* is the miss ratio <br/>
 • *Tm* is the time to make a main memory reference <br/>
 • *Th* is the time to make a cache reference on a hit <br/>
-• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention, etc.) <br/>
+• *E* accounts for various secondary factors (memory refresh time, multiprocessor contention (pol. *twierdzenie*), etc.) <br/>
 Sometimes the entire cache contains useless or old data, and it needs to be flushed. Flushing occurs when the cache controller determines that the cache contains more potential misses than hits. Flushing the cache takes several processor cycles. <br/>
 When the processor looks for data in the cache, it sends a memory address to the cache controller. The cache controller checks the address against all the address fields in the cache. If there is a *hit*, the cache controller returns the data. If there is a *miss*, the cache controller must pass the request to the next level of cache or to the main memory unit. <br/>
-If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cachecan fetch the correct data from a higher level. The amount of time lost by the stall isdependent on a number of factors. 
+If the cache *miss*es, the processor will need to **stall** (pol. *grać na zwłokę*, *blokować*) the current instruction until the cache can fetch the correct data from a higher level. The amount of time lost by the stall is dependent on a number of factors. 
 
 ### Endianness <a name="Endianness"></a> [UP↑](#tof)
 [Endianness](https://en.wikipedia.org/wiki/Endianness) - is the order or sequence of bytes of a word of digital data in computer memory. Endianness is primarily expressed as big-endian (BE) or little-endian (LE). A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address. 
@@ -303,7 +304,7 @@ It will be easier use this true table for four input mux:
 | A 4-to-1 mux |
 | Source: *https://i1.wp.com/technobyte.org/wp-content/uploads/2020/01/TRUTH-TABLE-4X1-MUX.png?ssl=1*  [06.01.2021] |
 
-We have four outputs and four inputs. If we have four inputs we need two select lines, because:
+We have two outputs and four inputs. If we have four inputs we need two select lines, because:
 - 0b00 means first input
 - 0b01 means second input
 - 0b10 means third input
@@ -328,7 +329,7 @@ Each adder has a completion type:
 - full adder
 - half adder
 
-Each full full adder consists of two half adders.
+Each full adder consists of two half adders.
 
 #### Half adder <a name="half"></a> [UP↑](#tof)
 The half adder adds two single binary digits A and B. It has two outputs, sum (S) and carry (C). The carry signal represents an overflow. The truth table:
@@ -343,7 +344,7 @@ The half adder adds two single binary digits A and B. It has two outputs, sum (S
 | Source: *https://en.wikipedia.org/wiki/Adder_(electronics)*  [07.01.2021] |
 
 #### Full adder <a name="full"></a> [UP↑](#tof)
-Each full full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
+Each full adder consists of two half adders. A one-bit full-adder adds three one-bit numbers, often written as *A*, *B*, and *Cin*. <br/>
 The truth table:
 | ![fullAdder](https://user-images.githubusercontent.com/43972902/103943523-86665480-5132-11eb-959d-8157e7783c7c.png) |
 |:--:|
@@ -390,7 +391,7 @@ So, if we have only one *true*, then the result is *true*. Let's look at truth t
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 |
 
-Situation is almost the same like in two input case. If we have odd *true* in our input, then we have *true* on output. Why am I talking about this? Because *serial adder* works similarly. <br/>
+Situation is almost the same like in two input *XOR*. If we have odd *true* in our input, then we have *true* on output. Why am I talking about this? Because *serial adder* works similarly. <br/>
 *Serial adder* is like three input *XOR*, but the third input/otuput is connected with *Memory element*, which is in our case is *flip-flop*:
 | ![serialAdder2](https://user-images.githubusercontent.com/43972902/104928523-0ac29e00-59a3-11eb-9fb9-f8be726f219e.png) |
 |:--:|
@@ -439,9 +440,9 @@ A *single full adder* performs the addition of two one bit numbers and an input 
 Let's look on the truth table for full adder:
 ![claasdf](https://user-images.githubusercontent.com/43972902/106494891-47ba8480-64bb-11eb-9f3b-d980e69443fd.png)
 
-Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
-**Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G* <br/>
-Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can formulate formula: <br/>
+Look at last two positions in our table: *8* and *7*. We can see if *A* and *B* is equal *1* then our *Ci+1* is also equal *1*. So if we want only *1* on our output we can create formula: <br/>
+**Ci+1 = A * B** - we can name this case **carry generate** and this part we call *G*. <br/>
+Next look at position: *6, 5, 4* and *3*. If *A* **or** *B* is equal *1* **and** *Ci* is equal *1* then our output is equal *1*. So if we want only *1* on our output we can create formula: <br/>
 **Ci+1 = A ⊕ B * Ci** - we can name this case **carry propagate**. So in this case output depends on *Ci* and this part we call *P*. <br/>
 Let's summarize and it's very very important, thanks to this we know when we have carry output: </br>
 Carry output is equal *1* if **(A * B) + (A ⊕ B * Ci)** = **G + P * Ci** <br/>
@@ -451,10 +452,10 @@ Ok, I said that *Carry Lookahead Adder* is faster than *Ripple-Carry adder* and 
 | Ripple-Carry adder |
 | Source: *https://media.geeksforgeeks.org/wp-content/cdn-uploads/full_adder.png*  [30.01.2021] |
 
-**BUT** we know when we have carry output from last position, because we can calculate: `G + P * Ci*`, thanks to this it's not necessary wait for last module for carry output. Just add more logic gates which calculate `G + P * Ci*`. <br/>
+**BUT** we know when we have carry output from last position, because we can calculate: `G + P * Ci`, thanks to this it's not necessary wait for last module for carry output. Just add more logic gates which calculate `G + P * Ci`. <br/>
 Ok, let's create now boolean function of each carry output:
-- C1 = G0 + (P0 * Cin) --> here we calculate carry otput for first module
-- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry otput from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
+- C1 = G0 + (P0 * Cin) --> here we calculate carry output for first module
+- C2 = G1 + (P1 * C1) = G1 + (P1 * G0) + (P1 * P0 * Cin) --> here we took also *G* and *P* from last input and calculate carry output from previous module. Thanks to this we have info about carry output and we don't have to wait for the previous module.
 - C3 = G2 + (P2 * C2) = G2 + (P2 * G1) + (P2 * P1 * G0) + (P2 * P1 * P0 * Cin) -->  the same situation like above, we don't have to wait for the previous module, because we can calculate carry output from previous module. <br/>
 As we can see *Carry Lookahead Adder* can be faster than *Ripple-Carry adder*, because we can calculate carry output from previous module and we don't have to wait, but there is one problem. *Carry Lookahead Adder* requires a lot more logic gates :(
 
@@ -477,7 +478,7 @@ A basic *carry-lookahead adder* is very fast but has the disadvantage that it ta
 
 **Signals:**
 1. *Data* - A basic *ALU* has three parallel data buses consisting of two input operands (A and B) and a result output (Y). Each data bus is a group of signals that conveys (pol. *przekazuje*) one binary integer number. Typically, the A, B and Y bus widths (the number of signals comprising (pol. *zawierający*) each bus) are identical and match the native word size of the external circuitry (pol. *obwody*).
-2. *Opcode* - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the *ALU* an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (its bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
+2. *Opcode* - The opcode input is a parallel bus that conveys (pol. *przekazuje*) to the *ALU* an operation selection code, which is an enumerated (pol. *wyliczone*) value that specifies the desired arithmetic or logic operation to be performed by the ALU. **The opcode size (it's bus width) determines the maximum number of different operations the ALU can perform**; for example, a four-bit opcode can specify up to sixteen different ALU operations. **Generally, an ALU opcode is not the same as a machine language opcode**, though in some cases it may be directly encoded as a bit field within a machine language opcode.
 3. *Status* - The status outputs are various individual signals that convey supplemental (pol. *uzupełniający*) information about the result of the current *ALU* operation. General-purpose *ALUs* commonly have status signals such as: 
     - Carry-out - conveys (pol. *przekazuje*) the carry resulting from an addition operation, the borrow resulting from a subtraction operation, or the overflow bit resulting from a binary shift operation.
     - Zero - indicates all bits of Y are logic zero.
@@ -494,7 +495,7 @@ A basic *carry-lookahead adder* is very fast but has the disadvantage that it ta
 **In CISC computers each instruction can be a different length.**
 
 #### Branching <a name="Branching"></a> [UP↑](#tof)
-Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or froma register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
+Branching occurs at one of a set of special instructions known collectively (pol. *zbiorowo*) as ”branch” or ”jump” instructions. During a branch, a new address for the PC is loaded, typically from the instruction or from a register. A **non-offset branch**, frequently referred to as a ”jump” is a branch where the previous PC value is discarded (pol. *odrzucone*) and a new PC value is loaded from an external source:
 
 ![branching](https://user-images.githubusercontent.com/43972902/104107763-3ec10380-52bf-11eb-93c6-7f6feb8a2031.png)
 
@@ -726,7 +727,7 @@ Let's assume we want to multiply *-12* and *-14*.
 `MAC A, B, C`, <br/>
 will perform the operation: <br/>
 `A = A + (B×C)` <br/>
-In a processor with an accumulator architecture, MAC operations will use the accumulatoras the destination register, so the instruction: <br/>
+In a processor with an accumulator architecture, MAC operations will use the accumulator as the destination register, so the instruction: <br/>
 `MAC B, C` <br/>
 Will perform the operation: <br/>
 `ACC = ACC + (B×C)` <br/>
@@ -791,7 +792,7 @@ In different words. Super-pipelining is the breaking of stages of a given pipeli
 It is not uncommon for modern high-end processors to have more than 20 pipeline stages.
 
 ### Superscalar Processors <a name="superscalar"></a> [UP↑](#tof)
-In a superscalar design, the processor actually has multiple datapaths, and multiple in-structions can be exectuted simultaneously, one in each datapath. <br/>
+In a superscalar design, the processor actually has multiple datapaths, and multiple instructions can be exectuted simultaneously, one in each datapath. <br/>
 Ok, but in brief what is difference between superscalar and pipeline processor? <br/>
 - **Pipelining** divides an instruction into steps, and since each step is executed in a different part of the processor.
 - **Superscalar design** involves the processor being able to do multiple instructions in a single clock. <br/>
@@ -802,7 +803,7 @@ We're talking about within a single core -- multicore processing is different. T
 We can see in the picture above, that we have two instructions in the same time, In all the stages highlighted in green are executing simultaneously.
 
 ### VLIW Processors <a name="vilw"></a> [UP↑](#tof)
-*VLIW* - *Very Long Instruction Words*. In this srchitecture also instructions can be executing simultaneously. So what is difference between *VLIW* and *Superscalar*. <br/>
+*VLIW* - *Very Long Instruction Words*. In this srchitecture also instructions can be executing simultaneously. So what is difference between *VLIW* and *Superscalar*? <br/>
 In a *superscalar design*, the microprocessor will have multiple independant execution units. An instruction scheduler determines which instructions will be executed on which execution unit, at what time. This scheduler unit requires large amounts of additional hardware complexity. VLIW is similar to superscalar architecture except that instead of using scheduling hardware to map instructions to available execution units, instructions for all units are provided in every instruction word. The scheduling is performed by the compiler at compile time. The term VLIW comes from the fact that multiple instructions typically requires large instruction words. If each instruction is 32 bits (including opcode, source and destination registers, etc), and the processor has 4 execution cores, then the total instruction word length is 128 bits long!
 
 ### Vector Processors <a name="vectorproc"></a> [UP↑](#tof)
@@ -810,7 +811,7 @@ In a *superscalar design*, the microprocessor will have multiple independant exe
 Modern graphics processors tend to (pol. *mają tendencję do*) be vector-based processors. Modern Intel-based chips also have *Vector Processors* capabilities known as [SSE](#https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions) or [MMX](#https://en.wikipedia.org/wiki/MMX_(instruction_set)) operations. 
 
 ### Multicore Processors <a name="multicore"></a> [UP↑](#tof)
-Taking the idea of superscalar operations to the next level, it is possible to put multiple microprocessor cores onto a single chip, and have the cores operatein parallel with one another. 
+Taking the idea of superscalar operations to the next level, it is possible to put multiple microprocessor cores onto a single chip, and have the cores operate in parallel with one another. 
 
 #### Symmetric Multi-core
 A symmetric multi-core processor is one that has multiple cores on a single chip, and all of those cores are identical. Each core has the same capabilities, so it requires that there is an arbitration unit to give each core a specific task. Software that uses techniques like [multithreading](#https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) makes the best use of a multi-core processor. For example *Intel Core 2*. The Core 2 can have either 2 cores on chip (*Core 2 Duo*) or 4 cores on chip (*Core 2 Quad*). Each core in the *Core 2* chip is symmetrical, and can function independently of one another. <br/>
@@ -839,9 +840,9 @@ A hazardis an error in the operation of the microcontroller, caused by the simul
 #### Data Hazards
 Data hazards are caused by attempting to access data or modify data simultaneously. There are three basic types of data hazards:
 1. **Read After Write (RAW)** <br/> In these type of hazards, the read process happens after the write process, although (pol. *mimo że*) both processes happen in the same clock cycle.
-2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value,not the correct current value.
-3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at thesame time.
-4. 
+2. **Write After Read (WAR)** <br/> The write from a previous instruction will not complete before the successive (pol. *kolejny*) read instruction. This means that the next value read will be a previous value, not the correct current value.
+3. **Write After Write (WAW)** <br/> WAW hazards occur when two processes try to write to a data storage element at the same time.
+
 **Race condition** or **race hazard** - it will be easy to explain with an example. Consider, for example, a two-input AND gate with a logic signal *A* on one input and its negation, *NOT A*, on another input:
 
 ![hazardrace](https://user-images.githubusercontent.com/43972902/113597925-b394a700-963c-11eb-954e-415611f53d85.png)
@@ -856,10 +857,10 @@ A *stall* (pol. **ugrzęznąć**), or a ”bubble” in the pipeline occurs when
 
 ![bubhazard](https://user-images.githubusercontent.com/43972902/113710180-ada5d100-96e3-11eb-9487-12132382aebb.png)
 
-In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
+In this image we can see ”bubbles” drawn where data hazards occur. A bubble signifies (pol. *oznacza*) that the instruction has stalled in the pipeline until a previous instruction completes. Notice in this image that the yellow instruction stops at the ID stage for 2 cycles, while thered instruction continues.
 
 #### Forwarding
-When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding anadditional *forwarding unit* to control this mechanism.
+When an result from one instruction is using as the input to the *ALU* in the next instruction, we can use **forwarding** to move data directly from the ALU output into the ALU input of the next cycle, before that data has been written to the register. In this way, we can avoid the need for a *stall* in these situations, but at the expense of adding an additional *forwarding unit* to control this mechanism.
 
 #### Register renaming
 Register renaming - Przemianowanie rejestrów <br/>
@@ -874,7 +875,7 @@ It's the ability of pipelined microprocessors, which can execute instruction whi
 A branch delay is an **instruction written in the assembly code** after the branch, that is designed to execute whether the branch is taken or not. If there are no instructions that can be executed without a dependency (pol. *zależność*) on the branch, then a NOP should be inserted instead.
 
 #### Branch Predication
-In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not toexecute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
+In this type of fixing hazards all instructions, or most instructions in the ISA maybe conditionally executed based on some conditions. In other words, the instruction will be loaded from memory, decoded, and then the processor will determine whether or not to execute it (so I think instruction will be load to pipeline and after that will consider whether to execute this instruction). Branch predication is very closely related to speculative execution. **Branch prediction is the act of guessing about the direction a branch instruction will take.** In modern processors, branch prediction will frequently look at the history of recent branches to determine how to guess the outcome of a future branch. A branch predictor typically acts like a counter. Every time a branch is taken, the counter is incremented, and every time a branch is not taken, the counter is decremented. We can treat a branch predictor like a finite-state-machine (FSM).
 
 ### Performance Metrics <a name="PerfMetr"></a> [UP↑](#tof)
 
@@ -887,12 +888,12 @@ If you can reduce any one of those factors, then the time will be shorter, it me
 Clock rate (often called ”clock speed”) is one of the easiest to measure performance metrics.
 
 ##### Cycles per Instruction
-*CPI* is a throughpuVirtual Memoryis a computer concept where the main memory is broken up into a seriesof individualpages. Those pages can be moved in memory as a unit, or they can evenbe moved to secondary storage to make room in main memory for new data. In essence,virtual memory allows a computer to use more RAM then it has available.t (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
+*CPI* is a throughput (pol. *wydajność*) measure of how many instructions are completed (on average) for agiven number of clocks. A CPU that can complete, on average, 2 instructions per cycle (a *CPI* of 0.5) may have a 20 stage pipeline. 
 
 #### Instructions executed per program
 If the program you need to run is a binary executable, this number can’t be changed. Early CPU designers attempted to reduce this number by adding new, more complicated instructions, that did more work. (Later this idea was called *CISC*). When a given program (perhaps a benchmark program) is re-compiled for this new instruction set and executed, it requires fewer total executed instructions to finish. Alas, these more complicated instructions often require more cycles to execute - or worse, a longer clock period, which slows down every instruction - so the net benefit was not as great as was hoped. 
 
-Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
+Most CPUs in mobile electronics - cell phones, laptops, wireless keyboards, MP3 players, etc. - are **underclocked**. Why do people deliberately (pol. *celowo*) clock them at a rate far below their potential runtime performance? Because clocking them any faster **waste battery life**.
 
 ### Memory-Level Parallelism <a name="mlp"></a> [UP↑](#tof)
 **Memory-Level Parallelism (MLP)** is the ability to perform multiple memory transactions at once. The possibility of multiple read at once is more common than multiple write at once, because of the risk of potential conflicts (trying to write two different values to the same location).
@@ -907,7 +908,7 @@ Memory addresses correspond (pol. *odpowiadać*) to a particular (pol. *szczegó
 The *translation look-aside buffer* (TLB) (look-aside - *patrzeć na bok*) is a small structure, similar to a cache, that stores the addresses of the most recently used pages. Looking up a page in the *TLB* is much faster then searching for the page in the page table. When the processor cannot find a particular page in the *TLB*, it is known as a ”TLB Miss”. When the TLB misses, the processor looks for the page in the page table. If the page is not in the table either, there is a page fault. Notice that even though the TLB can be considered a kind of cache. 
 
 ### Power Dissipation <a name="powdisp"></a> [UP↑](#tof)
-**Gene’s Law** - the power dissipation in embedded DSP processors will decrease by half every18 months. As transistors get smaller, the depletion region (pol. *region zubożenia*) gets smaller, and current leaks through the transistor even when it is off. This leakage produces additional heat, and wastes additional power. As power is a function of the square of the voltage, approximately, if you can reduce the power supply voltage by half, you can reduce the power dissipation by possibly three quarters (pol. *trzy czwarte*). It should be noted that, in order to prevent uncontrollable heat buildup (pol. *gromadzenie się ciepła*), many modern general-purpose microprocessors dynamically turn off parts of the chip. A computer that is being used for only integer calculations does not need its floating point unit, and so power to the entire FPU, except possibly the register stack, is turned off. Major sections of the microprocessor, then, can be turned on and off several times per millisecond. 
+**Gene’s Law** - the power dissipation in embedded DSP processors will decrease by half every 18 months. As transistors get smaller, the depletion region (pol. *region zubożenia*) gets smaller, and current leaks through the transistor even when it is off. This leakage produces additional heat, and wastes additional power. As power is a function of the square of the voltage, approximately, if you can reduce the power supply voltage by half, you can reduce the power dissipation by possibly three quarters (pol. *trzy czwarte*). It should be noted that, in order to prevent uncontrollable heat buildup (pol. *gromadzenie się ciepła*), many modern general-purpose microprocessors dynamically turn off parts of the chip. A computer that is being used for only integer calculations does not need its floating point unit, and so power to the entire FPU, except possibly the register stack, is turned off. Major sections of the microprocessor, then, can be turned on and off several times per millisecond. 
 
 
 
