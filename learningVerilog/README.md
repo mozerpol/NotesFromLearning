@@ -53,3 +53,16 @@ But for my convenience I'll put a few screenshots how to show the waveform if we
 9. After these steps you will see waveforms: <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/117574719-b3297900-b0de-11eb-8d45-3469172f7b65.png)
 10. If you want load new file to see the waveforms you must once again change the direcotry and repeat all steps, but before this you must write in the console (at bottom) `quit -sim`. 
+
+Nice picture about arrays in verilog: <br/>
+||
+|:--:|
+| ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
+| Source: *http://www.pepedocs.com/img/fpga-0.png* |
+
+
+
+
+
+
+
