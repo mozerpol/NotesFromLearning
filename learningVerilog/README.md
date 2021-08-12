@@ -59,10 +59,3 @@ Nice picture about arrays in verilog: <br/>
 |:--:|
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
 | Source: *http://www.pepedocs.com/img/fpga-0.png* |
-
-
-
-
-
-
-
