@@ -3,7 +3,7 @@ _______________
 
 In this repo I'll post my private notes from reading the series of articles 
 that appeared in the *Elektronika Praktyczna* magazine. <br/>
-It was a series of eighteen [?] articles, the first article appeared in the 
+It was a series of 21 [?] articles, the first article appeared in the 
 issue 12.2019 <br/>
 The articles were written in my mother language (Polish). You can buy all 
 numbers directly from the producer: 
@@ -20,10 +20,9 @@ it'll useful for someone in the future :) <br/>
 ### How run Quartus
 I'm linux user (Debian buster 4.19), so everything will be shown on linux. I 
 used **Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition**,
-*Patches Installed: None*. Unfortunately I will not show (maybe later) how to 
+*Patches Installed: None*. ~~Unfortunately I will not show (maybe later) how to 
 install Quartus with all drivers, but I remember that I had very very big
-problem with it :D <br/>
-Update 13.07.2021: I was forced to reinstall my system, so also I install once
+problem with it :D~~ Update 13.07.2021: I was forced to reinstall my system, so also I install once
 again Quartus with drivers for *T-core* (inside I have a MAX10). I found nice 
 tutor how to install everything: <br/>
 https://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/tekbots/docs/ece272/de10-lite-quartus.pdf <br/> 
@@ -67,7 +66,7 @@ it's example ;p) <br/> ![obraz](https://user-images.githubusercontent.com/439729
 after this you'll see something like this: <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116430487-2d3c4100-a847-11eb-9c78-c518dabbb872.png) <br/>
 Click on *Verilog HDL File*
 10. Now, you should see empty page, where we can write some code. Just copy and 
-paste below code (will turn on some LEDs on my board): <br/>
+paste below code (will turn on some LEDs on my board):
 ```verilog
 module quartusFirstTest(
     output a,
