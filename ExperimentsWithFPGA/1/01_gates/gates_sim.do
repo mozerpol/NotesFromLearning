@@ -1,8 +1,13 @@
+# vlib - this command creates a design library
 vlib work
 
+# vlog - compiles Verilog source code and SystemVerilog extensions into a
+# specified working library (or to the work library by default).
 vlog gates.v 
 vlog gates_tb.v
 
+# vsim - invokes the VSIM simulator, which you can use to view the results of a
+# previous simulation run
 vsim work.gates_tb
 
 add wave -color "light blue" -position end sim:/gates_tb/clk
@@ -16,4 +21,5 @@ add wave -color "purple" -position end sim:/gates_tb/dut/led3
 
 run -all
 
+# wave zoom full - zoom the wave display to show the full simulation time
 wave zoom full
