@@ -25,3 +25,28 @@ expand: <br/>
 
 RTL (Register Transfer Level) Viewer: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133254070-13b11b5c-2718-4282-9cff-f3219e4eea4b.png)
+
+RTL Viewer is readable and easy to understand, however it doesn't include the
+resources contained in a particular FPGA model. To find out how the project 
+will be implemented, let's choose: <br/>
+*Technology Map Viewer (Post-Mapping)*. Should appear: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133256085-ee309282-5f24-4367-a700-68e1f57f6e44.png)
+
+As we can see, we have input/output buffers. On the other hand, logic gates have
+disappeared. They were replaced by LUT (lookup table) blocks - logical functions 
+written with an array of values. If we right-click the LUT and select *Properties*, 
+in the left panel we can see how the function is encoded in the table: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133266839-269388ea-50d8-4232-bb93-25e2cc5351bb.png)
+
+We can also see exactly what the consumption of resources is in the logical element.
+From datasheet of *MAX 10* circuit we can find out how LE looks: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133267428-e87efbc2-a823-4d86-8021-0bb402926a57.png)
+
+To see the consumption of resources in LE just right click on LE -> *Locate 
+Node* -> *Locate in Resource Properity Editor*: 
+![image](https://user-images.githubusercontent.com/43972902/133268044-247e6e8d-12f1-4a01-bbc9-be172f9de70e.png)
+
+After this we'll see: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133268759-7228faf3-20c7-4951-857e-dfa68d16ca84.png)
+
+As we can see, this picture is very similar to this from datasheet.
