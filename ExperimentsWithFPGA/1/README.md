@@ -43,7 +43,7 @@ From datasheet of *MAX 10* circuit we can find out how LE looks: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133267428-e87efbc2-a823-4d86-8021-0bb402926a57.png)
 
 To see the consumption of resources in LE just right click on LE -> *Locate 
-Node* -> *Locate in Resource Properity Editor*: 
+Node* -> *Locate in Resource Properity Editor*: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133268044-247e6e8d-12f1-4a01-bbc9-be172f9de70e.png)
 
 After this we'll see: <br/>
