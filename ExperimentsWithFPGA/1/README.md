@@ -94,4 +94,3 @@ element.
 We can run once again *Resource Properity Editor* and ascertain that LUT and 
 flip-flop comes from one logic element: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133456393-9b150714-51bb-4a7b-beae-63b22de980d0.png)
-
