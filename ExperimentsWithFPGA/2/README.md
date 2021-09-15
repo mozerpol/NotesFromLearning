@@ -40,3 +40,10 @@ other so that the Q output of one flip-flop connects to the T input of the next.
 | *4 bit counter using 8421 coding with waveform* |
 | Source [15.09.21]: *https://eduinf.waw.pl/inf/alg/002_struct/0035.php#przerzutnik_T* |
 
+It is recommended that the logic implemented in the FPGA should be synchronized 
+with the same clock - it means, it should be in one clock domain. Sometimes it
+happens that some blocks have to work on a clock with a different frequency.
+Between these blocks are required additional modules synchronizing signals.
+This modules are called *CDC* (clock domain crossing). For distributing a clock
+signal are also prepared separate paths connecting the system, in our MAX10 
+called the Global Clock Network.
