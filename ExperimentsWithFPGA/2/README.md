@@ -31,4 +31,12 @@ Also flip-flop, is triggered by the edge of a clock signal (usually falling).
 | *Different approach to the truth table*
 | Source [15.09.21]: *https://pl.wikipedia.org/wiki/Przerzutnik_typu_T* | 
 
+The *T* flip-flop can be used as an asynchronous binary counter. An asynchronous
+counter is created when we connect several *T* flip-flops in series with each 
+other so that the Q output of one flip-flop connects to the T input of the next.
+
+| ![image](https://user-images.githubusercontent.com/43972902/133514492-afe32d52-471a-433a-b2d5-b029cad3047d.png) |
+|:--:|
+| *4 bit counter using 8421 coding with waveform* |
+| Source [15.09.21]: *https://eduinf.waw.pl/inf/alg/002_struct/0035.php#przerzutnik_T* |
 
