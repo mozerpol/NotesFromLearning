@@ -73,3 +73,25 @@ click *OK*: <br/>
 
 Now will appear new column *Weak Pull-up Resistor*, where you cant turn on or
 off internal resistor.
+
+Fitter - this tool is using to assign appropirate resource to specific element
+and configure connections between them. A fter running *fitter* (double click
+on *Fitter Place & Route*) we'll see in the *Flow Summary* window we're using
+one more ligic element than analysis indicated on it. <br/>
+Expand *Fitter Place & Route* and select *Technology Map Viewer (Post-Fitting)*.
+<br/>
+![image](https://user-images.githubusercontent.com/43972902/133453004-659352b8-d6bd-4379-9b30-46034f79afae.png)
+
+After fittering (I hope I can name that this activity) we can see that we have
+a small changes if we want compare to *RTL Viewer* (*Technology Map Viewer 
+(Post-Mapping)*), but still our device consists three LUT and flip flops: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133453776-08f04ee1-2db6-40c0-a0f7-a08d5c119c87.png)
+
+However, among others, we have in addition the configuration of the JTAG 
+interface and the ADC converter. Exactly these elements used the fourth logic
+element.
+
+We can run once again *Resource Properity Editor* and ascertain that LUT and 
+flip-flop comes from one logic element: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133456393-9b150714-51bb-4a7b-beae-63b22de980d0.png)
+
