@@ -57,4 +57,19 @@ As we can see, this picture is very similar to this from datasheet.
 Next issue concerns to the same thing, so I decided dedicate this repo for the 
 next issue as well.
 
+The first step is about *Pin Planner* and assignment output pins to thier
+corresponding variables in the code. <br/>
+In my board (Terasic T-core) I have a four LEDs:<br/>
+![image](https://user-images.githubusercontent.com/43972902/133431945-6e412f27-9aa8-457d-8590-ad66dc950979.png)
 
+As you can see the output one of them is connected to GND, so if we want control
+this LED we must use internal pull-up. To do this right click on the header of
+the table with pins and choose *Customize Columns* option: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133432600-e96e63e5-603c-4795-80ce-1003b88676b4.png)
+
+There select *Weak Pull-Up Resistor* and move to the right column. Afther this
+click *OK*: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133433176-b5b1f2f0-8b33-4c92-b589-b6e711f09fd8.png)
+
+Now will appear new column *Weak Pull-up Resistor*, where you cant turn on or
+off internal resistor.
