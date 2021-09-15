@@ -50,3 +50,11 @@ After this we'll see: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133268759-7228faf3-20c7-4951-857e-dfa68d16ca84.png)
 
 As we can see, this picture is very similar to this from datasheet.
+
+## Eksperymenty z FPGA (2)
+*Elektronika Praktyczna* Nr 1 (324) • 01.2020
+
+Next issue concerns to the same thing, so I decided dedicate this repo for the 
+next issue as well.
+
+
