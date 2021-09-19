@@ -74,3 +74,31 @@ View from *Chip Planner:* <br/>
 
 We can see *LAB* (*Logic Array Block*), which consists of 16 *Logical Elements*
 (*LE*), connections between them and control signals.
+
+*SDC* - (*Synopsys Design Constraints*) - contains design constraints and timing 
+assignments. More about this format
+[here](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/manual/mnl_sdctmq.pdf)
+. Or just search in google *SDC and TimeQuest API Reference Manual*. 
+To upload *SDC* file to project click: *Timing Analysys* -> *Edit Settings* ->
+*Open*: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133933698-66135ee9-abf9-4c24-aeb3-18be14b70aff.png)
+
+In *Settings* tab click on *...* and select appropirate file: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133933666-7af52ed0-2fc6-46cd-8d71-896c7569c466.png)
+
+*SDC* file from project: <br/>
+```
+# 50 MHz 
+create_clock -name {clk} -period 125.000 -waveform { 0.000 62.500 } [get_ports { clk }]
+
+set_input_delay -clock { clk } 2 [get_ports {rst}]
+set_output_delay -clock { clk } 2 [get_ports {led[0] led[1] led[2] led[3]}]
+```
+
+`create_clock -name {clk} -period 125.000 -waveform { 0.000 62.500 } [get_ports { clk }]` -
+described clock signal. After flag *-name* we have its name. Period was set
+on 125 us and filling on 50%. 
+
+`set_input_delay -clock { clk } 2 [get_ports {rst}]` - it says what delays may
+occur on the inputs and outputs of the system. In this case, they were assumed 
+to be 2ns with respect to the clock signal.
