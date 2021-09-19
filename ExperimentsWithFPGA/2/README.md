@@ -47,3 +47,24 @@ Between these blocks are required additional modules synchronizing signals.
 This modules are called *CDC* (clock domain crossing). For distributing a clock
 signal are also prepared separate paths connecting the system, in our MAX10 
 called the Global Clock Network.
+
+On the FPGA we can create almost every digital circuit. Thanks to HDL languages
+we can transform our code to digital circuit which will be implemented on FPGA.
+In Quartus we can see what electronic circuit describes our code. To do this
+expand: <br/>
+*Analysis & Synthesis* -> *Netlist Viewers* -> double click on *RTL Viewer* <br/>
+![image](https://user-images.githubusercontent.com/43972902/133253582-1e240ca7-7b96-4de7-b70b-d4c677f32ae3.png)
+
+RTL (Register Transfer Level) Viewer: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133890902-4972fdea-e562-46e0-9751-d4c09b6d1e67.png)
+
+Thanks to the fact that we have divided the project into modules, we will first
+see only the connections between them. To see internal structure click on "plus"
+icon: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133891008-09da71e8-f6cc-43da-8a1a-c8b8fb415d48.png)
+
+RTL Viewer is readable and easy to understand, however it doesn't include the
+resources contained in a particular FPGA model. To find out how the project 
+will be implemented, let's choose: <br/>
+*Technology Map Viewer (Post-Mapping)*. Should appear: <br/>
+![image](https://user-images.githubusercontent.com/43972902/133929691-ad8a0901-3eea-456c-9d68-cf8c986655ed.png)
