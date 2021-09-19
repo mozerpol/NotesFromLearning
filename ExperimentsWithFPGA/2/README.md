@@ -68,3 +68,9 @@ resources contained in a particular FPGA model. To find out how the project
 will be implemented, let's choose: <br/>
 *Technology Map Viewer (Post-Mapping)*. Should appear: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/133929691-ad8a0901-3eea-456c-9d68-cf8c986655ed.png)
+
+View from *Chip Planner:* <br/>
+![image](https://user-images.githubusercontent.com/43972902/133929984-0185d3ac-fb7a-4ab5-9c3a-bb4d78cb2410.png)
+
+We can see *LAB* (*Logic Array Block*), which consists of 16 *Logical Elements*
+(*LE*), connections between them and control signals.
