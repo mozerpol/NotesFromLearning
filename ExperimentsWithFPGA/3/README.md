@@ -15,3 +15,11 @@ flip-flop. <br>
 The implementation in Verilof for *dff* is inside dff.v file with its test
 bench. The output waveform: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/134030345-4e069495-1ce0-4683-84be-36b7674f2513.png)
+
+Another waveform: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/134032875-da8af41f-e7ad-40b5-b0f1-b3e0e532db16.png) |
+|:--:|
+| *Another waveform* |
+| Source[20.09.2021]: *https://www.electronicshub.org/d-flip-flop/* |
+
+As we can see
