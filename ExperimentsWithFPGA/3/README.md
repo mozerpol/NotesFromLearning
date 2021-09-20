@@ -12,7 +12,17 @@ To understand this the first step is explain how *D flip-flow* works. <br/>
 In short it performs the function of rewriting information from input *D* to
 output *Q* with a delay of one clock pulse, hence its name *D* (like delay) 
 flip-flop. <br>
-The implementation in Verilof for *dff* is inside dff.v file with its test
+*D* flip-flop has two inputs, a *clock* (CLK) a *data* (D) and two outputs. One
+is main output represented by *Q* and the other is negation of *Q* represented 
+by *Q’*. The symbol of a *D* flip-flop is shown below: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/134033780-dd9b3ce6-1144-4382-8915-2dae246bd394.png) |
+|:--:|
+| *Symbol of dff* |
+| Source[20.09.2021]: *https://commons.wikimedia.org/wiki/File:D-Type_Flip-flop.svg* |
+
+A *D* flip-flop is constructed by modifying an SR flip-flop.
+
+The implementation in Verilog for *dff* is inside dff.v file with its test
 bench. The output waveform: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/134030345-4e069495-1ce0-4683-84be-36b7674f2513.png)
 
@@ -22,4 +32,4 @@ Another waveform: <br/>
 | *Another waveform* |
 | Source[20.09.2021]: *https://www.electronicshub.org/d-flip-flop/* |
 
-As we can see
+As we can see 
