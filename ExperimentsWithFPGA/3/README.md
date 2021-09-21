@@ -57,3 +57,14 @@ reminder I put the truth table and symbol: <br/>
 | *XOR gate* |
 | Source[21.09.2021]: *https://www.maximintegrated.com/content/dam/images/glossary/xor-gate-symbol.jpg* |
 
+So the result for this part: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134188780-ff4bc2f5-b3a3-4239-b941-ff149e086b04.png)
+
+is simple truth table from *XOR* gate (0110). So we can summarize this part, when 
+the input for *D* will be stable, then output (*Q*) from *d-latch* will be the 
+same as input. It means that on input *XOR* we have the same values. Thanks to
+this we can obtain two the same states: *0* and *0*. <br/>
+Changing the input state for *d-latch* will cause that on the output of *XOR* we
+have *1*. The state *1* reset our counter: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134194431-0222b806-297c-49c4-929d-b0cdadfc51aa.png)
+
