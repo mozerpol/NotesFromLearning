@@ -11,7 +11,7 @@ device based on following scheme: <br/>
 To understand this the first step is explain how *D flip-flow* works. <br/>
 In short it performs the function of rewriting information from input *D* to
 output *Q* with a delay of one clock pulse, hence its name *D* (like delay) 
-flip-flop. <br>
+flip-flop or *D-latch*. <br>
 *D* flip-flop has two inputs, a *clock* (CLK) a *data* (D) and two outputs. One
 is main output represented by *Q* and the other is negation of *Q* represented 
 by *Q’*. The symbol of a *D* flip-flop is shown below: <br/>
@@ -32,4 +32,20 @@ Another waveform: <br/>
 | *Another waveform* |
 | Source[20.09.2021]: *https://www.electronicshub.org/d-flip-flop/* |
 
-As we can see 
+As we can see the output (*Q*) can change only when we have a clock rising edge. 
+Otherwise last result is latched. Now it's easy create truth table: <br/>
+|*D*|*clk*|*Q*|
+|:--:|:--:|:--:|
+|0|0|last state|
+|0|1|0|
+|1|0|last state|
+|1|1|1|
+
+The most important application of *D* flip-flop is frequency Division circuit.
+The *Q’* output is connected to the *D* input as a closed feedback loop.
+
+| ![image](https://user-images.githubusercontent.com/43972902/134180330-a4c1a48c-0a80-4788-9536-9f72d0097fee.png) |
+|:--:|
+| *Frequency divider using dff* |
+| Source[21.09.2021]: *https://www.electronics-tutorials.ws/counter/count_1.html* |
+
