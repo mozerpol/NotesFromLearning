@@ -49,3 +49,11 @@ The *Q’* output is connected to the *D* input as a closed feedback loop.
 | *Frequency divider using dff* |
 | Source[21.09.2021]: *https://www.electronics-tutorials.ws/counter/count_1.html* |
 
+The next thing to understand main topic in this issue is *XOR* gate. As a 
+reminder I put the truth table and symbol: <br/>
+
+| ![image](https://user-images.githubusercontent.com/43972902/134187454-a88b3f17-89a9-4011-9dc3-f747d2676be1.png) |
+|:--:|
+| *XOR gate* |
+| Source[21.09.2021]: *https://www.maximintegrated.com/content/dam/images/glossary/xor-gate-symbol.jpg* |
+
