@@ -125,6 +125,17 @@ The next part of our debouncing device is also *D-latch*: <br/>
 Operation of this module is very easy. *CE* means *clock enable* and it's the
 last one bit in *stable_time* register: `stable_time[N-1]`. So when the counter
 cout to the end, then will turn on the last *d* flip-flop and this flip-flop
-set on output logic *1*. <br/>
-In my opinion we can get rid the last one flip-flop, but maybe entire device
-is more relaiable.
+set on output high state. <br/> In my opinion we can get rid the last one 
+flip-flop, but maybe entire device is more relaiable.
+
+The next part in this issue is about edge detector. The scheme for it: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/134339227-1cb0c676-393f-40bf-bf65-2bc5a4f5dda2.png) |
+|:--:|
+| *Edge detector scheme* |
+| Source: *Elektronika Praktyczna 03.2020, p. 126* |
+
+After detecting a rising edge *edge detector* will set on its output logic one,
+which lasts for one period of clock cycle. <br/>
+The operation of this circuit is simple. If input for first *d-latch* is stable,
+then on the output we have logic one. After this, *1* goes to negated *AND* 
+entry and we have logic *0*. 
