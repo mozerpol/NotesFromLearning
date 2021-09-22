@@ -138,4 +138,26 @@ After detecting a rising edge *edge detector* will set on its output logic one,
 which lasts for one period of clock cycle. <br/>
 The operation of this circuit is simple. If input for first *d-latch* is stable,
 then on the output we have logic one. After this, *1* goes to negated *AND* 
-entry and we have logic *0*. 
+entry and we have logic *0*. <br/>
+The waveform from the output of edge detector: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134383503-5ea324e3-ec1f-401d-acbb-75f9d50fcb97.png)
+
+The next part in this issue is shift register. <br/>
+As we know, we can use the *D* flip-flop as a one clock tick delay. If we
+connect the inputs and outputs of several flip-flops (in our module we have N
+number), we get a shift register. The signal on the last one will be delayed by
+N. <br/>
+
+| ![image](https://user-images.githubusercontent.com/43972902/134386093-567ced41-6d09-4616-9ea8-32ddeefb59bb.png) |
+|:--:|
+| *Shift register scheme* |
+| Source: *Elektronika Praktyczna 03.2020, p. 126* |
+
+Very intresting is part: <br/>
+```SystemVerilog
+for (int i = 1; i < N; i++)
+	q[i] <= q[i-1];
+```
+
+It won't be done iteratively, but will create a lot of blocks, which will work
+simultaneously.
