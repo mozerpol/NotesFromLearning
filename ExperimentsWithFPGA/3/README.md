@@ -64,7 +64,33 @@ is simple truth table from *XOR* gate (0110). So we can summarize this part, whe
 the input for *D* will be stable, then output (*Q*) from *d-latch* will be the 
 same as input. It means that on input *XOR* we have the same values. Thanks to
 this we can obtain two the same states: *0* and *0*. <br/>
-Changing the input state for *d-latch* will cause that on the output of *XOR* we
-have *1*. The state *1* reset our counter: <br/>
+Changing the input state for *d-latch* will cause that on the output from *XOR* 
+we have *1*. The state *1* reset our counter: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/134194431-0222b806-297c-49c4-929d-b0cdadfc51aa.png)
 
+Otherwise (in case when from *XOR* output we have *0*) the counter will count 
+up. <br/>
+The next part our circuit: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134318761-a899369e-977d-4844-91fe-91f110ac6a3c.png)
+
+is responsible for counting when we have a stable state. I mean, if input to our
+device is in the same state, then output from *XOR* is equal *0*. Then above 
+marked part can count up. *SR* input it's a additional input to our counter, 
+which can *reset*. <br/>
+```SystemVerilog
+always_ff @(posedge clk or negedge rst)
+	if (!rst)
+		stable_time <= '0;
+	else if (sr)
+		stable_time <= '0;
+	else
+		stable_time <= stable_time + 1;
+```
+
+As we can see that counter will count when:
+- *rst* (it's our *SR* input) must be equal *0*, because `if(!rst)` then reset
+	counter.
+- *sr* - it's additional input in couter, which need logic *1* to reset counter
+	`else if (sr)`
+
+`stable_time` is a register which store current value. How it works?
