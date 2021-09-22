@@ -93,4 +93,28 @@ As we can see that counter will count when:
 - *sr* - it's additional input in couter, which need logic *1* to reset counter
 	`else if (sr)`
 
-`stable_time` is a register which store current value. How it works?
+`stable_time` is a register which store current value. How it works? <br/>
+`stable_time` is a register of some length. For example it can be 
+`[3:0]stable_time`, so it's four bits register. At the beginning we have: <br/>
+*stable_time* == 0000 <br/>
+When we increment value (`stable_time <= stable_time + 1;`), then we have" <br/>
+*stable_time* == 0001 <br/>
+When we increment once again, then we have: <br/>
+*stable_time* == 0010 <br/>
+Once again... <br/>
+*stable_time* = 0011 <br/>
+As you can see every clock cycle we increment counter, due to four bits we have
+2^4 different possibilities. <br/>
+Assume one clock takes 1 second, so if we want up to the end of counter we need
+2^4 seconds.  <br/>
+Initialization (zero time):<br/>
+0000 <br/>
+The first clock cycle (1st sec): <br/>
+0001 <br/>
+The second clock cycle (2nd sec): <br/>
+0010 <br/>
+The third clock cycle (3rd sec): <br/>
+0011 <br/>
+
+As you can see it's also easy to create simple delay block, you must know only
+timing of your clock.
