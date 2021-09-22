@@ -118,3 +118,13 @@ The third clock cycle (3rd sec): <br/>
 
 As you can see it's also easy to create simple delay block, you must know only
 timing of your clock.
+
+The next part of our debouncing device is also *D-latch*: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134329124-06b38f28-b73c-4bcd-9d77-67837a355c51.png)
+
+Operation of this module is very easy. *CE* means *clock enable* and it's the
+last one bit in *stable_time* register: `stable_time[N-1]`. So when the counter
+cout to the end, then will turn on the last *d* flip-flop and this flip-flop
+set on output logic *1*. <br/>
+In my opinion we can get rid the last one flip-flop, but maybe entire device
+is more relaiable.
