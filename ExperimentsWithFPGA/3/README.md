@@ -1,8 +1,8 @@
 ## Eksperymenty z FPGA (4)
 *Elektronika Praktyczna* Nr 3 (326) • 03.2020
 
-The first part is about button debouncing. To eliminate this the author suggest
-device based on following scheme: <br/>
+The first part is about **button debouncing**. To eliminate this the author
+suggest device based on following scheme: <br/>
 | ![image](https://user-images.githubusercontent.com/43972902/134013314-c30299a2-7033-443d-9983-093538907c47.png) |
 |:--:|
 | *How to eliminate debouncing* |
@@ -142,7 +142,7 @@ entry and we have logic *0*. <br/>
 The waveform from the output of edge detector: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/134383503-5ea324e3-ec1f-401d-acbb-75f9d50fcb97.png)
 
-The next part in this issue is shift register. <br/>
+The next part in this issue is **shift register**. <br/>
 As we know, we can use the *D* flip-flop as a one clock tick delay. If we
 connect the inputs and outputs of several flip-flops (in our module we have N
 number), we get a shift register. The signal on the last one will be delayed by
@@ -160,4 +160,11 @@ for (int i = 1; i < N; i++)
 ```
 
 It won't be done iteratively, but will create a lot of blocks, which will work
-simultaneously.
+simultaneously. I think is not important explain the rest part of article,
+because it's based on the previous informations from this text.
+
+In this part we'll **bring together** all smaller parts. The name for this part
+will be "shift_reg_led" and it's a shift register, which can be controlled
+by switches. <br/>
+If I want to recreate the work it'll be helpful: <br/>
+![6](https://user-images.githubusercontent.com/43972902/134549466-75c9da57-b13a-451d-b695-5a8c20d9c6b1.png)
