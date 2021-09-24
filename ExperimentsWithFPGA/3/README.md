@@ -225,3 +225,6 @@ it'll be helpful: <br/>
 
 As you can notice not every *led* is connected, it's caused by my limitations
 of my dev board *Altera T-core*, it has only four LEDs.
+
+This ptoject is based on this article [24.16:2021]:
+https://forum.digikey.com/t/debounce-logic-circuit-vhdl/12573
