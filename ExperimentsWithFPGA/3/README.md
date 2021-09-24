@@ -168,3 +168,29 @@ will be "shift_reg_led" and it's a shift register, which can be controlled
 by switches. <br/>
 If I want to recreate the work it'll be helpful: <br/>
 ![6](https://user-images.githubusercontent.com/43972902/134549466-75c9da57-b13a-451d-b695-5a8c20d9c6b1.png)
+
+The next experiment is implementation library for encoder. <br/>
+I'm using the encoder module, like this: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134562519-5f93b082-719d-4204-8dca-c660f7544dd1.png)
+
+As you can see it has five pins. Encoder allows detect direction of rotation and
+the quantity of rotations. Encoder has five pins: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134662597-25a6b7ea-c455-458d-8a3f-f74f3173a1ed.png)
+
+In my project I'm using *clk*, *dt*, *+*, *gnd*. This pins we must connect as
+shown in the picture above. <br/>
+During rotation on the output on *A* and *B* output appear rectangular waveform,
+which are out of phase (pl. *przesunięte w fazie*) with each other by 90 degrees.
+The measurement resolution is determined by the number of pulses per one axis 
+revolution. Example of this waveform is below: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/134663438-8f1de6a6-a2b3-46fa-8b76-82612716f29b.png) |
+|:--:|
+| Source: *Elektronika Praktyczna 03.2020, p. 128* |
+
+The easiest way to interpretet it is use *A* as clock signal and *B* as 
+information about direction. Then in every rising edge on *A* we can change 
+value inside our counter: 
+- if on *B* we have high state, then we increment our counter
+- if on *B* we have low state, then we decrement our counter
+
+
