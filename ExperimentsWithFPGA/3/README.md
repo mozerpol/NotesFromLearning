@@ -193,4 +193,22 @@ value inside our counter:
 - if on *B* we have high state, then we increment our counter
 - if on *B* we have low state, then we decrement our counter
 
+If we sum this informations we conclude that we must create bidirectional 
+counter. 
+
+| ![image](https://user-images.githubusercontent.com/43972902/134664888-5110982d-a6b6-450e-ba25-6d105695b171.png) |
+|:--:|
+| *Scheme a bidirectional counter* |
+| Source: *Elektronika Praktyczna 03.2020, p. 128* |
+
+It's very similar to previous counters, but it has additional input - *dir*. 
+Below is part of code, which counter: <br/>
+```Verilog
+always@(posedge clk or negedge rst)
+   if (!rst)
+     q_reg <= {8{1'b0}};
+ else if (ce)
+   q_reg <= q + ((dir) ? 1'b1 : -1'b1);
+```
+
 
