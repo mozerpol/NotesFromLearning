@@ -193,8 +193,8 @@ value inside our counter:
 - if on *B* we have high state, then we increment our counter
 - if on *B* we have low state, then we decrement our counter
 
-If we sum this informations we conclude that we must create bidirectional 
-counter. 
+If we sum this informations we conclude that we must create **bidirectional 
+counter**.
 
 | ![image](https://user-images.githubusercontent.com/43972902/134664888-5110982d-a6b6-450e-ba25-6d105695b171.png) |
 |:--:|
@@ -211,4 +211,17 @@ always@(posedge clk or negedge rst)
    q_reg <= q + ((dir) ? 1'b1 : -1'b1);
 ```
 
+Now if we want serve encoder we must **summarize everything**: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/134667303-545e0f3e-478a-4446-ae9f-e7e4e8eb4461.png) |
+|:--:|
+| *Scheme of the system for counting pulses from an encoder* |
+| Source: *Elektronika Praktyczna 03.2020, p. 128* |
 
+It starts from two *D* flip-flops which latch actual value from *A* and *B*. 
+Then the value is passed to debouncing blocks. Value from *B* after this is 
+going to directly to bidirectional counter. If you want implement this, possible
+it'll be helpful: <br/>
+![image](https://user-images.githubusercontent.com/43972902/134673786-ab9a5fdc-34fc-424f-a074-b5aebda92a58.png)
+
+As you can notice not every *led* is connected, it's caused by my limitations
+of my dev board *Altera T-core*, it has only four LEDs.
