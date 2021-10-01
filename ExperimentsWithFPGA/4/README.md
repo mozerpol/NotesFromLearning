@@ -62,3 +62,17 @@ is a simplified version of the Wishbone specification. Article on
 [wikipedia](https://en.wikipedia.org/wiki/Wishbone_(computer_bus)) and 
 [Wishbone B4](https://cdn.opencores.org/downloads/wbspec_b4.pdf) specification 
 from *opencores.org*.
+
+In this project we'll use *AXI-Stream*. <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/135598763-b4b1d829-7232-41cd-ad3d-15f93a01bb2d.png) |
+|:--:|
+| *Connection of the transmitter to the source* |
+| Source: *Elektronika Praktyczna 04.2020, p. 99* |
+
+Above we have connection source date to our transmitter. <br/>
+The first line is *data*, it's for just pass data. In our case it'll be 8-bit 
+vector, which allow to transfer one fram in one clock cycle. <br/>
+The second is *valid*. If is high state on this pin then we know that our
+informations are correct and we should handle the data. <br/>
+The third is *ready*. Thanks to this line, slave inform master that can accept
+next portion of data.
