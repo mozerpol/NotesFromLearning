@@ -99,4 +99,52 @@ immediately. <br/>
 When *valid* is in the low state, then value on *data* doesn't affect on 
 operation of the system. <br/>
 On the picture, which present our wavefomrs we have also *rst* and *clk*. I 
-think it's obvious. This pins are input to master and slave.
+think it's obvious. This pins are input to master and slave. <br/>
+
+To make easier modelling data buses in *SystemVerilog* we have construct like
+*interfaces*. The syntax of interfaces are very similar to *modules*. *Interfaces*
+such as *modules* can have parameters. Example of interface from this issue: <br/>
+```SystemVerilog
+interface StreamBus #(
+		parameter N = 8
+	) (
+		input wire clk,
+		input wire rst
+	);
+	logic [N-1:0] data;
+	logic valid;
+	logic ready;
+
+	modport Master (
+		input clk,
+		input rst,
+		input ready,
+		output data,
+		output valid
+	);
+
+	modport Slave (
+		input clk,
+		input rst,
+		input data,
+		input valid,
+		output ready
+	);
+
+endinterface
+```
+
+On the bottom we have *modport*. For our interface we have two: *master* and 
+*slave*. Inside them we define direction of individual lines. <br/>
+After this in module definition we'll select which version of interface we would
+to use. We decide about this using `StreamBus.Slave` or `StreamBus.Master`. <br/>
+Example of usage our interface is below: <br/>
+```SystemVerilog
+module uart_tx #( 
+	parameter F = 8000000,
+	parameter BAUD = 115200
+) (
+	StreamBus.Slave bus,
+	output logic tx
+);
+```
