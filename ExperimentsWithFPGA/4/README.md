@@ -75,4 +75,28 @@ vector, which allow to transfer one fram in one clock cycle. <br/>
 The second is *valid*. If is high state on this pin then we know that our
 informations are correct and we should handle the data. <br/>
 The third is *ready*. Thanks to this line, slave inform master that can accept
-next portion of data.
+next portion of data. <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/135600946-18cccbff-1589-4953-9df9-20e09c35f4f6.png) |
+|:--:|
+| *Sample waveforms on the data bus, handshake is marked on pink colour* |
+| Source: *Elektronika Praktyczna 04.2020, p. 100* |
+
+Above we have sample waveforms. At the beginning we can see that *ready* is in
+high state. It means that slave is ready to receive data. Thanks to this in the
+next clock cycle data will appear, when *valid* goes high. **The state when 
+*valid* and *rady* are simultaneously in high state is called *handshake***. In
+this moment takes place data transfer from master to slave. Because of *d0* was
+send, then *valid* is going to the low state. Similar situation did our
+transmitter (slave on the picture). It picks up the data and started processing
+them. Because of this transmitter change *ready* on the low state. <br/>
+When the next data *d1* is ready, then *valid* goes high, but in this casae
+transmitter (our slave) is not ready, so then master must hold on sending the
+data *d1* until the data can be handled. When will occur next handshake, then
+*d1* will send to slave. <br/>
+As we can see on the picture, there also be situation (during sending *d2* daat)
+when *ready* and *valid* go high in the sime time. Then data will be handled
+immediately. <br/>
+When *valid* is in the low state, then value on *data* doesn't affect on 
+operation of the system. <br/>
+On the picture, which present our wavefomrs we have also *rst* and *clk*. I 
+think it's obvious. This pins are input to master and slave.
