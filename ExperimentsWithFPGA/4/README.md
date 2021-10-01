@@ -52,3 +52,13 @@ in Intel FPGA. The Avalon interface family defines seven interfaces:
 - Avalon Reset Interface - an interface that provides reset connectivity.
 
 [Avalon® Interface Specifications](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/manual/mnl_avalon_spec.pdf) in pdf.
+
+3. *Wishbone* <br/> The Wishbone Bus is an open source hardware computer bus
+intended to let the parts of an integrated circuit communicate with each other. 
+The aim is to allow the connection of differing cores to each other inside of a 
+chip. Wishbone is open source. The 
+[Simple Bus Architecture](https://en.wikipedia.org/wiki/Simple_Bus_Architecture)
+is a simplified version of the Wishbone specification. Article on 
+[wikipedia](https://en.wikipedia.org/wiki/Wishbone_(computer_bus)) and 
+[Wishbone B4](https://cdn.opencores.org/downloads/wbspec_b4.pdf) specification 
+from *opencores.org*.
