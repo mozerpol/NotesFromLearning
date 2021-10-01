@@ -22,5 +22,11 @@ I don't understand a little bit this part, but from what I understood, on the
 FPGA we can have a lot of different modules, like *UART* or *SPI* and this
 modules should have a possibility to communicate between each other. We have a
 lot of different standarts which can help to communicate btween modules like 
-*AXI*, *Avalon* or *Wishbone*. I'll try describe each of them.
-1. *AXI* <br/>
+*AXI*, *Avalon* or *Wishbone*. I'll try shortly describe each of them.
+1. *AXI* <br/> AXI - Advanced eXtensible Interface. Is a parallel communication 
+interface. We have a few stantards of *AXI* like *AXI4*, *AXI4-Lite* and 
+*AXI4-Stream*. This specification is freely available from *ARM*. <br/> Nice
+article about this on 
+[wikipedia](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface) and
+[AMBA® AXI™ and ACE™ ProtocolSpecification](http://www.gstitt.ece.ufl.edu/courses/fall15/eel4720_5721/labs/refs/AXI4_specification.pdf) 
+in pdf.
