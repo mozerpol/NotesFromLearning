@@ -30,3 +30,25 @@ article about this on
 [wikipedia](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface) and
 [AMBA® AXI™ and ACE™ ProtocolSpecification](http://www.gstitt.ece.ufl.edu/courses/fall15/eel4720_5721/labs/refs/AXI4_specification.pdf) 
 in pdf.
+2. *Avalon* <br/> The Avalon interface  allowing to easily connect components 
+in Intel FPGA. The Avalon interface family defines seven interfaces:
+- Avalon Streaming Interface (Avalon-ST) - an interface that supports the 
+	unidirectional flow of data, including multiplexed streams, packets, and DSP 
+	data.
+- Avalon Memory Mapped Interface (Avalon-MM) - an address-based read/write 
+	interface typical of Host-Agent connections.
+- Avalon Conduit Interface - an interface type that accommodates individual 
+	signals or groups of signals that do not fit into any of the other Avalon 
+	types. You can connect conduit (pol. *rura, przejście*) interfaces inside a
+	Platform Designer system. Alternatively, you can export them to connect to 
+	other modules in the design or to FPGA pins.
+- Avalon Tri-State Conduit Interface (Avalon-TC) - an interface to support 
+	connections to off-chip peripherals. Multiple peripherals can share pins 
+	through signal multiplexing, reducing the pin count of the FPGA and the 
+	number of traces on the PCB.
+- Avalon Interrupt Interface - an interface that allows components to signal 
+	events to other components.
+- Avalon Clock Interface - an interface that drives or receives clocks.
+- Avalon Reset Interface - an interface that provides reset connectivity.
+
+[Avalon® Interface Specifications](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/manual/mnl_avalon_spec.pdf) in pdf.
