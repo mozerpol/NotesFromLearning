@@ -17,3 +17,10 @@ The speed is given in *Baud*, it means the number of changes in one second. The
 speed is differen, but the most popular is 9660 baud or 115200 Bd, so it means
 respectively that one state takes 104 µs and 8.68 µs. And thanks to this we can
 conclude that the max bandwith is 7.5 kib/s and 90 kib/s. <br/>
+
+I don't understand a little bit this part, but from what I understood, on the 
+FPGA we can have a lot of different modules, like *UART* or *SPI* and this
+modules should have a possibility to communicate between each other. We have a
+lot of different standarts which can help to communicate btween modules like 
+*AXI*, *Avalon* or *Wishbone*. I'll try describe each of them.
+1. *AXI* <br/>
