@@ -5,8 +5,8 @@ ________________
 ## Table of contents <a name="tof"></a>
 1. [How to run examples?](#1)
 	1. [The first way - edaplayground.com](#11)
-	2. [The second way](#12)
-		1. [How to install - ModelSim](#121)
+	2. [The second way - ModelSim](#12)
+		1. [How to install](#121)
 		2. [Possible problems](#122)
 		3. [Using docker](#123)
 		4. [How to use](#124)
@@ -51,8 +51,8 @@ to see vaweforms. Example waveform:
 If you have more signals, but you don't see them on the waveform click 
 *Get Signals* and select some.
 
-### The second way <a name="12"></a>
-#### How to install - ModelSim <a name="121"></a>
+### The second way - ModelSim <a name="12"></a>
+#### How to install <a name="121"></a>
 You must install *ModelSim*. I'm linux user (Debian buster 4.19 x64), so everything
 will be shown on linux. During installation *Quartus Prime Version 20.1.0 Build 
 711 06/05/2020 SJ Lite Edition, Patches Installed: None* was installed 
