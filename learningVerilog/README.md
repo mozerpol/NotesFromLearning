@@ -1,6 +1,17 @@
 # learningVerilog
 Notes from learning Verilog language and ModelSim.
 ________________
+
+### Table of contents <a name="tof"></a>
+1. [How to run examples?](#1)
+	1. [The first way - edaplayground.com](#11)
+	2. [The second way](#12)
+		1. [How to install - ModelSim](#121)
+		2. [Possible problems](#122)
+		3. [Using docker](#123)
+		4. [How to use](#124)
+2. [Nice picture about arrays in verilog](#2)
+
 ### How to run examples?
 In this repo I'll put some examples of simple digital circuits written in Verilog and test them in simulator. <br/>
 To do this, you have two ways. First is using online simulator such as *edaplayground*, second is install on your computer *ModelSim*. *ModelSim* is a verification and simulation tool for VHDL, Verilog, SystemVerilog.
