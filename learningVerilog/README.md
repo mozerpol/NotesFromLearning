@@ -2,7 +2,7 @@
 Notes from learning Verilog language and ModelSim.
 ________________
 
-### Table of contents <a name="tof"></a>
+## Table of contents <a name="tof"></a>
 1. [How to run examples?](#1)
 	1. [The first way - edaplayground.com](#11)
 	2. [The second way](#12)
@@ -12,11 +12,11 @@ ________________
 		4. [How to use](#124)
 2. [Nice picture about arrays in verilog](#2)
 
-### How to run examples?
+## 1. How to run examples? <a name="1"></a>
 In this repo I'll put some examples of simple digital circuits written in Verilog and test them in simulator. <br/>
 To do this, you have two ways. First is using online simulator such as *edaplayground*, second is install on your computer *ModelSim*. *ModelSim* is a verification and simulation tool for VHDL, Verilog, SystemVerilog.
 
-#### First way
+### The first way <a name="11"></a>
 I'm using https://edaplayground.com/ website, I think if you want run examples from this repo, you should register on this website, it's free (at least on the day: 06.01.2021). On the screenshot you can see the main view after logging in. 
 ![screen1](https://user-images.githubusercontent.com/43972902/103824141-a1be5a80-5073-11eb-853b-98fcbf5e5f57.png)
 
@@ -38,8 +38,50 @@ Of course in initial block you can add more code, but these lines are necessary 
 ![screen4](https://user-images.githubusercontent.com/43972902/103826398-0cbd6080-5077-11eb-8546-57f35a001551.png)
 If you have more signals, but you don't see them on the waveform click *Get Signals* and select some.
 
-#### Second way
-You must install *ModelSim*. I'm linux user (Debian buster 4.19), so everything will be shown on linux. During installation *Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition, Patches Installed: None* was installed *ModelSim*, exactly *ModelSim Revision 2020.02*. <br/>
+### The second way <a name="12"></a>
+#### How to install - ModelSim <a name="121"></a>
+You must install *ModelSim*. I'm linux user (Debian buster 4.19 x64), so everything
+will be shown on linux. During installation *Quartus Prime Version 20.1.0 Build 
+711 06/05/2020 SJ Lite Edition, Patches Installed: None* was installed 
+*ModelSim*, exactly *ModelSim Revision 2020.02*. <br/>
+
+#### Possible problems <a name="122"></a>
+Ok, you're lucky if you can run ModelSim without any problems, but I was forced
+to reinstall system and now I'm using Debian bullseye 5.10 x64. After this change
+I needed install ModelSim once again and unforunatelly it didn't work ;/ <br/>
+So to repair it I did (everything on sudo): <br/>
+```Shell
+dpkg --add-architecture i386
+apt update
+apt upgrade
+apt install libc6:i386 libncurses5:i386 libstdc++6:i386 
+apt install lib32z1
+apt install lib32ncurses5-dev
+apt install libbz2-1.0
+```
+
+After this I tried run ModelSim by command (in appropirate directory): <br/>
+`./modelsim_ase/bin/vsim`
+
+I receivd an error: <br/>
+`modelsim_ase/bin/../linux/vish: error while loading shared libraries: 
+libXext.so.6: cannot open shared object file: No such file or directory`
+
+I did: <br/>
+`install libxext6`
+
+After trying run ModelSim I receivd next error: <br/>
+`modelsim_ase/bin/../linux/vish: error while loading shared libraries: 
+libXft.so.2: cannot open shared object file: No such file or directory`
+
+I did: <br/>
+`apt install libxft2`
+
+And at this point I fortunatelly can run ModelSim on x64 bit Debian.
+
+#### Using docker <a name="123"></a>
+
+#### How to use <a name="124"></a>
 Ok, so how to run *ModelSim*? After installation, you can find it in: <br/>
 `/directory_to_quartus/quartus/modelsim_ase/bin#` <br/>
 When you are in *bin* folder run `./vsim` command. Then you'll see the main window <br/>
@@ -65,7 +107,8 @@ But for my convenience I'll put a few screenshots how to show the waveform if we
 ![obraz](https://user-images.githubusercontent.com/43972902/117574719-b3297900-b0de-11eb-8d45-3469172f7b65.png)
 10. If you want load new file to see the waveforms you must once again change the direcotry and repeat all steps, but before this you must write in the console (at bottom) `quit -sim`. 
 
-Nice picture about arrays in verilog: <br/>
+### 2. Nice picture about arrays in verilog: <a name="2"></a>
+
 ||
 |:--:|
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
