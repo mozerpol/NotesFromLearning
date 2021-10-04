@@ -84,7 +84,7 @@ next portion of data. <br/>
 Above we have sample waveforms. At the beginning we can see that *ready* is in
 high state. It means that slave is ready to receive data. Thanks to this in the
 next clock cycle data will appear, when *valid* goes high. **The state when 
-*valid* and *rady* are simultaneously in high state is called *handshake***. In
+*valid* and *ready* are simultaneously in high state is called *handshake***. In
 this moment takes place data transfer from master to slave. Because of *d0* was
 send, then *valid* is going to the low state. Similar situation did our
 transmitter (slave on the picture). It picks up the data and started processing
@@ -93,7 +93,7 @@ When the next data *d1* is ready, then *valid* goes high, but in this casae
 transmitter (our slave) is not ready, so then master must hold on sending the
 data *d1* until the data can be handled. When will occur next handshake, then
 *d1* will send to slave. <br/>
-As we can see on the picture, there also be situation (during sending *d2* daat)
+As we can see on the picture, there also be situation (during sending *d2* data)
 when *ready* and *valid* go high in the sime time. Then data will be handled
 immediately. <br/>
 When *valid* is in the low state, then value on *data* doesn't affect on 
@@ -148,3 +148,18 @@ module uart_tx #(
 	output logic tx
 );
 ```
+
+The next part is about **state machine**. I'll remind, that transmitter has on
+the output logic 1 (I mean *tx* pin), so it's our idle. If we want transmit, 
+then we must initiate trasmission by *start* bit. Then we can send data and stop
+transmission and go to the idle state. So we can highlight a four states: <br/>
+1. *WAIT* - wait for data,
+2. *START* - send start bit, 
+3. *DATA* - send data,
+4. *STOP* - send stop bit.
+
+| ![image](https://user-images.githubusercontent.com/43972902/135840178-6f3e7608-3747-443f-aca5-03506a9252ff.png) |
+|:--:|
+| *Transmitter state machine* |
+| Source: *Elektronika Praktyczna 04.2020, p. 101* |
+
