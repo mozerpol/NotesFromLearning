@@ -81,7 +81,7 @@ I receivd an error: <br/>
 libXext.so.6: cannot open shared object file: No such file or directory`
 
 I did: <br/>
-`install libxext6`
+`apt install libxext6`
 
 After trying run ModelSim I receivd next error: <br/>
 `modelsim_ase/bin/../linux/vish: error while loading shared libraries: 
@@ -90,7 +90,9 @@ libXft.so.2: cannot open shared object file: No such file or directory`
 I did: <br/>
 `apt install libxft2`
 
-And at this point I fortunatelly can run ModelSim on x64 bit Debian.
+And at this point I fortunatelly can run ModelSim on x64 bit Debian. <br/>
+Nice source about how to run ModelSim on linux [date of access: 04.10.2021]:
+https://profile.iiita.ac.in/bibhas.ghoshal/COA_2020/Lab/ModelSim%20Linux%20installation.html
 
 #### Using docker <a name="123"></a>
 Without installing 32-bit libraries you can try with docker, I also described it
