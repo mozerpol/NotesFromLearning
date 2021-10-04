@@ -163,3 +163,14 @@ transmission and go to the idle state. So we can highlight a four states: <br/>
 | *Transmitter state machine* |
 | Source: *Elektronika Praktyczna 04.2020, p. 101* |
 
+Now I can describe how transmitter will change its states. At the beginning 
+after reset we're in *WAIT* state. Decision about next state we must consider
+during each rising *clk* edge. In *WAIT* state we make decision based on 
+occuring handshake, so we can check only *valid* register. <br/>
+If we have a new data to send, then we can change state to *START*, otherwise
+we're still in *WAIT* state. We're in *START* state until to the end of start 
+bit. We'll informed about it, when the *counter2* will overflow. <br/>
+In the *DATA* state we'll be to the end of sending data, it means eight *DATA*
+states in our state machine. <br/>
+In the *STOP* state we'll be there by the time of one symbol, I mean stop symbol
+in ASCII. 
