@@ -80,6 +80,8 @@ I did: <br/>
 And at this point I fortunatelly can run ModelSim on x64 bit Debian.
 
 #### Using docker <a name="123"></a>
+Without installing 32-bit libraries you can try with docker, I also described it
+here, it's my other repo: https://github.com/mozerpol/modelsim-docker
 
 #### How to use <a name="124"></a>
 Ok, so how to run *ModelSim*? After installation, you can find it in: <br/>
