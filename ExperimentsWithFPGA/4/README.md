@@ -174,3 +174,8 @@ In the *DATA* state we'll be to the end of sending data, it means eight *DATA*
 states in our state machine. <br/>
 In the *STOP* state we'll be there by the time of one symbol, I mean stop symbol
 in ASCII. 
+
+There is also math formula: <br/>
+`(F+BAUD/2)/BAUD`, where: <br/>
+- *F* - freq our module (for T-Core it's 50 MHz)
+- *BAUD* - expected transsmision speed
