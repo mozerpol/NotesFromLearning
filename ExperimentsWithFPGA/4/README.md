@@ -179,3 +179,11 @@ There is also math formula: <br/>
 `(F+BAUD/2)/BAUD`, where: <br/>
 - *F* - freq our module (for T-Core it's 50 MHz)
 - *BAUD* - expected transsmision speed
+
+Finally I decided to divided project into two parts. The first is about current
+issue, the second is the UART library. I did it, because above project is written
+in SystemVerilog, so I think it doesn't make any sense rewrite to on Verilog
+2001 lang. So, the first part is the SystemVerilog library with full description
+inside this repo and the second part, where is only working library written in
+Verilog without description. <br/>
+Ok back to the main topic... <br/>
