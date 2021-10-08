@@ -200,4 +200,15 @@ in *uart_tx.sv*. *F* means frequecy, as above, *BAUD* means desired transmission
 speed. <br/>
 The third necessary changes are `parameter F = 50000000` and a little below line 
 `.BAUD(115200)` in *sending.sv* file. <br/>
-When you do it, just compile the project and
+Before compilation you must assign varialbles to applicable pins, I did it in
+this way: <br/>
+![a](https://user-images.githubusercontent.com/43972902/136534318-106a4a25-3be8-4255-9aaf-5abf62fb8dfd.png)
+
+When you do it, just compile the project and set the same values in serial
+terminal emulator. It can be RealTerm or something different, I'm using moserial.
+[Here](https://wiki.gnome.org/action/show/Apps/Moserial?action=show&redirect=moserial)
+is page of moserial project. <br/>
+Run moserial as sudo user, set the same settings as in project, set suitable 
+uart port and click *connect*, then you should see received data: <br/>
+![mos](https://user-images.githubusercontent.com/43972902/136533798-20cef9bb-5898-491f-a172-d36cc294a513.png)
+
