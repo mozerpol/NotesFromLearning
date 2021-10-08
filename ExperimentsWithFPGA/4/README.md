@@ -186,4 +186,18 @@ in SystemVerilog, so I think it doesn't make any sense rewrite to on Verilog
 2001 lang. So, the first part is the SystemVerilog library with full description
 inside this repo and the second part, where is only working library written in
 Verilog without description. <br/>
-Ok back to the main topic... <br/>
+Ok, back to the main topic... <br/>
+
+I implemented this project and everything work correct, below are waveforms from
+ModelSim, you must run *sending_sim.do* to see it: <br/>
+![wav](https://user-images.githubusercontent.com/43972902/136406943-4f850643-0293-428d-9e40-c22eb765fed9.png)
+
+To get correct communication you must change a few values in projetct. <br/>
+The first is `parameter F = 50000000` in *data_source.sv*, where you should set
+the appropirate frequency of your board in hertz. <br/>
+The next thing to change are `parameter F = 50000000, parameter BAUD = 115200` 
+in *uart_tx.sv*. *F* means frequecy, as above, *BAUD* means desired transmission
+speed. <br/>
+The third necessary changes are `parameter F = 50000000` and a little below line 
+`.BAUD(115200)` in *sending.sv* file. <br/>
+When you do it, just compile the project and
