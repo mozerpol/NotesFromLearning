@@ -212,3 +212,11 @@ Run moserial as sudo user, set the same settings as in project, set suitable
 uart port and click *connect*, then you should see received data: <br/>
 ![mos](https://user-images.githubusercontent.com/43972902/136533798-20cef9bb-5898-491f-a172-d36cc294a513.png)
 
+Ok, above I wrote that we implemented a machine state where we have a few states:
+*WAIT*, *START*, *DATA* and *STOP*. We can see this states in Quartus, just click
+on *State Machine Viewer*, where is: *Tasks* -> *Analysis & Synthesis* -> *Netlist 
+Viewers* -> *State Machine Viewer*, then we'll see: <br/>
+![1](https://user-images.githubusercontent.com/43972902/136549656-cf191705-7af2-4abc-a393-d157bf84ed57.png)
+
+We can notice transition graph. Below this we have *Transitions* tab, where are
+possible transitions with necessary conditions.
