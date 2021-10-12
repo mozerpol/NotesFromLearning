@@ -16,8 +16,10 @@ module uart_tx_tb;
 		.tx(tx)
 	);
 
+	always #10 clk = ~clk;
+
 	initial begin
-		
+		#100 $stop;
 	end
 
 endmodule
