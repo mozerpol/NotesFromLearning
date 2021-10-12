@@ -8,8 +8,9 @@ module uart_tx_tb;
 	reg [7:0] data;
 	wire tx;
 	parameter BAUD = 9600;
+	parameter F = 50000000;
 
-	uart_tx #(.BAUD(BAUD)) tx_test (
+	uart_tx #(.BAUD(BAUD), .F(F)) tx_test (
 		.clk(clk),
 		.rst(rst),
 		.data(data),
