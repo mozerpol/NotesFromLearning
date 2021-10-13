@@ -1,6 +1,9 @@
+`timescale 100ps / 100ps
+
 `define START 2'b00
 `define DATA 2'b01
 `define STOP 2'b10
+`define IDLE 2'b11
 
 module uart_tx_tb;
 	reg clk = 1'b1;
@@ -17,10 +20,13 @@ module uart_tx_tb;
 		.tx(tx)
 	);
 
-	always #10 clk = ~clk;
-
 	initial begin
-		#100 $stop;
+                data = 8'b10101010;
+                rst = 1'b0;
+                #100 rst = 1'b1;
+		//#1000000 $stop;
 	end
+
+	always #10 clk <= ~clk;
 
 endmodule

@@ -1,6 +1,6 @@
 module counter #(
   parameter N = 10,
-  parameter W = 8;
+  parameter W = $clog2(N)
 )(
   input wire clk,
   input wire rst,
