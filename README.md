@@ -4,8 +4,7 @@ I'll post here notes, that I make while studying from various websites,
 newspapers or books.
 
 1. [Notes](https://github.com/mozerpol/NotesFromLearning/tree/main/Microprocessor-Design)
-from reading the **Microprocessor Design** book, which is availble on the wiki:
-<br/> 
+from reading the **Microprocessor Design** book, which is availble on the wiki: 
 https://upload.wikimedia.org/wikipedia/commons/7/71/MicroprocessorDesign.pdf
 
 2. [Notes](https://github.com/mozerpol/NotesFromLearning/tree/main/ExperimentsWithFPGA)
@@ -40,7 +39,7 @@ Grzegorz Wawrzyniak, the title is "*Język Verilog w projektowaniu układów FPG
 
 _____
 
-Below I'll put some intresting links, which I decided to save.
+Below I'll put some intresting links, which I decided to remember.
 
 1. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021 - page in my
 mother language, a lot of informations at high school level about IT.
