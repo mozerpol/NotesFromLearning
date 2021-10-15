@@ -7,24 +7,23 @@
 
 module uart_tx_tb;
 	reg clk = 1'b1;
-	reg rst;
-	reg [7:0] data;
+	reg rst_tb;
+	reg [7:0] data_tb;
 	wire tx;
 	parameter BAUD = 9600;
 	parameter F = 50000000;
 
 	uart_tx #(.BAUD(BAUD), .F(F)) tx_test (
 		.clk(clk),
-		.rst(rst),
-		.data(data),
+		.rst(rst_tb),
+		.data(data_tb),
 		.tx(tx)
 	);
 
 	initial begin
-                data = 8'b10101010;
-                rst = 1'b0;
-                #100 rst = 1'b1;
-		//#1000000 $stop;
+      data_tb = 8'b10101010;
+      rst_tb = 1'b0;
+      #100 rst_tb = 1'b1;
 	end
 
 	always #10 clk <= ~clk;
