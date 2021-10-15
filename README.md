@@ -37,3 +37,23 @@ Kumar Tala.
 [this](#http://staff.uz.zgora.pl/rwisniew/instrukcje/inne/verilog/verilog_kurs.pdf) 
 (date of access: 25.06.2021) address. It's created by Jacek Bieganowski and 
 Grzegorz Wawrzyniak, the title is "*Język Verilog w projektowaniu układów FPGA*".
+
+_____
+
+Below I'll put some intresting links, which I decided to save.
+
+1. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021 - page in my
+mother language, a lot of informations at high school level about IT.
+2. https://teoriaelektryki.pl/ - date of access: 15.10.2021 - page in my
+mother language, info about the basics of physics in the field of electricity.
+3. https://www.cise.ufl.edu/~mssz/CompOrg/Top-Level.html - date of access:
+15.10.2021 - in the middle of the page we have part *Course Material*, inside
+each link we have a lot of info about conmputer architecture.
+4. https://rafal-bartoszak.blogspot.com/p/poradniki-vhdl.html - date of access:
+15.10.2021 - page in my mother language, mainly I care about two articles about
+building own CPU.
+5. https://www.youtube.com/c/SemihalfPL/videos - date of access: 15.10.2021 -
+youtube channel which have some podcasts about computer architecture and
+everything what is related to it. It's in my mother language.
+6. https://vhdlwhiz.com/terminology/ - date of access: 15.10.2021 - glossary
+about FPGA and its languages.
