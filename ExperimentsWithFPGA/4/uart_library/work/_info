@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 !s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
@@ -9,51 +10,73 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library
-vuart_tx
+vcounter
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634035394
-!i10b 1
-!s100 [N3agco6OQ=8b^]EAAbaM1
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4I10KWD2_30WALFb4IXEE0
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-S1
-R0
-w1634033645
-8/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v
-F/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v
-!i122 0
-L0 1 11
-Z5 OV;L;2020.1;71
+Z2 !s110 1634312624
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
+!i10b 1
+!s100 c];FfembN6`jeDFj>;8S]2
+IABhhBa?LU2PO3LN;JWaAQ0
+S1
+R0
+w1634138823
+8/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/counter.v
+F/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/counter.v
+!i122 57
+L0 1 37
+Z4 OV;L;2020.1;71
 31
-!s108 1634035393.000000
-!s107 /home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v|
-!s90 -F=/home/mozerpol/Downloads/ExperimentsWithFPGA/experiments/05_uart_tx/vlog.opt|-F=|-reportprogress|300|-work|work|/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v|
+Z5 !s108 1634312624.000000
+!s107 /home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/counter.v|
+!s90 -F=/home/mozerpol/Downloads/ExperimentsWithFPGA/experiments/05_uart_tx/vlog.opt|-F=|-reportprogress|300|-work|work|/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/counter.v|
 !i113 1
 Z6 o-work work
 Z7 tSvlog 1 CvgOpt 0
+vuart_tx
+R1
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 KN`c2:GWAKU_f>G:O0nc:1
+InozkT@m00;JQXiBedi@Al0
+S1
+R0
+w1634312534
+8/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v
+F/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v
+!i122 58
+L0 6 48
+R4
+31
+R5
+!s107 /home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v|
+!s90 -F=/home/mozerpol/Downloads/ExperimentsWithFPGA/experiments/05_uart_tx/vlog.opt|-F=|-reportprogress|300|-work|work|/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx.v|
+!i113 1
+R6
+R7
 vuart_tx_tb
 R1
 R2
-!i10b 1
-!s100 _=3LR`>7hEFX]j6IDc<[Y2
 R3
-IT5IF3fY6ddh]aPKPak4jW3
-R4
-S1
-R0
-w1634035251
-8/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v
-F/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v
-!i122 1
-L0 5 21
-R5
 r1
 !s85 0
+!i10b 1
+!s100 lACMhaL_QN7D>a2FD2@em0
+I[:IRbBGz>DEBBM;nQ>B4_3
+S1
+R0
+w1634312619
+8/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v
+F/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v
+!i122 59
+L0 8 24
+R4
 31
-!s108 1634035394.000000
+R5
 !s107 /home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v|
 !s90 -F=/home/mozerpol/Downloads/ExperimentsWithFPGA/experiments/05_uart_tx/vlog.opt|-F=|-reportprogress|300|-work|work|/home/mozerpol/Documents/nauka/NotesFromLearning/ExperimentsWithFPGA/4/uart_library/uart_tx_tb.v|
 !i113 1
