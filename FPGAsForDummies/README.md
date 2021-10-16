@@ -10,7 +10,17 @@ Notes from reading book about FPGA, based on Intel (formerly Altera) devices.
 ### Chapter 1 <a name="1"></a>
 **ASSP** - Application-specific standard product - is an integrated circuit
 that implements a specific function which can be used in many differend apps for
-many people. As opposed to ASICs that combine **a collection of functions and 
-are designed by or for one customer**, so in case of ASIC or FPGA you can 
-exactly the hardware you need, instead of having to use the ASSP, all your 
+many people. As opposed to ASICs that combine **a collection of functions and
+are designed by or for one customer**, so in case of ASIC or FPGA you can
+exactly the hardware you need, instead of having to use the ASSP, all your
 competitors are using.
+
+In very simple words, what is FPGA purpose - it's a semiconductor device on
+which the function can be defined after manufacturing.
+
+ASIC vs. ASSP - An application-specific integrated circuit (ASIC) is an
+integrated circuit composed of electrical components, such as transistors,
+capacitors, and resistors then is customized for a particular use.
+Application-specific standard products (ASSPs), on the other hand, are ICs that
+are dedicated to a specific application market and sold to more than one user
+in contrast to ASICs, which are designed for, and sold to, a single customer.
