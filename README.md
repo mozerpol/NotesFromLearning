@@ -37,6 +37,9 @@ Kumar Tala.
 (date of access: 25.06.2021) address. It's created by Jacek Bieganowski and 
 Grzegorz Wawrzyniak, the title is "*Język Verilog w projektowaniu układów FPGA*".
 
+5. [Notes](https://github.com/mozerpol/NotesFromLearning/tree/master/FPGAsForDummies)
+from reading the book *FPGAs for dummies*, which is available for free on the
+internet.
 _____
 
 Below I'll put some intresting links, which I decided to remember.
