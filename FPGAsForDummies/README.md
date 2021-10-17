@@ -24,3 +24,12 @@ capacitors, and resistors then is customized for a particular use.
 Application-specific standard products (ASSPs), on the other hand, are ICs that
 are dedicated to a specific application market and sold to more than one user
 in contrast to ASICs, which are designed for, and sold to, a single customer.
+
+**Boolean algebra** - is the branch of algebra in which the values of the
+variables are the truth values *true* and *false*. The main operations of
+Boolean algebra are:
+- conjunction (and) denoted as ∧
+- disjunction (or) denoted as ∨
+- the negation (not) denoted as ¬
+
+Boolean algebra was introduced by George Boole in 1847.
