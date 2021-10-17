@@ -59,3 +59,7 @@ youtube channel which have some podcasts about computer architecture and
 everything what is related to it. It's in my mother language.
 6. https://vhdlwhiz.com/terminology/ - date of access: 15.10.2021 - glossary
 about FPGA and its languages.
+7. https://www.nandland.com/ - date of access: 17.10.2021 - many intresting
+articles about FPGA and Verilog.
+8. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021 - a 
+small circuit design exercises for practicing Verilog.
