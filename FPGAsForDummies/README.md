@@ -45,4 +45,11 @@ often use a hardware description language, such as Verilog or VHDL, to describe
 the functionality of ASICs.
 
 FPGA vs ASIC comparison summary: <br/>
-
+|FPGA: |ASIC: |
+|:--:|:--:|
+|Reconfigurable circuit.|Permanent circuitry.|
+|Design is specified using hardware description languages (HDL).|Same as for FPGA. |
+|Easier entry-barrier. One can get started with FPGA development for as low as USD $30.|Very high entry-barrier in terms of cost, learning curve, liaising with semiconductor foundry etc. |
+|Limited in operating frequency compared to ASIC of similar process node. |ASIC fabricated using the same process node can run at much higher frequency than FPGAs.|
+|	Analog designs are not possible with FPGAs. Although FPGAs may contain specific analog hardware such as PLLs, ADC etc, they are not much flexible to create for example RF transceivers. |ASICs can have complete analog circuitry, for example WiFi transceiver, on the same die along with microprocessor cores. This is the advantage which FPGAs lack. |
+|Preferred for prototyping and validating a design or concept. Many ASICs are prototyped using FPGAs themselves|It is not recommended to prototype a design using ASICs unless it has been absolutely validated.|  
