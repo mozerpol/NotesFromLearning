@@ -33,3 +33,16 @@ Boolean algebra are:
 - the negation (not) denoted as ¬
 
 Boolean algebra was introduced by George Boole in 1847.
+
+**ASIC** - Application-specific integrated circuit - is an integrated circuit (IC)
+chip customized for a particular use. For example, the CPU inside your phone is
+an ASIC. It is meant to function as a CPU for its whole life. Its logic function
+cannot be changed to anything else because its digital circuitry is made up of 
+**permanently** connected gates and flip-flops in silicon. Application-specific 
+standard product (ASSP) chips are intermediate between ASICs and industry 
+standard integrated circuits like the 7400 series. Designers of digital ASICs 
+often use a hardware description language, such as Verilog or VHDL, to describe 
+the functionality of ASICs.
+
+FPGA vs ASIC comparison summary: <br/>
+
