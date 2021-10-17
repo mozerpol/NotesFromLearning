@@ -53,3 +53,8 @@ FPGA vs ASIC comparison summary: <br/>
 |Limited in operating frequency compared to ASIC of similar process node. |ASIC fabricated using the same process node can run at much higher frequency than FPGAs.|
 |	Analog designs are not possible with FPGAs. Although FPGAs may contain specific analog hardware such as PLLs, ADC etc, they are not much flexible to create for example RF transceivers. |ASICs can have complete analog circuitry, for example WiFi transceiver, on the same die along with microprocessor cores. This is the advantage which FPGAs lack. |
 |Preferred for prototyping and validating a design or concept. Many ASICs are prototyped using FPGAs themselves|It is not recommended to prototype a design using ASICs unless it has been absolutely validated.|  
+
+|![image](https://user-images.githubusercontent.com/43972902/137637407-2c2c7aea-36c7-483a-aabe-2b6b99770503.png)|
+|:--:|
+|FPGA vs ASIC Cost Analysis|
+|Source: *https://numato.com/blog/differences-between-fpga-and-asics/*|
