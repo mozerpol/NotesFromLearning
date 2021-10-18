@@ -12,42 +12,30 @@ module uart_tx
       output wire tx
    );
 
-   reg [1:0] state = `IDLE;
+   // Data sending part
    reg [7:0] data_reg;
-   assign data = data_reg;
-   reg rst_reg;
-   assign rst = rst_reg;
-   wire cd_data_byte;
+   assign data_reg = data;
+   wire tx_clk;
    reg [2:0] i;
 
-   always @(posedge clk) begin
-      case(state)
-         `START: rst_reg = 1'b1;
-         `DATA: rst_reg = 1'b1;
-         `STOP: rst_reg = 1'b0;
-         `IDLE: rst_reg = 1'b0;
-         default: rst_reg = 1'b0;
-      endcase
-   end
-
    // Generate clock cycle for data transmission
-   counter #(.N((F+BAUD/2)/BAUD)) ctx (
+   counter #(.N(8)) clkTx (
       .clk(clk),
       .rst(rst),
       .ce(1'b1),
       .q(),
-      .ov(cd_data_byte)
+      .ov(tx_clk)
    );
    
-   // 
-   counter #(.N(8)) cdata (
+   // Generate clock for baud rate 
+   counter #(.N(8)) clkBaud (
       .clk(clk),
       .rst(rst),
-      .ce(cd_data_byte),
+      .ce(tx_clk),
       .q(i),
       .ov()
    );
 
-   //assign tx = data_reg[i];
+   assign tx = data_reg[i];
 
 endmodule
