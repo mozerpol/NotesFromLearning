@@ -52,9 +52,24 @@ FPGA vs ASIC comparison summary: <br/>
 |Easier entry-barrier. One can get started with FPGA development for as low as USD $30.|Very high entry-barrier in terms of cost, learning curve, liaising with semiconductor foundry etc. |
 |Limited in operating frequency compared to ASIC of similar process node. |ASIC fabricated using the same process node can run at much higher frequency than FPGAs.|
 |	Analog designs are not possible with FPGAs. Although FPGAs may contain specific analog hardware such as PLLs, ADC etc, they are not much flexible to create for example RF transceivers. |ASICs can have complete analog circuitry, for example WiFi transceiver, on the same die along with microprocessor cores. This is the advantage which FPGAs lack. |
-|Preferred for prototyping and validating a design or concept. Many ASICs are prototyped using FPGAs themselves|It is not recommended to prototype a design using ASICs unless it has been absolutely validated.|  
+|Preferred for prototyping and validating a design or concept. Many ASICs are prototyped using FPGAs themselves|It is not recommended to prototype a design using ASICs unless it has been absolutely validated.|
 
 |![image](https://user-images.githubusercontent.com/43972902/137637407-2c2c7aea-36c7-483a-aabe-2b6b99770503.png)|
 |:--:|
 |FPGA vs ASIC Cost Analysis|
 |Source: *https://numato.com/blog/differences-between-fpga-and-asics/*|
+
+### Chapter 2 <a name="2"></a>
+**FinFET** - fin (pol. *płetwa*) field-effect transistor, just different type of
+MOSFET. These devices have been given the generic name "FinFETs" because the
+source/drain region forms fins on the silicon surface. FinFET is a type of 
+non-planar (pol. *niepłaskie*) transistor, or "3D" transistor. The FinFET 
+devices have significantly faster switching times and higher current density 
+than planar CMOS.
+
+|![image](https://user-images.githubusercontent.com/43972902/137792590-76412dc9-6dfd-4472-a137-d6551f08cae1.png)|
+|:--:|
+| A double-gate FinFET device |
+|Source: *https://en.wikipedia.org/wiki/FinFET* |
+
+
