@@ -72,4 +72,20 @@ than planar CMOS.
 | A double-gate FinFET device |
 |Source: *https://en.wikipedia.org/wiki/FinFET* |
 
+**Modern Design Flow of FPGAs** <br/>
+1. Reference design - FPGA designs often start from this step. It represents a 
+technical blueprint of a system that is intended for others to copy. Reference 
+designs contain the essential elements of the system. 
+2. Creating a functional block diagram, something like this below: <br/>
 
+| ![image](https://user-images.githubusercontent.com/43972902/137794149-cb284567-5a76-4169-81f3-941d9e409c57.png) |
+|:--:|
+|Simplistic view of the system design flow|
+| Source: *FPGAs for dummies p. 18* |
+
+- First you define the requirements
+- Create the archi-tecture of the system - determine the components you need to
+implement
+- Implement the system using the architecture you planned out
+- Verify that the system meets all the requirements
+3. asd 
