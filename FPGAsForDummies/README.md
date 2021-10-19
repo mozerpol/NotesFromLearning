@@ -135,4 +135,23 @@ would include input, processing, and output. <br/>
 After you define the transactions, you implement them, and then verify that they 
 work and meet the functions and con-straints you established at the start. 
 
-
+### Chapter 4 <a name="4"></a>
+*OpenCL* - Open Computing Language - is an industry standard development 
+platform used to program FPGAs in a hetero-geneous environment (not only to 
+program FPGA). <br/>
+What is *Heterogeneous Computing*? <br/>
+*Heterogeneous computing* - refers to systems that use more than one kind of
+processor or cores. These systems gain performance not just by adding the same 
+type of processors, but by adding dissimilar coprocessors, usually incorporating 
+specialized processing capabilities to handle particular tasks.<br/> Usually 
+heterogeneity in the context of computing referred to different instruction
+set architectures (ISA), where the main processor has one and other processors 
+have another - usually a very different. <br/>
+A system with heterogenous CPU topology is a system where the same ISA is used,
+but the cores themselves are different in speed. There are typically two types 
+of cores: 
+a higher performance core usually known as the "big" or P-core and <br/>
+a more power efficient core usually known as the "small" or E-core. <br/>
+The example of this type of usage is 
+[ARM big.LITTLE](https://en.wikipedia.org/wiki/ARM_big.LITTLE), where faster 
+high-power cores are combined with slower low-power cores.
