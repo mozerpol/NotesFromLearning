@@ -105,4 +105,6 @@ etc.) in the FPGA. The capability for soft IP is what makes an FPGA an FPGA. <br
 *Hard IP* - is anything that is circuitry that is hard-wired and etched (pol. 
 *wytrawiony*) into silicon to do only one thing and do it well. Things like 
 processors, DSP blocks, and high speed transceivers.
-
+5. Verifying the system design
+6. Mapping the system into FPGA hardware
+7. Trying out the design in the system
