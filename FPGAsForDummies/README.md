@@ -72,7 +72,7 @@ than planar CMOS.
 | A double-gate FinFET device |
 |Source: *https://en.wikipedia.org/wiki/FinFET* |
 
-#### Modern design flow of FPGAs <br/>
+**Modern design flow of FPGAs** <br/>
 1. Reference design - FPGA designs often start from this step. It represents a 
 technical blueprint of a system that is intended for others to copy. Reference 
 designs contain the essential elements of the system. 
@@ -108,3 +108,18 @@ processors, DSP blocks, and high speed transceivers.
 5. Verifying the system design
 6. Mapping the system into FPGA hardware
 7. Trying out the design in the system
+
+### Chapter 3 <a name="3"></a>
+During system design we can ask some questions, such as: <br/>
+- What does the system have to do? - actually this is the fundamental question.
+The answer to this question is often provided by the product manager.
+- Can I use my existing design with changes?
+- How much of the system can I leave in software? - The amount of the system 
+that can be left in software determines what types of hard-ware can be used.
+- How much hardware can I buy? -  Many times, a functional block of your system
+design may already be implemented in a commercially available hardware device 
+(known as *off-the-shelf*). If that’s the case, it may be more economical to
+purchase this hardware, or license it as IP, rather than implement the design 
+in software or design custom hardware.
+- Does it work yet? - The next fundamental question, and must be answered “Yes” 
+before the system can be deployed. 
