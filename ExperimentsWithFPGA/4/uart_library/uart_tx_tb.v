@@ -21,10 +21,11 @@ module uart_tx_tb;
 	);
 
 	initial begin
+      rst_tb = 1'b1;
+      #100 rst_tb = 1'b0;
       data_tb = 8'b11010011;
-      rst_tb = 1'b0;
-      #100 rst_tb = 1'b1;
-      #10000 data_tb = 8'b00101100;
+      //#2000 rst_tb = 1'b1;
+      #2000 data_tb = 8'b00101100;
 	end
 
 	always #10 clk <= ~clk;
