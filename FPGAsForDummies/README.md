@@ -87,12 +87,22 @@ designs contain the essential elements of the system.
 - Create the archi-tecture of the system - determine the components you need to
 implement
 - Implement the system using the architecture you planned out
-- Verify that the system meets all the requirements
-
+- Verify that the system meets all the requirements <br/> <br/>
 *Middleware* - is a type of computer software that provides services to
 software applications beyond those available from the operating system. It can 
 be described as "software glue". In other words, middleware is a layer of 
 software that doesn’t implement the core functionality of the product, but
 instead, provides a layer that implements an industry standard or protocol. 
 
-3. 
+3. Replacing functional blocks with existing IP <br/>
+FPGA manufacturers have been including such common functionality or intellectual 
+property (IP) into their products. This IP can be in the form of hardware built
+into the chip, software provided to the user, or — just for FPGAs — hardware
+designs that the user can drop into the programmable logic.
+4. Coding the missing blocks <br/>
+*Soft IP* - is anything made from the generic logic fabric (LUTs, logic blocks,
+etc.) in the FPGA. The capability for soft IP is what makes an FPGA an FPGA. <br/>
+*Hard IP* - is anything that is circuitry that is hard-wired and etched (pol. 
+*wytrawiony*) into silicon to do only one thing and do it well. Things like 
+processors, DSP blocks, and high speed transceivers.
+
