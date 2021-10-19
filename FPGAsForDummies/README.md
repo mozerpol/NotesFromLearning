@@ -123,3 +123,16 @@ purchase this hardware, or license it as IP, rather than implement the design
 in software or design custom hardware.
 - Does it work yet? - The next fundamental question, and must be answered “Yes” 
 before the system can be deployed. 
+
+The design process for FPGAs is an iterative one, you start with an idea of the
+system and then refine the idea into definitions of transactions. A transaction 
+would include input, processing, and output. <br/>
+|![image](https://user-images.githubusercontent.com/43972902/137987470-d830f7f1-9771-4cc8-8b5d-072828160c20.png)|
+|:--:|
+| Defining system requirements |
+|Source: *FPGAs for dummies p. 27*|
+
+After you define the transactions, you implement them, and then verify that they 
+work and meet the functions and con-straints you established at the start. 
+
+
