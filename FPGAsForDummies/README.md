@@ -72,7 +72,7 @@ than planar CMOS.
 | A double-gate FinFET device |
 |Source: *https://en.wikipedia.org/wiki/FinFET* |
 
-**Modern design flow of FPGAs** <br/>
+#### Modern design flow of FPGAs <br/>
 1. Reference design - FPGA designs often start from this step. It represents a 
 technical blueprint of a system that is intended for others to copy. Reference 
 designs contain the essential elements of the system. 
@@ -89,8 +89,10 @@ implement
 - Implement the system using the architecture you planned out
 - Verify that the system meets all the requirements
 
-**Middleware** - is a type of computer software that provides services to
+*Middleware* - is a type of computer software that provides services to
 software applications beyond those available from the operating system. It can 
 be described as "software glue". In other words, middleware is a layer of 
 software that doesn’t implement the core functionality of the product, but
 instead, provides a layer that implements an industry standard or protocol. 
+
+3. 
