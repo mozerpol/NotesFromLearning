@@ -1,8 +1,3 @@
-`define START 2'b00
-`define DATA 2'b01
-`define STOP 2'b10
-`define IDLE 2'b11
-
 module uart_tx
    #(parameter BAUD = 9600, F = 50000000)
    (
@@ -35,12 +30,12 @@ module uart_tx
       .q(i),
       .ov()
    );
-
+   reg [7:0] ascii_data;
+   assign ascii_data = 8'd48 + data;
    reg [9:0] full_frame;
-   reg [7:0] prev_full_frame;
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
-   assign full_frame[8:1] = data;
+   assign full_frame[8:1] = ascii_data;
    assign tx = full_frame[i];
 
 endmodule
