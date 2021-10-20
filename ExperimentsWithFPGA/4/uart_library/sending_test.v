@@ -6,23 +6,26 @@ module sending
       output wire tx
    );
 
-   reg c_1s_ov;
+   wire counter1_ov;
+   reg [7:0] data;
 
-   counter #(.N(F)) c_1s (
+   // Measure some time, when overflow send byte
+   counter #(.N(F)) counter1 (
       .clk(clk),
-      .rst(rst),
+      .rst(!rst),
       .ce(1'b1),
       .q(),
-      .ov(c_1s_ov)
-    );
+      .ov(counter1_ov)
+   );
 
-    counter #(.N(10)) c_data (
-        .clk(clk),
-        .rst(rst),
-        .ce(c_1s_ov),
-        .q(data),
-        .ov()
-    );
+   // Send numbers from 0 to 7 when overflow on counter1
+   counter #(.N(8)) counter2 (
+      .clk(clk),
+      .rst(!rst),
+      .ce(counter1_ov),
+      .q(data),
+      .ov()
+   );
 
    uart_tx #(
       .BAUD(BAUD), 
@@ -31,7 +34,7 @@ module sending
       .clk(clk),
       .rst(rst),
       .tx(tx),
-      .data(data)
+      .data((8'b00000111 & data))
    );
 
 endmodule
