@@ -1,5 +1,5 @@
 module sending
-   #(parameter BAUD = 9600, F = 50000000)
+   #(parameter BAUD = 115200, F = 50000000)
    (
       input wire clk,
       input wire rst,
@@ -10,7 +10,7 @@ module sending
    reg [7:0] data;
 
    // Measure some time, when overflow send byte
-   counter #(.N(F)) counter1 (
+   counter #(.N(10)) counter1 (
       .clk(clk),
       .rst(!rst),
       .ce(1'b1),

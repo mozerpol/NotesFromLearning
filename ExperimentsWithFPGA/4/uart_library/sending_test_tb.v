@@ -4,7 +4,7 @@ module sending_tb;
 	reg clk = 1'b1;
 	reg rst;
 	wire tx;
-	parameter BAUD = 9600;
+	parameter BAUD = 115200;
 	parameter F = 50000000;
 
 	sending #(.BAUD(BAUD), .F(F)) dut (

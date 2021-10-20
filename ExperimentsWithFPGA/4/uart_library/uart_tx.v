@@ -8,9 +8,6 @@ module uart_tx
    );
 
    wire tx_clk;
-   reg rst_reg;
-   assign rst_reg = rst;
-   reg flag;
    reg [3:0] i;
 
    // Generate clock cycle for data transmission (baud rate)
@@ -30,9 +27,10 @@ module uart_tx
       .q(i),
       .ov()
    );
+
    reg [7:0] ascii_data;
    assign ascii_data = 8'd48 + data;
-   reg [9:0] full_frame;
+   wire [9:0] full_frame;
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
    assign full_frame[8:1] = ascii_data;
