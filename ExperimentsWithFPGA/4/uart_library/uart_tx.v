@@ -19,7 +19,7 @@ module uart_tx
    reg [3:0] i;
 
    // Generate clock cycle for data transmission (baud rate)
-   counter #(.N(8)) clkTx (
+   counter #(.N(1000)) clkTx (
       .clk(clk),
       .rst(!rst),
       .ce(1'b1),
@@ -42,18 +42,5 @@ module uart_tx
    assign full_frame[9] = 1'b1; // Stop bit
    assign full_frame[8:1] = data;
    assign tx = full_frame[i];
-/*
-   always@(posedge clk)
-   begin
-      if(flag == 1'b1) begin
-         rst_reg <= 1'b0;
-         flag <= 1'b0;
-      end
-      if(full_frame[8:1] != data) 
-      begin
-         rst_reg <= 1'b1;
-         flag <= 1'b1;
-      end
-   end
-*/
+
 endmodule
