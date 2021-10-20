@@ -1,5 +1,5 @@
 module uart_tx
-   #(parameter BAUD = 9600, F = 50000000)
+   #(parameter BAUD = 115200, F = 50000000)
    (
       input wire rst,
       input wire clk,
@@ -8,7 +8,7 @@ module uart_tx
    );
 
    wire tx_clk;
-   reg [3:0] i;
+   wire [3:0] i;
 
    // Generate clock cycle for data transmission (baud rate)
    counter #(.N(1000)) clkTx (
@@ -28,7 +28,7 @@ module uart_tx
       .ov()
    );
 
-   reg [7:0] ascii_data;
+   wire [7:0] ascii_data;
    assign ascii_data = 8'd48 + data;
    wire [9:0] full_frame;
    assign full_frame[0] = 1'b0; // Start bit

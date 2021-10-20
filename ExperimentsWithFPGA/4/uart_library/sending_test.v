@@ -7,7 +7,7 @@ module sending
    );
 
    wire counter1_ov;
-   reg [7:0] data;
+   wire [7:0] data;
 
    // Measure some time, when overflow send byte
    counter #(.N(10)) counter1 (
