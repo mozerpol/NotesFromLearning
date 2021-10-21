@@ -24,8 +24,9 @@ module uart_tx_tb;
       rst_tb = 1'b1;
       #100 rst_tb = 1'b0;
       data_tb = 8'b11010011;
-      //#2000 rst_tb = 1'b1;
-      #10000000 data_tb = 8'b00101100;
+      #5000000 data_tb = 8'b00101100;
+      #5000000 data_tb = 8'b00101100;
+      #5000000 data_tb = 8'b11010011;
 	end
 
 	always #10 clk <= ~clk;
