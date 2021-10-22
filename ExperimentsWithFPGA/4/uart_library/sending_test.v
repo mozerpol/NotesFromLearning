@@ -10,7 +10,7 @@ module sending
    wire [7:0] data;
 
    // Measure some time, when overflow send byte
-   counter #(.N(10)) counter1 (
+   counter #(.N(1000)) counter1 (
       .clk(clk),
       .rst(!rst),
       .ce(1'b1),
