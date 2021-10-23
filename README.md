@@ -63,3 +63,13 @@ about FPGA and its languages.
 articles about FPGA and Verilog.
 8. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021 - a 
 small circuit design exercises for practicing Verilog.
+9. https://www.asic-world.com/verilog/index.html - date of access: 23.10.2021 -
+Verilog tutorial.
+10. https://www.youtube.com/c/FPGAsforBeginners/videos - date of access:
+23.10.2021 - nice channel on yt about FPGA and Verilog, good to practice eng.
+11. https://www.chipverify.com/verilog/verilog-tutorial - date of access:
+23.10.2021 - about Verilog.
+12. https://www.fpga4fun.com/ - date of access: 23.10.2021 - nice tutorials
+about FPGA and some easy projects such as I2C, UART or PCI.
+13. https://projectf.io/sitemap/ - date of access: 23.10.2021 - about FPGA,
+Verilog. nice projects about FPGA graphics, math in FPGA, etc.
