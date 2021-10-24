@@ -10,7 +10,9 @@ ________________
 		2. [Possible problems](#122)
 		3. [Using docker](#123)
 		4. [How to use](#124)
-2. [Nice picture about arrays in verilog](#2)
+2. [Skrypt do przedmiotu - Języki modelowania i symulacji](#2)
+3. [asic-world](#3)
+4. [Język Verilog w projektowaniu układów FPGA](#3)
 
 ## 1. How to run examples? <a name="1"></a>
 In this repo I'll put some examples of simple digital circuits written in 
@@ -142,7 +144,16 @@ the whole window, just click the *Zoom Full* icon: <br/>
 the direcotry and repeat all steps, but before this you must write in the console 
 (at bottom) `quit -sim`. 
 
-### 2. Nice picture about arrays in verilog: <a name="2"></a>
+### 2. Język Verilog w projektowaniu układów FPGA: <a name="2"></a>
+The script about HDL starts on page 71. <br/>
+Verilog allows to add your own procedures in the C language thanks to *Verilog
+Procedural Interface*. More [here](https://www.asic-world.com/verilog/pli1.html).
+<br/> In the Verilog we have a four abstract layers, thanks to this we can mix
+different abstract layers in one project: <br/>
+1. Switch Level
+2. Gate Level
+3. Register-Transfer Level
+4. Behavioral level
 
 ||
 |:--:|
