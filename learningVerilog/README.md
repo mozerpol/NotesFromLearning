@@ -154,6 +154,23 @@ different abstract layers in one project: <br/>
 2. Gate Level
 3. Register-Transfer Level
 4. Behavioral level
+Every layer should have a different language elements, thanks to this is easier 
+to remember the syntax of the language. <br/>
+In Verilog, is a difference between uppercase and lowercase letters, so 
+*VariaBle* is different than *variable*. <br/>
+Numbers are written like this: `<size>'<base><number>` <br/>
+Where *size* is a decimal number, which tell as how much bits has equivalent in
+a binary representation, example: *2'b01* or *8'h9a*. If we not define the size,
+then usually it'll be 32 bits. If we not define the base, then usually it'll be
+decimal. If is present *x* sign it means undefine state, *z* means tri-state.
+Example: *64'bz* - 64-bits number, each bit has hi-Z state. *12'haxc* - 12-bits
+hexadecimal number, four numbers in the middle are undefine. Depending on the
+base, *x* or *z* in hexadecimal representation means a four bits, in octal a
+three bits and one bit in binary system. If we need a better clarity for huge
+numbers we can add `_` sign between numbers, example: *8'b0000_1101* or 
+*12'b001_101_001_111*. The question mark in the number is equivalent to the high
+impedance state.
+
 
 ||
 |:--:|
