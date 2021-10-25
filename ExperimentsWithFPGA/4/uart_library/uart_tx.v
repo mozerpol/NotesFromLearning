@@ -9,13 +9,12 @@ module uart_tx
 
    wire [3:0] i;
    wire ov_clkBaud;
-   reg rst_cnt1 = 1'b0;
-   reg rst_cnt2 = 1'b0;
+   reg rst_after_ov = 1'b0;
    
    // Generate clock cycle for data transmission (baud rate)
    counter #(.N(1000)) clkTx (
       .clk(clk),
-      .rst(!(rst_cnt1 || rst)),
+      .rst(!(rst_after_ov || rst)),
       .ce(1'b1),
       .q(),
       .ov(tx_clk)
@@ -24,7 +23,7 @@ module uart_tx
    // Go through array and send data 
    counter #(.N(10)) clkBaud (
       .clk(clk),
-      .rst(!(rst_cnt2 || rst)),
+      .rst(!(rst_after_ov || rst)),
       .ce(tx_clk),
       .q(i),
       .ov(ov_clkBaud)
@@ -38,8 +37,6 @@ module uart_tx
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
    reg state;
-
-// ADD rst_cnt1
 
    always@(posedge clk) begin
       if(data != old_data) begin
@@ -56,14 +53,12 @@ module uart_tx
          1'b0: 
             begin
                tx_reg <= full_frame[i];
-               rst_cnt2 <= 1'b0;
-               rst_cnt1 <= 1'b0;
+               rst_after_ov  <= 1'b0;
             end
          1'b1: 
             begin
                tx_reg <= full_frame[9];
-               rst_cnt2 <= 1'b1;
-               rst_cnt1 <= 1'b1;
+               rst_after_ov <= 1'b1;
             end
       endcase
    end
