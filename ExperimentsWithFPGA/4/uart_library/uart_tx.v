@@ -33,25 +33,21 @@ module uart_tx
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
    assign full_frame[8:1] = data;//ascii_data;
-   reg [7:0] old_data = 8'b00000000;
+   reg [7:0] old_data;// = 8'b00000000;
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
    reg state;
 
    always@(posedge clk) begin
-      if(data != old_data) begin
-         old_data <= data;
-         state <= 1'b0;
-      end
-			if(ov_clkBaud) begin
-         state <= 1'b1;
-         end 
+      if(data != old_data) state <= 1'b0;
+      if(ov_clkBaud) state <= 1'b1;
    end
 
    always@(posedge clk) begin
       case(state)
          1'b0: 
             begin
+               old_data <= data;
                tx_reg <= full_frame[i];
                rst_after_ov  <= 1'b0;
             end
