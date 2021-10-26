@@ -246,3 +246,17 @@ When you'll run *uart_tx_tb.v* file in Modelsim add to waves:
 
 Run simulation on 1200 us, then you should see: <br/>
 ![Screenshot at 2021-10-26 18-37-10](https://user-images.githubusercontent.com/43972902/138922874-45287f3a-0f60-4588-a0fe-cb4d0c19bba7.png)
+
+Enlarge waveform in a small part: <br/>
+
+
+Where: <br/>
+1. 8-bit number which comes from test bench, responsible part:
+`input wire [7:0] data`. In this case it's *11010011*
+2. Prepared data frame for sending, after adding stop and start bit and after
+conversion from binary to ascii data. In our case it's *1000000110*, where the
+first bit is *1* and it's **STOP** bit. Yes, it's stop bit, because data in our
+variable is reversed. It's sending in reverse order. The last bit is *0* and it
+is **START** bit. Bits between start and stop bit are our data from input after
+confersion to ascii.
+3. 
