@@ -231,3 +231,18 @@ these files:
 - sending_test_tb.v - testbench for above library
 - uart_tx.v - main file which is responsible for uart module
 - uart_tx_tb.v - testbench for uart module
+
+To check library just copy files and run them in Modelsim. <br/>
+When you'll run *uart_tx_tb.v* file in Modelsim add to waves: 
+- clk
+- data_tb
+- full_frame
+- state
+- tx
+- ov_clkBaud
+- rst_after_ov
+- q from clkTx module
+- q from clkBaud module
+
+Run simulation on 1200 us, then you should see: <br/>
+![Screenshot at 2021-10-26 18-37-10](https://user-images.githubusercontent.com/43972902/138922874-45287f3a-0f60-4588-a0fe-cb4d0c19bba7.png)
