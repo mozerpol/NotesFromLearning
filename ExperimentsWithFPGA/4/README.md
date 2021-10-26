@@ -218,5 +218,16 @@ on *State Machine Viewer*, where is: *Tasks* -> *Analysis & Synthesis* -> *Netli
 Viewers* -> *State Machine Viewer*, then we'll see: <br/>
 ![1](https://user-images.githubusercontent.com/43972902/136549656-cf191705-7af2-4abc-a393-d157bf84ed57.png)
 
-We can notice transition graph. Below this we have *Transitions* tab, where are
+We can notice transition graph. Above we have *Transitions* tab, where are
 possible transitions with necessary conditions.
+____
+I decided write from scratch my own UART library, without any AXI or other 
+Wishbone. It's avalible in *uart_library* folder. This library is very simple,
+just only three pins: *clk*, *tx* and *rst*. In *uart_library* folder we have 
+these files:
+- counter.v - the same as everywhere
+- sending_test.v - for test purposes. Thanks to this file we generate numbers
+    from 1 to 10 and then pass to uart module
+- sending_test_tb.v - testbench for above library
+- uart_tx.v - main file which is responsible for uart module
+- uart_tx_tb.v - testbench for uart module
