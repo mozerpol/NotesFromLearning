@@ -265,4 +265,13 @@ Next each bit are assigning to *tx* variable and passing to output.
 ![9](https://user-images.githubusercontent.com/43972902/138944277-2d5e92e7-8465-4122-a47e-d39803a15745.png)
 5. When we detect a new data we must change *rst_after_ov* to low and thanks to
 this after sending all data we can reset all counters.
-6. 
+6. Selecting states. We have *IDLE* and *SEND*. In the *IDLE* we're assigning to
+the output value *1* and reset all counters. In the *SEND* state we're assigning
+to the output current bit from our data frame.
+7. The begining of sending *start* bit. As you know it's *0*.
+8. After this we have two times high state, which is equal our two logical ones 
+in data frame.
+9. Afer all data has been sent, an overflow occurs, it means that we must change
+state to idle.
+10. Overflow from *clkBaud* will reset all counters (all I mean clkBaud and
+clkTx).
