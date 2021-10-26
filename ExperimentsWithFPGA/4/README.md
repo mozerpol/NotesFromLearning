@@ -245,7 +245,7 @@ When you'll run *uart_tx_tb.v* file in Modelsim add to waves:
 - q from clkBaud module
 
 Run simulation on 1200 us, then you should see: <br/>
-![Screenshot at 2021-10-26 18-37-10](https://user-images.githubusercontent.com/43972902/138922874-45287f3a-0f60-4588-a0fe-cb4d0c19bba7.png)
+![0](https://user-images.githubusercontent.com/43972902/138922874-45287f3a-0f60-4588-a0fe-cb4d0c19bba7.png)
 
 Enlarge waveform in a small part: <br/>
 
@@ -259,4 +259,10 @@ first bit is *1* and it's **STOP** bit. Yes, it's stop bit, because data in our
 variable is reversed. It's sending in reverse order. The last bit is *0* and it
 is **START** bit. Bits between start and stop bit are our data from input after
 confersion to ascii.
-3. 
+3. We're counting from 0 up to 9. It's just iterating by each bit in data array.
+Next each bit are assigning to *tx* variable and passing to output. 
+4. Current var inside *clkTx*, after overflow we know that we must send next bit: <br/>
+![9](https://user-images.githubusercontent.com/43972902/138944277-2d5e92e7-8465-4122-a47e-d39803a15745.png)
+5. When we detect a new data we must change *rst_after_ov* to low and thanks to
+this after sending all data we can reset all counters.
+6. 
