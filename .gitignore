@@ -1,2 +1,3 @@
 .hdl_checker/*
-work/
+./ExperimentsWithFPGA/4/uart_library/work/*
+./ExperimentsWithFPGA/4/uart_library/vsim.wlf
