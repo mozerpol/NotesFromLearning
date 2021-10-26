@@ -248,7 +248,7 @@ Run simulation on 1200 us, then you should see: <br/>
 ![0](https://user-images.githubusercontent.com/43972902/138922874-45287f3a-0f60-4588-a0fe-cb4d0c19bba7.png)
 
 Enlarge waveform in a small part: <br/>
-
+![e](https://user-images.githubusercontent.com/43972902/138949509-22399472-2f4d-4841-af35-21166f15e223.png)
 
 Where: <br/>
 1. 8-bit number which comes from test bench, responsible part:
