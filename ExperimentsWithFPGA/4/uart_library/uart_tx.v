@@ -10,6 +10,7 @@ module uart_tx
    wire [3:0] i;
    wire ov_clkBaud;
    reg rst_after_ov = 1'b0;
+   wire tx_clk;
    
    // Generate clock cycle for data transmission (baud rate)
    counter #(.N(1000)) clkTx (
@@ -33,7 +34,7 @@ module uart_tx
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
    assign full_frame[8:1] = data;//ascii_data;
-   reg [7:0] old_data;// = 8'b00000000;
+   reg [7:0] old_data = 8'b00000000;
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
    reg state;
@@ -42,7 +43,7 @@ module uart_tx
       if(data != old_data) state <= 1'b0;
       if(ov_clkBaud) state <= 1'b1;
    end
-
+// add definitions for b0 and b1
    always@(posedge clk) begin
       case(state)
          1'b0: 
