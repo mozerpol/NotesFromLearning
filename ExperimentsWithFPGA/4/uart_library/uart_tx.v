@@ -38,7 +38,8 @@ module uart_tx
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
    assign full_frame[8:1] = 8'd48 + data; // Assign data from input and convert
-   // it to ascii
+   // it to ascii. Why d48? Because in ascii table the first sign starts from
+   // 48 position
    reg [7:0] old_data = 8'd0;
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
