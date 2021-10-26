@@ -9,8 +9,8 @@ module sending
    wire counter1_ov;
    wire [7:0] data;
 
-   // Measure some time, when overflow send byte
-   counter #(.N(1000)) counter1 (
+   // Measure some time, when overflow send byte, F means one second
+   counter #(.N(F)) counter1 (
       .clk(clk),
       .rst(!rst),
       .ce(1'b1),
@@ -34,7 +34,8 @@ module sending
       .clk(clk),
       .rst(rst),
       .tx(tx),
-      .data((8'b00000111 & data))
+      .data((8'b00000111 & data)) // It's necessary, because data from counter2
+      // has three bits, so we must do a mask, before sending to uart module
    );
 
 endmodule
