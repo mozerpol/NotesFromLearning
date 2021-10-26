@@ -13,7 +13,7 @@ module uart_tx
    wire [3:0] i;
    wire ov_clkBaud;
    reg rst_after_ov = 1'b0;
-   wire tx_clk; // Connect output the first cnt with the second
+   wire tx_clk; // Bring together clkTx with clkBaud
    
    // Generate clock cycle for data transmission (baud rate)
    counter #(.N(1000)) clkTx (
@@ -37,8 +37,8 @@ module uart_tx
    wire [9:0] full_frame;
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
-   assign full_frame[8:1] = data; // Assign data from input and convert it to
-   // ascii
+   assign full_frame[8:1] = 8'd48 + data; // Assign data from input and convert
+   // it to ascii
    reg [7:0] old_data = 8'd0;
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
@@ -59,7 +59,7 @@ module uart_tx
             end
          `IDLE: 
             begin
-               tx_reg <= full_frame[9]; // The last bit is idle (high) bit
+               tx_reg <= full_frame[9]; // The last bit is high bit, means idle
                rst_after_ov <= 1'b1; //Reset all counters after sending all data
             end
       endcase

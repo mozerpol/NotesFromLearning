@@ -14,7 +14,7 @@ module uart_tx_tb;
 		.data(data_tb),
 		.tx(tx)
 	);
-// delete definitions
+
 	initial begin
       rst_tb = 1'b1;
       #100 rst_tb = 1'b0;
