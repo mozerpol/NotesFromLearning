@@ -1,3 +1,6 @@
+`define SEND 1'b0
+`define IDLE 1'b1
+
 module uart_tx
    #(parameter BAUD = 115200, F = 50000000)
    (
@@ -10,7 +13,7 @@ module uart_tx
    wire [3:0] i;
    wire ov_clkBaud;
    reg rst_after_ov = 1'b0;
-   wire tx_clk;
+   wire tx_clk; // Connect output the first cnt with the second
    
    // Generate clock cycle for data transmission (baud rate)
    counter #(.N(1000)) clkTx (
@@ -30,32 +33,34 @@ module uart_tx
       .ov(ov_clkBaud)
    );
 
+   // Prepare the frame for sending
    wire [9:0] full_frame;
    assign full_frame[0] = 1'b0; // Start bit
    assign full_frame[9] = 1'b1; // Stop bit
-   assign full_frame[8:1] = data;//ascii_data;
-   reg [7:0] old_data = 8'b00000000;
+   assign full_frame[8:1] = data; // Assign data from input and convert it to
+   // ascii
+   reg [7:0] old_data = 8'd0;
    reg tx_reg = 1'b1;
    assign tx = tx_reg;
    reg state;
 
    always@(posedge clk) begin
-      if(data != old_data) state <= 1'b0;
-      if(ov_clkBaud) state <= 1'b1;
+      if(data != old_data) state <= `SEND; // Latch new data and send it
+      if(ov_clkBaud) state <= `IDLE;//When the last bit is sent stop sending data
    end
-// add definitions for b0 and b1
+
    always@(posedge clk) begin
       case(state)
-         1'b0: 
+         `SEND:
             begin
                old_data <= data;
-               tx_reg <= full_frame[i];
-               rst_after_ov  <= 1'b0;
+               tx_reg <= full_frame[i]; // Assign to the output current bit
+               rst_after_ov  <= 1'b0; // Within sending data dont reset counters 
             end
-         1'b1: 
+         `IDLE: 
             begin
-               tx_reg <= full_frame[9];
-               rst_after_ov <= 1'b1;
+               tx_reg <= full_frame[9]; // The last bit is idle (high) bit
+               rst_after_ov <= 1'b1; //Reset all counters after sending all data
             end
       endcase
    end
