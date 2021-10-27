@@ -1,6 +1,11 @@
 ## ExperimentsWithFPGA
 _______________
 
+### Table of contents <a name="tof"></a>
+1. [How run Quartus](#1)
+2. [About the FPGA chip used in my projects](#2)
+3. [More details about MAX 10](#3)
+
 In this repo I'll post my private notes from reading the series of articles
 that appeared in the *Elektronika Praktyczna* magazine. <br/>
 It was a series of 21 [?] articles, the first article appeared in the
@@ -17,7 +22,7 @@ Below I will describe how to start the first project with Quartus and upload
 project to FPGA. This will be additional info, for my convenience, but maybe,
 it'll useful for someone in the future :) <br/>
 
-### How run Quartus
+### How run Quartus <a name="1"></a>
 I'm linux user (Debian buster 4.19), so everything will be shown on linux. I
 used **Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition**,
 *Patches Installed: None*. ~~Unfortunately I will not show (maybe later) how to
@@ -123,7 +128,7 @@ hardware* select your board: <br/>
 22. I'm happy, because it works for me ;p <br/>
 ![179973020_3516412151792112_8148573461671603551_n](https://user-images.githubusercontent.com/43972902/116446954-c410f980-a857-11eb-8158-da1b11b2eeda.jpg)
 
-### About the FPGA chip used in my projects
+### About the FPGA chip used in my projects <a name="2"></a>
 In the picture above you can see which FPGA I use. It's *Intel (earlier Altera)
 10M50DAF484C7G*.
 [Here](#https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_overview.pdf)
@@ -144,7 +149,7 @@ As above, my device *10M50DAF484C7G* has:
 - 7 - Speed, average
 - G - nothing important
 
-### More details about MAX 10
+### More details about MAX 10 <a name="3"></a>
 Below I will explain some of the features from the datasheet that seem important. <br/>
 ![obraz](https://user-images.githubusercontent.com/43972902/117030700-2eb2b100-ad00-11eb-8bf8-8904363aa483.png)
 
