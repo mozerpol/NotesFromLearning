@@ -275,3 +275,12 @@ in data frame.
 state to idle.
 10. Overflow from *clkBaud* will reset all counters (all I mean clkBaud and
 clkTx).
+
+How to use library? <br/>
+1. How did I connect it to *T-core* board: <br/>
+![image](https://user-images.githubusercontent.com/43972902/139103604-9c30b43e-6a24-4643-bae3-e85ed66c98cb.png) <br/>
+So you can notice that I'm using *USB - UART* converter, with *RXD* and *GND*
+pins.
+2. Which pins I assigned in *pin planner* in Quartus? <br/>
+![image](https://user-images.githubusercontent.com/43972902/139104136-2c16077e-f934-4fdc-84a5-506f90a8a49d.png)
+3. 
