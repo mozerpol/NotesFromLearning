@@ -283,4 +283,10 @@ So you can notice that I'm using *USB - UART* converter, with *RXD* and *GND*
 pins.
 2. Which pins I assigned in *pin planner* in Quartus? <br/>
 ![image](https://user-images.githubusercontent.com/43972902/139104136-2c16077e-f934-4fdc-84a5-506f90a8a49d.png)
-3. 
+3. Is it Verilog or SystemVerilog? <br/>
+99,99% is written in pure Verilog, but one small element in *cointer.v*, third
+line `parameter W = $clog2(N)` is using SystemVerilog feature. To change this,
+you can just wite permanently suitable number for W parameter, in case when *N* 
+is equal 10, *W* will be 4, in case where *N* is equal 100, *W* will be 7, when 
+*N* is equal 31, then *N* can be equal 5.
+4. Settings in UART monitor: <br/>
