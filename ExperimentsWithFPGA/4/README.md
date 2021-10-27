@@ -284,9 +284,18 @@ pins.
 2. Which pins I assigned in *pin planner* in Quartus? <br/>
 ![image](https://user-images.githubusercontent.com/43972902/139104136-2c16077e-f934-4fdc-84a5-506f90a8a49d.png)
 3. Is it Verilog or SystemVerilog? <br/>
-99,99% is written in pure Verilog, but one small element in *cointer.v*, third
+99,99% is written in pure Verilog, but one small element in *counter.v*, third
 line `parameter W = $clog2(N)` is using SystemVerilog feature. To change this,
 you can just wite permanently suitable number for W parameter, in case when *N* 
 is equal 10, *W* will be 4, in case where *N* is equal 100, *W* will be 7, when 
 *N* is equal 31, then *N* can be equal 5.
 4. Settings in UART monitor: <br/>
+![mos](https://user-images.githubusercontent.com/43972902/136533798-20cef9bb-5898-491f-a172-d36cc294a513.png)
+5. How I can use UART module? <br/>
+Connect to the *uart_tx* module *clk* and *rst* signal. Remember that sometimes
+*rst* signal can be assigned as negative (`.rst(!rst_from_board_or_testbench)`)
+or non-negative (`.rst(rst_from_board_or_testbench)`). If you want pass data,
+you can do it by assigning to *data* signal eight bit wire 
+(`.data(8bit_data_from_somewhere)`). If you're looking for info how to connect
+modules, check *sending_test.v* file.
+
