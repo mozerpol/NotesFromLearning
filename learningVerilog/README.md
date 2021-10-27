@@ -200,10 +200,25 @@ Important information about *reg* type. <br/>
 There is no any guarantee that *reg* type after compilation and synthesis, there
 will be a flip-flop in the target circuit in the place of register. It may or
 may not. <br/>
-Arrays or more suitably - vectors can be *wire* or *reg* type. Below is nice
-picture, which I found in the internet, which presents how arrays can look: <br/>
-
-
+In verilog we have arrays and vectors, both can be *wire* or *reg* type.
+Example of vectors: <br/>
+```verilog
+wire A;          // Scalar
+wire [7:0] data; // 8-bit bus
+reg [0:31] addr; // 32-bit bus reg type
+```
+The vector indexing method may be descending *[max:min]* or ascending 
+*[min:max]*, but always the left number is the most significant bit. <br/>
+Examples of arrays: <br/>
+```verilog
+integer counter[0:7];   // Array of eight counters
+reg bits[3:0];          // Array of 32 one-bit registers
+reg [4:0] port_id[0:7]; // Array has eight variables, each has five bits
+```
+We shouldn't mistake array with vector. Vector is a signle *n*-bit wide element,
+array is a set of multiple elements, each is *n*-bit wide. <br/>
+Below is nice picture, which I found in the internet, which presents how arrays 
+and vectors can look: <br/>
 ||
 |:--:|
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
