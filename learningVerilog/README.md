@@ -171,6 +171,31 @@ numbers we can add `_` sign between numbers, example: *8'b0000_1101* or
 *12'b001_101_001_111*. The question mark in the number is equivalent to the high
 impedance state.
 
+In Verilog we can assign to the signals different values, each value has
+differen meaning in a physical senese: <br/>
+
+|Value | Meaning|
+|:--:|:--:|
+|0 | Logic zero, false|
+|1 | Logic one, true|
+|x | Undefined value|
+|z | High impedance state|
+
+Except these values we can assign to each value the strength level. If two 
+signals controlling the same wire have equal strengths but different values, then
+*x* signal will occur on the wire. However, if one of the signals is stronger, 
+its value will be fixed on the common wire. <br/>
+|Strength level | Type | Description|
+|:--:|:--:|:--:|
+| supply | Driving | The strongest |
+| rtrong | Driving |  |
+| pull | Driving |  |
+| large | Storage |  |
+| weak | Driving |  |
+| medium | Storage |  |
+| small | Storage |  |
+| highz | High Impedance | The weakest |
+
 
 ||
 |:--:|
