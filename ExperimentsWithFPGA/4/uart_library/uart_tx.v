@@ -16,7 +16,7 @@ module uart_tx
    wire tx_clk; // Bring together clkTx with clkBaud
    
    // Generate clock cycle for data transmission (baud rate)
-   counter #(.N(1000)) clkTx (
+   counter #(.N((F+BAUD/2)/BAUD)) clkTx (
       .clk(clk),
       .rst(!(rst_after_ov || rst)),
       .ce(1'b1),
