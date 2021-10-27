@@ -48,27 +48,33 @@ see main window: <br/>
 
 In the upper right corner click *File* -> *New Project Wizard...*. After whis
 we will see:
-1. <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116383619-4927ee80-a817-11eb-992a-ba1c37493f1a.png)
+1. ![obraz](https://user-images.githubusercontent.com/43972902/116383619-4927ee80-a817-11eb-992a-ba1c37493f1a.png)
 2. In the first form select directory for project in the second form write name
-for project <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116384518-35c95300-a818-11eb-9d90-e7bb362fb77e.png)
+for project <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116384518-35c95300-a818-11eb-9d90-e7bb362fb77e.png)
 3. In the next step *Project Type* select option *Empty Project* and click
 *Next*.
 4. In the next step we have *Add Files* window. We (or I ;p) don't want add
 files to projesc, so just click *Next*.
 5. Step *Family, Device & Board Settings*. In this stage we must select
-matchable device. <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116385280-ef282880-a818-11eb-80c1-1c304f8ac655.png)
+matchable device. <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116385280-ef282880-a818-11eb-80c1-1c304f8ac655.png)
 We are setting everything in tab *Device*. In part *Avalible devices* find your
 device and select it. How to know, which exactly FPGA is in your board? Just
-look at board and find FPGA. Below we have example photo from internet. <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116386942-935e9f00-a81a-11eb-8a82-d5cf2c628b0d.png)
+look at board and find FPGA. Below we have example photo from internet. <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116386942-935e9f00-a81a-11eb-8a82-d5cf2c628b0d.png)
 <br/> Thanks to numbers which are on FPGA, we know that it is *MAX 10* family,
 device *10M50DAF484C6GES*. <br/>
 Select it (not exactly that, but your device that you have on your own board,
-it's example ;p) <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116388009-b2a9fc00-a81b-11eb-8d85-4bb95fb2ef0c.png)
+it's example ;p) <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116388009-b2a9fc00-a81b-11eb-8d85-4bb95fb2ef0c.png)
 6. In the next step *EDA Tool Settings* select everywhere *<None>*.
 7. Last window in our configuration is *Summary*.
-8. Now our main window looks like: <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116389086-db7ec100-a81c-11eb-907b-888077490e4f.png)
+8. Now our main window looks like: <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116389086-db7ec100-a81c-11eb-907b-888077490e4f.png)
 9. Now it's time to add verilog file. To do this, click *File* -> *New...*,
-after this you'll see something like this: <br/> ![obraz](https://user-images.githubusercontent.com/43972902/116430487-2d3c4100-a847-11eb-9c78-c518dabbb872.png) <br/>
+after this you'll see something like this: <br/> 
+![obraz](https://user-images.githubusercontent.com/43972902/116430487-2d3c4100-a847-11eb-9c78-c518dabbb872.png) <br/>
 Click on *Verilog HDL File*
 10. Now, you should see empty page, where we can write some code. Just copy and
 paste below code (will turn on some LEDs on my board):
