@@ -196,6 +196,13 @@ its value will be fixed on the common wire. <br/>
 | small | Storage |  |
 | highz | High Impedance | The weakest |
 
+Important information about *reg* type. <br/>
+There is no any guarantee that *reg* type after compilation and synthesis, there
+will be a flip-flop in the target circuit in the place of register. It may or
+may not. <br/>
+Arrays or more suitably - vectors can be *wire* or *reg* type. Below is nice
+picture, which I found in the internet, which presents how arrays can look: <br/>
+
 
 ||
 |:--:|
