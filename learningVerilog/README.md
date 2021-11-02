@@ -238,10 +238,37 @@ real variable;   // Example of real var
 store in *reg* vars, so should be declared as a reg vector, where width is
 number of variables. Example: <br/>
 ```Verilog
-reg [8*4:1] asdf; // reg [8*number_of_characters:1;
+reg [8*4:1] asdf; // reg [8*number_of_characters:1];
 // 8 - because strings are ascii characters, so each string needs 8 bits
 ```
 
 If the declared *reg* value is too small, it will cut the string from the left,
 if there are too many declared characters, it will add zeros from the left. In
-string we can put special chars, such as *\n*, *\t*, etc.
+string we can put special chars, such as *\n*, *\t*, etc. <br/>
+**System tasks** are special commands for simulator, which begin with `$` sign.
+Example of system tasks: 
+1. $display("Hello World") - it print out string on the display. We can also use
+it to display values of variables, it's like *printf* in C. Example: <br/>
+`$display("Current time: %d and value %b: ", $time, counter)` <br/>
+*$display* puts always a newline at the end. We have a several format characters
+as in C: 
+
+| Char: | Format: |
+|:--:|:--:|
+| %d | Decimal |
+| %b | Binary |
+| %s | String |
+| %h | Hex |
+| %c | ASCII |
+| %f | Real |
+| %v | Signal strength |
+| %o | Octal |
+| %t | Time |
+
+2. $time - return current time of the simulation
+3. $monitor - thanks to this we can monitor variables, after any change of var
+value monitor will display this change. We can control also *monitor* taske by
+using *$monitoron* - to turn on monitoring and *$monitoroff* - to turn off
+monitoring.
+4. $stop - stop simulation and switches simulator to interactive mode.
+5. $finish - ends the simulation.
