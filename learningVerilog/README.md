@@ -148,17 +148,18 @@ the direcotry and repeat all steps, but before this you must write in the consol
 The script about HDL starts on page 71. <br/>
 Verilog allows to add your own procedures in the C language thanks to *Verilog
 Procedural Interface*. More [here](https://www.asic-world.com/verilog/pli1.html).
-<br/> In the Verilog we have a four abstract layers, thanks to this we can mix
-different abstract layers in one project: <br/>
+<br/> In the Verilog we have a **four abstract layers**, thanks to this we can 
+mix different abstract layers in one project: <br/>
 1. Switch Level
 2. Gate Level
 3. Register-Transfer Level
 4. Behavioral level
+
 Every layer should have a different language elements, thanks to this is easier 
 to remember the syntax of the language. <br/>
 In Verilog, is a difference between uppercase and lowercase letters, so 
 *VariaBle* is different than *variable*. <br/>
-Numbers are written like this: `<size>'<base><number>` <br/>
+**Numbers** are written like this: `<size>'<base><number>` <br/>
 Where *size* is a decimal number, which tell as how much bits has equivalent in
 a binary representation, example: *2'b01* or *8'h9a*. If we not define the size,
 then usually it'll be 32 bits. If we not define the base, then usually it'll be
@@ -169,10 +170,9 @@ base, *x* or *z* in hexadecimal representation means a four bits, in octal a
 three bits and one bit in binary system. If we need a better clarity for huge
 numbers we can add `_` sign between numbers, example: *8'b0000_1101* or 
 *12'b001_101_001_111*. The question mark in the number is equivalent to the high
-impedance state.
-
-In Verilog we can assign to the signals different values, each value has
-differen meaning in a physical senese: <br/>
+impedance state. <br/>
+In Verilog we can assign to the **signals** different **values**, each value has
+different meaning in a physical senese: <br/>
 
 |Value | Meaning|
 |:--:|:--:|
@@ -181,7 +181,7 @@ differen meaning in a physical senese: <br/>
 |x | Undefined value|
 |z | High impedance state|
 
-Except these values we can assign to each value the strength level. If two 
+Except these values we can assign to each value the **strength level**. If two 
 signals controlling the same wire have equal strengths but different values, then
 *x* signal will occur on the wire. However, if one of the signals is stronger, 
 its value will be fixed on the common wire. <br/>
@@ -200,7 +200,7 @@ Important information about *reg* type. <br/>
 There is no any guarantee that *reg* type after compilation and synthesis, there
 will be a flip-flop in the target circuit in the place of register. It may or
 may not. <br/>
-In verilog we have arrays and vectors, both can be *wire* or *reg* type.
+In verilog we have **arrays** and **vectors**, both can be *wire* or *reg* type.
 Example of vectors: <br/>
 ```verilog
 wire A;          // Scalar
