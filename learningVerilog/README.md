@@ -223,3 +223,25 @@ and vectors can look: <br/>
 |:--:|
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
 | Source: *http://www.pepedocs.com/img/fpga-0.png* |
+
+In verilog we can declare a **integer** and **real** numbers**. This type of
+numbers act as *reg* vars, we can save inside them any value. <br/>
+We must remember about fact, that *real* type of variable are not synthesizable,
+*integer* will be 32-bit wire.
+
+```Verilog
+integer counter; // Example of integer var
+real variable;   // Example of real var
+```
+
+**String** type must be in one line, we can't use *enter* in string. Strings are
+store in *reg* vars, so should be declared as a reg vector, where width is
+number of variables. Example: <br/>
+```Verilog
+reg [8*4:1] asdf; // reg [8*number_of_characters:1;
+// 8 - because strings are ascii characters, so each string needs 8 bits
+```
+
+If the declared *reg* value is too small, it will cut the string from the left,
+if there are too many declared characters, it will add zeros from the left. In
+string we can put special chars, such as *\n*, *\t*, etc.
