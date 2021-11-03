@@ -299,4 +299,36 @@ If we need conditional code compilation, we can use key words sucha as:
    `include "memory_fpga.v";
 `endif
 ```
+The basics unit in Verilog is **module**. It's like function in C. Example of
+two nested modules: <br/>
+|![image](https://user-images.githubusercontent.com/43972902/140027638-4d2644b9-30e8-4047-9d4e-e69e1e6ac030.png)|
+|:--:|
+|An example of a hierarchical structure of a project|
+|Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 84*|
 
+Code: <br/>
+```Verilog
+module comb_simple(
+  a1_i,
+  a2_i,
+  a3_o
+);
+  input a1_i, a2_i;
+  output a3_o;
+  wire tmp;
+  not N1(tmp, a2_i);
+  and A1(a3_o, a1_i, tmp);
+  assign a3_o = a1_i & ~a2_i;
+endmodule
+
+module comb_complex(b1_i, b2_i, b3_i, b4_o);
+  input b1_i, b2_i, b3_i;
+  output b4_o;
+  wire internal_wire;
+  comb_simple M1(b1_i, b2_i, internal_wire);
+  comb_simple M2(internal_wire, b3_i, b4_o);
+endmodule
+```
+So as we can notice we have `module` word, after this is its name and ports
+list. Between `module` and `endmodule;` we have declaration of variables, 
+assigments, other modules, behavioral blocks such as `always` and `initial`.
