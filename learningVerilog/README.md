@@ -385,3 +385,23 @@ module param_overide_instance_example();
   secret_number #(22) U1();
 endmodule
 ```
+
+If we don't need any access from the simulator level to the specyfic **gates**,
+isn't necessary give the names for them, so we can do something like this: <br/>
+`and (OUT, IN1, IN2);` <br/>
+Except typical gates we have also **bufors** `buf` and **inverters** `not`. They
+can have one input and a several outputs. Outputs always will be at the 
+beginning. <br/>
+Bufor gates also can have a control input.
+
+In the gates for modelling purposes we have delays. We distinguish the following
+times:
+1. Rise time - time for the output to reach state *1* from any other state.
+2. Fall time - time for the output to reach state *0* from any other state.
+3. Off time - time for the output to reach *hi-Z* from any other state.
+
+| ![image](https://user-images.githubusercontent.com/43972902/140082661-b03ce1a3-ee0d-4374-ae0d-73342b72e7e8.png) |
+|:--:|
+| Delay times at the gates |
+|Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 88*|
+
