@@ -290,7 +290,7 @@ given point: <br/>
 ```Verilog
 `include header.v
 ```
-If we need conditional code compilation, we can use key words sucha as: 
+If we need conditional code compilation, we can use key words sucha as:
 \`ifdef, \`else and \`endif. Example of usage: <br/>
 ```Verilog
 `ifdef <condition>
@@ -330,7 +330,7 @@ module comb_complex(b1_i, b2_i, b3_i, b4_o);
 endmodule
 ```
 So as we can notice we have `module` word, after this is its name and ports
-list. Between `module` and `endmodule;` we have declaration of variables, 
+list. Between `module` and `endmodule;` we have declaration of variables,
 assigments, other modules, behavioral blocks such as `always` and `initial`.
 
 **Ports** are used to exchange information with the environment. If we don't
@@ -344,9 +344,44 @@ together:
 - *inout* - can be connected inside module to the *wire* type, outside to the
     also only *wire* type.
 
-If we want connected ports we can do it in two ways: <br/>
+If we want connect ports we can do it in two ways: <br/>
 - as an ordered list (the sequence is required in accordance with the sequence
     of ports in the module definition): <br/>
     `comb_simple M1(b1_i, b2_i, internal_wire);`
 - connecting by giving a name (the order of ports is optional): <br/>
     `comb_simple M1(.a3_o(internal_wire), .a2_i(b2_i), .a1_i(b1_i));`
+
+During compilation we have the possibility to set some value of variables. We
+can do it in the two ways: <br/>
+1. Override parameter using **defparam**, example: <br/>
+```Verilog
+module secret_number #(
+  parameter my_secret = 0
+);
+  initial
+    $display("My secret number is %d", my_secret);
+  end
+endmodule
+
+module defparam_example();
+  defparam U0.my_secret = 11;
+  defparam U1.my_secret = 22;
+  secret_number U0();
+  secret_number U1();
+endmodule
+```
+2. Override parameter during instation, example: <br/>
+```Verilog
+module secret_number #(
+  parameter my_secret = 0
+);
+  initial begin
+    $display("My secret number us %d", my_secret);
+  end
+endmodule
+
+module param_overide_instance_example();
+  secret_number #(11) U0();
+  secret_number #(22) U1();
+endmodule
+```
