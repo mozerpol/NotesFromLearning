@@ -332,3 +332,21 @@ endmodule
 So as we can notice we have `module` word, after this is its name and ports
 list. Between `module` and `endmodule;` we have declaration of variables, 
 assigments, other modules, behavioral blocks such as `always` and `initial`.
+
+**Ports** are used to exchange information with the environment. If we don't
+specify the type, then it'll by the *wire* by default. The *output* ports can be
+*reg* type. We have special rules, which tell us how we can connect ports
+together:
+- *input* - can be connected inside module to the *wire* type. Outside can be
+    connected to *reg* or *wire*.
+- *output* - can be connected inside module to the *wire* or *reg* type. Outside
+    can be connected to the *wire* type.
+- *inout* - can be connected inside module to the *wire* type, outside to the
+    also only *wire* type.
+
+If we want connected ports we can do it in two ways: <br/>
+- as an ordered list (the sequence is required in accordance with the sequence
+    of ports in the module definition): <br/>
+    `comb_simple M1(b1_i, b2_i, internal_wire);`
+- connecting by giving a name (the order of ports is optional): <br/>
+    `comb_simple M1(.a3_o(internal_wire), .a2_i(b2_i), .a1_i(b1_i));`
