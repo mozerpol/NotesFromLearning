@@ -445,4 +445,35 @@ On the left side can be *wire* type. This equation will be active all the time.
 <br/> Other example: <br/>
 `assign SUM[15:0] = SUM1[15:0] ^ SUM2[15:0];`
 
-Assign uses **math operators**:
+Assign uses **math operators**: <br/>
+| Type            | Sign | Operation      | Number of operands |
+|:--:|:--:|:--:|:--:|
+| Arithmetic type | *    | multiplication | 2 |
+|                 | /    | dividing       | 2   |
+|                 | +    | adding         | 2 |
+|                 | -    | subtraction    | 2 |
+|                 | %    | modulo         | 2 |
+| Boolean type    | !    | negation       | 1 |
+|                 | &&   | and            | 2 |
+|                 | \|\| | or             | 2 |
+|                 | >    | equal than     | 2 |
+|                 | <    | less than      | 2 |
+|                 | >=   | greater or equal | 2 |
+|                 | <=   | less or equal  | 2 |
+|                 | ==   | equality       | 2 |
+|                 | !=   | different      | 2 |
+|                 | ===  | conditional equality | 2 |
+|                 | !==  | conditional difference | 2 |
+|                 |    | | 2 |
+|                 | | | 2 |
+|                 | | | 2 |
+|                 | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | 2 |
+| | | | |
+
