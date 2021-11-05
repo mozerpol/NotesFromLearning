@@ -464,16 +464,21 @@ Assign uses **math operators**: <br/>
 |                 | !=   | different      | 2 |
 |                 | ===  | conditional equality | 2 |
 |                 | !==  | conditional difference | 2 |
-|                 |    | | 2 |
-|                 | | | 2 |
-|                 | | | 2 |
-|                 | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | 2 |
-| | | | |
+| Bit type        | ~    | bitwise negation | 1 |
+|                 | &    | and            | 2 |
+|                 | \|   | or             | 2 |
+|                 | ^    | xor            | 2 |
+|                 | ^~ or ~^ | xnor       | 2 |
+| Reduction       | &    | and            | 1 |
+|                 | ~&   | nand           | 1 |
+|                 | \|   | or             | 1 |
+|                 | ~\   | nor            | 1 | 
+|                 | ^    | xor            | 1 |
+|                 | ^~ or ~^ | xnor       | 1 |
+| Shift           | >>   | right shift    | 2 |
+|                 | <<   | left shift     | 2 |
+| Concatenation   | {}   | concatenation  | multiple |
+| Replication     | {{}} | replication    | multiple |
+| Condition       | ?:   | condition      | 3 |
+
 
