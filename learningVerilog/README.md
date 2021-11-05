@@ -436,3 +436,13 @@ module ABC(wy_o, a_i, b_i, c_i);
 endmodule
 ```
 
+**assign** - moedling at the level of registers. <br/>
+`assign <optional signal strength><optional delay> <list of assigns>;` <br/>
+Example: <br/>
+`assign C = A | B;`
+
+On the left side can be *wire* type. This equation will be active all the time.
+<br/> Other example: <br/>
+`assign SUM[15:0] = SUM1[15:0] ^ SUM2[15:0];`
+
+Assign uses **math operators**:
