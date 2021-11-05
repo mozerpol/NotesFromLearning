@@ -405,3 +405,34 @@ times:
 | Delay times at the gates |
 |Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 88*|
 
+We have a few possibilities to set dalay time: <br/>
+1. If we have not given any dalay value then this times are equal 0. Example:
+`and g1(out1, in1, in2);`
+2. The same equal time for all transitions: `and #(4) g1(out1, in1, in2);`
+3. Set rising time and falling time: `and #(3, 2) g1(out1, in1, in2);`
+4. Set rising time, falling time and off time: `bufif0 #(3, 2, 5) g3(out1, in1,
+ctrl);`
+
+In addition for each time we can set three values: minimum, typical, maximum.
+Before starting the simulation, the user has to decide, which time simulator 
+should take, and then simulator will select the appropirate values: <br/>
+|![image](https://user-images.githubusercontent.com/43972902/140513209-b9e4a424-0cd3-4426-92cb-d578623d1ebb.png)|
+|:--:|
+| Minimum, typical and maximum values for delays. |
+| Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 89* |
+
+Example for the module below: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/140513667-853f5548-177e-411b-bc68-a0fabc95f520.png) |
+|:--:|
+| Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 89* |
+```Verilog
+module ABC(wy_o, a_i, b_i, c_i);
+   output wy_o;
+   input a_i, b_i, c_i;
+   wire e;
+
+   or #(6) a1(e, a_i, b_i);
+   and #(4) o1(wy_o, e, c_i);
+endmodule
+```
+
