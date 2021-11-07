@@ -390,7 +390,7 @@ If we don't need any access from the simulator level to the specyfic **gates**,
 isn't necessary give the names for them, so we can do something like this: <br/>
 `and (OUT, IN1, IN2);` <br/>
 Except typical gates we have also **bufors** `buf` and **inverters** `not`. They
-can have one input and a several outputs. Outputs always will be at the 
+can have one input and a several outputs. Outputs always will be at the
 beginning. <br/>
 Bufor gates also can have a control input.
 
@@ -414,7 +414,7 @@ We have a few possibilities to set dalay time: <br/>
 ctrl);`
 
 In addition for each time we can set three values: minimum, typical, maximum.
-Before starting the simulation, the user has to decide, which time simulator 
+Before starting the simulation, the user has to decide, which time simulator
 should take, and then simulator will select the appropirate values: <br/>
 |![image](https://user-images.githubusercontent.com/43972902/140513209-b9e4a424-0cd3-4426-92cb-d578623d1ebb.png)|
 |:--:|
@@ -472,13 +472,85 @@ Assign uses **math operators**: <br/>
 | Reduction       | &    | and            | 1 |
 |                 | ~&   | nand           | 1 |
 |                 | \|   | or             | 1 |
-|                 | ~\   | nor            | 1 | 
+|                 | ~\   | nor            | 1 |
 |                 | ^    | xor            | 1 |
 |                 | ^~ or ~^ | xnor       | 1 |
 | Shift           | >>   | right shift    | 2 |
 |                 | <<   | left shift     | 2 |
-| Concatenation   | {}   | concatenation  | multiple |
-| Replication     | {{}} | replication    | multiple |
-| Condition       | ?:   | condition      | 3 |
+| Concatenation   | {}   | concatenation  | any |
+| Replication     | {{}} | replication    | any |
+| Condition       | ?:   | three-argument operator | 3 |
+>
+Example usage of **arithmetic operators**: <br/>
+```Verilog
+A=8'b00110101; B=8'b00000010;
 
+A*B // multiplication, resutl: 8'b01101010
+A/B // dividing,       result: 8'b00011010 (fractional part is cut)
+A+B // adding,         result: 8'b00110111
+A-B // subtraction,    result: 8'b00110011
+```
 
+If any argument has *x* value, then result is *x*. <br/>
+**Modulo operator** return the reminder from dividing: <br/>
+```Verilog
+15%4; // result: 3
+15%5; // result: 0
+```
+
+Logic operators such as *&&*, *||* and *!* always return 1-bit value (*). <br/>
+If any bit from number is equal *z* or *x* then all number is treat as undefined
+(*x*) value. Example of acting **logical operators**: <br/>
+```Verilog
+A=2; B=0;
+
+A&&B; // result: 0
+A||B; // result: 1
+!A;   // result: 0
+!B;   // result: 1
+```
+Comparison operators also use *x* or *z* values: <br>
+| expression | description | possible values |
+|:--:|:--:|:--:|
+| a==b | *a* is equal *b*, result can be undefined if *a* or *b* consists *x* or *z* | 0,1,x |
+| a!=b | *a* is different than *b*, result can be undefined if *a* or *b* consists *x* or *z* | 0,1,x |
+| a===b | *a* is equal *b*, including *x* or *z* | 0,1 |
+| a!==b | *a* is different than *b*, including *x* or *z* | 0,1 |
+
+**Reduction bit** operators: <br/>
+```Verilog
+x = 4'b1110;
+
+&x; // result: 1&1&1&0 = 1'b0
+|x; // result: 1|1|1|0 = 1'b1
+^x; // result: 1^1^1^0 = 1'b1
+```
+
+**Concatenation**: <br/>
+```Verilog
+A = 1’b1; B = 2’b01; C = 2’b10;
+
+Y = {A, B, C, D, 4’b1111}; // result: Y = 12’b101110111111
+```
+**Three-argument operator**: <br/>
+`<condition> ? <true_expression> : <false_expression>; <br/>`
+Example: <br/>
+```Verilog
+assign mux = C1 ? A0 : A1;
+```
+
+**Operator precedence**: <br/>
+| Operator           | Precedence |
+|:--:|:--:|
+| + - ! ~ (unary)    |  highest   |
+| * / %              |            |
+| + - (binary)       |            |
+| << >>              |            |
+| < <= > >=          |            |
+| == != === !==      |            |
+| & ~&               |            |
+| ^ ^~               |            |
+| \| ~\|             |            |
+| &&                 |            |
+| \|\|               |            |
+| ?: (conditional)   |  lowest    |
