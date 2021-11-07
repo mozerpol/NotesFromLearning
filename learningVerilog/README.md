@@ -11,8 +11,25 @@ ________________
 		3. [Using docker](#123)
 		4. [How to use](#124)
 2. [Skrypt do przedmiotu - Języki modelowania i symulacji](#2)
-3. [asic-world](#3)
-4. [Język Verilog w projektowaniu układów FPGA](#3)
+   1. [Abstract layers](#21)
+   2. [Numbers](#22)
+   3. [Strength level](#23)
+   4. [Arrays & vectors](#24)
+   5. [Integer, real, string](#25)
+   6. [System tasks](#26)
+   7. [Define](#27)
+   8. [Module](#28)
+   9. [Ports](#29)
+   10. [Defparam](#210)
+   11. [Gates, bufors, inverters](#211)
+   12. [Assing](#212)
+   13. [Arithmetic operators](#213)
+   14. [Modulo operator](#214)
+   15. [Logical operators](#215)
+   16. [Reduction bit, concatenation, three-argument operator](#216)
+   17. [Operator precedence](#217)
+3. [asic-world](#218)
+4. [Język Verilog w projektowaniu układów FPGA](#219)
 
 ## 1. How to run examples? <a name="1"></a>
 In this repo I'll put some examples of simple digital circuits written in
@@ -148,8 +165,8 @@ the direcotry and repeat all steps, but before this you must write in the consol
 The script about HDL starts on page 71. <br/>
 Verilog allows to add your own procedures in the C language thanks to *Verilog
 Procedural Interface*. More [here](https://www.asic-world.com/verilog/pli1.html).
-<br/> In the Verilog we have a **four abstract layers**, thanks to this we can
-mix different abstract layers in one project: <br/>
+<br/> In the Verilog we have a **four abstract layers**, <a name="21"></a>
+thanks to this we can mix different abstract layers in one project: <br/>
 1. Switch Level
 2. Gate Level
 3. Register-Transfer Level
@@ -159,7 +176,7 @@ Every layer should have a different language elements, thanks to this is easier
 to remember the syntax of the language. <br/>
 In Verilog, is a difference between uppercase and lowercase letters, so
 *VariaBle* is different than *variable*. <br/>
-**Numbers** are written like this: `<size>'<base><number>` <br/>
+**Numbers** <a name="22"></a> are written like this: `<size>'<base><number>` <br/>
 Where *size* is a decimal number, which tell as how much bits has equivalent in
 a binary representation, example: *2'b01* or *8'h9a*. If we not define the size,
 then usually it'll be 32 bits. If we not define the base, then usually it'll be
@@ -181,10 +198,11 @@ different meaning in a physical senese: <br/>
 |x | Undefined value|
 |z | High impedance state|
 
-Except these values we can assign to each value the **strength level**. If two
-signals controlling the same wire have equal strengths but different values, then
-*x* signal will occur on the wire. However, if one of the signals is stronger,
-its value will be fixed on the common wire. <br/>
+Except these values we can assign to each value the 
+**strength level**. <a name="23"></a> If two signals controlling the same 
+wire have equal strengths but different values, then *x* signal will occur on 
+the wire. However, if one of the signals is stronger, its value will be fixed on 
+the common wire. <br/>
 |Strength level | Type | Description|
 |:--:|:--:|:--:|
 | supply | Driving | The strongest |
@@ -200,8 +218,8 @@ Important information about *reg* type. <br/>
 There is no any guarantee that *reg* type after compilation and synthesis, there
 will be a flip-flop in the target circuit in the place of register. It may or
 may not. <br/>
-In verilog we have **arrays** and **vectors**, both can be *wire* or *reg* type.
-Example of vectors: <br/>
+In verilog we have **arrays** and **vectors**, <a name="24"></a> both can be 
+*wire* or *reg* type. Example of vectors: <br/>
 ```verilog
 wire A;          // Scalar
 wire [7:0] data; // 8-bit bus
@@ -224,8 +242,8 @@ and vectors can look: <br/>
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
 | Source: *http://www.pepedocs.com/img/fpga-0.png* |
 
-In verilog we can declare a **integer** and **real** numbers**. This type of
-numbers act as *reg* vars, we can save inside them any value. <br/>
+In verilog we can declare a **integer** and **real** <a name="25"></a> numbers. 
+This type of numbers act as *reg* vars, we can save inside them any value. <br/>
 We must remember about fact, that *real* type of variable are not synthesizable,
 *integer* will be 32-bit wire.
 
@@ -245,8 +263,8 @@ reg [8*4:1] asdf; // reg [8*number_of_characters:1];
 If the declared *reg* value is too small, it will cut the string from the left,
 if there are too many declared characters, it will add zeros from the left. In
 string we can put special chars, such as *\n*, *\t*, etc. <br/>
-**System tasks** are special commands for simulator, which begin with `$` sign.
-Example of system tasks:
+**System tasks** <a name="26"></a> are special commands for simulator, which 
+begin with `$` sign. Example of system tasks:
 1. $display("Hello World") - it print out string on the display. We can also use
 it to display values of variables, it's like *printf* in C. Example: <br/>
 `$display("Current time: %d and value %b: ", $time, counter)` <br/>
@@ -273,8 +291,8 @@ monitoring.
 4. $stop - stop simulation and switches simulator to interactive mode.
 5. $finish - ends the simulation.
 
-Such as in C lang we can **define** macros. We marked them with back tick *\`*
-sign (in C we're using *#* sign). Example: <br/>
+Such as in C lang we can **define** <a name="27"></a> macros. We marked them 
+with back tick *\`* sign (in C we're using *#* sign). Example: <br/>
 ```Verilog
 `define TRUE 1'b1
 `define DATA_WIDTH 32
@@ -299,8 +317,8 @@ If we need conditional code compilation, we can use key words sucha as:
    `include "memory_fpga.v";
 `endif
 ```
-The basics unit in Verilog is **module**. It's like function in C. Example of
-two nested modules: <br/>
+The basics unit in Verilog is **module**. <a name="28"></a> It's like function 
+in C. Example of two nested modules: <br/>
 |![image](https://user-images.githubusercontent.com/43972902/140027638-4d2644b9-30e8-4047-9d4e-e69e1e6ac030.png)|
 |:--:|
 |An example of a hierarchical structure of a project|
@@ -333,10 +351,10 @@ So as we can notice we have `module` word, after this is its name and ports
 list. Between `module` and `endmodule;` we have declaration of variables,
 assigments, other modules, behavioral blocks such as `always` and `initial`.
 
-**Ports** are used to exchange information with the environment. If we don't
-specify the type, then it'll by the *wire* by default. The *output* ports can be
-*reg* type. We have special rules, which tell us how we can connect ports
-together:
+**Ports** <a name="29"></a> are used to exchange information with the 
+environment. If we don't specify the type, then it'll by the *wire* by default. 
+The *output* ports can be *reg* type. We have special rules, which tell us how 
+we can connect ports together:
 - *input* - can be connected inside module to the *wire* type. Outside can be
     connected to *reg* or *wire*.
 - *output* - can be connected inside module to the *wire* or *reg* type. Outside
@@ -353,7 +371,7 @@ If we want connect ports we can do it in two ways: <br/>
 
 During compilation we have the possibility to set some value of variables. We
 can do it in the two ways: <br/>
-1. Override parameter using **defparam**, example: <br/>
+1. Override parameter using **defparam** <a name="210"></a>, example: <br/>
 ```Verilog
 module secret_number #(
   parameter my_secret = 0
@@ -387,8 +405,8 @@ endmodule
 ```
 
 If we don't need any access from the simulator level to the specyfic **gates**,
-isn't necessary give the names for them, so we can do something like this: <br/>
-`and (OUT, IN1, IN2);` <br/>
+<a name="211"></a> isn't necessary give the names for them, so we can do 
+something like this: <br/> `and (OUT, IN1, IN2);` <br/>
 Except typical gates we have also **bufors** `buf` and **inverters** `not`. They
 can have one input and a several outputs. Outputs always will be at the
 beginning. <br/>
@@ -436,7 +454,7 @@ module ABC(wy_o, a_i, b_i, c_i);
 endmodule
 ```
 
-**assign** - moedling at the level of registers. <br/>
+**assign** <a name="212"></a> - moedling at the level of registers. <br/>
 `assign <optional signal strength><optional delay> <list of assigns>;` <br/>
 Example: <br/>
 `assign C = A | B;`
@@ -481,7 +499,7 @@ Assign uses **math operators**: <br/>
 | Replication     | {{}} | replication    | any |
 | Condition       | ?:   | three-argument operator | 3 |
 >
-Example usage of **arithmetic operators**: <br/>
+Example usage of **arithmetic operators**: <a name="213"></a> <br/>
 ```Verilog
 A=8'b00110101; B=8'b00000010;
 
@@ -492,7 +510,7 @@ A-B // subtraction,    result: 8'b00110011
 ```
 
 If any argument has *x* value, then result is *x*. <br/>
-**Modulo operator** return the reminder from dividing: <br/>
+**Modulo operator** <a name="214"></a> return the reminder from dividing: <br/>
 ```Verilog
 15%4; // result: 3
 15%5; // result: 0
@@ -500,7 +518,7 @@ If any argument has *x* value, then result is *x*. <br/>
 
 Logic operators such as *&&*, *||* and *!* always return 1-bit value (*). <br/>
 If any bit from number is equal *z* or *x* then all number is treat as undefined
-(*x*) value. Example of acting **logical operators**: <br/>
+(*x*) value. Example of acting **logical operators**: <a name="215"></a> <br/>
 ```Verilog
 A=2; B=0;
 
@@ -517,7 +535,7 @@ Comparison operators also use *x* or *z* values: <br>
 | a===b | *a* is equal *b*, including *x* or *z* | 0,1 |
 | a!==b | *a* is different than *b*, including *x* or *z* | 0,1 |
 
-**Reduction bit** operators: <br/>
+**Reduction bit** <a name="216"></a> operators: <br/>
 ```Verilog
 x = 4'b1110;
 
@@ -539,7 +557,7 @@ Example: <br/>
 assign mux = C1 ? A0 : A1;
 ```
 
-**Operator precedence**: <br/>
+**Operator precedence**: <a name="217"></a> <br/>
 | Operator           | Precedence |
 |:--:|:--:|
 | + - ! ~ (unary)    |  highest   |
