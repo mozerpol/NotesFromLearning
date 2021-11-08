@@ -614,3 +614,19 @@ initial begin
    forever #10 clk = ~clk;
 end
 ```
+
+In Verilog we have a two types of blocks: <br/>
+1. This type is group using words *begin* and *end*.
+2. This type is group using words *fork* and *join*. The expressions inside this
+type of block are executing simultaneously. The delays inside this block are
+counted in relation to the zero (the time of entering the block) time. Example: <br/>
+```Verilog
+reg a;
+
+initial fork
+   a = 1'b0;     // This is done at time t = 0
+   #5 a = 1'b1;  // This is done at time t = 5  
+   #10 a = 1'b0; // This is done at time t = 10  
+   #15 a = 1'b1; // This is done at time t = 15  
+join
+```
