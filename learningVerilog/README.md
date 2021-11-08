@@ -591,3 +591,26 @@ Example of event triggering: <br/>
 q=@(posedge clk) d;   // d is calculating immediately, but value is assigning
                       // within rising clk edge
 ```
+
+Loop **repeat** acts the specified number of times and must include the number
+of repetitions. The number of repetitions is calculate in the first executing of
+repeat loop, example: <br/>
+```Verilog
+initial begin 
+   counter = 0; 
+
+   repeat(12) begin
+      $display("Counter value = %d", counter);
+      counter=counter+1;
+   end
+end
+```
+
+Loop **forever** is executing until the *$finish* is encountered. In this case
+forever loop is equal while(1) loop. Example: <br/>
+```Verilog
+initial begin
+   clk = 1'b0;
+   forever #10 clk = ~clk;
+end
+```
