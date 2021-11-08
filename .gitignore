@@ -1,3 +1,8 @@
 .hdl_checker/*
 ExperimentsWithFPGA/4/uart_library/work/*
 ExperimentsWithFPGA/4/uart_library/vsim.wlf
+
+# For dff purposes
+learningVerilog/Dflip-flop/transcript
+learningVerilog/Dflip-flop/work/*
+learningVerilog/Dflip-flop/vsim.wlf
