@@ -3,7 +3,8 @@
 module dff_tb();
 
    reg clk = 1'b1;
-   always #10 clk = ~clk;
+   wire q;
+   reg d;
 
    initial begin
       #100 $stop;
@@ -11,8 +12,10 @@ module dff_tb();
 
    dff uut(
       .clk(clk),
-      .d(),
-      .q()
+      .d(d),
+      .q(q)
    );
+
+   always #10 clk = ~clk;
 
 endmodule
