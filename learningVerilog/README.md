@@ -3,7 +3,7 @@ Notes from learning Verilog language and ModelSim.
 ________________
 
 ## Table of contents <a name="tof"></a>
-1. [How to run examples?](#1)
+1. [How to run examples](#1)
 	1. [The first way - edaplayground.com](#11)
 	2. [The second way - ModelSim](#12)
 		1. [How to install](#121)
@@ -572,3 +572,22 @@ assign mux = C1 ? A0 : A1;
 | &&                 |            |
 | \|\|               |            |
 | ?: (conditional)   |  lowest    |
+
+| ![e](https://user-images.githubusercontent.com/43972902/140805092-def44a34-9d69-46d1-a8bb-91d644dc2c7b.png) | 
+|:--:|
+| **Blocking vs. nonblocking assignments** |
+| Source [08.11.2021]: *https://link.springer.com/chapter/10.1007/978-3-030-13605-5_8* |
+
+Example of event triggering: <br/>
+```Verilog
+@clk q = d; // Wait for changing clk, then assign q=d
+
+@(posedge clk) q = d; // q=d when clk is changing: 
+                      // 0->1,0->x,0->z,x->1,z->1
+
+@(negedge clk) q = d; // q=d when clk is changing:
+                      // 1->0,1->x,1->z,x->0,z->0 
+
+q=@(posedge clk) d;   // d is calculating immediately, but value is assigning
+                      // within rising clk edge
+```
