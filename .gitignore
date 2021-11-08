@@ -2,7 +2,13 @@
 ExperimentsWithFPGA/4/uart_library/work/*
 ExperimentsWithFPGA/4/uart_library/vsim.wlf
 
-# For dff purposes
+# For D flip-flop purposes
 learningVerilog/Dflip-flop/transcript
 learningVerilog/Dflip-flop/work/*
 learningVerilog/Dflip-flop/vsim.wlf
+
+# For JK flip-flop purposes
+learningVerilog/JKflip-flop/transcript
+learningVerilog/JKflip-flop/vsim.wlf
+learningVerilog/JKflip-flop/work/*
+
