@@ -7,7 +7,14 @@ module dff_tb();
    reg d;
 
    initial begin
-      #100 $stop;
+      #10 d = 1'b1;
+      #35 d = 1'b0;
+      #40 d = 1'b1;
+      #35 d = 1'b0;
+      #30 d = 1'b1;
+      #5  d = 1'b0;
+      #5  d = 1'b1;
+      #20 $stop;
    end
 
    dff uut(
