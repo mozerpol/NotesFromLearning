@@ -630,3 +630,13 @@ initial fork
    #15 a = 1'b1; // This is done at time t = 15  
 join
 ```
+
+If we want use a several times the same part of code then we can use 
+**function** or **task**. The differences between *task* and *function*: <br/>
+|Function|Task|
+|:--:|:--:|
+| Can run other functions, but not tasks | Can run other functions and tasks |
+| Execution time always is equal zero | Execution time can be longer than zero |
+| Can't contain delays and other timing structures | Can contain delays and others structures to controlling time |
+| Must have at least one type *input* argument | In can have none or several aruments of *input*, *inout* or *output* type |
+| It returns only one value | It doesn't return any value, but can return value using arguments like *inout* or *output* | 
