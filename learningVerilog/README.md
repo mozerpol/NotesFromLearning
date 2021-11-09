@@ -640,3 +640,9 @@ If we want use a several times the same part of code then we can use
 | Can't contain delays and other timing structures | Can contain delays and others structures to controlling time |
 | Must have at least one type *input* argument | In can have none or several aruments of *input*, *inout* or *output* type |
 | It returns only one value | It doesn't return any value, but can return value using arguments like *inout* or *output* | 
+
+Similarities: <br/>
+Functions and tasks are **local** for module in which they're defined. They both
+can contain local variables such as registers, events, etc. but can't contain
+*wire* type. Inside functions and tasks we can use only behavioral level, but
+withou *always* and *initial* blocks.
