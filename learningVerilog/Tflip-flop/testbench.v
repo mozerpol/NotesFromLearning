@@ -7,7 +7,13 @@ module tff_tb();
    tff dut(clk, t, q);
 
    initial begin
-      #20 $stop;
+      #10 t = 1'b0;
+      #40 t = 1'b1;
+      #40 t = 1'b0;
+      #40 t = 1'b1;
+      #5 t = 1'b0;
+      #5 t = 1'b1;
+      #40 $stop;
    end
 
    always #10 clk <= ~clk;
