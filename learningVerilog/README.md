@@ -645,4 +645,26 @@ Similarities: <br/>
 Functions and tasks are **local** for module in which they're defined. They both
 can contain local variables such as registers, events, etc. but can't contain
 *wire* type. Inside functions and tasks we can use only behavioral level, but
-withou *always* and *initial* blocks.
+withou *always* and *initial* blocks. <br/>
+How and when we're using *functions*: <br/>
+- When we don't have any delays
+- When we can return only one value
+- We have only one input argument
+
+We define functions using *function* and *endfunction* words. The value of the 
+function is returned in such a way that the variable of the *reg* type is set 
+and we return value to this *reg* register. Example: <br/>
+```Verilog
+function[11:0] sqr;
+   input[5:0] value; begin
+      sqr = value * value;
+   end
+endfunction
+```
+Usage of function inside block: <br/>
+```Verilog
+always@(a)
+   b = sqr(a);
+```
+
+How and when we're using *tasks*: <br/>
