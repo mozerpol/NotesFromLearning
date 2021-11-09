@@ -1,3 +1,6 @@
+/* The operation of this ff is very simple.
+* T - like toggle, high state switches current state to its opposite.
+*/
 module tff(
    input wire clk,
    input wire t,
