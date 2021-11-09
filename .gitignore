@@ -12,3 +12,7 @@ learningVerilog/JKflip-flop/transcript
 learningVerilog/JKflip-flop/vsim.wlf
 learningVerilog/JKflip-flop/work/*
 
+# For RS flip-flop purposes
+learningVerilog/SRflip-flop/transcript
+learningVerilog/SRflip-flop/vsim.wlf
+learningVerilog/SRflip-flop/work/*
