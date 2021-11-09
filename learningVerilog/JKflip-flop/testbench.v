@@ -6,7 +6,7 @@ module jkff_tb();
    reg j, k;
    wire q;
 
-   jkff uut(clk, j, k, q); 
+   jkff uut(clk, j, k, q);
 
    initial begin
       #10 j = 1'b0; k = 1'b0;
@@ -18,7 +18,6 @@ module jkff_tb();
       #40 j = 1'b0; k = 1'b0;
       #40 $stop;
    end
-
 
    always #10 clk <= ~clk;
 
