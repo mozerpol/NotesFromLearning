@@ -1,3 +1,10 @@
+/* The working is so easy, we can change state only when rising clk edge, we
+* have a few cases, when: 
+* 1. j = 0; k = 0; - no change
+* 2. j = 0; k = 1; - q = 0
+* 3. j = 1; k = 0; - q = 1
+* 4. j = 1; k = 1; - change state
+*/
 module jkff(
    input wire clk,
    input wire j,
