@@ -691,3 +691,25 @@ module tb;
    always@(a) sqr(a,b);
 endmodule
 ```
+
+There are two types of continuous procedural assignments: <br/>
+1. **assign** and **deassign**. Left side of this assigments must be *reg* type
+or connect to the *reg* type. This type of assigment has higher priority than
+simple procedural assigmnment. Example of using *assign*: <br/>
+```Verilog
+always @(preset)
+   if(preset) assign q = 1'b1;
+   else deassign q;
+```
+2. **force** and **release**. This procedural assignment allow to save value to
+the *reg* and *wire*. This type of assigment has higher priority than simple
+procedural assigmnment and *assign*. Example of using it: <br/>
+```Verilog
+always@(preset)
+   if (preset) begin
+      force FF.q = preset;
+   end
+   else begin
+      release FF.q;
+   end
+```
