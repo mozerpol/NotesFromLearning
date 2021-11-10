@@ -198,10 +198,10 @@ different meaning in a physical senese: <br/>
 |x | Undefined value|
 |z | High impedance state|
 
-Except these values we can assign to each value the 
-**strength level**. <a name="23"></a> If two signals controlling the same 
-wire have equal strengths but different values, then *x* signal will occur on 
-the wire. However, if one of the signals is stronger, its value will be fixed on 
+Except these values we can assign to each value the
+**strength level**. <a name="23"></a> If two signals controlling the same
+wire have equal strengths but different values, then *x* signal will occur on
+the wire. However, if one of the signals is stronger, its value will be fixed on
 the common wire. <br/>
 |Strength level | Type | Description|
 |:--:|:--:|:--:|
@@ -218,7 +218,7 @@ Important information about *reg* type. <br/>
 There is no any guarantee that *reg* type after compilation and synthesis, there
 will be a flip-flop in the target circuit in the place of register. It may or
 may not. <br/>
-In verilog we have **arrays** and **vectors**, <a name="24"></a> both can be 
+In verilog we have **arrays** and **vectors**, <a name="24"></a> both can be
 *wire* or *reg* type. Example of vectors: <br/>
 ```verilog
 wire A;          // Scalar
@@ -242,7 +242,7 @@ and vectors can look: <br/>
 | ![image](https://user-images.githubusercontent.com/43972902/129240935-f24d9937-de79-4396-a1fa-9cde75d9ed11.png) |
 | Source: *http://www.pepedocs.com/img/fpga-0.png* |
 
-In verilog we can declare a **integer** and **real** <a name="25"></a> numbers. 
+In verilog we can declare a **integer** and **real** <a name="25"></a> numbers.
 This type of numbers act as *reg* vars, we can save inside them any value. <br/>
 We must remember about fact, that *real* type of variable are not synthesizable,
 *integer* will be 32-bit wire.
@@ -263,7 +263,7 @@ reg [8*4:1] asdf; // reg [8*number_of_characters:1];
 If the declared *reg* value is too small, it will cut the string from the left,
 if there are too many declared characters, it will add zeros from the left. In
 string we can put special chars, such as *\n*, *\t*, etc. <br/>
-**System tasks** <a name="26"></a> are special commands for simulator, which 
+**System tasks** <a name="26"></a> are special commands for simulator, which
 begin with `$` sign. Example of system tasks:
 1. $display("Hello World") - it print out string on the display. We can also use
 it to display values of variables, it's like *printf* in C. Example: <br/>
@@ -291,7 +291,7 @@ monitoring.
 4. $stop - stop simulation and switches simulator to interactive mode.
 5. $finish - ends the simulation.
 
-Such as in C lang we can **define** <a name="27"></a> macros. We marked them 
+Such as in C lang we can **define** <a name="27"></a> macros. We marked them
 with back tick *\`* sign (in C we're using *#* sign). Example: <br/>
 ```Verilog
 `define TRUE 1'b1
@@ -317,7 +317,7 @@ If we need conditional code compilation, we can use key words sucha as:
    `include "memory_fpga.v";
 `endif
 ```
-The basics unit in Verilog is **module**. <a name="28"></a> It's like function 
+The basics unit in Verilog is **module**. <a name="28"></a> It's like function
 in C. Example of two nested modules: <br/>
 |![image](https://user-images.githubusercontent.com/43972902/140027638-4d2644b9-30e8-4047-9d4e-e69e1e6ac030.png)|
 |:--:|
@@ -351,9 +351,9 @@ So as we can notice we have `module` word, after this is its name and ports
 list. Between `module` and `endmodule;` we have declaration of variables,
 assigments, other modules, behavioral blocks such as `always` and `initial`.
 
-**Ports** <a name="29"></a> are used to exchange information with the 
-environment. If we don't specify the type, then it'll by the *wire* by default. 
-The *output* ports can be *reg* type. We have special rules, which tell us how 
+**Ports** <a name="29"></a> are used to exchange information with the
+environment. If we don't specify the type, then it'll by the *wire* by default.
+The *output* ports can be *reg* type. We have special rules, which tell us how
 we can connect ports together:
 - *input* - can be connected inside module to the *wire* type. Outside can be
     connected to *reg* or *wire*.
@@ -405,7 +405,7 @@ endmodule
 ```
 
 If we don't need any access from the simulator level to the specyfic **gates**,
-<a name="211"></a> isn't necessary give the names for them, so we can do 
+<a name="211"></a> isn't necessary give the names for them, so we can do
 something like this: <br/> `and (OUT, IN1, IN2);` <br/>
 Except typical gates we have also **bufors** `buf` and **inverters** `not`. They
 can have one input and a several outputs. Outputs always will be at the
@@ -573,7 +573,7 @@ assign mux = C1 ? A0 : A1;
 | \|\|               |            |
 | ?: (conditional)   |  lowest    |
 
-| ![e](https://user-images.githubusercontent.com/43972902/140805092-def44a34-9d69-46d1-a8bb-91d644dc2c7b.png) | 
+| ![e](https://user-images.githubusercontent.com/43972902/140805092-def44a34-9d69-46d1-a8bb-91d644dc2c7b.png) |
 |:--:|
 | **Blocking vs. nonblocking assignments** |
 | Source [08.11.2021]: *https://link.springer.com/chapter/10.1007/978-3-030-13605-5_8* |
@@ -582,11 +582,11 @@ Example of event triggering: <br/>
 ```Verilog
 @clk q = d; // Wait for changing clk, then assign q=d
 
-@(posedge clk) q = d; // q=d when clk is changing: 
+@(posedge clk) q = d; // q=d when clk is changing:
                       // 0->1,0->x,0->z,x->1,z->1
 
 @(negedge clk) q = d; // q=d when clk is changing:
-                      // 1->0,1->x,1->z,x->0,z->0 
+                      // 1->0,1->x,1->z,x->0,z->0
 
 q=@(posedge clk) d;   // d is calculating immediately, but value is assigning
                       // within rising clk edge
@@ -596,8 +596,8 @@ Loop **repeat** acts the specified number of times and must include the number
 of repetitions. The number of repetitions is calculate in the first executing of
 repeat loop, example: <br/>
 ```Verilog
-initial begin 
-   counter = 0; 
+initial begin
+   counter = 0;
 
    repeat(12) begin
       $display("Counter value = %d", counter);
@@ -625,13 +625,13 @@ reg a;
 
 initial fork
    a = 1'b0;     // This is done at time t = 0
-   #5 a = 1'b1;  // This is done at time t = 5  
-   #10 a = 1'b0; // This is done at time t = 10  
-   #15 a = 1'b1; // This is done at time t = 15  
+   #5 a = 1'b1;  // This is done at time t = 5
+   #10 a = 1'b0; // This is done at time t = 10
+   #15 a = 1'b1; // This is done at time t = 15
 join
 ```
 
-If we want use a several times the same part of code then we can use 
+If we want use a several times the same part of code then we can use
 **function** or **task**. The differences between *task* and *function*: <br/>
 |Function|Task|
 |:--:|:--:|
@@ -639,7 +639,7 @@ If we want use a several times the same part of code then we can use
 | Execution time always is equal zero | Execution time can be longer than zero |
 | Can't contain delays and other timing structures | Can contain delays and others structures to controlling time |
 | Must have at least one type *input* argument | In can have none or several aruments of *input*, *inout* or *output* type |
-| It returns only one value | It doesn't return any value, but can return value using arguments like *inout* or *output* | 
+| It returns only one value | It doesn't return any value, but can return value using arguments like *inout* or *output* |
 
 Similarities: <br/>
 Functions and tasks are **local** for module in which they're defined. They both
@@ -651,8 +651,8 @@ How and when we're using *functions*: <br/>
 - When we can return only one value
 - We have only one input argument
 
-We define functions using *function* and *endfunction* words. The value of the 
-function is returned in such a way that the variable of the *reg* type is set 
+We define functions using *function* and *endfunction* words. The value of the
+function is returned in such a way that the variable of the *reg* type is set
 and we return value to this *reg* register. Example: <br/>
 ```Verilog
 function[11:0] sqr;
@@ -668,3 +668,26 @@ always@(a)
 ```
 
 How and when we're using *tasks*: <br/>
+- When we need any delay or events
+- When we need return more than zero values
+- When we don't need any input arguments
+
+We define tasks using *task* and *endtask* words. The arguments passed to task
+can be *input*, *output* or *inout* type. Example of task and usage of this
+construct: <br/>
+```Verilog
+module tb;
+   reg [11:0] b;
+   reg [5:0] a;
+   // sqr task definition:
+   task sqr;
+      input [5:0] value;
+      output [11:0] sqr;
+         begin
+            sqr = value * value;
+         end
+   endtask
+   // sqr function call
+   always@(a) sqr(a,b);
+endmodule
+```
