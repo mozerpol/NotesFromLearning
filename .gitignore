@@ -26,3 +26,8 @@ learningVerilog/Tflip-flop/work/*
 learningVerilog/counter/transcript
 learningVerilog/counter/vsim.wlf
 learningVerilog/counter/work/*
+
+# For simpleRAM purposes
+learningVerilog/simpleRAM/transcript
+learningVerilog/simpleRAM/vsim.wlf
+learningVerilog/simpleRAM/work/*
