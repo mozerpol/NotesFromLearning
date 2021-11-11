@@ -7,7 +7,7 @@ module counter_tb;
    wire ov;
    
    counter #(
-      .N(3)
+      .N(3) // Count up to 2^3 = 8. From 0 to 7
    ) uut(
       clk, rst, ce, ov
    );

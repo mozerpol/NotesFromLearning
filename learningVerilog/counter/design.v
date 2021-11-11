@@ -11,7 +11,7 @@ module counter #(
    output wire ov
 );
    reg [N-1:0] cnt_value = {N{1'b0}};
-   reg [N-1:0] cnt_value_max = {N{1'b1}};
+   reg [N-1:0] cnt_value_max = {N{1'b1}}; // Count up to this value
    reg ov_reg;
    assign ov = ov_reg;
    reg [1:0] state;
@@ -28,9 +28,9 @@ module counter #(
    end
 
    always@(posedge clk) begin
-      if(cnt_value == cnt_value_max) begin
-         ov_reg <= 1'b1;
-         cnt_value <= 0;
+      if(cnt_value == cnt_value_max) begin // When counted to max, then:
+         ov_reg <= 1'b1; // Overflow output to high state for one clk
+         cnt_value <= 0; // Reset counter
       end else ov_reg <= 1'b0;
    end
 
