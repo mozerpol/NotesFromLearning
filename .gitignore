@@ -21,3 +21,8 @@ learningVerilog/SRflip-flop/work/*
 learningVerilog/Tflip-flop/transcript
 learningVerilog/Tflip-flop/vsim.wlf
 learningVerilog/Tflip-flop/work/*
+
+# For counter purposes
+learningVerilog/counter/transcript
+learningVerilog/counter/vsim.wlf
+learningVerilog/counter/work/*
