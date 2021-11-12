@@ -1,11 +1,12 @@
 module simpleRAM #(
    parameter wordSize = 8,
-   parameter addressSize = 32
+   parameter addressSize = 32,
+   parameter W = $clog2(addressSize)
 )(
    input wire clk,
    input wire we, // Write enable
    input wire re, // Read enable
-   input wire addr,
+   input wire [W-1:0] addr,
    inout wire [7:0] data
 );
 
@@ -21,7 +22,7 @@ module simpleRAM #(
    always@(posedge clk) begin
     //  if(we&re); // do sth
       if(we) begin
-         memory[0][7:0] <= data;
+         memory[addr][7:0] <= data;
       end
    end
 
