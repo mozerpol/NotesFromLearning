@@ -782,3 +782,30 @@ Also we added index ranges: <br/>
 reg [31:0] array2 [0:255][0:15];
 wire [7:0] out2 = array2[10][17][31:24];
 ```
+4. Other changes: <br/>
+- Added the *power operator*: \*\*
+- Possible reaction to all events in a combination block: <br/>
+    ```Verilog
+    always @* // dla układów kombinacyjnych
+      if (sel)
+         y = a;
+      else
+         y = b;
+    ```
+- Simplified events of *or* type, Verilog 1995: <br/>
+    ```Verilog
+      always @(a or b or c or d or sel)
+    ```
+    In Verilog 2001 we can do: <br/>
+    ```Verilog
+      always @(a, b, c, d, sel)
+    ```
+- We can define port and its type in one line, now we can do: <br/>
+    ```Verilog
+      module mux8 (
+         output reg [7:0] y,
+         input wire [7:0] a,
+         input wire [7:0] b,
+         input wire en 
+      );
+    ```
