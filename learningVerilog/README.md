@@ -765,3 +765,20 @@ endconfig
 ```Verilog
 wire [7:0] dataN = word[byte_num*8 -: 8];
 ```
+3. Multidimensional arrays. Verilog standard from 1995 makes possible definition
+of one-dimension arrays, example: <br/>
+```Verilog
+reg [7:0] array1 [0:255];
+wire [7:0] out1 = array1[address];
+```
+In the standard from 2001 we can for example define three-dimensional array with
+8-bit vars: <br/>
+```Verilog
+wire [7:0] array3 [0:255][0:255][0:15];
+wire [7:0] out3 = array3[addr1][addr2][addr3];
+```
+Also we added index ranges: <br/>
+```Verilog
+reg [31:0] array2 [0:255][0:15];
+wire [7:0] out2 = array2[10][17][31:24];
+```
