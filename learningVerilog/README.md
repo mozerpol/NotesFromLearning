@@ -713,3 +713,28 @@ always@(preset)
       release FF.q;
    end
 ```
+
+For test bench purposes we can define **time scale** by using: <br/>
+\``timescale <time_unit>/<precision>`, where: <br/>
+- time_unit - time unit for delays, where we can use: <br/>
+    |Character|Unit|
+    |:--:|:--:|
+    | s  | seconds      |
+    | ms | milliseconds |
+    | us | microseconds |
+    | ns | nanoseconds  |
+    | ps | picoseconds  |
+    | fs | femtoseconds |
+- precision - the accuracy with which delays are rounded during simulation. In
+    this case we can use only three values: 10, 100 or 1000.
+
+Example: <br/>
+```Verilog
+`timescale 10ns/1ns
+```
+or
+```Verilog
+`timescale 100us/10ns
+```
+
+
