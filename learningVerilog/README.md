@@ -743,3 +743,19 @@ descriptor is responsible for one file. Each *$fopen* call opens a new channel
 with the next bit set to 1, up to 31. This solution has one advantage, we can
 save simultaneously a several files at one time. <br/>
 To close file we're using **$fclose** command.
+
+Verilog standard from 1995 was modified in 2001. Below are the most important 
+changes: <br/>
+1. Configuration block - it's a special block in which we can set a few addition
+parameters for compiler.
+```Verilog
+config cfg4
+   /* Set top level module: */
+   design rtl_Main.top
+   /* Library search order: */
+   default lib20um lib_rtl lib_gate;
+   /* Indication library for specific modules: */
+   instance counter.dut.g2 lib_rtl lib_gate;
+endconfig
+```
+
