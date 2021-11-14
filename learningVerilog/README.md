@@ -28,8 +28,16 @@ ________________
    15. [Logical operators](#215)
    16. [Reduction bit, concatenation, three-argument operator](#216)
    17. [Operator precedence](#217)
-3. [asic-world](#218)
-4. [Język Verilog w projektowaniu układów FPGA](#219)
+   18. [Blocking & nonblocking assignments](#218)
+   19. [Repeat loop](#219)
+   20. [Forever loop](#220)
+   21. [Function & task](#221)
+   22. [Assign, deassign, force and release](#222)
+   23. [Time scale](#223)
+   24. [$fopen, $fclose](#224)
+   25. [Changes in Verilog 2001](#225)
+3. [asic-world](#3)
+4. [Język Verilog w projektowaniu układów FPGA](#4)
 
 ## 1. How to run examples? <a name="1"></a>
 In this repo I'll put some examples of simple digital circuits written in
@@ -573,6 +581,8 @@ assign mux = C1 ? A0 : A1;
 | \|\|               |            |
 | ?: (conditional)   |  lowest    |
 
+<a name="218"></a>
+
 | ![e](https://user-images.githubusercontent.com/43972902/140805092-def44a34-9d69-46d1-a8bb-91d644dc2c7b.png) |
 |:--:|
 | **Blocking vs. nonblocking assignments** |
@@ -592,9 +602,9 @@ q=@(posedge clk) d;   // d is calculating immediately, but value is assigning
                       // within rising clk edge
 ```
 
-Loop **repeat** acts the specified number of times and must include the number
-of repetitions. The number of repetitions is calculate in the first executing of
-repeat loop, example: <br/>
+Loop **repeat** <a name="219"></a> acts the specified number of times and must
+include the number of repetitions. The number of repetitions is calculate in the
+first executing of repeat loop, example: <br/>
 ```Verilog
 initial begin
    counter = 0;
@@ -606,8 +616,8 @@ initial begin
 end
 ```
 
-Loop **forever** is executing until the *$finish* is encountered. In this case
-forever loop is equal while(1) loop. Example: <br/>
+Loop **forever** <a name="220"></a> is executing until the *$finish* is 
+encountered. In this case forever loop is equal while(1) loop. Example: <br/>
 ```Verilog
 initial begin
    clk = 1'b0;
@@ -632,7 +642,8 @@ join
 ```
 
 If we want use a several times the same part of code then we can use
-**function** or **task**. The differences between *task* and *function*: <br/>
+**function** or **task**. <a name="221"></a> The differences between *task* and 
+*function*: <br/>
 |Function|Task|
 |:--:|:--:|
 | Can run other functions, but not tasks | Can run other functions and tasks |
@@ -693,9 +704,9 @@ endmodule
 ```
 
 There are two types of continuous procedural assignments: <br/>
-1. **assign** and **deassign**. Left side of this assigments must be *reg* type
-or connect to the *reg* type. This type of assigment has higher priority than
-simple procedural assigmnment. Example of using *assign*: <br/>
+1. **assign** and **deassign**. <a name="222"></a> Left side of this assigments
+must be *reg* type or connect to the *reg* type. This type of assigment has 
+higher priority than simple procedural assigmnment. Example of using *assign*: <br/>
 ```Verilog
 always @(preset)
    if(preset) assign q = 1'b1;
@@ -714,7 +725,8 @@ always@(preset)
    end
 ```
 
-For test bench purposes we can define **time scale** by using: <br/>
+For test bench purposes we can define **time scale** <a name="223"></a> by 
+using: <br/>
 \``timescale <time_unit>/<precision>`, where: <br/>
 - time_unit - time unit for delays, where we can use: <br/>
     |Character|Unit|
@@ -737,7 +749,7 @@ or
 `timescale 100us/10ns
 ```
 
-System command **$fopen** give us possibility to open files. <br/>
+System command **$fopen** <a name="224"></a> give us possibility to open files. <br/>
 *$fopen* returns 32-bit descriptor, which is *integer* type. Each bit in the
 descriptor is responsible for one file. Each *$fopen* call opens a new channel
 with the next bit set to 1, up to 31. This solution has one advantage, we can
@@ -745,7 +757,7 @@ save simultaneously a several files at one time. <br/>
 To close file we're using **$fclose** command.
 
 Verilog standard from 1995 was modified in 2001. Below are the most important 
-changes: <br/>
+changes: <br/> <a name="225"></a>
 1. Configuration block - it's a special block in which we can set a few addition
 parameters for compiler. <br/>
 ```Verilog
