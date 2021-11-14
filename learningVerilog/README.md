@@ -747,7 +747,7 @@ To close file we're using **$fclose** command.
 Verilog standard from 1995 was modified in 2001. Below are the most important 
 changes: <br/>
 1. Configuration block - it's a special block in which we can set a few addition
-parameters for compiler.
+parameters for compiler. <br/>
 ```Verilog
 config cfg4
    /* Set top level module: */
@@ -758,4 +758,10 @@ config cfg4
    instance counter.dut.g2 lib_rtl lib_gate;
 endconfig
 ```
-
+2. A new way to index vectors. Is a new notation: *base*/*width*: <br/>
+`[base_expr +: width_expr]` <br/>
+`[base_expr -: width_expr]` <br/>
+*base_expr* can change, but *width_expr* must be constant. Example: <br/>
+```Verilog
+wire [7:0] dataN = word[byte_num*8 -: 8];
+```
