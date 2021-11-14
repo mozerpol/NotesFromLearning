@@ -737,4 +737,9 @@ or
 `timescale 100us/10ns
 ```
 
-
+System command **$fopen** give us possibility to open files. <br/>
+*$fopen* returns 32-bit descriptor, which is *integer* type. Each bit in the
+descriptor is responsible for one file. Each *$fopen* call opens a new channel
+with the next bit set to 1, up to 31. This solution has one advantage, we can
+save simultaneously a several files at one time. <br/>
+To close file we're using **$fclose** command.
