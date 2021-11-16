@@ -26,3 +26,10 @@ transitions graph: <br/>
 | Transitions between states in the receiver |
 |Source: *Elektronika Praktyczna 05.2020, p. 109*|
 
+At the beginning we're in the WAIT state, where we're waiting for start bit (
+it's logic zero on *rx* input). If we recognize low state, then we're going to
+START state, where we're waitnig for *rx_clk*, which will occur in the middle of
+start bit. Then we can go to the DATA state, in which we must receive eigth
+bits in one data frame. Below is output from Modelsim, where we can notice that
+*rx_clk* is in the middle of the *rtx*: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142006891-45e72d00-fc58-4501-9938-bda3819079ae.png)
