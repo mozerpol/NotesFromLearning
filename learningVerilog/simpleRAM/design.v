@@ -11,19 +11,9 @@ module simpleRAM #(
 );
 
    reg [wordSize-1:0] memory [0:addressSize-1];
-   reg ce;
 
-   /*
-   assign memory[0][7:0] = 8'h1;
-   assign memory[1][7:0] = 8'h2;
-   assign memory[2][7:0] = 8'h3;
-   */
+   assign data = (re & !we) ? memory[addr] : 8'hzz;
 
-   always@(posedge clk) begin
-    //  if(we&re); // do sth
-      if(we) begin
-         memory[addr][7:0] <= data;
-      end
-   end
+   always@(posedge clk) if(we & !re) memory[addr] <= data;
 
 endmodule
