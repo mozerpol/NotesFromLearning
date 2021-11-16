@@ -17,3 +17,12 @@ we can see arrows, they indicate moments when we must react.
 |![image](https://user-images.githubusercontent.com/43972902/141997910-4e16bcab-04e6-4e65-b6a8-b786e614704d.png)|
 |:--:|
 |Source: *Elektronika Praktyczna 05.2020, p. 109*|
+
+The code is a little bit similar to transmitter, there also is state machine,
+where we have four states: WAIT, START, DATA and STOP. Below is state machine
+transitions graph: <br/>
+| ![image](https://user-images.githubusercontent.com/43972902/142005062-7a2bbc81-b1cb-4a9e-9a69-7d3002f82f59.png) |
+|:--:|
+| Transitions between states in the receiver |
+|Source: *Elektronika Praktyczna 05.2020, p. 109*|
+
