@@ -5,24 +5,30 @@
  * All rights reserved.
  */
 
-`default_nettype none
+ `default_nettype none
 
-module inc (
-    StreamBus.Slave bus_in,
-    StreamBus.Master bus_out
+module uart_inc #(
+	parameter F = 8000000
+) (
+    input wire clk,
+    input wire rst,
+    input wire rx,
+    output logic tx
 );
+    StreamBus #(.N(8)) bus_rx (.clk(clk), .rst(rst));
+    StreamBus #(.N(8)) bus_tx (.clk(clk), .rst(rst));
 
-    always_ff @(posedge bus_in.clk)
-        if (bus_out.ready)
-            bus_out.data <= 8'd1 + bus_in.data;
+    uart_rx #(.F(F), .BAUD(115200)) urx (
+        .rx(rx),
+        .bus(bus_rx));
 
-    always_ff @(posedge bus_in.clk or negedge bus_in.rst)
-        if (!bus_in.rst)
-            bus_out.valid = 1'b0;
-        else if (bus_out.ready)
-            bus_out.valid <= bus_in.valid;
+    inc increment (
+        .bus_in(bus_rx),
+        .bus_out(bus_tx));
 
-    assign bus_in.ready = bus_out.ready;
+    uart_tx #(.F(F), .BAUD(115200)) utx (
+        .bus(bus_tx),
+        .tx(tx));
 
 endmodule
 
