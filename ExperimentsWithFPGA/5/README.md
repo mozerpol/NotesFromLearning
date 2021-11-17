@@ -1,5 +1,5 @@
 ## Eksperymenty z FPGA (6)
-*Elektronika Praktyczna* Nr 5 (328) • 05.2020
+*Elektronika Praktyczna* Nr 5 (328) • 05.2020 <br/>
 This issue is about *UART* - *Universal Asynchronous Receiver* and *PWM*. At the
 beginning I focused on UART. PWM I'll describe later. I is transmitter in 
 previous repo, 
@@ -7,8 +7,9 @@ previous repo,
 
 As before I divided this issue into two parts. The first is about library from
 *EP*, next is my own library. <br/>
-During idle we have logic one, so our receiver wait for logic zero, which means
-the start of transmission. At this point we should run our internal clock for
+Ok, so how it works? During idle we have logic one, so our receiver wait for 
+logic zero, which means the start of transmission. At this point we should run
+our internal clock for
 measuring when we have data bits. It's very important. We would like to know
 when we're sure when we have the new bit. So we must read data not during rising
 edge of this bit, but in the middle. It sounds a little bit complicated, but I
@@ -33,3 +34,12 @@ start bit. Then we can go to the DATA state, in which we must receive eigth
 bits in one data frame. Below is output from Modelsim, where we can notice that
 *rx_clk* is in the middle of the *rtx*: <br/>
 ![image](https://user-images.githubusercontent.com/43972902/142006891-45e72d00-fc58-4501-9938-bda3819079ae.png)
+
+How to implement this on FPGA board? <br/> As previous, create a new project for
+SystemVerilog lang. After copying the files, compile the project: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142235454-bb7b3182-36c7-4d37-9232-f0c98a774a15.png)
+
+and assign ports to the correct pins. I did it in this way: <br/>
+![image](https://user-images.githubusercontent.com/43972902/142235161-0adc884c-5228-48d4-b97b-f13ecd83cf42.png)
+
+
