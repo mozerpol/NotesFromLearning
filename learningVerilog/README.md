@@ -821,3 +821,7 @@ wire [7:0] out2 = array2[10][17][31:24];
          input wire en 
       );
     ```
+## 3. asic-world <a name="3"></a>
+Notes based on https://www.asic-world.com/ website. I won't describe all things,
+but only important for me.<br/>
+
