@@ -1,5 +1,5 @@
-`define SAMPLING 1'b0
-`define IDLE     1'b1
+`define IDLE     1'b0
+`define SAMPLING 1'b1
 
 module uart_rx #(
    parameter F = 8000000,
@@ -13,11 +13,12 @@ module uart_rx #(
    
    wire [3:0] i;
    wire ov_clkBaud;
-   reg rst_after_ov = 1'b0;
+   reg rst_after_ov = 1'b1;
    wire tx_clk; // Bring together clkTx with clkBaud
+   reg state = 1'b0;
    
    // Generate clock cycle for data transmission (baud rate)
-   counter #(.N((F+BAUD/2)/BAUD)) clkTx (
+   counter #(.N(1000)) clkTx (
       .clk(clk),
       .rst(!(rst_after_ov || rst)),
       .ce(1'b1),
@@ -34,8 +35,18 @@ module uart_rx #(
       .ov(ov_clkBaud)
    );
 
+   reg flag = 1'b1;
+
    always@(posedge clk) begin
-      if(!rx &)
+      if(!rx & flag) begin
+         state <= 1'b1;
+         flag <= 1'b0;
+         rst_after_ov  <= 1'b0; // Within sending data dont reset counters
+      end
+      if(ov_clkBaud) begin
+         rst_after_ov <= 1'b1; //Reset all counters after sending all data
+         flag <= 1'b1;
+      end
    end
 
 endmodule
