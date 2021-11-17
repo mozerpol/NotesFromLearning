@@ -1,10 +1,14 @@
+`define SAMPLING 1'b0
+`define IDLE     1'b1
+
 module uart_rx #(
    parameter F = 8000000,
    parameter BAUD = 115200
 ) (
    input wire rx,
    input wire clk,
-   input wire rst
+   input wire rst,
+   output wire [7:0] data_out
 );
    
    wire [3:0] i;
@@ -22,7 +26,7 @@ module uart_rx #(
    );
    
    // Go through array and send data 
-   counter #(.N(10)) clkBaud (
+   counter #(.N(9)) clkBaud (
       .clk(clk),
       .rst(!(rst_after_ov || rst)),
       .ce(tx_clk),
@@ -30,5 +34,8 @@ module uart_rx #(
       .ov(ov_clkBaud)
    );
 
+   always@(posedge clk) begin
+      if(!rx &)
+   end
 
 endmodule
