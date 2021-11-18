@@ -43,3 +43,18 @@ thanks to this we can mix different abstract layers in one project:
 - Structural level - the structure of this layer is similar to the list of
     connections, which shows the project as a structure of elements connected by
     signal networks.
+
+Unlike Verilog, variable names and keywords are not case-sensitive, e.g keyword
+*ENTITY* is equal *entity* or *TRUE* is equal *TRUE*. Comments are after `--`
+signs: <br/>
+```vhdl
+rst_i : in std_ulogic; -- Comment
+-- Next part of comment
+```
+VHDL has a list of reserved words that are part of the language and cannot be 
+used for block names, signals, or other identifiers. The reserved words are 
+shown below:
+|![image](https://user-images.githubusercontent.com/43972902/142483788-9feb2bf3-61a0-49cb-b2f6-3a71ef249afe.png)|
+|:--:|
+|VHDL reserved words|
+|Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 114*|
