@@ -27,3 +27,19 @@ Except this we have a different extensions of VHDL language: <br/>
 - 1076.3 - includes data types, which are needed for synthesis: *numeric_bit* or
     *numeric_std*
 - 1076.4 - describes delays in digital circuits: *vital*.
+
+VHDL allows to add your own procedures in the C language thanks to *VHPI* - *VHDL
+Procedural Interface*. In the VHDL we have usually a three abstract layers,
+thanks to this we can mix different abstract layers in one project:
+- Behavioral level - here, we're focus mainly how output react on input signals.
+    We not care how to realize circuit inside FPGA, we not care about clock
+    frequency or word lenth.
+- Register Transfer level - lower abstract level than *behavioral*. It
+    corresponds to a detailed block description in a traditional design method,
+    where are used functional blocks and their functions, input and output signals,
+    and data buses. Clock and reset signals must be defined in the project, and 
+    data buses and memory elements (flip-flops, counters, memories) must be 
+    assigned specific numbers of bits. 
+- Structural level - the structure of this layer is similar to the list of
+    connections, which shows the project as a structure of elements connected by
+    signal networks.
