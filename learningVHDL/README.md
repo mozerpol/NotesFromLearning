@@ -18,11 +18,11 @@ how to use *edaplayground* and *Modelsim*.
 ## 2. Język Verilog w projektowaniu układów FPGA: <a name="2"></a>
 The script about VHDL starts on page 110. <br/>
 VHDL - *Very High Speed Integrated Circuits Hardware Description Language*. In
-the 1993 introduced standard *1164*, where defined data type. 
+the 1993 introduced standard *1164*, where defined data type.
 The data types have been grouped together in a package called *std_logic_1164*.
 Except this we have a different extensions of VHDL language: <br/>
 - 1076.1 - VHDL-AMS - added the ability to simulate and model analog circuits
-- 1076.2 - includess data types which are needed for high-level modeling and 
+- 1076.2 - includess data types which are needed for high-level modeling and
     simulation like *math_real* or *math_complex*.
 - 1076.3 - includes data types, which are needed for synthesis: *numeric_bit* or
     *numeric_std*
@@ -37,9 +37,9 @@ thanks to this we can mix different abstract layers in one project:
 - Register Transfer level - lower abstract level than *behavioral*. It
     corresponds to a detailed block description in a traditional design method,
     where are used functional blocks and their functions, input and output signals,
-    and data buses. Clock and reset signals must be defined in the project, and 
-    data buses and memory elements (flip-flops, counters, memories) must be 
-    assigned specific numbers of bits. 
+    and data buses. Clock and reset signals must be defined in the project, and
+    data buses and memory elements (flip-flops, counters, memories) must be
+    assigned specific numbers of bits.
 - Structural level - the structure of this layer is similar to the list of
     connections, which shows the project as a structure of elements connected by
     signal networks.
@@ -51,8 +51,8 @@ signs: <br/>
 rst_i : in std_ulogic; -- Comment
 -- Next part of comment
 ```
-VHDL has a list of reserved words that are part of the language and cannot be 
-used for block names, signals, or other identifiers. The reserved words are 
+VHDL has a list of reserved words that are part of the language and cannot be
+used for block names, signals, or other identifiers. The reserved words are
 shown below:
 |![image](https://user-images.githubusercontent.com/43972902/142483788-9feb2bf3-61a0-49cb-b2f6-3a71ef249afe.png)|
 |:--:|
@@ -80,7 +80,7 @@ A way of writing real numbers: <br/>
 A single alphanumeric character we write using single quotation mark: `'a'` or
 `'B'`. <br/>
 String constants are indicated by quotation marks: `"Ala ma kota"` or `"Abc"`.
-<br/> We can write strings of bits as bit-string literals: `"1001_1001"`, 
+<br/> We can write strings of bits as bit-string literals: `"1001_1001"`,
 `B"1001_1001"` or `O"167"X"abC"`, where sign *B*, *X* or *O* means base.
 
 Enum type is a basic type in VHDL. It is defined by specifying all values that a
@@ -103,3 +103,36 @@ signal a: t_MYTYPE;
 x_v := BLUE;
 a <= 'Z';
 ```
+
+VHDL has a built-in, unnamed, integer type. The maximum range of this values is
+-2,147,483,647 to 2,147,483,647. This type serves as the basis for defining
+other integral types. The definition of an integral type is as follows: <br/>
+`type <type_name> is range <range_integer>`, example: <br/>
+```VHDL
+type integer is range -2147483647 to 2147483647;
+type PERCENT is range –100 to 100;
+```
+
+After the synthesis, the PERCENT type value will be represented by 8-bit vectors
+(1 bit sign, 7 bit value). <br/>
+The VHDL language allows to declare two different array variables: <br/>
+- Constrained array type
+- Unconstrained array type
+
+When defining a constrained array type, the range of the index values must be
+specified immediately when defining that type, example: <br/>
+```VHDL
+type t_A is array (7 downto 0) of std_logic;
+type t_B is array (0 to 7)     of std_logic;
+```
+Once you define an array type, you can declare variables of that type. The
+declaration of signals of the *t_A* and *t_B* types is presented below:
+```VHDL
+signal reg_a : t_A;
+signal reg_b : t_B;
+```
+
+If the content of these variables is the binary number: *00000001*, then: <br/>
+|![image](https://user-images.githubusercontent.com/43972902/142500438-c3602aca-136c-4054-81db-6039203e7686.png)|
+|:--:|
+|Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 118*|
