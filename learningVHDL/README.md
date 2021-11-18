@@ -82,3 +82,24 @@ A single alphanumeric character we write using single quotation mark: `'a'` or
 String constants are indicated by quotation marks: `"Ala ma kota"` or `"Abc"`.
 <br/> We can write strings of bits as bit-string literals: `"1001_1001"`, 
 `B"1001_1001"` or `O"167"X"abC"`, where sign *B*, *X* or *O* means base.
+
+Enum type is a basic type in VHDL. It is defined by specifying all values that a
+variable can have: <br/>
+```VHDL
+type <type_name> is ( <value_1>, <value_2>, ..., <value_n>);
+```
+
+Order of values is important. The value on the left is considered as the
+smallest and the simulator initializes the signals with the value on the left
+first. Example: <br/>
+```VHDL
+type t_COLOR is (RED, GREEN, BLUE);
+type t_MYTYPE is ('0', '1', 'U', 'Z');
+```
+Examples of value assignments to variables of an enumerated type: <br/>
+```VHDL
+variable x_v : t_COLOR;
+signal a: t_MYTYPE;
+x_v := BLUE;
+a <= 'Z';
+```
