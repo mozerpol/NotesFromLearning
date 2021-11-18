@@ -58,3 +58,27 @@ shown below:
 |:--:|
 |VHDL reserved words|
 |Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 114*|
+
+A way of writing integer numbers: <br/>
+
+|What| How|
+|:--:|:--:|
+|Decimal base|170, 1_7_0, 10#170#|
+|Binary base|2#1010_1010#|
+|Octal base|8#252#|
+|Hex base|16#AA#|
+
+A way of writing real numbers: <br/>
+
+|What| How|
+|:--:|:--:|
+|Decimal base|123.1|
+|Binary base|2#101001.01#e1|
+|Octal base|8#1234567.54#|
+|Hex base|16#abC.d#|
+
+A single alphanumeric character we write using single quotation mark: `'a'` or
+`'B'`. <br/>
+String constants are indicated by quotation marks: `"Ala ma kota"` or `"Abc"`.
+<br/> We can write strings of bits as bit-string literals: `"1001_1001"`, 
+`B"1001_1001"` or `O"167"X"abC"`, where sign *B*, *X* or *O* means base.
