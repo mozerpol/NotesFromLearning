@@ -152,3 +152,16 @@ range of indices are determined: <br/>
 signal my_vector1 : std_logic_vector (5 downto –5);
 signal my_vector2 : std_logic_vector (1 to 11);
 ```
+
+Access to array element is done thanks to curly braces: <br/>
+`<id_of_array> (<expression>)`, where *expression* can be: <br/>
+- number (e.g 3)
+- variable (e.g *x*)
+- range (e.g 3 to 6)
+
+Example array acccess: <br/>
+```VHDL
+tab(6);
+tab(x);
+tab(3 to 6);
+```
