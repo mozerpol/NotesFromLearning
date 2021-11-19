@@ -17,12 +17,12 @@ how to use *edaplayground* and *Modelsim*.
 
 ## 2. Język Verilog w projektowaniu układów FPGA: <a name="2"></a>
 The script about VHDL starts on page 110. <br/>
-VHDL - *Very High Speed Integrated Circuits Hardware Description Language*. In
-the 1993 introduced standard *1164*, where defined data type.
+VHDL - *Very High Speed Integrated Circuits Hardware Description Language*. In 
+1993, the 1164 standard was introduced, where defined data type. <br/>
 The data types have been grouped together in a package called *std_logic_1164*.
 Except this we have a different extensions of VHDL language: <br/>
 - 1076.1 - VHDL-AMS - added the ability to simulate and model analog circuits
-- 1076.2 - includess data types which are needed for high-level modeling and
+- 1076.2 - includes data types which are needed for high-level modeling and
     simulation like *math_real* or *math_complex*.
 - 1076.3 - includes data types, which are needed for synthesis: *numeric_bit* or
     *numeric_std*
@@ -45,8 +45,8 @@ thanks to this we can mix different abstract layers in one project:
     signal networks.
 
 Unlike Verilog, variable names and keywords are not case-sensitive, e.g keyword
-*ENTITY* is equal *entity* or *TRUE* is equal *TRUE*. Comments are after `--`
-signs: <br/>
+*ENTITY* is equal *entity* or *TRUE* is equal *true*. <br/>
+Comments are after `--` signs: <br/>
 ```vhdl
 rst_i : in std_ulogic; -- Comment
 -- Next part of comment
@@ -83,8 +83,7 @@ String constants are indicated by quotation marks: `"Ala ma kota"` or `"Abc"`.
 <br/> We can write strings of bits as bit-string literals: `"1001_1001"`,
 `B"1001_1001"` or `O"167"X"abC"`, where sign *B*, *X* or *O* means base.
 
-Enum type is a basic type in VHDL. It is defined by specifying all values that a
-variable can have: <br/>
+Enum type is defined by specifying all values that a variable can have: <br/>
 ```VHDL
 type <type_name> is ( <value_1>, <value_2>, ..., <value_n>);
 ```
@@ -115,12 +114,13 @@ type PERCENT is range –100 to 100;
 
 After the synthesis, the PERCENT type value will be represented by 8-bit vectors
 (1 bit sign, 7 bit value). <br/>
-The VHDL language allows to declare two different array variables: <br/>
+The VHDL language allows to declare two different array types: <br/>
 - Constrained array type
 - Unconstrained array type
 
 When defining a constrained array type, the range of the index values must be
 specified immediately when defining that type, example: <br/>
+`type <array_type_name> is array (<total_range> of <element_type>)` <br/>
 ```VHDL
 type t_A is array (7 downto 0) of std_logic;
 type t_B is array (0 to 7)     of std_logic;
@@ -136,3 +136,19 @@ If the content of these variables is the binary number: *00000001*, then: <br/>
 |![image](https://user-images.githubusercontent.com/43972902/142500438-c3602aca-136c-4054-81db-6039203e7686.png)|
 |:--:|
 |Source: *Języki  modelowania i symulacji, B. Pankiewicz, M. Wójcikowski p. 118*|
+
+In unconstrained array the size is defined during declaration, thanks to this we
+can use different array variables of the same data type, but of various lengths.
+Example: <br/>
+`type <array_type_name> is array (<integer_type_name> range <>) of <element_type
+>` <br/>
+```VHDL
+type bit_vector is array (integer range <>) of bit;
+type std_logic_vector is array (integer range <>) of std_logic;
+```
+At the time of declaration, the number of bits of a given variable and the 
+range of indices are determined: <br/>
+```VHDL
+signal my_vector1 : std_logic_vector (5 downto –5);
+signal my_vector2 : std_logic_vector (1 to 11);
+```
