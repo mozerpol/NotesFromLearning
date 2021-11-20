@@ -40,6 +40,15 @@ Grzegorz Wawrzyniak, the title is "*Język Verilog w projektowaniu układów FPG
 5. [Notes](https://github.com/mozerpol/NotesFromLearning/tree/master/FPGAsForDummies)
 from reading the book *FPGAs for dummies*, which is available for free on the
 internet.
+
+6. [Notes](https://github.com/mozerpol/NotesFromLearning/tree/master/learningVHDL)
+from learning VHDL language. I will include notes from several books that helped
+me learn VHDL.
+- The first is under 
+[this](#http://www.ue.eti.pg.gda.pl/~bpa/jmis/skrypt_jmis_3v6.pdf) (date of 
+access: 25.06.2021) address. It's created by my teacher Bogdan Pankiewicz, the 
+title is "*SKRYPT DO PRZEDMIOTU Języki modelowania i symulacji*", it's written
+in my mother language.
 _____
 
 Below I'll put some intresting links, which I decided to remember.
