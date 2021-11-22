@@ -28,9 +28,9 @@ begin
 
   dut : component and_gate
     port map (
-      a_in  => a,
-      b_in  => b,
-      c_out => c
+      a => a_in,
+      b => b_in,
+      c => c_out
     );
 
   process_tb : process is
