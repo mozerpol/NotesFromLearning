@@ -31,3 +31,8 @@ learningVerilog/counter/work/*
 learningVerilog/simpleRAM/transcript
 learningVerilog/simpleRAM/vsim.wlf
 learningVerilog/simpleRAM/work/*
+
+# 
+learningVHDL/*/transcript
+learningVHDL/*/vsim.wlf
+learningVHDL/*/work/*
