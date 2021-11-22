@@ -2,37 +2,12 @@
 ExperimentsWithFPGA/4/uart_library/work/*
 ExperimentsWithFPGA/4/uart_library/vsim.wlf
 
-# For D flip-flop purposes
-learningVerilog/Dflip-flop/transcript
-learningVerilog/Dflip-flop/work/*
-learningVerilog/Dflip-flop/vsim.wlf
+# For ModelSim and learningVerilog purposes
+learningVerilog/*/transcript
+learningVerilog/*/work/*
+learningVerilog/*/vsim.wlf
 
-# For JK flip-flop purposes
-learningVerilog/JKflip-flop/transcript
-learningVerilog/JKflip-flop/vsim.wlf
-learningVerilog/JKflip-flop/work/*
-
-# For RS flip-flop purposes
-learningVerilog/SRflip-flop/transcript
-learningVerilog/SRflip-flop/vsim.wlf
-learningVerilog/SRflip-flop/work/*
-
-# For T flip-flop purposes
-learningVerilog/Tflip-flop/transcript
-learningVerilog/Tflip-flop/vsim.wlf
-learningVerilog/Tflip-flop/work/*
-
-# For counter purposes
-learningVerilog/counter/transcript
-learningVerilog/counter/vsim.wlf
-learningVerilog/counter/work/*
-
-# For simpleRAM purposes
-learningVerilog/simpleRAM/transcript
-learningVerilog/simpleRAM/vsim.wlf
-learningVerilog/simpleRAM/work/*
-
-# 
+# For ModelSim and learningVHDL purposes
 learningVHDL/*/transcript
 learningVHDL/*/vsim.wlf
 learningVHDL/*/work/*
