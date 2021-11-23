@@ -29,7 +29,7 @@ begin
     -- Code inside the process statement is executed sequentially
   begin
 
-    if (clk'event and clk = '1') then -- The above will be true, when the
+    if (clk'event and clk = '1') then -- Condition will be true, when the
       -- actual value of the signal is '1' and there was an event on it (the
       -- value changed recently). An event on a signal is a change of the
       -- signal's value.
