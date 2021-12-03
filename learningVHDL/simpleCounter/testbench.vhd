@@ -8,6 +8,9 @@ end entity testbench;
 architecture tb of testbench is
 
   component simplecounter is
+    generic (
+      count_up_to : integer
+      );
     port (
       clk : in    std_logic;
       q   : out   std_logic
@@ -15,7 +18,7 @@ architecture tb of testbench is
   end component;
 
   signal   clk_in      : std_logic := '0';
-  constant count_up_to : integer := 12;
+  constant count_up_to : integer := 10;
   signal   q_out       : std_logic;
 
 begin
@@ -32,7 +35,7 @@ begin
   tb_process : process is
   begin
 
-    wait for 10 ns; stop;
+    wait for 100 ns; stop;
 
   end process tb_process;
 
