@@ -5,7 +5,7 @@ library ieee;
 
 entity simplecounter is
   generic (
-    count_up_to : integer := 8
+    count_up_to : integer := 2
   );
   port (
     clk : in    std_logic;

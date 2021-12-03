@@ -10,7 +10,7 @@ architecture tb of testbench is
   component simplecounter is
     generic (
       count_up_to : integer
-      );
+    );
     port (
       clk : in    std_logic;
       q   : out   std_logic
@@ -35,7 +35,7 @@ begin
   tb_process : process is
   begin
 
-    wait for 100 ns; stop;
+    wait for 25 ns; stop;
 
   end process tb_process;
 
