@@ -37,8 +37,36 @@ begin
     wait for 1 ns;
     in1 <= '0';
     in2 <= '0';
-    in3 <= '0';
+    in3 <= '0'; -- out_or should return: 0
     wait for 1 ns;
+    report "time: " & time'image(now) &
+           "; int1: " & std_logic'image(in1) &
+           "; int2: " & std_logic'image(in2) &
+           "; out_or: " & std_logic'image(out_or);
+    in1 <= '0';
+    in2 <= '1';
+    in3 <= '1'; -- out_or should return: 1
+    wait for 1 ns;
+    report "time: " & time'image(now) &
+           "; int1: " & std_logic'image(in1) &
+           "; int2: " & std_logic'image(in2) &
+           "; out_or: " & std_logic'image(out_or);
+    in1 <= '1';
+    in2 <= '0';
+    in3 <= '0'; -- out_or should return:  0
+    wait for 1 ns;
+    report "time: " & time'image(now) &
+           "; int1: " & std_logic'image(in1) &
+           "; int2: " & std_logic'image(in2) &
+           "; out_or: " & std_logic'image(out_or);
+    in1 <= '1';
+    in2 <= '1';
+    in3 <= '1'; -- out_or should return: 1
+    wait for 1 ns;
+    report "time: " & time'image(now) &
+           "; int1: " & std_logic'image(in1) &
+           "; int2: " & std_logic'image(in2) &
+           "; out_or: " & std_logic'image(out_or);
     stop;
 
   end process tb_process;
