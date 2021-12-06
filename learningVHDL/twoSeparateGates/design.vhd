@@ -12,7 +12,7 @@ architecture rtl of and_area is
 
 begin
 
-  and_process : process(in1, in2) is
+  and_process : process (in1, in2) is
   begin
 
     out1_and <= in1 and in2;
@@ -21,10 +21,9 @@ begin
 
 end architecture rtl;
 
--- //////////////////////////////////////////////////////
-
 library ieee;
   use ieee.std_logic_1164.all;
+
 entity gates_area is port (
     in1    : in    std_logic;
     in2    : in    std_logic;
@@ -54,7 +53,7 @@ begin
       out1_and => internal_wire
     );
 
-  gates_process : process(in3, internal_wire) is
+  gates_process : process (in3, internal_wire) is
 
   begin
 
