@@ -12,7 +12,7 @@ architecture rtl of and_area is
 
 begin
 
-  and_process : process is
+  and_process : process(in1, in2) is
   begin
 
     out1_and <= in1 and in2;
@@ -54,7 +54,7 @@ begin
       out1_and => internal_wire
     );
 
-  gates_process : process is
+  gates_process : process(in3, internal_wire) is
 
   begin
 
