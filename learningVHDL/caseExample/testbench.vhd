@@ -31,6 +31,27 @@ begin
   tb_process : process is
   begin
 
+    wait for 5 ns;
+    option_in <= '0';
+    wait for 5 ns;
+    option_in <= '1';
+    wait for 5 ns;
+    option_in <= 'U';
+    wait for 5 ns;
+    option_in <= '0';
+    wait for 5 ns;
+    option_in <= 'W';
+    wait for 5 ns;
+    stop;
+
   end process tb_process;
+
+  always_process : process is
+  begin
+
+    wait for 1 ns;
+    clk_in <= not(clk_in);
+
+  end process always_process;
 
 end architecture tb;
