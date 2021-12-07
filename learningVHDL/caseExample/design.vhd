@@ -16,6 +16,20 @@ begin
   begin
 
     if (clk'event and clk = '1') then
+
+      case option is
+
+        when '0' =>
+          q <= '0';
+        when '1' =>
+          q <= '1';
+        when 'U' =>
+          q <= 'U';
+        when others =>
+          q <= 'Z';
+
+      end case;
+
     end if;
 
   end process case_process;
