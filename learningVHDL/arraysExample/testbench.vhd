@@ -32,6 +32,18 @@ architecture tb of testbench is
   type con_mul_dim_2 is array (0 to 3, 0 to 1) of integer ; 
   signal array_con_3 : con_mul_dim_2;
 
+  -- Create unconstrained one-dim array
+  type uncon_one_dim_1 is array (natural range <>) of bit;
+  signal array_uncon_1 : uncon_one_dim_1(0 to 7); -- During declaration we must
+  -- define index range.
+
+  type uncon_one_dim_2 is array (natural range <>) of real;
+  signal array_uncon_2 : uncon_one_dim_2(0 to 2) := (0.25, 0.5, 0.75);
+
+  type uncon_one_dim_3 is array (positive range <>) of character;
+  constant array_uncon_3 : uncon_one_dim_3 := "ala ma kota"; -- If we would like
+  -- define unconstrained array for string, then during declaration of this type
+  -- we must add constant.
 
 begin
 
