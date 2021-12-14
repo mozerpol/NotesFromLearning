@@ -1,3 +1,8 @@
+-- Generate statement has two goals:
+-- 1. Replicating Logic in VHDL - example of this is in this file
+-- 2. Turning on/off blocks of logic in VHDL - example of this usage in 
+-- generate-genericExample file
+
 library IEEE;
   use IEEE.std_logic_1164.all;
 
