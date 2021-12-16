@@ -1,5 +1,6 @@
 library ieee;
   use ieee.std_logic_1164.all;
+  use IEEE.std_logic_unsigned.all;
   use std.env.stop;
 
 entity testbench is
@@ -21,7 +22,7 @@ architecture tb of testbench is
   signal we     : std_logic;
   signal re     : std_logic;
   signal addr   : std_logic_vector(11 downto 0);
-  signal data   : std_logic_vector(7 downto 0);
+  signal data   : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
@@ -38,8 +39,35 @@ begin
   begin
 
     wait for 10 ns;
+    we <= '1';
+    re <= '1';
+
+    for i in 0 to 4 loop
+      wait for 10 ns;
+      addr <= addr + 1;
+      data <= data + 1;
+    end loop;
+
+    wait for 10 ns;
+    re <= '1';
+    we <= '0';
+
+    for i in 0 to 4 loop
+      wait for 10 ns;
+      addr <= addr + 1;
+    end loop;
+
+    wait for 10 ns;
     stop;
 
   end process tb_process;
+
+  clk_process : process is
+  begin
+
+    clk_in <= not(clk_in);
+    wait for 10 ns;
+
+  end process clk_process;
 
 end architecture tb;
