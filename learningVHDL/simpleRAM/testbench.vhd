@@ -1,6 +1,7 @@
 library ieee;
   use ieee.std_logic_1164.all;
-  use IEEE.std_logic_unsigned.all;
+  use IEEE.std_logic_unsigned.all; -- Thanks to this packages we can do
+  -- "std_logic_vector + 1;"
   use std.env.stop;
 
 entity testbench is
@@ -13,7 +14,7 @@ architecture tb of testbench is
       clk  : in    std_logic;
       we   : in    std_logic;
       re   : in    std_logic;
-      addr : in    std_logic_vector(11 downto 0);
+      addr : in    std_logic_vector(4 downto 0);
       data : inout std_logic_vector(7 downto 0)
     );
   end component;
@@ -21,7 +22,7 @@ architecture tb of testbench is
   signal clk_in : std_logic := '0';
   signal we     : std_logic;
   signal re     : std_logic;
-  signal addr   : std_logic_vector(11 downto 0);
+  signal addr   : std_logic_vector(4 downto 0) := (others => '0');
   signal data   : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
