@@ -19,7 +19,7 @@ architecture tb of testbench is
     );
   end component;
 
-  signal clk_in : std_logic := '0';
+  signal clk_in : std_logic := '1';
   signal we     : std_logic;
   signal re     : std_logic;
   signal addr   : std_logic_vector(4 downto 0) := (others => '0');
@@ -41,21 +41,21 @@ begin
 
     wait for 10 ns;
     we <= '1';
-    re <= '1';
+    re <= '0';
 
-    for i in 0 to 4 loop
-      wait for 10 ns;
+    for i in 0 to 31 loop
       addr <= addr + 1;
       data <= data + 1;
+      wait for 10 ns;
     end loop;
 
     wait for 10 ns;
     re <= '1';
     we <= '0';
 
-    for i in 0 to 4 loop
-      wait for 10 ns;
+    for i in 0 to 31 loop
       addr <= addr + 1;
+      wait for 10 ns;
     end loop;
 
     wait for 10 ns;
@@ -66,8 +66,8 @@ begin
   clk_process : process is
   begin
 
+    wait for 5 ns;
     clk_in <= not(clk_in);
-    wait for 10 ns;
 
   end process clk_process;
 
