@@ -49,6 +49,9 @@ me learn VHDL.
 access: 25.06.2021) address. It's created by my teacher Bogdan Pankiewicz, the 
 title is "*SKRYPT DO PRZEDMIOTU Języki modelowania i symulacji*", it's written
 in my mother language.
+
+7. Notes from *Microsemi* (in the past *Microchip*) page. I described some about
+*RTG4*, *SmartFusion* and *RTAX* devices.
 _____
 
 Below I'll put some intresting links, which I decided to remember.
