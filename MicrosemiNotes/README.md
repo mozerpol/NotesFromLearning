@@ -63,3 +63,12 @@ Four voltage levels for SSTL are defined:
 redundancy, in which three systems perform a process and that result is 
 processed by a majority-voting system to produce a single output. If any one of 
 the three systems fails, the other two systems can correct and mask the fault. 
+
+How *mathblocks* looks like in FPGA. For better understanding I'll compare math
+block and logic element in SmartFusion2: <br/>
+|Logic Element: |
+|:--:|
+|![b](https://user-images.githubusercontent.com/43972902/147354481-f7417c23-0f71-464c-90de-1dc899530f19.png)|
+|**Math Block**|
+|![a](https://user-images.githubusercontent.com/43972902/147354464-7a45ff13-ddce-405c-ae25-65a7386f2d33.png)|
+|Source: *https://microchipdeveloper.com/fpga:overview*|
