@@ -57,4 +57,9 @@ Four voltage levels for SSTL are defined:
 | SSTL18 | 1.8 |
 | SSTL15 | 1.5 |
 
-
+5. PLL - was described 
+[here](https://github.com/mozerpol/NotesFromLearning/tree/main/FPGAodPoczatkuDoKonca#pll).
+6. TMR - triple modular redundancy. It is a fault-tolerant form of N-modular
+redundancy, in which three systems perform a process and that result is 
+processed by a majority-voting system to produce a single output. If any one of 
+the three systems fails, the other two systems can correct and mask the fault. 
