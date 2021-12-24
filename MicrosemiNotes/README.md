@@ -36,3 +36,5 @@ communication channels. In other words, error detection is the detection of
 errors caused by noise or other impairments during transmission from the
 transmitter to the receiver, but error correction is the detection of errors and
 reconstruction of the original, error-free data. 
+2. SpaceWire - spacecraft communication network. SpaceWire covers two (physical
+and data-link) of the seven layers of the OSI model for communications.
