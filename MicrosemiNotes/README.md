@@ -45,3 +45,16 @@ mDDR (mobile-DDR). LPDDR technology standards are developed independently of DDR
 standards. In contrast with standard SDRAM, used in stationary devices and 
 laptops and usually connected over a 64-bit wide memory bus, LPDDR also permits 
 16- or 32-bit wide channels.
+4. SSTL - Stub Series Terminated Logic. It is a group of electrical standards 
+for driving transmission lines commonly used with DRAM based DDR memory IC's and 
+memory modules. Also we can distinguish HSSTL - high-speed transceiver logic.
+Four voltage levels for SSTL are defined:
+
+| Name: | Voltage [V]: |
+|:--:|:--:|
+| SSTL3 | 3.3 |
+| SSTL2 | 2.5 |
+| SSTL18 | 1.8 |
+| SSTL15 | 1.5 |
+
+
