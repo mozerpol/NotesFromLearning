@@ -28,3 +28,11 @@ type of error caused by the impact of a single ionizing particle (ions,
 electrons, photons ...) into important part of micro-electronic device, such
 as in a microprocessor. SEUs do not destroy the circuits involved, but they can
 cause errors.
+
+Later at third page we can find a new abbreviations: <br/>
+1. EDAC - error detection and correction or error control. They're error control
+techniques that enable reliable delivery of digital data over unreliable 
+communication channels. In other words, error detection is the detection of
+errors caused by noise or other impairments during transmission from the
+transmitter to the receiver, but error correction is the detection of errors and
+reconstruction of the original, error-free data. 
