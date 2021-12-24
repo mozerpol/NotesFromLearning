@@ -38,3 +38,10 @@ transmitter to the receiver, but error correction is the detection of errors and
 reconstruction of the original, error-free data. 
 2. SpaceWire - spacecraft communication network. SpaceWire covers two (physical
 and data-link) of the seven layers of the OSI model for communications.
+3. LPDDR - Low-Power Double Data Rate. It is a type of synchronous dynamic
+random-access memory that consumes less power and is targeted for mobile
+computers and devices such as mobile phones. Older variants are also known as
+mDDR (mobile-DDR). LPDDR technology standards are developed independently of DDR 
+standards. In contrast with standard SDRAM, used in stationary devices and 
+laptops and usually connected over a 64-bit wide memory bus, LPDDR also permits 
+16- or 32-bit wide channels.
