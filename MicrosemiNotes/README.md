@@ -45,7 +45,9 @@ mDDR (mobile-DDR). LPDDR technology standards are developed independently of DDR
 standards. In contrast with standard SDRAM, used in stationary devices and 
 laptops and usually connected over a 64-bit wide memory bus, LPDDR also permits 
 16- or 32-bit wide channels.
-4. SSTL - Stub Series Terminated Logic. It is a group of electrical standards 
+
+Page 4: <br/>
+1. SSTL - Stub Series Terminated Logic. It is a group of electrical standards 
 for driving transmission lines commonly used with DRAM based DDR memory IC's and 
 memory modules. Also we can distinguish HSSTL - high-speed transceiver logic.
 Four voltage levels for SSTL are defined:
@@ -57,9 +59,9 @@ Four voltage levels for SSTL are defined:
 | SSTL18 | 1.8 |
 | SSTL15 | 1.5 |
 
-5. PLL - was described 
+2. PLL - was described 
 [here](https://github.com/mozerpol/NotesFromLearning/tree/main/FPGAodPoczatkuDoKonca#pll).
-6. TMR - triple modular redundancy. It is a fault-tolerant form of N-modular
+3. TMR - triple modular redundancy. It is a fault-tolerant form of N-modular
 redundancy, in which three systems perform a process and that result is 
 processed by a majority-voting system to produce a single output. If any one of 
 the three systems fails, the other two systems can correct and mask the fault. 
@@ -72,3 +74,11 @@ block and logic element in SmartFusion2: <br/>
 |**Math Block**|
 |![a](https://user-images.githubusercontent.com/43972902/147354464-7a45ff13-ddce-405c-ae25-65a7386f2d33.png)|
 |Source: *https://microchipdeveloper.com/fpga:overview*|
+
+Page 5:
+1. PMA - Physical Medium Attachment layer. It's to help to define the physical
+layer of computer network protocols. It's a part (sublayer) of 
+[Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent).
+This sublayers define the details of transmission and reception (pol. odbiór) of
+individual bits on a physical medium. Common examples are specifications for
+Fast Ethernet, Gigabit Ethernet and 10 Gigabit Ethernet defined by IEEE.
