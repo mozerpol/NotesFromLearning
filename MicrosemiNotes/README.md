@@ -75,7 +75,11 @@ block and logic element in SmartFusion2: <br/>
 |![a](https://user-images.githubusercontent.com/43972902/147354464-7a45ff13-ddce-405c-ae25-65a7386f2d33.png)|
 |Source: *https://microchipdeveloper.com/fpga:overview*|
 
-Page 5:
+Page 5: <br/>
+|RTG4 Device Block Diagram|
+|:--:|
+|![a](https://user-images.githubusercontent.com/43972902/147385653-cebc2711-58ae-4434-9fe8-7b80a8b16012.png)|
+|Source: *https://www.microsemi.com/document-portal/doc_download/134430-rtg4-fpgas-technical-brief*|
 1. PMA - Physical Medium Attachment layer. It's to help to define the physical
 layer of computer network protocols. It's a part (sublayer) of 
 [Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent).
@@ -87,5 +91,14 @@ designed for connecting full duplex 10 Gigabit Ethernet (10GbE) ports to each
 other and to other electronic devices on a printed circuit board (PCB). XGMII 
 features two 32-bit datapaths (Rx & Tx) and two four-bit control flows (Rxc and 
 Txc), operating at 156.25 MHz DDR (312.5 MT/s). 
-2. XAUI - 10 Gigabit Attachment Unit Interface (proun. ZOW-ee). It is a standard
-for extending the XGMII.
+3. XAUI - 10 Gigabit Attachment Unit Interface (proun. ZOW-ee). It is a standard
+for extending the XGMII. 
+4. AHB - Advanced High-performance Bus. It is a bus protocol, is used for
+connecting components that need higher bandwidth on a shared bus. These could be
+a internal memory or an external memory interface, DMA , DSP etc.
+5. POR Generator - power-on reset. It is an electronic device incorporated into 
+the integrated circuit that detects the power applied to the chip and generates 
+a reset impulse that goes to the entire circuit placing it into a known state. 
+A simple PoR uses the charging of a capacitor, in series with a resistor, to 
+measure a time period during which the rest of the circuit is held in a reset
+state.
