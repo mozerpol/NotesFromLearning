@@ -82,3 +82,10 @@ layer of computer network protocols. It's a part (sublayer) of
 This sublayers define the details of transmission and reception (pol. odbiór) of
 individual bits on a physical medium. Common examples are specifications for
 Fast Ethernet, Gigabit Ethernet and 10 Gigabit Ethernet defined by IEEE.
+2. XGMII - 10 gigabit media-independent interface. It's a standard 
+designed for connecting full duplex 10 Gigabit Ethernet (10GbE) ports to each
+other and to other electronic devices on a printed circuit board (PCB). XGMII 
+features two 32-bit datapaths (Rx & Tx) and two four-bit control flows (Rxc and 
+Txc), operating at 156.25 MHz DDR (312.5 MT/s). 
+2. XAUI - 10 Gigabit Attachment Unit Interface (proun. ZOW-ee). It is a standard
+for extending the XGMII.
