@@ -138,3 +138,16 @@ individual smartcards.
 retaining (while retaining - *zachowując*) SRAM and register data.
 6. MMUART - Multi-Mode UART.
 7. WDT - Watchdog Timer.
+8. FIIC - Fabric Interface Interrupt Controller. It's manages MSS 
+(microcontroller subsystem) to fabric (M2F) and fabric to MSS (F2M) interrupts. 
+The MSS interrupts are connected to the nested vectored interrupt controller
+(NVIC) of the ARM Cortex-M3 microcontroller. These interrupts are also routed to 
+the FPGA fabric through the FIIC. In addition, user logic can interrupt the
+ARM Cortex-M3 microcontroller via this block or by configuring the general
+purpose I/O (GPIO) to trigger an interrupt on an input that is connected to the 
+FPGA fabric. 
+9. APB - Advanced Peripheral Bus. It is designed for low bandwidth control
+accesses, for example register interfaces on system peripherals. This bus has an
+address and data phase similar to AHB, but a much reduced, low complexity signal
+list. Furthermore (pol. *dodatkowo*), it is an interface designed for a low
+frequency system with a low bit width (32 bits). 
