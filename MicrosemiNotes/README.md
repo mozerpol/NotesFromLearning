@@ -121,15 +121,20 @@ desc of this devs.
 |![a](https://user-images.githubusercontent.com/43972902/147388071-21f9870d-1c9f-4946-94a4-016e5089eaf1.png)|
 |Source: *https://www.microsemi.com/product-directory/soc-fpgas/1692-smartfusion2#overview*|
 
-1. AES - Advanced Encryption Standard. It is a specification for the encryption 
+1. AES - Advanced Encryption Standard. It is a specification for the encryption
 of electronic data. 256 is a key length.
 2. SHA256 - Secure Hash Algorithm. It's a set of cryptographic hash functions.
-3. PUF - physical unclonable function. It is a physical object that for a given 
+3. PUF - physical unclonable function. It is a physical object that for a given
 input and conditions, provides a physically defined "digital fingerprint" output
 (response) that serves as a unique identifier, most often for a semiconductor
 device such as a microprocessor. PUFs are most often based on unique physical
 variations which occur naturally during semiconductor manufacturing.
 A PUF is a physical entity embodied in a physical structure. Starting in 2010,
-PUF gained attention in the smartcard market as a promising way to provide 
+PUF gained attention in the smartcard market as a promising way to provide
 "silicon fingerprints", creating cryptographic keys that are unique to
 individual smartcards.
+4. NRBG - on-deterministic Random Bit Generator.
+5. Flash*Freeze - enables entering and exiting an ultra-low power mode while
+retaining (while retaining - *zachowując*) SRAM and register data.
+6. MMUART - Multi-Mode UART.
+7. WDT - Watchdog Timer.
