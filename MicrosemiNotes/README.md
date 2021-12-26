@@ -1,3 +1,37 @@
+### Table of contents <a name="tof"></a>
+1. [RTG4](#rtg4)
+ 1.1 [SerDes](#SerDes)
+ 1.2 [LEO](#LEO)
+ 1.3 [SEU](#SEU)
+   1.4 [EDAC](#EDAC)
+   1.5 [SpaceWire](#SpaceWire)
+   1.6 [LPDDR](#LPDDR)
+   1.7 [SSTL](#SSTL)
+   1.8 [PLL](#PLL)
+   1.9 [TMR](#TMR)
+   1.10 [PMA](#PMA)
+   1.11 [XGMII](#XGMII)
+   1.12 [XAUI](#XAUI)
+   1.13 [AHB](#AHB)
+   1.14 [POR Generator](#POR Generator)
+   1.15 [LVTTL](#LVTTL)
+2. [SmartFusion2](#SmartFusion2)
+   2.1 [](#)
+   2.2 [](#)
+   2.3 [](#)
+   2.4 [](#)
+   2.5 [](#)
+   2.6 [](#)
+   2.7 [](#)
+   2.8 [](#)
+   2.9 [](#)
+   2.10 [](#)
+   2.11 [](#)
+   2.12 [](#)
+   2.13 [](#)
+   2.14 [](#)
+   2.15 [](#)
+
 Firstly I'll decribe RTG4 from
 [here](https://www.microsemi.com/product-directory/rad-tolerant-fpgas/3576-rtg4#documents)
 [date of access: 23.12.2021]. Exactly *RTG4 FPGAs Technical Brief* from *Product
@@ -5,7 +39,7 @@ Brief* column: <br/>
 ![a](https://user-images.githubusercontent.com/43972902/147283409-ec826d5e-363d-4451-a9a5-ef7f9e35ee62.png)
 
 In the introduction of pdf we can read about: <br>
-1. *SerDes* - it's a Serializer/Deserializer (pronounced sir-deez or sir-dez),
+1. *SerDes* <a name="Simulator"></a> - it's a Serializer/Deserializer (pronounced sir-deez or sir-dez),
 a pair of functional blocks commonly used in high speed communications to
 compensate for limited input/output. These blocks convert data between serial
 data and parallel interfaces in each direction. <br/>
