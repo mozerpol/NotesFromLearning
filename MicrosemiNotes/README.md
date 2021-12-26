@@ -151,3 +151,12 @@ accesses, for example register interfaces on system peripherals. This bus has an
 address and data phase similar to AHB, but a much reduced, low complexity signal
 list. Furthermore (pol. *dodatkowo*), it is an interface designed for a low
 frequency system with a low bit width (32 bits). 
+10. PDMA - Peripheral DMA.
+11. OTG ULPI - It is a standards based interface designed to provide a high
+capacity point-to-point connection between an SoC or ASIC to a Hi-Speed USB
+Transceiver.
+12. FIC - Fabric Interface Controller.
+13. TSE - Triple Speed Ethernet.
+14. eNVM - nonvolatile (flash) memory. 
+15. OSC - oscillator.
+16. HPDMA -  High-performance DMA.
