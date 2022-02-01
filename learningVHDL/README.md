@@ -165,3 +165,6 @@ tab(6);
 tab(x);
 tab(3 to 6);
 ```
+|A small cheat sheet |
+|:--:|
+| ![a](https://user-images.githubusercontent.com/43972902/152033740-a3edcd4f-edcb-43fa-9588-33efd5fa4667.png) |
