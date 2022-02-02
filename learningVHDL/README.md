@@ -17,7 +17,7 @@ how to use *edaplayground* and *Modelsim*.
 
 ## 2. Język Verilog w projektowaniu układów FPGA: <a name="2"></a>
 The script about VHDL starts on page 110. <br/>
-VHDL - *Very High Speed Integrated Circuits Hardware Description Language*. In 
+VHDL - *Very High Speed Integrated Circuits Hardware Description Language*. In
 1993, the 1164 standard was introduced, where defined data type. <br/>
 The data types have been grouped together in a package called *std_logic_1164*.
 Except this we have a different extensions of VHDL language: <br/>
@@ -146,7 +146,7 @@ Example: <br/>
 type bit_vector is array (integer range <>) of bit;
 type std_logic_vector is array (integer range <>) of std_logic;
 ```
-At the time of declaration, the number of bits of a given variable and the 
+At the time of declaration, the number of bits of a given variable and the
 range of indices are determined: <br/>
 ```VHDL
 signal my_vector1 : std_logic_vector (5 downto –5);
