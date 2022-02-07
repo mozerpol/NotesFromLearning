@@ -23,6 +23,10 @@ architecture rtl of simpleram is
 
   signal memory   : mem_type := (others => x"00");
   signal addr_int : integer := 0;
+  
+  -- We can initialize simple array in a different way, but the result will be
+  -- (i hope) the same:
+  -- signal memory : std_logic_vector(0 to addressize - 1) := (others => '0');
 
 begin
 
