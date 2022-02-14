@@ -44,9 +44,9 @@ begin
     re <= '0';
 
     for i in 0 to 31 loop
-      addr <= addr + 1;
-      data <= data + 1;
-      wait for 10 ns;
+       data <= "11111111";
+       addr <= addr + 1;
+      wait for clk'event and clk = '1';
     end loop;
 
     wait for 10 ns;
