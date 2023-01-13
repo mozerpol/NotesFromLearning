@@ -1,5 +1,11 @@
 ###### Set module name only ######
-set module        "simplegate"
+set module        "and_gate"
+
+
+# THE EASIEST WAY IS RUN SCRIPT FROM OTHER PROJECT INSIDE THIS PROJECT. JUST nest
+# tcl script inside other tcl script. Thanks to this, I'll receive library which
+# will include to the project easily. 
+# https://support.xilinx.com/s/question/0D52E00006hprYZSAY/nested-tcl-scripts?language=en_US
 
 ##################################
 #         PROJECT TREE:
