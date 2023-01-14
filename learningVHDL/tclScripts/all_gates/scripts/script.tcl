@@ -45,6 +45,9 @@ if {[file exists $lib_name/_info]} {
    vlib $lib_name
 }
 
+source ../../and_gate/scripts/script.tcl
+source ../../or_gate/scripts/script.tcl
+
 echo "----> Map library:"
 vmap $lib_name $lib_name
 
