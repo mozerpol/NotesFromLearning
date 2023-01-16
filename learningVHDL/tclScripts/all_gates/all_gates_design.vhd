@@ -2,12 +2,12 @@ library ieee;
   use ieee.std_logic_1164.all;
   use IEEE.std_logic_unsigned.all;
   use IEEE.math_real.all;
-library and_gate_lib;
-  use and_gate_lib.all;
-  use and_gate_lib.and_gate_pkg.all;
-library or_gate_lib;
-  use or_gate_lib.all;
-  use or_gate_lib.or_gate_pkg.all;
+library and_gate;
+  use and_gate.all;
+  use and_gate.and_gate_pkg.all;
+library or_gate;
+  use or_gate.all;
+  use or_gate.or_gate_pkg.all;
 
 entity all_gates is
   port (
@@ -17,6 +17,17 @@ entity all_gates is
     o_d_all : out   std_logic
   );
 end entity all_gates;
+
+
+architecture rtl of all_gates is
+
+    signal a_or : std_logic;
+    signal b_or : std_logic;
+    signal c_or : std_logic;
+    signal a_and : std_logic;
+    signal b_and : std_logic;
+    signal c_and : std_logic;
+    signal internal_wire : std_logic;
 
 component or_gate is
   port (
@@ -34,15 +45,6 @@ component and_gate is
   );
 end component and_gate;
 
-architecture rtl of all_gates is
-
-    signal a_or : std_logic;
-    signal b_or : std_logic;
-    signal c_or : std_logic;
-    signal a_and : std_logic;
-    signal b_and : std_logic;
-    signal c_and : std_logic;
-    signal internal_wire : std_logic;
 
 begin
 
