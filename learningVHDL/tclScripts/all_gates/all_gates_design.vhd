@@ -2,12 +2,12 @@ library ieee;
   use ieee.std_logic_1164.all;
   use IEEE.std_logic_unsigned.all;
   use IEEE.math_real.all;
-library and_gate;
-  use and_gate.all;
-  use and_gate.and_gate_pkg.all;
-library or_gate;
-  use or_gate.all;
-  use or_gate.or_gate_pkg.all;
+library and_gate_lib;
+  use and_gate_lib.all;
+  use and_gate_lib.and_gate_pkg.all;
+library or_gate_lib;
+  use or_gate_lib.all;
+  use or_gate_lib.or_gate_pkg.all;
 
 entity all_gates is
   port (
