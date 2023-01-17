@@ -36,17 +36,34 @@ set systemTime_start [clock seconds]
 set systemTime_end   [clock seconds]
 
 
-echo "----> Create library:"
-if {[file exists $lib_name/_info]} {
-   echo "Library already exists"
-} else {
-   echo "Library $lib_name don't exist"
-   echo "Create library inside: [pwd]"
-   vlib $lib_name
+set hdl_dir ../../and_gate
+vcom -2008 -quiet -work and_gate_lib $hdl_dir/and_gate_pkg.vhd
+vcom -2008 -quiet -work and_gate_lib $hdl_dir/and_gate_design.vhd
+
+
+set hdl_dir ../../or_gate
+vcom -2008 -quiet -work or_gate_lib $hdl_dir/or_gate_pkg.vhd
+vcom -2008 -quiet -work or_gate_lib $hdl_dir/or_gate_design.vhd
+
+
+
+
+proc s_comp_design {} {
 }
 
-source ../../and_gate/scripts/script.tcl
-source ../../or_gate/scripts/script.tcl
+
+
+proc s_create_lib {} {
+    echo "----> Create library:"
+    if {[file exists $lib_name/_info]} {
+       echo "Library already exists"
+    } else {
+       echo "Library $lib_name don't exist"
+       echo "Create library inside: [pwd]"
+       vlib $lib_name
+    }
+}
+
 
 echo "----> Map library:"
 vmap $lib_name $lib_name
