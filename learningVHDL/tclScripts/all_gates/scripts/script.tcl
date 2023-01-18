@@ -108,6 +108,7 @@ proc s_load_waves {} {
 }
 
 proc s_start_sim {} {
+    global systemTime_start systemTime_end systemTime_start
     echo "----> Run tests"
     run -all
     # Simstats time
