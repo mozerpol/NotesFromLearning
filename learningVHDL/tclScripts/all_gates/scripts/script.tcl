@@ -1,11 +1,24 @@
-###### Set module name only ######
+###### Set module name ######
 set module        "all_gates"
 
+###### Include external libraries ######
+# set hdl_dir               "directory/to/library"
+# set library_name          "library_name"     
+# vcom -2008 -quiet -work   $library_name $hdl_dir/file.vhd
+
+set hdl_dir             "../../and_gate/"
+set library_name        "and_gate_lib"
+vcom -2008 -quiet -work $library_name $hdl_dir/and_gate_pkg.vhd
+vcom -2008 -quiet -work $library_name $hdl_dir/and_gate_design.vhd
+
+set hdl_dir             "../../or_gate/"
+set library_name        "or_gate_lib"
+vcom -2008 -quiet -work $library_name $hdl_dir/or_gate_pkg.vhd
+vcom -2008 -quiet -work $library_name $hdl_dir/or_gate_design.vhd
 
 # THE EASIEST WAY IS RUN SCRIPT FROM OTHER PROJECT INSIDE THIS PROJECT. JUST nest
 # tcl script inside other tcl script. Thanks to this, I'll receive library which
-# will include to the project easily. 
-# https://support.xilinx.com/s/question/0D52E00006hprYZSAY/nested-tcl-scripts?language=en_US
+# will include to the project easily.
 
 ##################################
 #         PROJECT TREE:
@@ -35,13 +48,9 @@ set waveforms        $module\_lib.$module\_tb
 set systemTime_start [clock seconds]
 set systemTime_end   [clock seconds]
 
-set hdl_dir ../../and_gate
-vcom -2008 -quiet -work and_gate_lib $hdl_dir/and_gate_pkg.vhd
-vcom -2008 -quiet -work and_gate_lib $hdl_dir/and_gate_design.vhd
-
-set hdl_dir ../../or_gate
-vcom -2008 -quiet -work or_gate_lib $hdl_dir/or_gate_pkg.vhd
-vcom -2008 -quiet -work or_gate_lib $hdl_dir/or_gate_design.vhd
+proc s_ {} {
+    echo "\n\n\nMain lib\n\n\n"
+}
 
 proc s_create_lib_main {} {
     global lib_name
