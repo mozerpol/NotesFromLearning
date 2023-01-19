@@ -3,7 +3,12 @@ set module        "all_gates"
 
 ###### Include external libraries ######
 # set hdl_dir               "directory/to/library"
-# set library_name          "library_name"     
+# set library_name          "library_name"
+# vcom -2008 -quiet -work   $library_name $hdl_dir/file1.vhd
+# vcom -2008 -quiet -work   $library_name $hdl_dir/file2.vhd
+#                         .
+#                         .
+#                         .
 # vcom -2008 -quiet -work   $library_name $hdl_dir/file.vhd
 
 set hdl_dir             "../../and_gate/"
@@ -16,9 +21,6 @@ set library_name        "or_gate_lib"
 vcom -2008 -quiet -work $library_name $hdl_dir/or_gate_pkg.vhd
 vcom -2008 -quiet -work $library_name $hdl_dir/or_gate_design.vhd
 
-# THE EASIEST WAY IS RUN SCRIPT FROM OTHER PROJECT INSIDE THIS PROJECT. JUST nest
-# tcl script inside other tcl script. Thanks to this, I'll receive library which
-# will include to the project easily.
 
 ##################################
 #         PROJECT TREE:
@@ -48,8 +50,11 @@ set waveforms        $module\_lib.$module\_tb
 set systemTime_start [clock seconds]
 set systemTime_end   [clock seconds]
 
-proc s_ {} {
-    echo "\n\n\nMain lib\n\n\n"
+proc s_show_description {} {
+    global lib_name
+    echo "\n============================\n"
+    echo "      $lib_name"
+    echo "\n============================\n"
 }
 
 proc s_create_lib_main {} {
@@ -75,9 +80,10 @@ proc s_comp_package_main {} {
     echo "----> Compile files:"
     echo "-> Package"
     if {[file exist $package_name.vhd]} {
+       echo "OK"
        vcom -2008 -quiet -work $lib_name $package_name.vhd
     } else {
-       return "File $package_name not found, stop script"
+       echo "File $package_name not found"
     }
 }
 
@@ -85,6 +91,7 @@ proc s_comp_design_main {} {
     global design_name lib_name
     echo "-> Design"
     if {[file exist $design_name.vhd]} {
+       echo "OK"
        vcom -2008 -quiet -work $lib_name $design_name.vhd 
     } else {
        return "File $design_name not found, stop script"
@@ -95,6 +102,7 @@ proc s_comp_test_main {} {
     global test_name lib_name
     echo "-> Testbench"
     if {[file exist $test_name.vhd]} {
+       echo "OK"
        vcom -2008 -quiet -work $lib_name $test_name.vhd
     } else {
        return "File $test_name not found, stop script"
@@ -126,6 +134,7 @@ proc s_start_sim {} {
     echo "Simulation time       : [expr {$systemTime_end - $systemTime_start}] sec."
 }
 
+s_show_description
 s_create_lib_main
 s_map_lib_main
 s_comp_package_main
