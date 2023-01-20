@@ -6,12 +6,23 @@
 
 
 ##### Add waves: #####
-#add wave -expand -group TB -radix binary /simplegate_tb/a
-#add wave -expand -group TB -radix binary /simplegate_tb/b
+add wave -expand -group TB -radix binary /all_gates_tb/a_all
+add wave -expand -group TB -radix binary /all_gates_tb/b_all
+add wave -expand -group TB -radix binary /all_gates_tb/c_all
+add wave -expand -group TB -radix binary /all_gates_tb/d_all
 
-#add wave -expand -group DESIGN -radix binary /simplegate_tb/dut/i_a
-#add wave -expand -group DESIGN -radix binary /simplegate_tb/dut/o_b
-#add wave -expand -group DESIGN -radix binary /simplegate_tb/dut/c
+add wave -expand -group DESIGN -radix binary /all_gates_tb/inst_dut/i_a_all
+add wave -expand -group DESIGN -radix binary /all_gates_tb/inst_dut/i_b_all
+add wave -expand -group DESIGN -radix binary /all_gates_tb/inst_dut/i_c_all
+add wave -expand -group DESIGN -radix binary /all_gates_tb/inst_dut/o_d_all
+
+add wave -expand -group OR -radix binary /all_gates_tb/inst_dut/a_or
+add wave -expand -group OR -radix binary /all_gates_tb/inst_dut/b_or
+add wave -expand -group OR -radix binary /all_gates_tb/inst_dut/c_or
+
+add wave -expand -group AND -radix binary /all_gates_tb/inst_dut/a_and
+add wave -expand -group AND -radix binary /all_gates_tb/inst_dut/b_and
+add wave -expand -group AND -radix binary /all_gates_tb/inst_dut/c_and
 
 
 ##### Waveform window settings: #####
