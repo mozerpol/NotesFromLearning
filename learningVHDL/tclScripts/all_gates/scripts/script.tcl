@@ -1,6 +1,7 @@
 ###### Set module name ######
 set module        "all_gates"
 
+
 ###### Include external libraries ######
 # set hdl_dir               "directory/to/library"
 # set library_name          "library_name"
@@ -10,6 +11,7 @@ set module        "all_gates"
 #                         .
 #                         .
 # vcom -2008 -quiet -work   $library_name $hdl_dir/file.vhd
+
 
 set hdl_dir             "../../and_gate/"
 set library_name        "and_gate_lib"
