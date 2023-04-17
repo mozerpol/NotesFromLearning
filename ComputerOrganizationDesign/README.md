@@ -62,6 +62,20 @@ numbers, signals I/O devices to activate, and so on.
 **datapath** - The component of the processor that performs arithmetic
 operations.
 
+**control** - The component of the processor that commands the datapath, memory,
+and I/O devices according to the instructions of the program.
+
+**memory** - The storage area in which programs are kept when they are running
+and that contains the data needed by the running programs.
+
+**cache memory** - A small, fast memory that acts as a buffer for a slower,
+larger memory. 
+
+Cache is built using a different memory technology, static
+random access memory (SRAM). SRAM is faster but less dense,
+and hence more expensive, than DRAM SRAM and
+DRAM are two layers of the **memory hierarchy**. 
+
 
 
 
