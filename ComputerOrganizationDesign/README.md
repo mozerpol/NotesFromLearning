@@ -113,5 +113,14 @@ while they are running; typically consists of DRAM in today’s computers.
 **secondary memory** - Nonvolatile memory used to store programs and data between
 runs. Typically consists of flash memory in PMDs and magnetic disks in servers.
 
+### 1.5 Technologies for Building Processors and Memory <a name="15"></a>
+
+Figure below shows the growth in DRAM capacity since 1977.
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/ccb14549-1cf8-488b-a79c-9ef60f6dd92a)|
+|:--:|
+|Growth of capacity per DRAM chip over time|
+
+### 1.6 Performance <a name="16"></a>
 
 
