@@ -23,4 +23,15 @@ that are the components of information.
 
 **instruction** - A command that computer hardware understands and obeys.
 
+**assembler** - A program that translates a symbolic version of instructions into
+the binary version.
+
+**assembly language** A symbolic representation of machine instructions.
+
+**machine language** - A binary representation of machine instructions.
+
+**high-level programming language** - A portable language such as C, C++, Java,
+or Visual Basic that is composed of words and algebraic notation that can be
+translated by a compiler into assembly language.
+
 
