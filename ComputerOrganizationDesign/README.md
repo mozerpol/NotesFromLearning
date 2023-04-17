@@ -89,6 +89,20 @@ The user portion of the instruction set plus the operating system
 interfaces used by application programmers. It defines a standard
 for binary portability across computers.
 
+In other words: <br/>
+**API: Application Program Interface** - This is the set of public 
+types/variables/functions that you expose (pol. *ujawnic*) from your
+application/library. In C/C++ this is what you expose in the header files 
+that you ship with the application.
+
+**ABI: Application Binary Interface** - This is how the compiler builds an
+application. It defines things (but is not limited to):
+- How parameters are passed to functions (registers/stack).
+- Who cleans parameters from the stack (caller/callee).
+- Where the return value is placed for return.
+- How exceptions propagate
+
+
 
 
 
