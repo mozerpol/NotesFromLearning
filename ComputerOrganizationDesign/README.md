@@ -76,6 +76,18 @@ random access memory (SRAM). SRAM is faster but less dense,
 and hence more expensive, than DRAM SRAM and
 DRAM are two layers of the **memory hierarchy**. 
 
+**instruction set architecture** - Also called architecture. The
+instruction set architecture includes anything programmers need to
+know to make a binary machine language program work correctly,
+including instructions, I/O devices, and so on. Typically, the
+operating system will encapsulate the details of doing I/O,
+allocating memory, and other low-level system functions so that
+application programmers do not need to worry about such details.
+
+**application binary interface (ABI)** - 
+The user portion of the instruction set plus the operating system
+interfaces used by application programmers. It defines a standard
+for binary portability across computers.
 
 
 
