@@ -55,6 +55,13 @@ of the program.
 |:--:|
 |*The organization of a computer, showing the five classic components*|
 
+**central processor unit (CPU)** - Also called processor. The active part of the
+computer, which contains the datapath and control and which adds numbers, tests
+numbers, signals I/O devices to activate, and so on.
+
+**datapath** - The component of the processor that performs arithmetic
+operations.
+
 
 
 
