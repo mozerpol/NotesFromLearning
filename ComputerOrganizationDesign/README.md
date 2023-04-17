@@ -15,4 +15,12 @@ including operating systems, compilers, loaders, and assemblers.
 **operating system** - Supervising program that manages the resources of a
 computer for the benefit of the programs that run on that computer.
 
+**compiler** - A program that translates high-level language statements into
+assembly language statements.
+
+**binary digit** - Also called a bit. One of the two numbers in base 2 (0 or 1)
+that are the components of information.
+
+**instruction** - A command that computer hardware understands and obeys.
+
 
