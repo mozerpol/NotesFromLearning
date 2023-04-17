@@ -51,6 +51,11 @@ The datapath performs the arithmetic operations, and control tells the datapath,
 memory, and I/O devices what to do according to the wishes of the instructions
 of the program.
 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/bfd5442f-6113-4110-822a-e1a62e342b62)|
+|:--:|
+|*The organization of a computer, showing the five classic components*|
+
+
 
 
 
