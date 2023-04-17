@@ -102,7 +102,16 @@ application. It defines things (but is not limited to):
 - Where the return value is placed for return.
 - How exceptions propagate
 
+**implementation** - Hardware that obeys (pol. *przestrzega, zgodny z...*) the
+architecture abstraction.
 
+Secondary memory forms the next lower layer of the memory hierarchy.
+
+**main memory** - Also called primary memory. Memory used to hold programs
+while they are running; typically consists of DRAM in today’s computers.
+
+**secondary memory** - Nonvolatile memory used to store programs and data between
+runs. Typically consists of flash memory in PMDs and magnetic disks in servers.
 
 
 
