@@ -2,8 +2,12 @@
 _____________
 
 ## Table of contents <a name="tof"></a>
-1. [Computer Abstractions and Technology](#1)
-   1. [](#11)
+1. [1. Computer Abstractions and Technology](#1)
+   1. [1.2 Eight Great Ideas in Computer Architecture](#12)
+   2. [1.4 Under the Covers](#14)
+   3. [1.5 Technologies for Building Processors and Memory](#15)
+   4. [1.6 Performance](#16)
+   5. [](#)
 
 ## 1. Computer Abstractions and Technology <a name="1"></a>
 
