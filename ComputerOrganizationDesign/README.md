@@ -224,6 +224,13 @@ based on *elapsed time* and that based on CPU *execution time*. We
 will use the term system performance to refer to *elapsed time* on an
 unloaded system and CPU performance to refer to user *CPU time*.
 
+Difference between *elapsed time* and *cpu time*:
+**CPU Time** is the quantity of processor time taken by the process. This does not
+indicate duration. **Elapsed Time** represents the total duration of the task. If
+a given task uses a parallelism of 8 (i.e. 8 threads), and each thread is used
+at a rate of 100% over the entire duration of the task, CPU time could be
+8000ms, while *elapsed time* would only be 1000ms.
+
 
 
 
