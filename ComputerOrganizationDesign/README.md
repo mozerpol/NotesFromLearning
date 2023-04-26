@@ -231,6 +231,16 @@ a given task uses a parallelism of 8 (i.e. 8 threads), and each thread is used
 at a rate of 100% over the entire duration of the task, CPU time could be
 8000ms, while *elapsed time* would only be 1000ms.
 
+Therefore, shorter **elapsed time** indicates faster response time. You may want
+shorter CPU time and longer elapsed time if you are concerned about CPU
+pressure, and don't care about user experience. You may accept longer **CPU time**
+if that results in a drop in elapsed time, since that might indicate the
+user is waiting less, at the expense of higher CPU utilization.
+
+Elapsed real time is always greater than or equal to the CPU time for computer
+programs which use only one CPU for processing. If no wait is involved for I/O
+or other resources, elapsed real time and CPU time are very similar.
+
 
 
 
