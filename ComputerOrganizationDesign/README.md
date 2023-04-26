@@ -121,12 +121,12 @@ and I/O devices according to the instructions of the program.
 and that contains the data needed by the running programs.
 
 **cache memory** - A small, fast memory that acts as a buffer for a slower,
-larger memory. 
+larger memory.
 
 Cache is built using a different memory technology, static
 random access memory (SRAM). SRAM is faster but less dense,
 and hence more expensive, than DRAM SRAM and
-DRAM are two layers of the **memory hierarchy**. 
+DRAM are two layers of the **memory hierarchy**.
 
 **instruction set architecture** - Also called architecture. The
 instruction set architecture includes anything programmers need to
@@ -136,15 +136,15 @@ operating system will encapsulate the details of doing I/O,
 allocating memory, and other low-level system functions so that
 application programmers do not need to worry about such details.
 
-**application binary interface (ABI)** - 
+**application binary interface (ABI)** -
 The user portion of the instruction set plus the operating system
 interfaces used by application programmers. It defines a standard
 for binary portability across computers.
 
 In other words: <br/>
-**API: Application Program Interface** - This is the set of public 
+**API: Application Program Interface** - This is the set of public
 types/variables/functions that you expose (pol. *ujawnic*) from your
-application/library. In C/C++ this is what you expose in the header files 
+application/library. In C/C++ this is what you expose in the header files
 that you ship with the application.
 
 **ABI: Application Binary Interface** - This is how the compiler builds an
@@ -174,21 +174,63 @@ Figure below shows the growth in DRAM capacity since 1977.
 |Growth of capacity per DRAM chip over time|
 
 ### 1.6 Performance <a name="16"></a>
+Firstly we should define what is performence. For everyone it can be something
+different. For example datacenter managers often care about increasing
+throughput or bandwidth - the total amount of work done in a given time.
+From another hand as an
+individual computer user, you are interested in reducing response time — the
+time between the start and completion of a task—also referred to as execution
+time.
+
+Hence, in most cases, we will need different performance metrics as well as
+different sets of applications to benchmark personal mobile devices,
+which are more focused on response time, versus servers, which are
+more focused on throughput.
+
+
+
+
 
 ### 1.7 The Power Wall <a name="17"></a>
+
 ### 1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors <a name="18"></a>
+
+
 ### 1.9 Real Stuff: Benchmarking the Intel Core i7 <a name="19"></a>
+
+
 ### 1.10 Fallacies and Pitfalls <a name="110"></a>
+
 
 ## 2. Language of the Computer <a name="2"></a>
 
+
 ### 2.2 Operations of the Computer <a name="21"></a>
+
+
 ### 2.3 Operands of the Computer Hardware <a name="22"></a>
+
+
 ### 2.4 Signed and Unsigned Numbers <a name="23"></a>
+
+
 ### 2.5 Representing Instructions in the Computer <a name="24"></a>
+
+
+
 ### 2.6 Logical Operations <a name="25"></a>
+
 ### 2.7 Instructions for Making Decisions <a name="26"></a>
+
+
 ### 2.8 Supporting Procedures in Computer Hardware <a name="27"></a>
+
+
+
+
+
+
+
 ### 2.9 Communicating with People <a name="28"></a>
 ### 2.10 RISC-V Addressing for Wide Immediates and Addresses <a name="29"></a>
 ### 2.11 Parallelism and Instructions: Synchronization <a name="210"></a>
@@ -231,4 +273,3 @@ Figure below shows the growth in DRAM capacity since 1977.
 ### 4.14 Fallacies and Pitfalls <a name="414"></a>
 
 ## 5. Large and Fast Exploiting Memory Hierarchy <a name="5"></a>
-
