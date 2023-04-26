@@ -197,6 +197,33 @@ time, and so on.
 Also called **bandwidth**. Another measure of performance, it is the
 number of tasks completed per unit time.
 
+Decreasing response time almost always improves throughput. Thus, in many real
+computer systems, changing either execution time or throughput often affects the
+other. <br/>
+To maximize performance, we want to minimize response time or
+execution time for some task. Thus, we can relate performance and
+execution time for a computer X: <br/>
+| ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/7e4788a1-2edc-46dd-a254-a0cf4e202706) |
+|:--:|
+|Performance|
+
+Example: <br/>
+If computer A runs a program in 10 seconds and computer B runs
+the same program in 15 seconds, how much faster is A than B? <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/4ee9d10a-15c5-4855-9d45-3055c8e84bf1)
+
+Thus the performance ratio is: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b09a4402-bf8a-4261-b7de-bcf3ff7fb470)
+
+and A is therefore 1.5 times as fast as B. Time is the measure of computer
+performance: the computer that performs the same amount of work in the least
+time is the fastest. Program *execution time* is measured in seconds per program.
+
+For consistency, we maintain a distinction between performance
+based on *elapsed time* and that based on CPU *execution time*. We
+will use the term system performance to refer to *elapsed time* on an
+unloaded system and CPU performance to refer to user *CPU time*.
+
 
 
 
