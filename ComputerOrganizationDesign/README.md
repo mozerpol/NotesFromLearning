@@ -187,6 +187,16 @@ different sets of applications to benchmark personal mobile devices,
 which are more focused on response time, versus servers, which are
 more focused on throughput.
 
+**response time** -
+Also called **execution time**. The total time required for the
+computer to complete a task, including disk accesses, memory
+accesses, I/O activities, operating system overhead, CPU execution
+time, and so on.
+
+**throughput** -
+Also called **bandwidth**. Another measure of performance, it is the
+number of tasks completed per unit time.
+
 
 
 
