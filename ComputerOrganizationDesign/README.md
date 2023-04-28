@@ -7,7 +7,55 @@ _____________
    2. [1.4 Under the Covers](#14)
    3. [1.5 Technologies for Building Processors and Memory](#15)
    4. [1.6 Performance](#16)
-   5. [](#)
+   5. [1.7 The Power Wall](#17)
+   6. [1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors](#18)
+   7. [1.9 Real Stuff: Benchmarking the Intel Core i7](#19)
+   8. [1.10 Fallacies and Pitfalls](#110)
+2. [2. Language of the Computer](#2)
+   1. [2.2 Operations of the Computer](#21)
+   2. [2.3 Operands of the Computer Hardware](#22)
+   3. [2.4 Signed and Unsigned Numbers](#23)
+   4. [2.5 Representing Instructions in the Computer](#24)
+   5. [2.6 Logical Operations](#25)
+   6. [2.7 Instructions for Making Decisions](#26)
+   7. [2.8 Supporting Procedures in Computer Hardware](#27)
+   8. [2.9 Communicating with People](#28)
+   9. [2.10 RISC-V Addressing for Wide Immediates and Addresses](#29)
+   10. [2.11 Parallelism and Instructions: Synchronization](#210)
+   11. [2.12 Translating and Starting a Program](#211)
+   12. [2.13 A C Sort Example to Put it All Together](#212)
+   14. [2.14 Arrays versus Pointers](#213)
+   15. [2.15 Advanced Material: Compiling C and Interpreting Java](#214)
+   16. [2.16 Real Stuff: MIPS Instructions](#215)
+   17. [2.17 Real Stuff: x86 Instructions](#216)
+   18. [2.18 Real Stuff: The Rest of the RISC- V Instruction Set](#217)
+   19. [2.19 Fallacies and Pitfalls](#218)
+3. [3. Arithmetic for Computers](#3)
+   1. [3.1 Introduction](#31)
+   2. [3.2 Addition and Subtraction](#32)
+   3. [3.3 Multiplication](#33)
+   4. [3.4 Division](#34)
+   5. [3.5 Floating Point](#35)
+   6. [3.6 Parallelism and Computer Arithmetic: Subword Parallelism](#36)
+   7. [3.7 Real Stuff: Streaming SIMD Extensions and Advanced Vector Extensions in x86](#37)
+   8. [3.8 Going Faster: Subword Parallelism and Matrix Multiply](#38)
+   9. [3.9 Fallacies and Pitfalls](#39)
+4. [4. The Processor](#4)
+   1. [4.1 Introduction](#41)
+   2. [4.2 Logic Design Conventions](#42)
+   3. [4.3 Building a Datapath](#43)
+   4. [4.4 A Simple Implementation Scheme](#44)
+   5. [4.5 An Overview of Pipelining](#45)
+   6. [4.6 Pipelined Datapath and Control](#46)
+   7. [4.7 Data Hazards: Forwarding versus Stalling](#47)
+   8. [4.8 Control Hazards](#48)
+   9. [4.9 Exceptions](#49)
+   10. [4.10 Parallelism via Instructions](#410)
+   11. [4.11 Real Stuff: The ARM Cortex-A53 and Intel Core i7 Pipelines](#411)
+   12. [4.12 Going Faster: Instruction-Level Parallelism and Matrix Multiply](#412)
+   13. [4.13 Advanced Topic](#413)
+   14. [4.14 Fallacies and Pitfalls](#414)
+5. [5. Large and Fast Exploiting Memory Hierarchy](#5)
 
 ## 1. Computer Abstractions and Technology <a name="1"></a>
 
@@ -127,4 +175,60 @@ Figure below shows the growth in DRAM capacity since 1977.
 
 ### 1.6 Performance <a name="16"></a>
 
+### 1.7 The Power Wall <a name="17"></a>
+### 1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors <a name="18"></a>
+### 1.9 Real Stuff: Benchmarking the Intel Core i7 <a name="19"></a>
+### 1.10 Fallacies and Pitfalls <a name="110"></a>
+
+## 2. Language of the Computer <a name="2"></a>
+
+### 2.2 Operations of the Computer <a name="21"></a>
+### 2.3 Operands of the Computer Hardware <a name="22"></a>
+### 2.4 Signed and Unsigned Numbers <a name="23"></a>
+### 2.5 Representing Instructions in the Computer <a name="24"></a>
+### 2.6 Logical Operations <a name="25"></a>
+### 2.7 Instructions for Making Decisions <a name="26"></a>
+### 2.8 Supporting Procedures in Computer Hardware <a name="27"></a>
+### 2.9 Communicating with People <a name="28"></a>
+### 2.10 RISC-V Addressing for Wide Immediates and Addresses <a name="29"></a>
+### 2.11 Parallelism and Instructions: Synchronization <a name="210"></a>
+### 2.12 Translating and Starting a Program <a name="211"></a>
+### 2.13 A C Sort Example to Put it All Together <a name="212"></a>
+### 2.14 Arrays versus Pointers <a name="213"></a>
+### 2.15 Advanced Material: Compiling C and Interpreting Java <a name="214"></a>
+### 2.16 Real Stuff: MIPS Instructions <a name="215"></a>
+### 2.17 Real Stuff: x86 Instructions <a name="216"></a>
+### 2.18 Real Stuff: The Rest of the RISC- V Instruction Set <a name="217"></a>
+### 2.19 Fallacies and Pitfalls <a name="218"></a>
+
+## 3. Arithmetic for Computers <a name="3"></a>
+
+### 3.1 Introduction <a name="31"></a>
+### 3.2 Addition and Subtraction <a name="32"></a>
+### 3.3 Multiplication <a name="33"></a>
+### 3.4 Division <a name="34"></a>
+### 3.5 Floating Point <a name="35"></a>
+### 3.6 Parallelism and Computer Arithmetic: Subword Parallelism <a name="36"></a>
+### 3.7 Real Stuff: Streaming SIMD Extensions and Advanced Vector Extensions in x86 <a name="37"></a>
+### 3.8 Going Faster: Subword Parallelism and Matrix Multiply <a name="38"></a>
+### 3.9 Fallacies and Pitfalls <a name="39"></a>
+
+## 4. The Processor <a name="4"></a>
+
+### 4.1 Introduction <a name="41"></a>
+### 4.2 Logic Design Conventions <a name="42"></a>
+### 4.3 Building a Datapath <a name="43"></a>
+### 4.4 A Simple Implementation Scheme <a name="44"></a>
+### 4.5 An Overview of Pipelining <a name="45"></a>
+### 4.6 Pipelined Datapath and Control <a name="46"></a>
+### 4.7 Data Hazards: Forwarding versus Stalling <a name="47"></a>
+### 4.8 Control Hazards <a name="48"></a>
+### 4.9 Exceptions <a name="49"></a>
+### 4.10 Parallelism via Instructions <a name="410"></a>
+### 4.11 Real Stuff: The ARM Cortex-A53 and Intel Core i7 Pipelines <a name="411"></a>
+### 4.12 Going Faster: Instruction-Level Parallelism and Matrix Multiply <a name="412"></a>
+### 4.13 Advanced Topic <a name="413"></a>
+### 4.14 Fallacies and Pitfalls <a name="414"></a>
+
+## 5. Large and Fast Exploiting Memory Hierarchy <a name="5"></a>
 
