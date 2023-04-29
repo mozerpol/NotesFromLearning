@@ -245,6 +245,10 @@ or other resources, elapsed real time and CPU time are very similar.
 |:--:|
 |A simple formula relates the most basic metrics (clock cycles and clock cycle time) to CPU time|
 
+This above formula makes it clear that the hardware designer can
+improve performance by reducing the number of clock cycles
+required for a program or the length of the clock cycle.
+
 
 
 
