@@ -257,6 +257,13 @@ CPI provides one way of comparing two different implementations of the identical
 instruction set architecture, since the number of instructions executed for a
 program will, of course, be the same.
 
+**instruction count** - The number of instructions executed by the program:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/2678a276-f077-47db-802d-5b078bbcecb1)
+
+or
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8ed73ae9-42f0-4afb-8e57-5357a3aa1692)
+
 
 
 ### 1.7 The Power Wall <a name="17"></a>
