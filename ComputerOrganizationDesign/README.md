@@ -241,6 +241,10 @@ Elapsed real time is always greater than or equal to the CPU time for computer
 programs which use only one CPU for processing. If no wait is involved for I/O
 or other resources, elapsed real time and CPU time are very similar.
 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a198844a-2796-4a70-be28-37aa5506cd1a)|
+|:--:|
+|A simple formula relates the most basic metrics (clock cycles and clock cycle time) to CPU time|
+
 
 
 
