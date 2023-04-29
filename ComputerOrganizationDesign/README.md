@@ -249,7 +249,13 @@ This above formula makes it clear that the hardware designer can
 improve performance by reducing the number of clock cycles
 required for a program or the length of the clock cycle.
 
-
+**Clock cycles per instruction** - (CPI) is the average number of clock cycles
+each instruction takes to execute.
+Since different instructions may take different amounts of time depending on
+what they do, CPI is an average of all the instructions executed in the program.
+CPI provides one way of comparing two different implementations of the identical
+instruction set architecture, since the number of instructions executed for a
+program will, of course, be the same.
 
 
 
