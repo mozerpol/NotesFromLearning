@@ -264,6 +264,10 @@ or
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8ed73ae9-42f0-4afb-8e57-5357a3aa1692)
 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/95dc7659-bbab-41aa-88ce-123207cb7279)|
+|:--:|
+|The basic components of performance and how each is measured|
+
 
 
 ### 1.7 The Power Wall <a name="17"></a>
