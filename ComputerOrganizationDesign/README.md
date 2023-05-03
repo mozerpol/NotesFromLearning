@@ -274,7 +274,9 @@ reliable measure of performance.** <br/>
 **Always bear in mind that the only complete and reliable
 measure of computer performance is time.**
 
-
+Some designers invert CPI to talk about IPC, or instructions per clock cycle.
+If a processor executes on average two *instructions per clock cycle*,
+then it has an IPC of 2 and hence a CPI of 0.5.
 
 ### 1.7 The Power Wall <a name="17"></a>
 
