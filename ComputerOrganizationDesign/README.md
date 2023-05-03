@@ -279,6 +279,10 @@ If a processor executes on average two *instructions per clock cycle*,
 then it has an IPC of 2 and hence a CPI of 0.5.
 
 ### 1.7 The Power Wall <a name="17"></a>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/ce4fd1b9-885b-4987-bcda-a0b3d9f7220e)|
+|:--:|
+|Clock rate and power for Intel x86 microprocessors over eight generations and 30 years|
+
 
 ### 1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors <a name="18"></a>
 
