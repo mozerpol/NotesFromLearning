@@ -268,6 +268,12 @@ or
 |:--:|
 |The basic components of performance and how each is measured|
 
+**Remember, though, that individually the factors do not determine
+performance: only the product, which equals execution time, is a
+reliable measure of performance.** <br/>
+**Always bear in mind that the only complete and reliable
+measure of computer performance is time.**
+
 
 
 ### 1.7 The Power Wall <a name="17"></a>
