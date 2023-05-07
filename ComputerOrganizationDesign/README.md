@@ -283,6 +283,10 @@ then it has an IPC of 2 and hence a CPI of 0.5.
 |:--:|
 |Clock rate and power for Intel x86 microprocessors over eight generations and 30 years|
 
+The modern problem is that further lowering of the voltage
+appears to make the transistors too leaky, like water faucet (pol. *kran*) that
+cannot be completely shut off. Even today about 40% of the power
+consumption in server chips is due to leakage.
 
 ### 1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors <a name="18"></a>
 
