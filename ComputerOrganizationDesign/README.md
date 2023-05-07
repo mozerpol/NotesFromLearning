@@ -289,6 +289,9 @@ cannot be completely shut off. Even today about 40% of the power
 consumption in server chips is due to leakage.
 
 ### 1.8 The Sea Change: The Switch from Uniprocessors to Multiprocessors <a name="18"></a>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/4aaa6ac5-3d25-4bca-b4dd-709e7d111700)|
+|:--:|
+|Growth in processor performance since the mid-1980s|
 
 
 ### 1.9 Real Stuff: Benchmarking the Intel Core i7 <a name="19"></a>
