@@ -302,7 +302,12 @@ SPEC originally created a benchmark set focusing on processor
 performance (now called SPEC89), which has evolved through five
 generations.
 
-
+Below are describes the SPEC integer benchmarks and their
+execution time on the Intel Core i7 and shows the factors that
+explain execution time: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b73a0ac6-759e-4e8d-a4e3-c9747ffe9ae6)|
+|:--:|
+|SPECINTC2006 benchmarks running on a 2.66 GHz Intel Core i7 920|
 
 ### 1.10 Fallacies and Pitfalls <a name="110"></a>
 
