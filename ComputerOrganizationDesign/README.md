@@ -311,6 +311,16 @@ explain execution time: <br/>
 
 ### 1.10 Fallacies and Pitfalls <a name="110"></a>
 
+- fallacies - błędy
+- pitfalls - płapki
+
+**Amdahl’s Law** - the performance improvement that can be gained through
+parallel processing is limited by the part of a system that's inherently
+sequential -- that is, the set of operations that must be run in series.
+Amdahl’s Law, together with the CPU performance equation, is a handy tool for
+evaluating possible enhancements. Amdahl’s Law is also used to argue for
+practical limits to the number of parallel processors.
+
 
 ## 2. Language of the Computer <a name="2"></a>
 
