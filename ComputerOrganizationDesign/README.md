@@ -295,6 +295,13 @@ consumption in server chips is due to leakage.
 
 
 ### 1.9 Real Stuff: Benchmarking the Intel Core i7 <a name="19"></a>
+**SPEC** (System Performance Evaluation Cooperative) is an effort
+funded and supported by a number of computer vendors to create
+standard sets of benchmarks for modern computer systems. In 1989,
+SPEC originally created a benchmark set focusing on processor
+performance (now called SPEC89), which has evolved through five
+generations.
+
 
 
 ### 1.10 Fallacies and Pitfalls <a name="110"></a>
