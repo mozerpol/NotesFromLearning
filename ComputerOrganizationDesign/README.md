@@ -325,6 +325,9 @@ practical limits to the number of parallel processors.
 speed based on the number of millions of instructions. MIPS is computed as the
 instruction count divided by the product of the execution time and 10^6.
 
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/f048b694-7c67-41fe-8152-305ea72ae561)
+
+
 
 ## 2. Language of the Computer <a name="2"></a>
 
