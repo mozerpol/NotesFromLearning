@@ -321,6 +321,10 @@ Amdahl’s Law, together with the CPU performance equation, is a handy tool for
 evaluating possible enhancements. Amdahl’s Law is also used to argue for
 practical limits to the number of parallel processors.
 
+**MIPS** - million instructions per second - A measurement of program execution
+speed based on the number of millions of instructions. MIPS is computed as the
+instruction count divided by the product of the execution time and 10^6.
+
 
 ## 2. Language of the Computer <a name="2"></a>
 
