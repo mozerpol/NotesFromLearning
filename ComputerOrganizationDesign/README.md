@@ -334,7 +334,8 @@ instructions. **We cannot compare computers with different
 instruction sets using MIPS**. <br/>
 **Second, MIPS varies between programs on the
 same computer; thus, a computer cannot have a single MIPS rating.**
-
+Relationship between MIPS, clock rate, and CPI:<br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/58790ae2-d610-4d8f-86e2-e56508a14876)
 
 ## 2. Language of the Computer <a name="2"></a>
 
