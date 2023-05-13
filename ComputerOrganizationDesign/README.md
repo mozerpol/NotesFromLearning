@@ -338,6 +338,16 @@ Relationship between MIPS, clock rate, and CPI:<br/>
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/58790ae2-d610-4d8f-86e2-e56508a14876)
 
 ## 2. Language of the Computer <a name="2"></a>
+**ISA** - Instruction Set Architecture - Instruction Set - is part of the
+abstract model of a computer that defines how the CPU is controlled by the
+software. The ISA acts as an interface between the hardware and the software.
+On this model consists of:
+- instruction listings - the set of instructions that the processor can execute,
+- data types - kind and range,
+- addressing mode - way to transfer data from registers to memory and vice versa,
+- set of registers available for the developer,
+- rules for handling threads and interrupts.
+
 
 
 ### 2.2 Operations of the Computer <a name="21"></a>
