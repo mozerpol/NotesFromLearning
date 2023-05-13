@@ -327,6 +327,13 @@ instruction count divided by the product of the execution time and 10^6.
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/f048b694-7c67-41fe-8152-305ea72ae561)
 
+There are three problems with using MIPS as a measure for
+comparing computers. First, MIPS specifies the instruction
+execution rate but does not take into account the capabilities of the
+instructions. **We cannot compare computers with different
+instruction sets using MIPS**. <br/>
+**Second, MIPS varies between programs on the
+same computer; thus, a computer cannot have a single MIPS rating.**
 
 
 ## 2. Language of the Computer <a name="2"></a>
