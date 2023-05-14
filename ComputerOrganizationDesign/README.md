@@ -348,7 +348,17 @@ On this model consists of:
 - set of registers available for the developer,
 - rules for handling threads and interrupts.
 
-
+The various types of instruction sets include the following:
+- **Complex instruction set computer** - CISC processors have an additional
+microcode or microprogramming layer where instructions act as small programs. A
+single instruction can initiate multiple actions by the computer, such as a
+single add command launching multiple memory access load and store instructions.
+- **Reduced instruction set computer** - RISC
+- **Enhancement instruction sets**. These instruction types are more familiar
+because they are often used in marketing CPUs. Examples of this go back to the
+166-megahertz Intel Pentium with MultiMedia Extensions (MMX) technologies. It
+was introduced in 1996 and marketed with enhanced (pol. *wzmocniony*) Intel CPU
+multimedia performance. MMX refers to the extended instruction set.
 
 ### 2.2 Operations of the Computer <a name="21"></a>
 
