@@ -361,6 +361,15 @@ was introduced in 1996 and marketed with enhanced (pol. *wzmocniony*) Intel CPU
 multimedia performance. MMX refers to the extended instruction set.
 
 ### 2.2 Operations of the Computer <a name="21"></a>
+*word* - natural unit of data used by a particular processor design. Can be any
+set value, common word size values included: 16, 18, 24, 32, 36, 40, 48, and 64.
+
+Instruction **ld** - *load doubleword*
+
+**alignment restriction** - a requirement that data be aligned in memory on
+natural boundaries. RISC-V and Intel x86 do not have alignment restrictions, but
+MIPS does.
+
 
 
 ### 2.3 Operands of the Computer Hardware <a name="22"></a>
