@@ -379,7 +379,15 @@ variables (or those needed later) into memory. This process is called spilling
 registers.
 
 ### 2.3 Operands of the Computer Hardware <a name="22"></a>
+Let’s put the energy and performance of registers versus memory
+into perspective. Assuming 64-bit data, registers are roughly 200
+times faster (0.25 vs. 50 nanoseconds) and are 10,000 times more
+energy efficient (0.1 vs. 1000 picoJoules) than DRAM in 2015. These
+large differences led to caches, which reduce the performance and
+energy penalties of going to memory
 
+Constant operands occur frequently. Indeed, *addi* is the most
+popular instruction in most RISC-V programs.
 
 ### 2.4 Signed and Unsigned Numbers <a name="23"></a>
 
