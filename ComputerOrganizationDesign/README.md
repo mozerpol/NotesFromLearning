@@ -391,6 +391,15 @@ popular instruction in most RISC-V programs.
 
 ### 2.4 Signed and Unsigned Numbers <a name="23"></a>
 
+**least significant bit** - The rightmost bit in an RISC-V doubleword
+
+**most significant bit** - The leftmost bit in an RISC-V doubleword
+
+The RISC-V doubleword is 64 bits long, so we can represent 2^64
+different 64-bit patterns.
+
+More about two's complement on my other [repo](https://github.com/mozerpol/learningRISC-V#terms)
+
 
 ### 2.5 Representing Instructions in the Computer <a name="24"></a>
 
