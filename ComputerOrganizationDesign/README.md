@@ -370,7 +370,13 @@ Instruction **ld** - *load doubleword*
 natural boundaries. RISC-V and Intel x86 do not have alignment restrictions, but
 MIPS does.
 
-
+**spilling registers** - many programs have more variables than computers have
+registers. Consequently, the compiler tries to keep the most
+frequently used variables in registers and places the rest in
+memory, using loads and stores to move variables between
+registers and memory. The process of putting less frequently used
+variables (or those needed later) into memory. This process is called spilling
+registers.
 
 ### 2.3 Operands of the Computer Hardware <a name="22"></a>
 
