@@ -400,6 +400,9 @@ different 64-bit patterns.
 
 More about two's complement on my other [repo](https://github.com/mozerpol/learningRISC-V#terms)
 
+**one’s complement** - is a system in which negative numbers are represented by
+the inverse of the binary representations of their corresponding positive
+numbers. Just created by simple inversion. 
 
 ### 2.5 Representing Instructions in the Computer <a name="24"></a>
 
