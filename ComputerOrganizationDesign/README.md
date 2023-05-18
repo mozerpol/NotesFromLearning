@@ -405,6 +405,9 @@ the inverse of the binary representations of their corresponding positive
 numbers. Just created by simple inversion. An example: <br/>
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/3eb23524-55d6-4639-824c-537e209ffb05)
 
+**biased notation** / **offset binary** - A notation that represents the most
+negative value by 00...000 and the most positive value by 11...11. Zero is
+typically as the value 10...00.
 
 
 ### 2.5 Representing Instructions in the Computer <a name="24"></a>
