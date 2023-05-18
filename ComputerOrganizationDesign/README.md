@@ -412,6 +412,11 @@ An example: <br/>
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5b5ac645-2f41-4afd-81de-413b1336cfd2)
 
 ### 2.5 Representing Instructions in the Computer <a name="24"></a>
+**instruction format** - A form of representation of an instruction composed of
+fields of binary numbers.
+
+**machine language** - Binary representation used for communication within a
+computer system.
 
 
 
