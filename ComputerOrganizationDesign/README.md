@@ -426,7 +426,24 @@ implementation, but because I wanted readable (maybe only for me :D)
 implementation. So... <br/>
 S-type format: <br/>
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/41688db7-735b-41eb-a061-169fc80fac86)
+The 12-bit immediate in the S-type format is split into two fields,
+which supply the lower 5 bits and upper 7 bits. The RISC-V
+architects chose this design because it keeps the rs1 and rs2 fields in
+the same place in all instruction formats. Keeping the instruction
+formats as similar as possible reduces hardware complexity. <br/>
+In other words, in risc-v at first glance (pol. *na pierwszy rzut oka*) some
+instruction families can have fields in the different order, to be more clear.
+For example S-type format can have immediate value on the one field, but
+creators (of risc-v arch) split it becauses they wanted to have rs1 and rs2
+fields in all instructions formats at the samae place, thanks to this risc-v use
+less hardware (maybe in FPGA as well). <br/>
+Similarly, the opcode and funct3 fields are the same size in all
+locations, and they are always in the same place.
 
+Although RISC-V has both *add* and *sub* instructions, it does not
+have a *subi* counterpart to *addi*. This is because the immediate field
+represents a two’s complement integer, so *addi* can be used to
+subtract constants.
 
 ### 2.6 Logical Operations <a name="25"></a>
 
