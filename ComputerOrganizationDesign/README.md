@@ -418,6 +418,7 @@ fields of binary numbers.
 **machine language** - Binary representation used for communication within a
 computer system.
 
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d20f76f9-63c1-4c11-b8c6-a4de6f97ff66)
 
 
 ### 2.6 Logical Operations <a name="25"></a>
