@@ -424,6 +424,8 @@ computer system.
 I know that I didn't follow these recommendations in creating my own
 implementation, but because I wanted readable (maybe only for me :D)
 implementation. So... <br/>
+S-type format: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/41688db7-735b-41eb-a061-169fc80fac86)
 
 
 ### 2.6 Logical Operations <a name="25"></a>
