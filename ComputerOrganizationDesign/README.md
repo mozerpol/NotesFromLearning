@@ -420,6 +420,11 @@ computer system.
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d20f76f9-63c1-4c11-b8c6-a4de6f97ff66)
 
+**It's super important!!!!** <br/>
+I know that I didn't follow these recommendations in creating my own
+implementation, but because I wanted readable (maybe only for me :D)
+implementation. So... <br/>
+
 
 ### 2.6 Logical Operations <a name="25"></a>
 
