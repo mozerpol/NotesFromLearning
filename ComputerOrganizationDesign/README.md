@@ -446,6 +446,9 @@ represents a two’s complement integer, so *addi* can be used to
 subtract constants.
 
 ### 2.6 Logical Operations <a name="25"></a>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/f635db07-caa2-438a-b302-597a72c00208)|
+|:--:|
+|C and Java logical operators and their corresponding RISC-V instructions|
 
 ### 2.7 Instructions for Making Decisions <a name="26"></a>
 
