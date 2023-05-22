@@ -451,7 +451,14 @@ subtract constants.
 |C and Java logical operators and their corresponding RISC-V instructions|
 
 ### 2.7 Instructions for Making Decisions <a name="26"></a>
+**conditional branch** -
+An instruction that tests a value and that allows for a subsequent
+transfer of control to a new address in the program based on the
+outcome of the test.
 
+**basic block** - A sequence of instructions without branches (except possibly
+at the end). The test for equality or inequality is probably the most popular
+test, but there are many other relationships between two numbers.
 
 ### 2.8 Supporting Procedures in Computer Hardware <a name="27"></a>
 
