@@ -489,7 +489,17 @@ queue. A stack needs a pointer to the most recently
 allocated address in the stack to show where the next procedure
 should place the registers to be taken. In RISC-V, the **stack pointer** is
 register *x2*, also known by the name *sp*. <br/>
-
+**stack pointer** -
+A value denoting (pol. *oznaczac*) the most recently allocated address in a 
+stack that shows where registers should be taken or where old register
+values can be found. Stacks are so popular that
+they have their own buzzwords for transferring data to and from
+the stack: placing data onto the stack is called a **push**, and
+removing data from the stack is called a **pop**. <br/>
+By historical precedent, stacks “grow” from higher addresses to
+lower addresses. This convention means that you push values onto
+the stack by subtracting from the stack pointer. <br/>
+Procedures that do not call others are called *leaf* procedures.
 
 
 
