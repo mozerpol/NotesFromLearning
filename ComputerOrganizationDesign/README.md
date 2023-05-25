@@ -506,7 +506,9 @@ or *gp*.
 **global pointer** - 
 The register that is reserved to point to the static area.
 
-
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c4952a37-8873-489e-a729-46756e402475)|
+|:--:|
+|What is and what is not preserved across a procedure call|
 
 
 
