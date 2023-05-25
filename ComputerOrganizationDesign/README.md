@@ -469,7 +469,20 @@ An instruction that branches to an address and simultaneously
 saves the address of the following instruction in a register (usually
 *x1* in RISC-V).
 
+**return address** - 
+A link to the calling site that allows a procedure to return to the
+proper address. in RISC-V it is stored in register *x1*.
 
+**caller** - a procedure that calls one or more more subsequent procedure(s).
+
+**callee** - a procedure that is called by another.
+
+**program counter (PC)** - The register containing the address of the 
+instruction in the program being executed.
+
+It's important (like everything ;p) <br/>
+Suppose a compiler needs more registers (than 32) for a procedure. In this case
+we're using **stack**. <br/>
 
 
 
