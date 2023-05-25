@@ -501,7 +501,10 @@ lower addresses. This convention means that you push values onto
 the stack by subtracting from the stack pointer. <br/>
 Procedures that do not call others are called *leaf* procedures.
 
-
+Some RISC-V compilers reserve a register *x3* for use as the global pointer,
+or *gp*.
+**global pointer** - 
+The register that is reserved to point to the static area.
 
 
 
