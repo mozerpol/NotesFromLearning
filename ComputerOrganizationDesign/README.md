@@ -483,6 +483,13 @@ instruction in the program being executed.
 It's important (like everything ;p) <br/>
 Suppose a compiler needs more registers (than 32) for a procedure. In this case
 we're using **stack**. <br/>
+**stack** - 
+A data structure for extension registers organized as a last-in-first-out
+queue. A stack needs a pointer to the most recently
+allocated address in the stack to show where the next procedure
+should place the registers to be taken. In RISC-V, the **stack pointer** is
+register *x2*, also known by the name *sp*. <br/>
+
 
 
 
