@@ -461,6 +461,15 @@ at the end). The test for equality or inequality is probably the most popular
 test, but there are many other relationships between two numbers.
 
 ### 2.8 Supporting Procedures in Computer Hardware <a name="27"></a>
+**procedure** - A stored subroutine that performs a specific task based on the
+parameters with which it is provided.
+
+**jump-and-link** - instruction
+An instruction that branches to an address and simultaneously
+saves the address of the following instruction in a register (usually
+*x1* in RISC-V).
+
+
 
 
 
