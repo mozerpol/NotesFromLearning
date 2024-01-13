@@ -20,3 +20,9 @@ consumption and small-scale computing.
 
 2. What is the difference between a combinational and sequential circuit?
 Give examples of each.
+- Combinational circuit - can't remember the previous states, the output is 
+determined by the current input values. Examples: Adder, Subtractor, Decoder,
+Encoder, Multiplexer, and De-multiplexer.
+- Sequential circuit - can remember the previous states, the output is
+determined by the current input values and previous states. Examples: flip-flops,
+counters, shift registers, RAM.
