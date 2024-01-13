@@ -26,3 +26,5 @@ Encoder, Multiplexer, and De-multiplexer.
 - Sequential circuit - can remember the previous states, the output is
 determined by the current input values and previous states. Examples: flip-flops,
 counters, shift registers, RAM.
+
+3. Explain the concept of clock skew and how it can affect FPGA designs.
