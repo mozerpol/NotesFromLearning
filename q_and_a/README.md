@@ -17,3 +17,6 @@ same process node can run at much higher frequency than FPGAs.
 - Microcontrollers are typically programmed using high-level languages like C or
 C++. Microcontrollers are commonly used in applications that require low-power
 consumption and small-scale computing.
+
+2. What is the difference between a combinational and sequential circuit?
+Give examples of each.
