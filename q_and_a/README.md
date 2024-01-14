@@ -28,3 +28,23 @@ determined by the current input values and previous states. Examples: flip-flops
 counters, shift registers, RAM.
 
 3. Explain the concept of clock skew and how it can affect FPGA designs.
+clock skew -
+
+Add screenshot
+
+4. How do you implement a synchronous reset in an FPGA design?
+Synchronous reset - it's a circuit which always dependent on clock pulse input.
+It can assert and desert a flip-flop synchronously.
+VHDL code:
+```VHDL
+if Rising_edge(clock) then
+  if Reset = '0' then
+    q <= '0';
+  else
+    q <= data;
+  end if;
+end if;
+```
+Add screenshot
+
+
