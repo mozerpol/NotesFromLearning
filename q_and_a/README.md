@@ -66,4 +66,11 @@ Synthesis - is the process of converting a high-level Hardware Description
 Language (HDL) code into a low-level netlist of logical gates and flip-flops
 (a configuration file that can be loaded onto the FPGA).
 
-
+7. How do you optimize power consumption in an FPGA design?
+There are several techniques:
+- minimizing the use of power-hungry components such as high-frequency clocks.
+Running the design at a lower frequency reduces power consumption.
+- optimize the routing to minimize long interconnects which consume more power.
+- clock gating techniques - disable unused parts of the design and reduce
+switching activities
+- voltage scaling - lowering the supply voltage reduces power consumption.
