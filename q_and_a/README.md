@@ -82,3 +82,16 @@ down a complex computation into smaller, sequential stages. In pipelining, the
 input data is divided into multiple sub-tasks, which are then processed in a
 series of pipeline stages. Each pipeline stage performs a specific operation on
 the data and passes it to the next stage.
+
+9. What is the purpose of a constraint file in FPGA design? Give examples of
+common constraints.
+Constraint file is a text file that specifies certain requirements and
+limitations for the design implementation. These constraints are used by the
+synthesis tools to guide the physical implementation on the FPGA.
+Examples of common constraints in an FPGA:
+- Timing Constraints: These define the required timing characteristics of the
+design, such as maximum clock frequency, setup and hold times for registers.
+- Pin Placement Constraints: These specify the physical locations of the input
+and output pins on the FPGA device
+- Resource Constraints: These limitations specify the usage of specific FPGA
+resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
