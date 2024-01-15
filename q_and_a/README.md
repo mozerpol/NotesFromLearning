@@ -74,3 +74,11 @@ Running the design at a lower frequency reduces power consumption.
 - clock gating techniques - disable unused parts of the design and reduce
 switching activities
 - voltage scaling - lowering the supply voltage reduces power consumption.
+
+8. Explain the concept of pipelining and how it can improve performance in an
+FPGA design.
+Pipelining is a technique to improve the performance of a system by breaking
+down a complex computation into smaller, sequential stages. In pipelining, the
+input data is divided into multiple sub-tasks, which are then processed in a
+series of pipeline stages. Each pipeline stage performs a specific operation on
+the data and passes it to the next stage.
