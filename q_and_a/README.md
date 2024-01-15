@@ -101,3 +101,18 @@ resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
 test cases
 - Review RTL code for any syntax errors, incorrect connections, or logic issues
 - Ask on forum
+
+11. What is an FPGA and how does it differ from other digital electronic devices?
+FPGA - it's a type of integrated circuit that can be reconfigured to perform
+custom digital functions and perform parallel processing tasks.
+- Flexibility - FPGAs can be reprogrammed or reconfigured to implement different
+digital circuits, functions, or systems.  
+- Parallel Processing - contain a large number of configurable logic blocks 
+(CLBs) and a mesh of programmable interconnects. This architecture enables 
+simultaneous execution of multiple operations in parallel,
+- Hardware-based Implementation - unlike (pol. w odróżnieniu) traditional 
+software-based approaches, FPGAs allow for the implementation of hardware-based 
+solutions. By mapping algorithms or designs directly into the FPGA's logic 
+blocks and interconnects
+
+12. 
