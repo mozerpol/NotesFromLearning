@@ -47,4 +47,23 @@ end if;
 ```
 Add screenshot
 
+5. What is the difference between a flip-flop and a latch? When would you use each?
+A flip-flop and a latch are both fundamental building blocks used in digital
+logic circuits to store and manipulate binary data. A flip-flop is a circuit
+that has a clock input and can store digital information, while a latch is a
+circuit that can store data as long as its enable input is active, without the
+need for a clock signal.
+Latches are commonly used in applications where the circuit requires continuous
+operation based on the input condition.
+Flip-flops are widely used in synchronous digital systems, especially for
+designing sequential circuits like counters or shift registers especially when
+precise timing control is required.
+
+Add screenshot latch vs flip-flop
+
+6. Describe the process of synthesis and how it is used in FPGA design.
+Synthesis - is the process of converting a high-level Hardware Description
+Language (HDL) code into a low-level netlist of logical gates and flip-flops
+(a configuration file that can be loaded onto the FPGA).
+
 
