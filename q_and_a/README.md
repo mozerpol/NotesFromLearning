@@ -95,3 +95,9 @@ design, such as maximum clock frequency, setup and hold times for registers.
 and output pins on the FPGA device
 - Resource Constraints: These limitations specify the usage of specific FPGA
 resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
+
+10. How do you debug and troubleshoot issues in an FPGA design?
+- Use a simulator to validate the functionality of design, simulate different
+test cases
+- Review RTL code for any syntax errors, incorrect connections, or logic issues
+- Ask on forum
