@@ -174,3 +174,24 @@ It's important to note that synchronous design is more commonly used in FPGA
 designs due to its simplicity, ease of implementation, and better control over 
 timing. 
 
+14. How do you implement a flip-flop in an FPGA design?
+- Select Flip-Flop Type: choose the type of flip-flop that suits to design 
+requirements. FPGAs typically offer different types, such as D flip-flops, 
+JK flip-flops, or T flip-flops.
+- Instantiate Flip-Flop: In hardware description language (HDL) code and 
+instantiate the flip-flop by declaring a variable or flip-flop object based on 
+the chosen type. For example, in VHDL for a D flip-flop:
+```VHDL
+architecture rtl of your_module is
+    signal d: std_logic;
+    signal q: std_logic;
+begin
+    your_flipflop: process(clk)
+    begin
+        if rising_edge(clk) then
+            q <= d;
+        end if;
+    end process;
+end architecture;
+```
+
