@@ -204,4 +204,13 @@ efficient way to implement complex logic functions within an FPGA, enabling the
 device to perform various tasks such as data processing, arithmetic operations, 
 and control functions.
 
-
+16. How do you implement a multiplexer in an FPGA design?
+A general approach:
+- Define the inputs and select lines: Determine the number of inputs and select 
+lines required for your multiplexer. For example, if you have 4 inputs, you'll 
+need 2 select lines.
+- Create a truth table
+- Implement the logic expressions: Use the logic elements available in the FPGA,
+such as LUTs, to implement the logic expressions derived from the truth table.
+- Synthesize and program: Use FPGA synthesis tools to convert your design into a
+ configuration file compatible with the specific FPGA device you are using.
