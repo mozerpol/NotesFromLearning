@@ -143,3 +143,34 @@ design performs as expected on the FPGA. This involves testing the design using
 test cases and verifying the output against expected results. Verification can 
 include functional, timing, and performance analysis.
 
+13. What is the difference between synchronous and asynchronous design in FPGAs?
+"Synchronous" and "asynchronous" refer to different approaches for handling the 
+timing behavior of signals within the design.
+Synchronous Design:
+- Timing Dependencies: Synchronous design relies on a clock signal to coordinate
+and synchronize the behavior of different parts of the design. All signals and 
+operations within a design are tied to the same clock domain. 
+- Clock Signal: A global clock signal is used as a reference point for 
+triggering the execution of all operations in the design.
+- Registers: Synchronous designs extensively use flip-flops or registers to 
+store and synchronize signals at specific points in time.
+- Advantages: Synchronous designs offer predictable timing behavior, easier 
+debugging, and better control over signal integrity and synchronization. 
+Asynchronous Design:
+- Timing Independence: Asynchronous design does not rely on a global clock 
+signal. Instead, it allows signals and operations to be processed independently 
+based on their own local timing.
+- Handshake Protocols: In asynchronous designs, handshake protocols or other
+ signaling methods are used to communicate between sequential stages without 
+ relying on a shared clock. These protocols define the rules for exchanging data 
+ and ensuring proper synchronization.
+- Hazard Considerations: Asynchronous designs need to consider potential hazards 
+such as metastability and data contention that can arise due to timing variations.
+-     Advantages: Asynchronous designs offer flexibility in terms of timing 
+independence, power efficiency, and reduced clock skew. They can be useful in 
+low-power designs, in scenarios where clock distribution is challenging, or in 
+cases where data is received asynchronously from external sources.
+It's important to note that synchronous design is more commonly used in FPGA 
+designs due to its simplicity, ease of implementation, and better control over 
+timing. 
+
