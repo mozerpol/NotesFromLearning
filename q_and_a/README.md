@@ -195,3 +195,13 @@ begin
 end architecture;
 ```
 
+15. What is the purpose of a look-up table (LUT) in an FPGA?
+A look-up table (LUT) in an FPGA serves as a fundamental building block for 
+implementing digital logic functions. It is a configurable memory element that 
+stores pre-defined logic values and outputs the corresponding result based on 
+the input combination. The purpose of a LUT is to provide a flexible and 
+efficient way to implement complex logic functions within an FPGA, enabling the 
+device to perform various tasks such as data processing, arithmetic operations, 
+and control functions.
+
+
