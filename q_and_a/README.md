@@ -270,3 +270,9 @@ and pathways for data flow.
 In addition to these main components, an FPGA also includes other supporting e
 lements such as clock management resources, configuration memory, and power 
 distribution networks.
+
+20. Describe the process of place and route in FPGA design.
+The place and route process is a step that follows the synthesis stage. It 
+involves mapping the synthesized logic elements onto specific locations 
+(placement) within the FPGA device and establishing the interconnections 
+(routing) between these elements.
