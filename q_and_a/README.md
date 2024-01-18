@@ -276,3 +276,14 @@ The place and route process is a step that follows the synthesis stage. It
 involves mapping the synthesized logic elements onto specific locations 
 (placement) within the FPGA device and establishing the interconnections 
 (routing) between these elements.
+
+21. What are the advantages and disadvantages of using an FPGA in a design?
+Advantages of using an FPGA in a design:
+- Flexibility: they can be reprogrammed or reconfigured to implement different 
+functionalities.
+- Customizability: FPGAs allow designers to create custom digital logic circuits
+tailored to their specific application requirements
+- Parallelism: allowing for the execution of multiple tasks simultaneously
+- Integration: FPGAs often include various on-chip resources such as memory 
+blocks, DSP (Digital Signal Processing) units, and high-speed I/O interfaces, 
+facilitating the integration of multiple functions into a single device.
