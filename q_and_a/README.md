@@ -232,3 +232,17 @@ of the FPGA
 - Clock frequency improvement: Pipelining can enable higher clock frequencies by
 reducing the critical path delay.
 
+18. How do you handle timing constraints (pol. radzić sobie z ograniczeniami 
+czasowymi) in FPGA designs?
+General steps involved:
+- Define timing requirements: Determine the timing requirements for your design, 
+including maximum and minimum clock frequencies, setup and hold times for input 
+and output signals, and any other specific timing constraints.
+- Perform static timing analysis: Run static timing analysis tools provided by 
+the FPGA development environment to verify if the design meets the timing 
+requirements
+- Optimize the design: Make design modifications to improve timing performance. 
+For example this can include techniques such as pipelining.
+- Analyze the design: Use timing analysis tools provided by the FPGA development 
+environment to analyze the design and identify critical paths. These are the 
+paths that have the highest impact on meeting timing requirements.
