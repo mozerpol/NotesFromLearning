@@ -287,3 +287,19 @@ tailored to their specific application requirements
 - Integration: FPGAs often include various on-chip resources such as memory 
 blocks, DSP (Digital Signal Processing) units, and high-speed I/O interfaces, 
 facilitating the integration of multiple functions into a single device.
+
+Disadvantages of using an FPGA in a design:
+- Cost: FPGAs can be more expensive compared to other off-the-shelf integrated 
+circuits due to their programmability and flexibility
+- Power consumption: FPGAs typically consume more power compared to 
+application-specific integrated circuits (ASICs) or microcontrollers.
+This higher power consumption can be a concern in battery-powered or 
+energy-efficient designs.
+- Complexity: Designing for FPGAs requires specialized knowledge and expertise 
+in digital logic design, hardware description languages, and FPGA-specific tools.
+- Non-volatile limitations: Traditional FPGAs lose their configuration when 
+powered off, requiring reprogramming at startup.
+
+It's important to consider these advantages and disadvantages in the context of 
+your specific design requirements and constraints to determine if an FPGA is the
+right choice for your application.
