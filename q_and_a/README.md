@@ -309,3 +309,12 @@ Constraint file contains a set of constraints that define how the various
 signals and components in the design should behave, such as their timing 
 requirements, pin assignments, input/output characteristics, and other
 properties.
+
+23. How do you handle clock domain crossing in an FPGA design?
+Are some common techniques to handle CDC:
+- Identify the signals or interfaces that cross between different clock domains.
+- Insert synchronization elements at the crossing points to synchronize the data
+between the different clock domains. Common synchronizer techniques include 
+using dual-flip flops or Gray code flip flops. 
+
+Add screenshot
