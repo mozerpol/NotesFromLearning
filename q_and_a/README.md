@@ -303,3 +303,9 @@ powered off, requiring reprogramming at startup.
 It's important to consider these advantages and disadvantages in the context of 
 your specific design requirements and constraints to determine if an FPGA is the
 right choice for your application.
+
+22. What is the purpose of a constraint file in FPGA design?
+Constraint file contains a set of constraints that define how the various 
+signals and components in the design should behave, such as their timing 
+requirements, pin assignments, input/output characteristics, and other
+properties.
