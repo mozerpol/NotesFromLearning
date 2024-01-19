@@ -318,3 +318,16 @@ between the different clock domains. Common synchronizer techniques include
 using dual-flip flops or Gray code flip flops. 
 
 Add screenshot
+
+24. What are some common challenges and considerations when designing for FPGAs?
+- Timing and performance: FPGAs have a fixed number of resources, including 
+logic gates and flip-flops, which can limit the performance of the design. 
+Timing analysis are required to ensure that the design meets the desired 
+performance goals.
+- Power consumption: FPGAs can consume significant power, so power optimization 
+techniques need to be considered during the design process. 
+- Design complexity: Partitioning the design into smaller modules, using 
+hierarchical design approaches, and proper design documentation can help manage 
+complexity.
+- Debugging and verification: Tools like simulation, formal verification, and 
+on-chip debugging techniques can be used to ensure the correctness of the design.
