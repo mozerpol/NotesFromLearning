@@ -3,6 +3,7 @@ _____________
 
 ## Table of contents <a name="tof"></a>
 1. [1. FPGA](#1)
+2. [2. VHDL](#2)
 
 ================================================================================
                                     FPGA <a name="1"></a>
@@ -331,3 +332,7 @@ hierarchical design approaches, and proper design documentation can help manage
 complexity.
 - Debugging and verification: Tools like simulation, formal verification, and 
 on-chip debugging techniques can be used to ensure the correctness of the design.
+
+================================================================================
+                                    VHDL <a name="2"></a>
+================================================================================
