@@ -8,6 +8,7 @@ _____________
 ================================================================================
                                     FPGA <a name="1"></a>
 ================================================================================
+
 1. What is an FPGA and how does it differ from a microcontroller or ASIC?
 - FPGA - it's a type of integrated circuit that can be reconfigured to perform
 custom digital functions and perform parallel processing tasks.
@@ -336,3 +337,16 @@ on-chip debugging techniques can be used to ensure the correctness of the design
 ================================================================================
                                     VHDL <a name="2"></a>
 ================================================================================
+
+1. What is VHDL and why is it used in digital design?
+VHDL is used in digital design for various reasons:
+- Modeling and Simulation: VHDL allows to describe the behavior and 
+functionality of digital circuits. It provides 
+testing and verification before actual implementation.
+- Design Reusability: VHDL code can be easily reused and shared across different 
+projects. By creating libraries of reusable components, designers can save time
+and effort.
+- Synthesis and Implementation: VHDL can be synthesized into a gate-level 
+representation, which can then be implemented on a specific hardware platform. 
+This synthesis process translates the higher-level description into actual 
+digital hardware.
