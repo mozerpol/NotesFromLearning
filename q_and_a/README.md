@@ -387,4 +387,26 @@ begin
 end architecture;
 ```
 
-3. 
+3. What are the different types of modeling in VHDL and when would you use each 
+type?
+In VHDL, are two types of modeling:
+- Behavioral Modeling - used for higher-level description, algorithm 
+development, and simulation:
+a) It describes the functionality and behavior of the design at a higher level 
+of abstraction.
+b) It focuses on the algorithm or procedure rather than the specific hardware
+implementation.
+c) Behavioral models are often used for system-level modeling, algorithm 
+development, simulation, and verification
+d) These models are more readable, making them easier to understand and modify.
+- Structural Modeling - used for detailed design, synthesis, and gate-level 
+simulation:
+a) It describes the hardware implementation of the design using specific 
+components and their interconnections. 
+b) It involves representing the design as a network of interconnected 
+components, such as gates, flip-flops, multiplexers, etc.
+c) Structural models are used for detailed design, synthesis, and gate-level 
+simulation.
+d) These models reflect the actual structure and connections of the hardware.
+e) They provide a more accurate representation of timing, delays, and resource
+utilization.
