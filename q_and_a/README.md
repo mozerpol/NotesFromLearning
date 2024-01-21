@@ -350,3 +350,41 @@ and effort.
 representation, which can then be implemented on a specific hardware platform. 
 This synthesis process translates the higher-level description into actual 
 digital hardware.
+
+2. Explain the difference between a concurrent signal assignment and a 
+sequential signal assignment in VHDL.
+- Concurrent (pol. równoległy) Signal Assignment: the assignment is made for 
+multiple signal assignments that occur simultaneously. Concurrent signal 
+assignments are typically used in the architecture body, outside any process 
+statement. Example:
+```VHDL
+architecture Behavioral of Example is
+  signal A, B, C: std_logic;
+begin
+  A <= '1';
+  B <= '0' after 10 ns;
+  C <= A and B;
+end architecture;
+```
+
+- Sequential Signal Assignment: the assignment is made one after another in a 
+specific order as defined by a process statement. Sequential signal assignments 
+are used inside a process statement. Sequential signal assignments are executed 
+from top to bottom. Example:
+```VHDL
+architecture Behavioral of Example is
+  signal A, B, C: std_logic;
+begin
+  process
+  begin
+    A <= '1';
+    wait for 10 ns;
+    B <= '0';
+    wait for 5 ns;
+    C <= A and B;
+    wait;
+  end process;
+end architecture;
+```
+
+3. 
