@@ -441,3 +441,51 @@ begin
    -- Architecture implementation
 end architecture;
 ```
+
+5. Describe the process of writing a testbench in VHDL.
+- Define the testbench entity
+- Declare the necessary signals and components
+- Instantiate the entity
+- Stimulate the inputs
+- Capture and verify the outputs
+- Run the simulation
+```VHDL
+entity testbench is
+end entity testbench;
+
+architecture tb of testbench is
+
+  component simpleram is
+    port (
+      clk  : in    std_logic;
+      we   : in    std_logic;
+      addr : in    std_logic_vector(4 downto 0);
+      data : inout std_logic_vector(7 downto 0)
+    );
+  end component;
+
+  signal clk_in : std_logic;
+  signal we     : std_logic;
+  signal addr   : std_logic_vector(4 downto 0);
+  signal data   : std_logic_vector(7 downto 0);
+
+begin
+
+  dut : component simpleram
+    port map (
+      clk  => clk_in,
+      we   => we,
+      addr => addr,
+      data => data
+    );
+
+  tb_process : process is
+  begin
+    wait for 10 ns;
+    we   <= '1';
+    addr <= (others => '0');
+    stop;
+  end process tb_process;
+
+end architecture tb;
+```
