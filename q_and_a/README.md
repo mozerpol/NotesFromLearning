@@ -410,3 +410,34 @@ simulation.
 d) These models reflect the actual structure and connections of the hardware.
 e) They provide a more accurate representation of timing, delays, and resource
 utilization.
+
+4. How do you declare and use a component in VHDL?
+A component declaration is similar to an entity declaration, where you define 
+the inputs, outputs, and other attributes of the component. Example:
+```VHDL
+component MyComponent
+   port (
+      input1 : in std_logic;
+      input2 : in std_logic;
+      output1 : out std_logic
+   );
+end component;
+```
+
+To use the declared component, you need to instantiate it in the architecture 
+section of your VHDL code. Example:
+```VHDL
+architecture myArchitecture of MyEntity is
+   -- Signal declaration and other components/entities
+
+   -- Instantiate the component
+   componentInst : MyComponent
+      port map (
+         input1 => signal1,
+         input2 => signal2,
+         output1 => signal3
+      );
+begin
+   -- Architecture implementation
+end architecture;
+```
