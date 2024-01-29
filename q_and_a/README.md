@@ -3,57 +3,68 @@ Questions and answers to basic questions that I think you need to know
 _____________
 
 ## Table of contents <a name="tof"></a>
-1. [1. FPGA](#1)
-2. [2. VHDL](#2)
+1. [FPGA](#1)
+2. [VHDL](#2)
 
 ==========================================================================
-### FPGA <a name="1"></a>
+## FPGA <a name="1"></a>
 ==========================================================================
 
-1. What is an FPGA and how does it differ from a microcontroller or ASIC?
-- FPGA - it's a type of integrated circuit that can be reconfigured to perform
-custom digital functions and perform parallel processing tasks.
-- ASIC - is an integrated circuit customized for a particular use. For example,
-the CPU inside your phone is an ASIC.
-The biggest differences: ASIC can't be reconfigured, ASIC fabricated using the
-same process node can run at much higher frequency than FPGAs.
-- Microcontrollers are typically programmed using high-level languages like C or
-C++. Microcontrollers are commonly used in applications that require low-power
-consumption and small-scale computing.
+### 1. What is an FPGA and how does it differ from a microcontroller or ASIC?
+- **FPGA** - it's a type of integrated circuit that can be reconfigured to 
+perform custom digital functions and perform parallel processing tasks.
+- **ASIC** - is an integrated circuit customized for a particular use. It is 
+designed for a specific application or task. It is typically customized for a 
+particular purpose, such as a specific algorithm or function.
+- **Microcontroller** - is a general-purpose device that combines a 
+microprocessor core, memory, and peripheral devices. It is designed to control 
+and execute tasks based on code instructions.
+- **The biggest differences**: ASIC can't be reconfigured, ASIC fabricated using
+the same process node can run at much higher frequency than FPGAs. 
+Microcontroller offers a higher level of flexibility than ASICs.
 
-2. What is the difference between a combinational and sequential circuit?
-Give examples of each.
-- Combinational circuit - can't remember the previous states, the output is
+### 2. What is the difference between a combinational and sequential circuit?
+- **Combinational circuit** - can't remember the previous states, the output is
 determined by the current input values. Examples: Adder, Subtractor, Decoder,
 Encoder, Multiplexer, and De-multiplexer.
-- Sequential circuit - can remember the previous states, the output is
+- **Sequential circuit** - can remember the previous states, the output is
 determined by the current input values and previous states. Examples: flip-flops,
 counters, shift registers, RAM.
 
-3. Explain the concept of clock skew and how it can affect FPGA designs.
-clock skew -
+### 3. Explain the concept of clock skew and how it can affect FPGA designs.
+**Clock skew** (pol. **) - it's in synchronous digital circuit systems (such as 
+computer systems) in which the same sourced clock signal arrives at different 
+components at different times due to gate or, in more advanced semiconductor 
+technology, wire signal propagation delay. <br/>
+One problem is caused when the clock reaches the first register and the clock 
+signal towards the second register travels slower than output of the first 
+register into the second register - the output of the first register reaches the 
+second register input faster and therefore is clocked replacing the initial data 
+on the second register, or maybe destroying the integrity of the latched data. 
+This is called a **hold violation** because the previous data is not held long 
+enough at the destination flip-flop to be properly clocked through. 
 
-Add screenshot
+![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
 
-4. How do you implement a synchronous reset in an FPGA design?
-Synchronous reset - it's a circuit which always dependent on clock pulse input.
-It can assert and desert a flip-flop synchronously.
+### 4. How do you implement a synchronous reset in an FPGA design?
+**Synchronous reset** - it's a circuit which always dependent on clock pulse 
+input. It can assert and desert a flip-flop synchronously.
 VHDL code:
 ```VHDL
-if Rising_edge(clock) then
-  if Reset = '0' then
+if rising_edge(clock) then
+  if reset = '0' then
     q <= '0';
   else
     q <= data;
   end if;
 end if;
 ```
-Add screenshot
 
-5. What is the difference between a flip-flop and a latch? When would you use each?
+### 5. What is the difference between a flip-flop and a latch? When would you use each?
 A flip-flop and a latch are both fundamental building blocks used in digital
-logic circuits to store and manipulate binary data. A flip-flop is a circuit
-that has a clock input and can store digital information, while a latch is a
+logic circuits to store and manipulate binary data. <br/>
+A **flip-flop**  is a circuit
+that has a clock input and can store digital information, while a **latch** is a
 circuit that can store data as long as its enable input is active, without the
 need for a clock signal.
 Latches are commonly used in applications where the circuit requires continuous
@@ -62,14 +73,14 @@ Flip-flops are widely used in synchronous digital systems, especially for
 designing sequential circuits like counters or shift registers especially when
 precise timing control is required.
 
-Add screenshot latch vs flip-flop
+![latch_vs_ff](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b9909205-0e0f-4ea2-8263-42b8425d0b22)
 
-6. Describe the process of synthesis and how it is used in FPGA design.
-Synthesis - is the process of converting a high-level Hardware Description
+### 6. Describe the process of synthesis and how it is used in FPGA design.
+**Synthesis** - is the process of converting a high-level Hardware Description
 Language (HDL) code into a low-level netlist of logical gates and flip-flops
 (a configuration file that can be loaded onto the FPGA).
 
-7. How do you optimize power consumption in an FPGA design?
+### 7. How do you optimize power consumption in an FPGA design?
 There are several techniques:
 - minimizing the use of power-hungry components such as high-frequency clocks.
 Running the design at a lower frequency reduces power consumption.
@@ -78,101 +89,113 @@ Running the design at a lower frequency reduces power consumption.
 switching activities
 - voltage scaling - lowering the supply voltage reduces power consumption.
 
-8. Explain the concept of pipelining and how it can improve performance in an
-FPGA design.
+### 8. Explain the concept of pipelining and how it can improve performance in an FPGA design.
 Pipelining is a technique to improve the performance of a system by breaking
 down a complex computation into smaller, sequential stages. In pipelining, the
 input data is divided into multiple sub-tasks, which are then processed in a
 series of pipeline stages. Each pipeline stage performs a specific operation on
 the data and passes it to the next stage.
 
-9. What is the purpose of a constraint file in FPGA design? Give examples of
-common constraints.
+### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints.
 Constraint file is a text file that specifies certain requirements and
 limitations for the design implementation. These constraints are used by the
-synthesis tools to guide the physical implementation on the FPGA.
+synthesis tools to guide the physical implementation on the FPGA. <br/>
 Examples of common constraints in an FPGA:
-- Timing Constraints: These define the required timing characteristics of the
+- **Timing Constraints** - define the required timing characteristics of the
 design, such as maximum clock frequency, setup and hold times for registers.
-- Pin Placement Constraints: These specify the physical locations of the input
+- **Pin Placement Constraints** - specify the physical locations of the input
 and output pins on the FPGA device
-- Resource Constraints: These limitations specify the usage of specific FPGA
+- **Resource Constraints** these limitations specify the usage of specific FPGA
 resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
 
-10. How do you debug and troubleshoot issues in an FPGA design?
+### 10. How do you debug and troubleshoot issues in an FPGA design?
 - Use a simulator to validate the functionality of design, simulate different
-test cases
-- Review RTL code for any syntax errors, incorrect connections, or logic issues
-- Ask on forum
+test cases,
+- Review RTL code for any syntax errors, incorrect connections, or logic issues,
+- Ask on forum.
 
-11. What is an FPGA and how does it differ from other digital electronic devices?
-FPGA - it's a type of integrated circuit that can be reconfigured to perform
-custom digital functions and perform parallel processing tasks.
+### 11. What is an FPGA and how does it differ from other digital electronic devices?
+**FPGA** - it's a type of integrated circuit that can be reconfigured to perform
+custom digital functions and perform parallel processing tasks. Characteristics:
 - Flexibility - FPGAs can be reprogrammed or reconfigured to implement different
 digital circuits, functions, or systems.
 - Parallel Processing - contain a large number of configurable logic blocks
 (CLBs) and a mesh of programmable interconnects. This architecture enables
 simultaneous execution of multiple operations in parallel,
-- Hardware-based Implementation - unlike (pol. w odróżnieniu) traditional
+- Hardware-based Implementation - unlike (pol. *w odróżnieniu*) traditional
 software-based approaches, FPGAs allow for the implementation of hardware-based
 solutions. By mapping algorithms or designs directly into the FPGA's logic
-blocks and interconnects
+blocks and interconnects.
 
-12. Explain the steps involved in the FPGA design flow.
-FPGA design flow:
-- Design Entry: This is the initial step where you define and describe your
-design using a hardware description language (HDL). It involves creating a
+### 12. Explain the steps involved in the FPGA design flow.
+**FPGA design flow**:
+- Design Entry: <br/>
+This is the initial step where you define and describe your
+design using a hardware description language. It involves creating a
 high-level representation of the desired functionality and behavior of your
 design.
-- Simulation: After the design entry, simulate a design using a  simulation tool.
+- Simulation: <br/>
+After the design entry, simulate a design using a simulation tool.
 The simulation allows to verify the correctness and functionality of a design
 before proceeding further.
-- Synthesis: In this step, the HDL code is transformed into a gate-level
+- Synthesis: <br/>
+In this step, the HDL code is transformed into a gate-level
 representation. The synthesis tool translates design description into a netlist
 comprising logic gates and registers.
-- Floorplanning: it is the process of assigning physical locations on the FPGA
+- Floorplanning: <br/>
+It is the process of assigning physical locations on the FPGA
 for each functional unit and interconnect. It involves deciding the optimal
 placement of logic elements, I/O pins, and other components to minimize delays
 and power consumption.
-- Place and Route: In this step, the placement and routing tools generate a
+- Place and Route: <br/>
+In this step, the placement and routing tools generate a
 detailed physical layout by determining the optimal routing paths for
 interconnects. The tools consider factors like timing constraints, signal
 integrity, and resource utilization. The output of this step is a bitstream
 file that represents the programmed FPGA.
-- Bitstream Generation: The bitstream file contains the binary representation of
-design that can be loaded onto the FPGA.
-- Verification: After configuration, you need to verify that the implemented
+- Verification: <br/>
+After configuration, you need to verify that the implemented
 design performs as expected on the FPGA. This involves testing the design using
 test cases and verifying the output against expected results. Verification can
 include functional, timing, and performance analysis.
 
-13. What is the difference between synchronous and asynchronous design in FPGAs?
+### 13. What is the difference between synchronous and asynchronous design in FPGAs?
 "Synchronous" and "asynchronous" refer to different approaches for handling the
-timing behavior of signals within the design.
-Synchronous Design:
-- Timing Dependencies: Synchronous design relies on a clock signal to coordinate
+timing behavior of signals within the design. <br/>
+**Synchronous Design**:
+- Timing Dependencies: <br/>
+Synchronous design relies on a clock signal to coordinate
 and synchronize the behavior of different parts of the design. All signals and
 operations within a design are tied to the same clock domain.
-- Clock Signal: A global clock signal is used as a reference point for
+- Clock Signal: <br/>
+A global clock signal is used as a reference point for
 triggering the execution of all operations in the design.
-- Registers: Synchronous designs extensively use flip-flops or registers to
+- Registers: <br/>
+Synchronous designs extensively use flip-flops or registers to
 store and synchronize signals at specific points in time.
-- Advantages: Synchronous designs offer predictable timing behavior, easier
+- Advantages: <br/>
+Synchronous designs offer predictable timing behavior, easier
 debugging, and better control over signal integrity and synchronization.
-Asynchronous Design:
-- Timing Independence: Asynchronous design does not rely on a global clock
+
+**Asynchronous Design**:
+- Timing Independence: <br/>
+Asynchronous design does not rely on a global clock
 signal. Instead, it allows signals and operations to be processed independently
 based on their own local timing.
-- Handshake Protocols: In asynchronous designs, handshake protocols or other
- signaling methods are used to communicate between sequential stages without
- relying on a shared clock. These protocols define the rules for exchanging data
- and ensuring proper synchronization.
-- Hazard Considerations: Asynchronous designs need to consider potential hazards
+- Handshake Protocols: <br/>
+In asynchronous designs, handshake protocols or other
+signaling methods are used to communicate between sequential stages without
+relying on a shared clock. These protocols define the rules for exchanging data
+and ensuring proper synchronization.
+- Hazard Considerations: <br/>
+Asynchronous designs need to consider potential hazards
 such as metastability and data contention that can arise due to timing variations.
-- Advantages: Asynchronous designs offer flexibility in terms of timing
+- Advantages: <br/>
+Asynchronous designs offer flexibility in terms of timing
 independence, power efficiency, and reduced clock skew. They can be useful in
-low-power designs, in scenarios where clock distribution is challenging, or in
-cases where data is received asynchronously from external sources.
+low-power designs, in scenarios where where data is received asynchronously from 
+external sources.
+
 It's important to note that synchronous design is more commonly used in FPGA
 designs due to its simplicity, ease of implementation, and better control over
 timing.
