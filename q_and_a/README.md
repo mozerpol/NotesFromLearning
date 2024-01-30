@@ -6,9 +6,7 @@ _____________
 1. [FPGA](#1)
 2. [VHDL](#2)
 
-==========================================================================
 ## FPGA <a name="1"></a>
-==========================================================================
 
 ### 1. What is an FPGA and how does it differ from a microcontroller or ASIC?
 - **FPGA** - it's a type of integrated circuit that can be reconfigured to 
@@ -32,9 +30,10 @@ determined by the current input values and previous states. Examples: flip-flops
 counters, shift registers, RAM.
 
 ### 3. Explain the concept of clock skew and how it can affect FPGA designs.
-**Clock skew** (pol. **) - it's in synchronous digital circuit systems (such as 
-computer systems) in which the same sourced clock signal arrives at different 
-components at different times due to gate or, in more advanced semiconductor 
+**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital 
+circuit systems (such as computer systems) in which the same sourced clock 
+signal arrives at different components at different times due to gate or, in
+more advanced semiconductor 
 technology, wire signal propagation delay. <br/>
 One problem is caused when the clock reaches the first register and the clock 
 signal towards the second register travels slower than output of the first 
@@ -88,6 +87,15 @@ Running the design at a lower frequency reduces power consumption.
 - clock gating techniques - disable unused parts of the design and reduce
 switching activities
 - voltage scaling - lowering the supply voltage reduces power consumption.
+
+Advantages:
+- Pipelining enables the processing of multiple data elements simultaneously
+- Pipelining can help optimize the utilization of FPGA
+resources. By breaking down complex operations into smaller stages, it becomes
+easier to map the design onto the available logic elements and routing resources
+of the FPGA
+- Pipelining can enable higher clock frequencies by
+reducing the critical path delay.
 
 ### 8. Explain the concept of pipelining and how it can improve performance in an FPGA design.
 Pipelining is a technique to improve the performance of a system by breaking
@@ -200,13 +208,12 @@ It's important to note that synchronous design is more commonly used in FPGA
 designs due to its simplicity, ease of implementation, and better control over
 timing.
 
-14. How do you implement a flip-flop in an FPGA design?
-- Select Flip-Flop Type: choose the type of flip-flop that suits to design
-requirements. FPGAs typically offer different types, such as D flip-flops,
-JK flip-flops, or T flip-flops.
-- Instantiate Flip-Flop: In hardware description language (HDL) code and
-instantiate the flip-flop by declaring a variable or flip-flop object based on
-the chosen type. For example, in VHDL for a D flip-flop:
+### 14. How do you implement a flip-flop in an FPGA design?
+1. Choose the type of flip-flop that suits to design
+requirements.
+2. In hardware description language code and
+instantiate the flip-flop by declaring a variable based on
+the chosen type. For example, in VHDL for a D flip-flop: <br/>
 ```VHDL
 architecture rtl of your_module is
     signal d: std_logic;
@@ -221,146 +228,125 @@ begin
 end architecture;
 ```
 
-15. What is the purpose of a look-up table (LUT) in an FPGA?
-A look-up table (LUT) in an FPGA serves as a fundamental building block for
-implementing digital logic functions. It is a configurable memory element that
-stores pre-defined logic values and outputs the corresponding result based on
-the input combination. The purpose of a LUT is to provide a flexible and
+### 15. What is the purpose of a look-up table (LUT) in an FPGA?
+A look-up table in an FPGA serves as a fundamental building block for
+implementing digital logic functions. The purpose of a LUT is to provide a flexible and
 efficient way to implement complex logic functions within an FPGA, enabling the
 device to perform various tasks such as data processing, arithmetic operations,
 and control functions.
 
-16. How do you implement a multiplexer in an FPGA design?
-A general approach:
-- Define the inputs and select lines: Determine the number of inputs and select
+### 16. How do you implement a multiplexer in an FPGA design?
+1. Determine the number of inputs and select
 lines required for your multiplexer. For example, if you have 4 inputs, you'll
 need 2 select lines.
-- Create a truth table
-- Implement the logic expressions: Use the logic elements available in the FPGA,
-such as LUTs, to implement the logic expressions derived from the truth table.
-- Synthesize and program: Use FPGA synthesis tools to convert your design into a
+2. Create a truth table
+3. Use the logic elements available in the FPGA,
+such as LUTs, to implement the logic expressions derived (pol. *pochodny*) from the truth table.
+4. Use FPGA synthesis tools to convert your design into a
  configuration file compatible with the specific FPGA device you are using.
 
-17. Explain the concept of pipelining in FPGA designs and its advantages.
-Pipelining in FPGA designs is a technique used to improve the performance of
-digital circuits by breaking down the sequential execution of operations into a
-series of stages. Each stage performs a specific part of the overall computation,
-and the output of one stage becomes the input for the next stage. This allows
-for parallel processing of multiple data elements, resulting in increased
-efficiency and speed.
-Advantages:
-- Increased throughput: Pipelining enables the processing of multiple data
-elements simultaneously
-- Resource utilization: Pipelining can help optimize the utilization of FPGA
-resources. By breaking down complex operations into smaller stages, it becomes
-easier to map the design onto the available logic elements and routing resources
-of the FPGA
-- Clock frequency improvement: Pipelining can enable higher clock frequencies by
-reducing the critical path delay.
-
-18. How do you handle timing constraints (pol. radzić sobie z ograniczeniami
-czasowymi) in FPGA designs?
+### 18. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs?
 General steps involved:
-- Define timing requirements: Determine the timing requirements for your design,
+- Determine the timing requirements for your design,
 including maximum and minimum clock frequencies, setup and hold times for input
 and output signals, and any other specific timing constraints.
-- Perform static timing analysis: Run static timing analysis tools provided by
+- Run static timing analysis tools provided by
 the FPGA development environment to verify if the design meets the timing
 requirements
-- Optimize the design: Make design modifications to improve timing performance.
+- Make design modifications to improve timing performance.
 For example this can include techniques such as pipelining.
-- Analyze the design: Use timing analysis tools provided by the FPGA development
+- Use timing analysis tools provided by the FPGA development
 environment to analyze the design and identify critical paths. These are the
 paths that have the highest impact on meeting timing requirements.
 
-19. Describe the basic architecture of an FPGA.
+**Setup time** is the amount of time required for the input to a Flip-Flop to be 
+stable before a clock edge. **Hold time** is the minimum amount of time required
+for the input to a Flip-Flop to be stable after a clock edge.
+
+|![setup_and_hold_time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/387f2375-90c5-4265-9672-5c89491f3a36)|
+|:--:|
+|Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
+
+### 19. Describe the basic architecture of an FPGA.
 The basic architecture of an FPGA consists of three main components:
-configurable logic blocks (CLBs), input/output blocks (IOBs), and programmable
-interconnects.
-- Configurable Logic Blocks (CLBs): CLBs are the fundamental building blocks of
+- **Configurable logic blocks** - CLBs are the fundamental building blocks of
 an FPGA. They consist of look-up tables (LUTs), flip-flops, and other logic
-elements. LUTs are programmable memory elements that store pre-defined logic
-values and can be configured to implement various logic functions. Flip-flops
-provide sequential logic capabilities for storing and manipulating data. CLBs
-can be interconnected to implement complex logic functions.
-- Input/Output Blocks (IOBs): IOBs provide the interface between the external
+elements. CLBs can be interconnected to implement complex logic functions.
+
+|![clb](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d1d2e717-a928-491c-b651-f20ba80a0768)|
+|:--:|
+|Source: *https://www.fpgakey.com/uploads/images/original/20200618/102505CLB_Block_Diagram.png*|
+- **input/output blocks** - IOBs provide the interface between the external
 world and the internal logic of the FPGA. They consist of input and output
 buffers, I/O standards converters, and other circuitry necessary for interfacing
 with external devices.
-- Programmable Interconnects: The programmable interconnects form a network of
+- **programmable interconnects** - The programmable interconnects form a network of
 routing resources that connect the CLBs and IOBs. They consist of a matrix of
 programmable switches and wires. These interconnects allow for the flexible
 routing of signals between different logic elements within the FPGA. By
 configuring the interconnects, designers can establish the desired connections
 and pathways for data flow.
-In addition to these main components, an FPGA also includes other supporting e
-lements such as clock management resources, configuration memory, and power
+
+|![fpga_3](https://github.com/mozerpol/NotesFromLearning/assets/43972902/47e538bf-04eb-43dc-bb9f-63bf6ecb9f73)|
+|:--:|
+|Source: *https://www.researchgate.net/figure/A-basic-FPGA-fabric-following-Wolf-2004-where-CLB-and-IOB-stand-for-Combinational-Logic_fig1_278329485*|
+
+In addition to these main components, an FPGA also includes other supporting
+elements such as clock management resources, configuration memory, and power
 distribution networks.
 
-20. Describe the process of place and route in FPGA design.
+### 20. Describe the process of place and route in FPGA design.
 The place and route process is a step that follows the synthesis stage. It
 involves mapping the synthesized logic elements onto specific locations
 (placement) within the FPGA device and establishing the interconnections
 (routing) between these elements.
 
-21. What are the advantages and disadvantages of using an FPGA in a design?
+### 21. What are the advantages and disadvantages of using an FPGA in a design?
 Advantages of using an FPGA in a design:
-- Flexibility: they can be reprogrammed or reconfigured to implement different
-functionalities.
-- Customizability: FPGAs allow designers to create custom digital logic circuits
-tailored to their specific application requirements
-- Parallelism: allowing for the execution of multiple tasks simultaneously
-- Integration: FPGAs often include various on-chip resources such as memory
+- **Flexibility**: they can be reprogrammed or reconfigured to implement different
+functionalities,
+- **Customizability**: FPGAs allow designers to create custom digital logic circuits
+tailored to their specific application requirements,
+- **Parallelism**: allowing for the execution of multiple tasks simultaneously,
+- **Integration**: FPGAs often include various on-chip resources such as memory
 blocks, DSP (Digital Signal Processing) units, and high-speed I/O interfaces,
 facilitating the integration of multiple functions into a single device.
 
 Disadvantages of using an FPGA in a design:
-- Cost: FPGAs can be more expensive compared to other off-the-shelf integrated
-circuits due to their programmability and flexibility
-- Power consumption: FPGAs typically consume more power compared to
-application-specific integrated circuits (ASICs) or microcontrollers.
-This higher power consumption can be a concern in battery-powered or
-energy-efficient designs.
-- Complexity: Designing for FPGAs requires specialized knowledge and expertise
-in digital logic design, hardware description languages, and FPGA-specific tools.
-- Non-volatile limitations: Traditional FPGAs lose their configuration when
+- **Cost**: FPGAs can be more expensive compared to other off-the-shelf integrated
+circuits,
+- **Power consumption**: FPGAs typically consume more power compared to
+application-specific integrated circuits (ASICs) or microcontrollers,
+- **Complexity**: Designing for FPGAs requires specialized knowledge and expertise
+in digital logic design, hardware description languages, and FPGA-specific tools,
+- **Non-volatile limitations**: Traditional FPGAs lose their configuration when
 powered off, requiring reprogramming at startup.
 
-It's important to consider these advantages and disadvantages in the context of
-your specific design requirements and constraints to determine if an FPGA is the
-right choice for your application.
-
-22. What is the purpose of a constraint file in FPGA design?
-Constraint file contains a set of constraints that define how the various
-signals and components in the design should behave, such as their timing
-requirements, pin assignments, input/output characteristics, and other
-properties.
-
-23. How do you handle clock domain crossing in an FPGA design?
+### 23. How do you handle clock domain crossing in an FPGA design?
 Are some common techniques to handle CDC:
 - Identify the signals or interfaces that cross between different clock domains.
 - Insert synchronization elements at the crossing points to synchronize the data
 between the different clock domains. Common synchronizer techniques include
-using dual-flip flops or Gray code flip flops.
+using dual-flip flops.
 
-Add screenshot
+| ![metastability_fix](https://github.com/mozerpol/NotesFromLearning/assets/43972902/66a55f57-341e-45f6-923d-3694c8f63695) |
+|:--:|
+|Source: *https://nandland.com/lesson-14-crossing-clock-domains/*|
 
-24. What are some common challenges and considerations when designing for FPGAs?
-- Timing and performance: FPGAs have a fixed number of resources, including
+### 24. What are some common challenges and considerations when designing for FPGAs?
+- **Timing and performance**: FPGAs have a fixed number of resources, including
 logic gates and flip-flops, which can limit the performance of the design.
 Timing analysis are required to ensure that the design meets the desired
-performance goals.
-- Power consumption: FPGAs can consume significant power, so power optimization
-techniques need to be considered during the design process.
-- Design complexity: Partitioning the design into smaller modules, using
+performance goals,
+- **Power consumption**: FPGAs can consume significant power, so power optimization
+techniques need to be considered during the design process,
+- **Design complexity**: Partitioning the design into smaller modules, using
 hierarchical design approaches, and proper design documentation can help manage
-complexity.
-- Debugging and verification: Tools like simulation, formal verification, and
+complexity,
+- **Debugging and verification**: Tools like simulation, formal verification, and
 on-chip debugging techniques can be used to ensure the correctness of the design.
 
-================================================================================
-### VHDL <a name="2"></a>
-================================================================================
+## VHDL <a name="2"></a>
 
 1. What is VHDL and why is it used in digital design?
 VHDL is used in digital design for various reasons:
