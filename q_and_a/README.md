@@ -348,25 +348,23 @@ on-chip debugging techniques can be used to ensure the correctness of the design
 
 ## VHDL <a name="2"></a>
 
-1. What is VHDL and why is it used in digital design?
-VHDL is used in digital design for various reasons:
-- Modeling and Simulation: VHDL allows to describe the behavior and
+### 1. What is VHDL and why is it used in digital design?
+VHDL is used for various reasons:
+- **Modeling and Simulation** - VHDL allows to describe the behavior and
 functionality of digital circuits. It provides
 testing and verification before actual implementation.
-- Design Reusability: VHDL code can be easily reused and shared across different
-projects. By creating libraries of reusable components, designers can save time
-and effort.
-- Synthesis and Implementation: VHDL can be synthesized into a gate-level
+- **Design Reusability**: VHDL code can be easily reused and shared across different
+projects.
+- **Synthesis and Implementation** - VHDL can be synthesized into a gate-level
 representation, which can then be implemented on a specific hardware platform.
 This synthesis process translates the higher-level description into actual
 digital hardware.
 
-2. Explain the difference between a concurrent signal assignment and a
-sequential signal assignment in VHDL.
-- Concurrent (pol. równoległy) Signal Assignment: the assignment is made for
-multiple signal assignments that occur simultaneously. Concurrent signal
-assignments are typically used in the architecture body, outside any process
-statement. Example:
+### 2. Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL.
+- **Concurrent Signal Assignment** - the assignment is made for
+multiple signal assignments that occur simultaneously. Concurrent
+(pol. równoległy) signal assignments are typically used in the architecture 
+body, outside any process statement. Example:
 ```VHDL
 architecture Behavioral of Example is
   signal A, B, C: std_logic;
@@ -377,7 +375,7 @@ begin
 end architecture;
 ```
 
-- Sequential Signal Assignment: the assignment is made one after another in a
+- **Sequential Signal Assignment** - the assignment is made one after another in a
 specific order as defined by a process statement. Sequential signal assignments
 are used inside a process statement. Sequential signal assignments are executed
 from top to bottom. Example:
@@ -397,21 +395,20 @@ begin
 end architecture;
 ```
 
-3. What are the different types of modeling in VHDL and when would you use each
-type?
+### 3. What are the different types of modeling in VHDL and when would you use each type?
 In VHDL, are two types of modeling:
-- Behavioral Modeling - used for higher-level description, algorithm
+- **Behavioral Modeling** - used for higher-level description, algorithm
 development, and simulation:
-a) It describes the functionality and behavior of the design at a higher level
-of abstraction.
+a) Describes the functionality and behavior of the design at a higher level of 
+abstraction.
 b) It focuses on the algorithm or procedure rather than the specific hardware
 implementation.
 c) Behavioral models are often used for system-level modeling, algorithm
-development, simulation, and verification
+development, simulation, and verification.
 d) These models are more readable, making them easier to understand and modify.
-- Structural Modeling - used for detailed design, synthesis, and gate-level
+- **Structural Modeling** - used for detailed design, synthesis, and gate-level
 simulation:
-a) It describes the hardware implementation of the design using specific
+a) Describes the hardware implementation of the design using specific
 components and their interconnections.
 b) It involves representing the design as a network of interconnected
 components, such as gates, flip-flops, multiplexers, etc.
@@ -421,7 +418,7 @@ d) These models reflect the actual structure and connections of the hardware.
 e) They provide a more accurate representation of timing, delays, and resource
 utilization.
 
-4. How do you declare and use a component in VHDL?
+### 4. How do you declare and use a component in VHDL?
 A component declaration is similar to an entity declaration, where you define
 the inputs, outputs, and other attributes of the component. Example:
 ```VHDL
@@ -452,7 +449,7 @@ begin
 end architecture;
 ```
 
-5. Describe the process of writing a testbench in VHDL.
+### 5. Describe the process of writing a testbench in VHDL.
 - Define the testbench entity
 - Declare the necessary signals and components
 - Instantiate the entity
