@@ -9,16 +9,16 @@ _____________
 ## FPGA <a name="1"></a>
 
 ### 1. What is an FPGA and how does it differ from a microcontroller or ASIC?
-- **FPGA** - it's a type of integrated circuit that can be reconfigured to 
+- **FPGA** - it's a type of integrated circuit that can be reconfigured to
 perform custom digital functions and perform parallel processing tasks.
-- **ASIC** - is an integrated circuit customized for a particular use. It is 
-designed for a specific application or task. It is typically customized for a 
+- **ASIC** - is an integrated circuit customized for a particular use. It is
+designed for a specific application or task. It is typically customized for a
 particular purpose, such as a specific algorithm or function.
-- **Microcontroller** - is a general-purpose device that combines a 
-microprocessor core, memory, and peripheral devices. It is designed to control 
+- **Microcontroller** - is a general-purpose device that combines a
+microprocessor core, memory, and peripheral devices. It is designed to control
 and execute tasks based on code instructions.
 - **The biggest differences**: ASIC can't be reconfigured, ASIC fabricated using
-the same process node can run at much higher frequency than FPGAs. 
+the same process node can run at much higher frequency than FPGAs.
 Microcontroller offers a higher level of flexibility than ASICs.
 
 ### 2. What is the difference between a combinational and sequential circuit?
@@ -30,23 +30,23 @@ determined by the current input values and previous states. Examples: flip-flops
 counters, shift registers, RAM.
 
 ### 3. Explain the concept of clock skew and how it can affect FPGA designs.
-**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital 
-circuit systems (such as computer systems) in which the same sourced clock 
+**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital
+circuit systems (such as computer systems) in which the same sourced clock
 signal arrives at different components at different times due to gate or, in
-more advanced semiconductor 
+more advanced semiconductor
 technology, wire signal propagation delay. <br/>
-One problem is caused when the clock reaches the first register and the clock 
-signal towards the second register travels slower than output of the first 
-register into the second register - the output of the first register reaches the 
-second register input faster and therefore is clocked replacing the initial data 
-on the second register, or maybe destroying the integrity of the latched data. 
-This is called a **hold violation** because the previous data is not held long 
-enough at the destination flip-flop to be properly clocked through. 
+One problem is caused when the clock reaches the first register and the clock
+signal towards the second register travels slower than output of the first
+register into the second register - the output of the first register reaches the
+second register input faster and therefore is clocked replacing the initial data
+on the second register, or maybe destroying the integrity of the latched data.
+This is called a **hold violation** because the previous data is not held long
+enough at the destination flip-flop to be properly clocked through.
 
 ![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
 
 ### 4. How do you implement a synchronous reset in an FPGA design?
-**Synchronous reset** - it's a circuit which always dependent on clock pulse 
+**Synchronous reset** - it's a circuit which always dependent on clock pulse
 input. It can assert and desert a flip-flop synchronously.
 VHDL code:
 ```VHDL
@@ -201,7 +201,7 @@ such as metastability and data contention that can arise due to timing variation
 - Advantages: <br/>
 Asynchronous designs offer flexibility in terms of timing
 independence, power efficiency, and reduced clock skew. They can be useful in
-low-power designs, in scenarios where where data is received asynchronously from 
+low-power designs, in scenarios where where data is received asynchronously from
 external sources.
 
 It's important to note that synchronous design is more commonly used in FPGA
@@ -259,7 +259,7 @@ For example this can include techniques such as pipelining.
 environment to analyze the design and identify critical paths. These are the
 paths that have the highest impact on meeting timing requirements.
 
-**Setup time** is the amount of time required for the input to a Flip-Flop to be 
+**Setup time** is the amount of time required for the input to a Flip-Flop to be
 stable before a clock edge. **Hold time** is the minimum amount of time required
 for the input to a Flip-Flop to be stable after a clock edge.
 
@@ -363,7 +363,7 @@ digital hardware.
 ### 2. Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL.
 - **Concurrent Signal Assignment** - the assignment is made for
 multiple signal assignments that occur simultaneously. Concurrent
-(pol. równoległy) signal assignments are typically used in the architecture 
+(pol. równoległy) signal assignments are typically used in the architecture
 body, outside any process statement. Example:
 ```VHDL
 architecture Behavioral of Example is
@@ -399,7 +399,7 @@ end architecture;
 In VHDL, are two types of modeling:
 - **Behavioral Modeling** - used for higher-level description, algorithm
 development, and simulation:
-a) Describes the functionality and behavior of the design at a higher level of 
+a) Describes the functionality and behavior of the design at a higher level of
 abstraction.
 b) It focuses on the algorithm or procedure rather than the specific hardware
 implementation.
@@ -456,6 +456,7 @@ end architecture;
 - Stimulate the inputs
 - Capture and verify the outputs
 - Run the simulation
+
 ```VHDL
 entity testbench is
 end entity testbench;
@@ -496,3 +497,74 @@ begin
 
 end architecture tb;
 ```
+
+### 6. What is the purpose of generics and how are they used in VHDL?
+Is to provide a mechanism for making a design
+parameterizable, i.e., allowing a design to be configured and customized without
+modifying its source code. An example:
+```VHDL
+entity my_component is
+  generic (
+    WIDTH   : integer := 8;     -- Default generic value
+    ENABLE  : boolean := true   -- Default generic value
+  );
+  port (
+    input   : in  std_logic_vector(WIDTH-1 downto 0);
+    output  : out std_logic_vector(WIDTH-1 downto 0)
+  );
+end entity my_component;
+```
+
+### 7. Explain the concept of VHDL packages and libraries.
+- **Library** - collection of related packages, where each package contains one
+or more VHDL entities. They can be easily accessed and shared across different
+designs or  projects. For example, a library may contain packages for arithmetic
+operations, I/O interfaces, or specific functions.
+- **Packages** - provide a mechanism to encapsulate and organize
+VHDL entities within a library. They are essentially a container for
+declarations that can be shared and used by multiple designs. Packages
+can include type definitions, constant declarations, functions, procedures, and
+component declarations.
+
+### 8. How do you handle clock and reset signals in VHDL designs?
+- **Clock signal handling**: <br/>
+a) Declare a signal for the clock input,
+b) The *rising_edge* and *falling_edge* functions allow to specify the edge of
+the clock signal on which a particular process should execute.
+- **Reset signal handling**:
+a) Declare a signal for the reset: <br/>
+Asynchronous reset: An asynchronous reset is typically used to clear the system
+to a known state when the physical reset button is pressed. <br/>
+Synchronous reset: A synchronous reset is used to reset the system based on the
+clock edge and is usually preferred for robust (pol. *solidny*) design.
+
+### 9. Can you explain the difference between VHDL and Verilog?
+VHDL and Verilog are both hardware description languages commonly used in
+digital design and verification. Key differences between them:
+- **Syntax**: VHDL has a more verbose and natural language-like syntax with
+English keywords, while Verilog has a more concise and C-like syntax.
+- **Modeling Features**: VHDL provides a rich set of modeling constructs,
+including processes and functions, which makes it suitable for complex
+system-level modeling. Verilog, on the other hand, offers a simpler event-driven
+modeling style that is more suitable for hardware modeling at the
+register-transfer level.
+- **Simulation Performance**: Verilog is generally known to have better
+simulation performance and efficiency than VHDL due to its event-driven nature.
+
+### 10. What are the different types of data types available in VHDL? Explain their usage.
+Data types available:
+- **Bit** - The 'bit' type is the smallest data type in VHDL and represents a
+single binary digit (0 or 1),
+- **Boolean** - The 'boolean' type represents a logical value, either true or
+false,
+- **Integer** - The 'integer' type is used to represent whole numbers. It is
+commonly used for indexing arrays or counting in loops,
+- **Real** - The 'real' type represents real numbers, which include both
+integers and fractions. Real numbers are used to perform floating-point
+arithmetic and are often used in mathematical computations.
+- **Time** - The 'time' type is used to represent time values. It is used in
+simulation models to specify timing delays or durations,
+- **Character** - The 'character' type is used to represent individual
+characters. It is commonly used in text-based operations,
+- **Enumerated** - The 'enumerated' type is a user-defined type that allows the
+creation of a set of named values. It is often used to define state machines.
