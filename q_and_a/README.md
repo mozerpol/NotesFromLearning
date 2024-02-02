@@ -4,11 +4,33 @@ _____________
 
 ## Table of contents <a name="tof"></a>
 1. [FPGA](#1)
+    1. [What is an FPGA and how does it differ from a microcontroller or ASIC?](#11)
+    2. [What is the difference between a combinational and sequential circuit?](#12)
+    3. [Explain the concept of clock skew and how it can affect FPGA designs.](#13)
+    4. [How do you implement a synchronous reset in an FPGA design?](#14)
+    5. [What is the difference between a flip-flop and a latch? When would you use each?](#15)
+    6. [Describe the process of synthesis and how it is used in FPGA design.](#16)
+    7. [How do you optimize power consumption in an FPGA design?](#17)
+    8. [Explain the concept of pipelining and how it can improve performance in an FPGA design.](#18)
+    9. [What is the purpose of a constraint file in FPGA design? Give examples of common constraints.](#19)
+    10. [How do you debug and troubleshoot issues in an FPGA design?](#110)
+    11. [What is an FPGA and how does it differ from other digital electronic devices?](#111)
+    12. [Explain the steps involved in the FPGA design flow.](#112)
+    13. [What is the difference between synchronous and asynchronous design in FPGAs?](#113)
+    14. [How do you implement a flip-flop in an FPGA design?](#114)
+    15. [What is the purpose of a look-up table (LUT) in an FPGA?](#115)
+    16. [How do you implement a multiplexer in an FPGA design?](#116)
+    17. [How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs?](#117)
+    18. [Describe the basic architecture of an FPGA.](#118)
+    19. [Describe the process of place and route in FPGA design.](#119)
+    20. [What are the advantages and disadvantages of using an FPGA in a design?](#120)
+    21. [How do you handle clock domain crossing in an FPGA design?](#121)
+    22. [What are some common challenges and considerations when designing for FPGAs?](#122)
 2. [VHDL](#2)
 
 ## FPGA <a name="1"></a>
 
-### 1. What is an FPGA and how does it differ from a microcontroller or ASIC?
+### 1. What is an FPGA and how does it differ from a microcontroller or ASIC? <a name="11"></a> [UP↑](#tof)
 - **FPGA** - it's a type of integrated circuit that can be reconfigured to
 perform custom digital functions and perform parallel processing tasks.
 - **ASIC** - is an integrated circuit customized for a particular use. It is
@@ -21,7 +43,7 @@ and execute tasks based on code instructions.
 the same process node can run at much higher frequency than FPGAs.
 Microcontroller offers a higher level of flexibility than ASICs.
 
-### 2. What is the difference between a combinational and sequential circuit?
+### 2. What is the difference between a combinational and sequential circuit? <a name="12"></a> [UP↑](#tof)
 - **Combinational circuit** - can't remember the previous states, the output is
 determined by the current input values. Examples: Adder, Subtractor, Decoder,
 Encoder, Multiplexer, and De-multiplexer.
@@ -29,7 +51,7 @@ Encoder, Multiplexer, and De-multiplexer.
 determined by the current input values and previous states. Examples: flip-flops,
 counters, shift registers, RAM.
 
-### 3. Explain the concept of clock skew and how it can affect FPGA designs.
+### 3. Explain the concept of clock skew and how it can affect FPGA designs. <a name="13"></a> [UP↑](#tof)
 **Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital
 circuit systems (such as computer systems) in which the same sourced clock
 signal arrives at different components at different times due to gate or, in
@@ -45,7 +67,7 @@ enough at the destination flip-flop to be properly clocked through.
 
 ![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
 
-### 4. How do you implement a synchronous reset in an FPGA design?
+### 4. How do you implement a synchronous reset in an FPGA design? <a name="14"></a> [UP↑](#tof)
 **Synchronous reset** - it's a circuit which always dependent on clock pulse
 input. It can assert and desert a flip-flop synchronously.
 VHDL code:
@@ -59,7 +81,7 @@ if rising_edge(clock) then
 end if;
 ```
 
-### 5. What is the difference between a flip-flop and a latch? When would you use each?
+### 5. What is the difference between a flip-flop and a latch? When would you use each? <a name="15"></a> [UP↑](#tof)
 A flip-flop and a latch are both fundamental building blocks used in digital
 logic circuits to store and manipulate binary data. <br/>
 A **flip-flop**  is a circuit
@@ -74,12 +96,12 @@ precise timing control is required.
 
 ![latch_vs_ff](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b9909205-0e0f-4ea2-8263-42b8425d0b22)
 
-### 6. Describe the process of synthesis and how it is used in FPGA design.
+### 6. Describe the process of synthesis and how it is used in FPGA design. <a name="16"></a> [UP↑](#tof)
 **Synthesis** - is the process of converting a high-level Hardware Description
 Language (HDL) code into a low-level netlist of logical gates and flip-flops
 (a configuration file that can be loaded onto the FPGA).
 
-### 7. How do you optimize power consumption in an FPGA design?
+### 7. How do you optimize power consumption in an FPGA design? <a name="17"></a> [UP↑](#tof)
 There are several techniques:
 - minimizing the use of power-hungry components such as high-frequency clocks.
 Running the design at a lower frequency reduces power consumption.
@@ -97,14 +119,14 @@ of the FPGA
 - Pipelining can enable higher clock frequencies by
 reducing the critical path delay.
 
-### 8. Explain the concept of pipelining and how it can improve performance in an FPGA design.
+### 8. Explain the concept of pipelining and how it can improve performance in an FPGA design. <a name="18"></a> [UP↑](#tof)
 Pipelining is a technique to improve the performance of a system by breaking
 down a complex computation into smaller, sequential stages. In pipelining, the
 input data is divided into multiple sub-tasks, which are then processed in a
 series of pipeline stages. Each pipeline stage performs a specific operation on
 the data and passes it to the next stage.
 
-### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints.
+### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints. <a name="19"></a> [UP↑](#tof)
 Constraint file is a text file that specifies certain requirements and
 limitations for the design implementation. These constraints are used by the
 synthesis tools to guide the physical implementation on the FPGA. <br/>
@@ -116,13 +138,13 @@ and output pins on the FPGA device
 - **Resource Constraints** these limitations specify the usage of specific FPGA
 resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
 
-### 10. How do you debug and troubleshoot issues in an FPGA design?
+### 10. How do you debug and troubleshoot issues in an FPGA design? <a name="110"></a> [UP↑](#tof)
 - Use a simulator to validate the functionality of design, simulate different
 test cases,
 - Review RTL code for any syntax errors, incorrect connections, or logic issues,
 - Ask on forum.
 
-### 11. What is an FPGA and how does it differ from other digital electronic devices?
+### 11. What is an FPGA and how does it differ from other digital electronic devices? <a name="111"></a> [UP↑](#tof)
 **FPGA** - it's a type of integrated circuit that can be reconfigured to perform
 custom digital functions and perform parallel processing tasks. Characteristics:
 - Flexibility - FPGAs can be reprogrammed or reconfigured to implement different
@@ -135,7 +157,7 @@ software-based approaches, FPGAs allow for the implementation of hardware-based
 solutions. By mapping algorithms or designs directly into the FPGA's logic
 blocks and interconnects.
 
-### 12. Explain the steps involved in the FPGA design flow.
+### 12. Explain the steps involved in the FPGA design flow. <a name="112"></a> [UP↑](#tof)
 **FPGA design flow**:
 - Design Entry: <br/>
 This is the initial step where you define and describe your
@@ -167,7 +189,7 @@ design performs as expected on the FPGA. This involves testing the design using
 test cases and verifying the output against expected results. Verification can
 include functional, timing, and performance analysis.
 
-### 13. What is the difference between synchronous and asynchronous design in FPGAs?
+### 13. What is the difference between synchronous and asynchronous design in FPGAs? <a name="113"></a> [UP↑](#tof)
 "Synchronous" and "asynchronous" refer to different approaches for handling the
 timing behavior of signals within the design. <br/>
 **Synchronous Design**:
@@ -208,7 +230,7 @@ It's important to note that synchronous design is more commonly used in FPGA
 designs due to its simplicity, ease of implementation, and better control over
 timing.
 
-### 14. How do you implement a flip-flop in an FPGA design?
+### 14. How do you implement a flip-flop in an FPGA design? <a name="114"></a> [UP↑](#tof)
 1. Choose the type of flip-flop that suits to design
 requirements.
 2. In hardware description language code and
@@ -228,14 +250,14 @@ begin
 end architecture;
 ```
 
-### 15. What is the purpose of a look-up table (LUT) in an FPGA?
+### 15. What is the purpose of a look-up table (LUT) in an FPGA? <a name="115"></a> [UP↑](#tof)
 A look-up table in an FPGA serves as a fundamental building block for
 implementing digital logic functions. The purpose of a LUT is to provide a flexible and
 efficient way to implement complex logic functions within an FPGA, enabling the
 device to perform various tasks such as data processing, arithmetic operations,
 and control functions.
 
-### 16. How do you implement a multiplexer in an FPGA design?
+### 16. How do you implement a multiplexer in an FPGA design? <a name="116"></a> [UP↑](#tof)
 1. Determine the number of inputs and select
 lines required for your multiplexer. For example, if you have 4 inputs, you'll
 need 2 select lines.
@@ -245,7 +267,7 @@ such as LUTs, to implement the logic expressions derived (pol. *pochodny*) from 
 4. Use FPGA synthesis tools to convert your design into a
  configuration file compatible with the specific FPGA device you are using.
 
-### 18. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs?
+### 17. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs? <a name="117"></a> [UP↑](#tof)
 General steps involved:
 - Determine the timing requirements for your design,
 including maximum and minimum clock frequencies, setup and hold times for input
@@ -267,7 +289,7 @@ for the input to a Flip-Flop to be stable after a clock edge.
 |:--:|
 |Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
 
-### 19. Describe the basic architecture of an FPGA.
+### 18. Describe the basic architecture of an FPGA. <a name="118"></a> [UP↑](#tof)
 The basic architecture of an FPGA consists of three main components:
 - **Configurable logic blocks** - CLBs are the fundamental building blocks of
 an FPGA. They consist of look-up tables (LUTs), flip-flops, and other logic
@@ -295,13 +317,13 @@ In addition to these main components, an FPGA also includes other supporting
 elements such as clock management resources, configuration memory, and power
 distribution networks.
 
-### 20. Describe the process of place and route in FPGA design.
+### 19. Describe the process of place and route in FPGA design. <a name="119"></a> [UP↑](#tof)
 The place and route process is a step that follows the synthesis stage. It
 involves mapping the synthesized logic elements onto specific locations
 (placement) within the FPGA device and establishing the interconnections
 (routing) between these elements.
 
-### 21. What are the advantages and disadvantages of using an FPGA in a design?
+### 20. What are the advantages and disadvantages of using an FPGA in a design? <a name="120"></a> [UP↑](#tof)
 Advantages of using an FPGA in a design:
 - **Flexibility**: they can be reprogrammed or reconfigured to implement different
 functionalities,
@@ -322,7 +344,7 @@ in digital logic design, hardware description languages, and FPGA-specific tools
 - **Non-volatile limitations**: Traditional FPGAs lose their configuration when
 powered off, requiring reprogramming at startup.
 
-### 23. How do you handle clock domain crossing in an FPGA design?
+### 21. How do you handle clock domain crossing in an FPGA design? <a name="121"></a> [UP↑](#tof)
 Are some common techniques to handle CDC:
 - Identify the signals or interfaces that cross between different clock domains.
 - Insert synchronization elements at the crossing points to synchronize the data
@@ -333,7 +355,7 @@ using dual-flip flops.
 |:--:|
 |Source: *https://nandland.com/lesson-14-crossing-clock-domains/*|
 
-### 24. What are some common challenges and considerations when designing for FPGAs?
+### 22. What are some common challenges and considerations when designing for FPGAs? <a name="122"></a> [UP↑](#tof)
 - **Timing and performance**: FPGAs have a fixed number of resources, including
 logic gates and flip-flops, which can limit the performance of the design.
 Timing analysis are required to ensure that the design meets the desired
