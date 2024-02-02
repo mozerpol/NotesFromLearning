@@ -285,7 +285,7 @@ paths that have the highest impact on meeting timing requirements.
 stable before a clock edge. **Hold time** is the minimum amount of time required
 for the input to a Flip-Flop to be stable after a clock edge.
 
-|![setup_and_hold_time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/387f2375-90c5-4265-9672-5c89491f3a36)|
+|![time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b00822fd-6f71-4a13-9119-0b39d0f81e85)|
 |:--:|
 |Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
 
