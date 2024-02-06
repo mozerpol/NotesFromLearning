@@ -21,3 +21,23 @@ signals, it ends with failure.
 
 Running a test: <br/>
 Type the `make` command in the Makefile directory.
+
+### 2. second
+Files:
+1. Makefile <br/>
+Contains information about project e.g. language, simulator, top entity name,
+etc. Added two files to compilation: top and package. Remember about the files
+order.
+
+2. my_design_pkg.vhd <br/>
+Contains a constant which is used in the top entity.
+
+3. my_design_top.vhd <br/>
+Generic, multiplexer and constant from the package were used. Diagram: <br/>
+![second](https://github.com/mozerpol/NotesFromLearning/assets/43972902/fc40a04f-01a9-4abc-937d-8022f4a1a944)
+
+4. test_my_design.py <br/>
+Two separate coroutines running simultaneously. Test ends with pass.
+
+Running a test: <br/>
+Type the `make` command in the Makefile directory.
