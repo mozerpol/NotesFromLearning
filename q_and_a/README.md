@@ -590,3 +590,25 @@ simulation models to specify timing delays or durations,
 characters. It is commonly used in text-based operations,
 - **Enumerated** - The 'enumerated' type is a user-defined type that allows the
 creation of a set of named values. It is often used to define state machines.
+
+### 11. How do you describe a combinational logic circuit using VHDL?
+**Combinational logic** - a type of digital logic circuit whose output is 
+dependent on the input values. There is no memory. An example can be gates. <br/>
+```VHDL
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity AND_gate is
+    Port ( A : in STD_LOGIC;
+           B : in STD_LOGIC;
+           Y : out STD_LOGIC);
+end AND_gate;
+
+architecture Behavioral of AND_gate is
+begin
+
+    Y <= A AND B;
+
+end Behavioral;
+```
+
