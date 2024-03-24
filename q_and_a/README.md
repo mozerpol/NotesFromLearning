@@ -612,3 +612,42 @@ begin
 end Behavioral;
 ```
 
+### 12. What is the purpose of a process statement and a concurrent statement in VHDL?
+**Concurrent statement** - these statements are executed concurrently 
+(pol. *jednocześnie*) and can be used to represent concurrent processes. 
+Example: <br/>
+
+```VHDL
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity concurrent_example is
+port(
+    a, b: in std_logic;
+    y1, y2, y3: out std_logic
+);
+end concurrent_example;
+
+architecture behavioral of concurrent_example is
+begin
+    -- Concurrent signal assignments
+    y1 <= a and b;
+    y2 <= a or b;
+    y3 <= a xor b;
+
+end behavioral;
+```
+
+**Process statement** is used to define a block of sequential statements that 
+are executed in a specific order. <br/>
+```VHDL
+process (input1, input2)
+begin
+  if input1 = '1' then
+    output <= input2;
+  else
+    output <= '0';
+  end if;
+end process;
+```
+
