@@ -651,3 +651,11 @@ begin
 end process;
 ```
 
+### 13. Explain the concept of generics and how they are used in VHDL.
+Generics in VHDL allow for the creation of parameterized components and 
+entities, allowing them to be more easily reused in different parts of a design. 
+Generics are declared at the beginning of a component or entity declaration, and 
+their values can be set when using the component or entity in a higher-level 
+design.
+
+
