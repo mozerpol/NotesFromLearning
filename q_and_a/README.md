@@ -658,4 +658,35 @@ Generics are declared at the beginning of a component or entity declaration, and
 their values can be set when using the component or entity in a higher-level 
 design.
 
+### 14. How do you handle asynchronous inputs in VHDL designs?
+There are several methods:
+1. **Synchronizing the asynchronous input signal** - This involves using a 
+flip-flop or other synchronization circuit to ensure that the input signal is 
+sampled at the correct time relative to the clock signal.
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/f27d50a8-c717-46c2-bb0f-3626e5d8a0dd)
+2. **Using a synchronous reset** - use a synchronous reset signal to reset the 
+state of the design based on the asynchronous input. This ensures that the
+design responds to the asynchronous input.
+3. **Implementing a state machine** - If the asynchronous inputs are related to 
+the state of the design, you can implement a state machine that includes logic 
+to handle the asynchronous inputs. 
+4. **Using a handshake protocol** - In some cases, it may be necessary to 
+implement a handshake protocol to handle asynchronous inputs. This involves
+using a set of signals to ensure that communication between different parts of
+the design is synchronized and consistent.
 
+### 15. What is the difference between a signal and a variable in VHDL?
+
+### 16. Difference between task and function
+
+### 17. How do you implement a finite state machine (FSM) in an FPGA design?
+
+### 18. How do you handle multi-cycle paths and metastability in VHDL designs?
+
+### 19. What are VHDL attributes and how can they be used to optimize designs?
+
+### 20. Can you explain the purpose and usage of VHDL testbenches?
+
+### 21. Write code for ram and fifo
+
+### 22. Can you explain the concept of VHDL packages and libraries?
