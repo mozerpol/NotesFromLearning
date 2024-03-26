@@ -592,7 +592,7 @@ characters. It is commonly used in text-based operations,
 creation of a set of named values. It is often used to define state machines.
 
 ### 11. How do you describe a combinational logic circuit using VHDL?
-**Combinational logic** - a type of digital logic circuit whose output is 
+**Combinational logic** - a type of digital logic circuit whose output is
 dependent on the input values. There is no memory. An example can be gates. <br/>
 ```VHDL
 library IEEE;
@@ -613,8 +613,8 @@ end Behavioral;
 ```
 
 ### 12. What is the purpose of a process statement and a concurrent statement in VHDL?
-**Concurrent statement** - these statements are executed concurrently 
-(pol. *jednocześnie*) and can be used to represent concurrent processes. 
+**Concurrent statement** - these statements are executed concurrently
+(pol. *jednocześnie*) and can be used to represent concurrent processes.
 Example: <br/>
 
 ```VHDL
@@ -638,7 +638,7 @@ begin
 end behavioral;
 ```
 
-**Process statement** is used to define a block of sequential statements that 
+**Process statement** is used to define a block of sequential statements that
 are executed in a specific order. <br/>
 ```VHDL
 process (input1, input2)
@@ -652,25 +652,25 @@ end process;
 ```
 
 ### 13. Explain the concept of generics and how they are used in VHDL.
-Generics in VHDL allow for the creation of parameterized components and 
-entities, allowing them to be more easily reused in different parts of a design. 
-Generics are declared at the beginning of a component or entity declaration, and 
-their values can be set when using the component or entity in a higher-level 
+Generics in VHDL allow for the creation of parameterized components and
+entities, allowing them to be more easily reused in different parts of a design.
+Generics are declared at the beginning of a component or entity declaration, and
+their values can be set when using the component or entity in a higher-level
 design.
 
 ### 14. How do you handle asynchronous inputs in VHDL designs?
 There are several methods:
-1. **Synchronizing the asynchronous input signal** - This involves using a 
-flip-flop or other synchronization circuit to ensure that the input signal is 
+1. **Synchronizing the asynchronous input signal** - This involves using a
+flip-flop or other synchronization circuit to ensure that the input signal is
 sampled at the correct time relative to the clock signal.
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/f27d50a8-c717-46c2-bb0f-3626e5d8a0dd)
-2. **Using a synchronous reset** - use a synchronous reset signal to reset the 
+2. **Using a synchronous reset** - use a synchronous reset signal to reset the
 state of the design based on the asynchronous input. This ensures that the
 design responds to the asynchronous input.
-3. **Implementing a state machine** - If the asynchronous inputs are related to 
-the state of the design, you can implement a state machine that includes logic 
-to handle the asynchronous inputs. 
-4. **Using a handshake protocol** - In some cases, it may be necessary to 
+3. **Implementing a state machine** - If the asynchronous inputs are related to
+the state of the design, you can implement a state machine that includes logic
+to handle the asynchronous inputs.
+4. **Using a handshake protocol** - In some cases, it may be necessary to
 implement a handshake protocol to handle asynchronous inputs. This involves
 using a set of signals to ensure that communication between different parts of
 the design is synchronized and consistent.
