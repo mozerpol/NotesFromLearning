@@ -16,3 +16,8 @@ ______
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/93df93a3-389a-4967-a2a2-51b364d73326)|
 | Source: *https://en.wikichip.org/wiki/mosfet* |
 
+### 2. How MOSFET works 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/0be95219-80d3-497c-9741-aeff31d31db5)|
+|:--:|
+| My comment: This is nicely illustrated in the picture below. *The wall switch* - means an electrical device mounted in the wall.|
+
