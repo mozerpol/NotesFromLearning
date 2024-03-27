@@ -9,3 +9,10 @@ ______
 ## Lecture 3: Introduction to the Labs and FPGAs (ETH Zürich, Spring 2019)
 ## Lecture 4: Combinational Logic I (ETH Zürich, Spring 2019)
 
+### 1. MOSFET symbols
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/2b6c8479-31fd-4361-882f-85c3468b9826)|
+|:--:|
+| My comment: NMOS is open when gate = 0; PMOS is open when gate = 0 |
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/93df93a3-389a-4967-a2a2-51b364d73326)|
+| Source: *https://en.wikichip.org/wiki/mosfet* |
+
