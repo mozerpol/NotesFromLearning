@@ -21,3 +21,12 @@ ______
 |:--:|
 | My comment: This is nicely illustrated in the picture below. *The wall switch* - means an electrical device mounted in the wall.|
 
+### 3. CMOS
+#### Inverter - NOT gate
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e62ddeac-a6dd-467c-b3ef-f5578050ad2b)|
+|:--:|
+|My comment: CMOS inverter (a NOT logic gate)|
+|Source: *https://www.geeksforgeeks.org/cmos-logic-gate/*|
+
+![1](https://github.com/mozerpol/NotesFromLearning/assets/43972902/16d5da86-3ccf-4559-b4ce-a7875c22e7e5)
+
