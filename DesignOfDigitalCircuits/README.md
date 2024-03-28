@@ -42,3 +42,8 @@ ______
 |:--:|
 |Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
 
+#### NOR gate
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/a337f271-1e1c-4056-b198-e968348a8f23)
+|:--:|
+|Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
+
