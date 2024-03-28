@@ -37,3 +37,8 @@ ______
 #### AND gate
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/4584cfe5-0558-4aae-9460-3b70f5328fcf)
 
+#### OR gate
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/b1415c4d-60dc-4796-81ff-dd6bcfc48167)
+|:--:|
+|Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
+
