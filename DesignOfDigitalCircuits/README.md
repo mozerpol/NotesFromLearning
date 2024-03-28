@@ -30,3 +30,7 @@ ______
 
 ![1](https://github.com/mozerpol/NotesFromLearning/assets/43972902/16d5da86-3ccf-4559-b4ce-a7875c22e7e5)
 
+#### NAND gate
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/7bc19430-102f-45eb-aec5-41bcc19695fb)
+![1(1)(1)](https://github.com/mozerpol/learningRISC-V/assets/43972902/1c4a02f5-4701-4c75-8c26-9a964cfff5fe)
+
