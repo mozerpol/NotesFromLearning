@@ -34,3 +34,6 @@ ______
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/7bc19430-102f-45eb-aec5-41bcc19695fb)
 ![1(1)(1)](https://github.com/mozerpol/learningRISC-V/assets/43972902/1c4a02f5-4701-4c75-8c26-9a964cfff5fe)
 
+#### AND gate
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/4584cfe5-0558-4aae-9460-3b70f5328fcf)
+
