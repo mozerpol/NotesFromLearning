@@ -52,3 +52,11 @@ ______
 |:--:|
 |Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
 
+### 4.
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/42d8af6a-0da6-402f-8047-5026231b34c9)
+The point is that operations such as writing and reading from cache consume more 
+energy than, for example, an addition of two numbers. Below is a picture which
+shows it. Adding of two numbers is equal 20 pico joules, when reading or writing
+from cache is equal 16 nano joules. <br/>
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/d5d5c16e-da18-4414-ae1a-cddce336463e)
+
