@@ -696,3 +696,8 @@ which allow for the sequential execution of statements. Functions, on the other
 hand, do not allow for the use of these constructs and must be purely 
 combinational in nature.
 
+### 17. How do you implement a finite state machine (FSM) in an FPGA design?
+1. Define the states
+2. Define the inputs and outputs
+3. Write the FSM in a HDL
+
