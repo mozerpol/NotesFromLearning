@@ -67,4 +67,5 @@ pull-up networks in CMOS circuits.
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/145f0c92-0df3-432e-a945-e3c9fcc86987)
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/3730aed6-c79a-443f-8678-ebf156665b93)
 
-
+### 6.
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/2ca0209a-469a-4107-b771-ee70c2dbe4fa)
