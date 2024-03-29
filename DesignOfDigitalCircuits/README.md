@@ -60,3 +60,11 @@ shows it. Adding of two numbers is equal 20 pico joules, when reading or writing
 from cache is equal 16 nano joules. <br/>
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/d5d5c16e-da18-4414-ae1a-cddce336463e)
 
+### 5.
+**pMOS transistors better pass logic high signal (1) compared to nMOS 
+transistors.** This makes pMOS transistors better suited for implementing 
+pull-up networks in CMOS circuits.
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/145f0c92-0df3-432e-a945-e3c9fcc86987)
+![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/3730aed6-c79a-443f-8678-ebf156665b93)
+
+
