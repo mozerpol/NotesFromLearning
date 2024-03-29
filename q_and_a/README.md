@@ -701,3 +701,17 @@ combinational in nature.
 2. Define the inputs and outputs
 3. Write the FSM in a HDL
 
+### 18. What is metastability and multi-cycle paths?
+**Metastability** is a phenomenon in digital circuits where a signal input to a 
+flip-flop or latch is sampled too close to the clock edge, resulting in 
+uncertainty (pol. *niepewność*) in the output state of the flip-flop or latch. 
+This can lead to incorrect logic being stored, causing errors in the system's 
+behavior. <br/>
+**Multi-cycle paths** are data paths between two registers that operate at a 
+sample rate slower than the FPGA clock rate and therefore take multiple clock 
+cycles to complete their execution.
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/425296ae-3e23-43d3-a630-b9450558940d)|
+|:--:|
+|An example of Multi-cycle path in the netlist|
+|Source: *https://www.mathworks.com/help/hdlcoder/ug/enable-based-multicycle-constraints.html*|
+
