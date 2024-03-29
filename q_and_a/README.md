@@ -676,17 +676,12 @@ using a set of signals to ensure that communication between different parts of
 the design is synchronized and consistent.
 
 ### 15. What is the difference between a signal and a variable in VHDL?
+A signal is a data object that represents a physical signal in the hardware. <br/>
+A variable, on the other hand, is a data object used for holding temporary 
+values within a process or a function. It can only be read and written within
+the process or function where it is declared. Variables are used for local 
+storage and temporary calculations within a specific scope. <br/>
+In summary, signals are used for inter-process communication and 
+synchronization, while variables are used for local storage within a process or
+a function.
 
-### 16. Difference between task and function
-
-### 17. How do you implement a finite state machine (FSM) in an FPGA design?
-
-### 18. How do you handle multi-cycle paths and metastability in VHDL designs?
-
-### 19. What are VHDL attributes and how can they be used to optimize designs?
-
-### 20. Can you explain the purpose and usage of VHDL testbenches?
-
-### 21. Write code for ram and fifo
-
-### 22. Can you explain the concept of VHDL packages and libraries?
