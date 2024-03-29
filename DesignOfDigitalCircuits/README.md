@@ -1,5 +1,5 @@
 Lecture notes **Design of Digital Circuits - ETH Zürich - Spring 2019** based on
-youtube videos: 
+youtube videos:
 https://www.youtube.com/playlist?list=PL5Q2soXY2Zi8J58xLKBNFQFHRO3GrXxA9 <br/>
 The author of the channel is Onur Mutlu, a lecturer at ETH. <br/>
 Exams and solutions:
@@ -19,7 +19,7 @@ ______
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/93df93a3-389a-4967-a2a2-51b364d73326)|
 | Source: *https://en.wikichip.org/wiki/mosfet* |
 
-### 2. How MOSFET works 
+### 2. How MOSFET works
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/0be95219-80d3-497c-9741-aeff31d31db5)|
 |:--:|
 | My comment: This is nicely illustrated in the picture below. *The wall switch* - means an electrical device mounted in the wall.|
@@ -57,15 +57,15 @@ ______
 
 ### 4.
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/42d8af6a-0da6-402f-8047-5026231b34c9)
-The point is that operations such as writing and reading from cache consume more 
+The point is that operations such as writing and reading from cache consume more
 energy than, for example, an addition of two numbers. Below is a picture which
 shows it. Adding of two numbers is equal 20 pico joules, when reading or writing
 from cache is equal 16 nano joules. <br/>
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/d5d5c16e-da18-4414-ae1a-cddce336463e)
 
 ### 5.
-**pMOS transistors better pass logic high signal (1) compared to nMOS 
-transistors.** This makes pMOS transistors better suited for implementing 
+**pMOS transistors better pass logic high signal (1) compared to nMOS
+transistors.** This makes pMOS transistors better suited for implementing
 pull-up networks in CMOS circuits.
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/145f0c92-0df3-432e-a945-e3c9fcc86987)
 ![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/3730aed6-c79a-443f-8678-ebf156665b93)
