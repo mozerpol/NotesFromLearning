@@ -685,3 +685,14 @@ In summary, signals are used for inter-process communication and
 synchronization, while variables are used for local storage within a process or
 a function.
 
+### 16. Difference between task and function
+Are both reusable code blocks that can be called multiple times within a design.
+Differences:
+- Tasks are used for executing a sequence of statements, while functions are
+used for performing a specific computation and returning a value. Tasks can 
+contain both input and output parameters, but they do not return a value.
+- Tasks can contain delay statements, wait statements, and process statements,
+which allow for the sequential execution of statements. Functions, on the other
+hand, do not allow for the use of these constructs and must be purely 
+combinational in nature.
+
