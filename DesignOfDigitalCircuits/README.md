@@ -47,3 +47,8 @@ ______
 |:--:|
 |Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
 
+#### XOR gate
+|![image](https://github.com/mozerpol/learningRISC-V/assets/43972902/951f6e76-601e-44ff-85f8-874e21d6302d)|
+|:--:|
+|Source: *https://www.allaboutelectronics.org/cmos-logic-gates-explained/*|
+
