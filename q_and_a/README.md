@@ -733,3 +733,13 @@ during synthesis and simulation. Some common VHDL attributes include:
 - 'delay' attribute, which specifies the propagation delay of a signal,
 - 'name' attribute, which specifies the name of a signal or entity.
 
+### 21. Can you explain the purpose and usage of VHDL testbenches?
+VHDL testbenches are used to verify the functionality and performance of digital 
+designs. he main purpose of a testbench is to simulate the behavior of the 
+design under various conditions and test different functionalities to ensure 
+that the design meets its specification and requirements.
+There are three main types of testbenches in VHDL:
+1. Behavioral testbenches
+2. Structural testbenches
+3. Post-synthesis testbenches
+
