@@ -725,3 +725,11 @@ more than one clock cycle to propagate from one register to another. To handle
 multi-cycle paths, designers can introduce pipeline stages to break up the path 
 into multiple stages, ensuring that data propagates correctly through the design. 
 
+### 20. What are VHDL attributes and how can they be used to optimize designs?
+VHDL attributes can be used to control and optimize the behavior of the design 
+during synthesis and simulation. Some common VHDL attributes include:
+- 'high' and 'low' attributes, which specify the logic value of a signal,
+- 'range' attribute, which specifies the range of values that a signal can take,
+- 'delay' attribute, which specifies the propagation delay of a signal,
+- 'name' attribute, which specifies the name of a signal or entity.
+
