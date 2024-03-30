@@ -715,3 +715,13 @@ cycles to complete their execution.
 |An example of Multi-cycle path in the netlist|
 |Source: *https://www.mathworks.com/help/hdlcoder/ug/enable-based-multicycle-constraints.html*|
 
+### 19. How do you handle multi-cycle paths and metastability in VHDL designs?
+**Metastability** - To address metastability, designers can use synchronization 
+techniques such as double-clocked flip-flops or synchronizer circuits to ensure 
+that signals are sampled reliably. These techniques add additional latency to 
+the design, but help prevent metastability.
+**Multi-cycle paths** - Multi-cycle paths are paths in a design where data takes
+more than one clock cycle to propagate from one register to another. To handle 
+multi-cycle paths, designers can introduce pipeline stages to break up the path 
+into multiple stages, ensuring that data propagates correctly through the design. 
+
