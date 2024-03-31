@@ -743,3 +743,59 @@ There are three main types of testbenches in VHDL:
 2. Structural testbenches
 3. Post-synthesis testbenches
 
+### 22. Write code for fifo
+```VHDL
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity fifo is
+  generic(
+    DATA_WIDTH : integer := 8;  -- Width of data bus
+    DEPTH      : integer := 8        -- Depth of FIFO buffer
+  );
+  port(
+    clk      : in std_logic;
+    rst      : in std_logic;
+    wr_en    : in std_logic;
+    rd_en    : in std_logic;
+    data_in  : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+    data_out : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+    full     : out std_logic;
+    empty    : out std_logic
+  );
+end fifo;
+
+architecture Behavioral of fifo is
+  type mem_array is array(0 to DEPTH - 1) of std_logic_vector(DATA_WIDTH - 1 downto 0);
+  signal fifo_mem : mem_array;
+  signal wr_ptr : integer range 0 to DEPTH - 1 := 0;
+  signal rd_ptr : integer range 0 to DEPTH - 1 := 0;
+begin
+
+  process(clk)
+  begin
+    if rising_edge(clk) then
+      if rst = '1' then
+        wr_ptr <= 0;
+        rd_ptr <= 0;
+        fifo_mem <= (others => (others => '0'));
+      else
+        if wr_en = '1' and full = '0' then
+          fifo_mem(wr_ptr) <= data_in;
+          wr_ptr <= wr_ptr + 1;
+        end if;
+        
+        if rd_en = '1' and empty = '0' then
+          data_out <= fifo_mem(rd_ptr);
+          rd_ptr <= rd_ptr + 1;
+        end if;
+      end if;
+    end if;
+  end process;
+
+  full <= '1' when wr_ptr = rd_ptr + DEPTH else '0';
+  empty <= '1' when wr_ptr = rd_ptr else '0';
+
+end Behavioral;
+```
