@@ -677,11 +677,11 @@ the design is synchronized and consistent.
 
 ### 15. What is the difference between a signal and a variable in VHDL?
 A signal is a data object that represents a physical signal in the hardware. <br/>
-A variable, on the other hand, is a data object used for holding temporary 
+A variable, on the other hand, is a data object used for holding temporary
 values within a process or a function. It can only be read and written within
-the process or function where it is declared. Variables are used for local 
+the process or function where it is declared. Variables are used for local
 storage and temporary calculations within a specific scope. <br/>
-In summary, signals are used for inter-process communication and 
+In summary, signals are used for inter-process communication and
 synchronization, while variables are used for local storage within a process or
 a function.
 
@@ -689,11 +689,11 @@ a function.
 Are both reusable code blocks that can be called multiple times within a design.
 Differences:
 - Tasks are used for executing a sequence of statements, while functions are
-used for performing a specific computation and returning a value. Tasks can 
+used for performing a specific computation and returning a value. Tasks can
 contain both input and output parameters, but they do not return a value.
 - Tasks can contain delay statements, wait statements, and process statements,
 which allow for the sequential execution of statements. Functions, on the other
-hand, do not allow for the use of these constructs and must be purely 
+hand, do not allow for the use of these constructs and must be purely
 combinational in nature.
 
 ### 17. How do you implement a finite state machine (FSM) in an FPGA design?
@@ -702,13 +702,13 @@ combinational in nature.
 3. Write the FSM in a HDL
 
 ### 18. What is metastability and multi-cycle paths?
-**Metastability** is a phenomenon in digital circuits where a signal input to a 
-flip-flop or latch is sampled too close to the clock edge, resulting in 
-uncertainty (pol. *niepewność*) in the output state of the flip-flop or latch. 
-This can lead to incorrect logic being stored, causing errors in the system's 
+**Metastability** is a phenomenon in digital circuits where a signal input to a
+flip-flop or latch is sampled too close to the clock edge, resulting in
+uncertainty (pol. *niepewność*) in the output state of the flip-flop or latch.
+This can lead to incorrect logic being stored, causing errors in the system's
 behavior. <br/>
-**Multi-cycle paths** are data paths between two registers that operate at a 
-sample rate slower than the FPGA clock rate and therefore take multiple clock 
+**Multi-cycle paths** are data paths between two registers that operate at a
+sample rate slower than the FPGA clock rate and therefore take multiple clock
 cycles to complete their execution.
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/425296ae-3e23-43d3-a630-b9450558940d)|
 |:--:|
@@ -716,17 +716,17 @@ cycles to complete their execution.
 |Source: *https://www.mathworks.com/help/hdlcoder/ug/enable-based-multicycle-constraints.html*|
 
 ### 19. How do you handle multi-cycle paths and metastability in VHDL designs?
-**Metastability** - To address metastability, designers can use synchronization 
-techniques such as double-clocked flip-flops or synchronizer circuits to ensure 
-that signals are sampled reliably. These techniques add additional latency to 
+**Metastability** - To address metastability, designers can use synchronization
+techniques such as double-clocked flip-flops or synchronizer circuits to ensure
+that signals are sampled reliably. These techniques add additional latency to
 the design, but help prevent metastability.
 **Multi-cycle paths** - Multi-cycle paths are paths in a design where data takes
-more than one clock cycle to propagate from one register to another. To handle 
-multi-cycle paths, designers can introduce pipeline stages to break up the path 
-into multiple stages, ensuring that data propagates correctly through the design. 
+more than one clock cycle to propagate from one register to another. To handle
+multi-cycle paths, designers can introduce pipeline stages to break up the path
+into multiple stages, ensuring that data propagates correctly through the design.
 
 ### 20. What are VHDL attributes and how can they be used to optimize designs?
-VHDL attributes can be used to control and optimize the behavior of the design 
+VHDL attributes can be used to control and optimize the behavior of the design
 during synthesis and simulation. Some common VHDL attributes include:
 - 'high' and 'low' attributes, which specify the logic value of a signal,
 - 'range' attribute, which specifies the range of values that a signal can take,
@@ -734,9 +734,9 @@ during synthesis and simulation. Some common VHDL attributes include:
 - 'name' attribute, which specifies the name of a signal or entity.
 
 ### 21. Can you explain the purpose and usage of VHDL testbenches?
-VHDL testbenches are used to verify the functionality and performance of digital 
-designs. he main purpose of a testbench is to simulate the behavior of the 
-design under various conditions and test different functionalities to ensure 
+VHDL testbenches are used to verify the functionality and performance of digital
+designs. he main purpose of a testbench is to simulate the behavior of the
+design under various conditions and test different functionalities to ensure
 that the design meets its specification and requirements.
 There are three main types of testbenches in VHDL:
 1. Behavioral testbenches
@@ -785,7 +785,7 @@ begin
           fifo_mem(wr_ptr) <= data_in;
           wr_ptr <= wr_ptr + 1;
         end if;
-        
+
         if rd_en = '1' and empty = '0' then
           data_out <= fifo_mem(rd_ptr);
           rd_ptr <= rd_ptr + 1;
