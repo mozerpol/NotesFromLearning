@@ -27,15 +27,36 @@ _____________
     21. [How do you handle clock domain crossing in an FPGA design?](#121)
     22. [What are some common challenges and considerations when designing for FPGAs?](#122)
 2. [VHDL](#2)
+    1. [What is VHDL and why is it used in digital design?](#1)
+    2. [Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL.](#2)
+    3. [What are the different types of modeling in VHDL and when would you use each type?](#3)
+    4. [How do you declare and use a component in VHDL?](#4)
+    5. [Describe the process of writing a testbench in VHDL.](#5)
+    6. [What is the purpose of generics and how are they used in VHDL?](#6)
+    7. [Explain the concept of VHDL packages and libraries.](#7)
+    8. [How do you handle clock and reset signals in VHDL designs?](#8)
+    9. [Can you explain the difference between VHDL and Verilog?](#9)
+    10. [What are the different types of data types available in VHDL? Explain their usage.](#10)
+    11. [How do you describe a combinational logic circuit using VHDL?](#11)
+    12. [What is the purpose of a process statement and a concurrent statement in VHDL?](#12)
+    13. [Explain the concept of generics and how they are used in VHDL.](#13)
+    14. [How do you handle asynchronous inputs in VHDL designs?](#14)
+    15. [What is the difference between a signal and a variable in VHDL?](#15)
+    16. [Difference between task and function](#16)
+    17. [How do you implement a finite state machine (FSM) in an FPGA design?](#17)
+    18. [What is metastability and multi-cycle paths?](#18)
+    19. [How do you handle multi-cycle paths and metastability in VHDL designs?](#19)
+    20. [What are VHDL attributes and how can they be used to optimize designs?](#20)
+    21. [Can you explain the purpose and usage of VHDL testbenches?](#21)
+    22. [Write code for fifo](#22)
 
 ## FPGA <a name="1"></a>
 
 ### 1. What is an FPGA and how does it differ from a microcontroller or ASIC? <a name="11"></a> [UP↑](#tof)
 - **FPGA** - it's a type of integrated circuit that can be reconfigured to
-perform custom digital functions and perform parallel processing tasks.
-- **ASIC** - is an integrated circuit customized for a particular use. It is
-designed for a specific application or task. It is typically customized for a
-particular purpose, such as a specific algorithm or function.
+perform custom digital functions or tasks to perform them in parallel.
+- **ASIC** - it's a type of integrated circuit customized for a particular use, 
+such as a specific algorithm or function.
 - **Microcontroller** - is a general-purpose device that combines a
 microprocessor core, memory, and peripheral devices. It is designed to control
 and execute tasks based on code instructions.
@@ -370,7 +391,7 @@ on-chip debugging techniques can be used to ensure the correctness of the design
 
 ## VHDL <a name="2"></a>
 
-### 1. What is VHDL and why is it used in digital design?
+### 1. What is VHDL and why is it used in digital design? <a name="21"></a> [UP↑](#tof)
 VHDL is used for various reasons:
 - **Modeling and Simulation** - VHDL allows to describe the behavior and
 functionality of digital circuits. It provides
@@ -382,7 +403,7 @@ representation, which can then be implemented on a specific hardware platform.
 This synthesis process translates the higher-level description into actual
 digital hardware.
 
-### 2. Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL.
+### 2. Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL. <a name="22"></a> [UP↑](#tof)
 - **Concurrent Signal Assignment** - the assignment is made for
 multiple signal assignments that occur simultaneously. Concurrent
 (pol. równoległy) signal assignments are typically used in the architecture
@@ -417,7 +438,7 @@ begin
 end architecture;
 ```
 
-### 3. What are the different types of modeling in VHDL and when would you use each type?
+### 3. What are the different types of modeling in VHDL and when would you use each type? <a name="23"></a> [UP↑](#tof)
 In VHDL, are two types of modeling:
 - **Behavioral Modeling** - used for higher-level description, algorithm
 development, and simulation:
@@ -440,7 +461,7 @@ d) These models reflect the actual structure and connections of the hardware.
 e) They provide a more accurate representation of timing, delays, and resource
 utilization.
 
-### 4. How do you declare and use a component in VHDL?
+### 4. How do you declare and use a component in VHDL? <a name="24"></a> [UP↑](#tof)
 A component declaration is similar to an entity declaration, where you define
 the inputs, outputs, and other attributes of the component. Example:
 ```VHDL
@@ -471,7 +492,7 @@ begin
 end architecture;
 ```
 
-### 5. Describe the process of writing a testbench in VHDL.
+### 5. Describe the process of writing a testbench in VHDL. <a name="25"></a> [UP↑](#tof)
 - Define the testbench entity
 - Declare the necessary signals and components
 - Instantiate the entity
@@ -520,7 +541,7 @@ begin
 end architecture tb;
 ```
 
-### 6. What is the purpose of generics and how are they used in VHDL?
+### 6. What is the purpose of generics and how are they used in VHDL? <a name="26"></a> [UP↑](#tof)
 Is to provide a mechanism for making a design
 parameterizable, i.e., allowing a design to be configured and customized without
 modifying its source code. An example:
@@ -537,7 +558,7 @@ entity my_component is
 end entity my_component;
 ```
 
-### 7. Explain the concept of VHDL packages and libraries.
+### 7. Explain the concept of VHDL packages and libraries. <a name="27"></a> [UP↑](#tof)
 - **Library** - collection of related packages, where each package contains one
 or more VHDL entities. They can be easily accessed and shared across different
 designs or  projects. For example, a library may contain packages for arithmetic
@@ -548,7 +569,7 @@ declarations that can be shared and used by multiple designs. Packages
 can include type definitions, constant declarations, functions, procedures, and
 component declarations.
 
-### 8. How do you handle clock and reset signals in VHDL designs?
+### 8. How do you handle clock and reset signals in VHDL designs? <a name="28"></a> [UP↑](#tof)
 - **Clock signal handling**: <br/>
 a) Declare a signal for the clock input,
 b) The *rising_edge* and *falling_edge* functions allow to specify the edge of
@@ -560,7 +581,7 @@ to a known state when the physical reset button is pressed. <br/>
 Synchronous reset: A synchronous reset is used to reset the system based on the
 clock edge and is usually preferred for robust (pol. *solidny*) design.
 
-### 9. Can you explain the difference between VHDL and Verilog?
+### 9. Can you explain the difference between VHDL and Verilog? <a name="29"></a> [UP↑](#tof)
 VHDL and Verilog are both hardware description languages commonly used in
 digital design and verification. Key differences between them:
 - **Syntax**: VHDL has a more verbose and natural language-like syntax with
@@ -573,7 +594,7 @@ register-transfer level.
 - **Simulation Performance**: Verilog is generally known to have better
 simulation performance and efficiency than VHDL due to its event-driven nature.
 
-### 10. What are the different types of data types available in VHDL? Explain their usage.
+### 10. What are the different types of data types available in VHDL? Explain their usage. <a name="210"></a> [UP↑](#tof)
 Data types available:
 - **Bit** - The 'bit' type is the smallest data type in VHDL and represents a
 single binary digit (0 or 1),
@@ -591,7 +612,7 @@ characters. It is commonly used in text-based operations,
 - **Enumerated** - The 'enumerated' type is a user-defined type that allows the
 creation of a set of named values. It is often used to define state machines.
 
-### 11. How do you describe a combinational logic circuit using VHDL?
+### 11. How do you describe a combinational logic circuit using VHDL? <a name="211"></a> [UP↑](#tof)
 **Combinational logic** - a type of digital logic circuit whose output is
 dependent on the input values. There is no memory. An example can be gates. <br/>
 ```VHDL
@@ -612,7 +633,7 @@ begin
 end Behavioral;
 ```
 
-### 12. What is the purpose of a process statement and a concurrent statement in VHDL?
+### 12. What is the purpose of a process statement and a concurrent statement in VHDL? <a name="212"></a> [UP↑](#tof)
 **Concurrent statement** - these statements are executed concurrently
 (pol. *jednocześnie*) and can be used to represent concurrent processes.
 Example: <br/>
@@ -651,14 +672,14 @@ begin
 end process;
 ```
 
-### 13. Explain the concept of generics and how they are used in VHDL.
+### 13. Explain the concept of generics and how they are used in VHDL. <a name="213"></a> [UP↑](#tof)
 Generics in VHDL allow for the creation of parameterized components and
 entities, allowing them to be more easily reused in different parts of a design.
 Generics are declared at the beginning of a component or entity declaration, and
 their values can be set when using the component or entity in a higher-level
 design.
 
-### 14. How do you handle asynchronous inputs in VHDL designs?
+### 14. How do you handle asynchronous inputs in VHDL designs? <a name="214"></a> [UP↑](#tof)
 There are several methods:
 1. **Synchronizing the asynchronous input signal** - This involves using a
 flip-flop or other synchronization circuit to ensure that the input signal is
@@ -675,7 +696,7 @@ implement a handshake protocol to handle asynchronous inputs. This involves
 using a set of signals to ensure that communication between different parts of
 the design is synchronized and consistent.
 
-### 15. What is the difference between a signal and a variable in VHDL?
+### 15. What is the difference between a signal and a variable in VHDL? <a name="215"></a> [UP↑](#tof)
 A signal is a data object that represents a physical signal in the hardware. <br/>
 A variable, on the other hand, is a data object used for holding temporary
 values within a process or a function. It can only be read and written within
@@ -685,7 +706,7 @@ In summary, signals are used for inter-process communication and
 synchronization, while variables are used for local storage within a process or
 a function.
 
-### 16. Difference between task and function
+### 16. Difference between task and function <a name="216"></a> [UP↑](#tof)
 Are both reusable code blocks that can be called multiple times within a design.
 Differences:
 - Tasks are used for executing a sequence of statements, while functions are
@@ -696,12 +717,12 @@ which allow for the sequential execution of statements. Functions, on the other
 hand, do not allow for the use of these constructs and must be purely
 combinational in nature.
 
-### 17. How do you implement a finite state machine (FSM) in an FPGA design?
+### 17. How do you implement a finite state machine (FSM) in an FPGA design? <a name="217"></a> [UP↑](#tof)
 1. Define the states
 2. Define the inputs and outputs
 3. Write the FSM in a HDL
 
-### 18. What is metastability and multi-cycle paths?
+### 18. What is metastability and multi-cycle paths? <a name="218"></a> [UP↑](#tof)
 **Metastability** is a phenomenon in digital circuits where a signal input to a
 flip-flop or latch is sampled too close to the clock edge, resulting in
 uncertainty (pol. *niepewność*) in the output state of the flip-flop or latch.
@@ -715,7 +736,7 @@ cycles to complete their execution.
 |An example of Multi-cycle path in the netlist|
 |Source: *https://www.mathworks.com/help/hdlcoder/ug/enable-based-multicycle-constraints.html*|
 
-### 19. How do you handle multi-cycle paths and metastability in VHDL designs?
+### 19. How do you handle multi-cycle paths and metastability in VHDL designs? <a name="219"></a> [UP↑](#tof)
 **Metastability** - To address metastability, designers can use synchronization
 techniques such as double-clocked flip-flops or synchronizer circuits to ensure
 that signals are sampled reliably. These techniques add additional latency to
@@ -725,7 +746,7 @@ more than one clock cycle to propagate from one register to another. To handle
 multi-cycle paths, designers can introduce pipeline stages to break up the path
 into multiple stages, ensuring that data propagates correctly through the design.
 
-### 20. What are VHDL attributes and how can they be used to optimize designs?
+### 20. What are VHDL attributes and how can they be used to optimize designs? <a name="220"></a> [UP↑](#tof)
 VHDL attributes can be used to control and optimize the behavior of the design
 during synthesis and simulation. Some common VHDL attributes include:
 - 'high' and 'low' attributes, which specify the logic value of a signal,
@@ -733,7 +754,7 @@ during synthesis and simulation. Some common VHDL attributes include:
 - 'delay' attribute, which specifies the propagation delay of a signal,
 - 'name' attribute, which specifies the name of a signal or entity.
 
-### 21. Can you explain the purpose and usage of VHDL testbenches?
+### 21. Can you explain the purpose and usage of VHDL testbenches? <a name="221"></a> [UP↑](#tof)
 VHDL testbenches are used to verify the functionality and performance of digital
 designs. he main purpose of a testbench is to simulate the behavior of the
 design under various conditions and test different functionalities to ensure
@@ -743,7 +764,7 @@ There are three main types of testbenches in VHDL:
 2. Structural testbenches
 3. Post-synthesis testbenches
 
-### 22. Write code for fifo
+### 22. Write code for fifo <a name="222"></a> [UP↑](#tof)
 ```VHDL
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
