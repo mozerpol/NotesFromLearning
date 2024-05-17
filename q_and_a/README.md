@@ -65,12 +65,12 @@ and execute tasks based on code instructions.
 the same process node can run at much higher frequency than FPGAs.
 
 ### 2. What is the difference between a combinational and sequential circuit? <a name="12"></a> [UP↑](#tof)
-- **Combinational circuit** - can't remember the previous states, the output is
-determined by the current input values. Examples: Adder, Subtractor, Decoder,
-Encoder, Multiplexer, and De-multiplexer.
-- **Sequential circuit** - can remember the previous states, the output is
-determined by the current input values and previous states. Examples: flip-flops,
-counters, shift registers, RAM.
+- **Combinational circuit** - output depends on the input velue, can't remember
+the previous states. Examples: logic gates, adder, subtractor, decoder, encoder, 
+multiplexer or de-multiplexer.
+- **Sequential circuit** - can remember the previous states, the output depends
+on the input velue and previous states. Examples: flip-flops, counters, shift 
+registers, RAM.
 
 ### 3. Explain the concept of clock skew and how it can affect FPGA designs. <a name="13"></a> [UP↑](#tof)
 **Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital
