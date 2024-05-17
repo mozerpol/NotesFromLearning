@@ -73,18 +73,11 @@ on the input velue and previous states. Examples: flip-flops, counters, shift
 registers, RAM.
 
 ### 3. Explain the concept of clock skew and how it can affect FPGA designs. <a name="13"></a> [UP↑](#tof)
-**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous digital
-circuit systems (such as computer systems) in which the same sourced clock
-signal arrives at different components at different times due to gate or, in
-more advanced semiconductor
-technology, wire signal propagation delay. <br/>
-One problem is caused when the clock reaches the first register and the clock
-signal towards the second register travels slower than output of the first
-register into the second register - the output of the first register reaches the
-second register input faster and therefore is clocked replacing the initial data
-on the second register, or maybe destroying the integrity of the latched data.
-This is called a **hold violation** because the previous data is not held long
-enough at the destination flip-flop to be properly clocked through.
+**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous designs (such 
+as computer systems). The same clock signal arrives to different components at 
+different times due to propagation delay. <br/>
+This cane destroy the integrity of the latched data (this is called a 
+*hold violation*).
 
 ![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
 
