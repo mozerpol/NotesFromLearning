@@ -56,13 +56,13 @@ _____________
 - **FPGA** - it's a type of integrated circuit that can be reconfigured to
 perform custom digital functions or tasks to perform them in parallel.
 - **ASIC** - it's a type of integrated circuit customized for a particular use, 
-such as a specific algorithm or function.
-- **Microcontroller** - is a general-purpose device that combines a
+such as a specific algorithm or function. It cannot be reconfigured after the 
+manufacturing process.
+- **Microcontroller** - it is a general-purpose device that combines a
 microprocessor core, memory, and peripheral devices. It is designed to control
 and execute tasks based on code instructions.
 - **The biggest differences**: ASIC can't be reconfigured, ASIC fabricated using
 the same process node can run at much higher frequency than FPGAs.
-Microcontroller offers a higher level of flexibility than ASICs.
 
 ### 2. What is the difference between a combinational and sequential circuit? <a name="12"></a> [UP↑](#tof)
 - **Combinational circuit** - can't remember the previous states, the output is
