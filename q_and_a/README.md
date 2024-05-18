@@ -81,19 +81,8 @@ This cane destroy the integrity of the latched data (this is called a
 
 ![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
 
-### 4. How do you implement a synchronous reset in an FPGA design? <a name="14"></a> [UP↑](#tof)
-**Synchronous reset** - it's a circuit which always dependent on clock pulse
-input. It can assert and desert a flip-flop synchronously.
-VHDL code:
-```VHDL
-if rising_edge(clock) then
-  if reset = '0' then
-    q <= '0';
-  else
-    q <= data;
-  end if;
-end if;
-```
+### 4. What is synchronous reset? <a name="14"></a> [UP↑](#tof)
+**Synchronous reset** - reset always dependent on clock pulse input.
 
 ### 5. What is the difference between a flip-flop and a latch? When would you use each? <a name="15"></a> [UP↑](#tof)
 A flip-flop and a latch are both fundamental building blocks used in digital
