@@ -7,7 +7,7 @@ _____________
     1. [What is an FPGA and how does it differ from a microcontroller or ASIC?](#11)
     2. [What is the difference between a combinational and sequential circuit?](#12)
     3. [Explain the concept of clock skew and how it can affect FPGA designs.](#13)
-    4. [How do you implement a synchronous reset in an FPGA design?](#14)
+    4. [What is synchronous reset?](#14)
     5. [What is the difference between a flip-flop and a latch? When would you use each?](#15)
     6. [Describe the process of synthesis and how it is used in FPGA design.](#16)
     7. [How do you optimize power consumption in an FPGA design?](#17)
@@ -85,17 +85,12 @@ This cane destroy the integrity of the latched data (this is called a
 **Synchronous reset** - reset always dependent on clock pulse input.
 
 ### 5. What is the difference between a flip-flop and a latch? When would you use each? <a name="15"></a> [UP↑](#tof)
-A flip-flop and a latch are both fundamental building blocks used in digital
-logic circuits to store and manipulate binary data. <br/>
-A **flip-flop**  is a circuit
-that has a clock input and can store digital information, while a **latch** is a
-circuit that can store data as long as its enable input is active, without the
-need for a clock signal.
-Latches are commonly used in applications where the circuit requires continuous
+Both are fundamental building blocks used in digital logic circuits to store and
+manipulate binary data. <br/>
+**Flip-flop** has a clock input, is widely used in synchronous digital systems 
+(counters, shift registers, etc.). <br/>
+**Latch** is commonly used in applications where the circuit requires continuous
 operation based on the input condition.
-Flip-flops are widely used in synchronous digital systems, especially for
-designing sequential circuits like counters or shift registers especially when
-precise timing control is required.
 
 ![latch_vs_ff](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b9909205-0e0f-4ea2-8263-42b8425d0b22)
 
