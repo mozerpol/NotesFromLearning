@@ -96,8 +96,7 @@ operation based on the input condition.
 
 ### 6. Describe the process of synthesis and how it is used in FPGA design. <a name="16"></a> [UP↑](#tof)
 **Synthesis** - is the process of converting a high-level Hardware Description
-Language (HDL) code into a low-level netlist of logical gates and flip-flops
-(a configuration file that can be loaded onto the FPGA).
+Language (HDL) code into a low-level netlist of logical gates and flip-flops.
 
 ### 7. How do you optimize power consumption in an FPGA design? <a name="17"></a> [UP↑](#tof)
 There are several techniques:
