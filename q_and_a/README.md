@@ -126,10 +126,10 @@ and output pins on the FPGA device.
 as DSP blocks, memory blocks, and lookup tables (LUTs).
 
 ### 10. How do you debug and troubleshoot issues in an FPGA design? <a name="110"></a> [UP↑](#tof)
-- Use a simulator to validate the functionality of design, simulate different
-test cases,
-- Review RTL code for any syntax errors, incorrect connections, or logic issues,
-- Ask on forum.
+1. Use a simulator to validate the functionality of design, simulate different
+test cases.
+2. Review RTL code for any syntax errors.
+3. Ask on forum.
 
 ### 11. What is an FPGA and how does it differ from other digital electronic devices? <a name="111"></a> [UP↑](#tof)
 **FPGA** - it's a type of integrated circuit that can be reconfigured to perform
