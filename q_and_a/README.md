@@ -105,21 +105,14 @@ There are several techniques:
 3. Clock gating techniques - disable unused parts.
 4. Voltage scaling - lowering the supply voltage reduces power consumption.
 
-Advantages:
-- Pipelining enables the processing of multiple data elements simultaneously
-- Pipelining can help optimize the utilization of FPGA
-resources. By breaking down complex operations into smaller stages, it becomes
-easier to map the design onto the available logic elements and routing resources
-of the FPGA
-- Pipelining can enable higher clock frequencies by
-reducing the critical path delay.
-
 ### 8. Explain the concept of pipelining and how it can improve performance in an FPGA design. <a name="18"></a> [UP↑](#tof)
 Pipelining is a technique to improve the performance of a system by breaking
-down a complex computation into smaller, sequential stages. In pipelining, the
-input data is divided into multiple sub-tasks, which are then processed in a
-series of pipeline stages. Each pipeline stage performs a specific operation on
-the data and passes it to the next stage.
+down a complex designs into smaller stages. <br/>
+Advantages:
+- Pipelining can help optimize the utilization of FPGA resources. It becomes
+easier to map the design onto the available logic elements of the FPGA,
+- Pipelining can enable higher clock frequencies by reducing the critical path 
+delay.
 
 ### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints. <a name="19"></a> [UP↑](#tof)
 Constraint file is a text file that specifies certain requirements and
