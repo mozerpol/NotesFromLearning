@@ -14,7 +14,7 @@ _____________
     8. [Explain the concept of pipelining and how it can improve performance in an FPGA design.](#18)
     9. [What is the purpose of a constraint file in FPGA design? Give examples of common constraints.](#19)
     10. [How do you debug and troubleshoot issues in an FPGA design?](#110)
-    11. [What is an FPGA and how does it differ from other digital electronic devices?](#111)
+    11. [Characteristics of FPGA](#111)
     12. [Explain the steps involved in the FPGA design flow.](#112)
     13. [What is the difference between synchronous and asynchronous design in FPGAs?](#113)
     14. [How do you implement a flip-flop in an FPGA design?](#114)
@@ -131,18 +131,15 @@ test cases.
 2. Review RTL code for any syntax errors.
 3. Ask on forum.
 
-### 11. What is an FPGA and how does it differ from other digital electronic devices? <a name="111"></a> [UP↑](#tof)
-**FPGA** - it's a type of integrated circuit that can be reconfigured to perform
-custom digital functions and perform parallel processing tasks. Characteristics:
-- Flexibility - FPGAs can be reprogrammed or reconfigured to implement different
-digital circuits, functions, or systems.
-- Parallel Processing - contain a large number of configurable logic blocks
-(CLBs) and a mesh of programmable interconnects. This architecture enables
-simultaneous execution of multiple operations in parallel,
-- Hardware-based Implementation - unlike (pol. *w odróżnieniu*) traditional
-software-based approaches, FPGAs allow for the implementation of hardware-based
-solutions. By mapping algorithms or designs directly into the FPGA's logic
-blocks and interconnects.
+### 11. Characteristics of FPGA <a name="111"></a> [UP↑](#tof)
+Characteristics:
+1. Flexibility - FPGAs can be reprogrammed or reconfigured many times.
+2. Parallel Processing - Thanks to its architecture (configurable logic blocks, 
+mesh of programmable interconnects), it allows multiple operations to be 
+performed simultaneously.
+3. Hardware-based Implementation - FPGAs allow for the implementation of 
+hardware-based solutions. By mapping algorithms or designs directly into the 
+FPGA's logic blocks and interconnects.
 
 ### 12. Explain the steps involved in the FPGA design flow. <a name="112"></a> [UP↑](#tof)
 **FPGA design flow**:
