@@ -17,7 +17,7 @@ _____________
     11. [Characteristics of FPGA](#111)
     12. [Explain the steps involved in the FPGA design flow.](#112)
     13. [What is the difference between synchronous and asynchronous design in FPGAs?](#113)
-    14. [How do you implement a flip-flop in an FPGA design?](#114)
+    14. [What are some common challenges and considerations when designing for FPGAs?](#114)
     15. [What is the purpose of a look-up table (LUT) in an FPGA?](#115)
     16. [How do you implement a multiplexer in an FPGA design?](#116)
     17. [How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs?](#117)
@@ -143,31 +143,31 @@ FPGA's logic blocks and interconnects.
 
 ### 12. Explain the steps involved in the FPGA design flow. <a name="112"></a> [UP↑](#tof)
 **FPGA design flow**:
-- Design Entry: <br/>
+1. Design Entry: <br/>
 This is the initial step where you define and describe your
 design using a hardware description language. It involves creating a
 high-level representation of the desired functionality and behavior of your
 design.
-- Simulation: <br/>
+2. Simulation: <br/>
 After the design entry, simulate a design using a simulation tool.
 The simulation allows to verify the correctness and functionality of a design
 before proceeding further.
-- Synthesis: <br/>
+3. Synthesis: <br/>
 In this step, the HDL code is transformed into a gate-level
 representation. The synthesis tool translates design description into a netlist
 comprising logic gates and registers.
-- Floorplanning: <br/>
+4. Floorplanning: <br/>
 It is the process of assigning physical locations on the FPGA
 for each functional unit and interconnect. It involves deciding the optimal
 placement of logic elements, I/O pins, and other components to minimize delays
 and power consumption.
-- Place and Route: <br/>
+5. Place and Route: <br/>
 In this step, the placement and routing tools generate a
 detailed physical layout by determining the optimal routing paths for
 interconnects. The tools consider factors like timing constraints, signal
 integrity, and resource utilization. The output of this step is a bitstream
 file that represents the programmed FPGA.
-- Verification: <br/>
+6. Verification: <br/>
 After configuration, you need to verify that the implemented
 design performs as expected on the FPGA. This involves testing the design using
 test cases and verifying the output against expected results. Verification can
@@ -214,25 +214,18 @@ It's important to note that synchronous design is more commonly used in FPGA
 designs due to its simplicity, ease of implementation, and better control over
 timing.
 
-### 14. How do you implement a flip-flop in an FPGA design? <a name="114"></a> [UP↑](#tof)
-1. Choose the type of flip-flop that suits to design
-requirements.
-2. In hardware description language code and
-instantiate the flip-flop by declaring a variable based on
-the chosen type. For example, in VHDL for a D flip-flop: <br/>
-```VHDL
-architecture rtl of your_module is
-    signal d: std_logic;
-    signal q: std_logic;
-begin
-    your_flipflop: process(clk)
-    begin
-        if rising_edge(clk) then
-            q <= d;
-        end if;
-    end process;
-end architecture;
-```
+### 14. What are some common challenges and considerations when designing for FPGAs? <a name="114"></a> [UP↑](#tof)
+- **Timing and performance**: FPGAs have a fixed number of resources, including
+logic gates and flip-flops, which can limit the performance of the design.
+Timing analysis are required to ensure that the design meets the desired
+performance goals,
+- **Power consumption**: FPGAs can consume significant power, so power optimization
+techniques need to be considered during the design process,
+- **Design complexity**: Partitioning the design into smaller modules, using
+hierarchical design approaches, and proper design documentation can help manage
+complexity,
+- **Debugging and verification**: Tools like simulation, formal verification, and
+on-chip debugging techniques can be used to ensure the correctness of the design.
 
 ### 15. What is the purpose of a look-up table (LUT) in an FPGA? <a name="115"></a> [UP↑](#tof)
 A look-up table in an FPGA serves as a fundamental building block for
@@ -338,19 +331,6 @@ using dual-flip flops.
 | ![metastability_fix](https://github.com/mozerpol/NotesFromLearning/assets/43972902/66a55f57-341e-45f6-923d-3694c8f63695) |
 |:--:|
 |Source: *https://nandland.com/lesson-14-crossing-clock-domains/*|
-
-### 22. What are some common challenges and considerations when designing for FPGAs? <a name="122"></a> [UP↑](#tof)
-- **Timing and performance**: FPGAs have a fixed number of resources, including
-logic gates and flip-flops, which can limit the performance of the design.
-Timing analysis are required to ensure that the design meets the desired
-performance goals,
-- **Power consumption**: FPGAs can consume significant power, so power optimization
-techniques need to be considered during the design process,
-- **Design complexity**: Partitioning the design into smaller modules, using
-hierarchical design approaches, and proper design documentation can help manage
-complexity,
-- **Debugging and verification**: Tools like simulation, formal verification, and
-on-chip debugging techniques can be used to ensure the correctness of the design.
 
 ## VHDL <a name="2"></a>
 
