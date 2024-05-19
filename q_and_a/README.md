@@ -115,16 +115,15 @@ easier to map the design onto the available logic elements of the FPGA,
 delay.
 
 ### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints. <a name="19"></a> [UP↑](#tof)
-Constraint file is a text file that specifies certain requirements and
-limitations for the design implementation. These constraints are used by the
-synthesis tools to guide the physical implementation on the FPGA. <br/>
+Constraint file is a text file that specifies requirements and limitations for 
+the design implementation. These constraints are used by the synthesis tools. <br/>
 Examples of common constraints in an FPGA:
-- **Timing Constraints** - define the required timing characteristics of the
+1. **Timing Constraints** - define the required timing characteristics of the
 design, such as maximum clock frequency, setup and hold times for registers.
-- **Pin Placement Constraints** - specify the physical locations of the input
-and output pins on the FPGA device
-- **Resource Constraints** these limitations specify the usage of specific FPGA
-resources, such as DSP blocks, memory blocks, and lookup tables (LUTs)
+2. **Pin Placement Constraints** - specify the physical locations of the input
+and output pins on the FPGA device.
+3. **Resource Constraints** specify the usage of specific FPGA resources, such 
+as DSP blocks, memory blocks, and lookup tables (LUTs).
 
 ### 10. How do you debug and troubleshoot issues in an FPGA design? <a name="110"></a> [UP↑](#tof)
 - Use a simulator to validate the functionality of design, simulate different
