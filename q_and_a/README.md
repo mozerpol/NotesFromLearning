@@ -100,12 +100,10 @@ Language (HDL) code into a low-level netlist of logical gates and flip-flops.
 
 ### 7. How do you optimize power consumption in an FPGA design? <a name="17"></a> [UP↑](#tof)
 There are several techniques:
-- minimizing the use of power-hungry components such as high-frequency clocks.
-Running the design at a lower frequency reduces power consumption.
-- optimize the routing to minimize long interconnects which consume more power.
-- clock gating techniques - disable unused parts of the design and reduce
-switching activities
-- voltage scaling - lowering the supply voltage reduces power consumption.
+1. Running the design at a lower frequency reduces power consumption.
+2. Optimize the routing to minimize long interconnects which consume more power.
+3. Clock gating techniques - disable unused parts.
+4. Voltage scaling - lowering the supply voltage reduces power consumption.
 
 Advantages:
 - Pipelining enables the processing of multiple data elements simultaneously
