@@ -197,14 +197,11 @@ It is a fundamental building block for implementing digital logic functions. It
 is basically a table that determines what the output is for any given input.
 
 ### 16. How do you implement a multiplexer in an FPGA design? <a name="116"></a> [UP↑](#tof)
-1. Determine the number of inputs and select
-lines required for your multiplexer. For example, if you have 4 inputs, you'll
+1. Determine the number of inputs. For example, if you have 4 inputs, you'll
 need 2 select lines.
-2. Create a truth table
-3. Use the logic elements available in the FPGA,
-such as LUTs, to implement the logic expressions derived (pol. *pochodny*) from the truth table.
-4. Use FPGA synthesis tools to convert your design into a
- configuration file compatible with the specific FPGA device you are using.
+2. Create a truth table.
+3. Implement in FPGA the logic expressions from the truth table.
+4. Use FPGA synthesis tools to convert the design into a configuration file.
 
 ### 17. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs? <a name="117"></a> [UP↑](#tof)
 General steps involved:
