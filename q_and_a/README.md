@@ -204,22 +204,16 @@ need 2 select lines.
 4. Use FPGA synthesis tools to convert the design into a configuration file.
 
 ### 17. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs? <a name="117"></a> [UP↑](#tof)
-General steps involved:
-- Determine the timing requirements for your design,
-including maximum and minimum clock frequencies, setup and hold times for input
-and output signals, and any other specific timing constraints.
-- Run static timing analysis tools provided by
-the FPGA development environment to verify if the design meets the timing
-requirements
-- Make design modifications to improve timing performance.
-For example this can include techniques such as pipelining.
-- Use timing analysis tools provided by the FPGA development
-environment to analyze the design and identify critical paths. These are the
-paths that have the highest impact on meeting timing requirements.
+1. Determine the timing requirements for the design, including maximum and 
+minimum clock frequencies, setup and hold times for input and output signals.
+2. Run static timing analysis tools provided by the FPGA development environment.
+3. Make design modifications to improve timing performance (like pipelining).
+4. Identify critical paths.
 
 **Setup time** is the amount of time required for the input to a Flip-Flop to be
-stable before a clock edge. **Hold time** is the minimum amount of time required
-for the input to a Flip-Flop to be stable after a clock edge.
+stable before a clock edge. <br/>
+**Hold time** is the minimum amount of time required for the input to a 
+Flip-Flop to be stable after a clock edge.
 
 |![time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b00822fd-6f71-4a13-9119-0b39d0f81e85)|
 |:--:|
