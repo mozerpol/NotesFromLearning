@@ -220,32 +220,28 @@ Flip-Flop to be stable after a clock edge.
 |Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
 
 ### 18. Describe the basic architecture of an FPGA. <a name="118"></a> [UP↑](#tof)
-The basic architecture of an FPGA consists of three main components:
-- **Configurable logic blocks** - CLBs are the fundamental building blocks of
-an FPGA. They consist of look-up tables (LUTs), flip-flops, and other logic
-elements. CLBs can be interconnected to implement complex logic functions.
+Are three main components:
+1. **Configurable logic blocks** - CLBs are the fundamental building blocks of
+an FPGA. CLBs can be interconnected to implement complex logic functions. They 
+consist of:
+- look-up tables (LUTs), 
+- flip-flops
 
 |![clb](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d1d2e717-a928-491c-b651-f20ba80a0768)|
 |:--:|
 |Source: *https://www.fpgakey.com/uploads/images/original/20200618/102505CLB_Block_Diagram.png*|
-- **input/output blocks** - IOBs provide the interface between the external
+
+2. **input/output blocks** - IOBs provide the interface between the external
 world and the internal logic of the FPGA. They consist of input and output
 buffers, I/O standards converters, and other circuitry necessary for interfacing
 with external devices.
-- **programmable interconnects** - The programmable interconnects form a network of
-routing resources that connect the CLBs and IOBs. They consist of a matrix of
-programmable switches and wires. These interconnects allow for the flexible
-routing of signals between different logic elements within the FPGA. By
-configuring the interconnects, designers can establish the desired connections
-and pathways for data flow.
+3. **programmable interconnects** - The programmable interconnects form a 
+network of routing resources that connect the CLBs and IOBs. They consist of a 
+matrix of programmable switches and wires.
 
 |![fpga_3](https://github.com/mozerpol/NotesFromLearning/assets/43972902/47e538bf-04eb-43dc-bb9f-63bf6ecb9f73)|
 |:--:|
 |Source: *https://www.researchgate.net/figure/A-basic-FPGA-fabric-following-Wolf-2004-where-CLB-and-IOB-stand-for-Combinational-Logic_fig1_278329485*|
-
-In addition to these main components, an FPGA also includes other supporting
-elements such as clock management resources, configuration memory, and power
-distribution networks.
 
 ### 19. Describe the process of place and route in FPGA design. <a name="119"></a> [UP↑](#tof)
 The place and route process is a step that follows the synthesis stage. It
