@@ -22,10 +22,8 @@ _____________
     16. [How do you implement a multiplexer in an FPGA design?](#116)
     17. [How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs?](#117)
     18. [Describe the basic architecture of an FPGA.](#118)
-    19. [Describe the process of place and route in FPGA design.](#119)
+    19. [How do you handle clock domain crossing in an FPGA design?](#119)
     20. [What are the advantages and disadvantages of using an FPGA in a design?](#120)
-    21. [How do you handle clock domain crossing in an FPGA design?](#121)
-    22. [What are some common challenges and considerations when designing for FPGAs?](#122)
 2. [VHDL](#2)
     1. [What is VHDL and why is it used in digital design?](#1)
     2. [Explain the difference between a concurrent signal assignment and a sequential signal assignment in VHDL.](#2)
@@ -243,7 +241,7 @@ matrix of programmable switches and wires.
 |:--:|
 |Source: *https://www.researchgate.net/figure/A-basic-FPGA-fabric-following-Wolf-2004-where-CLB-and-IOB-stand-for-Combinational-Logic_fig1_278329485*|
 
-### 19. Describe the process of place and route in FPGA design. <a name="119"></a> [UP↑](#tof)
+### 19. How do you handle clock domain crossing in an FPGA design? <a name="119"></a> [UP↑](#tof)
 The place and route process is a step that follows the synthesis stage. It
 involves mapping the synthesized logic elements onto specific locations
 (placement) within the FPGA device and establishing the interconnections
@@ -269,17 +267,6 @@ application-specific integrated circuits (ASICs) or microcontrollers,
 in digital logic design, hardware description languages, and FPGA-specific tools,
 - **Non-volatile limitations**: Traditional FPGAs lose their configuration when
 powered off, requiring reprogramming at startup.
-
-### 21. How do you handle clock domain crossing in an FPGA design? <a name="121"></a> [UP↑](#tof)
-Are some common techniques to handle CDC:
-- Identify the signals or interfaces that cross between different clock domains.
-- Insert synchronization elements at the crossing points to synchronize the data
-between the different clock domains. Common synchronizer techniques include
-using dual-flip flops.
-
-| ![metastability_fix](https://github.com/mozerpol/NotesFromLearning/assets/43972902/66a55f57-341e-45f6-923d-3694c8f63695) |
-|:--:|
-|Source: *https://nandland.com/lesson-14-crossing-clock-domains/*|
 
 ## VHDL <a name="2"></a>
 
