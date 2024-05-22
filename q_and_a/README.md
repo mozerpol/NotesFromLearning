@@ -211,8 +211,7 @@ minimum clock frequencies, setup and hold times for input and output signals.
 **Setup time** is the amount of time required for the input to a Flip-Flop to be
 stable before a clock edge. <br/>
 **Hold time** is the minimum amount of time required for the input to a 
-Flip-Flop to be stable after a clock edge.
-
+Flip-Flop to be stable after a clock edge. <br/>
 |![time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b00822fd-6f71-4a13-9119-0b39d0f81e85)|
 |:--:|
 |Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
@@ -235,17 +234,20 @@ buffers, I/O standards converters, and other circuitry necessary for interfacing
 with external devices.
 3. **programmable interconnects** - The programmable interconnects form a 
 network of routing resources that connect the CLBs and IOBs. They consist of a 
-matrix of programmable switches and wires.
-
+matrix of programmable switches and wires. <br/>
 |![fpga_3](https://github.com/mozerpol/NotesFromLearning/assets/43972902/47e538bf-04eb-43dc-bb9f-63bf6ecb9f73)|
 |:--:|
 |Source: *https://www.researchgate.net/figure/A-basic-FPGA-fabric-following-Wolf-2004-where-CLB-and-IOB-stand-for-Combinational-Logic_fig1_278329485*|
 
 ### 19. How do you handle clock domain crossing in an FPGA design? <a name="119"></a> [UP↑](#tof)
-The place and route process is a step that follows the synthesis stage. It
-involves mapping the synthesized logic elements onto specific locations
-(placement) within the FPGA device and establishing the interconnections
-(routing) between these elements.
+Common techniques to handle CDC:
+1. Identify the signals or interfaces that cross between different clock domains.
+2. Insert synchronization elements at the crossing points to synchronize the data
+between the different clock domains. Common synchronizer techniques include
+using dual-flip flops. <br/>
+| ![metastability_fix](https://github.com/mozerpol/NotesFromLearning/assets/43972902/66a55f57-341e-45f6-923d-3694c8f63695) |
+|:--:|
+|Source: *https://nandland.com/lesson-14-crossing-clock-domains/*|
 
 ### 20. What are the advantages and disadvantages of using an FPGA in a design? <a name="120"></a> [UP↑](#tof)
 Advantages of using an FPGA in a design:
