@@ -251,24 +251,21 @@ using dual-flip flops. <br/>
 
 ### 20. What are the advantages and disadvantages of using an FPGA in a design? <a name="120"></a> [UP↑](#tof)
 Advantages of using an FPGA in a design:
-- **Flexibility**: they can be reprogrammed or reconfigured to implement different
-functionalities,
-- **Customizability**: FPGAs allow designers to create custom digital logic circuits
-tailored to their specific application requirements,
-- **Parallelism**: allowing for the execution of multiple tasks simultaneously,
-- **Integration**: FPGAs often include various on-chip resources such as memory
-blocks, DSP (Digital Signal Processing) units, and high-speed I/O interfaces,
-facilitating the integration of multiple functions into a single device.
+1. **Flexibility** - can be reprogrammed or reconfigured to implement different 
+functionalities.
+2. **Customizability** - allow to create custom digital logic circuits.
+3. **Parallelism** - allowing for the execution of multiple tasks simultaneously.
+4. **Integration** - often include various on-chip resources such as memory
+blocks, DSP (Digital Signal Processing) units, and high-speed I/O interfaces.
 
 Disadvantages of using an FPGA in a design:
-- **Cost**: FPGAs can be more expensive compared to other off-the-shelf integrated
-circuits,
-- **Power consumption**: FPGAs typically consume more power compared to
-application-specific integrated circuits (ASICs) or microcontrollers,
-- **Complexity**: Designing for FPGAs requires specialized knowledge and expertise
-in digital logic design, hardware description languages, and FPGA-specific tools,
-- **Non-volatile limitations**: Traditional FPGAs lose their configuration when
-powered off, requiring reprogramming at startup.
+1. **Cost** - can be more expensive compared to other off-the-shelf integrated
+circuits.
+2. **Power consumption** - FPGAs typically consume more power compared to
+(ASICs) or microcontrollers.
+3. **Complexity** - expert knowledge in many fields is required.
+4. **Non-volatile limitations**: Traditional FPGAs lose their configuration when
+powered off.
 
 ## VHDL <a name="2"></a>
 
