@@ -469,7 +469,7 @@ An instruction that branches to an address and simultaneously
 saves the address of the following instruction in a register (usually
 *x1* in RISC-V).
 
-**return address** - 
+**return address** -
 A link to the calling site that allows a procedure to return to the
 proper address. in RISC-V it is stored in register *x1*.
 
@@ -477,20 +477,20 @@ proper address. in RISC-V it is stored in register *x1*.
 
 **callee** - a procedure that is called by another.
 
-**program counter (PC)** - The register containing the address of the 
+**program counter (PC)** - The register containing the address of the
 instruction in the program being executed.
 
 It's important (like everything ;p) <br/>
 Suppose a compiler needs more registers (than 32) for a procedure. In this case
 we're using **stack**. <br/>
-**stack** - 
+**stack** -
 A data structure for extension registers organized as a last-in-first-out
 queue. A stack needs a pointer to the most recently
 allocated address in the stack to show where the next procedure
 should place the registers to be taken. In RISC-V, the **stack pointer** is
 register *x2*, also known by the name *sp*. <br/>
 **stack pointer** -
-A value denoting (pol. *oznaczac*) the most recently allocated address in a 
+A value denoting (pol. *oznaczac*) the most recently allocated address in a
 stack that shows where registers should be taken or where old register
 values can be found. Stacks are so popular that
 they have their own buzzwords for transferring data to and from
@@ -503,54 +503,70 @@ Procedures that do not call others are called *leaf* procedures.
 
 Some RISC-V compilers reserve a register *x3* for use as the global pointer,
 or *gp*.
-**global pointer** - 
+**global pointer** -
 The register that is reserved to point to the static area.
 
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c4952a37-8873-489e-a729-46756e402475)|
 |:--:|
 |What is and what is not preserved across a procedure call|
 
+The final complexity is that the stack is also used to store variables
+that are local to the procedure but do not fit in registers, such as
+local arrays or structures.
+The segment of the stack containing a
+procedure’s saved registers and local variables is called a
+**procedure frame** or **activation record**.
 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a76dafdb-69b4-4ed2-8e64-7b41e9cd6c69)|
+|:--:|
+|**Illustration of the stack allocation (a) before, (b) during, and (c) after the procedure call.**|
+
+The frame pointer (*fp* or *x8*) points to the first
+doubleword of the frame, often a saved argument
+register, and the stack pointer (*sp*) points to the top of
+the stack. The stack is adjusted to make room for all
+the saved registers and any memory-resident local
+variables. Since the stack pointer may change during
+program execution, it’s easier for programmers to
+reference variables via the stable frame pointer,
+although it could be done just with the stack pointer
+and a little address arithmetic. If there are no local
+variables on the stack within a procedure, the compiler
+will save time by not setting and restoring the frame
+pointer. When a frame pointer is used, it is initialized
+using the address in *sp* on a call, and *sp* is restored
+using *fp*.
+
+Some RISC-V compilers use a *frame pointer*, or register *x8* to
+point to the first doubleword of the frame of a procedure.
+
+Figure below shows the RISC-V convention for allocation of memory when running
+the Linux operating system. The stack starts in the high end of the user
+addresses space and grows down. <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5efb3ae8-ac79-4679-8632-51509c6c4818)|
+|:--:|
+|The RISC-V memory allocation for program and data. These addresses are only a software convention, and not part of the RISC-V architecture. |
+
+The first part of the low end of memory is reserved, followed by the home of the
+RISC-V machine code, traditionally called the **text segment**. Above the code
+is the **static data segment**, which is the place for constants and other static
+variables. <br/>
+Arrays tend to be a fixed length and thus are a
+good match to the static data segment, data structures like linked
+lists tend to grow and shrink during their lifetimes. The segment for
+such data structures is traditionally called the **heap**, and it is placed
+next in memory.
+
+C allocates and frees space on the heap with explicit functions.
+**malloc()** allocates space on the heap and returns a pointer to it, and
+**free()** releases space on the heap to which the pointer points.
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/45595dff-7a6b-4ad8-8473-7cbeb60e7212)|
+|:--:|
+|RISC-V register conventions|
 
 ### 2.9 Communicating with People <a name="28"></a>
-### 2.10 RISC-V Addressing for Wide Immediates and Addresses <a name="29"></a>
-### 2.11 Parallelism and Instructions: Synchronization <a name="210"></a>
-### 2.12 Translating and Starting a Program <a name="211"></a>
-### 2.13 A C Sort Example to Put it All Together <a name="212"></a>
-### 2.14 Arrays versus Pointers <a name="213"></a>
-### 2.15 Advanced Material: Compiling C and Interpreting Java <a name="214"></a>
-### 2.16 Real Stuff: MIPS Instructions <a name="215"></a>
-### 2.17 Real Stuff: x86 Instructions <a name="216"></a>
-### 2.18 Real Stuff: The Rest of the RISC- V Instruction Set <a name="217"></a>
-### 2.19 Fallacies and Pitfalls <a name="218"></a>
+TODO: Communicating with People
 
-## 3. Arithmetic for Computers <a name="3"></a>
 
-### 3.1 Introduction <a name="31"></a>
-### 3.2 Addition and Subtraction <a name="32"></a>
-### 3.3 Multiplication <a name="33"></a>
-### 3.4 Division <a name="34"></a>
-### 3.5 Floating Point <a name="35"></a>
-### 3.6 Parallelism and Computer Arithmetic: Subword Parallelism <a name="36"></a>
-### 3.7 Real Stuff: Streaming SIMD Extensions and Advanced Vector Extensions in x86 <a name="37"></a>
-### 3.8 Going Faster: Subword Parallelism and Matrix Multiply <a name="38"></a>
-### 3.9 Fallacies and Pitfalls <a name="39"></a>
 
-## 4. The Processor <a name="4"></a>
-
-### 4.1 Introduction <a name="41"></a>
-### 4.2 Logic Design Conventions <a name="42"></a>
-### 4.3 Building a Datapath <a name="43"></a>
-### 4.4 A Simple Implementation Scheme <a name="44"></a>
-### 4.5 An Overview of Pipelining <a name="45"></a>
-### 4.6 Pipelined Datapath and Control <a name="46"></a>
-### 4.7 Data Hazards: Forwarding versus Stalling <a name="47"></a>
-### 4.8 Control Hazards <a name="48"></a>
-### 4.9 Exceptions <a name="49"></a>
-### 4.10 Parallelism via Instructions <a name="410"></a>
-### 4.11 Real Stuff: The ARM Cortex-A53 and Intel Core i7 Pipelines <a name="411"></a>
-### 4.12 Going Faster: Instruction-Level Parallelism and Matrix Multiply <a name="412"></a>
-### 4.13 Advanced Topic <a name="413"></a>
-### 4.14 Fallacies and Pitfalls <a name="414"></a>
-
-## 5. Large and Fast Exploiting Memory Hierarchy <a name="5"></a>
