@@ -182,24 +182,19 @@ Disadvantages: <br/>
 Asynchronous designs need to consider potential hazards such as metastability.
 
 ### 14. What are some common challenges and considerations when designing for FPGAs? <a name="114"></a> [UP↑](#tof)
-- **Timing and performance**: FPGAs have a fixed number of resources, including
-logic gates and flip-flops, which can limit the performance of the design.
-Timing analysis are required to ensure that the design meets the desired
-performance goals,
-- **Power consumption**: FPGAs can consume significant power, so power optimization
-techniques need to be considered during the design process,
-- **Design complexity**: Partitioning the design into smaller modules, using
-hierarchical design approaches, and proper design documentation can help manage
-complexity,
-- **Debugging and verification**: Tools like simulation, formal verification, and
-on-chip debugging techniques can be used to ensure the correctness of the design.
+1. **Timing and performance** - timing analysis are required to ensure that the 
+design meets the desired performance goals.
+2. **Power consumption**: FPGAs can consume significant power, so power 
+optimization techniques need to be considered during the design process.
+3. **Design complexity**: Partitioning the design into smaller modules and 
+proper design documentation can help manage complexity.
+4. **Debugging and verification**: Tools like simulation, formal verification, 
+and on-chip debugging techniques can be used to ensure the correctness of the 
+design.
 
 ### 15. What is the purpose of a look-up table (LUT) in an FPGA? <a name="115"></a> [UP↑](#tof)
-A look-up table in an FPGA serves as a fundamental building block for
-implementing digital logic functions. The purpose of a LUT is to provide a flexible and
-efficient way to implement complex logic functions within an FPGA, enabling the
-device to perform various tasks such as data processing, arithmetic operations,
-and control functions.
+It is a fundamental building block for implementing digital logic functions. It 
+is basically a table that determines what the output is for any given input.
 
 ### 16. How do you implement a multiplexer in an FPGA design? <a name="116"></a> [UP↑](#tof)
 1. Determine the number of inputs and select
