@@ -629,5 +629,14 @@ some challenges in the design of the processor, since it requires
 both a memory read and a write in a single, uninterruptible (pol. *nieprzerwany*)
 instruction.
 
+### 2.12 Translating and Starting a Program <a name="211"></a>
+### 2.13 A C Sort Example to Put it All Together <a name="212"></a>
+### 2.14 Arrays versus Pointers <a name="213"></a>
+### 2.15 Advanced Material: Compiling C and Interpreting Java <a name="214"></a>
+### 2.16 Real Stuff: MIPS Instructions <a name="215"></a>
+### 2.17 Real Stuff: x86 Instructions <a name="216"></a>
+### 2.18 Real Stuff: The Rest of the RISC- V Instruction Set <a name="217"></a>
+### 2.19 Fallacies and Pitfalls <a name="218"></a>
+
 
 
