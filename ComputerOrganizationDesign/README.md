@@ -590,5 +590,44 @@ PC and a constant in the instruction.
 |:--:|
 |RISC-V instruction encoding|
 
+### 2.11 Parallelism and Instructions: Synchronization <a name="210"></a>
+**data race** - Two memory accesses form a data race if they are from different
+threads to the same location, at least one is a write, and they occur
+one after another.
+
+**mutual exclusion (mutex)** - is a property of process synchronization,
+prevents simultaneous access to a shared resource. **Lock**
+and **unlock** can be used straightforwardly to create regions where
+only a single processor can operate. <br/>
+One typical operation for building synchronization operations is the **atomic
+exchange** or **atomic swap**, which inter-changes a value in a register for
+a value in memory.
+
+To see how to use this to build a basic synchronization primitive,
+assume that we want to build a simple lock where the value 0 is
+used to indicate that the lock is free and 1 is used to indicate that
+the lock is unavailable. A processor tries to set the lock by doing an
+exchange (pol. *wymiana*) of 1, which is in a register, with the memory address
+corresponding to the lock. The value returned from the exchange
+instruction is 1 if some other processor had already claimed access,
+and 0 otherwise. In the latter case, the value is also changed to 1,
+preventing any competing exchange in another processor from also
+retrieving a 0. <br/>
+For example, consider two processors that each try to do the
+exchange simultaneously: this race is prevented (pol. *zapobiec*), since exactly
+one of the processors will perform the exchange first, returning 0, and
+the second processor will return 1 when it does the exchange. The
+key to using the exchange primitive to implement synchronization
+is that the operation is atomic: the exchange is indivisible
+(pol. *niepodzielny*), and two
+simultaneous exchanges will be ordered by the hardware. It is
+impossible for two processors trying to set the synchronization
+variable in this manner (pol. *sposob*) to both think they have simultaneously
+set the variable. <br/>
+Implementing a single atomic memory operation introduces
+some challenges in the design of the processor, since it requires
+both a memory read and a write in a single, uninterruptible (pol. *nieprzerwany*)
+instruction.
+
 
 
