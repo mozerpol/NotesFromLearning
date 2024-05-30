@@ -568,5 +568,27 @@ C allocates and frees space on the heap with explicit functions.
 ### 2.9 Communicating with People <a name="28"></a>
 TODO: Communicating with People
 
+### 2.10 RISC-V Addressing for Wide Immediates and Addresses <a name="29"></a>
+
+**PC-relative addressing** - An addressing regime in which the address is the
+sum of the *program counter (PC)* and a constant in the instruction. <br/>
+The addressing modes of the RISC-V instructions are the following:
+- *Immediate* addressing, where the operand is a constant within the
+instruction itself.
+- *Register* addressing, where the operand is a register.
+- *Base* or *displacement* addressing, where the operand is at the
+memory location whose address is the sum of a register and a
+constant in the instruction.
+- *PC-relative* addressing, where the branch address is the sum of the
+PC and a constant in the instruction.
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e8982bff-148b-4723-82a1-6b77e7bfa6f4)|
+|:--:|
+|Illustration of four RISC-V addressing modes|
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/73db6916-3ad1-4613-b7a0-a0abb20e39fd)|
+|:--:|
+|RISC-V instruction encoding|
+
 
 
