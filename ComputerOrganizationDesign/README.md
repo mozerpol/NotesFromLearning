@@ -650,5 +650,36 @@ occurs. <br/>
 The speed of addition depends on how quickly the carry into the
 high-order bits is computed.
 
+### 3.2 Addition and Subtraction <a name="32"></a>
+
+### 3.3 Multiplication <a name="33"></a>
+The first operand is called the **multiplicand** and the second the
+**multiplier**. The final result is called the **product**.
+
+TODO: write how to multiply binary numbers by hand
+
+The 64-bit multiplicand starts in the right half of the
+Multiplicand register and is shifted left 1 bit on each
+step. The multiplier is shifted in the opposite direction
+at each step. The algorithm starts with the product
+initialized to 0. Control decides when to shift the
+Multiplicand and Multiplier registers and when to write
+new values into the Product register: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/608c0dea-38ff-479b-a316-8994b1bb58a8)|
+|:--:|
+|Very simple design which imitate the algorithm we learned in grammar school|
+
+Faster multiplications are possible by essentially
+providing one 64-bit adder for each bit of the multiplier: one input
+is the multiplicand ANDed with a multiplier bit, and the other is
+the output of a prior adder. <br/>
+A straightforward approach would be to connect the outputs of
+adders on the right to the inputs of adders on the left, making a
+stack of adders 64 high. An alternative way to organize these 64
+additions is in a parallel tree: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e506001b-6375-4391-ae12-9bb488db7316)|
+|:--:|
+|Rather than use a single 64-bit adder 63 times, this hardware “unrolls the loop” to use 63 adders and then organizes them to minimize delay|
+
 
 
