@@ -708,5 +708,23 @@ division by 0. Some computers distinguish these two anomalous
 events. RISC-V software must check the divisor to discover
 division by 0 as well as overflow.
 
+### 3.5 Floating Point <a name="35"></a>
+**scientific notation** - is a way of expressing numbers that are too large or
+too small to be conveniently written in decimal form. <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/59a92a77-963a-4d9a-95b2-1c615b57add5)
+
+Computer arithmetic that supports such numbers is called
+**floating point** because it represents numbers in which the binary
+point is not fixed, as it is for integers. <br/>
+A designer of a floating-point representation must find a
+compromise between the size of the fraction and the size of the
+exponent, because a fixed word size means you must take a bit
+from one to add a bit to the other. <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a26a7d02-99d3-4ed6-bc9f-bf7d77f23752)
+
+The representation of a RISC-V floating-point number is shown below: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/2a09bd3a-eb95-451a-9fa4-79a9eeb90572)
+
+
 
 
