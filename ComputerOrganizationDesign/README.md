@@ -638,5 +638,17 @@ instruction.
 ### 2.18 Real Stuff: The Rest of the RISC- V Instruction Set <a name="217"></a>
 ### 2.19 Fallacies and Pitfalls <a name="218"></a>
 
+## 3. Arithmetic for Computers <a name="3"></a>
+
+### 3.1 Introduction <a name="31"></a>
+The computer designer must decide how to handle arithmetic
+overflows. Although some languages like C and Java ignore
+integer overflow, languages like Ada and Fortran require that the
+program be notified. The programmer or the programming
+environment must then decide what to do when an overflow
+occurs. <br/>
+The speed of addition depends on how quickly the carry into the
+high-order bits is computed.
+
 
 
