@@ -681,5 +681,32 @@ additions is in a parallel tree: <br/>
 |:--:|
 |Rather than use a single 64-bit adder 63 times, this hardware “unrolls the loop” to use 63 adders and then organizes them to minimize delay|
 
+### 3.4 Division <a name="34"></a>
+Divide’s two operands, called the dividend and divisor, and the
+result, called the quotient, are accompanied by a second result,
+called the remainder.
+
+TODO: write how to divide binary numbers by hand
+
+We start with the 64-bit Quotient register set to 0. Each
+iteration of the algorithm needs to move the divisor to the right one
+digit, so we start with the divisor placed in the left half of the 128-
+bit Divisor register and shift it right 1 bit each step to align it with
+the dividend. The Remainder register is initialized with the
+dividend: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/9ccabcdd-1534-479c-9686-6fad5855ac7e)|
+|:--:|
+|Very simple design which imitate the algorithm we learned in grammar school|
+
+TODO: Describe SRT division
+TODO: Nonrestoring division algorithm
+
+RISC-V divide instructions ignore overflow, so software must
+determine whether the quotient is too large. In addition to
+overflow, division can also result in an improper calculation:
+division by 0. Some computers distinguish these two anomalous
+events. RISC-V software must check the divisor to discover
+division by 0 as well as overflow.
+
 
 
