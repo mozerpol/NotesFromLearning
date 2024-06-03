@@ -797,6 +797,38 @@ result: <br/>
 
 TODO: Floating-Point Multiplication by hand, step by step how to do it
 
+The RISC-V designers decided to add separate floating-point
+registers. They are called *f0*, *f1*, ..., *f31*. The RISC-V code to load two
+single precision numbers from memory, add them, and then store
+the sum might look like this: <br/>
+```
+flw f0, 0(x10) // Load 32-bit F.P. number into f0
+flw f1, 4(x10) // Load 32-bit F.P. number into f1
+fadd.s f2, f0, f1 // f2 = f0 + f1, single precision
+fsw f2, 8(x10) // Store 32-bit F.P. number from f2
+```
+
+A single precision register is just the lower half of a double-
+precision register. Note that, unlike integer register *x0*, floating-
+point register *f0* is not hard-wired to the constant 0!!! <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5dda2e31-f4ba-46e8-98f9-e9f109919e28)|
+|:--:|
+|RISC-V floating-point assembly language|
+
+Another reason for separate integers and floating-point registers is
+that microprocessors in the 1980s didn’t have enough transistors to
+put the floating-point unit on the same chip as the integer unit.
+Hence (pol. *stąd*), the floating-point unit, including the floating-point
+registers, was optionally available as a second chip. Such optional
+accelerator chips are called *coprocessor chips*. Since the early 1990s,
+microprocessors have integrated floating point (and just about
+everything else) on chip, and thus the term *coprocessor chip* joins
+*accumulator* and *core memory* as quaint (pol. *oryginalny/ciekawy*) terms.
+
+**fused multiply add** -
+A floating-point instruction that performs both a multiply and an
+add, but rounds only once after the add.
+
 
 
 
