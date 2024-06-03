@@ -725,6 +725,37 @@ from one to add a bit to the other. <br/>
 The representation of a RISC-V floating-point number is shown below: <br/>
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/2a09bd3a-eb95-451a-9fa4-79a9eeb90572)
 
+**overflow (floating-point)** -
+A situation in which a positive exponent becomes too large to fit in
+the exponent field. <br/>
+One way to reduce the chances of underflow or overflow is to
+offer another format that has a larger exponent. In C, this number is
+called *double*.
+
+**double precision** -
+A floating-point value represented in a 64-bit doubleword.
+
+**single precision** -
+A floating-point value represented in a 32-bit word.
+
+What should happen on an overflow or underflow to let the user
+know that a problem occurred? Some computers signal these events
+by raising an **exception**, sometimes called an **interrupt**.
+The address of the instruction that overflowed is saved in a register,
+and the computer jumps to a predefined address to invoke the
+appropriate routine for that exception. <br/>
+**RISC-V computers do not raise an exception on
+overflow or underflow; instead, software can read the floating-point
+control and status register (fcsr) to check whether overflow or
+underflow has occurred.**
+
+**exception** -
+Also called interrupt. An unscheduled event that disrupts program
+execution; used to detect overflow.
+
+**interrupt** -
+An exception that comes from outside of the processor. (Some
+architectures use the term interrupt for all exceptions.)
 
 
 
