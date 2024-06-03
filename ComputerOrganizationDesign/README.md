@@ -757,5 +757,46 @@ execution; used to detect overflow.
 An exception that comes from outside of the processor. (Some
 architectures use the term interrupt for all exceptions.)
 
+IEEE 754 has a symbol for the result of invalid operations,
+such as 0/0 or subtracting infinity from infinity. This symbol is: <br/>
+*NaN* - not a number
+
+IEEE 754 uses a bias of 127 for single precision, so an exponent of
+−1 is represented by the bit pattern of the value −1+127. Biased exponent
+means that the value represented by a floating-point number is
+really: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5225980f-0ebb-41c4-999c-30a194e757ea)
+
+An example: <br/>
+What decimal number does this single precision float represent by: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/09472558-c89d-458e-8f42-b27832d1d6a9)
+
+Answer: <br/>
+The sign bit is 1, the exponent field contains 129, and the fraction
+field contains 1*2^(−2) = 1/4, or 0.25. Using the basic equation: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/11c71afe-d339-49eb-971f-a1832614d195)
+
+TODO: floating point addition by hand, how to do  it
+
+First, the exponent of one operand
+is subtracted from the other using the small ALU to
+determine which is larger and by how much. This
+difference controls the three multiplexors; from left to
+right, they select the larger exponent, the significand of
+the smaller number, and the significand of the larger
+number. The smaller significand is shifted right, and
+then the significands are added together using the big
+ALU. The normalization step then shifts the sum left or
+right and increments or decrements the exponent.
+Rounding then creates the final result, which may
+require normalizing again to produce the actual final
+result: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/77fe7550-cf12-47b5-965f-8da9bc59aad6)|
+|:--:|
+|Block diagram of an arithmetic unit dedicated to floating-point addition|
+
+TODO: Floating-Point Multiplication by hand, step by step how to do it
+
+
 
 
