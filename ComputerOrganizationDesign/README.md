@@ -829,6 +829,17 @@ everything else) on chip, and thus the term *coprocessor chip* joins
 A floating-point instruction that performs both a multiply and an
 add, but rounds only once after the add.
 
+### 3.6 Parallelism and Computer Arithmetic: Subword Parallelism <a name="36"></a>
+### 3.7 Real Stuff: Streaming SIMD Extensions and Advanced Vector Extensions in x86 <a name="37"></a>
+**MMX** - MultiMedia eXtension - is a single instruction, multiple data (SIMD) 
+instruction set architecture designed by Intel for the x86 included
+instructions that operate on short vectors of integers. Later, **SSE**
+(Streaming SIMD Extension) provided instructions that operate on
+short vectors of single-precision floating-point numbers. 
+
+**AVX** - Advanced Vector Extensions - are extensions to the x86 instruction set
+architecture from 2008.
+
 
 
 
