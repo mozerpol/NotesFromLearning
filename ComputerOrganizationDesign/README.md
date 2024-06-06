@@ -840,6 +840,26 @@ short vectors of single-precision floating-point numbers.
 **AVX** - Advanced Vector Extensions - are extensions to the x86 instruction set
 architecture from 2008.
 
+### 3.8 Going Faster: Subword Parallelism and Matrix Multiply <a name="38"></a>
+### 3.9 Fallacies and Pitfalls <a name="39"></a>
+1. Floating-point addition is not associative <br/>
+*associative* - associative property - pol. *łączność* -  is a property of some 
+binary operations, which means that the order of operations is not important.
+Example: <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/1df535a8-e975-4658-9e58-4a4a3d8c508c)|
+|:--:|
+|Rule of replacement|
 
+It's a true, but problems occur when adding two large numbers of opposite signs 
+plus a small number. For example, let’s see if c+(a+b)=(c+a)+b.
+Assume c=−1.5×10^38, a = 1.5×10^38, and b = 1.0, and that these are all single
+precision numbers. Calculations when we change parentheses: <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e511e2bd-4b94-4be8-ab09-fb049824c50d)
+
+Since floating-point numbers have limited precision and result in
+approximations of real results, 1.5×10^38 is so much larger than
+1.0 that 1.5×10^38+1.0 is still 1.5×10^38. That is why the sum of
+c, a, and b is 0.0 or 1.0, depending on the order of the floating-point
+additions.
 
 
