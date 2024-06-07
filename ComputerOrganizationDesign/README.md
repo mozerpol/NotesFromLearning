@@ -862,4 +862,23 @@ approximations of real results, 1.5×10^38 is so much larger than
 c, a, and b is 0.0 or 1.0, depending on the order of the floating-point
 additions.
 
+## 4. The Processor <a name="4"></a>
 
+STRONA 472
+
+### 4.1 Introduction <a name="41"></a>
+### 4.2 Logic Design Conventions <a name="42"></a>
+### 4.3 Building a Datapath <a name="43"></a>
+### 4.4 A Simple Implementation Scheme <a name="44"></a>
+### 4.5 An Overview of Pipelining <a name="45"></a>
+### 4.6 Pipelined Datapath and Control <a name="46"></a>
+### 4.7 Data Hazards: Forwarding versus Stalling <a name="47"></a>
+### 4.8 Control Hazards <a name="48"></a>
+### 4.9 Exceptions <a name="49"></a>
+### 4.10 Parallelism via Instructions <a name="410"></a>
+### 4.11 Real Stuff: The ARM Cortex-A53 and Intel Core i7 Pipelines <a name="411"></a>
+### 4.12 Going Faster: Instruction-Level Parallelism and Matrix Multiply <a name="412"></a>
+### 4.13 Advanced Topic <a name="413"></a>
+### 4.14 Fallacies and Pitfalls <a name="414"></a>
+
+## 5. Large and Fast Exploiting Memory Hierarchy <a name="5"></a>
