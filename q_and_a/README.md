@@ -53,8 +53,8 @@ _____________
 ### 1. What is an FPGA and how does it differ from a microcontroller or ASIC? <a name="11"></a> [UP↑](#tof)
 - **FPGA** - it's a type of integrated circuit that can be reconfigured to
 perform custom digital functions or tasks to perform them in parallel.
-- **ASIC** - it's a type of integrated circuit customized for a particular use, 
-such as a specific algorithm or function. It cannot be reconfigured after the 
+- **ASIC** - it's a type of integrated circuit customized for a particular use,
+such as a specific algorithm or function. It cannot be reconfigured after the
 manufacturing process.
 - **Microcontroller** - it is a general-purpose device that combines a
 microprocessor core, memory, and peripheral devices. It is designed to control
@@ -64,17 +64,17 @@ the same process node can run at much higher frequency than FPGAs.
 
 ### 2. What is the difference between a combinational and sequential circuit? <a name="12"></a> [UP↑](#tof)
 - **Combinational circuit** - output depends on the input velue, can't remember
-the previous states. Examples: logic gates, adder, subtractor, decoder, encoder, 
+the previous states. Examples: logic gates, adder, subtractor, decoder, encoder,
 multiplexer or de-multiplexer.
 - **Sequential circuit** - can remember the previous states, the output depends
-on the input velue and previous states. Examples: flip-flops, counters, shift 
+on the input velue and previous states. Examples: flip-flops, counters, shift
 registers, RAM.
 
 ### 3. Explain the concept of clock skew and how it can affect FPGA designs. <a name="13"></a> [UP↑](#tof)
-**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous designs (such 
-as computer systems). The same clock signal arrives to different components at 
+**Clock skew** (pol. *Przesunięcie zegara*) - it's in synchronous designs (such
+as computer systems). The same clock signal arrives to different components at
 different times due to propagation delay. <br/>
-This cane destroy the integrity of the latched data (this is called a 
+This cane destroy the integrity of the latched data (this is called a
 *hold violation*).
 
 ![clock_skew](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c7acad71-7e15-499a-9d57-98810e82977f)
@@ -85,7 +85,7 @@ This cane destroy the integrity of the latched data (this is called a
 ### 5. What is the difference between a flip-flop and a latch? When would you use each? <a name="15"></a> [UP↑](#tof)
 Both are fundamental building blocks used in digital logic circuits to store and
 manipulate binary data. <br/>
-**Flip-flop** has a clock input, is widely used in synchronous digital systems 
+**Flip-flop** has a clock input, is widely used in synchronous digital systems
 (counters, shift registers, etc.). <br/>
 **Latch** is commonly used in applications where the circuit requires continuous
 operation based on the input condition.
@@ -109,18 +109,18 @@ down a complex designs into smaller stages. <br/>
 Advantages:
 - Pipelining can help optimize the utilization of FPGA resources. It becomes
 easier to map the design onto the available logic elements of the FPGA,
-- Pipelining can enable higher clock frequencies by reducing the critical path 
+- Pipelining can enable higher clock frequencies by reducing the critical path
 delay.
 
 ### 9. What is the purpose of a constraint file in FPGA design? Give examples of common constraints. <a name="19"></a> [UP↑](#tof)
-Constraint file is a text file that specifies requirements and limitations for 
-the design implementation. These constraints are used by the synthesis tools. <br/>
+Constraint file is a text file that specifies requirements and limitations for
+the design implementation. These constraints are used by the synthesis tools.
 Examples of common constraints in an FPGA:
 1. **Timing Constraints** - define the required timing characteristics of the
 design, such as maximum clock frequency, setup and hold times for registers.
 2. **Pin Placement Constraints** - specify the physical locations of the input
 and output pins on the FPGA device.
-3. **Resource Constraints** specify the usage of specific FPGA resources, such 
+3. **Resource Constraints** specify the usage of specific FPGA resources, such
 as DSP blocks, memory blocks, and lookup tables (LUTs).
 
 ### 10. How do you debug and troubleshoot issues in an FPGA design? <a name="110"></a> [UP↑](#tof)
@@ -132,11 +132,11 @@ test cases.
 ### 11. Characteristics of FPGA <a name="111"></a> [UP↑](#tof)
 Characteristics:
 1. Flexibility - FPGAs can be reprogrammed or reconfigured many times.
-2. Parallel Processing - Thanks to its architecture (configurable logic blocks, 
-mesh of programmable interconnects), it allows multiple operations to be 
+2. Parallel Processing - Thanks to its architecture (configurable logic blocks,
+mesh of programmable interconnects), it allows multiple operations to be
 performed simultaneously.
-3. Hardware-based Implementation - FPGAs allow for the implementation of 
-hardware-based solutions. By mapping algorithms or designs directly into the 
+3. Hardware-based Implementation - FPGAs allow for the implementation of
+hardware-based solutions, by mapping algorithms or designs directly into the
 FPGA's logic blocks and interconnects.
 
 ### 12. Explain the steps involved in the FPGA design flow. <a name="112"></a> [UP↑](#tof)
@@ -146,52 +146,52 @@ In this step define and describe the design using a HDL.
 2. Simulation: <br/>
 After the design entry, simulate a design using a simulation tool.
 3. Synthesis: <br/>
-It's the process of converting a high-level Hardware Description Language (HDL) 
+It's the process of converting a high-level Hardware Description Language (HDL)
 code into a low-level netlist of logical gates and flip-flops.
 4. Floorplanning: <br/>
-It's the process of creating a high-level layout for the placement of functional 
-blocks and relationships between them. The floorplan provides a visual 
-representation of the design and helps guide the placement and routing of the 
+It's the process of creating a high-level layout for the placement of functional
+blocks and relationships between them. The floorplan provides a visual
+representation of the design and helps guide the placement and routing of the
 blocks in the FPGA.
 5. Place and Route: <br/>
-Place and route tools translates a high-level plan generated by floorplaning 
+Place and route tools translates a high-level plan generated by floorplaning
 tools into a detailed physical implementation.
 6. Verification: <br/>
-Checking that the implemented design works as expected on the FPGA. Verifying 
-that the output meets the expected results. Verification can include functional, 
+Checking that the implemented design works as expected on the FPGA. Verifying
+that the output meets the expected results. Verification can include functional,
 timing, and performance analysis.
 
 ### 13. What is the difference between synchronous and asynchronous design in FPGAs? <a name="113"></a> [UP↑](#tof)
 "Synchronous" and "asynchronous" refer to different approaches for handling the
 timing behavior of signals within the design. <br/>
 1. **Synchronous Design**: <br/>
-The clock signal is used to coordinate and synchronize the behavior of different 
+The clock signal is used to coordinate and synchronize the behavior of different
 parts of the design, so a clock signal is used as a reference point for
 triggering the execution of all operations in the design. <br/>
 Advantages: <br/>
 Synchronous designs offer predictable timing behavior, easier
 debugging, and better control over signal integrity and synchronization.
 2. **Asynchronous Design**: <br/>
-It is used when signals and operations need to be processed independently based 
-on their own local timing. For proper communication handshake protocols are 
-used. These protocols define the rules for exchanging data and ensuring proper 
+It is used when signals and operations need to be processed independently based
+on their own local timing. For proper communication handshake protocols are
+used. These protocols define the rules for exchanging data and ensuring proper
 synchronization. <br/>
 Disadvantages: <br/>
 Asynchronous designs need to consider potential hazards such as metastability.
 
 ### 14. What are some common challenges and considerations when designing for FPGAs? <a name="114"></a> [UP↑](#tof)
-1. **Timing and performance** - timing analysis are required to ensure that the 
+1. **Timing and performance** - timing analysis are required to ensure that the
 design meets the desired performance goals.
-2. **Power consumption**: FPGAs can consume significant power, so power 
+2. **Power consumption**: FPGAs can consume significant power, so power
 optimization techniques need to be considered during the design process.
-3. **Design complexity**: Partitioning the design into smaller modules and 
+3. **Design complexity**: Partitioning the design into smaller modules and
 proper design documentation can help manage complexity.
-4. **Debugging and verification**: Tools like simulation, formal verification, 
-and on-chip debugging techniques can be used to ensure the correctness of the 
+4. **Debugging and verification**: Tools like simulation, formal verification,
+and on-chip debugging techniques can be used to ensure the correctness of the
 design.
 
 ### 15. What is the purpose of a look-up table (LUT) in an FPGA? <a name="115"></a> [UP↑](#tof)
-It is a fundamental building block for implementing digital logic functions. It 
+It is a fundamental building block for implementing digital logic functions. It
 is basically a table that determines what the output is for any given input.
 
 ### 16. How do you implement a multiplexer in an FPGA design? <a name="116"></a> [UP↑](#tof)
@@ -202,16 +202,16 @@ need 2 select lines.
 4. Use FPGA synthesis tools to convert the design into a configuration file.
 
 ### 17. How do you handle timing constraints (pol. radzić sobie z ograniczeniami czasowymi) in FPGA designs? <a name="117"></a> [UP↑](#tof)
-1. Determine the timing requirements for the design, including maximum and 
+1. Determine the timing requirements for the design, including maximum and
 minimum clock frequencies, setup and hold times for input and output signals.
 2. Run static timing analysis tools provided by the FPGA development environment.
 3. Make design modifications to improve timing performance (like pipelining).
 4. Identify critical paths.
 
-**Setup time** is the amount of time required for the input to a Flip-Flop to be
-stable before a clock edge. <br/>
-**Hold time** is the minimum amount of time required for the input to a 
-Flip-Flop to be stable after a clock edge. <br/>
+**Setup time** is the amount of time required for the input data to the
+flip-flop to be stable before a clock edge. <br/>
+**Hold time** is the minimum amount of time required for the input data to the
+flip-flop to be stable after a clock edge. <br/>
 |![time](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b00822fd-6f71-4a13-9119-0b39d0f81e85)|
 |:--:|
 |Source: *https://nandland.com/lesson-12-setup-and-hold-time/*|
@@ -219,9 +219,9 @@ Flip-Flop to be stable after a clock edge. <br/>
 ### 18. Describe the basic architecture of an FPGA. <a name="118"></a> [UP↑](#tof)
 Are three main components:
 1. **Configurable logic blocks** - CLBs are the fundamental building blocks of
-an FPGA. CLBs can be interconnected to implement complex logic functions. They 
+an FPGA. CLBs can be interconnected to implement complex logic functions. They
 consist of:
-- look-up tables (LUTs), 
+- look-up tables (LUTs),
 - flip-flops
 
 |![clb](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d1d2e717-a928-491c-b651-f20ba80a0768)|
@@ -232,8 +232,8 @@ consist of:
 world and the internal logic of the FPGA. They consist of input and output
 buffers, I/O standards converters, and other circuitry necessary for interfacing
 with external devices.
-3. **programmable interconnects** - The programmable interconnects form a 
-network of routing resources that connect the CLBs and IOBs. They consist of a 
+3. **programmable interconnects** - The programmable interconnects form a
+network of routing resources that connect the CLBs and IOBs. They consist of a
 matrix of programmable switches and wires. <br/>
 |![fpga_3](https://github.com/mozerpol/NotesFromLearning/assets/43972902/47e538bf-04eb-43dc-bb9f-63bf6ecb9f73)|
 |:--:|
@@ -251,7 +251,7 @@ using dual-flip flops. <br/>
 
 ### 20. What are the advantages and disadvantages of using an FPGA in a design? <a name="120"></a> [UP↑](#tof)
 Advantages of using an FPGA in a design:
-1. **Flexibility** - can be reprogrammed or reconfigured to implement different 
+1. **Flexibility** - can be reprogrammed or reconfigured to implement different
 functionalities.
 2. **Customizability** - allow to create custom digital logic circuits.
 3. **Parallelism** - allowing for the execution of multiple tasks simultaneously.
