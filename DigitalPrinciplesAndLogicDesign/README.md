@@ -61,6 +61,14 @@ example number 11111110 = -1.
 2. How to convert 1's complement to dec?
 - Invert all the bits in the binary number.
 
+3. Subtraction using complement
+Subtraction is performed by **adding** two numbers, if a carry is generated, 
+remove the carry, add it to the result. This carry is called the end-around 
+carry. <br/>
+For example: subtract 1001 from 1101:
+- 1001**+**1101 = 0011 and **1** carry, which need be added
+- 0011+0001 = 0100
+
 
 
 
