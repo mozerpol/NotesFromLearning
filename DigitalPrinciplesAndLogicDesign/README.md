@@ -35,6 +35,17 @@ In the octal code, numbers are presented using characters from 0 to 7. <br/>
 In the hexadecimal code, numbers are presented using the characters 0 to 9 and 
 A to F. <br/>
 
+### 1.1. Fractional Conversion <a name="1.1"></a> [UP↑](#tof)
+Example: Convert 1010.011 to decimal number. <br/>
+The binary number given is:
+1 0 1 0. 0 1 1 <br/>
+Positional weights
+3 2 1 0 -1-2-3 <br/>
+So... <br/>
+1\*2^3 + 0\*2^2 + 1\*2^1 + 0\*2^0 + 0\*2^–1 + 1\*2^–2 + 1\*2^–3 = 8 + 0 + 2 + 0 + 0 + 
+0.25 + 0.125 = 10.37510
+
+
 
 
 
