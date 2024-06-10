@@ -69,6 +69,14 @@ For example: subtract 1001 from 1101:
 - 1001**+**1101 = 0011 and **1** carry, which need be added
 - 0011+0001 = 0100
 
+### 1.3. Two's complement <a name="1.3"></a> [UP↑](#tof)
+**Two's complement** - (abbreviated as U2, ZU2, 2's or 2C, pl. *kod uzupełnień 
+do dwóch*). <br/>
+It's a system of representation of integer numbers in a binary system. MSB 
+number tells us, whether the number is negative. For example `0b1000` will be 
+negative, because MSB (first number from left) is 1, otherwise `0b0111` will be 
+positive.
+
 
 
 
