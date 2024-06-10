@@ -45,6 +45,21 @@ So... <br/>
 1\*2^3 + 0\*2^2 + 1\*2^1 + 0\*2^0 + 0\*2^–1 + 1\*2^–2 + 1\*2^–3 = 8 + 0 + 2 + 0 + 0 + 
 0.25 + 0.125 = 10.37510
 
+### 1.2. Ones' complement <a name="1.2"></a> [UP↑](#tof)
+**Ones' complement** - the value is obtained by inverting all the bits in the 
+binary representation. <br/>
+Example: binary number: 10101110 <br/>
+In ones' complement it's 01010001. 1’s complement indicates if the number is 
+positive or negative. MSB number tells us, whether the number is negative. For
+example number 11111110 = -1.
+
+1. How to convert dec to 1's complement?
+- Convert the decimal number to its binary equivalent,
+- invert all the bits in the binary number,
+- The result binary number is the one's complement.
+
+2. How to convert 1's complement to dec?
+- Invert all the bits in the binary number.
 
 
 
