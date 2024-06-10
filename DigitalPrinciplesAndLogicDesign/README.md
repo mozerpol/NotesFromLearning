@@ -27,6 +27,14 @@ __________
     6. [The tabulation method](#4.6)
 5. [Combinational logic circuits](#5)
 
+## 1. Data and number systems <a name="1"></a> [UP↑](#tof)
+In binary code, the number 101010 - on the left is MSB (1) and on the right is 
+LSB (0). <br/>
+In binary code, numbers are presented using the characters 0 and 1. <br/>
+In the octal code, numbers are presented using characters from 0 to 7. <br/>
+In the hexadecimal code, numbers are presented using the characters 0 to 9 and 
+A to F. <br/>
+
 
 
 
