@@ -77,6 +77,16 @@ number tells us, whether the number is negative. For example `0b1000` will be
 negative, because MSB (first number from left) is 1, otherwise `0b0111` will be 
 positive.
 
+1. How to convert U2 to dec?
+Example: number in U2: *101* - it has three numbers.
+- Take first from left (it is *1*) and raise to the power of 2. Why *2*? Because 
+we have three numbers, but in computer science we count from zero. And very 
+important thing, the first number must be multiple by *-1*, because first number 
+says whether the number is positive or negative,
+- raise to the power of 1 number *0* (because second number is 0) by 1. 
+- raise to the power of 0 number *1*.
+So finally, we have: -1*2^2 + 0*2^1 + 1*2^0 = -4 + 0 + 1 = -3 <br/>
+
 
 
 
