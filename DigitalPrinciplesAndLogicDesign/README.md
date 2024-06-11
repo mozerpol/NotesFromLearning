@@ -87,6 +87,17 @@ says whether the number is positive or negative,
 - raise to the power of 0 number *1*.
 So finally, we have: -1*2^2 + 0*2^1 + 1*2^0 = -4 + 0 + 1 = -3 <br/>
 
+2. How to convert dec to U2?
+Example: dec number 72.
+- For positive numbers just change to binary code, for 72 = 1001000,
+- add a sign bit at the MSB position, for 72 = 0, so 72 in 2's is equal 01001000.
+
+Another example: dec number -72.
+- Change to binary code positive number, in that case is 72 = 01001000 (need to 
+remember about sign bit at the MSB),
+- negate the binary number by inverting the bits, so 01001000 = 10110111,
+- add number 1, so 10110111 + 00000001 = 10111000. So -72 = 10111000.
+
 
 
 
