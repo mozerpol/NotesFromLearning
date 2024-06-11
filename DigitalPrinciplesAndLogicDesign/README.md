@@ -98,6 +98,10 @@ remember about sign bit at the MSB),
 - negate the binary number by inverting the bits, so 01001000 = 10110111,
 - add number 1, so 10110111 + 00000001 = 10111000. So -72 = 10111000.
 
+3. Subtraction using U2 complement
+2's numbers are subtracted as usual for binary numbers. Change decimal to 2's
+numbers, then substract.
+
 
 
 
