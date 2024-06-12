@@ -117,6 +117,27 @@ parts:
 
 So number 12 in BCD looks: 00001 00010
 
+2. BCD addition
+We add like regular binary numbers, if the result is greater than 9, we add the 
+number 6 to this result and we get a new result, which is valid in BCD. <br/>
+
+An example: add 7 + 5 = 0111 + 0101 <br/>
+
+0111 <br/>
+0101 <br/>
+----+ <br/>
+1100 <br/>
+
+1100 = 12, this number is greater than 9, so to the 12 we need add 6: <br/>
+
+1100 <br/>
+0110 <br/>
+----+ <br/>
+10010 <br/>
+
+So our result is 10010, but BCD is represented on 4 bits, so the final result 
+is: 0001 0010.
+
 
 
 
