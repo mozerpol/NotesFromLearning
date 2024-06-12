@@ -138,6 +138,10 @@ An example: add 7 + 5 = 0111 + 0101 <br/>
 So our result is 10010, but BCD is represented on 4 bits, so the final result 
 is: 0001 0010.
 
+3. BCD substraction
+It's not that obvious... We have to add the 9’s complement of the subtrahend to
+the minuend.
+
 
 
 
