@@ -102,6 +102,13 @@ remember about sign bit at the MSB),
 2's numbers are subtracted as usual for binary numbers. Change decimal to 2's
 numbers, then substract.
 
+### 1.4. BCD - Binary Coded Decimal <a name="1.4"></a> [UP↑](#tof)
+We can distingusih many BCD codes like 8421 or 4241. <br/>
+Each decimal digit from 1 to 9 is coded in 4-bit binary numbers. <br/>
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/3f9c6d73-ad91-4275-b83b-70390a25d86d)|
+|:--:|
+|Only characters from 0 to 9 are allowed in the BCD code.|
+
 
 
 
