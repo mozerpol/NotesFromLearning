@@ -142,6 +142,14 @@ is: 0001 0010.
 It's not that obvious... We have to add the 9’s complement of the subtrahend to
 the minuend.
 
+## 2. Codes and their conversions <a name="2"></a> [UP↑](#tof)
+
+In digital systems a variety of codes are used to serve different purposes, such 
+as data entry, arithmetic operation, error detection and correction, etc. 
+Selection of a particular code depends on the requirement.
+
+Codes can be classified into five groups:
+
 
 
 
