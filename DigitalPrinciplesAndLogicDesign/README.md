@@ -109,6 +109,14 @@ Each decimal digit from 1 to 9 is coded in 4-bit binary numbers. <br/>
 |:--:|
 |Only characters from 0 to 9 are allowed in the BCD code.|
 
+1. How to convert dec to BCD?
+If we want to create the number 12 in BCD code, it must be divided into two 
+parts:
+- Number 1: 00001
+- Number 2: 00010
+
+So number 12 in BCD looks: 00001 00010
+
 
 
 
