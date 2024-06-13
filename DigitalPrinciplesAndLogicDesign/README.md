@@ -170,6 +170,23 @@ with the standard BCD code but with 2.
 |8 |1110 |
 |9 |1111 |
 
+2. Nonweighted Codes - These codes are not positionally weighted. It basically 
+means that each position of the binary number is not assigned a fixed value.
+a) Excess-3 - decimal code that has been used in some old computers. <br/>
+For every number we need to add number 3 and then change result to 4-bit binary
+number, I'll explain using an example: Convert decimal 367 do excess-3: <br/>
+- 367, for every number add 3: 3+3, 6+9, 7+3, we receive 6 9 10
+- Convert 6 9 10 to 4-bit binary: 0110 1001 1010
+- So 367 in excess-3 = 0110 1001 1010
+
+b) Gray Code - belongs to a class of code known as minimum change code, in which 
+a number changes by only one bit. This code is not useful for arithmetic 
+operations. <br/>
+Conversion from binary number to gray code and from gray code to binary is quite
+nice described on the page 35.
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/09930037-7d7e-4896-8feb-53a1e695083a)
+
 
 
 
