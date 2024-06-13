@@ -149,6 +149,26 @@ as data entry, arithmetic operation, error detection and correction, etc.
 Selection of a particular code depends on the requirement.
 
 Codes can be classified into five groups:
+1. Weighted Binary Codes
+a) 8421 - 8, 4, 2, and 1 are the weights of the four bits of the BCD code.
+b) 84-2-1 - yes, it's minus 2 and minus 1. Thanks to this is possible to assign 
+negative weights to decimal code. So number 0101 = 0\*8 + 1\*4 + 0\*(–2) + 
+1\*(–1) = 3.
+c) 2421 (different name Aiken code) - does not weight the fourth digit as 8 as 
+with the standard BCD code but with 2.
+
+|Decimal digit| Aiken 2421 code|
+|:--:|:--:|
+|0| |
+|1 |0000 |
+|2 |0001 |
+|3 |0010 |
+|4 |0011 |
+|5 |0100 |
+|6 |1100 |
+|7 |1101 |
+|8 |1110 |
+|9 |1111 |
 
 
 
