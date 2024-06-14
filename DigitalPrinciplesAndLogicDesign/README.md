@@ -219,6 +219,10 @@ but often the extra bit is used to extend the ASCII to represent an additional
 b) EBCDIC - It is generally used in IBM equipment and in large computers. <br/>
 c) Hollerith Code - this code is used in punched cards.
 
+## 3. Boolean algebra and logic gates <a name="3"></a> [UP↑](#tof)
+Two-valued Boolean algebra is defined on a set of only two elements, S = {0,1}.
+
+
 
 
 
