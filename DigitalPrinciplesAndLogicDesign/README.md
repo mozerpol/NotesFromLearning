@@ -187,6 +187,25 @@ nice described on the page 35.
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/09930037-7d7e-4896-8feb-53a1e695083a)
 
+3. Error-detection Codes
+a) Parity Bit Coding Technique - A parity bit is an extra bit included with a 
+message to make the total number of 1s either odd or even, including parity bit. 
+The detected error cannot be corrected, but its presence is indicated. This
+method fails for double errors.
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/aa1a8f05-5470-4bad-a8f4-a2e3f212d789)|
+|:--:|
+| P is additional bit for message. |
+| If number of 1s in the message is odd then parity bit is equal 0, for case when we want to emphasize odd number of 1s. |
+
+b) Check Sums
+Initially any word A 10010011 is transmitted; next another word B 01110110 is 
+transmitted. The binary digits in the two words are added and the sum obtained 
+is retained in the transmitter. Then any other word C is transmitted and added 
+to the previous sum retained in the transmitter and the new sum is now retained.
+After transmitting all the words, the final sum, which is called the Check Sum, 
+is also transmitted.
+
 
 
 
