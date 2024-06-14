@@ -238,6 +238,23 @@ Two-valued Boolean algebra is defined on a set of only two elements, S = {0,1}.
 9. !0 = 1
 10. !1 = 0
 
+### Laws of Boolean Algebra
+1. Commutative Law:
+A+B = B+A <br/>
+A.B = B.A <br/> 
+2. Associative Law:
+(A+B)+C = A+(B+C) <br/> 
+(A.B).C = A.(B.C) <br/> 
+3.  Distributive Law:
+A(B+C) = AB + AC <br/> 
+A + BC = (A+B). (A+C) <br/> 
+4. Idempotance Law:
+A+A=A <br/> 
+A.A = A <br/> 
+5. Absorption Law:
+A + A.B = A <br/> 
+A.(A+B) = A <br/> 
+
 
 
 
