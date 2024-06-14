@@ -212,6 +212,13 @@ it. <br/>
 b) Reed Solomon. <br/>
 It is too time consuming to explain how this two codes works, so I skipped it.
 
+5. Alphanumeric Codes <br/>
+a) ASCII - It is a 7-bit code, where a character is represented with seven bits,
+but often the extra bit is used to extend the ASCII to represent an additional
+128 characters. <br/>
+b) EBCDIC - It is generally used in IBM equipment and in large computers. <br/>
+c) Hollerith Code - this code is used in punched cards.
+
 
 
 
