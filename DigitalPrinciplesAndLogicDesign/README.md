@@ -206,6 +206,12 @@ to the previous sum retained in the transmitter and the new sum is now retained.
 After transmitting all the words, the final sum, which is called the Check Sum, 
 is also transmitted.
 
+4. Error-correcting codes <br/>
+a) Hamming Code - it's not hard, just generate a simple pattern of xors and use 
+it. <br/>
+b) Reed Solomon. <br/>
+It is too time consuming to explain how this two codes works, so I skipped it.
+
 
 
 
