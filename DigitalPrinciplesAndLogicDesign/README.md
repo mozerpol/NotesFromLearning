@@ -280,6 +280,22 @@ explain the validity of theorems.
 |:--:|
 |Source: https://www.jeffreythompson.org/blog/2010/04/18/logic-gates-as-venn-diagrams/|
 
+### Canonical and standard forms
+*Product Term* - an AND function is referred to as a sum term. <br/>
+*Sum Term* - an OR function is referred to as a sum term. For example, A + B + 
+C′ is a sum term.
+
+Logic function can be expressed in the following forms:
+- Sum of the Products (SOP) - logical sum of two or more logical product terms. 
+It is basically an OR operation on AND operated variables. For example, Y = AB + 
+BC + AC or Y = A′B + BC + AC′.
+- Product of the Sums (POS) - logical product of two or more logical sum terms.
+It is an AND operation on OR operated variables. For example, Y = (A + B + C)(
+A + B′ + C)(A + B + C′) or Y = (A + B + C)(A′ + B′ + C′).
+- Nonstandard form - is neither a sum of products form nor a product of sums 
+form like F = (AB + CD)(A′B′ + C′D′), but can be converted to a standard form
+like F = (AB + CD)(A′B′ + C′D′) = A′B′CD + ABC′D′.
+
 
 
 
