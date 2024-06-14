@@ -255,6 +255,24 @@ A.A = A <br/>
 A + A.B = A <br/> 
 A.(A+B) = A <br/> 
 
+### Basic properties and theorms of Boolean Algebra
+1. Principle of Duality - This principle states that any algebraic equality 
+derived from boolean axioms will still be valid whenever the OR and AND 
+operators, and identity elements 0 and 1, have been interchange (pol. 
+*zamiennie*).
+2. DeMorgan's Theorem
+a) (x + y)' = x' y' <br/>
+b) (x y)' = x' + y' <br/>
+
+### Other Important Theorems
+1. A + A = A 
+2. A . A = A
+3. A + 1 = 1
+4. A . 0 = 0
+5. A + A.B = A
+6. A.(A + B ) = A
+
+
 
 
 
