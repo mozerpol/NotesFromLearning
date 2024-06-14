@@ -296,6 +296,29 @@ A + B′ + C)(A + B + C′) or Y = (A + B + C)(A′ + B′ + C′).
 form like F = (AB + CD)(A′B′ + C′D′), but can be converted to a standard form
 like F = (AB + CD)(A′B′ + C′D′) = A′B′CD + ABC′D′.
 
+### Logic gates
+Minterm - is the product of N distinct (pol. *odrębny*) literals. Each minterm 
+is obtained by an AND operation, for example literals are: A, B, C and the
+minterm is A*B*C=1.
+
+Maxterm - is the sum of N distinct (pol. *odrębny*) literals. Each maxterm is 
+obtained by an OR operation. The output of the maxterm functions is 0, 
+for example literals are: A, B, C and the maxterm is A+B+C=0.
+
+| Digital logic gates |
+|:--:|
+| ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/62c7f00b-e56d-4337-b763-28caf8788d68) |
+| Source: *Page 68* |
+
+NAND gates and NOR gates are called universal gates. The advantage of using the 
+universal gates for implementation of logic functions is that it reduces the 
+number of varieties of gates.
+
+|Gates made from NOR and NAND|
+|:--:|
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/850379db-a350-413a-9d14-0d8dfa3d0115)|
+|Source: *https://www.quora.com/How-do-you-implement-Y-A-BC-using-only-the-NOR-gate*|
+
 
 
 
