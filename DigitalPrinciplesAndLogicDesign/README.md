@@ -319,6 +319,39 @@ number of varieties of gates.
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/850379db-a350-413a-9d14-0d8dfa3d0115)|
 |Source: *https://www.quora.com/How-do-you-implement-Y-A-BC-using-only-the-NOR-gate*|
 
+### Transforming circuits into only NAND gates
+The easiest way to transform circuit which is to change each gate into the 
+corresponding NAND gate. Firstly need to understand one thing: when two 
+inverters are cascaded, the function remains the same, picture below shows what
+I mean:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/57a07a6a-14d6-43b6-ba8c-7059cbac83d1)
+
+So remeber that two cascaded inverters don't change anything, double inversion 
+does not perform a logic function. Tranform all gates in the circuit to the 
+corresponding NAND gates. Example:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e7fe6c5e-497c-4511-bc19-c4336f944e41)|
+|:--:|
+|Source: *page 73*|
+
+The above circuit was transformed into the same, which is made of NAND gates:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/44dc9a89-2be0-4a92-86b9-c6b39a604379)|
+|:--:|
+|Source: *page 73*|
+
+As I wrote earlier, two inverters do not make any sense, because of that it's
+necessary to remove them. I marked them below:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8fa20070-318e-4bc9-9160-4f150f86b540)
+
+The final circuit looks like:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b4f39df5-62ec-497f-8a53-b6f97e9dbbc4)
+
+Notice that input A was changed into A' (negation of A), so one NAND was 
+removed.
 
 
 
