@@ -222,6 +222,21 @@ c) Hollerith Code - this code is used in punched cards.
 ## 3. Boolean algebra and logic gates <a name="3"></a> [UP↑](#tof)
 Two-valued Boolean algebra is defined on a set of only two elements, S = {0,1}.
 
+### Axioms of Boolean Algebra
+*+* denotes the Logical OR operation <br/>
+*.* denotes the Logical AND operation <br/> 
+*!* denotes the Logical NOT operation <br/>
+
+1. 0.0 = 0
+2. 0.1 = 0
+3. 1.0 = 0
+4. 1.1 = 1
+5. 0+0 = 0
+6. 0+1 = 1
+7. 1+0 = 1
+8. 1+1 = 1
+9. !0 = 1
+10. !1 = 0
 
 
 
