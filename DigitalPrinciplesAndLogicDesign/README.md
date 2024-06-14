@@ -272,6 +272,14 @@ b) (x y)' = x' + y' <br/>
 5. A + A.B = A
 6. A.(A + B ) = A
 
+### Venn diagrams
+A Venn diagram may be used to illustrate the postulates of Boolean algebra or to
+explain the validity of theorems.
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/00636462-2969-4d85-89c0-72051dfb80ff)|
+|:--:|
+|Source: https://www.jeffreythompson.org/blog/2010/04/18/logic-gates-as-venn-diagrams/|
+
 
 
 
