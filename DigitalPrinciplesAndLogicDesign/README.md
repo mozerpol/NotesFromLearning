@@ -373,6 +373,15 @@ Multilevel networks use less number of literals or inputs, thus reducing the
 number of wires for connection. The biggest disadvantage of the multilevel 
 network is that it increases the propagation delay.
 
+## 4. Simplification and minimization of boolean functions <a name="4"></a> [UP↑](#tof)
+A K-Map or Karnaugh Map is a graphical method that used for simplifying the 
+complex algebraic expressions in Boolean functions. The Karnaugh map can 
+minimize logical functions in two cases (below is example for three variables):
+- Sum of the Products (SOP): F = A′BC + A′BC′ + AB′C′ + AB′C. In this case k-map
+is build from ones.
+- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′). In this 
+case k-map is build from zeros.
+
 
 
 
