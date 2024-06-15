@@ -353,6 +353,13 @@ The final circuit looks like:
 Notice that input A was changed into A' (negation of A), so one NAND was 
 removed.
 
+Level of gates - the maximum number of gates cascaded in series between an input 
+and output.
+
+Wired logic - is a logic gate that use only passive components such as diodes 
+and resistors. A wired logic connection can create an AND or an OR gate. 
+Limitations include the inability to create a NOT gate.
+
 
 
 
