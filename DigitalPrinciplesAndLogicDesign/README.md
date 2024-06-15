@@ -360,6 +360,19 @@ Wired logic - is a logic gate that use only passive components such as diodes
 and resistors. A wired logic connection can create an AND or an OR gate. 
 Limitations include the inability to create a NOT gate.
 
+Multilevel gate network - if a network is implemented using gates in more than
+two levels. The multilevel network reduces the number of literals as well as the 
+variety of gate types:
+
+| ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a91a85cc-c106-4926-bdb1-1e0634e7aaac) |
+|:--:|
+| On the left side is an example of two-level AND-OR network, on the right side is the same function, but realized as a multilevel gate network. |
+|Source: *page 77*|
+
+Multilevel networks use less number of literals or inputs, thus reducing the 
+number of wires for connection. The biggest disadvantage of the multilevel 
+network is that it increases the propagation delay.
+
 
 
 
