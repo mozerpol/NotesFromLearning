@@ -382,6 +382,28 @@ is build from ones.
 - Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′). In this 
 case k-map is build from zeros.
 
+### Two-variable karnaugh maps
+Boolean function in two variables (A, B) can have four possible combinations:
+1. SOP (each of these terms are called a minterm):
+- A*B
+- A*B'
+- A'*B
+- A'*B'
+2. POS (each of these terms are called a maxterm):
+- A+B
+- A+B'
+- A'+B
+- A'+B'
+
+Below is the template:
+
+|![untitled(3)](https://github.com/mozerpol/NotesFromLearning/assets/43972902/38e1e2e3-64a0-45d4-be9f-e1a6c1234360)|
+|:--:|
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/f9d596af-c18e-4db0-803b-7fcdba0a0aae)|
+|A'=0; A=1; B'=0; B=1|
+
+It will be easiest to explain with an example.
+
 
 
 
