@@ -424,6 +424,30 @@ For A=0 and B=0 result F is 0. Filled K-map looks like:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5c85b1f2-6509-45b7-aa8d-d9d75b6c2019)
 
+4. When A = 1, B = 1, F = 1 <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a4dbe3c5-7db3-40e2-8e32-5d1f040fb90d)
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/9d52b66a-bcf1-41a5-8da8-b7496786d5ea)
+
+We have filled K-map, now it's time to minimalize it. We need to mark entire 
+places where there are number of ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... 
+We can start to mark only ones which occurs horizontally. Like below (first 
+case):
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/077d6da5-872a-4161-b040-6f29c25cf57b)
+
+Based on that we can say that for now funcion is F = A. <br/>
+Why F = A? Because horizontally we have only two ones for A. For A' is 0 and 1.
+Now we can mark two ones which occurs vertically:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/1e63821c-41c5-46f6-86ce-35437ddea6c7)
+
+Based on that we see that function is F = B. For B' vertically data is 0 and 1.
+Summarizing we have two functions F = A or F = B. If these functions occurred 
+only horizontally or vertically, we would have F = A and F = B, but since one 
+occurs horizontally and the other vertically, we have F = A and F = B.
+Summarizing... F = A or B.
+
 
 
 
