@@ -404,6 +404,26 @@ Below is the template:
 
 It will be easiest to explain with an example.
 
+#### 1. Find the logic circuit for the truth table:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8f9fb28a-246d-4820-b463-f186958c6530)
+
+1. When A = 0, B = 0, F = 0: <br/>
+For A=0 and B=0 result F is 0. Filled K-map looks like:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/6e3da5ab-c1e9-40dc-89fa-0afa51a0a8f4)
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/f65cf527-28a6-4b3f-8829-b80f36c3ca90)
+
+2. When A = 0, B = 1, F = 1 <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/65b80fc7-fc37-40dd-b8eb-ec26c2736c6f)
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/93c713fa-0678-473b-b031-d584e851e574)
+
+3. When A = 1, B = 0, F = 1 <br/>
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/d1b5b65a-6a56-4f79-a5f2-5dcbe81ecd56)
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/5c85b1f2-6509-45b7-aa8d-d9d75b6c2019)
+
 
 
 
