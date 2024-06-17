@@ -448,6 +448,21 @@ only horizontally or vertically, we would have F = A and F = B, but since one
 occurs horizontally and the other vertically, we have F = A and F = B.
 Summarizing... F = A or B.
 
+#### 2. Find the logic circuit for the truth table:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e46b0fc5-6ead-4f95-8219-3e6a156dcd3c)
+
+Filled K-map for given truth table looks like below:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/0814a915-beea-43aa-abe4-6f5f0e6725d0)
+
+Now, as previously we need to mark entire places where there are number of ones 
+is a power of 2, i.e.: 1, 2, 4, 8, 16, ... For our case we have a 2x2 matrix of
+ones, so:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b7a6fb11-bfa9-44fb-8810-b43c6e8c198f)
+
+This circuit is simply F = 1, because for every input we have 1.
+
 
 
 
