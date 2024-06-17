@@ -481,6 +481,28 @@ Looking horizontally, only B' is equal to one in both cases, so for now F = B'.
 Looking vertically, only A' is equal to one in both cases, so for now F = A'.
 Summarizing... F = B' or A'.
 
+### Three-variable karnaugh maps
+As for two-variable karnaugh map can minimize logical functions in two cases:
+- Sum of the Products (SOP): F = A′BC + A′BC′ + AB′C′ + AB′C.
+- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′) 
+
+The logical functions for three variables can have total eight possible 
+combinations, for standard sum of product (SOP) are as follows: (A′B′C′), 
+(A′B′C), (A′BC′), (A′BC), (AB′C′), (AB′C), (ABC′), (ABC). For POS are as 
+follows: (A+B+C), (A+B+C′), (A+B′+C), (A+B′+C′), (A′+B+C), (A′+B+C′), (A′+B′+C), 
+(A′+B′+C′). Below is the template:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8f30d812-2d99-4097-adb1-a3852d981ddb)|
+|:--:|
+|The minterms and maxterms are arranged, not according to the binary sequence (in Gray code).|
+|Source: https://www.tutorialspoint.com/3-variable-k-map-in-digital-electronics|
+
+The three-variable Karnaugh Map can be constructed in other ways:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/82c41fca-7117-4f1f-8c4b-fc7de5616e48)|
+|:--:|
+|Source: page 91|
+
 
 
 
