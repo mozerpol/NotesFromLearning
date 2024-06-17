@@ -463,6 +463,24 @@ ones, so:
 
 This circuit is simply F = 1, because for every input we have 1.
 
+#### 3. Find the logic circuit for the truth table:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/685d3511-0dbc-4504-9625-48c9bec38793)
+
+K-map for given truth table:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/3e90762a-bbf1-4393-a3e8-0a75f585ddcd)|
+|:--:|
+|As I wrote before, A', B' = 0; A, B = 1|
+
+So now as previously we need to mark entire places where there are number of 
+ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... We have a two groups of ones:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/043c245f-193b-48f5-b209-010798cb85d3)
+
+Looking horizontally, only B' is equal to one in both cases, so for now F = B'.
+Looking vertically, only A' is equal to one in both cases, so for now F = A'.
+Summarizing... F = B' or A'.
+
 
 
 
