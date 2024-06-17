@@ -503,6 +503,41 @@ The three-variable Karnaugh Map can be constructed in other ways:
 |:--:|
 |Source: page 91|
 
+#### 1. Find the logic circuit for the truth table:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/acb9bf17-3041-4a23-8835-52fbad911286)
+
+To fill the K-map, the same procedure is done for two variables, with the 
+difference that instead of B there is a combination of BC:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/9d376bb8-491a-4f9f-9f15-6e47737816d5)
+
+So now as previously we need to mark entire places where there are number of 
+ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... We have a two groups of ones:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/64b9d82b-3ccb-40ce-824d-eb589dcd580e)
+
+The next step is to check for which marked fields the inputs are the same:
+1. For input A is always 1, so F = A.
+2. For input BC = 1 and BC' = 1. In this case, the output does not depend on the 
+variable C or C', because for C and C' the output is equal to 1. This is not 
+possible, therefore for the input BC and BC' we can only write F = B.
+
+Summarizing... F = A or B.
+
+We can write the same K-map in a different way, where we have two overlapping 
+fields:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/60f0083a-3ff9-4ba3-ac25-5c85c16710dc)
+
+As previously we need to check for which marked fields the inputs are the same:
+1. Vertically for the first square: A'B = 1 and AB = 1 . In this case, 
+the output does not depend on the variable A or A', so F = B.
+2. Vertically for the second square: AB = 1 and AB' = 1. The output does not 
+depend on the variable B or B', so F = A.
+3. Horizontally for C we have 0111 in K-map, so we do not take the C input into 
+account at all.
+
+Summarizing... F = A or B.
+
 
 
 
