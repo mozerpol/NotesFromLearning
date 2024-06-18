@@ -557,6 +557,27 @@ This is not possible.
 
 Summarizing... F = C'.
 
+#### 4. Simplify the Boolean function:
+Simplify the Boolean function F = A′BC + A′BC′ + AB′C′ + AB′C.
+
+To build a K-map, the easiest way is to look at the template:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/7f7c306e-ba62-4c5a-950f-6fa6459edbd0)
+
+For each expression separately, we can enter 1 in the table in the appropriate 
+place:
+
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/817a5544-3d96-46ec-87de-58c6cde8bf4b)|
+|:--:|
+|Source: Page 92|
+
+So final K-map looks like:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/0a4708cf-a137-49d4-84d7-1e363133ac96)
+
+Based on the previous informations F = A'B + AB'
+
+
 
 
 
