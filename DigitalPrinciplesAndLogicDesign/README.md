@@ -538,6 +538,12 @@ account at all.
 
 Summarizing... F = A or B.
 
+#### 2. Find the logic circuit for the K-map:
+
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/1af26844-dc77-4276-a732-fd6e7bc2fd2d)
+
+F = AB, because for A and B = 1.
+
 
 
 
