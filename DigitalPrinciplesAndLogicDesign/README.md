@@ -544,6 +544,20 @@ Summarizing... F = A or B.
 
 F = AB, because for A and B = 1.
 
+#### 3. Find the logic circuit for the K-map:
+![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/28ccb249-7ba8-4799-9003-0e5c12751e0b)
+
+In the above case, we can group ones that are adjacent (pol. *sąsiadujące*) to 
+each other. This can be done vertically or horizontally. As previously we need 
+to check for which marked fields the inputs are the same:
+1. Horizontally for A = 1 and A' = 1. In this case, the output does not depend 
+on the variable A or A'
+2. Vertically for B'C' = 1 and BC' = 1, so F = C, because for B = 1 and B' = 1,
+This is not possible.
+
+Summarizing... F = C'.
+
+
 
 
 
