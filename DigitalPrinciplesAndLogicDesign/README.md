@@ -582,7 +582,23 @@ Based on the previous informations F = A'B + AB'
 |:--:|
 |Source: https://ittimepass.wordpress.com/2017/02/09/6explain-k-map-and-its-significance-explain-2-variables-3-variables-and-4-variables-k-map |
 
-
+### Don’t-care combinations
+The "Don't care" condition says that we can use the blank cells of a K-map to 
+make a group of the variables. We mainly use the "don't care" cell to make a 
+large group of cells. The don’t care combinations are represented by *d* or *x*
+or *Φ* in K-map. <br/>
+For example, when dealing with BCD (Binary Coded Decimal) numbers encoded as 
+four bits, we may not care about any codes above the BCD range of (0, 1, 2,..., 
+9). The 4-bit binary codes for the hexadecimal numbers (Ah, Bh, Ch, Eh, Fh) are 
+not valid BCD codes. <br/>
+Thus, we do not have to fill in those codes at the end of a truth table, or 
+K-map, if we do not care to. <br/>
+We would not normally care to fill in those codes because those codes (1010, 
+1011, 1100, 1101, 1110, 1111) will never exist as long as we are dealing only 
+with BCD encoded numbers. These six invalid codes are don’t cares as far as we 
+are concerned. <br/>
+That is, we do not care what output our logic circuit produces for these don’t 
+cares.
 
 
 
