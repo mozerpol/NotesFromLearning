@@ -577,6 +577,11 @@ So final K-map looks like:
 
 Based on the previous informations F = A'B + AB'
 
+### Four-variable karnaugh maps
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/ed677dc0-3e33-43ee-b776-7a4bca56b5b8)|
+|:--:|
+|Source: https://ittimepass.wordpress.com/2017/02/09/6explain-k-map-and-its-significance-explain-2-variables-3-variables-and-4-variables-k-map |
+
 
 
 
