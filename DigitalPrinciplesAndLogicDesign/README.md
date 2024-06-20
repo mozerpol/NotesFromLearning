@@ -600,7 +600,15 @@ are concerned. <br/>
 That is, we do not care what output our logic circuit produces for these don’t 
 cares.
 
+#### 1. Simplify the Boolean function:
+Minimize f = m(1,5,6,12,13,14) + d(4) in SOP minimal form. K-map:
 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/c5f37c8d-9d8b-46cf-83b0-b4546b2da47a)|
+|:--:|
+|Source: https://www.javatpoint.com/dont-care-condition-in-k-map-in-digital-electronics|
+
+So, the minimized SOP form of the function is: <br/>
+f = BC' + BD' + A'C'D
 
 
 
