@@ -615,4 +615,5 @@ The tabular method, also known as the **Quine-McCluskey** method. It's used for
 simplification of the Boolean functions for a large number of variables 
 (greater than 4).
 
-
+## 5. Combinational logic circuits <a name="5"></a> [UP↑](#tof)
+page 125.
