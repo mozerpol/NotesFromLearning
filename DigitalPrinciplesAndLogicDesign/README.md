@@ -610,6 +610,9 @@ Minimize f = m(1,5,6,12,13,14) + d(4) in SOP minimal form. K-map:
 So, the minimized SOP form of the function is: <br/>
 f = BC' + BD' + A'C'D
 
-
+### The tabulation method
+The tabular method, also known as the **Quine-McCluskey** method. It's used for 
+simplification of the Boolean functions for a large number of variables 
+(greater than 4).
 
 
