@@ -7,7 +7,7 @@ __________
     1. [Fractional Conversion](#1.1)
     2. [Ones' complement](#1.2)
     3. [Two's complement](#1.3)
-    4. [BCD - Binary Coded Decimal](#1.4) 
+    4. [BCD - Binary Coded Decimal](#1.4)
 2. [Codes and their conversions](#2)
 3. [Boolean algebra and logic gates](#3)
     1. [Axioms of Boolean Algebra](#3.1)
@@ -28,11 +28,11 @@ __________
 5. [Combinational logic circuits](#5)
 
 ## 1. Data and number systems <a name="1"></a> [UP↑](#tof)
-In binary code, the number 101010 - on the left is MSB (1) and on the right is 
+In binary code, the number 101010 - on the left is MSB (1) and on the right is
 LSB (0). <br/>
 In binary code, numbers are presented using the characters 0 and 1. <br/>
 In the octal code, numbers are presented using characters from 0 to 7. <br/>
-In the hexadecimal code, numbers are presented using the characters 0 to 9 and 
+In the hexadecimal code, numbers are presented using the characters 0 to 9 and
 A to F. <br/>
 
 ### 1.1. Fractional Conversion <a name="1.1"></a> [UP↑](#tof)
@@ -42,14 +42,14 @@ The binary number given is:
 Positional weights
 3 2 1 0 -1-2-3 <br/>
 So... <br/>
-1\*2^3 + 0\*2^2 + 1\*2^1 + 0\*2^0 + 0\*2^–1 + 1\*2^–2 + 1\*2^–3 = 8 + 0 + 2 + 0 + 0 + 
+1\*2^3 + 0\*2^2 + 1\*2^1 + 0\*2^0 + 0\*2^–1 + 1\*2^–2 + 1\*2^–3 = 8 + 0 + 2 + 0 + 0 +
 0.25 + 0.125 = 10.37510
 
 ### 1.2. Ones' complement <a name="1.2"></a> [UP↑](#tof)
-**Ones' complement** - the value is obtained by inverting all the bits in the 
+**Ones' complement** - the value is obtained by inverting all the bits in the
 binary representation. <br/>
 Example: binary number: 10101110 <br/>
-In ones' complement it's 01010001. 1’s complement indicates if the number is 
+In ones' complement it's 01010001. 1’s complement indicates if the number is
 positive or negative. MSB number tells us, whether the number is negative. For
 example number 11111110 = -1.
 
@@ -62,28 +62,28 @@ example number 11111110 = -1.
 - Invert all the bits in the binary number.
 
 3. Subtraction using complement
-Subtraction is performed by **adding** two numbers, if a carry is generated, 
-remove the carry, add it to the result. This carry is called the end-around 
+Subtraction is performed by **adding** two numbers, if a carry is generated,
+remove the carry, add it to the result. This carry is called the end-around
 carry. <br/>
 For example: subtract 1001 from 1101:
 - 1001**+**1101 = 0011 and **1** carry, which need be added
 - 0011+0001 = 0100
 
 ### 1.3. Two's complement <a name="1.3"></a> [UP↑](#tof)
-**Two's complement** - (abbreviated as U2, ZU2, 2's or 2C, pl. *kod uzupełnień 
+**Two's complement** - (abbreviated as U2, ZU2, 2's or 2C, pl. *kod uzupełnień
 do dwóch*). <br/>
-It's a system of representation of integer numbers in a binary system. MSB 
-number tells us, whether the number is negative. For example `0b1000` will be 
-negative, because MSB (first number from left) is 1, otherwise `0b0111` will be 
+It's a system of representation of integer numbers in a binary system. MSB
+number tells us, whether the number is negative. For example `0b1000` will be
+negative, because MSB (first number from left) is 1, otherwise `0b0111` will be
 positive.
 
 1. How to convert U2 to dec?
 Example: number in U2: *101* - it has three numbers.
-- Take first from left (it is *1*) and raise to the power of 2. Why *2*? Because 
-we have three numbers, but in computer science we count from zero. And very 
-important thing, the first number must be multiple by *-1*, because first number 
+- Take first from left (it is *1*) and raise to the power of 2. Why *2*? Because
+we have three numbers, but in computer science we count from zero. And very
+important thing, the first number must be multiple by *-1*, because first number
 says whether the number is positive or negative,
-- raise to the power of 1 number *0* (because second number is 0) by 1. 
+- raise to the power of 1 number *0* (because second number is 0) by 1.
 - raise to the power of 0 number *1*.
 So finally, we have: -1*2^2 + 0*2^1 + 1*2^0 = -4 + 0 + 1 = -3 <br/>
 
@@ -93,7 +93,7 @@ Example: dec number 72.
 - add a sign bit at the MSB position, for 72 = 0, so 72 in 2's is equal 01001000.
 
 Another example: dec number -72.
-- Change to binary code positive number, in that case is 72 = 01001000 (need to 
+- Change to binary code positive number, in that case is 72 = 01001000 (need to
 remember about sign bit at the MSB),
 - negate the binary number by inverting the bits, so 01001000 = 10110111,
 - add number 1, so 10110111 + 00000001 = 10111000. So -72 = 10111000.
@@ -110,7 +110,7 @@ Each decimal digit from 1 to 9 is coded in 4-bit binary numbers. <br/>
 |Only characters from 0 to 9 are allowed in the BCD code.|
 
 1. How to convert dec to BCD?
-If we want to create the number 12 in BCD code, it must be divided into two 
+If we want to create the number 12 in BCD code, it must be divided into two
 parts:
 - Number 1: 00001
 - Number 2: 00010
@@ -118,7 +118,7 @@ parts:
 So number 12 in BCD looks: 00001 00010
 
 2. BCD addition
-We add like regular binary numbers, if the result is greater than 9, we add the 
+We add like regular binary numbers, if the result is greater than 9, we add the
 number 6 to this result and we get a new result, which is valid in BCD. <br/>
 
 An example: add 7 + 5 = 0111 + 0101 <br/>
@@ -135,7 +135,7 @@ An example: add 7 + 5 = 0111 + 0101 <br/>
 ----+ <br/>
 10010 <br/>
 
-So our result is 10010, but BCD is represented on 4 bits, so the final result 
+So our result is 10010, but BCD is represented on 4 bits, so the final result
 is: 0001 0010.
 
 3. BCD substraction
@@ -144,17 +144,17 @@ the minuend.
 
 ## 2. Codes and their conversions <a name="2"></a> [UP↑](#tof)
 
-In digital systems a variety of codes are used to serve different purposes, such 
-as data entry, arithmetic operation, error detection and correction, etc. 
+In digital systems a variety of codes are used to serve different purposes, such
+as data entry, arithmetic operation, error detection and correction, etc.
 Selection of a particular code depends on the requirement.
 
 Codes can be classified into five groups:
 1. Weighted Binary Codes
 a) 8421 - 8, 4, 2, and 1 are the weights of the four bits of the BCD code.
-b) 84-2-1 - yes, it's minus 2 and minus 1. Thanks to this is possible to assign 
-negative weights to decimal code. So number 0101 = 0\*8 + 1\*4 + 0\*(–2) + 
+b) 84-2-1 - yes, it's minus 2 and minus 1. Thanks to this is possible to assign
+negative weights to decimal code. So number 0101 = 0\*8 + 1\*4 + 0\*(–2) +
 1\*(–1) = 3.
-c) 2421 (different name Aiken code) - does not weight the fourth digit as 8 as 
+c) 2421 (different name Aiken code) - does not weight the fourth digit as 8 as
 with the standard BCD code but with 2.
 
 |Decimal digit| Aiken 2421 code|
@@ -170,7 +170,7 @@ with the standard BCD code but with 2.
 |8 |1110 |
 |9 |1111 |
 
-2. Nonweighted Codes - These codes are not positionally weighted. It basically 
+2. Nonweighted Codes - These codes are not positionally weighted. It basically
 means that each position of the binary number is not assigned a fixed value.
 a) Excess-3 - decimal code that has been used in some old computers. <br/>
 For every number we need to add number 3 and then change result to 4-bit binary
@@ -179,8 +179,8 @@ number, I'll explain using an example: Convert decimal 367 do excess-3: <br/>
 - Convert 6 9 10 to 4-bit binary: 0110 1001 1010
 - So 367 in excess-3 = 0110 1001 1010
 
-b) Gray Code - belongs to a class of code known as minimum change code, in which 
-a number changes by only one bit. This code is not useful for arithmetic 
+b) Gray Code - belongs to a class of code known as minimum change code, in which
+a number changes by only one bit. This code is not useful for arithmetic
 operations. <br/>
 Conversion from binary number to gray code and from gray code to binary is quite
 nice described on the page 35.
@@ -188,8 +188,8 @@ nice described on the page 35.
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/09930037-7d7e-4896-8feb-53a1e695083a)
 
 3. Error-detection Codes
-a) Parity Bit Coding Technique - A parity bit is an extra bit included with a 
-message to make the total number of 1s either odd or even, including parity bit. 
+a) Parity Bit Coding Technique - A parity bit is an extra bit included with a
+message to make the total number of 1s either odd or even, including parity bit.
 The detected error cannot be corrected, but its presence is indicated. This
 method fails for double errors.
 
@@ -199,15 +199,15 @@ method fails for double errors.
 | If number of 1s in the message is odd then parity bit is equal 0, for case when we want to emphasize odd number of 1s. |
 
 b) Check Sums
-Initially any word A 10010011 is transmitted; next another word B 01110110 is 
-transmitted. The binary digits in the two words are added and the sum obtained 
-is retained in the transmitter. Then any other word C is transmitted and added 
+Initially any word A 10010011 is transmitted; next another word B 01110110 is
+transmitted. The binary digits in the two words are added and the sum obtained
+is retained in the transmitter. Then any other word C is transmitted and added
 to the previous sum retained in the transmitter and the new sum is now retained.
-After transmitting all the words, the final sum, which is called the Check Sum, 
+After transmitting all the words, the final sum, which is called the Check Sum,
 is also transmitted.
 
 4. Error-correcting codes <br/>
-a) Hamming Code - it's not hard, just generate a simple pattern of xors and use 
+a) Hamming Code - it's not hard, just generate a simple pattern of xors and use
 it. <br/>
 b) Reed Solomon. <br/>
 It is too time consuming to explain how this two codes works, so I skipped it.
@@ -224,7 +224,7 @@ Two-valued Boolean algebra is defined on a set of only two elements, S = {0,1}.
 
 ### Axioms of Boolean Algebra
 *+* denotes the Logical OR operation <br/>
-*.* denotes the Logical AND operation <br/> 
+*.* denotes the Logical AND operation <br/>
 *!* denotes the Logical NOT operation <br/>
 
 1. 0.0 = 0
@@ -241,31 +241,31 @@ Two-valued Boolean algebra is defined on a set of only two elements, S = {0,1}.
 ### Laws of Boolean Algebra
 1. Commutative Law:
 A+B = B+A <br/>
-A.B = B.A <br/> 
+A.B = B.A <br/>
 2. Associative Law:
-(A+B)+C = A+(B+C) <br/> 
-(A.B).C = A.(B.C) <br/> 
+(A+B)+C = A+(B+C) <br/>
+(A.B).C = A.(B.C) <br/>
 3.  Distributive Law:
-A(B+C) = AB + AC <br/> 
-A + BC = (A+B). (A+C) <br/> 
+A(B+C) = AB + AC <br/>
+A + BC = (A+B). (A+C) <br/>
 4. Idempotance Law:
-A+A=A <br/> 
-A.A = A <br/> 
+A+A=A <br/>
+A.A = A <br/>
 5. Absorption Law:
-A + A.B = A <br/> 
-A.(A+B) = A <br/> 
+A + A.B = A <br/>
+A.(A+B) = A <br/>
 
 ### Basic properties and theorms of Boolean Algebra
-1. Principle of Duality - This principle states that any algebraic equality 
-derived from boolean axioms will still be valid whenever the OR and AND 
-operators, and identity elements 0 and 1, have been interchange (pol. 
+1. Principle of Duality - This principle states that any algebraic equality
+derived from boolean axioms will still be valid whenever the OR and AND
+operators, and identity elements 0 and 1, have been interchange (pol.
 *zamiennie*).
 2. DeMorgan's Theorem
 a) (x + y)' = x' y' <br/>
 b) (x y)' = x' + y' <br/>
 
 ### Other Important Theorems
-1. A + A = A 
+1. A + A = A
 2. A . A = A
 3. A + 1 = 1
 4. A . 0 = 0
@@ -282,27 +282,27 @@ explain the validity of theorems.
 
 ### Canonical and standard forms
 *Product Term* - an AND function is referred to as a sum term. <br/>
-*Sum Term* - an OR function is referred to as a sum term. For example, A + B + 
+*Sum Term* - an OR function is referred to as a sum term. For example, A + B +
 C′ is a sum term.
 
 Logic function can be expressed in the following forms:
-- Sum of the Products (SOP) - logical sum of two or more logical product terms. 
-It is basically an OR operation on AND operated variables. For example, Y = AB + 
+- Sum of the Products (SOP) - logical sum of two or more logical product terms.
+It is basically an OR operation on AND operated variables. For example, Y = AB +
 BC + AC or Y = A′B + BC + AC′.
 - Product of the Sums (POS) - logical product of two or more logical sum terms.
 It is an AND operation on OR operated variables. For example, Y = (A + B + C)(
 A + B′ + C)(A + B + C′) or Y = (A + B + C)(A′ + B′ + C′).
-- Nonstandard form - is neither a sum of products form nor a product of sums 
+- Nonstandard form - is neither a sum of products form nor a product of sums
 form like F = (AB + CD)(A′B′ + C′D′), but can be converted to a standard form
 like F = (AB + CD)(A′B′ + C′D′) = A′B′CD + ABC′D′.
 
 ### Logic gates
-Minterm - is the product of N distinct (pol. *odrębny*) literals. Each minterm 
+Minterm - is the product of N distinct (pol. *odrębny*) literals. Each minterm
 is obtained by an AND operation, for example literals are: A, B, C and the
 minterm is A*B*C=1.
 
-Maxterm - is the sum of N distinct (pol. *odrębny*) literals. Each maxterm is 
-obtained by an OR operation. The output of the maxterm functions is 0, 
+Maxterm - is the sum of N distinct (pol. *odrębny*) literals. Each maxterm is
+obtained by an OR operation. The output of the maxterm functions is 0,
 for example literals are: A, B, C and the maxterm is A+B+C=0.
 
 | Digital logic gates |
@@ -310,8 +310,8 @@ for example literals are: A, B, C and the maxterm is A+B+C=0.
 | ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/62c7f00b-e56d-4337-b763-28caf8788d68) |
 | Source: *Page 68* |
 
-NAND gates and NOR gates are called universal gates. The advantage of using the 
-universal gates for implementation of logic functions is that it reduces the 
+NAND gates and NOR gates are called universal gates. The advantage of using the
+universal gates for implementation of logic functions is that it reduces the
 number of varieties of gates.
 
 |Gates made from NOR and NAND|
@@ -320,15 +320,15 @@ number of varieties of gates.
 |Source: *https://www.quora.com/How-do-you-implement-Y-A-BC-using-only-the-NOR-gate*|
 
 ### Transforming circuits into only NAND gates
-The easiest way to transform circuit which is to change each gate into the 
-corresponding NAND gate. Firstly need to understand one thing: when two 
+The easiest way to transform circuit which is to change each gate into the
+corresponding NAND gate. Firstly need to understand one thing: when two
 inverters are cascaded, the function remains the same, picture below shows what
 I mean:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/57a07a6a-14d6-43b6-ba8c-7059cbac83d1)
 
-So remeber that two cascaded inverters don't change anything, double inversion 
-does not perform a logic function. Tranform all gates in the circuit to the 
+So remeber that two cascaded inverters don't change anything, double inversion
+does not perform a logic function. Tranform all gates in the circuit to the
 corresponding NAND gates. Example:
 
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/e7fe6c5e-497c-4511-bc19-c4336f944e41)|
@@ -350,18 +350,18 @@ The final circuit looks like:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/b4f39df5-62ec-497f-8a53-b6f97e9dbbc4)
 
-Notice that input A was changed into A' (negation of A), so one NAND was 
+Notice that input A was changed into A' (negation of A), so one NAND was
 removed.
 
-Level of gates - the maximum number of gates cascaded in series between an input 
+Level of gates - the maximum number of gates cascaded in series between an input
 and output.
 
-Wired logic - is a logic gate that use only passive components such as diodes 
-and resistors. A wired logic connection can create an AND or an OR gate. 
+Wired logic - is a logic gate that use only passive components such as diodes
+and resistors. A wired logic connection can create an AND or an OR gate.
 Limitations include the inability to create a NOT gate.
 
 Multilevel gate network - if a network is implemented using gates in more than
-two levels. The multilevel network reduces the number of literals as well as the 
+two levels. The multilevel network reduces the number of literals as well as the
 variety of gate types:
 
 | ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/a91a85cc-c106-4926-bdb1-1e0634e7aaac) |
@@ -369,17 +369,17 @@ variety of gate types:
 | On the left side is an example of two-level AND-OR network, on the right side is the same function, but realized as a multilevel gate network. |
 |Source: *page 77*|
 
-Multilevel networks use less number of literals or inputs, thus reducing the 
-number of wires for connection. The biggest disadvantage of the multilevel 
+Multilevel networks use less number of literals or inputs, thus reducing the
+number of wires for connection. The biggest disadvantage of the multilevel
 network is that it increases the propagation delay.
 
 ## 4. Simplification and minimization of boolean functions <a name="4"></a> [UP↑](#tof)
-A K-Map or Karnaugh Map is a graphical method that used for simplifying the 
-complex algebraic expressions in Boolean functions. The Karnaugh map can 
+A K-Map or Karnaugh Map is a graphical method that used for simplifying the
+complex algebraic expressions in Boolean functions. The Karnaugh map can
 minimize logical functions in two cases (below is example for three variables):
 - Sum of the Products (SOP): F = A′BC + A′BC′ + AB′C′ + AB′C. In this case k-map
 is build from ones.
-- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′). In this 
+- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′). In this
 case k-map is build from zeros.
 
 ### Two-variable karnaugh maps
@@ -429,9 +429,9 @@ For A=0 and B=0 result F is 0. Filled K-map looks like:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/9d52b66a-bcf1-41a5-8da8-b7496786d5ea)
 
-We have filled K-map, now it's time to minimalize it. We need to mark entire 
-places where there are number of ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... 
-We can start to mark only ones which occurs horizontally. Like below (first 
+We have filled K-map, now it's time to minimalize it. We need to mark entire
+places where there are number of ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ...
+We can start to mark only ones which occurs horizontally. Like below (first
 case):
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/077d6da5-872a-4161-b040-6f29c25cf57b)
@@ -443,8 +443,8 @@ Now we can mark two ones which occurs vertically:
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/1e63821c-41c5-46f6-86ce-35437ddea6c7)
 
 Based on that we see that function is F = B. For B' vertically data is 0 and 1.
-Summarizing we have two functions F = A or F = B. If these functions occurred 
-only horizontally or vertically, we would have F = A and F = B, but since one 
+Summarizing we have two functions F = A or F = B. If these functions occurred
+only horizontally or vertically, we would have F = A and F = B, but since one
 occurs horizontally and the other vertically, we have F = A and F = B.
 Summarizing... F = A or B.
 
@@ -455,7 +455,7 @@ Filled K-map for given truth table looks like below:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/0814a915-beea-43aa-abe4-6f5f0e6725d0)
 
-Now, as previously we need to mark entire places where there are number of ones 
+Now, as previously we need to mark entire places where there are number of ones
 is a power of 2, i.e.: 1, 2, 4, 8, 16, ... For our case we have a 2x2 matrix of
 ones, so:
 
@@ -472,7 +472,7 @@ K-map for given truth table:
 |:--:|
 |As I wrote before, A', B' = 0; A, B = 1|
 
-So now as previously we need to mark entire places where there are number of 
+So now as previously we need to mark entire places where there are number of
 ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... We have a two groups of ones:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/043c245f-193b-48f5-b209-010798cb85d3)
@@ -484,12 +484,12 @@ Summarizing... F = B' or A'.
 ### Three-variable karnaugh maps
 As for two-variable karnaugh map can minimize logical functions in two cases:
 - Sum of the Products (SOP): F = A′BC + A′BC′ + AB′C′ + AB′C.
-- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′) 
+- Product of the Sums (POS): Y = (A + B + C)( A + B′ + C)(A + B + C′)
 
-The logical functions for three variables can have total eight possible 
-combinations, for standard sum of product (SOP) are as follows: (A′B′C′), 
-(A′B′C), (A′BC′), (A′BC), (AB′C′), (AB′C), (ABC′), (ABC). For POS are as 
-follows: (A+B+C), (A+B+C′), (A+B′+C), (A+B′+C′), (A′+B+C), (A′+B+C′), (A′+B′+C), 
+The logical functions for three variables can have total eight possible
+combinations, for standard sum of product (SOP) are as follows: (A′B′C′),
+(A′B′C), (A′BC′), (A′BC), (AB′C′), (AB′C), (ABC′), (ABC). For POS are as
+follows: (A+B+C), (A+B+C′), (A+B′+C), (A+B′+C′), (A′+B+C), (A′+B+C′), (A′+B′+C),
 (A′+B′+C′). Below is the template:
 
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8f30d812-2d99-4097-adb1-a3852d981ddb)|
@@ -506,34 +506,34 @@ The three-variable Karnaugh Map can be constructed in other ways:
 #### 1. Find the logic circuit for the truth table:
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/acb9bf17-3041-4a23-8835-52fbad911286)
 
-To fill the K-map, the same procedure is done for two variables, with the 
+To fill the K-map, the same procedure is done for two variables, with the
 difference that instead of B there is a combination of BC:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/9d376bb8-491a-4f9f-9f15-6e47737816d5)
 
-So now as previously we need to mark entire places where there are number of 
+So now as previously we need to mark entire places where there are number of
 ones is a power of 2, i.e.: 1, 2, 4, 8, 16, ... We have a two groups of ones:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/64b9d82b-3ccb-40ce-824d-eb589dcd580e)
 
 The next step is to check for which marked fields the inputs are the same:
 1. For input A is always 1, so F = A.
-2. For input BC = 1 and BC' = 1. In this case, the output does not depend on the 
-variable C or C', because for C and C' the output is equal to 1. This is not 
+2. For input BC = 1 and BC' = 1. In this case, the output does not depend on the
+variable C or C', because for C and C' the output is equal to 1. This is not
 possible, therefore for the input BC and BC' we can only write F = B.
 
 Summarizing... F = A or B.
 
-We can write the same K-map in a different way, where we have two overlapping 
+We can write the same K-map in a different way, where we have two overlapping
 fields:
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/60f0083a-3ff9-4ba3-ac25-5c85c16710dc)
 
 As previously we need to check for which marked fields the inputs are the same:
-1. Vertically for the first square: A'B = 1 and AB = 1 . In this case, 
+1. Vertically for the first square: A'B = 1 and AB = 1 . In this case,
 the output does not depend on the variable A or A', so F = B.
-2. Vertically for the second square: AB = 1 and AB' = 1. The output does not 
+2. Vertically for the second square: AB = 1 and AB' = 1. The output does not
 depend on the variable B or B', so F = A.
-3. Horizontally for C we have 0111 in K-map, so we do not take the C input into 
+3. Horizontally for C we have 0111 in K-map, so we do not take the C input into
 account at all.
 
 Summarizing... F = A or B.
@@ -547,10 +547,10 @@ F = AB, because for A and B = 1.
 #### 3. Find the logic circuit for the K-map:
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/28ccb249-7ba8-4799-9003-0e5c12751e0b)
 
-In the above case, we can group ones that are adjacent (pol. *sąsiadujące*) to 
-each other. This can be done vertically or horizontally. As previously we need 
+In the above case, we can group ones that are adjacent (pol. *sąsiadujące*) to
+each other. This can be done vertically or horizontally. As previously we need
 to check for which marked fields the inputs are the same:
-1. Horizontally for A = 1 and A' = 1. In this case, the output does not depend 
+1. Horizontally for A = 1 and A' = 1. In this case, the output does not depend
 on the variable A or A'
 2. Vertically for B'C' = 1 and BC' = 1, so F = C, because for B = 1 and B' = 1,
 This is not possible.
@@ -564,7 +564,7 @@ To build a K-map, the easiest way is to look at the template:
 
 ![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/7f7c306e-ba62-4c5a-950f-6fa6459edbd0)
 
-For each expression separately, we can enter 1 in the table in the appropriate 
+For each expression separately, we can enter 1 in the table in the appropriate
 place:
 
 |![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/817a5544-3d96-46ec-87de-58c6cde8bf4b)|
@@ -583,21 +583,21 @@ Based on the previous informations F = A'B + AB'
 |Source: https://ittimepass.wordpress.com/2017/02/09/6explain-k-map-and-its-significance-explain-2-variables-3-variables-and-4-variables-k-map |
 
 ### Don’t-care combinations
-The "Don't care" condition says that we can use the blank cells of a K-map to 
-make a group of the variables. We mainly use the "don't care" cell to make a 
+The "Don't care" condition says that we can use the blank cells of a K-map to
+make a group of the variables. We mainly use the "don't care" cell to make a
 large group of cells. The don’t care combinations are represented by *d* or *x*
 or *Φ* in K-map. <br/>
-For example, when dealing with BCD (Binary Coded Decimal) numbers encoded as 
-four bits, we may not care about any codes above the BCD range of (0, 1, 2,..., 
-9). The 4-bit binary codes for the hexadecimal numbers (Ah, Bh, Ch, Eh, Fh) are 
+For example, when dealing with BCD (Binary Coded Decimal) numbers encoded as
+four bits, we may not care about any codes above the BCD range of (0, 1, 2,...,
+9). The 4-bit binary codes for the hexadecimal numbers (Ah, Bh, Ch, Eh, Fh) are
 not valid BCD codes. <br/>
-Thus, we do not have to fill in those codes at the end of a truth table, or 
+Thus, we do not have to fill in those codes at the end of a truth table, or
 K-map, if we do not care to. <br/>
-We would not normally care to fill in those codes because those codes (1010, 
-1011, 1100, 1101, 1110, 1111) will never exist as long as we are dealing only 
-with BCD encoded numbers. These six invalid codes are don’t cares as far as we 
+We would not normally care to fill in those codes because those codes (1010,
+1011, 1100, 1101, 1110, 1111) will never exist as long as we are dealing only
+with BCD encoded numbers. These six invalid codes are don’t cares as far as we
 are concerned. <br/>
-That is, we do not care what output our logic circuit produces for these don’t 
+That is, we do not care what output our logic circuit produces for these don’t
 cares.
 
 #### 1. Simplify the Boolean function:
@@ -611,8 +611,8 @@ So, the minimized SOP form of the function is: <br/>
 f = BC' + BD' + A'C'D
 
 ### The tabulation method
-The tabular method, also known as the **Quine-McCluskey** method. It's used for 
-simplification of the Boolean functions for a large number of variables 
+The tabular method, also known as the **Quine-McCluskey** method. It's used for
+simplification of the Boolean functions for a large number of variables
 (greater than 4).
 
 ## 5. Combinational logic circuits <a name="5"></a> [UP↑](#tof)
