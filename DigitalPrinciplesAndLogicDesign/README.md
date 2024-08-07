@@ -616,4 +616,21 @@ simplification of the Boolean functions for a large number of variables
 (greater than 4).
 
 ## 5. Combinational logic circuits <a name="5"></a> [UP↑](#tof)
-page 125.
+Combinational circuit can be designed by the following steps:
+1. The problem is stated.
+2. Identify the input variables and output functions.
+3. The input and output variables are assigned letter symbols (input A, B, ...).
+4. The truth table is prepared that completely defines the relationship between 
+the input variables and output functions.
+5. The simplified Boolean expression is obtained by any method of minimization
+algebraic method.
+6. A logic diagram is realized from the simplified expression using logic gates.
+
+A practical design approach should also consider constraints. Most common 
+constraints:
+1. Maximum number of gates.
+2. Maximum number of outputs.
+3. Maximum propagation time of the signal through a circuit.
+4. Maximum number of interconnections.
+5. Limitations of the driving capabilities of each logic gate. 
+
