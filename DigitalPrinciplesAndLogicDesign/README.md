@@ -693,3 +693,21 @@ the input variables and output functions: <br/>
 |:--:|
 |Source: page 131|
 
+5. The simplified Boolean expression is obtained by any method of minimization
+algebraic method: <br/>
+The simplified Boolean expressions of the outputs are <br/>
+S = X'Y'Z + X'YZ' + XY'Z' + XYZ <br/> 
+and <br/>
+C = X'Z + X'Y + YZ
+
+|![image](https://github.com/user-attachments/assets/81dcc880-260c-4e05-af51-6639b655c98b)|
+|:--:|
+|Source: page 131|
+
+6. A logic diagram is realized from the simplified expression using logic 
+gates: <br/>
+
+|![image](https://github.com/user-attachments/assets/6c3fa80a-ffeb-4bf1-8e3e-4e86b89da867)|
+|:--:|
+|Source: page 132|
+
