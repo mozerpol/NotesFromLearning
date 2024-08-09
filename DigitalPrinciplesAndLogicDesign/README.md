@@ -639,3 +639,19 @@ A combinational circuit that performs the addition of two bits without *carry*
 is called a **half-adder**. With *carry* output is **full-adder**. Remember
 that the full-adder circuit can be formed with two half-adders and one OR gate.
 
+#### Example of designing a full adder
+1. The problem is stated: <br/>
+Design a full adder.
+2. Identify the input variables and output functions: <br/>
+The input data variables as A and B, and previous carry as X. <br/>
+Outputs sum as S and carry as C. 
+3. The input and output variables are assigned letter symbols (input A, 
+B, ...): <br/>
+
+4. The truth table is prepared that completely defines the relationship between 
+the input variables and output functions: <br/>
+
+|![image](https://github.com/user-attachments/assets/ec8f866a-86ec-4e8f-8183-6ff47bc104ba)|
+|:--:|
+|Source: page 128|
+
