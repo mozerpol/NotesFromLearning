@@ -655,3 +655,26 @@ the input variables and output functions: <br/>
 |:--:|
 |Source: page 128|
 
+5. The simplified Boolean expression is obtained by any method of minimization
+algebraic method: <br/>
+The Karnaugh map from the truth table:
+
+|![image](https://github.com/user-attachments/assets/8d466547-ed0b-4819-b838-d6e9c628b69b)|
+|:--:|
+|Source: 128|
+
+The simplified Boolean expressions of the outputs are: <br/>
+S = X'A'B + X'AB' + XA'B' + XAB <br/> 
+and <br/>
+C = AB + BX + AX
+
+6. A logic diagram is realized from the simplified expression using logic 
+gates: <br/>
+
+|![image](https://github.com/user-attachments/assets/71f371c6-5162-4e5b-8a14-8099dde60943)
+|:--:|
+|Source: page 129|
+
+Other configurations can also be developed where number and type of gates are 
+reduced.
+
