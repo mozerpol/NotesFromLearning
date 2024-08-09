@@ -634,3 +634,8 @@ constraints:
 4. Maximum number of interconnections.
 5. Limitations of the driving capabilities of each logic gate. 
 
+### 5.1. Adders <a name="5.1"></a> [UP↑](#tof)
+A combinational circuit that performs the addition of two bits without *carry* 
+is called a **half-adder**. With *carry* output is **full-adder**. Remember
+that the full-adder circuit can be formed with two half-adders and one OR gate.
+
