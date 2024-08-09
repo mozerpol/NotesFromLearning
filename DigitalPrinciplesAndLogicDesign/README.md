@@ -678,3 +678,18 @@ gates: <br/>
 Other configurations can also be developed where number and type of gates are 
 reduced.
 
+### 5.2. Substractors <a name="5.2"></a> [UP↑](#tof)
+1. The problem is stated: <br/>
+Design a full-subtractor.
+2. Identify the input variables and output functions: <br/>
+The input variables be designated as X and Y and previous borrow as Z, output 
+functions difference as D and borrow as B.
+3. The input and output variables are assigned letter symbols (input A, 
+B, ...): <br/>
+4. The truth table is prepared that completely defines the relationship between 
+the input variables and output functions: <br/>
+
+|![image](https://github.com/user-attachments/assets/6e731466-4918-412f-8c45-9d70d95f72f8)|
+|:--:|
+|Source: page 131|
+
