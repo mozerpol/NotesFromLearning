@@ -716,3 +716,19 @@ It is sometimes necessary to interface two digital blocks of different coding
 systems. A conversion circuit must be inserted between two such digital systems 
 to use information of one digital system to other. 
 
+#### 5.3.1. Binary to Gray <a name="5.3.1"></a> [UP↑](#tof)
+
+1. The problem is stated: <br/>
+Translate 4-bit binary code to gray code.
+2. Identify the input variables and output functions: <br/>
+he four bits of binary numbers are designated as A, B, C, and D, and gray code 
+bits are designated as W, X, Y, and Z.
+3. The input and output variables are assigned letter symbols (input A, 
+B, ...): <br/>
+4. The truth table is prepared that completely defines the relationship between 
+the input variables and output functions: <br/>
+
+|![image](https://github.com/user-attachments/assets/cf2ac72b-0f1d-479a-8cf2-c6d6046fbab3)|
+|:--:|
+|Source: page 133|
+
