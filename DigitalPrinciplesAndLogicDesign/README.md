@@ -752,3 +752,21 @@ gates: <br/>
 |:--:|
 |Source: page 134|
 
+#### Others
+The chapter additionally describes:
+- Gray-to-binary Converter,
+- BCD-to-excess-3 Code Converter,
+- Excess-3-to-BCD Code Converter,
+- Parity Generator,
+- Parity Checker,
+- Some examples of combinational logic circuits, like: "Find the squares 
+of 3-bit numbers", the truth table for it:
+
+|![image](https://github.com/user-attachments/assets/5f12fc90-54c6-4ae6-a096-baf4d95fe38a)|
+|:--:|
+|Source: page 143|
+
+- "Find the cubes of 3-bit numbers",
+- "Design a combinational circuit for converting 2421 code to BCD code",
+- "Design a combinational circuit for a BCD-to-seven-segment decoder",
+
