@@ -711,3 +711,8 @@ gates: <br/>
 |:--:|
 |Source: page 132|
 
+### 5.3. Code conversion <a name="5.3"></a> [UP↑](#tof)
+It is sometimes necessary to interface two digital blocks of different coding 
+systems. A conversion circuit must be inserted between two such digital systems 
+to use information of one digital system to other. 
+
