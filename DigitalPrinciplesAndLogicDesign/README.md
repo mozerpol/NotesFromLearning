@@ -732,3 +732,23 @@ the input variables and output functions: <br/>
 |:--:|
 |Source: page 133|
 
+5. The simplified Boolean expression is obtained by any method of minimization
+algebraic method: <br/>
+
+|![image](https://github.com/user-attachments/assets/8bd0898e-c1e2-49af-ac81-9874aac54e67)|
+|:--:|
+|Source: page 134|
+
+The Boolean expressions: <br/>
+W = A <br/> 
+X = A'B + AB' = A⊕B <br/>
+Y = BC′ + B′C = B⊕C <br/>
+Z = C′D + CD′= C⊕D
+
+6. A logic diagram is realized from the simplified expression using logic 
+gates: <br/>
+
+|![image](https://github.com/user-attachments/assets/ae89fb7f-2583-4c78-8fde-0efd0d47aaf6)|
+|:--:|
+|Source: page 134|
+
