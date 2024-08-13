@@ -770,3 +770,23 @@ of 3-bit numbers", the truth table for it:
 - "Design a combinational circuit for converting 2421 code to BCD code",
 - "Design a combinational circuit for a BCD-to-seven-segment decoder",
 
+### 5.4. Combinational logic with MSI and LSI <a name="5.4"></a> [UP↑](#tof)
+SSI (small scale integration) where the number of logic gates is limited to ten 
+in one IC package, MSI (medium scale integration) where the number of logic 
+gates is eleven to one hundred in one IC package, and LSI (large-scale 
+integration) containing more than one hundred gates in one package.
+
+#### 5.4.1. Four-bit binary adder
+When we want to add two bits, this operation happens "immediately". However, 
+when we want to add four bits, this operation takes a longer time. Why? First we 
+need to add the first two bits, and then we can add the next two bits with the 
+carry bit (if there is one). For this reason, when adding further bits, we have 
+to wait until the previous bits are finished adding, because we may need to 
+include the carry bit. Described kind of adder is shown below. To add all bits 
+at once, we can use the Carry-lookahead adder.
+
+|![image](https://github.com/user-attachments/assets/7acc79ee-c073-4dcd-b04f-5911443fa0ce)|
+|:--:|
+|*Parallel Adder*|
+|Source: page 157|
+
