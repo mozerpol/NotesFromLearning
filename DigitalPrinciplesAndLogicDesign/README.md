@@ -790,3 +790,17 @@ at once, we can use the Carry-lookahead adder.
 |*Parallel Adder*|
 |Source: page 157|
 
+#### Others
+The chapter additionally describes:
+- Four-bit Binary Parallel Subtractor,
+- Four-bit Binary Parallel Adder/Subtractor,
+- Fast Adder,
+- Look-ahead Carry Generator,
+- Decimal Adder,
+- BCD Adder,
+- Parallel Multiplier,
+- Magnitude comparator.
+
+A very interesting observation is that each of these circuits uses a four-bit 
+binaryfull-adder.
+
