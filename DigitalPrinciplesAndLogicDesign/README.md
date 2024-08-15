@@ -804,3 +804,23 @@ The chapter additionally describes:
 A very interesting observation is that each of these circuits uses a four-bit 
 binaryfull-adder.
 
+### 5.5. Decoders <a name="5.5"></a> [UP↑](#tof)
+While designing decoders is not necessary to obtain the minimized expression 
+through simplifying procedures like a Karnaugh map or any other procedure.
+If we want to design for example decoder 3-to-8, we need to write a truth table. 
+For each input state, an output state is assigned, as shown in the example 
+below:
+
+|![image](https://github.com/user-attachments/assets/829b7337-c4b3-4dc1-b5e0-68291c430577)|
+|:--:|
+|Source: page 169|
+
+As shown above in the table, for inputs(ABC) 001, output 01000000 is assigned, 
+etc. So the easiest way to create a circuit is to look sequentialy at the input 
+states and their corresponding output then change it to circuit. Below is 
+circuit for above table:
+
+|![image](https://github.com/user-attachments/assets/e73b8fe9-fac5-40a7-a857-01d013dfacf2)|
+|:--:|
+|Source: page 169|
+
