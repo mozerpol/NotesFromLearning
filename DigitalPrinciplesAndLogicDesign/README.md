@@ -824,3 +824,23 @@ circuit for above table:
 |:--:|
 |Source: page 169|
 
+#### Some Applications of Decoders
+Further in the chapter various applications that rely on the use of decoders are 
+described. Some examples:
+- Implement the function F (A,B,C) = Σ (1,3,5,6), solution:
+
+|![image](https://github.com/user-attachments/assets/71c4bd7c-1d03-463b-ad01-c71f7890f748)|
+|:--:|
+|Source: page 170|
+
+- Design a full adder circuit with decoder, solution:
+
+|![image](https://github.com/user-attachments/assets/e38953cc-3719-4d23-b702-951ceef7a6bc)|
+|:--:|
+|Source: page 170|
+
+- Design a full substractor circuit with decoder.
+- Design a BCD-to-decimal decoder with the use of a decoder.
+- Construct a 3-to-8 line decoder with the use of a 2-to-4 line decoder.
+- Construct a 4-to-16 line decoder using a 3-to-8 line decoder.
+
