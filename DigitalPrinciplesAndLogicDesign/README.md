@@ -844,3 +844,15 @@ described. Some examples:
 - Construct a 3-to-8 line decoder with the use of a 2-to-4 line decoder.
 - Construct a 4-to-16 line decoder using a 3-to-8 line decoder.
 
+### 5.6. Enecoders <a name="5.6"></a> [UP↑](#tof)
+An encoder is a combinational network that performs the reverse operation of the 
+decoder.
+### 5.7. Multiplexers and data selectors <a name="5.7"></a> [UP↑](#tof)
+A digital multiplexer is a combinational circuit that selects binary information 
+from one of the many input channels and transmits to a single output line. That 
+is why the multiplxers are also called data selectors. <br/>
+Signal routing and data communication are the important applications of a 
+multiplexer. 
+
+Any logical function can be implemented using multiplexers. 
+
