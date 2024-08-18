@@ -887,4 +887,28 @@ of them.
 |Whe have 8 minterms, because of that all are represented by input lines I0-I3|
 |Source: page 182|
 
+3. Discover the AND then between the rows:
+
+|![image](https://github.com/user-attachments/assets/5cba4cba-c267-48f8-b6a1-437fbcde77b5)|
+|:--:|
+|Source: page 182|
+
+Rules for proper circling of numbers:
+- If the two elements or minterms of a column are not circled, write 0 under 
+that column.
+- If both the two elements or minterms of a column are circled, write 1 under 
+that column.
+- If the upper element or minterm of a column is circled but not the bottom, 
+write A′ under that column.
+- If the lower element or minterm of a column is circled but not the upper one, 
+write A under that column.
+
+4. 
+The lower most row now indicates input behavior of the corresponding input lines 
+of the multiplexer as marked at the top of the column.
+
+|![image](https://github.com/user-attachments/assets/74cd3284-4f3e-4c7e-99c2-8269d58d86e6)|
+|:--:|
+|Page: 181|
+
 
