@@ -911,4 +911,8 @@ of the multiplexer as marked at the top of the column.
 |:--:|
 |Page: 181|
 
+### 5.8. Demultiplexers and data distributors <a name="5.8"></a> [UP↑](#tof)
+The term “demultiplex” means one into many. Demultiplexing is the process that receives
+information from one channel and distributes the data over several channels.
 
+DAC TA TABLEKE Z 188 I SCALAK Z FIGURE 5.95
