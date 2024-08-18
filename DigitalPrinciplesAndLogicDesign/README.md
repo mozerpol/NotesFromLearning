@@ -855,4 +855,18 @@ Signal routing and data communication are the important applications of a
 multiplexer. 
 
 Any logical function can be implemented using multiplexers. 
+#### Example
+Implement the 3-variable function F(A,B,C) = (0,2,4,7) with a multiplexer. <br/>
+
+- 0 - corresponds to the m0 on k-map,
+- 2 - corresponds to the m2 on k-map,
+- 4 - --||--,
+- 7 - --||--.
+ 
+|![image](https://github.com/mozerpol/NotesFromLearning/assets/43972902/8f30d812-2d99-4097-adb1-a3852d981ddb)|
+|:--:|
+|The minterms = SOP function; the maxterms = POS function|
+|Source: https://www.tutorialspoint.com/3-variable-k-map-in-digital-electronics|
+    
+F(A,B,C) = (0,2,4,7) = a'b'c' + a'bc' + ab'c' + abc
 
