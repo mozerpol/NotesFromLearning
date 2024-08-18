@@ -870,3 +870,21 @@ Implement the 3-variable function F(A,B,C) = (0,2,4,7) with a multiplexer. <br/>
     
 F(A,B,C) = (0,2,4,7) = a'b'c' + a'bc' + ab'c' + abc
 
+1. Create the truth table based on function:
+
+|![image](https://github.com/user-attachments/assets/3a071811-294d-4974-94c5-d2463819cacd)|
+|:--:|
+|Where: A - data input ; S0 - select input; S1 - select input; OUT - function output <br/> A, S0, S1 correspond to the variables A, B, C of the function.|
+|Source: page 181|
+
+Why S0 and S1 are B and C? Because we have 8 minterms, we have to access to all
+of them.
+
+2. Create the table with the dependencies between the multiplexer inputs:
+
+|![image](https://github.com/user-attachments/assets/1bbd2708-52b1-4c20-8d36-b750ed189bb5)|
+|:--:|
+|Whe have 8 minterms, because of that all are represented by input lines I0-I3|
+|Source: page 182|
+
+
