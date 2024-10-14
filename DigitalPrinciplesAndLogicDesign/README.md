@@ -915,4 +915,10 @@ of the multiplexer as marked at the top of the column.
 The term “demultiplex” means one into many. Demultiplexing is the process that receives
 information from one channel and distributes the data over several channels.
 
-DAC TA TABLEKE Z 188 I SCALAK Z FIGURE 5.95
+TODO: DAC TA TABLEKE Z 188 I SCALAK Z FIGURE 5.95
+
+## 6. Programmable logic devices <a name="6"></a> [UP↑](#tof)
+
+
+
+TODO: Dac obrazek z tabelka "Device typeAND arrayOR array" z strony 194.
