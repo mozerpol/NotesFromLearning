@@ -1,0 +1,27 @@
+# do /home/mozerpol/.local/lib/python3.11/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/mozerpol/Downloads/Vunit/UART/vunit_out/modelsim/modelsim.ini -wlf /home/mozerpol/Downloads/Vunit/UART/vunit_out/test_output/tb_lib.tb_example.test_case_name_cbfb0d99bd475a4d6183cd1be40b23deda010ff7/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_lib.tb_example(tb) -coverage -L vunit_lib -L osvvm -L tb_lib -g/tb_example/runner_cfg="active python runner : true,enabled_test_cases : test_case_name,output path : /home/mozerpol/Downloads/Vunit/UART/vunit_out/test_output/tb_lib.tb_example.test_case_name_cbfb0d99bd475a4d6183cd1be40b23deda010ff7/,tb path : /home/mozerpol/Downloads/Vunit/UART/,use_color : true" 
+# Start time: 09:31:52 on Feb 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/mozerpol/.local/lib/python3.11/site-packages/vunit/vhdl/string_ops/src/string_ops.vhd(488): (vopt-1083) Implicit array operator "=" always returns FALSE (left length 1 is not equal to right length 0).
+# ** Warning: /home/mozerpol/.local/lib/python3.11/site-packages/vunit/vhdl/string_ops/src/string_ops.vhd(565): (vopt-1083) Implicit array operator "=" always returns FALSE (left length 1 is not equal to right length 0).
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# ** Fatal: (vsim-3350) Generic "C_BAUD_TB" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_example File: /home/mozerpol/Downloads/Vunit/UART/test.vhdl Line: 11
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 09:31:54 on Feb 14,2025, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 2

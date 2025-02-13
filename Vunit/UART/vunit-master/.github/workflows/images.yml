@@ -1,0 +1,79 @@
+name: 'Container images'
+
+on:
+  push:
+    paths:
+      - '.github/workflows/images.yml'
+      - '.github/images.sh'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 5'
+
+env:
+  DOCKER_BUILDKIT: '1'
+
+jobs:
+
+
+  GHDL:
+    strategy:
+      fail-fast: false
+      matrix:
+        task: [
+          { tag: llvm,  pkg: llvm-9 },
+          { tag: mcode, pkg: mcode  },
+        ]
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 🧰 Checkout
+      uses: actions/checkout@v4
+
+    - name: '🛳️ Build container image'
+      run: >-
+        TAG=${{ matrix.task.tag }}
+        PKG=${{ matrix.task.pkg }}
+        ./.github/images.sh
+
+    - name: '🛰️ Push container image to registry'
+      if: github.event_name != 'pull_request' && github.repository == 'VUnit/vunit'
+      uses: pyTooling/Actions/with-post-step@r0
+      with:
+        main: |
+          echo '${{ github.token }}' | docker login ghcr.io -u gha --password-stdin
+          DIMG="vunit/dev/${{ matrix.task.tag }}"
+          docker tag "$DIMG" "ghcr.io/$DIMG"
+          docker push "ghcr.io/$DIMG"
+        post: for registry in gcr.io ghcr.io docker.io; do docker logout "$registry"; done
+
+
+  NVC:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 🧰 Checkout
+      uses: actions/checkout@v4
+
+    - name: '🛳️ Build container image'
+      run: |
+        docker build -t ghcr.io/vunit/dev/nvc -<<EOF
+        FROM hdlc/nvc
+
+        RUN apt-get update -qq \
+         && DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends \
+           python3-pip \
+         && apt-get autoclean && apt-get clean && apt-get -y autoremove \
+         && update-ca-certificates \
+         && rm -rf /var/lib/apt/lists/*
+
+        RUN pip install -U tox colorama coverage --progress-bar off
+        EOF
+
+    - name: '🛰️ Push container image to registry'
+      if: github.event_name != 'pull_request' && github.repository == 'VUnit/vunit'
+      uses: pyTooling/Actions/with-post-step@r0
+      with:
+        main: |
+          echo '${{ github.token }}' | docker login ghcr.io -u gha --password-stdin
+          docker push ghcr.io/vunit/dev/nvc
+        post: for registry in gcr.io ghcr.io docker.io; do docker logout "$registry"; done
