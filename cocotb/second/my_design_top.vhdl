@@ -1,10 +1,9 @@
 library ieee;
    use ieee.std_logic_1164.all;
-   use ieee.std_logic_unsigned.all;
-   use ieee.numeric_std.all;
 library work;
    use work.all;
    use work.my_design_pkg.all;
+
 
 entity my_design is
    generic (
@@ -18,13 +17,18 @@ entity my_design is
    );
 end entity my_design;
 
+
 architecture rtl of my_design is
+
 
    signal internal_signal : std_logic;
 
+
 begin
 
+
    internal_signal <= '1' when i_data = "0100" else '0';
+
 
    process (i_clk) is
    begin
@@ -38,5 +42,6 @@ begin
          end case;
       end if;
    end process;
+
 
 end architecture rtl;

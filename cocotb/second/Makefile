@@ -13,8 +13,8 @@ GUI = 1
 
 # A list of the VHDL source files to include, for verilog change to
 # VERILOG_SOURCES. Remember the files order!
-VHDL_SOURCES += $(PWD)/my_design_pkg.vhd
-VHDL_SOURCES += $(PWD)/my_design_top.vhd
+VHDL_SOURCES += $(PWD)/my_design_pkg.vhdl
+VHDL_SOURCES += $(PWD)/my_design_top.vhdl
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
 TOPLEVEL = my_design
