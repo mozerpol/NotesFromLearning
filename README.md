@@ -56,32 +56,73 @@ _____
 
 Below I'll put some intresting links, which I decided to remember.
 
-1. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021 - page in my
-mother language, a lot of informations at high school level about IT.
-2. https://teoriaelektryki.pl/ - date of access: 15.10.2021 - page in my
-mother language, info about the basics of physics in the field of electricity.
-3. https://www.cise.ufl.edu/~mssz/CompOrg/Top-Level.html - date of access:
-15.10.2021 - in the middle of the page we have part *Course Material*, inside
-each link we have a lot of info about conmputer architecture.
-4. https://rafal-bartoszak.blogspot.com/p/poradniki-vhdl.html - date of access:
-15.10.2021 - page in my mother language, mainly I care about two articles about
-building own CPU.
-5. https://www.youtube.com/c/SemihalfPL/videos - date of access: 15.10.2021 -
-youtube channel which have some podcasts about computer architecture and
-everything what is related to it. It's in my mother language.
-6. https://vhdlwhiz.com/terminology/ - date of access: 15.10.2021 - glossary
-about FPGA and its languages.
-7. https://www.nandland.com/ - date of access: 17.10.2021 - many intresting
-articles about FPGA and Verilog.
-8. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021 - a 
-small circuit design exercises for practicing Verilog.
-9. https://www.asic-world.com/verilog/index.html - date of access: 23.10.2021 -
-Verilog tutorial.
-10. https://www.youtube.com/c/FPGAsforBeginners/videos - date of access:
-23.10.2021 - nice channel on yt about FPGA and Verilog, good to practice eng.
-11. https://www.chipverify.com/verilog/verilog-tutorial - date of access:
-23.10.2021 - about Verilog.
-12. https://www.fpga4fun.com/ - date of access: 23.10.2021 - nice tutorials
-about FPGA and some easy projects such as I2C, UART or PCI.
-13. https://projectf.io/sitemap/ - date of access: 23.10.2021 - about FPGA,
-Verilog. nice projects about FPGA graphics, math in FPGA, etc.
+**RISC-V**:
+1. https://github.com/YosysHQ/picorv32/tree/main/dhrystone - date of access: 16.02.2025
+
+**Computer architecture**:
+1. https://www.youtube.com/watch?v=kgiZlSOcGFM - date of access: 16.02.2025
+2. https://www.youtube.com/playlist?list=PL5Q2soXY2Zi8J58xLKBNFQFHRO3GrXxA9&cbrd=1&ucbcb=1
+- date of access: 16.02.2025
+3. https://electronics.stackexchange.com/questions/255801/should-every-fpga-design-include-a-reset-signal
+- date of access: 16.02.2025
+4. https://vhdlwhiz.com/why-latches-are-bad/ - date of access: 16.02.2025
+5. https://lwn.net/Articles/250967/ - date of access: 16.02.2025
+6. https://www.cise.ufl.edu/~mssz/CompOrg/Top-Level.html
+7. https://www.youtube.com/c/SemihalfPL/videos - date of access: 15.10.2021
+
+**FPGA**:
+1. https://www.tek.com/en/documents/application-note/anatomy-eye-diagram
+- date of access: 16.02.2025
+2. https://www.vhdl-online.de/courses/system_design/vhdl_-_overview_and_application_field/start
+- date of access: 16.02.2025
+3. https://www.fpga4fun.com/
+- date of access: 16.02.2025
+4. https://vhdlwhiz.com/product/course-vhdl-synthesis-from-code-to-hardware/
+- date of access: 16.02.2025
+5. https://www.synopsys.com/glossary/what-is-static-timing-analysis.html
+- date of access: 16.02.2025
+6. https://www.vlsi-expert.com/2011/03/static-timing-analysis-sta-basic-timing.html
+- date of access: 16.02.2025
+7. https://www.youtube.com/watch?v=Hpdz-pE42es - date of access: 16.02.2025
+8. https://github.com/VLSI-EDA/PoC - date of access: 16.02.2025
+9. https://tsfpga.com/index.html - date of access: 16.02.2025
+10. https://www.ni.com/docs/en-US/bundle/labview-fpga-module/page/understanding-timing-considerations-for-fpga-vis-fpga-module.html
+- date of access: 16.02.2025
+11. https://rafal-bartoszak.blogspot.com/p/poradniki-vhdl.html - date of access:
+15.10.2021
+12. https://vhdlwhiz.com/terminology/ - date of access: 15.10.2021
+13. https://www.nandland.com/ - date of access: 17.10.2021
+14. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021
+15. https://www.asic-world.com/verilog/index.html - date of access: 23.10.2021
+16. https://www.youtube.com/c/FPGAsforBeginners/videos - date of access:
+23.10.2021
+17. https://www.chipverify.com/verilog/verilog-tutorial - date of access:
+23.10.2021
+18. https://www.fpga4fun.com/ - date of access: 23.10.2021
+19. https://projectf.io/sitemap/ - date of access: 23.10.2021
+
+**Arm**:
+1. https://github.com/davisjp1822/stm32_nucleo_linux - date of access: 16.02.2025
+2. https://pl.wikipedia.org/wiki/CMake - date of access: 16.02.2025
+
+**Electronics**:
+1. https://teoriaelektryki.pl/ - date of access: 15.10.2021
+2. https://sys.academy.lv/labwork/boolean-algebra-tutorial/boolean-algebra.htm
+- date of access: 16.02.2025
+3. https://madformath.com/calculators/digital-systems/boolean-functions/function-to-logic-circuit-converter
+- date of access: 16.02.2025
+4. https://madformath.com/calculators/digital-systems/boolean-functions/function-to-truth-table-converter
+- date of access: 16.02.2025
+5. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021
+
+**Others**:
+1. https://haloursynow.pl/pl/545_historia/21475_kuznia-inzynierow-i-lotnikow-ursynowska-modelarnia-dziala-od-45-lat.html
+- date of access: 16.02.2025
+2. https://bemowskie.pl/aeromodelklub/ - date of access: 16.02.2025
+3. https://www.hackster.io/ - date of access: 16.02.2025
+4. https://www.youtube.com/watch?v=RwEZXEU0wRg&list=PL4cCrC9uMl4g3sNrzdQLJ8Jmf7fVZJcCR&index=1
+- date of access: 16.02.2025
+5. https://www.youtube.com/watch?v=HIYETvcRGbk&list=PLy0QKiTjlsBL1wNuXVOaDIOgvJ1Iu5q4_&index=1
+- date of access: 16.02.2025
+6. https://old.reddit.com/r/PrintedCircuitBoard/wiki/books#wiki_digital_design
+- date of access: 16.02.2025
