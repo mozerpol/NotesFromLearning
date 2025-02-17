@@ -52,6 +52,7 @@ in my mother language.
 
 7. Notes from *Microsemi* (in the past *Microchip*) page. I described some about
 *RTG4*, *SmartFusion* and *RTAX* devices.
+
 _____
 
 Below I'll put some intresting links, which I decided to remember.
@@ -67,7 +68,9 @@ Below I'll put some intresting links, which I decided to remember.
 - date of access: 16.02.2025
 4. https://vhdlwhiz.com/why-latches-are-bad/ - date of access: 16.02.2025
 5. https://lwn.net/Articles/250967/ - date of access: 16.02.2025
-6. https://www.cise.ufl.edu/~mssz/CompOrg/Top-Level.html
+6. https://www.cise.ufl.edu/~mssz/CompOrg/Top-Level.html - date of access:
+15.10.2021 - in the middle of the page there is *Course Material*, inside
+each link we have a lot of info about conmputer architecture.
 7. https://www.youtube.com/c/SemihalfPL/videos - date of access: 15.10.2021
 
 **FPGA**:
@@ -89,31 +92,48 @@ Below I'll put some intresting links, which I decided to remember.
 10. https://www.ni.com/docs/en-US/bundle/labview-fpga-module/page/understanding-timing-considerations-for-fpga-vis-fpga-module.html
 - date of access: 16.02.2025
 11. https://rafal-bartoszak.blogspot.com/p/poradniki-vhdl.html - date of access:
-15.10.2021
+15.10.2021 - mainly I care about two articles about
+building own CPU.
 12. https://vhdlwhiz.com/terminology/ - date of access: 15.10.2021
 13. https://www.nandland.com/ - date of access: 17.10.2021
-14. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021
+14. https://hdlbits.01xz.net/wiki/Problem_sets - date of access: 17.10.2021 - a 
+small circuit design exercises for practicing Verilog.
 15. https://www.asic-world.com/verilog/index.html - date of access: 23.10.2021
 16. https://www.youtube.com/c/FPGAsforBeginners/videos - date of access:
 23.10.2021
 17. https://www.chipverify.com/verilog/verilog-tutorial - date of access:
 23.10.2021
 18. https://www.fpga4fun.com/ - date of access: 23.10.2021
-19. https://projectf.io/sitemap/ - date of access: 23.10.2021
+19. https://projectf.io/sitemap/ - date of access: 23.10.2021 - about FPGA and
+Verilog. Graphics in FPGA, math, etc.
+20. https://www.beyond-circuits.com/wordpress/tutorial/ - date of access:
+17.02.2005
 
 **Arm**:
 1. https://github.com/davisjp1822/stm32_nucleo_linux - date of access: 16.02.2025
 2. https://pl.wikipedia.org/wiki/CMake - date of access: 16.02.2025
+3. https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/
+4. http://www.efton.sk/STM32/ - date of access: 17.02.2005
+5. https://www.udemy.com/course/embedded-systems-bare-metal-programming/ -
+date of access: 17.02.2005
+6. https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM -
+date of access: 17.02.2005
+7. https://www.youtube.com/playlist?list=PLP29wDx6QmW7HaCrRydOnxcy8QmW0SNdQ -
+date of access: 17.02.2005
+
+**Z80**
+1. http://www.breakintoprogram.co.uk/?s=Homebrew+Z80+Computer+%28Part+%29 - 
+date of access: 17.02.2005
 
 **Electronics**:
 1. https://teoriaelektryki.pl/ - date of access: 15.10.2021
 2. https://sys.academy.lv/labwork/boolean-algebra-tutorial/boolean-algebra.htm
-- date of access: 16.02.2025
 3. https://madformath.com/calculators/digital-systems/boolean-functions/function-to-logic-circuit-converter
 - date of access: 16.02.2025
 4. https://madformath.com/calculators/digital-systems/boolean-functions/function-to-truth-table-converter
 - date of access: 16.02.2025
-5. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021
+5. https://eduinf.waw.pl/mapa.php - date of access: 15.10.2021 - a lot of
+informations at high school level about IT.
 
 **Others**:
 1. https://haloursynow.pl/pl/545_historia/21475_kuznia-inzynierow-i-lotnikow-ursynowska-modelarnia-dziala-od-45-lat.html
