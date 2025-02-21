@@ -32,4 +32,27 @@ Script how to install all packages and verify them is in repo
 /dotfiles/system_setup/stm32
 [here](https://github.com/mozerpol/dotfiles/tree/master/system_setup/STM32).
 
+## 2. Directory tree
+```
+|___README.md (this file)
+|___Makefile
+|___linker_script.ld
+|___Build/
+|   |___Obj/
+|   |___Bin/
+|___Src/
+|   |___C files
+```
+
+C files are in Src/ <br/>
+Object files are in Build/Obj <br/>
+Binary files and executable are in Build/Bin <br/>
+Makefile is in main dir <br/>
+Linker script (*.ld) is in main dir
+
+## 3. Usage
+`make` - Compile and link. <br/>
+`make clean` - Remove files from Build/Obj and Build/Bin. <br/>
+`make flash` - Load firmware to the mcu.
+
 
