@@ -132,4 +132,64 @@ Command: `openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program $(T
 | reset | Reset the target MCU after programming. This is done to start executing the newly programmed code immediately. |
 | exit | Close OpenOCD. |
 
+## 5. Linker script
 
+#### 5.1. MEMORY section
+This section defines the memory regions available for the program.
+```
+MEMORY
+{
+  FLASH (rx)      : ORIGIN = 0x08000000, LENGTH = 512K
+  RAM (xrw)       : ORIGIN = 0x20000000, LENGTH = 128K
+}
+```
+- FLASH: This memory region is defined as read and executable (rx). It starts at
+address 0x8000000 and has a length of 512K. This is where the program code and
+read-only data (like constants) will be stored.
+- RAM: This memory region is defined as read, write, and executable (xrw). It
+starts at address 0x20000000 and has a length of 128K. This is where the
+program's variables and stack will reside.
+
+#### 5.2. ENTRY Directive
+```
+ENTRY(Reset_Handler)
+```
+
+This directive specifies the entry point of the program, which is the
+`Reset_Handler`. This is the function that will be executed first when the
+microcontroller is reset. In this example project (look at Src/main.c) reset
+handler is not used.
+
+#### 5.3. SECTIONS Section
+This section defines how different parts of the program (sections) are placed in
+the defined memory regions.
+
+1. .text - this section contains the executable code.
+- `KEEP(*(.isr_vector)):` - ensures that the interrupt vector table (which is
+usually located in the .isr_vector section) is kept in the output file, even if
+it is not referenced elsewhere,
+- `*(.text*):` - includes all sections that start with .text, which typically
+contains the actual code of the program,
+- `*(.rodata*):` - includes all read-only data sections, such as string literals
+and constants,
+- `. = ALIGN(4);:` - aligns the current location counter to a 4-byte boundary,
+which is important for ensuring proper memory alignment.
+
+2. .data - this section contains initialized global and static variables.
+- `(ADDR(.text) + SIZEOF(.text)):` - specifies that the .data section is loaded
+from the address immediately following the .text section in FLASH. This means
+that the initial values for this section are stored in FLASH, but it will be
+placed in RAM when the program runs,
+- `*(.data*):` - includes all sections that start with .data.
+
+3. .bss - this section contains uninitialized global and static variables.
+- `*(.bss*):` - includes all sections that start with .bss.
+
+4. ._stack - this section defines the stack area.
+- `(NOLOAD):` - indicates that this section should not be loaded from the input
+files. It will be allocated in RAM at runtime,
+- `_stack_top = .;:` - sets a symbol _stack_top to the current location,
+marking the top of the stack,
+- `. = . + 0x400;:` - allocates 1 KB (0x400 bytes) for the stack,
+- `_stack_bottom = .;:` - sets a symbol _stack_bottom to the current location,
+marking the bottom of the stack.
