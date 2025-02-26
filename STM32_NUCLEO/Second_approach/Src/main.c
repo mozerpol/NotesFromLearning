@@ -1,3 +1,5 @@
+// Blinking LED on LD2, 1 sec
+
 #include "stm32f446xx.h"
 
 void delayMs(int n);

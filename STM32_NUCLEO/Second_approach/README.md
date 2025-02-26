@@ -1,38 +1,4 @@
-I used STM32 NUCLEO with STM32F446RET6 MCU.
-
-____
-
-## 1. To install:
-1. gcc-arm-none-eabi <br/>
-Bare metal C and C++ compiler for embedded ARM chips using ARM Cortex-A/R/M
-processors.
-
-2. gdb-multiarch <br/>
-GNU Debugger (with support for multiple architectures).
-
-3. binutils-arm-none-eabi <br/>
-GNU assembler, linker and binary utilities for ARM Cortex-R/M processors.
-
-4. openocd <br/>
-OpenOCD (Open On-Chip Debugger) is a tool that allows to program and debug STM32
-microcontroller.
-
-5. stlink-tools <br/>
-OpenSource ST-Link tools replacement. Flashing tools for STMicroelectronics
-STM32VL and STM32L.
-
-#### 1.1 Check if it works:
-arm-none-eabi-gcc --version <br/>
-arm-none-eabi-g++ --version <br/>
-gdb-multiarch --version <br/>
-openocd --version <br/>
-st-info --version
-
-Script how to install all packages and verify them is in repo
-/dotfiles/system_setup/stm32
-[here](https://github.com/mozerpol/dotfiles/tree/master/system_setup/STM32).
-
-## 2. Directory tree
+## 1. Directory tree
 ```
 |___README.md (this file)
 |___Makefile
@@ -42,20 +8,23 @@ Script how to install all packages and verify them is in repo
 |   |___Bin/
 |___Src/
 |   |___C files
+|   |___CMSIS/
+|       |___CMSIS header files
 ```
 
 C files are in Src/ <br/>
+CMSIS header files are in Src/CMSIS/ <br/>
 Object files are in Build/Obj <br/>
 Binary files and executable are in Build/Bin <br/>
 Makefile is in main dir <br/>
 Linker script (*.ld) is in main dir
 
-## 3. Usage
+## 2. Usage
 `make` - Compile and link. <br/>
 `make clean` - Remove files from Build/Obj and Build/Bin. <br/>
 `make flash` - Load firmware to the mcu.
 
-## 4. Makefile
+## 3. Makefile
 1. Line: `SRCS      = $(wildcard $(SRC_DIR)/*.c)` <br/>
 wildcard - returns a list of files matching a specified pattern. <br/>
 $(wildcard *.c) - searches filesystem for matching filenames with c extension.
@@ -95,7 +64,7 @@ of the source file being compiled,
 - $@ - this is an automatic special variable that represents the target of the
 rule. It is replaced with the name of the object file being created.
 
-#### 4.1. Compiling
+#### 3.1. Compiling
 Command: `arm-none-eabi-gcc -g -O0 -Wall -Wextra -Warray-bounds -Wno-unused-parameter -mcpu=cortex-m4 -mthumb -c Src/C_files.c -o Build/Obj/object_files.o`
 
 | Flag | Description |
@@ -109,7 +78,7 @@ Command: `arm-none-eabi-gcc -g -O0 -Wall -Wextra -Warray-bounds -Wno-unused-para
 | -Warray-bounds | Enables warnings about array bounds violations. It warns when the compiler detects that an array is being accessed out of its defined bounds.  |
 | -Wno-unused-parameter | Disables warnings about unused function parameters. By default, the compiler may issue warnings if a function parameter is declared but not used  |
 
-#### 4.2. Linking
+#### 3.2. Linking
 Command: `arm-none-eabi-gcc -o Build/Bin/executable_file.elf Build/Obj/obejct_files.o -Wl,--gc-sections -T likner_script.ld`
 
 | Flag | Description |
@@ -118,7 +87,7 @@ Command: `arm-none-eabi-gcc -o Build/Bin/executable_file.elf Build/Obj/obejct_fi
 | --gc-sections | It instructs the linker to perform "garbage collection" of unused sections. When this option is enabled, the linker will remove any sections of code or data that are not referenced or used in the final executable. This is particularly useful in embedded systems where memory is limited. |
 | -T | Indicate a linker script. |
 
-#### 4.3. Flashing firmware
+#### 3.3. Flashing firmware
 Command: `openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program $(TARGET_ELF) verify reset exit`
 
 | Flag | Description |
@@ -132,9 +101,9 @@ Command: `openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program $(T
 | reset | Reset the target MCU after programming. This is done to start executing the newly programmed code immediately. |
 | exit | Close OpenOCD. |
 
-## 5. Linker script
+## 4. Linker script
 
-#### 5.1. MEMORY section
+#### 4.1. MEMORY section
 This section defines the memory regions available for the program.
 ```
 MEMORY
@@ -150,7 +119,7 @@ read-only data (like constants) will be stored.
 starts at address 0x20000000 and has a length of 128K. This is where the
 program's variables and stack will reside.
 
-#### 5.2. ENTRY Directive
+#### 4.2. ENTRY Directive
 ```
 ENTRY(Reset_Handler)
 ```
@@ -160,7 +129,7 @@ This directive specifies the entry point of the program, which is the
 microcontroller is reset. In this example project (look at Src/main.c) reset
 handler is not used.
 
-#### 5.3. SECTIONS Section
+#### 4.3. SECTIONS Section
 This section defines how different parts of the program (sections) are placed in
 the defined memory regions.
 

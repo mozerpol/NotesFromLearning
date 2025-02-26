@@ -6,7 +6,7 @@ TARGET     = main.elf
 
 # Directories
 SRC_DIR    = Src
-INC_DIR    = Src/CMSIS
+CMSIS_DIR  = Src/CMSIS
 OBJ_DIR    = Build/Obj
 BIN_DIR    = Build/Bin
 
@@ -21,7 +21,7 @@ OBJS       = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 LD_SCRIPT  = linker_script.ld
 
 # Project includes
-INCLUDES   = -I$(INC_DIR)
+INCLUDES   = -I$(CMSIS_DIR)
 
 # Target executable names
 TARGET_ELF = $(BIN_DIR)/$(TARGET)
