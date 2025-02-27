@@ -3,7 +3,17 @@ Mazidi. This book uses STM32 NUCLEO with STM32F446RET6 MCU.
 
 ____
 
-## 1. C for Embedded Systems
+## Table of contents <a name="tof"></a>
+1. [1. C for Embedded Systems](#1)
+2. [STM Arm I/O Programming](#2)
+   1. [2.1. GPIO Registers Address](#21)
+   2. [2.2. The Clock Enable of the Peripheral Registers](#22)
+      1. [2.2.1. How to set the high state on LD2](#221)
+      2. [2.2.2. Reading a switch in STM Arm](#222)
+
+____
+
+## 1. C for Embedded Systems <a name="1"></a>
 The C standards do not specify the size of data types. <br/>
 - float, double - are standardized by the IEEE754,
 - char, short - are often set at 1 byte and 2 bytes,
@@ -77,7 +87,7 @@ type for it.
 
 OR can be used to set a bit or bits, and AND can be used to clear a bit or bits.
 
-## 2. STM Arm I/O Programming
+## 2. STM Arm I/O Programming <a name="2"></a>
 
 STM32 Arm Cortex Portfolio:
 ![Image](https://github.com/user-attachments/assets/fa189f6b-81ec-4c41-81d6-15492ca08685)
@@ -112,7 +122,7 @@ starting at 0x40000000.
 
 [STM32‘s naming convention](https://www.digikey.com/en/maker/tutorials/2020/understanding-stm32-naming-conventions).
 
-### 2.1. GPIO Registers Address
+### 2.1. GPIO Registers Address <a name="21"></a>
 
 The Arm chips have two types of buses: APB (Advanced Peripheral Bus) and AHB
 (Advanced HighPerformance Bus). The AHB bus is much faster than APB. The AHB
@@ -174,7 +184,7 @@ MCUs can be found information about GPIO ODR. GPIO port output data register
 Bits 15:0 ODRy: Port output data (y = 0..15). These bits can be read and written
 by software.
 
-### 2.2. The Clock Enable of the Peripheral Registers
+### 2.2. The Clock Enable of the Peripheral Registers <a name="22"></a>
 By default, the GPIO modules of the STM32 Arm microcontrollers have the clock
 disabled coming out of power-on reset. So the programmers have to enable the
 clock to a given I/O port or peripheral before using it. This is done with a
@@ -186,7 +196,7 @@ family:
 
 ![Image](https://github.com/user-attachments/assets/fc65506b-4dae-4ec6-b9f5-8f396e304459)
 
-#### 2.2.1. How to set the high state on LD2
+#### 2.2.1. How to set the high state on LD2 <a name="221"></a>
 1. Check which pin the LD2 LED is connected to. According to datasheet for STM32
 Nucleo board: "User LD2: the green LED is a user LED connected to [...] STM32
 I/O PA5".
@@ -256,3 +266,5 @@ GPIO_ODR = (1 << 5); // Set pin PA5 to high state
 
 All the code that implements the above steps is in the Turn_on_LED folder and
 the fast version is described in the Cheat_sheet folder.
+
+#### 2.2.2. Reading a switch in STM Arm <a name="222"></a>
