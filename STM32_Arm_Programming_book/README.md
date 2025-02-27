@@ -151,7 +151,8 @@ Direction register is used to make the pin either input or output. After the
 Direction register is properly configured, then we use the Data register to
 actually write to the pin or read data from the pin. It is the Direction 
 register (when configured as an output) that allows the information written to 
-the Data register to be driven to the pins of the device.
+the Data register to be driven to the pins of the device:
+
 ![Image](https://github.com/user-attachments/assets/bdd05c50-bf2f-4f52-89b5-0f8f180ed2a6)
 
 In STM Arm the direction register is part of the GPIOx_MODER which stands for 
@@ -185,12 +186,73 @@ family:
 
 ![Image](https://github.com/user-attachments/assets/fc65506b-4dae-4ec6-b9f5-8f396e304459)
 
-In STM32F446RE Nucleo board, there is a single user LED. It is designated as 
-LD2. The user LED is connected to PA5 pin of Port A. To toggle the user LD2 
-(green) of the Nucleo board, the following steps must be followed:
-1. Set the Mode register bits for PA5 as output,
-2. write HIGH to PA5 in data OUT register,
-3. call a delay function,
-4. write LOW to PA5 in data OUT register,
-5. call a delay function,
-6. repeat steps 2 to 5.
+#### 2.2.1. How to set the high state on LD2
+1. Check which pin the LD2 LED is connected to. According to datasheet for STM32
+Nucleo board: "User LD2: the green LED is a user LED connected to [...] STM32 
+I/O PA5".
+2. Enable clock for port A. <br/>
+Register RCC_AHB1ENR can enable or disable clock for GPIOx. Base address of
+RCC_AHB1ENR is 0x40023800, this can be found in reference manual in the table
+STM32F446xx register boundary addresses. <br/>
+Address for GPIOA is RCC_AHB1ENR address + offset address for GPIOA =
+0x40023800 + 0x30 = 0x40023830. Offset addres is described in reference manual
+table RCC register map and reset values. <br/>
+
+| ![Image](https://github.com/user-attachments/assets/d5b48e72-8065-4951-a855-f52eab935dbf) |
+|:--:|
+| *STM32F446xx register boundary addresses.* |
+
+| ![Image](https://github.com/user-attachments/assets/5e641a7c-166f-4a2f-ba1f-449c1fc75f1b) |
+|:--:|
+| *RCC register map and reset values.* |
+
+
+C code that enables the clock for GPIOA:
+```cpp
+#define RCC_BASE    (0x40023800UL) // RCC base address
+#define RCC_AHB1ENR (*(volatile uint32_t *)(RCC_BASE + 0x30)) // RCC base address + GPIOA offset
+RCC_AHB1ENR |= (1 << 0); // Enable clock for GPIOA
+```
+
+3. Set PA5 (LD2) as output. <br/>
+The GPIOx_MODER register sets the direction for GPIOx. Base address for 
+GPIOA_MODER is 0x40020000. Offset for GPIOA is 0x00. Pin PA5 corresponds for
+bits no. 10 and 11 in GPIOA_MODER.
+
+| ![Image](https://github.com/user-attachments/assets/7270e44a-f635-4219-83e4-70ec775c3964) |
+|:--:|
+| *Boundary address for GPIOA is in Reference manual in table STM32F446xx register boundary addresses.* |
+
+| ![Image](https://github.com/user-attachments/assets/db51e7a7-751d-4aab-93c0-5097860259d2) |
+|:--:|
+| *GPIOA_MODER sets the direction for GPIOA, can be found in Reference manual in GPIO register map and reset values.* |
+
+
+C code that sets pin PA5 as an output:
+```cpp
+#define GPIOA_BASE  (0x40020000UL) // GPIOA base address
+#define GPIO_MODER  (*(volatile uint32_t *)(GPIOA_BASE + 0x00)) // Offset for GPIOA
+GPIO_MODER |= (1 << 10); // Set bit 1 to set direction as an output, bit 10 is assigned to PA5
+```
+
+4. Set pin PA5 to a high state. <br/>
+This can be done by controlling the ODR register. <br/>
+Each GPIO port has its own ODR register. The ODR register is a 16-bit register 
+for each GPIO port:
+- Bit 0 corresponds to PA0,
+- Bit 1 corresponds to PA1,
+- Bit 2 corresponds to PA2,
+- ...,
+- Bit 15 corresponds to PA15.
+
+Offset for GPIOA is 0x14. <br/>
+
+Code that sets pin PA5 to a high state:
+```cpp
+#define RCC_BASE (0x40023800UL) // RCC base address
+#define GPIO_ODR (*(volatile uint32_t *)(GPIOA_BASE + 0x14)) // GPIO ODR for GPIOA
+GPIO_ODR = (1 << 5); // Set pin PA5 to high state
+```
+
+All the code that implements the above steps is in the Turn_on_LED folder and 
+the fast version is described in the Cheat_sheet folder.
