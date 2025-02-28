@@ -202,11 +202,9 @@ Nucleo board: "User LD2: the green LED is a user LED connected to [...] STM32
 I/O PA5".
 2. Enable clock for port A. <br/>
 Register RCC_AHB1ENR can enable or disable clock for GPIOx. Base address of
-RCC_AHB1ENR is 0x40023800, this can be found in reference manual in the table
-STM32F446xx register boundary addresses. <br/>
-Address for GPIOA is RCC_AHB1ENR address + offset address for GPIOA =
-0x40023800 + 0x30 = 0x40023830. Offset addres is described in reference manual
-table RCC register map and reset values. <br/>
+RCC_AHB1ENR is RCC address + RCC_AHB1ENR offset = 0x40023800 + 0x30 = 0x40023830, 
+this can be found in reference manual in the table STM32F446xx register boundary 
+addresses.
 
 | ![Image](https://github.com/user-attachments/assets/d5b48e72-8065-4951-a855-f52eab935dbf) |
 |:--:|
@@ -215,7 +213,6 @@ table RCC register map and reset values. <br/>
 | ![Image](https://github.com/user-attachments/assets/5e641a7c-166f-4a2f-ba1f-449c1fc75f1b) |
 |:--:|
 | *RCC register map and reset values.* |
-
 
 C code that enables the clock for GPIOA:
 ```cpp
@@ -226,8 +223,8 @@ RCC_AHB1ENR |= (1 << 0); // Enable clock for GPIOA
 
 3. Set PA5 (LD2) as output. <br/>
 The GPIOx_MODER register sets the direction for GPIOx. Base address for
-GPIOA_MODER is 0x40020000. Offset for GPIOA is 0x00. Pin PA5 corresponds for
-bits no. 10 and 11 in GPIOA_MODER.
+GPIOx_MODER for GPIOA is 0x40020000. Offset for GPIOA is 0x00. Pin PA5 
+corresponds for bits no. 10 and 11 in GPIOA_MODER.
 
 | ![Image](https://github.com/user-attachments/assets/7270e44a-f635-4219-83e4-70ec775c3964) |
 |:--:|
@@ -268,3 +265,11 @@ All the code that implements the above steps is in the Turn_on_LED folder and
 the fast version is described in the Cheat_sheet folder.
 
 #### 2.2.2. Reading a switch in STM Arm <a name="222"></a>
+1. Check which pin the B1 button is connected to. According to datasheet for 
+STM32 Nucleo board: "the user button is connected to the I/O PC13 (pin 2) of the 
+STM32 microcontroller."
+2. Enable clock for port A and port C. <br/>
+LED LD2 is connected to port A, button B1 is connected to port C. <br/>
+Register RCC_AHB1ENR can enable or disable clock for GPIOx. Base address of
+RCC_AHB1ENR is RCC address + RCC_AHB1ENR offset = 0x40023800 + 0x30 = 0x40023830.
+
