@@ -4,6 +4,8 @@
 - RCC - Reset and Clock Control
 - MODER - Mode Register
 - ODR - Output Data Register
+- PUPDR - Pull-up/Pull-down Register 
+- IDR - Input Data Register
 
 ### 2. How to set the high state on PA5
 1. Enable clock for port A.
