@@ -202,8 +202,8 @@ Nucleo board: "User LD2: the green LED is a user LED connected to [...] STM32
 I/O PA5".
 2. Enable clock for port A. <br/>
 Register RCC_AHB1ENR can enable or disable clock for GPIOx. Base address of
-RCC_AHB1ENR is RCC address + RCC_AHB1ENR offset = 0x40023800 + 0x30 = 0x40023830, 
-this can be found in reference manual in the table STM32F446xx register boundary 
+RCC_AHB1ENR is RCC address + RCC_AHB1ENR offset = 0x40023800 + 0x30 = 0x40023830,
+this can be found in reference manual in the table STM32F446xx register boundary
 addresses.
 
 | ![Image](https://github.com/user-attachments/assets/d5b48e72-8065-4951-a855-f52eab935dbf) |
@@ -223,7 +223,7 @@ RCC_AHB1ENR |= (1 << 0); // Enable clock for GPIOA
 
 3. Set PA5 (LD2) as output. <br/>
 The GPIOx_MODER register sets the direction for GPIOx. Base address for
-GPIOx_MODER for GPIOA is 0x40020000. Offset for GPIOA is 0x00. Pin PA5 
+GPIOx_MODER for GPIOA is 0x40020000. Offset for GPIOA is 0x00. Pin PA5
 corresponds for bits no. 10 and 11 in GPIOA_MODER.
 
 | ![Image](https://github.com/user-attachments/assets/7270e44a-f635-4219-83e4-70ec775c3964) |
@@ -265,9 +265,14 @@ All the code that implements the above steps is in the Turn_on_LED folder and
 the fast version is described in the Cheat_sheet folder.
 
 #### 2.2.2. Reading a switch B1 and setting the high state on LD2 <a name="222"></a>
-1. Check which pin the B1 button is connected to. According to datasheet for 
-STM32 Nucleo board: "the user button is connected to the I/O PC13 (pin 2) of the 
-STM32 microcontroller."
+1. Check which pin the B1 button is connected to. According to datasheet for
+STM32 Nucleo board: "the user button is connected to the I/O PC13 (pin 2) of the
+STM32 microcontroller." <br/>
+According to the electronic diagram for the board the onboard user push button
+is connected to PC13 digital pin through a pull-up resistor. This means when the
+push button is not pressed, we will get an active high signal at the PC13 pin.
+Similarly, when it is pressed, we will get an active low signal on the PC13 pin:
+![Image](https://github.com/user-attachments/assets/67add0a5-c10b-4cef-8cbf-2d44529a8cbc)
 
 2. Enable clock for port A and port C. <br/>
 LED LD2 is connected to port A, button B1 is connected to port C. <br/>
@@ -282,17 +287,7 @@ The GPIOx_MODER register sets the direction for GPIOx. <br/>
 Base address for GPIOA_MODER is 0x40020000. Offset for GPIOA is 0x00. <br/>
 Base address for GPIOC_MODER is 0x40020800. Offset for GPIOC is 0x00. <br/>
 
-4. Recognize what the button is connected to. <br/>
-According to the electronic diagram for the STM32 Nucleo board the onboard user 
-push button is connected to PC13 digital pin through a pull-up resistor. This 
-means when the push button is not pressed, we will get an active high signal at 
-the PC13 pin. Similarly, when it is pressed, we will get an active low signal on 
-the PC13 pin:
-![Image](https://github.com/user-attachments/assets/67add0a5-c10b-4cef-8cbf-2d44529a8cbc)
-
 5. Enable internal pull-down resistor for the pin PC13. <br/>
-Push button is connected to PC13 digital pin through a pull-up resistor, because
-of that internally PC13 shoudl be connected to pull-down resistor. <br/>
 Setting the value in the PUPDR register sets the internal pull-up or pull-down
 connection. <br/>
 Address for PUPDR is: GPIOC base + offset = 0x40020800 + 0x0C = 0x4002080C <br/>
@@ -303,7 +298,16 @@ Address for PUPDR is: GPIOC base + offset = 0x40020800 + 0x0C = 0x4002080C <br/>
 
 6. Read state on PC13 <br/>
 This can be done reading value from IDR (Input Data Register) register. <br/>
-Address for IDR is: GPIOC base + offset = 0x40020800 + 0x10.
-
-
-
+Address for IDR is: GPIOC base + offset = 0x40020800 + 0x10. <br/>
+If the high state is on PC13, set the high state to PA5. <br/>
+```cpp
+// Read the state of PC13
+if ((GPIOC_IDR & 0b0010000000000000) == 0) // Check if PC13 is low (active low)
+{
+   GPIOA_ODR |= (1 << 5); // Set pin PA5 to high state
+}
+else
+{
+    GPIOA_ODR &= ~(1 << 5); // Set PA5 low
+}
+```
