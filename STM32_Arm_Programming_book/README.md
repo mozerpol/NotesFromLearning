@@ -287,7 +287,7 @@ The GPIOx_MODER register sets the direction for GPIOx. <br/>
 Base address for GPIOA_MODER is 0x40020000. Offset for GPIOA is 0x00. <br/>
 Base address for GPIOC_MODER is 0x40020800. Offset for GPIOC is 0x00. <br/>
 
-5. Enable internal pull-down resistor for the pin PC13. <br/>
+4. Enable internal pull-down resistor for the pin PC13. <br/>
 Setting the value in the PUPDR register sets the internal pull-up or pull-down
 connection. <br/>
 Address for PUPDR is: GPIOC base + offset = 0x40020800 + 0x0C = 0x4002080C <br/>
@@ -296,7 +296,7 @@ Address for PUPDR is: GPIOC base + offset = 0x40020800 + 0x0C = 0x4002080C <br/>
 |:--:|
 |*Depending on the physical connection of the button, should be set the pull-down resistor or pull-up resistor.*|
 
-6. Read state on PC13 <br/>
+5. Read state on PC13 <br/>
 This can be done reading value from IDR (Input Data Register) register. <br/>
 Address for IDR is: GPIOC base + offset = 0x40020800 + 0x10. <br/>
 If the high state is on PC13, set the high state to PA5. <br/>
