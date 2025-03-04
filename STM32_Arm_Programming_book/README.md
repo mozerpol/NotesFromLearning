@@ -10,6 +10,7 @@ ____
    2. [2.2. The Clock Enable of the Peripheral Registers](#22)
       1. [2.2.1. How to set the high state on LD2](#221)
       2. [2.2.2. Reading a switch in STM Arm](#222)
+      3. [2.2.3. Seven-segment LED interfacing](#223)
 
 ____
 
@@ -311,3 +312,39 @@ else
     GPIOA_ODR &= ~(1 << 5); // Set PA5 low
 }
 ```
+
+#### 2.2.3. Seven-segment LED interfacing <a name="223"></a>
+This example uses two 7 segment displays. <br/>
+Port B (PB0 and PB1) is connected to the cathodes that switch the displays. <br/>
+Anodes are connected to port C (PC0 and PC7), which control the displayed digit.
+
+At a low frequency of alternating digits, the display will appear to be
+flickering. To eliminate the flickering display, each digit should be turned on
+and off at least 60 times each second. For 16 MHz frequency delay shoud be 8 
+milicesonds.
+1. Configure Port C as output port to drive the segments. <br/>
+2. Configure Port B as output port to select the digits. <br/>
+3. Write a numeric pattern to port C. <br/>
+4. Turn on the select pin to HIGH to activate the tens digit. <br/>
+This is done by BSRR register. The BSRR register is used to set the GPIO state 
+in one clock cycle. The BSRR register has two parts:
+- Set bits: Writing a '1' to a specific bit in the lower half of the BSRR 
+register sets the corresponding GPIO pin to high (logic level 1).
+- Reset bits: Writing a '1' to a specific bit in the upper half of the BSRR 
+register resets the corresponding GPIO pin to low (logic level 0).
+
+|![Image](https://github.com/user-attachments/assets/8609c9d5-f048-4ae3-9562-16ffce517eca)|
+|:--:|
+|*Bits BS0-BS15 set the GPIO state for pins 0-15, and bits BR0-BR15 reset the GPIO pin state.*|
+
+```cpp
+#define GPIOB_BASE      0x40020400
+#define GPIOB_BSRR     (*(volatile uint32_t *)(GPIOB_BASE + 0x18))
+GPIOB_BSRR = 0x00010000; // Deselect ones digit, PB0
+GPIOB_BSRR = 0x00000002; // Select tens digit, PB1
+```
+5. Delay for some time. <br/>
+6. Write a numeric pattern to port C. <br/>
+7. Turn on the select pin to HIGH to activate the ones digit. <br/>
+8. Delay for some time. <br/>
+9. Repeat steps 3-8. <br/>
