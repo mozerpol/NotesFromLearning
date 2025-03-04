@@ -348,3 +348,62 @@ GPIOB_BSRR = 0x00000002; // Select tens digit, PB1
 7. Turn on the select pin to HIGH to activate the ones digit. <br/>
 8. Delay for some time. <br/>
 9. Repeat steps 3-8. <br/>
+
+## 3. LCD and Keyboard Interfacing <a name="3"></a>
+
+### 3.1. Interfacing to an LCD <a name="31"></a>
+The HD44780 controller has a 14 pin interface for the microprocessor: <br/>
+1. GND
+2. VCC +5V
+3. VEE - Power supply to control contrast
+4. RS (register select) -  There are two registers inside the LCD and the RS pin 
+is used for their selection. If RS = 0, the instruction command code register is
+selected, allowing the user to send a command such as clear display, cursor at 
+home, etc. If RS = 1, the data register is selected, allowing the user to send
+data to be displayed on the LCD.
+5. R/W - R/W = 1 when reading and R/W = 0 when writing.
+6. E - Enable. Latch information presented to its data pins. When data is 
+supplied to data pins, a pulse (Low-to-High-to-Low) must be applied to this pin 
+in order for the LCD to latch in the data present at the data pins. This pulse 
+must be a minimum of 230 ns wide.
+7. DB0 - I/O The 8-bit data bus. The 8-bit data pins are used to send
+information to the LCD or read the contents of the LCD's internal registers. The
+LCD controller is capable of operating with 4-bit data and only D4-D7 are used.
+To display letters and numbers, we send ASCII codes for the letters A–Z, a–z,
+numbers 0–9.
+8. DB1 - I/O The 8-bit data bus
+9. DB2 - I/O The 8-bit data bus 
+10. DB3 - I/O The 8-bit data bus 
+11. DB4 - I/O The 4/8-bit data bus 
+12. DB5 - I/O The 4/8-bit data bus 
+13. DB6 - I/O The 4/8-bit data bus 
+14. DB7 - I/O The 4/8-bit data bus
+
+Some commonly command codes:
+| Byte | Instruction |
+|:--:|:--:|
+| 0x01 | Clear display |
+| 0x02 | Return cursor home |
+| 0x06 | Increment cursor (shift cursor to right) |
+| 0x14 | Shift cursor right |
+| 0x10 | Shift cursor left |
+| 0x0F | Display on, cursor blinking |
+| 0x0E | Display on, cursor on, steady cursor |
+| 0x80 | Force cursor to beginning of 1st line |
+| 0xC0 | Force cursor to beginning of 2nd line |
+
+To send any of the commands to the LCD, make pins RS = 0, R/W = 0, and send a
+pulse on the E pin to enable the internal latch of the LCD. Connection of an 
+LCD to the microcontroller:
+![Image](https://github.com/user-attachments/assets/2b85ff7b-012f-4714-a069-1c5751ca63c0)
+
+Connection to the MCU:
+- The LCD's data pins are connected to PORTD,
+- RS pin is connected to Pin 5 of PORTB,
+- R/W pin is connected to Pin 6 of PORTB,
+- E pin is connected to Pin 7 of PORTB.
+
+Sending data to the LCD:
+1. Set pins RS = 1, R/W = 0 and send a pulse (L-to-H-to-L) to the E pin to 
+enable the internal latch of the LCD.
+2. Send data.
