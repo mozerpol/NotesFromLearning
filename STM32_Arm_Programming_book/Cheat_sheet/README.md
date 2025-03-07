@@ -50,7 +50,7 @@ state of the GPIO.
 4. Configure Port C as output port to drive the segments.
 - GPIOC base + offset: 0x40020800 + 0x00
 - `GPIOC_MODER |= 0x5555;`
-5. Turn on the select pin to HIGH to activate the tens digit and deactivate the 
+5. Turn on the select pin to HIGH to activate the tens digit and deactivate the
 ones.
 - BSRR: GPIOB base + offset: 0x40020400 + 0x18 = 0x40020418. BSRR - it allows to
 manipulate of individual GPIO pins without the need to read the current state of

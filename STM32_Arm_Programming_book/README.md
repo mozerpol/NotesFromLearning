@@ -320,17 +320,17 @@ Anodes are connected to port C (PC0 and PC7), which control the displayed digit.
 
 At a low frequency of alternating digits, the display will appear to be
 flickering. To eliminate the flickering display, each digit should be turned on
-and off at least 60 times each second. For 16 MHz frequency delay shoud be 8 
+and off at least 60 times each second. For 16 MHz frequency delay shoud be 8
 milicesonds.
 1. Configure Port C as output port to drive the segments. <br/>
 2. Configure Port B as output port to select the digits. <br/>
 3. Write a numeric pattern to port C. <br/>
 4. Turn on the select pin to HIGH to activate the tens digit. <br/>
-This is done by BSRR register. The BSRR register is used to set the GPIO state 
+This is done by BSRR register. The BSRR register is used to set the GPIO state
 in one clock cycle. The BSRR register has two parts:
-- Set bits: Writing a '1' to a specific bit in the lower half of the BSRR 
+- Set bits: Writing a '1' to a specific bit in the lower half of the BSRR
 register sets the corresponding GPIO pin to high (logic level 1).
-- Reset bits: Writing a '1' to a specific bit in the upper half of the BSRR 
+- Reset bits: Writing a '1' to a specific bit in the upper half of the BSRR
 register resets the corresponding GPIO pin to low (logic level 0).
 
 |![Image](https://github.com/user-attachments/assets/8609c9d5-f048-4ae3-9562-16ffce517eca)|
@@ -356,15 +356,15 @@ The HD44780 controller has a 14 pin interface for the microprocessor: <br/>
 1. GND
 2. VCC +5V
 3. VEE - Power supply to control contrast
-4. RS (register select) -  There are two registers inside the LCD and the RS pin 
+4. RS (register select) -  There are two registers inside the LCD and the RS pin
 is used for their selection. If RS = 0, the instruction command code register is
-selected, allowing the user to send a command such as clear display, cursor at 
+selected, allowing the user to send a command such as clear display, cursor at
 home, etc. If RS = 1, the data register is selected, allowing the user to send
 data to be displayed on the LCD.
 5. R/W - R/W = 1 when reading and R/W = 0 when writing.
-6. E - Enable. Latch information presented to its data pins. When data is 
-supplied to data pins, a pulse (Low-to-High-to-Low) must be applied to this pin 
-in order for the LCD to latch in the data present at the data pins. This pulse 
+6. E - Enable. Latch information presented to its data pins. When data is
+supplied to data pins, a pulse (Low-to-High-to-Low) must be applied to this pin
+in order for the LCD to latch in the data present at the data pins. This pulse
 must be a minimum of 230 ns wide.
 7. DB0 - I/O The 8-bit data bus. The 8-bit data pins are used to send
 information to the LCD or read the contents of the LCD's internal registers. The
@@ -372,11 +372,11 @@ LCD controller is capable of operating with 4-bit data and only D4-D7 are used.
 To display letters and numbers, we send ASCII codes for the letters A–Z, a–z,
 numbers 0–9.
 8. DB1 - I/O The 8-bit data bus
-9. DB2 - I/O The 8-bit data bus 
-10. DB3 - I/O The 8-bit data bus 
-11. DB4 - I/O The 4/8-bit data bus 
-12. DB5 - I/O The 4/8-bit data bus 
-13. DB6 - I/O The 4/8-bit data bus 
+9. DB2 - I/O The 8-bit data bus
+10. DB3 - I/O The 8-bit data bus
+11. DB4 - I/O The 4/8-bit data bus
+12. DB5 - I/O The 4/8-bit data bus
+13. DB6 - I/O The 4/8-bit data bus
 14. DB7 - I/O The 4/8-bit data bus
 
 Some commonly command codes:
@@ -393,7 +393,7 @@ Some commonly command codes:
 | 0xC0 | Force cursor to beginning of 2nd line |
 
 To send any of the commands to the LCD, make pins RS = 0, R/W = 0, and send a
-pulse on the E pin to enable the internal latch of the LCD. Connection of an 
+pulse on the E pin to enable the internal latch of the LCD. Connection of an
 LCD to the microcontroller:
 ![Image](https://github.com/user-attachments/assets/2b85ff7b-012f-4714-a069-1c5751ca63c0)
 
@@ -404,6 +404,6 @@ Connection to the MCU:
 - E pin is connected to Pin 7 of PORTB.
 
 Sending data to the LCD:
-1. Set pins RS = 1, R/W = 0 and send a pulse (L-to-H-to-L) to the E pin to 
+1. Set pins RS = 1, R/W = 0 and send a pulse (L-to-H-to-L) to the E pin to
 enable the internal latch of the LCD.
 2. Send data.
