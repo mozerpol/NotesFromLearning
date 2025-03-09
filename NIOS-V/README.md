@@ -35,4 +35,53 @@ CLI.
 
 The solution to these problems is to use OpenOCD.
 
+## 3. Hello world
+### 3.1. Quartus part
+Create a new Nios V project in Quartus:
+1. *File* → *New Project Wizard* → ...
+Remember the project name, because you will need to enter it later in Platform 
+Designer.
+2. Open Platform Designer and create a sample Nios V project:
 
+Nios V Settings:
+
+Memory settings (memory size must be greater than XXX, I don't remember how
+much, large enough):
+
+Jtag settings: no changes
+
+3. Assign addresses: *System* → *Assign Base Addresses*.
+4. Save the Platform Designer project with the same name as the saved Quartus 
+project.
+5. Click *Generate HDL* (bottom right corner), it will generate with warnings, 
+but that's OK.
+6. Click *Finish*.
+7. Add the Platform Designer generated file *name*.qip (should be in *name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right 
+click *Add/Remove Files* in *Project*:
+8. Start synthesis and assign clk to the appropriate pin in Pin Planner.
+9. Compile everything.
+10. Upload sof to FPGA.
+11. Open the terminal and go to the project directory (where the file with the 
+*sopcinfo* extension is, i.e. where the Quartus project is). Run Nios command 
+shell:
+- `~/Quartus/niosv/bin/niosv-shell`
+12. Generate a bsp configuration file for the project. The location where the 
+file will be created is important, i.e. *./software/bsp/*:
+- `~/Quartus/niosv/bin/niosv-bsp -c -t=hal --sopcinfo=niosv.sopcinfo ./software/bsp/settings.bsp`
+After executing this command, it should look something like this:
+13. Go to the *./software/* directory (where the bsp folder was automatically 
+created in the previous step) and create an app directory, and inside it an 
+empty file hello.c. It should look something like this:
+
+14. Generate a configuration file for Cmake (in the terminal where nios-shell 
+is):
+- `~/Quartus/niosv/bin/niosv-app -a=./software/app -b=./software/bsp -s=./software/app/hello.c`
+Every time something is changed in Platform Designer, you have to repeat steps 8
+and 9.
+15. Start Ashling RiscFree, in a new instance of the terminal (it can be a new 
+tab, nios-shell is in a separate one):
+- `~/Quartus/riscfree/RiscFree/RiscFree` <br/>
+After the program opens, click *Create a project*.
+3. Expand *C/C++* and select the *C Project* option. *Next*.
+
+Project name: app, location for the project is folder: ./software/app/. Project type: expand Cmake driven and select options: Empty Project. It should look something like this:
