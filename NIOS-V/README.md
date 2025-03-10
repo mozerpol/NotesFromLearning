@@ -42,11 +42,14 @@ Create a new Nios V project in Quartus:
 Remember the project name, because you will need to enter it later in Platform 
 Designer.
 2. Open Platform Designer and create a sample Nios V project:
+![Image](https://github.com/user-attachments/assets/5d2f6500-0db5-4d09-9f0b-1e9cd425bb21)
 
 Nios V Settings:
+![Image](https://github.com/user-attachments/assets/b742fbda-9891-47c5-b5d6-568c6063799e)
 
 Memory settings (memory size must be greater than XXX, I don't remember how
 much, large enough):
+![Image](https://github.com/user-attachments/assets/29164ed4-f43b-4407-8ad6-d34eff0a6285)
 
 Jtag settings: no changes
 
@@ -58,6 +61,8 @@ but that's OK.
 6. Click *Finish*.
 7. Add the Platform Designer generated file *name*.qip (should be in *name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right 
 click *Add/Remove Files* in *Project*:
+![Image](https://github.com/user-attachments/assets/a2a9b455-a930-4a5c-b3ce-cbbbeaa69a2d)
+
 8. Start synthesis and assign clk to the appropriate pin in Pin Planner.
 9. Compile everything.
 10. Upload sof to FPGA.
@@ -69,9 +74,12 @@ shell:
 file will be created is important, i.e. *./software/bsp/*:
 - `~/Quartus/niosv/bin/niosv-bsp -c -t=hal --sopcinfo=niosv.sopcinfo ./software/bsp/settings.bsp`
 After executing this command, it should look something like this:
+![Image](https://github.com/user-attachments/assets/11a6b8d0-5e01-4705-be68-d45d78069c7a)
+
 13. Go to the *./software/* directory (where the bsp folder was automatically 
 created in the previous step) and create an app directory, and inside it an 
-empty file hello.c. It should look something like this:
+empty file *hello.c*. It should look something like this:
+![Image](https://github.com/user-attachments/assets/5aaa93df-2e6b-43c4-a7c3-9af28112030c)
 
 14. Generate a configuration file for Cmake (in the terminal where nios-shell 
 is):
@@ -84,4 +92,7 @@ tab, nios-shell is in a separate one):
 After the program opens, click *Create a project*.
 3. Expand *C/C++* and select the *C Project* option. *Next*.
 
-Project name: app, location for the project is folder: ./software/app/. Project type: expand Cmake driven and select options: Empty Project. It should look something like this:
+Project name: app, location for the project is folder: ./software/app/. Project 
+type: expand Cmake driven and select options: Empty Project. It should look 
+something like this:
+![Image](https://github.com/user-attachments/assets/1c63b750-052e-4e88-bdcd-a0d68cf9506b)
