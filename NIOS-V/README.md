@@ -70,36 +70,74 @@ click *Add/Remove Files* in *Project*:
 8. Start synthesis and assign clk to the appropriate pin in Pin Planner.
 9. Compile everything.
 10. Upload sof to FPGA.
-11. Open the terminal and go to the project directory (where the file with the
+
+### 3.2. niosv-shell part
+1. Open the terminal and go to the project directory (where the file with the
 *sopcinfo* extension is, i.e. where the Quartus project is). Run Nios command
 shell:
 - `~/Quartus/niosv/bin/niosv-shell`
-12. Generate a bsp configuration file for the project. The location where the
+2. Generate a bsp configuration file for the project. The location where the
 file will be created is important, i.e. *./software/bsp/*:
 - `~/Quartus/niosv/bin/niosv-bsp -c -t=hal --sopcinfo=niosv.sopcinfo ./software/bsp/settings.bsp`
 After executing this command, it should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/11a6b8d0-5e01-4705-be68-d45d78069c7a)
 
-13. Go to the *./software/* directory (where the bsp folder was automatically
+3. Go to the *./software/* directory (where the bsp folder was automatically
 created in the previous step) and create an app directory, and inside it an
 empty file *hello.c*. It should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/5aaa93df-2e6b-43c4-a7c3-9af28112030c)
 
-14. Generate a configuration file for Cmake (in the terminal where nios-shell
+4. Generate a configuration file for Cmake (in the terminal where nios-shell
 is):
 - `~/Quartus/niosv/bin/niosv-app -a=./software/app -b=./software/bsp -s=./software/app/hello.c`
 Every time something is changed in Platform Designer, you have to repeat steps 8
 and 9.
-15. Start Ashling RiscFree, in a new instance of the terminal (it can be a new
+
+### 3.3. Ashling RiscFree part
+1. Start Ashling RiscFree, in a new instance of the terminal (it can be a new
 tab, nios-shell is in a separate one):
 - `~/Quartus/riscfree/RiscFree/RiscFree` <br/>
-After the program opens, click *Create a project*.
-3. Expand *C/C++* and select the *C Project* option. *Next*.
-
-Project name: app, location for the project is folder: ./software/app/. Project
-type: expand Cmake driven and select options: Empty Project. It should look
-something like this:
+2. After the program opens, click *Create a project*.
+2. Expand *C/C++* and select the *C Project* option. *Next*.
+3. Project name: app, location for the project is folder: *./software/app/*. 
+Project type: expand Cmake driven and select options: Empty Project. It should 
+look something like this:
 
 ![Image](https://github.com/user-attachments/assets/1c63b750-052e-4e88-bdcd-a0d68cf9506b)
+
+Click *Next* and select all options:
+
+![Image](https://github.com/user-attachments/assets/cd2efd72-9aa7-4f09-a37b-642439c3eace)
+
+4. *Finish*.
+5. Open the previously created *hello.c* file (expand the *app* folder and open 
+*hello.c*), add sample code:
+```cpp
+#include <stdio.h>
+int main()
+{
+   printf("Hello\n");
+   return 0;
+}
+```
+6. Save.
+7. Right click on the project: *app* → *Build Project*.
+8. Generate a configuration file from the terminal (where nios-shell is running) 
+for OpenOCD *debugger.cfg* and place it in the */software/app/* folder (where 
+the *hello.c* file is):
+- `~/Quartus/qprogrammer/linux64/openocd-cfg-gen debugger.cfg`
+9. Run juart-terminal (in the terminal where nios-shell is). The result of 
+running a simple *hello.c* program will later appear in it. It is important that 
+the FPGA is connected:
+- `~/Quartus/qprogrammer/linux64/juart-terminal`
+10. In RiscFree, configure the upload of code to Nios V:
+- Right click on the project: *Run As* → *Run Configuartions* ...
+11. Double click on GDB OpenOCD Debugging, a new configuration will open, 
+complete the first three tabs (*Main*, *Debugger*, *Startup*) similarly to the 
+following:
+
+![Image](https://github.com/user-attachments/assets/36ebc99a-b828-4a1c-8cbd-7b8eed2cc674)
+
+
