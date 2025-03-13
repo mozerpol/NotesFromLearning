@@ -18,8 +18,8 @@ not in $PATH):
 
 ## 2. Possible problems
 1. To get the latest version of code executed by Nios V, you need to load the
-sof file into the FPGA every time, then compile the Nios V project in RiscFree
-and upload it to Nios V.
+sof file into the FPGA, then compile the Nios V project in RiscFree and upload 
+it to Nios V.
 2. After loading a fresh sof into the FPGA, debugging only works on the first
 run. In the next runs, Ashling RiscFree returns the error:
 ```
@@ -38,14 +38,15 @@ The solution to these problems is to use OpenOCD.
 ## 3. Hello world
 ### 3.1. Quartus part
 Create a new Nios V project in Quartus:
-1. *File* → *New Project Wizard* → ...
+1. *File* → *New Project Wizard* → ... <br/>
 Remember the project name, because you will need to enter it later in Platform
 Designer.
-2. Open Platform Designer and create a sample Nios V project:
+2. Open Platform Designer and create a simple Nios V project:
 
 ![Image](https://github.com/user-attachments/assets/5d2f6500-0db5-4d09-9f0b-1e9cd425bb21)
 
-Nios V Settings:
+Nios V Settings (all options in Vectors *Reset Agent* are avalible after 
+assignign base addreses. It's done later):
 
 ![Image](https://github.com/user-attachments/assets/b742fbda-9891-47c5-b5d6-568c6063799e)
 
@@ -56,13 +57,15 @@ much, large enough):
 
 Jtag settings: no changes
 
-3. Assign addresses: *System* → *Assign Base Addresses*.
+3. Assign addresses: *System* → *Assign Base Addresses*. Now set Nios V settings
+(change vectors section - *Reset Agent* part).
 4. Save the Platform Designer project with the same name as the saved Quartus
 project.
 5. Click *Generate HDL* (bottom right corner), it will generate with warnings,
 but that's OK.
 6. Click *Finish*.
-7. Add the Platform Designer generated file *name*.qip (should be in *name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right
+7. Add the Platform Designer generated file: *name*.qip (should be in 
+*name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right 
 click *Add/Remove Files* in *Project*:
 
 ![Image](https://github.com/user-attachments/assets/a2a9b455-a930-4a5c-b3ce-cbbbeaa69a2d)
@@ -77,21 +80,21 @@ click *Add/Remove Files* in *Project*:
 shell:
 - `~/Quartus/niosv/bin/niosv-shell`
 2. Generate a bsp configuration file for the project. The location where the
-file will be created is important, i.e. *./software/bsp/*:
+file will be created is important, for me is: *quartus_project/software/bsp/*:
 - `~/Quartus/niosv/bin/niosv-bsp -c -t=hal --sopcinfo=niosv.sopcinfo ./software/bsp/settings.bsp`
-After executing this command, it should look something like this:
+After executing this command, everything should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/11a6b8d0-5e01-4705-be68-d45d78069c7a)
 
-3. Go to the *./software/* directory (where the bsp folder was automatically
-created in the previous step) and create an app directory, and inside it an
+3. Go to the *./software/* directory (where the bsp catalog was automatically
+created in the previous step) and create an *app* catalog, and inside it an
 empty file *hello.c*. It should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/5aaa93df-2e6b-43c4-a7c3-9af28112030c)
 
 4. Generate a configuration file for Cmake (in the terminal where nios-shell
 is):
-- `~/Quartus/niosv/bin/niosv-app -a=./software/app -b=./software/bsp -s=./software/app/hello.c`
+- `~/Quartus/niosv/bin/niosv-app -a=./software/app -b=./software/bsp -s=./software/app/hello.c` <br/>
 Every time something is changed in Platform Designer, you have to repeat steps 8
 and 9.
 
@@ -100,10 +103,10 @@ and 9.
 tab, nios-shell is in a separate one):
 - `~/Quartus/riscfree/RiscFree/RiscFree` <br/>
 2. After the program opens, click *Create a project*.
-2. Expand *C/C++* and select the *C Project* option. *Next*.
-3. Project name: app, location for the project is folder: *./software/app/*.
-Project type: expand Cmake driven and select options: Empty Project. It should
-look something like this:
+3. Expand *C/C++* and select the *C Project* option. *Next*.
+4. Project name: app, location for the project is catalog: *./software/app/*. <br/>
+Project type: expand Cmake driven and select option: Empty Project. <br/> It 
+should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/1c63b750-052e-4e88-bdcd-a0d68cf9506b)
 
@@ -111,8 +114,8 @@ Click *Next* and select all options:
 
 ![Image](https://github.com/user-attachments/assets/cd2efd72-9aa7-4f09-a37b-642439c3eace)
 
-4. *Finish*.
-5. Open the previously created *hello.c* file (expand the *app* folder and open
+5. *Finish*.
+6. Open the previously created *hello.c* file (expand the *app* catalog and open
 *hello.c*), add sample code:
 ```cpp
 #include <stdio.h>
@@ -122,45 +125,64 @@ int main()
    return 0;
 }
 ```
-6. Save.
-7. Right click on the project: *app* → *Build Project*.
-8. Generate a configuration file from the terminal (where nios-shell is running)
-for OpenOCD *debugger.cfg* and place it in the */software/app/* folder (where
-the *hello.c* file is):
-- `~/Quartus/qprogrammer/linux64/openocd-cfg-gen debugger.cfg`
-9. Run juart-terminal (in the terminal where nios-shell is). The result of
+7. Save.
+8. Run juart-terminal (in the terminal where nios-shell is). The result of
 running a simple *hello.c* program will later appear in it. It is important that
-the FPGA is connected:
+the FPGA is connected. Run:
 - `~/Quartus/qprogrammer/linux64/juart-terminal`
-10. In RiscFree, configure the upload of code to Nios V:
-- Right click on the project: *Run As* → *Run Configuartions* ...
-11. Double click on GDB OpenOCD Debugging, a new configuration will open,
-complete the first three tabs (*Main*, *Debugger*, *Startup*) similarly to the
-following:
-
-![Image](https://github.com/user-attachments/assets/36ebc99a-b828-4a1c-8cbd-7b8eed2cc674)
-
-12. Enter the path to OpenOCD.
-13. Add the generated cfg configuration file with the *-f* flag.
-14. Add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints
-0*:
-
-![Image](https://github.com/user-attachments/assets/e890f11d-4815-4b67-9ad1-5bb07593bf28)
-
-15. Uncheck Arm semihosting option:
-
-![Image](https://github.com/user-attachments/assets/88fa213a-8e8a-4a6e-bb28-fadb4e90736d)
-
-◦ Click *Apply* → *Run*
-16. Do the same with the debugger
-◦ Right click on the project: *Debug As* → *Debug Configuartions...*
-17. Default code upload to Nios V (without using OpenOCD):
-◦ Right click on the project: *Run As* → *Ashling RISC-V Hardware Debugging*.
-
-On the first attempt, a window will open in which you need to go to the second
-*Debugger* tab and set the *Target Configuration* by clicking the *Auto-detect
+9. In RiscFree right click on the project: *app* → *Build Project*. <br/>
+During the first building, a window will open with settings. Go to the second
+tab *Debugger* and set the *Target Configuration* by clicking the *Auto-detect
 Scan Chain* option:
 
 ![Image](https://github.com/user-attachments/assets/f221d30a-515a-4103-9cbe-e9dd9cf52221)
 
-Click on *Apply* then *Run*.
+10. Click *Apply* then *Run*.
+11. The sample code should be executed by Nios-V and its output in the terminal:
+
+![Image](https://github.com/user-attachments/assets/32cb47d7-3c62-4c43-83d4-a1d5e81d3ec2)
+
+### 3.4. Using OpenOCD
+1. Generate a configuration file from the terminal (where nios-shell is 
+running). If juart-terminal is running, close it (ctrl+c). Configuration file
+should be placed in the */software/app/* catalog (where the *hello.c* file is).
+Run:
+- `~/Quartus/qprogrammer/linux64/openocd-cfg-gen debugger.cfg`
+2. In RiscFree, configure how the code will be upload to Nios V:
+- Right click on the project: *Run As* → *Run Configuartions...*
+3. Double click on *GDB OpenOCD Debugging*, a new configuration will open,
+complete the first three tabs (*Main*, *Debugger* and *Startup*) similarly to 
+the following:
+
+- *Main* tab, enter the path to OpenOCD:
+
+![Image](https://github.com/user-attachments/assets/36ebc99a-b828-4a1c-8cbd-7b8eed2cc674)
+
+4. *Debbuger* tab, add the generated cfg configuration file with the *-f* flag 
+and add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints:
+
+![Image](https://github.com/user-attachments/assets/e890f11d-4815-4b67-9ad1-5bb07593bf28)
+
+5. *Startup* tab, uncheck *Enable Arm semihosting* option:
+
+![Image](https://github.com/user-attachments/assets/88fa213a-8e8a-4a6e-bb28-fadb4e90736d)
+
+6. Click *Apply*, then *Run*.
+7. Do the same with the debugger. Right click on the project: *Debug As* → 
+*Debug Configuartions...*
+
+### 3.5. Uploading the code and debugging
+1. Uploading the code without using OpenOCD (default settings): right click on 
+the project → *Run As...* → Click on *3 Ashling RISC-V Hardware Debugging* 
+option:
+
+![Image](https://github.com/user-attachments/assets/f1d8da18-7222-40fc-ac8c-0c3265fa08b5)
+
+2. Uploading the code with OpenOCD: right click on the project → *Run As...* → 
+Click on *Run Configurations...* → Select option *GDB OpenOCD Debugging* and
+OpenOCD configuraion, which was made in previous steps → Click *Run*:
+
+![Image](https://github.com/user-attachments/assets/e52caae3-8cfa-442c-a824-de57648a8565)
+
+3. Debugging works in the same way, the difference is that instead of *Run 
+As...* you must select the *Debug As...*.
