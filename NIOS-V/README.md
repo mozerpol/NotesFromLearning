@@ -221,3 +221,37 @@ Constant *PIO_BASE* is in *system.h*.
 3. Compiling, uploading the code, and debugging are performed as in the previous 
 steps.
 
+## 5. GPIO (input and output version)
+1. 1. You need to add a new element in Platform Designer. In this case, an 1-bit 
+GPIO input will be created:
+
+![Image](https://github.com/user-attachments/assets/17b85ed9-1f3e-4c3b-9730-bfe6f1a61bd8)
+
+2. Modify code in *main.c*:
+```cpp
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+
+int main()
+{
+	uint8_t button;
+
+	while(1)
+	{
+		button = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
+		printf("\nButton value: 0x%x", button);
+		for (int i = 0; i < 1000000; i++); // Delay loop
+		if ((button == 0x1))
+		{
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 0x00);
+		}
+		else
+		{
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 0xff);
+		}
+	}
+
+    return 0;
+}
+```
