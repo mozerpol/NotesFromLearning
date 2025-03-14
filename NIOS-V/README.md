@@ -186,3 +186,38 @@ OpenOCD configuraion, which was made in previous steps → Click *Run*:
 
 3. Debugging works in the same way, the difference is that instead of *Run 
 As...* you must select the *Debug As...*.
+
+## 4. GPIO (output version)
+Creating a project is the same as in the previous step (number 3). 
+1. You need to add a new element in Platform Designer:
+
+![Image](https://github.com/user-attachments/assets/06fbc19a-9a9e-4215-9a9f-fe11abd7f3ec)
+
+Remember about adding a name in *Export* column (in this case is *leds*) and 
+configuring parameters. In this case, an 8-bits GPIO output will be created:
+
+![Image](https://github.com/user-attachments/assets/d3bf35fc-b391-4f32-9271-4c5871f7406a)
+
+Remember alos about assigning base addresses.
+
+2. Add code to *main.c*:
+```cpp
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+
+int main()
+{
+    IOWR_ALTERA_AVALON_PIO_DATA(PIO_BASE, 0xff);
+    return 0;
+}
+```
+
+File *altera_avalon_pio_regs.h* is locate in *~/software/bsp/drivers/inc/*. <br/>
+File *system.h* is locate in *~/software/bsp/*. <br/>
+Function *IOWR_ALTERA_AVALON_PIO_DATA* is in *altera_avalon_pio_regs.h*. <br/>
+Constant *PIO_BASE* is in *system.h*.
+
+3. Compiling, uploading the code, and debugging are performed as in the previous 
+steps.
+
