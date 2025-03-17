@@ -213,8 +213,8 @@ int main()
 }
 ```
 
-File *altera_avalon_pio_regs.h* is locate in *~/software/bsp/drivers/inc/*. <br/>
 File *system.h* is locate in *~/software/bsp/*. <br/>
+File *altera_avalon_pio_regs.h* is locate in *~/software/bsp/drivers/inc/*. <br/>
 Function *IOWR_ALTERA_AVALON_PIO_DATA* is in *altera_avalon_pio_regs.h*. <br/>
 Constant *PIO_BASE* is in *system.h*.
 
@@ -255,3 +255,70 @@ int main()
     return 0;
 }
 ```
+
+## 6. Timer and interrupts
+1. Add a new element in Platform Designer:
+
+![Image](https://github.com/user-attachments/assets/5cb62bb8-f8a4-491b-bf82-1c61201a7a6f)
+
+Parameters for timer:
+
+![Image](https://github.com/user-attachments/assets/912d0db5-c8a1-40ea-8c1a-328f72d73ad6)
+
+Additionally, change the interrupt vector in the *IRQ* column. The timer should 
+be assigned number 1, JTAG 0. This is the interrupt priority. <br/>
+Remember alos about assigning base addresses.
+
+2. Modify code in *main.c*:
+```cpp
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+
+void init_timer_interrupt( void );
+static void timer_isr( void * context, alt_u32 id);
+
+int main()
+{
+    printf("Hello!\n");
+    init_timer_interrupt();
+
+	while(1){ }
+
+    return 0;
+}
+
+
+void init_timer_interrupt( void )
+{
+    // Register the ISR with HAL
+    alt_ic_isr_register(TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID,
+                        TIMER_0_IRQ, (void *)timer_isr,
+                        NULL,
+                        0x0);
+
+    // Start the timer
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE,
+                                    ALTERA_AVALON_TIMER_CONTROL_CONT_MSK |
+                                    ALTERA_AVALON_TIMER_CONTROL_START_MSK |
+                                    ALTERA_AVALON_TIMER_CONTROL_ITO_MSK);
+}
+static void timer_isr( void * context, alt_u32 id)
+{
+    static int count = 0;
+
+    // Clear the interrupt
+    IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
+
+    // Do something
+    printf("\nTimer Expired: %d", count++);
+}
+```
+
+File *system.h* is locate in *~/software/bsp/*. <br/>
+File *altera_avalon_timer_regs.h* is locate in *~/software/bsp/drivers/inc/*. <br/>
+File *sys/alt_irq.h* is locate in *~/software/bsp/HAL/inc/sys/*. <br/>
+Function *alt_ic_isr_register* is in *alt_irq.h*. <br/>
+Constant *IOWR_ALTERA_AVALON_TIMER_CONTROL* is in *altera_avalon_timer_regs.h* <br/>
+Constant *TIMER_0_BASE* is in *system.h*.
