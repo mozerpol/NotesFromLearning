@@ -18,7 +18,7 @@ not in $PATH):
 
 ## 2. Possible problems
 1. To get the latest version of code executed by Nios V, you need to load the
-sof file into the FPGA, then compile the Nios V project in RiscFree and upload 
+sof file into the FPGA, then compile the Nios V project in RiscFree and upload
 it to Nios V.
 2. After loading a fresh sof into the FPGA, debugging only works on the first
 run. In the next runs, Ashling RiscFree returns the error:
@@ -45,7 +45,7 @@ Designer.
 
 ![Image](https://github.com/user-attachments/assets/5d2f6500-0db5-4d09-9f0b-1e9cd425bb21)
 
-Nios V Settings (all options in Vectors *Reset Agent* are avalible after 
+Nios V Settings (all options in Vectors *Reset Agent* are avalible after
 assignign base addreses. It's done later):
 
 ![Image](https://github.com/user-attachments/assets/b742fbda-9891-47c5-b5d6-568c6063799e)
@@ -64,8 +64,8 @@ project.
 5. Click *Generate HDL* (bottom right corner), it will generate with warnings,
 but that's OK.
 6. Click *Finish*.
-7. Add the Platform Designer generated file: *name*.qip (should be in 
-*name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right 
+7. Add the Platform Designer generated file: *name*.qip (should be in
+*name_from_platform_designer/synthesis/name.qpip*). Go to *Files* tab, right
 click *Add/Remove Files* in *Project*:
 
 ![Image](https://github.com/user-attachments/assets/a2a9b455-a930-4a5c-b3ce-cbbbeaa69a2d)
@@ -105,7 +105,7 @@ tab, nios-shell is in a separate one):
 2. After the program opens, click *Create a project*.
 3. Expand *C/C++* and select the *C Project* option. *Next*.
 4. Project name: app, location for the project is catalog: *./software/app/*. <br/>
-Project type: expand Cmake driven and select option: Empty Project. <br/> It 
+Project type: expand Cmake driven and select option: Empty Project. <br/> It
 should look something like this:
 
 ![Image](https://github.com/user-attachments/assets/1c63b750-052e-4e88-bdcd-a0d68cf9506b)
@@ -143,7 +143,7 @@ Scan Chain* option:
 ![Image](https://github.com/user-attachments/assets/32cb47d7-3c62-4c43-83d4-a1d5e81d3ec2)
 
 ### 3.4. Using OpenOCD
-1. Generate a configuration file from the terminal (where nios-shell is 
+1. Generate a configuration file from the terminal (where nios-shell is
 running). If juart-terminal is running, close it (ctrl+c). Configuration file
 should be placed in the */software/app/* catalog (where the *hello.c* file is).
 Run:
@@ -151,14 +151,14 @@ Run:
 2. In RiscFree, configure how the code will be upload to Nios V:
 - Right click on the project: *Run As* → *Run Configuartions...*
 3. Double click on *GDB OpenOCD Debugging*, a new configuration will open,
-complete the first three tabs (*Main*, *Debugger* and *Startup*) similarly to 
+complete the first three tabs (*Main*, *Debugger* and *Startup*) similarly to
 the following:
 
 - *Main* tab, enter the path to OpenOCD:
 
 ![Image](https://github.com/user-attachments/assets/36ebc99a-b828-4a1c-8cbd-7b8eed2cc674)
 
-4. *Debbuger* tab, add the generated cfg configuration file with the *-f* flag 
+4. *Debbuger* tab, add the generated cfg configuration file with the *-f* flag
 and add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints:
 
 ![Image](https://github.com/user-attachments/assets/e890f11d-4815-4b67-9ad1-5bb07593bf28)
@@ -168,32 +168,32 @@ and add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints:
 ![Image](https://github.com/user-attachments/assets/88fa213a-8e8a-4a6e-bb28-fadb4e90736d)
 
 6. Click *Apply*, then *Run*.
-7. Do the same with the debugger. Right click on the project: *Debug As* → 
+7. Do the same with the debugger. Right click on the project: *Debug As* →
 *Debug Configuartions...*
 
 ### 3.5. Uploading the code and debugging
-1. Uploading the code without using OpenOCD (default settings): right click on 
-the project → *Run As...* → Click on *3 Ashling RISC-V Hardware Debugging* 
+1. Uploading the code without using OpenOCD (default settings): right click on
+the project → *Run As...* → Click on *3 Ashling RISC-V Hardware Debugging*
 option:
 
 ![Image](https://github.com/user-attachments/assets/f1d8da18-7222-40fc-ac8c-0c3265fa08b5)
 
-2. Uploading the code with OpenOCD: right click on the project → *Run As...* → 
+2. Uploading the code with OpenOCD: right click on the project → *Run As...* →
 Click on *Run Configurations...* → Select option *GDB OpenOCD Debugging* and
 OpenOCD configuraion, which was made in previous steps → Click *Run*:
 
 ![Image](https://github.com/user-attachments/assets/e52caae3-8cfa-442c-a824-de57648a8565)
 
-3. Debugging works in the same way, the difference is that instead of *Run 
+3. Debugging works in the same way, the difference is that instead of *Run
 As...* you must select the *Debug As...*.
 
 ## 4. GPIO (output version)
-Creating a project is the same as in the previous step (number 3). 
+Creating a project is the same as in the previous step (number 3).
 1. You need to add a new element in Platform Designer:
 
 ![Image](https://github.com/user-attachments/assets/06fbc19a-9a9e-4215-9a9f-fe11abd7f3ec)
 
-Remember about adding a name in *Export* column (in this case is *leds*) and 
+Remember about adding a name in *Export* column (in this case is *leds*) and
 configuring parameters. In this case, an 8-bits GPIO output will be created:
 
 ![Image](https://github.com/user-attachments/assets/d3bf35fc-b391-4f32-9271-4c5871f7406a)
@@ -218,11 +218,11 @@ File *altera_avalon_pio_regs.h* is locate in *~/software/bsp/drivers/inc/*. <br/
 Function *IOWR_ALTERA_AVALON_PIO_DATA* is in *altera_avalon_pio_regs.h*. <br/>
 Constant *PIO_BASE* is in *system.h*.
 
-3. Compiling, uploading the code, and debugging are performed as in the previous 
+3. Compiling, uploading the code, and debugging are performed as in the previous
 steps.
 
 ## 5. GPIO (input and output version)
-1. 1. You need to add a new element in Platform Designer. In this case, an 1-bit 
+1. 1. You need to add a new element in Platform Designer. In this case, an 1-bit
 GPIO input will be created:
 
 ![Image](https://github.com/user-attachments/assets/17b85ed9-1f3e-4c3b-9730-bfe6f1a61bd8)
@@ -265,7 +265,7 @@ Parameters for timer:
 
 ![Image](https://github.com/user-attachments/assets/912d0db5-c8a1-40ea-8c1a-328f72d73ad6)
 
-Additionally, change the interrupt vector in the *IRQ* column. The timer should 
+Additionally, change the interrupt vector in the *IRQ* column. The timer should
 be assigned number 1, JTAG 0. This is the interrupt priority. <br/>
 Remember alos about assigning base addresses.
 
