@@ -340,3 +340,70 @@ Constant *IOWR_ALTERA_AVALON_TIMER_CONTROL* is in *altera_avalon_timer_regs.h* <
 Constant *TIMER_0_BASE* is in *system.h*.
 
 ## 7. Custom peripheral <a name="7"></a>
+1. Create simple module: <br/>
+```v
+library IEEE;
+  use IEEE.std_logic_1164.all;
+  
+entity and_gate is port (
+    // Signals clk, rst_n, chip_select, write, read, writedata and readdata are
+    // required by Avalon.
+	i_clk           : in std_logic;
+	i_rst_n         : in std_logic;
+	i_chip_select 	: in std_logic;
+	i_write	        : in std_logic;
+	i_read          : in std_logic;
+	i_writedata 	: in std_logic_vector(31 downto 0);
+	o_readdata      : out std_logic_vector(31 downto 0);
+	// o_led is output from module which will be assigned to LED on the board
+	o_led           : out std_logic
+  );
+end entity and_gate;
+
+architecture rtl of and_gate is
+	signal buff_led : std_logic;
+begin
+
+	o_led 	<= buff_led;
+
+  process_and : process (i_clk) is
+  begin
+
+    if (i_clk'event and i_clk = '1') then
+		if (i_rst_n = '0') then
+			o_readdata 	<= (others => '0');
+			buff_led 	<= '0';
+		else
+			if (i_chip_select = '1' and i_write = '1') then
+				buff_led 		<= i_writedata(0);
+			elsif (i_chip_select = '1' and i_read = '1') then
+				o_readdata(0)	<= buff_led;
+				o_readdata(31 downto 1)	<= (others => '0');
+			else
+				buff_led 		<= buff_led;
+			end if;
+		end if;
+	end if;
+
+  end process process_and;
+end architecture rtl;
+```
+
+2. Save, run analysis and elaboration in Quartus.
+3. Open Platform Designer, in IP Catalog click on *New Component...*
+4. In *Files* tab click on *Add File...* and add recently created file.
+5. Click on *Analyze Synthesis Files*:
+![Image](https://github.com/user-attachments/assets/2311abda-706c-4bc3-939c-94672f6c9caa)
+6. Open *Signals & Interfaces* tab. Change *Associated Clock* and *Associated 
+Reset*, Add a new interfaces like: *Clock input*, *Reset input* and *Conduit*,
+remove empty interfaces (probably *i* and *o*). Modify the existing component to 
+look like this:
+![Image](https://github.com/user-attachments/assets/b920d159-b6e8-4c0f-82f3-838f38df25e3)
+7. Change *Signal Type* if it is necessary:
+![Image](https://github.com/user-attachments/assets/23c6cb60-4cdc-4e29-bbaf-99e278ea42b0)
+8. Change *Type* for interfaces if it's necessary:
+![Image](https://github.com/user-attachments/assets/ea9ae3e9-2aaf-4973-acda-6af7de8bf5ad)
+9. Click *Finish*.
+10. In Platform Designer add a new component, by clicking on new ip in IP 
+catalog. Connect signals, assign a base addres:
+![Image](https://github.com/user-attachments/assets/06f4cc1a-6583-44a9-994d-3dc9490156f3)
