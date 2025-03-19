@@ -1,6 +1,22 @@
 # Nios V getting started
+_____________
 
-## 1. Software used:
+## Table of contents <a name="tof"></a>
+1. [Software used](#1)
+2. [Possible problems](#2)
+3. [Hello world](#3)
+   1. [Quartus part](#31)
+   2. [niosv-shell part](#32)
+   3. [Ashling RiscFree part](#32)
+   4. [Using OpenOCD](#34)
+   5. [Uploading the code and debugging](#35)
+4. [GPIO (output version)](#4)
+5. [GPIO (input version)](#5)
+6. [Timer and interrupts](#6)
+7. [Custom peripheral](#7)
+
+
+## 1. Software used <a name="1"></a>
 - Debian GNU/Linux 12 (bookworm) x86_64
 - Tested on: Cyclone IV / MAX 10
 - Quartus: Prime 23.1 standard
@@ -16,7 +32,7 @@ not in $PATH):
 - niosv-app: ~/Quartus/niosv/bin/niosv-app
 - niosv-shell: ~/Quartus/niosv/bin/niosv-shell
 
-## 2. Possible problems
+## 2. Possible problems <a name="2"></a>
 1. To get the latest version of code executed by Nios V, you need to load the
 sof file into the FPGA, then compile the Nios V project in RiscFree and upload
 it to Nios V.
@@ -35,8 +51,8 @@ CLI.
 
 The solution to these problems is to use OpenOCD.
 
-## 3. Hello world
-### 3.1. Quartus part
+## 3. Hello world <a name="3"></a>
+### 3.1. Quartus part <a name="31"></a>
 Create a new Nios V project in Quartus:
 1. *File* → *New Project Wizard* → ... <br/>
 Remember the project name, because you will need to enter it later in Platform
@@ -74,7 +90,7 @@ click *Add/Remove Files* in *Project*:
 9. Compile everything.
 10. Upload sof to FPGA.
 
-### 3.2. niosv-shell part
+### 3.2. niosv-shell part <a name="32"></a>
 1. Open the terminal and go to the project directory (where the file with the
 *sopcinfo* extension is, i.e. where the Quartus project is). Run Nios command
 shell:
@@ -98,7 +114,7 @@ is):
 Every time something is changed in Platform Designer, you have to repeat steps 8
 and 9.
 
-### 3.3. Ashling RiscFree part
+### 3.3. Ashling RiscFree part <a name="33"></a>
 1. Start Ashling RiscFree, in a new instance of the terminal (it can be a new
 tab, nios-shell is in a separate one):
 - `~/Quartus/riscfree/RiscFree/RiscFree` <br/>
@@ -142,7 +158,7 @@ Scan Chain* option:
 
 ![Image](https://github.com/user-attachments/assets/32cb47d7-3c62-4c43-83d4-a1d5e81d3ec2)
 
-### 3.4. Using OpenOCD
+### 3.4. Using OpenOCD <a name="34"></a>
 1. Generate a configuration file from the terminal (where nios-shell is
 running). If juart-terminal is running, close it (ctrl+c). Configuration file
 should be placed in the */software/app/* catalog (where the *hello.c* file is).
@@ -171,7 +187,7 @@ and add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints:
 7. Do the same with the debugger. Right click on the project: *Debug As* →
 *Debug Configuartions...*
 
-### 3.5. Uploading the code and debugging
+### 3.5. Uploading the code and debugging <a name="35"></a>
 1. Uploading the code without using OpenOCD (default settings): right click on
 the project → *Run As...* → Click on *3 Ashling RISC-V Hardware Debugging*
 option:
@@ -187,7 +203,7 @@ OpenOCD configuraion, which was made in previous steps → Click *Run*:
 3. Debugging works in the same way, the difference is that instead of *Run
 As...* you must select the *Debug As...*.
 
-## 4. GPIO (output version)
+## 4. GPIO (output version) <a name="4"></a>
 Creating a project is the same as in the previous step (number 3).
 1. You need to add a new element in Platform Designer:
 
@@ -221,7 +237,7 @@ Constant *PIO_BASE* is in *system.h*.
 3. Compiling, uploading the code, and debugging are performed as in the previous
 steps.
 
-## 5. GPIO (input and output version)
+## 5. GPIO (input and output version) <a name="5"></a>
 1. 1. You need to add a new element in Platform Designer. In this case, an 1-bit
 GPIO input will be created:
 
@@ -256,7 +272,7 @@ int main()
 }
 ```
 
-## 6. Timer and interrupts
+## 6. Timer and interrupts <a name="6"></a>
 1. Add a new element in Platform Designer:
 
 ![Image](https://github.com/user-attachments/assets/5cb62bb8-f8a4-491b-bf82-1c61201a7a6f)
@@ -322,3 +338,5 @@ File *sys/alt_irq.h* is locate in *~/software/bsp/HAL/inc/sys/*. <br/>
 Function *alt_ic_isr_register* is in *alt_irq.h*. <br/>
 Constant *IOWR_ALTERA_AVALON_TIMER_CONTROL* is in *altera_avalon_timer_regs.h* <br/>
 Constant *TIMER_0_BASE* is in *system.h*.
+
+## 7. Custom peripheral <a name="7"></a>
