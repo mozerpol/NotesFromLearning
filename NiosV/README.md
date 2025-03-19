@@ -344,7 +344,7 @@ Constant *TIMER_0_BASE* is in *system.h*.
 ```v
 library IEEE;
   use IEEE.std_logic_1164.all;
-  
+
 entity and_gate is port (
     // Signals clk, rst_n, chip_select, write, read, writedata and readdata are
     // required by Avalon.
@@ -394,9 +394,9 @@ end architecture rtl;
 4. In *Files* tab click on *Add File...* and add recently created file.
 5. Click on *Analyze Synthesis Files*:
 ![Image](https://github.com/user-attachments/assets/2311abda-706c-4bc3-939c-94672f6c9caa)
-6. Open *Signals & Interfaces* tab. Change *Associated Clock* and *Associated 
+6. Open *Signals & Interfaces* tab. Change *Associated Clock* and *Associated
 Reset*, Add a new interfaces like: *Clock input*, *Reset input* and *Conduit*,
-remove empty interfaces (probably *i* and *o*). Modify the existing component to 
+remove empty interfaces (probably *i* and *o*). Modify the existing component to
 look like this:
 ![Image](https://github.com/user-attachments/assets/b920d159-b6e8-4c0f-82f3-838f38df25e3)
 7. Change *Signal Type* if it is necessary:
@@ -404,7 +404,7 @@ look like this:
 8. Change *Type* for interfaces if it's necessary:
 ![Image](https://github.com/user-attachments/assets/ea9ae3e9-2aaf-4973-acda-6af7de8bf5ad)
 9. Click *Finish*.
-10. In Platform Designer add a new component, by clicking on new ip in IP 
+10. In Platform Designer add a new component, by clicking on new ip in IP
 catalog. Connect signals, assign a base address:
 ![Image](https://github.com/user-attachments/assets/06f4cc1a-6583-44a9-994d-3dc9490156f3)
 11. Click *Generate HDL...*. *Finish*.
