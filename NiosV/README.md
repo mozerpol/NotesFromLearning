@@ -405,5 +405,20 @@ look like this:
 ![Image](https://github.com/user-attachments/assets/ea9ae3e9-2aaf-4973-acda-6af7de8bf5ad)
 9. Click *Finish*.
 10. In Platform Designer add a new component, by clicking on new ip in IP 
-catalog. Connect signals, assign a base addres:
+catalog. Connect signals, assign a base address:
 ![Image](https://github.com/user-attachments/assets/06f4cc1a-6583-44a9-994d-3dc9490156f3)
+11. Click *Generate HDL...*. *Finish*.
+12. Start compilation.
+13. Open Ashling RiscFree and add a code to main.c: <br/>
+```cpp
+#include <stdio.h>
+#include "system.h"
+#include "io.h"
+
+int main()
+{
+    IOWR(MY_IP_0_BASE, 0, 0x1);
+    printf("\nValue: 0x%x", IORD(MY_IP_0_BASE, 0));
+}
+```
+14. Build and upload to board.
