@@ -38,3 +38,9 @@ wyższych cen dla konsumentów.
 3. Inflacja strukturalna: Związana z długoterminowymi zmianami w gospodarce, 
 takimi jak zmiany w technologii, demografii czy polityce rynkowej, które 
 wpływają na podaż i popyt.
+
+**CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen 
+towarów i usług nabywanych przez przeciętne gospodarstwo domowe. Wykres inflacji
+w Polsce od 1992 do 2025 roku:
+
+Obrazek 2
