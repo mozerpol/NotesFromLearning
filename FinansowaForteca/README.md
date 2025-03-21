@@ -25,3 +25,16 @@ Polska waluta w ciągu ostatnich 23 lat straciła 52 % swojej realnej siły
 nabywczej, to znaczy, że za zakupy, za które zapłaciłem w 1999 roku 100 złotych, 
 w roku 2022 zapłaciłem 210, co odpowiada skumulowanej inflacji w ciągu ostatnich 
 23 lat na poziomie 110%!
+
+**Inflacja** - proces, w którym ogólny poziom cen dóbr i usług w gospodarce 
+rośnie w czasie. Oznacza to, że siła nabywcza pieniądza maleje. Inflacja jest 
+zazwyczaj mierzona za pomocą wskaźnika cen towarów i usług konsumpcyjnych (CPI) 
+lub innych wskaźników inflacji. Inflacja może być spowodowana różnymi 
+czynnikami, w tym:
+1. Popytowa inflacja: Występuje, gdy popyt na dobra i usługi przewyższa ich 
+podaż.
+2. Kosztowa inflacja: Powstaje, gdy koszty produkcji rosną, co prowadzi do 
+wyższych cen dla konsumentów.
+3. Inflacja strukturalna: Związana z długoterminowymi zmianami w gospodarce, 
+takimi jak zmiany w technologii, demografii czy polityce rynkowej, które 
+wpływają na podaż i popyt.
