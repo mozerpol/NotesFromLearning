@@ -68,3 +68,26 @@ Przykłady banków centralnych to:
 - Federal Reserve (Fed) w Stanach Zjednoczonych,
 - Europejski Bank Centralny (EBC) w strefie euro,
 - Bank Anglii w Wielkiej Brytanii.
+
+**Stopa procentowa** to wskaźnik, który określa koszt pożyczania pieniędzy lub 
+zysk z oszczędności (np. obligacji) wyrażony jako procent kwoty pożyczonej w 
+danym okresie, zazwyczaj w skali rocznej. Jak działa stopa procentowa?
+- Pożyczki: Kiedy bierzesz kredyt w banku na rok, to bank nalicza odsetki na 
+podstawie ustalonej stopy procentowej. Na przykład, jeśli bierzesz kredyt na 
+1000 zł z roczną stopą procentową wynoszącą 5%, to po roku będziesz musiał 
+zwrócić 1050 zł (1000 zł + 50 zł odsetek).
+- Oszczędności: Jeśli odkładasz pieniądze na lokacie, to bank wypłaca odsetki. 
+Na przykład, jeśli wpłacisz 500 zł na lokatę z roczną stopą procentową wynoszącą 
+3%, po roku otrzymasz 15 zł odsetek (500 zł * 0,03).
+
+Rodzaje stóp procentowych:
+1. Stopa nominalna: To ogólna stopa procentowa, która nie uwzględnia inflacji. 
+Jest to stawka, którą banki oferują na depozyty lub pobierają na pożyczki.
+2. Stopa realna: To stopa procentowa skorygowana o inflację. Oznacza to, że od 
+stopy nominalnej odejmuje się wskaźnik inflacji, co pozwala lepiej ocenić 
+rzeczywistą wartość zysków lub kosztów związanych z pożyczkami i 
+oszczędnościami.
+
+Stopy procentowe w polsce:
+
+obrazek 7
