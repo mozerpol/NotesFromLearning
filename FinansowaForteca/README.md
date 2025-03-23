@@ -91,3 +91,14 @@ oszczędnościami.
 Stopy procentowe w polsce:
 
 obrazek 7
+
+## CIT i podatek belki
+
+**CIT** (Korporacyjny podatek dochodowy) - podatek płacony przez osoby 
+prawne, takie jak spółki, od osiąganych przez nie dochodów. Standardowa stawka 
+CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%.
+
+Generalnie jak patrze to CIT w różnych krajach europejskich jest dużo wyższy niż
+w Polsce:
+
+Obrazek 6
