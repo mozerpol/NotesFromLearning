@@ -102,3 +102,21 @@ Generalnie jak patrze to CIT w różnych krajach europejskich jest dużo wyższy
 w Polsce:
 
 Obrazek 6
+
+**Podatek Belki** - potoczna nazwa dla podatku od zysków kapitałowych, który 
+wynosi 19%. Jest on pobierany od zysków uzyskanych z inwestycji, takich jak 
+odsetki od lokat bankowych, zyski ze sprzedaży akcji czy funduszy 
+inwestycyjnych. Podatek ten jest pobierany u źródła, co oznacza, że banki i 
+instytucje finansowe odprowadzają go bezpośrednio od zysków przed ich wypłatą.
+
+Jeżeli inflacja wynosi 2.5% to wydaje się, że lokata na 2.5% jest dobrym 
+pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć jak 
+powinna być oprocentowana lokata wyliczyć się wg wzoru: <br/>
+`wymagane oprocentowanie = stopa inflacji / (1 - stawka podatku)` <br/>
+Dla oprocentowania lokaty 2.5% i podatku belki 19%: <br/>
+X = 0.025/(1 - 0.19) = 0.025/0.81 = 0.03086 = 3.086%
+
+Zależność minimalnego oprocentowania lokaty od inflacji:
+
+wykres 3
+
