@@ -251,3 +251,19 @@ przewidują, że stopy procentowe wzrosną, mogą unikać zakupu obligacji o sta
 stopie kuponowej, ponieważ ich wartość może spaść. Z kolei, jeśli przewidują 
 spadek stóp procentowych, mogą być bardziej skłonni do zakupu obligacji, 
 ponieważ ich wartość może wzrosnąć. 
+
+**WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki 
+w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np. 
+1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać 
+oprocentowanie pożyczek i inwestycji, jest często używany jako punkt odniesienia 
+do ustalania oprocentowania kredytów i lokat w polskich bankach. Na przykład, 
+kredyty hipoteczne mogą być ustalane na podstawie WIBOR + marża banku. WIBOR i 
+stopa procentowa to nie to samo. WIBOR jest specyficznym rodzajem stopy 
+procentowej, która dotyczy rynku międzybankowego w Polsce. Stopa procentowa to 
+szerszy termin, bardziej ogólny. <br/>
+**EURIBOR** - Euro Interbank Offered Rate, referencyjna wysokość oprocentowania 
+depozytów i kredytów na rynku międzybankowym strefy euro. Stawki EURIBOR 
+wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6, 9 
+miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i 
+depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji 
+pochodnych. 
