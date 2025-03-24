@@ -120,3 +120,134 @@ Zależność minimalnego oprocentowania lokaty od inflacji:
 
 wykres 3
 
+## Obligacje i ich rodzaje, emitent, nominał, kupon, WIBOR, EURIBOR
+**Obligacja** to jakby umowa, w której pożyczasz pieniądze komuś (np. rządowi 
+lub firmie), a oni obiecują oddać ci te pieniądze później i płacić ci za to 
+odsetki. <br/>
+Terminologia w odniesieniu do obligacji:
+- **Emitent** - to podmiot, który emituje obligacje lub inne papiery wartościowe
+w celu pozyskania kapitału.
+- **Wartość nominalna** - to kwota, która jest wskazana na obligacji lub innym 
+instrumencie finansowym, i oznacza, ile pieniędzy zostanie zwrócone inwestorowi 
+w dniu wykupu. Na przykład, jeśli obligacja ma wartość nominalną 1000 zł, to po 
+jej wykupie inwestor otrzyma 1000 zł.
+- **Nominał** - to kwota, na którą obligacja jest emitowana i która jest 
+zwracana inwestorowi w momencie wykupu.
+- **Kupon** - to odsetki, które emitent obligacji zobowiązuje się wypłacać 
+inwestorowi w określonych terminach (np. co pół roku lub rocznie). Kupon jest 
+wyrażany jako procent wartości nominalnej obligacji. Na przykład, jeśli 
+obligacja ma nominał 1000 zł i kupon wynosi 5%, to inwestor otrzyma 50 zł 
+rocznie w formie odsetek (5% z 1000 zł).
+
+Możliwe obligacje skarbowe (stan marzec 2024):
+
+obrazek 4
+
+Jak można je odczytać **skróty obligacji skarbowych**:
+1. Rodzaj obligacji: Skrót zaczyna się od liter, które wskazują na typ 
+obligacji. Na przykład:
+- TS – obligacje skarbowe (terminowe)
+- WZ – obligacje wieczyste
+- OS – obligacje oszczędnościowe
+2. Termin wykupu: Następnie mogą występować cyfry, które wskazują na rok wykupu 
+obligacji. Na przykład, jeśli w skrócie pojawia się "2025", oznacza to, że 
+obligacje te wykupione będą w 2025 roku.
+3. Oprocentowanie: Czasami w skrócie mogą być zawarte informacje o 
+oprocentowaniu, na przykład "3,5%" może oznaczać, że obligacje mają stałe 
+oprocentowanie na poziomie 3,5%.
+
+Przykład skrótu: TS0425 – oznacza to, że jest to obligacja skarbowa (TS), która 
+wykupi się w kwietniu 2025 roku. Różnice między TS, WZ i OS dotyczą głównie 
+terminu wykupu, sposobu oprocentowania oraz grupy docelowej inwestorów.
+Obligacje wieczyste to instrument finansowy dość rzadko spotykany.
+
+Można też kupić obligacje innych krajów np. niemieckie. Rodzaje obligacji 
+niemieckich:
+- Bundesanleihen: To długoterminowe obligacje skarbowe emitowane przez rząd 
+niemiecki. Mają zazwyczaj okres wykupu od 10 do 30 lat i oferują stałe 
+oprocentowanie.
+- Bundesschatzanweisungen: To krótkoterminowe obligacje skarbowe, które mają 
+okres wykupu od 2 do 5 lat. Oprocentowanie jest ustalane na aukcjach.
+- Bonds (Obligacje): Niemcy emitują również obligacje o różnych terminach wykupu 
+i oprocentowaniu, które są dostępne na rynku wtórnym.
+
+Jak kupić obligacje niemieckie:
+- Bezpośrednio przez rząd: Można kupić obligacje niemieckie bezpośrednio na 
+stronie internetowej Deutsche Finanzagentur, która zarządza emisją obligacji 
+skarbowych w Niemczech.
+- Przez banki i instytucje finansowe: Obligacje niemieckie są również dostępne w 
+bankach i instytucjach finansowych, które oferują usługi inwestycyjne. Można je 
+kupić za pośrednictwem konta maklerskiego.
+- Na giełdzie: Obligacje niemieckie są notowane na giełdach papierów 
+wartościowych, co umożliwia ich kupno i sprzedaż na rynku wtórnym.
+
+Są różne **rodzaje obligacji**, różnią się pod względem emitenta, struktury, 
+ryzyka oraz celu emisji:
+1. Obligacje skarbowe
+- Emitent: Rząd (np. obligacje skarbowe emitowane przez Ministerstwo Finansów).
+- Charakterystyka: Uważane za jedne z najbezpieczniejszych inwestycji, ponieważ 
+są zabezpieczone przez rząd.
+2. Obligacje korporacyjne
+- Emitent: Przedsiębiorstwa.
+- Charakterystyka: Oferują wyższe oprocentowanie niż obligacje skarbowe, ale 
+wiążą się z wyższym ryzykiem, ponieważ zależą od kondycji finansowej firmy.
+3. Obligacje komunalne
+- Emitent: Samorządy lokalne (miasta, gminy).
+- Charakterystyka: Służą do finansowania projektów publicznych, takich jak 
+budowa dróg czy szkół. Często są zwolnione z podatków.
+4. Obligacje zerokuponowe
+- Emitent: Różni emitenci.
+- Charakterystyka: Nie płacą odsetek w trakcie trwania obligacji. Zamiast tego 
+są sprzedawane po cenie niższej niż wartość nominalna, a zysk inwestora pochodzi 
+z różnicy między ceną zakupu a wartością nominalną, którą otrzymuje w dniu 
+wykupu.
+5. Obligacje o stałym oprocentowaniu
+- Emitent: Różni emitenci.
+- Charakterystyka: Oferują stałe oprocentowanie przez cały okres trwania 
+obligacji, co zapewnia przewidywalny dochód.
+6. Obligacje o zmiennym oprocentowaniu
+- Emitent: Różni emitenci.
+- Charakterystyka: Oprocentowanie jest uzależnione od wskaźników rynkowych 
+(np. WIBOR, LIBOR) i może się zmieniać w trakcie trwania obligacji.
+7. Obligacje konwertowalne
+- Emitent: Przedsiębiorstwa.
+- Charakterystyka: Dają inwestorowi możliwość konwersji obligacji na akcje 
+emitenta w określonym czasie i po ustalonej cenie. To łączy cechy obligacji i 
+akcji.
+8. Obligacje zabezpieczone
+- Emitent: Różni emitenci.
+- Charakterystyka: Zabezpieczone aktywami, co oznacza, że w przypadku 
+niewypłacalności emitenta, inwestorzy mają prawo do tych aktywów.
+9. Obligacje wysokodochodowe (junk bonds)
+- Emitent: Przedsiębiorstwa o niskiej wiarygodności kredytowej.
+- Charakterystyka: Oferują wysokie oprocentowanie, ale wiążą się z dużym 
+ryzykiem niewypłacalności.
+10. Obligacje inflacyjne
+- Emitent: Rząd.
+- Charakterystyka: Oprocentowanie jest dostosowywane do wskaźnika inflacji, co 
+chroni inwestorów przed spadkiem wartości nabywczej ich inwestycji.
+
+Stopy procentowe odgrywają kluczową rolę w cenach obligacji. Oto jak to działa:
+1. Ustalanie stopy kuponowej: Kiedy obligacja jest emitowana, ustalana jest 
+stopa kuponowa, która określa, ile odsetek inwestorzy otrzymają w zamian za 
+pożyczkę. Na przykład, jeśli obligacja ma wartość nominalną 1000 zł i stopę 
+kuponową 5%, inwestorzy otrzymają 50 zł rocznie w postaci odsetek.
+2. Wzrost stóp procentowych: Jeśli stopy procentowe na rynku wzrosną po emisji 
+obligacji, nowe obligacje będą emitowane z wyższymi stopami kuponowymi. W 
+rezultacie starsze obligacje z niższymi stopami kuponowymi stają się mniej 
+atrakcyjne. Inwestorzy będą skłonni płacić mniej za te obligacje, co prowadzi do 
+spadku ich ceny.
+3. Spadek stóp procentowych: Jeśli stopy procentowe spadną, nowe obligacje będą 
+emitowane z niższymi stopami kuponowymi. W takim przypadku starsze obligacje z 
+wyższymi stopami kuponowymi stają się bardziej atrakcyjne, co może prowadzić do 
+wzrostu ich ceny.
+4. Związek między stopą procentową a rentownością obligacji: Rentowność 
+obligacji to wskaźnik, który pokazuje, ile inwestorzy mogą zarobić na obligacji 
+w stosunku do jej ceny. Kiedy cena obligacji rośnie, jej rentowność spada, i 
+odwrotnie.
+5. Decyzje inwestycyjne: Inwestorzy podejmują decyzje o zakupie obligacji na 
+podstawie oczekiwań dotyczących przyszłych stóp procentowych. Jeśli inwestorzy 
+przewidują, że stopy procentowe wzrosną, mogą unikać zakupu obligacji o stałej 
+stopie kuponowej, ponieważ ich wartość może spaść. Z kolei, jeśli przewidują 
+spadek stóp procentowych, mogą być bardziej skłonni do zakupu obligacji, 
+ponieważ ich wartość może wzrosnąć. 
