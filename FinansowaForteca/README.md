@@ -305,3 +305,23 @@ Czyli zysk wynosi: <br/>
 
 ## Złoto, srebro
 
+## Akcje, giełda, indeks giełdowy
+**Akcje** - 
+
+**Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje 
+kupna/sprzedaży określonych instrumentów (np. samochodów czy owoców). Transakcje
+na giełdach zawierane są zgodnie z obowiązującym regulaminem, między członkami 
+giełdy.
+
+**Indeks giełdowy** - wskaźnik, który mierzy wartość grupy akcji notowanych na 
+giełdzie. Indeksy giełdowe są używane do oceny ogólnej kondycji rynku lub 
+konkretnego segmentu rynku. Składa się z wybranych akcji, które reprezentują 
+określoną grupę firm, na przykład największe firmy w danym kraju, firmy z 
+określonego sektora (np. technologie, zdrowie). Wartość indeksu jest obliczana 
+na podstawie cen akcji wchodzących w jego skład. Istnieją różne metody 
+obliczania indeksów, w tym:
+- Indeks ważony kapitalizacją - wartość indeksu jest obliczana na podstawie 
+kapitalizacji rynkowej firm, co oznacza, że większe firmy mają większy wpływ na 
+wartość indeksu.
+- Indeks ważony ceną - wartość indeksu jest obliczana na podstawie cen akcji, co 
+oznacza, że droższe akcje mają większy wpływ na wartość indeksu.
