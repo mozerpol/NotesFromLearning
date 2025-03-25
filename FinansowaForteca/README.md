@@ -267,3 +267,41 @@ wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6
 miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i 
 depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji 
 pochodnych. 
+
+
+## Instrument finansowy, lokata, konto oszczędnościowe
+**Instrument finansowy** - to umowa, która ma wartość finansową. Instrumenty 
+finansowe można podzielić na różne kategorie, na przykład akcje, obligacje, 
+konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne 
+waluty na rynku walutowym). <br/>
+**Konto oszczędnościowe** - rachunek bankowy, który pozwala na gromadzenie 
+oszczędności, z możliwością dokonywania wpłat i wypłat w dowolnym momencie. 
+Oprocentowanie kont oszczędnościowych jest zazwyczaj niższe niż w przypadku 
+lokat, ale może być zmienne i dostosowywane przez bank.
+**Lokata** - konto, na którym deponuje się określoną kwotę pieniędzy na ustalony 
+czas (np. 3 miesiące, 6 miesięcy, 1 rok) w zamian za wyższe oprocentowanie.
+
+Lokata i konto oszczędnościowe opodatkowane jest podatkiem belki 19% od zysków.
+
+Jak obliczyć zysk z lokaty? <br/>
+Należy pomnożyć kwotę lokaty przez stawkę oprocentowania i liczbę dni trwania 
+lokaty, a następnie wynik tego działania podzielić przez 365 dni. W kolejnym 
+kroku kwotę odsetek pomniejszamy o 19% podatek od zysków kapitałowych. 
+Przykład: <br/>
+Kapitał początkowy: 10 000 zł <br/>
+Oprocentowanie: 5% w skali roku <br/>
+Czas trwania lokaty: 6 miesięcy <br/>
+Najpierw obliczamy odsetki: <br/>
+10 000 zł x 5% = 500 zł (za cały rok)
+
+Ponieważ lokata trwa 6 miesięcy, czyli połowę roku, to zysk wynosi: <br/>
+500 zł / 2 = 250 zł
+
+Teraz odejmujemy podatek (19%): <br/>
+250 zł x 19% = 47,50zł
+
+Czyli zysk wynosi: <br/>
+250 zł – 47,50 zł = 202,50 zł
+
+## Złoto, srebro
+
