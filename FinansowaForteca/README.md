@@ -325,3 +325,123 @@ kapitalizacji rynkowej firm, co oznacza, że większe firmy mają większy wpły
 wartość indeksu.
 - Indeks ważony ceną - wartość indeksu jest obliczana na podstawie cen akcji, co 
 oznacza, że droższe akcje mają większy wpływ na wartość indeksu.
+
+**Kapitalizacja rynkowa** - wartość rynkowa wszystkich akcji danej spółki, 
+obliczana jako iloczyn liczby akcji w obiegu i ceny jednej akcji. Jest to 
+wskaźnik, który pomaga ocenić wielkość i wartość firmy na rynku. Czyli oblicza
+się to według wzoru: Kapitalizacja rynkowa = Liczba akcji w obiegu ×
+Cena jednej akcji.
+
+**Giełda papierów wartościowych** - to miejsce, gdzie ludzie kupują i sprzedają 
+różne instrumenty finansowe (np. akcje czy obligacje). Do najważniejszych giełd 
+na świecie zalicza się:
+1. NYSE, Nowy Jork - New York Stock Exchange, największa giełda papierów 
+wartościowych na świecie (jest na Wall Street). Głównie notuje większe, bardziej 
+ustabilizowane firmy, często z długą historią działalności. Notowane są różne
+indeksy, ale do najpopularniejszych należą:
+- Dow Jones Industrial Average (DJIA) - składa się z 30 dużych, amerykańskich 
+firm, które są reprezentatywne dla różnych sektorów gospodarki. Indeks jest 
+ważony ceną, co oznacza, że droższe akcje mają większy wpływ na jego wartość. 
+Został stworzony przez Charlesa Dowa i statystyka Edwarda Jonesa w 1885 roku.
+Wykres DJIA:
+
+obrazek 8
+
+- S&P 500 - Standard & Poor’s 500, w jego skład którego wchodzi 500 
+przedsiębiorstw o największej kapitalizacji z giełdy NYSE oraz NASDAQ. S&P 500 
+wchodzi w skład szerszego indeksu – S&P 1500 oraz S&P Global 1200. Indeks jest 
+ważony kapitalizacją rynkową, co oznacza, że większe firmy mają większy wpływ na 
+jego wartość. Porównanie S&P 500 oraz DJIA na przestrzeni ostatnich 5 lat, jak
+widać S&P 500 bardziej urósł:
+
+obrazke 9
+
+- NYSE Composite Index - Indeks ten obejmuje wszystkie akcje notowane na NYSE,
+co czyni go szerokim wskaźnikiem wydajności rynku. Jest ważony kapitalizacją 
+rynkową. 
+- Russell 2000 - w skład tego indeksu wchodzi około 2000 amerykańskich 
+przedsiębiorstw o najmniejszej kapitalizacji spośród spółek będących częścią 
+indeksu Russell 3000 (Russell 3000 mierzy wydajność 3000 największych 
+amerykańskich spółek notowanych na giełdach. Jest używany jako wskaźnik ogólnej 
+kondycji rynku akcji). Porównanie S&P 500 oraz Russel 2000:
+
+obrazek 10
+
+2. NASDAQ, Nowy Jork - National Association of Securities Dealers Automated 
+Quotations (pol. *notowania*). Jest to giełda elektroniczna, która nie ma 
+fizycznego parkietu (jak np NYSE). Wszystkie transakcje odbywają się za 
+pośrednictwem systemu komputerowego. Jest znana z notowania firm 
+technologicznych i innowacyjnych, w tym wielu startupów i spółek z sektora IT. 
+Notowane są różne indeksy, ale do najpopularniejszych należą:
+- NASDAQ-100 - obejmuje 100 największych spółek notowanych na NASDAQ (np. 
+Google/Alphabet, Amazon, Microsoft).
+- NASDAQ Composite - obejmuje wszystkie spółki notowane na NASDAQ.
+- NASDAQ Biotechnology Index (NBI) - skupia się na spółkach z sektora 
+biotechnologii.
+- NASDAQ Financial-100 -  obejmuje 100 największych firm finansowych notowanych 
+na NASDAQ, w tym banki, firmy ubezpieczeniowe i inne instytucje finansowe.
+3. Tokyo Stock Exchange, Tokio,
+4. London Stock Exchange, Londyn - Notowane są tam różne indeksy, ale do 
+najpopularniejszych należą:
+- FTSE 100 - indeks 100 największych spółek notowanych na LSE według 
+kapitalizacji rynkowej.
+- FTSE 250 - obejmuje 250 największych spółek, które nie są wchodzące w skład 
+FTSE 100.
+- FTSE All-Share - obejmuje wszystkie spółki notowane na LSE.
+5. Euronext (Europe), Paryż, Amsterdam, Bruksela, Lizbona, Dublin, Oslo, 
+Mediolan - giełda, która powstała w 2000 roku z kilku innych. Jest to jedna z 
+największych giełd w Europie. Notowane są tam różne indeksy, ale do 
+najpopularniejszych należą:
+- Euronext 100 - indeks składający się z 100 największych spółek notowanych na 
+Euronext, które są wybrane na podstawie kapitalizacji rynkowej.
+- AEX (Amsterdam Exchange Index) - indeks 25 największych spółek notowanych na 
+giełdzie w Amsterdamie. Jest to jeden z najważniejszych indeksów w Holandii.
+- BEL 20 - indeks 20 największych spółek notowanych na giełdzie w Brukseli.
+- CAC 40 - indeks 40 największych spółek notowanych na giełdzie w Paryżu.
+- PSI 20 - indeks 20 największych spółek notowanych na giełdzie w Lizbonie.
+- ISEQ 20 - indeks 20 największych spółek notowanych na giełdzie w Dublinie.
+6. Hong Kong Stock Exchange, Hongkong,
+7. Shanghai Stock Exchange, Szanghaj,
+8. Toronto Stock Exchange, Toronto,
+9. Deutsche Börse, Frankfurt,
+10. SIX Swiss Exchange, Zurych.
+11. Giełda Papierów Wartościowych w Warszawie (GPW) - największa giełda papierów 
+wartościowych w Polsce. Kluczowe indeksy:
+- WIG (Warszawski Indeks Giełdowy) - jest to główny indeks giełdowy, który 
+obejmuje wszystkie spółki notowane na GPW. WIG jest indeksem ważonym 
+kapitalizacją rynkową. Ostatnie 5 lat na WIG:
+
+obrazek 11
+
+- WIG20 - indeks 20 największych i najbardziej płynnych spółek notowanych na 
+GPW. Ostatnie 5 lat na WIG20:
+
+obrazek 12
+
+- WIG-CEE - obejmuje spółki z regionu Europy Środkowo-Wschodniej, notowane na 
+GPW oraz innych giełdach w tym regionie.
+
+Akcje rynków rozwiniętych to papiery wartościowe emitowane przez spółki, które 
+są notowane na giełdach w krajach o rozwiniętej gospodarce. Przykłady rynków 
+rozwiniętych:
+- USA
+- Kanada
+- Japonia
+- Wielka Brytania
+- Niemcy
+- Francja
+
+Akcje rynków wschodzących to papiery wartościowe emitowane przez spółki notowane 
+na giełdach w krajach, które są w fazie rozwoju gospodarczego. Rynki te 
+charakteryzują się wyższym potencjałem wzrostu, ale także większym ryzykiem w 
+porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
+- Chiny
+- Indie
+- Brazylia
+- Turcja
+- Meksyk
+- RPA
+
+Roczne stopy zwrotu z wybranych klas aktywów od 2006 do 2015 roku:
+
+obrazek 5
