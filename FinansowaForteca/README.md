@@ -445,3 +445,8 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 Roczne stopy zwrotu z wybranych klas aktywów od 2006 do 2015 roku:
 
 obrazek 5
+
+## Poduszka finansowa
+Finansowa poduszka bezpieczeństwa wg. autora:
+25% lokaty/konta oszczędnościowe i 75% Detaliczne obligacje indeksowane 
+inflacją.
