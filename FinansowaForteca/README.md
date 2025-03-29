@@ -11,7 +11,7 @@ utracił 96% swojej siły nabywczej. 100 usd z 1913 roku, dziś posiada wartoś�
 nabywczą odpowiadającą dzisjeszym 3,84 USD. Jeśli przechowujemy oszczędności w
 gotówce, pozwalamy na to, aby inflacja pochłaniała nasze oszczędności.
 
-Obrazek 1
+![Image](https://github.com/user-attachments/assets/94ea9405-fb0f-4189-a2e8-5c61c7308e4e)
 
 **Deprecjacja** - proces, w którym wartość danej waluty spada w stosunku do
 innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
@@ -43,7 +43,7 @@ wpływają na podaż i popyt.
 towarów i usług nabywanych przez przeciętne gospodarstwo domowe. Wykres inflacji
 w Polsce od 1992 do 2025 roku:
 
-Obrazek 2
+![Image](https://github.com/user-attachments/assets/59fa6c6f-37c3-4396-8204-d4a945eac26d)
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
@@ -90,7 +90,7 @@ oszczędnościami.
 
 Stopy procentowe w polsce:
 
-obrazek 7
+![Image](https://github.com/user-attachments/assets/720a11a4-c240-4d24-bf94-77c0ed9c8e90)
 
 ## CIT i podatek belki
 
@@ -101,7 +101,7 @@ CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%.
 Generalnie jak patrze to CIT w różnych krajach europejskich jest dużo wyższy niż
 w Polsce:
 
-Obrazek 6
+![Image](https://github.com/user-attachments/assets/23b79195-ee98-42c5-95b4-9dc9afdbd42c)
 
 **Podatek Belki** - potoczna nazwa dla podatku od zysków kapitałowych, który
 wynosi 19%. Jest on pobierany od zysków uzyskanych z inwestycji, takich jak
@@ -118,7 +118,7 @@ X = 0.025/(1 - 0.19) = 0.025/0.81 = 0.03086 = 3.086%
 
 Zależność minimalnego oprocentowania lokaty od inflacji:
 
-wykres 3
+![Image](https://github.com/user-attachments/assets/b3d796a3-dbd4-481f-894d-c5cca8b3dec1)
 
 ## Obligacje i ich rodzaje, emitent, nominał, kupon, WIBOR, EURIBOR
 **Obligacja** to jakby umowa, w której pożyczasz pieniądze komuś (np. rządowi
@@ -141,7 +141,7 @@ rocznie w formie odsetek (5% z 1000 zł).
 
 Możliwe obligacje skarbowe (stan marzec 2024):
 
-obrazek 4
+![Image](https://github.com/user-attachments/assets/6eed7a14-3883-47cd-b05f-65dfd90deb93)
 
 Jak można je odczytać **skróty obligacji skarbowych**:
 1. Rodzaj obligacji: Skrót zaczyna się od liter, które wskazują na typ
@@ -345,7 +345,7 @@ ważony ceną, co oznacza, że droższe akcje mają większy wpływ na jego wart
 Został stworzony przez Charlesa Dowa i statystyka Edwarda Jonesa w 1885 roku.
 Wykres DJIA:
 
-obrazek 8
+![Image](https://github.com/user-attachments/assets/44bd13b6-2f87-43ee-aeba-abd302b71e68)
 
 - S&P 500 - Standard & Poor’s 500, w jego skład którego wchodzi 500
 przedsiębiorstw o największej kapitalizacji z giełdy NYSE oraz NASDAQ. S&P 500
@@ -354,7 +354,7 @@ ważony kapitalizacją rynkową, co oznacza, że większe firmy mają większy w
 jego wartość. Porównanie S&P 500 oraz DJIA na przestrzeni ostatnich 5 lat, jak
 widać S&P 500 bardziej urósł:
 
-obrazke 9
+![Image](https://github.com/user-attachments/assets/5b8796f2-95cc-4f6f-9cd0-23d10b87bb91)
 
 - NYSE Composite Index - Indeks ten obejmuje wszystkie akcje notowane na NYSE,
 co czyni go szerokim wskaźnikiem wydajności rynku. Jest ważony kapitalizacją
@@ -365,7 +365,7 @@ indeksu Russell 3000 (Russell 3000 mierzy wydajność 3000 największych
 amerykańskich spółek notowanych na giełdach. Jest używany jako wskaźnik ogólnej
 kondycji rynku akcji). Porównanie S&P 500 oraz Russel 2000:
 
-obrazek 10
+![Image](https://github.com/user-attachments/assets/cb500d70-792f-4d67-aa5a-481ba0420184)
 
 2. NASDAQ, Nowy Jork - National Association of Securities Dealers Automated
 Quotations (pol. *notowania*). Jest to giełda elektroniczna, która nie ma
@@ -411,12 +411,12 @@ wartościowych w Polsce. Kluczowe indeksy:
 obejmuje wszystkie spółki notowane na GPW. WIG jest indeksem ważonym
 kapitalizacją rynkową. Ostatnie 5 lat na WIG:
 
-obrazek 11
+![Image](https://github.com/user-attachments/assets/217bb619-6a5c-40af-8053-f2b153463ddf)
 
 - WIG20 - indeks 20 największych i najbardziej płynnych spółek notowanych na
 GPW. Ostatnie 5 lat na WIG20:
 
-obrazek 12
+![Image](https://github.com/user-attachments/assets/cf33b001-1c03-4af8-bbb4-acc2dbc143ab)
 
 - WIG-CEE - obejmuje spółki z regionu Europy Środkowo-Wschodniej, notowane na
 GPW oraz innych giełdach w tym regionie.
@@ -444,7 +444,7 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 
 Roczne stopy zwrotu z wybranych klas aktywów od 2006 do 2015 roku:
 
-obrazek 5
+![Image](https://github.com/user-attachments/assets/8e7e4373-7745-473a-bafc-9242544945ee)
 
 ## Poduszka finansowa
 Finansowa poduszka bezpieczeństwa wg. autora:
