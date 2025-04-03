@@ -269,11 +269,19 @@ depozytów w euro, a także stanowi on wartość referencyjną dla wielu transak
 pochodnych.
 
 
-## Instrument finansowy, lokata, konto oszczędnościowe
+## Instrument finansowy, papiery wartościowe, lokata, konto oszczędnościowe
 **Instrument finansowy** - to umowa, która ma wartość finansową. Instrumenty
 finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
 konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
 waluty na rynku walutowym). <br/>
+**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być 
+przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka 
+głównych kategorii: 
+- akcje,
+- obligacje,
+- certyfikaty depozytowe,
+- fundusze inwestycyjne,
+- opcje i kontrakty terminowe.
 **Konto oszczędnościowe** - rachunek bankowy, który pozwala na gromadzenie
 oszczędności, z możliwością dokonywania wpłat i wypłat w dowolnym momencie.
 Oprocentowanie kont oszczędnościowych jest zazwyczaj niższe niż w przypadku
@@ -305,9 +313,23 @@ Czyli zysk wynosi: <br/>
 
 ## Złoto, srebro
 
-## Akcje, giełda, indeks giełdowy
-**Akcje** -
+## Akcje, dywidenda
+**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry. 
+Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w 
+proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w 
+zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na 
+rynku czy ogólna kondycja gospodarki.
 
+**Dywidenda** - 
+
+Jest kilka rodzajów akcji:
+1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach 
+akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale 
+nie jest gwarantowana.
+2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w 
+wypłacie dywidend.
+
+## Giełda, indeks giełdowy
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
 kupna/sprzedaży określonych instrumentów (np. samochodów czy owoców). Transakcje
 na giełdach zawierane są zgodnie z obowiązującym regulaminem, między członkami
