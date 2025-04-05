@@ -6,12 +6,17 @@ Przyczyny spadku siły nabywczej mogą być różnorodne, w tym:
 - polityka monetarna banku centralnego,
 - zmiany w gospodarce.
 
-Spadek sily nabywczej dolara amerykanskiego. Na przestrzeni 100 lat dolar
+Spadek sily nabywczej dolara amerykanskiego. <br/> Na przestrzeni 100 lat dolar
 utracił 96% swojej siły nabywczej. 100 usd z 1913 roku, dziś posiada wartość
 nabywczą odpowiadającą dzisjeszym 3,84 USD. Jeśli przechowujemy oszczędności w
 gotówce, pozwalamy na to, aby inflacja pochłaniała nasze oszczędności.
 
 ![Image](https://github.com/user-attachments/assets/94ea9405-fb0f-4189-a2e8-5c61c7308e4e)
+
+Polska waluta w ciągu ostatnich 23 lat straciła 52 % swojej realnej siły
+nabywczej, to znaczy, że za zakupy, za które zapłaciłem w 1999 roku 100 złotych,
+w roku 2022 zapłaciłem 210, co odpowiada skumulowanej inflacji w ciągu ostatnich
+23 lat na poziomie 110%!
 
 **Deprecjacja** - proces, w którym wartość danej waluty spada w stosunku do
 innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
@@ -20,11 +25,6 @@ mniej jednostek innej waluty.
 **Aprecjacja** - proces, w którym wartość danej waluty rośnie w stosunku do
 innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
 więcej jednostek innej waluty.
-
-Polska waluta w ciągu ostatnich 23 lat straciła 52 % swojej realnej siły
-nabywczej, to znaczy, że za zakupy, za które zapłaciłem w 1999 roku 100 złotych,
-w roku 2022 zapłaciłem 210, co odpowiada skumulowanej inflacji w ciągu ostatnich
-23 lat na poziomie 110%!
 
 **Inflacja** - proces, w którym ogólny poziom cen dóbr i usług w gospodarce
 rośnie w czasie. Oznacza to, że siła nabywcza pieniądza maleje. Inflacja jest
@@ -39,11 +39,12 @@ wyższych cen dla konsumentów.
 takimi jak zmiany w technologii, demografii czy polityce rynkowej, które
 wpływają na podaż i popyt.
 
-**CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
-towarów i usług nabywanych przez przeciętne gospodarstwo domowe. Wykres inflacji
-w Polsce od 1992 do 2025 roku:
+Wykres inflacji w Polsce od 1992 do 2025 roku:
 
 ![Image](https://github.com/user-attachments/assets/59fa6c6f-37c3-4396-8204-d4a945eac26d)
+
+**CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
+towarów i usług nabywanych przez przeciętne gospodarstwo domowe. 
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
@@ -52,8 +53,8 @@ procentowe w gospodarce, aby osiągnąć cele takie jak stabilność cen, niska
 inflacja oraz wspieranie wzrostu gospodarczego.
 2. Stabilność finansowa: Bank centralny monitoruje system finansowy, aby
 zapobiegać kryzysom finansowym i zapewniać stabilność banków komercyjnych. Może
-działać jako "lender of last resort", udzielając pożyczek bankom w trudnej
-sytuacji.
+działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*), 
+udzielając pożyczek bankom w trudnej sytuacji.
 3. Emisja pieniądza: Bank centralny ma wyłączne prawo do emisji banknotów i
 monet w danym kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do
 obiegu.
@@ -96,8 +97,7 @@ Stopy procentowe w polsce:
 
 **CIT** (Korporacyjny podatek dochodowy) - podatek płacony przez osoby
 prawne, takie jak spółki, od osiąganych przez nie dochodów. Standardowa stawka
-CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%.
-
+CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%. <br/>
 Generalnie jak patrze to CIT w różnych krajach europejskich jest dużo wyższy niż
 w Polsce:
 
@@ -110,13 +110,14 @@ inwestycyjnych. Podatek ten jest pobierany u źródła, co oznacza, że banki i
 instytucje finansowe odprowadzają go bezpośrednio od zysków przed ich wypłatą.
 
 Jeżeli inflacja wynosi 2.5% to wydaje się, że lokata na 2.5% jest dobrym
-pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć jak
-powinna być oprocentowana lokata wyliczyć się wg wzoru: <br/>
+pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć kiedy
+opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg 
+wzoru: <br/>
 `wymagane oprocentowanie = stopa inflacji / (1 - stawka podatku)` <br/>
 Dla oprocentowania lokaty 2.5% i podatku belki 19%: <br/>
 X = 0.025/(1 - 0.19) = 0.025/0.81 = 0.03086 = 3.086%
 
-Zależność minimalnego oprocentowania lokaty od inflacji:
+Zależność opłacalności minimalnego oprocentowania lokaty od inflacji:
 
 ![Image](https://github.com/user-attachments/assets/b3d796a3-dbd4-481f-894d-c5cca8b3dec1)
 
@@ -146,9 +147,9 @@ Możliwe obligacje skarbowe (stan marzec 2024):
 Jak można je odczytać **skróty obligacji skarbowych**:
 1. Rodzaj obligacji: Skrót zaczyna się od liter, które wskazują na typ
 obligacji. Na przykład:
-- TS – obligacje skarbowe (terminowe)
-- WZ – obligacje wieczyste
-- OS – obligacje oszczędnościowe
+- TS – obligacje skarbowe (terminowe),
+- WZ – obligacje wieczyste,
+- OS – obligacje oszczędnościowe.
 2. Termin wykupu: Następnie mogą występować cyfry, które wskazują na rok wykupu
 obligacji. Na przykład, jeśli w skrócie pojawia się "2025", oznacza to, że
 obligacje te wykupione będą w 2025 roku.
@@ -282,10 +283,12 @@ głównych kategorii:
 - certyfikaty depozytowe,
 - fundusze inwestycyjne,
 - opcje i kontrakty terminowe.
+
 **Konto oszczędnościowe** - rachunek bankowy, który pozwala na gromadzenie
 oszczędności, z możliwością dokonywania wpłat i wypłat w dowolnym momencie.
 Oprocentowanie kont oszczędnościowych jest zazwyczaj niższe niż w przypadku
 lokat, ale może być zmienne i dostosowywane przez bank.
+
 **Lokata** - konto, na którym deponuje się określoną kwotę pieniędzy na ustalony
 czas (np. 3 miesiące, 6 miesięcy, 1 rok) w zamian za wyższe oprocentowanie.
 
@@ -320,8 +323,6 @@ proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
 zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na 
 rynku czy ogólna kondycja gospodarki.
 
-**Dywidenda** - 
-
 Jest kilka rodzajów akcji:
 1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach 
 akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale 
@@ -329,7 +330,12 @@ nie jest gwarantowana.
 2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w 
 wypłacie dywidend.
 
-## Giełda, indeks giełdowy
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego 
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji 
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych 
+akcji. 
+
+## Giełda, indeks giełdowy, kapitalizacja rynkowa
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
 kupna/sprzedaży określonych instrumentów (np. samochodów czy owoców). Transakcje
 na giełdach zawierane są zgodnie z obowiązującym regulaminem, między członkami
@@ -422,10 +428,10 @@ giełdzie w Amsterdamie. Jest to jeden z najważniejszych indeksów w Holandii.
 - CAC 40 - indeks 40 największych spółek notowanych na giełdzie w Paryżu.
 - PSI 20 - indeks 20 największych spółek notowanych na giełdzie w Lizbonie.
 - ISEQ 20 - indeks 20 największych spółek notowanych na giełdzie w Dublinie.
-6. Hong Kong Stock Exchange, Hongkong,
-7. Shanghai Stock Exchange, Szanghaj,
-8. Toronto Stock Exchange, Toronto,
-9. Deutsche Börse, Frankfurt,
+6. Hong Kong Stock Exchange, Hongkong.
+7. Shanghai Stock Exchange, Szanghaj.
+8. Toronto Stock Exchange, Toronto.
+9. Deutsche Börse, Frankfurt.
 10. SIX Swiss Exchange, Zurych.
 11. Giełda Papierów Wartościowych w Warszawie (GPW) - największa giełda papierów
 wartościowych w Polsce. Kluczowe indeksy:
