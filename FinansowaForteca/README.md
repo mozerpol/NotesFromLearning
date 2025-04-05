@@ -44,7 +44,7 @@ Wykres inflacji w Polsce od 1992 do 2025 roku:
 ![Image](https://github.com/user-attachments/assets/59fa6c6f-37c3-4396-8204-d4a945eac26d)
 
 **CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
-towarów i usług nabywanych przez przeciętne gospodarstwo domowe. 
+towarów i usług nabywanych przez przeciętne gospodarstwo domowe.
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
@@ -53,7 +53,7 @@ procentowe w gospodarce, aby osiągnąć cele takie jak stabilność cen, niska
 inflacja oraz wspieranie wzrostu gospodarczego.
 2. Stabilność finansowa: Bank centralny monitoruje system finansowy, aby
 zapobiegać kryzysom finansowym i zapewniać stabilność banków komercyjnych. Może
-działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*), 
+działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*),
 udzielając pożyczek bankom w trudnej sytuacji.
 3. Emisja pieniądza: Bank centralny ma wyłączne prawo do emisji banknotów i
 monet w danym kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do
@@ -111,7 +111,7 @@ instytucje finansowe odprowadzają go bezpośrednio od zysków przed ich wypłat
 
 Jeżeli inflacja wynosi 2.5% to wydaje się, że lokata na 2.5% jest dobrym
 pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć kiedy
-opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg 
+opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg
 wzoru: <br/>
 `wymagane oprocentowanie = stopa inflacji / (1 - stawka podatku)` <br/>
 Dla oprocentowania lokaty 2.5% i podatku belki 19%: <br/>
@@ -275,9 +275,9 @@ pochodnych.
 finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
 konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
 waluty na rynku walutowym). <br/>
-**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być 
-przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka 
-głównych kategorii: 
+**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
+przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
+głównych kategorii:
 - akcje,
 - obligacje,
 - certyfikaty depozytowe,
@@ -317,23 +317,23 @@ Czyli zysk wynosi: <br/>
 ## Złoto, srebro
 
 ## Akcje, dywidenda
-**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry. 
-Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w 
-proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w 
-zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na 
+**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
+Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
+proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
+zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
 rynku czy ogólna kondycja gospodarki.
 
 Jest kilka rodzajów akcji:
-1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach 
-akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale 
+1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
+akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale
 nie jest gwarantowana.
-2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w 
+2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
 wypłacie dywidend.
 
-**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego 
-akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji 
-danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych 
-akcji. 
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
+akcji.
 
 ## Giełda, indeks giełdowy, kapitalizacja rynkowa
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
