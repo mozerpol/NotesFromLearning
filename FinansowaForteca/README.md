@@ -471,9 +471,17 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 - RPA
 
 ## Poduszka finansowa
-Finansowa poduszka bezpieczeństwa wg. autora:
-25% lokaty/konta oszczędnościowe i 75% Detaliczne obligacje indeksowane
-inflacją. <br/>
+Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
+zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej 
+zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy 
+przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 = 
+28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko 
+sugestia, ale przyjmuje się że pół pieniędzy na pół roku to dobra praktyka. <br/>
+Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
+- 25% lokaty/konta oszczędnościowe,
+- 75% Detaliczne obligacje indeksowane inflacją.
+
+## Prognozy
 Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
 kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
 dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację 
@@ -501,3 +509,15 @@ nie odbiegały aż tak od moich wyliczeń.
 dajmy sobie trochę więcej czasu.
 5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania 
 się nie sprawdziły, ale moje inne prognozy są trafne.
+
+## Długoterminowy portfel finansowy
+Pieniądze tutaj zgromadzone nie muszą być tak łatwo dostępne jak w poduszczce
+finansowej. Skład długoterminowego portfela finansowego wg autora: <br/>
+- 20% obligacje skarbowe notowane na rynkach,
+- 10% złoto inwestycyjne,
+- 40% obligacje skarbowe notowane inflacją,
+- 30% akcje zagraniczne.
+
+Oczywiście skład naszego portfela może się różnić. Generalnie zasada jest taka,
+żebyśmy się za bardzo nie przejmowali co się tam w środku dzieje, dlatego ja
+mam więcej złota. Głównie ze względu na obecną sytuację geopolityczną.
