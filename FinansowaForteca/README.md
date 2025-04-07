@@ -44,7 +44,7 @@ Wykres inflacji w Polsce od 1992 do 2025 roku:
 ![Image](https://github.com/user-attachments/assets/59fa6c6f-37c3-4396-8204-d4a945eac26d)
 
 **CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
-towarów i usług nabywanych przez przeciętne gospodarstwo domowe. 
+towarów i usług nabywanych przez przeciętne gospodarstwo domowe.
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
@@ -53,7 +53,7 @@ procentowe w gospodarce, aby osiągnąć cele takie jak stabilność cen, niska
 inflacja oraz wspieranie wzrostu gospodarczego.
 2. Stabilność finansowa: Bank centralny monitoruje system finansowy, aby
 zapobiegać kryzysom finansowym i zapewniać stabilność banków komercyjnych. Może
-działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*), 
+działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*),
 udzielając pożyczek bankom w trudnej sytuacji.
 3. Emisja pieniądza: Bank centralny ma wyłączne prawo do emisji banknotów i
 monet w danym kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do
@@ -95,22 +95,22 @@ Stopy procentowe w polsce:
 
 
 ## PKB, PSN
-**PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara, 
-która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać 
-do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju 
-zarabiają ze sprzedaży różnych rzeczy i usług. Im wyższe PKB, tym więcej 
-pieniędzy w kraju, co często oznacza, że ludzie mają lepsze życie i więcej 
-możliwości. PKB pomaga zrozumieć, jak dobrze radzi sobie gospodarka danego 
+**PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara,
+która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać
+do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju
+zarabiają ze sprzedaży różnych rzeczy i usług. Im wyższe PKB, tym więcej
+pieniędzy w kraju, co często oznacza, że ludzie mają lepsze życie i więcej
+możliwości. PKB pomaga zrozumieć, jak dobrze radzi sobie gospodarka danego
 kraju.
 
-**PSN** - Parytet siły nabywczej (ang. PPP - purchasing power parity), to 
-sposób porównywania wartości pieniędzy w różnych krajach, aby zobaczyć, ile 
-można za nie kupić. Wyobraź sobie, że masz 10 złotych w Polsce i 10 dolarów w 
-Stanach Zjednoczonych. Parytet siły nabywczej pomaga zrozumieć, czy te pieniądze 
-mają podobną wartość, jeśli chodzi o to, co można za nie kupić. Na przykład, 
-jeśli w Polsce za 10 złotych możesz kupić jedzenie na obiad, a w USA za 10 
-dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jest 
-wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych 
+**PSN** - Parytet siły nabywczej (ang. PPP - purchasing power parity), to
+sposób porównywania wartości pieniędzy w różnych krajach, aby zobaczyć, ile
+można za nie kupić. Wyobraź sobie, że masz 10 złotych w Polsce i 10 dolarów w
+Stanach Zjednoczonych. Parytet siły nabywczej pomaga zrozumieć, czy te pieniądze
+mają podobną wartość, jeśli chodzi o to, co można za nie kupić. Na przykład,
+jeśli w Polsce za 10 złotych możesz kupić jedzenie na obiad, a w USA za 10
+dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jest
+wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych
 krajach, uwzględniając różnice w cenach towarów i usług.
 
 ## CIT i podatek belki
@@ -130,7 +130,7 @@ instytucje finansowe odprowadzają go bezpośrednio od zysków przed ich wypłat
 
 Jeżeli inflacja wynosi 2.5% to wydaje się, że lokata na 2.5% jest dobrym
 pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć kiedy
-opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg 
+opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg
 wzoru: <br/>
 `wymagane oprocentowanie = stopa inflacji / (1 - stawka podatku)` <br/>
 Dla oprocentowania lokaty 2.5% i podatku belki 19%: <br/>
@@ -294,9 +294,9 @@ pochodnych.
 finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
 konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
 waluty na rynku walutowym). <br/>
-**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być 
-przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka 
-głównych kategorii: 
+**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
+przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
+głównych kategorii:
 - akcje,
 - obligacje,
 - certyfikaty depozytowe,
@@ -336,23 +336,23 @@ Czyli zysk wynosi: <br/>
 ## Złoto, srebro
 
 ## Akcje, dywidenda
-**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry. 
-Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w 
-proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w 
-zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na 
+**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
+Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
+proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
+zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
 rynku czy ogólna kondycja gospodarki.
 
 Jest kilka rodzajów akcji:
-1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach 
-akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale 
+1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
+akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale
 nie jest gwarantowana.
-2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w 
+2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
 wypłacie dywidend.
 
-**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego 
-akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji 
-danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych 
-akcji. 
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
+akcji.
 
 ## Giełda, indeks giełdowy, kapitalizacja rynkowa
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
@@ -491,10 +491,10 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 
 ## Poduszka finansowa
 Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
-zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej 
-zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy 
-przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 = 
-28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko 
+zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej
+zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy
+przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 =
+28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko
 sugestia, ale przyjmuje się że pół pieniędzy na pół roku to dobra praktyka. <br/>
 Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 - 25% lokaty/konta oszczędnościowe,
@@ -503,16 +503,16 @@ Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 ## Prognozy
 Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
 kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
-dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację 
+dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację
 portfela finansowego. Czyli kupno wielu różnych aktywów. Dzięki temu kiedy jedno
-z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od 
+z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od
 2006 do 2015 roku:
 
 ![Image](https://github.com/user-attachments/assets/8e7e4373-7745-473a-bafc-9242544945ee)
 
 Jak widać powyżej czasem opłaca się inwestowanie w złoto, a czasem akcje.
 Dlatego kupując wszystkiego po trochę wiemy, że zawsze coś zyskuje, kiedy inne
-aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty 
+aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty
 przeznaczonej na inwestycje złota, a ile akcji.
 
 Często ludzie próbują prognozować co stanie się w przyszłości. Jeżeli prognoza
@@ -522,11 +522,11 @@ się nie sprawdzi i stracą piniądze to próbują sobie to tłumaczyć, racjona
 pieniądza, moja prognoza świetnie by się sprawdziła.
 2. "Ceteris paribus" - wszystko inne takie samo. Gdyby inne okoliczności się nie
 zmieniły to moja prognoza byłaby celna.
-3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale 
-nie odbiegały aż tak od moich wyliczeń. 
+3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale
+nie odbiegały aż tak od moich wyliczeń.
 4. "Jeszcze się nie sprawdziło" - owszem, moja prognoza się nie sprawdziła, ale
 dajmy sobie trochę więcej czasu.
-5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania 
+5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania
 się nie sprawdziły, ale moje inne prognozy są trafne.
 
 ## Długoterminowy portfel finansowy
