@@ -44,7 +44,7 @@ Wykres inflacji w Polsce od 1992 do 2025 roku:
 ![Image](https://github.com/user-attachments/assets/59fa6c6f-37c3-4396-8204-d4a945eac26d)
 
 **CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
-towarów i usług nabywanych przez przeciętne gospodarstwo domowe. 
+towarów i usług nabywanych przez przeciętne gospodarstwo domowe.
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
@@ -53,7 +53,7 @@ procentowe w gospodarce, aby osiągnąć cele takie jak stabilność cen, niska
 inflacja oraz wspieranie wzrostu gospodarczego.
 2. Stabilność finansowa: Bank centralny monitoruje system finansowy, aby
 zapobiegać kryzysom finansowym i zapewniać stabilność banków komercyjnych. Może
-działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*), 
+działać jako "lender of last resort" (pol. *pożyczkodawca ostatniej szansy*),
 udzielając pożyczek bankom w trudnej sytuacji.
 3. Emisja pieniądza: Bank centralny ma wyłączne prawo do emisji banknotów i
 monet w danym kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do
@@ -95,101 +95,101 @@ Stopy procentowe w polsce:
 
 
 ## PKB, PSN
-**PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara, 
-która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać 
-do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju 
-zarabiają ze sprzedaży różnych rzeczy i usług. Im wyższe PKB, tym więcej 
-pieniędzy w kraju, co często oznacza, że ludzie mają lepsze życie i więcej 
-możliwości. PKB pomaga zrozumieć, jak dobrze radzi sobie gospodarka danego 
+**PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara,
+która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać
+do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju
+zarabiają ze sprzedaży różnych rzeczy i usług. Im wyższe PKB, tym więcej
+pieniędzy w kraju, co często oznacza, że ludzie mają lepsze życie i więcej
+możliwości. PKB pomaga zrozumieć, jak dobrze radzi sobie gospodarka danego
 kraju. <br/>
 Wzrost gospodarczy to po prostu procentowy przyrost PKB w stosunku do roku
 poprzedniego. <br/>
 Istnieją trzy metody obliczania wartości PKB:
-1. Metoda wydatkowa (ang. expenditure approach) - polega na zliczaniu wszystkich 
-wydatków koncowych w gospodarce. Można to porównać do zliczania wszystkich 
-pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od strony 
+1. Metoda wydatkowa (ang. expenditure approach) - polega na zliczaniu wszystkich
+wydatków koncowych w gospodarce. Można to porównać do zliczania wszystkich
+pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od strony
 popytowej oblicza się według następującego wzoru: <br/>
-PKB = konsumpcja (wydatki gospodarstw domowych) + inwestycje + wydatki rządowe + 
+PKB = konsumpcja (wydatki gospodarstw domowych) + inwestycje + wydatki rządowe +
 eksport netto (eksport - import). <br/>
-**Wydatki koncowe** to wszystkie wydatki, które są dokonywane na dobra i usługi, 
+**Wydatki koncowe** to wszystkie wydatki, które są dokonywane na dobra i usługi,
 które są ostatecznie konsumowane przez ludzi, firmy lub rząd. Na przyklad:
-- wydatki konsumpcyjne - to pieniądze, które gospodarstwa domowe wydają na 
+- wydatki konsumpcyjne - to pieniądze, które gospodarstwa domowe wydają na
 codzienne zakupy, takie jak jedzenie, ubrania, usługi (np. fryzjer).
-- wydatki inwestycyjne - to pieniądze, które firmy wydają na zakup nowych 
+- wydatki inwestycyjne - to pieniądze, które firmy wydają na zakup nowych
 maszyn, budynków, itp, które pomogą im w produkcji. Na przyklad gotowe produkty
-do sprzedania jak meble czy surowce do ich produkcji jak drewno. Innym 
-przykladem może być nowa linia montażowa. 
-- wydatki rządowe - to pieniądze, które rząd wydaje na różne usługi publiczne, 
-takie jak edukacja, zdrowie, infrastruktura, socjal (np. budowa dróg, mostów, 
+do sprzedania jak meble czy surowce do ich produkcji jak drewno. Innym
+przykladem może być nowa linia montażowa.
+- wydatki rządowe - to pieniądze, które rząd wydaje na różne usługi publiczne,
+takie jak edukacja, zdrowie, infrastruktura, socjal (np. budowa dróg, mostów,
 500+). Oczywiście najpierw nam musi zabrać w formie podatków. <br/>
-Wydatki końcowe są ważne, ponieważ pokazują, jak pieniądze krążą w gospodarce i 
-jak są wykorzystywane do zakupu dóbr i usług. Im wyższe wydatki końcowe, 
+Wydatki końcowe są ważne, ponieważ pokazują, jak pieniądze krążą w gospodarce i
+jak są wykorzystywane do zakupu dóbr i usług. Im wyższe wydatki końcowe,
 tym wyższe PKB.
-2. Metoda dochodowa (ang. income approach) - w tej metodzie zliczamy różne 
+2. Metoda dochodowa (ang. income approach) - w tej metodzie zliczamy różne
 źródła dochodów, które generują ludzie i firmy. Jej główne składniki to:
 wynagrodzenia, zyski firm i podatki. Wzór: <br/>
 PKB = dochody z pracy + dochody z kapitału + dochody państwa + amortyzacja.
-3. Metoda produkcyjna (ang. production approach) - oblicza się odejmując wartość 
-wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr i usług 
-zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według 
+3. Metoda produkcyjna (ang. production approach) - oblicza się odejmując wartość
+wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr i usług
+zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według
 następującego wzoru: <br/>
-PKB = produkcja globalna kraju – zużycie pośrednie = suma wartości dodanej ze 
+PKB = produkcja globalna kraju – zużycie pośrednie = suma wartości dodanej ze
 wszystkich gałęzi gospodarki krajowej.
 
-**PSN** - Parytet siły nabywczej (ang. PPP - purchasing power parity), to 
-sposób porównywania wartości pieniędzy w różnych krajach, aby zobaczyć, ile 
-można za nie kupić. Wyobraź sobie, że masz 10 złotych w Polsce i 10 dolarów w 
-Stanach Zjednoczonych. Parytet siły nabywczej pomaga zrozumieć, czy te pieniądze 
-mają podobną wartość, jeśli chodzi o to, co można za nie kupić. Na przykład, 
-jeśli w Polsce za 10 złotych możesz kupić jedzenie na obiad, a w USA za 10 
-dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jest 
-wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych 
+**PSN** - Parytet siły nabywczej (ang. PPP - purchasing power parity), to
+sposób porównywania wartości pieniędzy w różnych krajach, aby zobaczyć, ile
+można za nie kupić. Wyobraź sobie, że masz 10 złotych w Polsce i 10 dolarów w
+Stanach Zjednoczonych. Parytet siły nabywczej pomaga zrozumieć, czy te pieniądze
+mają podobną wartość, jeśli chodzi o to, co można za nie kupić. Na przykład,
+jeśli w Polsce za 10 złotych możesz kupić jedzenie na obiad, a w USA za 10
+dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jest
+wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych
 krajach, uwzględniając różnice w cenach towarów i usług.
 
 
 ## Cykliczność gospodarki i rynków
-**Cykliczność gospodarki** - cykliczność gospodarki inaczej nazywana cyklem 
-koniunkturalnym. Cykliczność gospodarki i rynków są ze sobą  powiązane, ale 
-opisują różne rzeczy. Generalnie jest to teoria, która odnosi się do regularnych 
-wahań w gospodarce i na rynkach. Gospodarki nie funkcjonują w sposób jednostajny 
-- w jednym okresie notowane jest ożywienie, na przykład z powodu poprawy 
+**Cykliczność gospodarki** - cykliczność gospodarki inaczej nazywana cyklem
+koniunkturalnym. Cykliczność gospodarki i rynków są ze sobą  powiązane, ale
+opisują różne rzeczy. Generalnie jest to teoria, która odnosi się do regularnych
+wahań w gospodarce i na rynkach. Gospodarki nie funkcjonują w sposób jednostajny
+- w jednym okresie notowane jest ożywienie, na przykład z powodu poprawy
 sytuacji finansów publicznych, w kolejnym zaś następuje kryzys. <br/>
-Cykliczność gospodarki zakłada, że po fazie kryzysu przychodzi faza depresji, 
+Cykliczność gospodarki zakłada, że po fazie kryzysu przychodzi faza depresji,
 następnie faza ożywienia oraz rozkwitu. <br/>
 Cykl dzielony jest na poszczególne fazy:
-- Faza depresji - to najniższy punkt cyklu gospodarczego, charakteryzujący się 
-długotrwałym spadkiem aktywności gospodarczej, wysokim bezrobociem i niskim 
+- Faza depresji - to najniższy punkt cyklu gospodarczego, charakteryzujący się
+długotrwałym spadkiem aktywności gospodarczej, wysokim bezrobociem i niskim
 poziomem produkcji.
-- Faza ożywienia - początek rozwoju związany ze spadkiem bezrobocia i wzrostem 
+- Faza ożywienia - początek rozwoju związany ze spadkiem bezrobocia i wzrostem
 m.in. popytu, produkcji i płac.
-- Faza rozkwitu - wymienione mierniki uzyskują swoje "maksima" i utrzymują się 
+- Faza rozkwitu - wymienione mierniki uzyskują swoje "maksima" i utrzymują się
 na korzystnym poziomie, z ewentualnymi, drobnymi zmianami.
-- Faza kryzysu - to moment, w którym gospodarka zaczyna się załamywać, co może 
-prowadzić do recesji. Maleje produkcja, co prowadzi do zahamowania inflacji i 
+- Faza kryzysu - to moment, w którym gospodarka zaczyna się załamywać, co może
+prowadzić do recesji. Maleje produkcja, co prowadzi do zahamowania inflacji i
 spadku cen akcji na giełdach.
 
 Terminy związane z cyklem gospodarczym:
-- Przegrzanie - to sytuacja, w której gospodarka rośnie zbyt szybko, co prowadzi 
-do inflacji, wzrostu cen i nadmiernego popytu. Może to wystąpić w fazie 
+- Przegrzanie - to sytuacja, w której gospodarka rośnie zbyt szybko, co prowadzi
+do inflacji, wzrostu cen i nadmiernego popytu. Może to wystąpić w fazie
 rozkwitu.
-- Spowolnienie - to okres, w którym tempo wzrostu gospodarczego zaczyna 
-zwalniać, ale gospodarka nadal rośnie. Może to być sygnał, że zbliżamy się do 
+- Spowolnienie - to okres, w którym tempo wzrostu gospodarczego zaczyna
+zwalniać, ale gospodarka nadal rośnie. Może to być sygnał, że zbliżamy się do
 szczytu cyklu.
-- Recesja - to okres, w którym następuje spadek aktywności gospodarczej przez co 
-najmniej dwa kolejne kwartały. Recesja może wystąpić po fazie rozkwitu i jest 
+- Recesja - to okres, w którym następuje spadek aktywności gospodarczej przez co
+najmniej dwa kolejne kwartały. Recesja może wystąpić po fazie rozkwitu i jest
 często związana z kryzysem.
 
 Specyfika faz cyklu koniunkturalnego:
 
 ![Image](https://github.com/user-attachments/assets/0c661029-27ac-4b39-9e00-b0c9a96b4a28)
 
-Fazy cyklu koniunkturalnego mają różne długości i mogą trwać od kilku kwartałów 
-po kilkanaście lat. Choć poszczególne fazy następują po sobie, to przejścia 
-między nimi są płynne i brakuje jednoznacznych symptomów, że jedna faza się 
-skończyła, a druga zaczęła. Co więcej sąsiadujące gospodarki w tym samym czasie 
-mogą być w różnych fazach cyklu gospodarczego, czym wzajemnie na siebie 
+Fazy cyklu koniunkturalnego mają różne długości i mogą trwać od kilku kwartałów
+po kilkanaście lat. Choć poszczególne fazy następują po sobie, to przejścia
+między nimi są płynne i brakuje jednoznacznych symptomów, że jedna faza się
+skończyła, a druga zaczęła. Co więcej sąsiadujące gospodarki w tym samym czasie
+mogą być w różnych fazach cyklu gospodarczego, czym wzajemnie na siebie
 wpływają. <br/>
-Wszelkie zmiany cyklu mierzone są przy użyciu najważniejszych mierników 
+Wszelkie zmiany cyklu mierzone są przy użyciu najważniejszych mierników
 gospodarczych, spośród których należy wymienić przede wszystkim:
 - inflację,
 - bezrobocie,
@@ -202,23 +202,23 @@ TODO: opisac rodzaje cykli, ze ilestam trwaja, np 4 lata, 28 dni, itd...
 
 **Cykliczność rynków**
 TODO: opisac do konca.
-Znaczenie fazy cyklu koniunkturalnego dla inwestorów wynika z faktu, że w każdej 
-z faz inaczej zachowują się poszczególne klasy aktywów. Inwestor powinien 
-dostosować swoje decyzje do stanu koniunktury i przesuwać swoje aktywa zgodnie z 
+Znaczenie fazy cyklu koniunkturalnego dla inwestorów wynika z faktu, że w każdej
+z faz inaczej zachowują się poszczególne klasy aktywów. Inwestor powinien
+dostosować swoje decyzje do stanu koniunktury i przesuwać swoje aktywa zgodnie z
 poniższym cyklem rotacji aktywów (to tylko sugestia, albo raczej ciekawostka):
 
 ![Image](https://github.com/user-attachments/assets/bb2975c3-56b5-4e6b-852d-635bfb77f713)
 
-Ogólne ramy takiej alokacji aktywów polegają na tym, że podczas ożywienia 
-gospodarczego najlepiej zachowują się akcje. W czasie przegrzania do rosnących 
-akcji dołączają surowce, na które jest duży popyt. Następnie po szycie 
-koniunktury podczas gospodarczego spowolnienia zazwyczaj dalej rośnie inflacja, 
-ale już akcje i surowce poddają się spadkom. Dlatego w spowolnieniu 
-najpewniejszym aktywem jest gotówka, która co prawda nie zarabia, ale też nie 
-traci, a najważniejsze podczas tego momentu jest utrzymanie swojego stanu 
-posiadania. Gdy w ostatniej fazie gospodarka wchodzi w recesję, to optymalnym 
-wyborem są obligacje skarbowe, ponieważ stopy procentowe spadają, a chętnych na 
-bezpieczne inwestycje obligacyjne szybko przybywa. 
+Ogólne ramy takiej alokacji aktywów polegają na tym, że podczas ożywienia
+gospodarczego najlepiej zachowują się akcje. W czasie przegrzania do rosnących
+akcji dołączają surowce, na które jest duży popyt. Następnie po szycie
+koniunktury podczas gospodarczego spowolnienia zazwyczaj dalej rośnie inflacja,
+ale już akcje i surowce poddają się spadkom. Dlatego w spowolnieniu
+najpewniejszym aktywem jest gotówka, która co prawda nie zarabia, ale też nie
+traci, a najważniejsze podczas tego momentu jest utrzymanie swojego stanu
+posiadania. Gdy w ostatniej fazie gospodarka wchodzi w recesję, to optymalnym
+wyborem są obligacje skarbowe, ponieważ stopy procentowe spadają, a chętnych na
+bezpieczne inwestycje obligacyjne szybko przybywa.
 
 ![Image](https://github.com/user-attachments/assets/3e9ebcc9-4d99-412e-a314-6dc7bcbe1416)
 
@@ -240,7 +240,7 @@ instytucje finansowe odprowadzają go bezpośrednio od zysków przed ich wypłat
 
 Jeżeli inflacja wynosi 2.5% to wydaje się, że lokata na 2.5% jest dobrym
 pomysłem, niestety są podatki od zysków, np. podatek belki. Aby obliczyć kiedy
-opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg 
+opłacalność danego oprocentowania lokaty przy inflacji należy wyliczyć to wg
 wzoru: <br/>
 `wymagane oprocentowanie = stopa inflacji / (1 - stawka podatku)` <br/>
 Dla oprocentowania lokaty 2.5% i podatku belki 19%: <br/>
@@ -405,9 +405,9 @@ pochodnych.
 finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
 konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
 waluty na rynku walutowym). <br/>
-**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być 
-przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka 
-głównych kategorii: 
+**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
+przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
+głównych kategorii:
 - akcje,
 - obligacje,
 - certyfikaty depozytowe,
@@ -449,23 +449,23 @@ Czyli zysk wynosi: <br/>
 
 
 ## Akcje, dywidenda
-**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry. 
-Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w 
-proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w 
-zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na 
+**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
+Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
+proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
+zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
 rynku czy ogólna kondycja gospodarki.
 
 Jest kilka rodzajów akcji:
-1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach 
-akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale 
+1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
+akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale
 nie jest gwarantowana.
-2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w 
+2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
 wypłacie dywidend.
 
-**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego 
-akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji 
-danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych 
-akcji. 
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
+akcji.
 
 
 ## Giełda, indeks giełdowy, kapitalizacja rynkowa
@@ -606,10 +606,10 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 
 ## Poduszka finansowa
 Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
-zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej 
-zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy 
-przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 = 
-28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko 
+zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej
+zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy
+przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 =
+28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko
 sugestia, ale przyjmuje się że pół pieniędzy na pół roku to dobra praktyka. <br/>
 Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 - 25% lokaty/konta oszczędnościowe,
@@ -618,16 +618,16 @@ Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 ## Prognozy
 Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
 kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
-dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację 
+dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację
 portfela finansowego. Czyli kupno wielu różnych aktywów. Dzięki temu kiedy jedno
-z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od 
+z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od
 2006 do 2015 roku:
 
 ![Image](https://github.com/user-attachments/assets/8e7e4373-7745-473a-bafc-9242544945ee)
 
 Jak widać powyżej czasem opłaca się inwestowanie w złoto, a czasem akcje.
 Dlatego kupując wszystkiego po trochę wiemy, że zawsze coś zyskuje, kiedy inne
-aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty 
+aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty
 przeznaczonej na inwestycje złota, a ile akcji.
 
 Często ludzie próbują prognozować co stanie się w przyszłości. Jeżeli prognoza
@@ -637,11 +637,11 @@ się nie sprawdzi i stracą piniądze to próbują sobie to tłumaczyć, racjona
 pieniądza, moja prognoza świetnie by się sprawdziła.
 2. "Ceteris paribus" - wszystko inne takie samo. Gdyby inne okoliczności się nie
 zmieniły to moja prognoza byłaby celna.
-3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale 
-nie odbiegały aż tak od moich wyliczeń. 
+3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale
+nie odbiegały aż tak od moich wyliczeń.
 4. "Jeszcze się nie sprawdziło" - owszem, moja prognoza się nie sprawdziła, ale
 dajmy sobie trochę więcej czasu.
-5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania 
+5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania
 się nie sprawdziły, ale moje inne prognozy są trafne.
 
 
