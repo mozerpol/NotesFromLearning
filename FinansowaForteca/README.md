@@ -116,10 +116,12 @@ które są ostatecznie konsumowane przez ludzi, firmy lub rząd. Na przyklad:
 - wydatki konsumpcyjne - to pieniądze, które gospodarstwa domowe wydają na 
 codzienne zakupy, takie jak jedzenie, ubrania, usługi (np. fryzjer).
 - wydatki inwestycyjne - to pieniądze, które firmy wydają na zakup nowych 
-maszyn, budynków, itp, które pomogą im w produkcji.
+maszyn, budynków, itp, które pomogą im w produkcji. Na przyklad gotowe produkty
+do sprzedania jak meble czy surowce do ich produkcji jak drewno. Innym 
+przykladem może być nowa linia montażowa. 
 - wydatki rządowe - to pieniądze, które rząd wydaje na różne usługi publiczne, 
 takie jak edukacja, zdrowie, infrastruktura, socjal (np. budowa dróg, mostów, 
-500+). <br/>
+500+). Oczywiście najpierw nam musi zabrać w formie podatków. <br/>
 Wydatki końcowe są ważne, ponieważ pokazują, jak pieniądze krążą w gospodarce i 
 jak są wykorzystywane do zakupu dóbr i usług. Im wyższe wydatki końcowe, 
 tym wyższe PKB.
@@ -132,7 +134,7 @@ wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr i
 zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według 
 następującego wzoru: <br/>
 PKB = produkcja globalna kraju – zużycie pośrednie = suma wartości dodanej ze 
-wszystkich gałęzi gospodarki krajowej.lllll
+wszystkich gałęzi gospodarki krajowej.
 
 **PSN** - Parytet siły nabywczej (ang. PPP - purchasing power parity), to 
 sposób porównywania wartości pieniędzy w różnych krajach, aby zobaczyć, ile 
@@ -143,6 +145,82 @@ jeśli w Polsce za 10 złotych możesz kupić jedzenie na obiad, a w USA za 10
 dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jest 
 wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych 
 krajach, uwzględniając różnice w cenach towarów i usług.
+
+
+## Cykliczność gospodarki i rynków
+**Cykliczność gospodarki** - cykliczność gospodarki inaczej nazywana cyklem 
+koniunkturalnym. Cykliczność gospodarki i rynków są ze sobą  powiązane, ale 
+opisują różne rzeczy. Generalnie jest to teoria, która odnosi się do regularnych 
+wahań w gospodarce i na rynkach. Gospodarki nie funkcjonują w sposób jednostajny 
+- w jednym okresie notowane jest ożywienie, na przykład z powodu poprawy 
+sytuacji finansów publicznych, w kolejnym zaś następuje kryzys. <br/>
+Cykliczność gospodarki zakłada, że po fazie kryzysu przychodzi faza depresji, 
+następnie faza ożywienia oraz rozkwitu. <br/>
+Cykl dzielony jest na poszczególne fazy:
+- Faza depresji - to najniższy punkt cyklu gospodarczego, charakteryzujący się 
+długotrwałym spadkiem aktywności gospodarczej, wysokim bezrobociem i niskim 
+poziomem produkcji.
+- Faza ożywienia - początek rozwoju związany ze spadkiem bezrobocia i wzrostem 
+m.in. popytu, produkcji i płac.
+- Faza rozkwitu - wymienione mierniki uzyskują swoje "maksima" i utrzymują się 
+na korzystnym poziomie, z ewentualnymi, drobnymi zmianami.
+- Faza kryzysu - to moment, w którym gospodarka zaczyna się załamywać, co może 
+prowadzić do recesji. Maleje produkcja, co prowadzi do zahamowania inflacji i 
+spadku cen akcji na giełdach.
+
+Terminy związane z cyklem gospodarczym:
+- Przegrzanie - to sytuacja, w której gospodarka rośnie zbyt szybko, co prowadzi 
+do inflacji, wzrostu cen i nadmiernego popytu. Może to wystąpić w fazie 
+rozkwitu.
+- Spowolnienie - to okres, w którym tempo wzrostu gospodarczego zaczyna 
+zwalniać, ale gospodarka nadal rośnie. Może to być sygnał, że zbliżamy się do 
+szczytu cyklu.
+- Recesja - to okres, w którym następuje spadek aktywności gospodarczej przez co 
+najmniej dwa kolejne kwartały. Recesja może wystąpić po fazie rozkwitu i jest 
+często związana z kryzysem.
+
+Specyfika faz cyklu koniunkturalnego:
+
+![Image](https://github.com/user-attachments/assets/0c661029-27ac-4b39-9e00-b0c9a96b4a28)
+
+Fazy cyklu koniunkturalnego mają różne długości i mogą trwać od kilku kwartałów 
+po kilkanaście lat. Choć poszczególne fazy następują po sobie, to przejścia 
+między nimi są płynne i brakuje jednoznacznych symptomów, że jedna faza się 
+skończyła, a druga zaczęła. Co więcej sąsiadujące gospodarki w tym samym czasie 
+mogą być w różnych fazach cyklu gospodarczego, czym wzajemnie na siebie 
+wpływają. <br/>
+Wszelkie zmiany cyklu mierzone są przy użyciu najważniejszych mierników 
+gospodarczych, spośród których należy wymienić przede wszystkim:
+- inflację,
+- bezrobocie,
+- poziom zamożności społeczeństwa,
+- dynamikę PKB,
+- indeksy giełdowe,
+- nakłady inwestycyjne.
+
+TODO: opisac rodzaje cykli, ze ilestam trwaja, np 4 lata, 28 dni, itd...
+
+**Cykliczność rynków**
+TODO: opisac do konca.
+Znaczenie fazy cyklu koniunkturalnego dla inwestorów wynika z faktu, że w każdej 
+z faz inaczej zachowują się poszczególne klasy aktywów. Inwestor powinien 
+dostosować swoje decyzje do stanu koniunktury i przesuwać swoje aktywa zgodnie z 
+poniższym cyklem rotacji aktywów (to tylko sugestia, albo raczej ciekawostka):
+
+![Image](https://github.com/user-attachments/assets/bb2975c3-56b5-4e6b-852d-635bfb77f713)
+
+Ogólne ramy takiej alokacji aktywów polegają na tym, że podczas ożywienia 
+gospodarczego najlepiej zachowują się akcje. W czasie przegrzania do rosnących 
+akcji dołączają surowce, na które jest duży popyt. Następnie po szycie 
+koniunktury podczas gospodarczego spowolnienia zazwyczaj dalej rośnie inflacja, 
+ale już akcje i surowce poddają się spadkom. Dlatego w spowolnieniu 
+najpewniejszym aktywem jest gotówka, która co prawda nie zarabia, ale też nie 
+traci, a najważniejsze podczas tego momentu jest utrzymanie swojego stanu 
+posiadania. Gdy w ostatniej fazie gospodarka wchodzi w recesję, to optymalnym 
+wyborem są obligacje skarbowe, ponieważ stopy procentowe spadają, a chętnych na 
+bezpieczne inwestycje obligacyjne szybko przybywa. 
+
+![Image](https://github.com/user-attachments/assets/3e9ebcc9-4d99-412e-a314-6dc7bcbe1416)
 
 
 ## CIT i podatek belki
