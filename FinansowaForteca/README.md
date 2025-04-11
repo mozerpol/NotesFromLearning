@@ -48,18 +48,18 @@ towarów i usług nabywanych przez przeciętne gospodarstwo domowe.
 
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
-1. Polityka monetarna - kontrola podaży pieniądza i stopy procentowej w 
-gospodarce, aby osiągnąć cele takie jak stabilność cen, niska inflacja oraz 
+1. Polityka monetarna - kontrola podaży pieniądza i stopy procentowej w
+gospodarce, aby osiągnąć cele takie jak stabilność cen, niska inflacja oraz
 wspieranie wzrostu gospodarczego.
-2. Stabilność finansowa - monitoruje system finansowy, aby zapobiegać kryzysom 
-finansowym i zapewniać stabilność banków komercyjnych. Może działać jako "lender 
-of last resort" (pol. *pożyczkodawca ostatniej szansy*), udzielając pożyczek 
+2. Stabilność finansowa - monitoruje system finansowy, aby zapobiegać kryzysom
+finansowym i zapewniać stabilność banków komercyjnych. Może działać jako "lender
+of last resort" (pol. *pożyczkodawca ostatniej szansy*), udzielając pożyczek
 bankom w trudnej sytuacji.
-3. Emisja pieniądza - ma wyłączne prawo do emisji banknotów i monet w danym 
+3. Emisja pieniądza - ma wyłączne prawo do emisji banknotów i monet w danym
 kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do obiegu.
-4. Zarządzanie rezerwami walutowymi - zarządzanie rezerwami walutowymi kraju, co 
+4. Zarządzanie rezerwami walutowymi - zarządzanie rezerwami walutowymi kraju, co
 może wpływać na kurs waluty oraz stabilność finansową.
-5. Regulacja i nadzór - ma również uprawnienia do regulowania i nadzorowania 
+5. Regulacja i nadzór - ma również uprawnienia do regulowania i nadzorowania
 instytucji finansowych, aby zapewnić ich stabilność i bezpieczeństwo.
 
 Przykłady banków centralnych to:
@@ -148,13 +148,13 @@ krajach, uwzględniając różnice w cenach towarów i usług.
 ## Cykliczność gospodarki i rynków, cykl kredytowy
 ### Cykliczność gospodarki i rynków
 Cykliczność gospodarki jest nazywana inaczej cyklem koniunkturalnym. Cykliczność 
-gospodarki i rynków są ze sobą  powiązane, ale opisują różne rzeczy. Generalnie 
+gospodarki i rynków są ze sobą  powiązane, ale opisują różne rzeczy. Generalnie
 cykliczność gospodarki odnosi się do regularnych wahań w gospodarce.
-Gospodarki nie funkcjonują w sposób jednostajny. W jednym okresie notowane jest 
-ożywienie, na przykład z powodu poprawy sytuacji finansów publicznych, w 
+Gospodarki nie funkcjonują w sposób jednostajny. W jednym okresie notowane jest
+ożywienie, na przykład z powodu poprawy sytuacji finansów publicznych, w
 kolejnym zaś następuje kryzys. <br/>
-Cykliczność rynków odnosi się do regularnych wahań w aktywności na rynkach 
-finansowych, towarowych i nieruchomości. Obejmuje zmiany w cenach aktywów, 
+Cykliczność rynków odnosi się do regularnych wahań w aktywności na rynkach
+finansowych, towarowych i nieruchomości. Obejmuje zmiany w cenach aktywów,
 popycie i podaży na rynkach oraz zachowania inwestorów. <br/>
 Cykliczność gospodarki zakłada, że po fazie kryzysu przychodzi faza depresji,
 następnie faza ożywienia oraz rozkwitu:
@@ -204,17 +204,17 @@ gospodarczych, spośród których należy wymienić przede wszystkim:
 - nakłady inwestycyjne.
 
 Cykle koniunkturalne mogą być rozpatrywane w różnych długościach czasu:
-1. Wahania sezonowe - najbardziej trwałe i regularne wahania aktywności 
-gospodarczej. Związane są ze zmianami pór roku, szczególnie widoczne w 
-rolnictwie, przemyśle, budownictwie i turystyce. 
-2. Cykle krótkookresowe - trwają od kilku miesięcy do około 2 lat. Mogą być 
-związane z sezonowymi zmianami w gospodarce, takimi jak zmiany popytu w różnych 
+1. Wahania sezonowe - najbardziej trwałe i regularne wahania aktywności
+gospodarczej. Związane są ze zmianami pór roku, szczególnie widoczne w
+rolnictwie, przemyśle, budownictwie i turystyce.
+2. Cykle krótkookresowe - trwają od kilku miesięcy do około 2 lat. Mogą być
+związane z sezonowymi zmianami w gospodarce, takimi jak zmiany popytu w różnych
 porach roku.
-3. Cykle średniookresowe - trwają od 2 do 10 lat. Są często związane z większymi 
-zmianami w gospodarce, takimi jak zmiany w polityce monetarnej, inwestycje w 
+3. Cykle średniookresowe - trwają od 2 do 10 lat. Są często związane z większymi
+zmianami w gospodarce, takimi jak zmiany w polityce monetarnej, inwestycje w
 infrastrukturę czy innowacje technologiczne.
-4. Cykle długookresowe - mogą trwać od 10 do 50 lat lub dłużej. Są związane z 
-fundamentalnymi zmianami w gospodarce, takimi jak zmiany demograficzne, rozwój 
+4. Cykle długookresowe - mogą trwać od 10 do 50 lat lub dłużej. Są związane z
+fundamentalnymi zmianami w gospodarce, takimi jak zmiany demograficzne, rozwój
 technologii czy zmiany strukturalne w gospodarce.
 
 Znaczenie fazy cyklu koniunkturalnego dla inwestorów wynika z faktu, że w każdej
@@ -239,22 +239,22 @@ bezpieczne inwestycje obligacyjne szybko przybywa.
 
 
 ### Cykl kredytowy
-Cykl kredytowy pokazuje zmienność dostępności do kredytów w czasie trwania cykli 
-koniunkturalnych. W pierwszej fazie cyklu kredytowego (fazie wzrostowej) kredyty 
-są łatwo dostępne. Cykl ten charakteryzuje się niskim poziomem stóp procentowych 
-oraz zmniejszeniem wymagań kredytowych, przez co rośnie wielkość dostępnego 
-kredytu. Druga faza wiąże się ze spadkiem dostępności kredytów. W tym czasie 
-stopy procentowe rosną, a to powoduje również wzrost oprocentowania pożyczanych 
-środków pieniężnych. Podczas tej fazy przepisy kredytowe zostają zaostrzone, z 
-czym wiąże się, że mniejsza liczba osób spełni wymagania kredytowe. Dostępność 
-kredytu zależy od ryzyka ponoszonego przez kredytodawcę, a im jest ono niższe, 
+Cykl kredytowy pokazuje zmienność dostępności do kredytów w czasie trwania cykli
+koniunkturalnych. W pierwszej fazie cyklu kredytowego (fazie wzrostowej) kredyty
+są łatwo dostępne. Cykl ten charakteryzuje się niskim poziomem stóp procentowych
+oraz zmniejszeniem wymagań kredytowych, przez co rośnie wielkość dostępnego
+kredytu. Druga faza wiąże się ze spadkiem dostępności kredytów. W tym czasie
+stopy procentowe rosną, a to powoduje również wzrost oprocentowania pożyczanych
+środków pieniężnych. Podczas tej fazy przepisy kredytowe zostają zaostrzone, z
+czym wiąże się, że mniejsza liczba osób spełni wymagania kredytowe. Dostępność
+kredytu zależy od ryzyka ponoszonego przez kredytodawcę, a im jest ono niższe,
 tym bardziej są oni skłonni do udzielania pożyczek. <br/>
 Czynniki wpływające na cykl kredytowy:
 - polityka monetarna - niskie stopy procentowe,
-- sytuacja gospodarcza - wzrost gospodarczy sprzyja większemu popytowi na 
+- sytuacja gospodarcza - wzrost gospodarczy sprzyja większemu popytowi na
 kredyty,
-- regulacje finansowe - zmiany w regulacjach dotyczących sektora bankowego mogą 
-wpływać na zdolność banków do udzielania kredytów oraz na kryteria ich 
+- regulacje finansowe - zmiany w regulacjach dotyczących sektora bankowego mogą
+wpływać na zdolność banków do udzielania kredytów oraz na kryteria ich
 przyznawania.
 
 
