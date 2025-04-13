@@ -650,6 +650,7 @@ Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 - 25% lokaty/konta oszczędnościowe,
 - 75% Detaliczne obligacje indeksowane inflacją.
 
+
 ## Prognozy
 Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
 kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
@@ -691,3 +692,23 @@ finansowej. Skład długoterminowego portfela finansowego wg autora: <br/>
 Oczywiście skład naszego portfela może się różnić. Generalnie zasada jest taka,
 żebyśmy się za bardzo nie przejmowali co się tam w środku dzieje, dlatego ja
 mam więcej złota. Głównie ze względu na obecną sytuację geopolityczną.
+
+
+## Inwestowanie i psychologia, skłonności i błędy
+Heurystyka - w logice jest to umiejętność wykrywania nowych faktów oraz 
+znajdowania związków między faktami, zwłaszcza z wykorzystaniem hipotez. Na 
+podstawie istniejącej wiedzy stawia się hipotezy, których nie trzeba udowadniać.
+
+Heurystyka - w informatycje jest to metoda znajdowania rozwiązań, dla której nie 
+ma gwarancji znalezienia rozwiązania optymalnego, a często nawet prawidłowego. 
+Rozwiązań tych używa się np. wtedy, gdy pełny algorytm jest z przyczyn 
+technicznych zbyt kosztowny lub gdy jest nieznany (np. przy przewidywaniu pogody 
+lub przy wykrywaniu szkodliwego oprogramowania w systemach komputerowych). 
+Metoda służy także do znajdowania rozwiązań przybliżonych
+
+Lubimy myśleć o sobie, że działamy logicznie, a nasze przekonania są racjonalne,
+cechy racjonalnego myślenia:
+- jest oparte na faktach,
+- jest wolne od stereotypów,
+- jest nieskażone silnymi emocjami.
+
