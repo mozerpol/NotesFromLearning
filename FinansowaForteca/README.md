@@ -695,15 +695,15 @@ mam więcej złota. Głównie ze względu na obecną sytuację geopolityczną.
 
 
 ## Inwestowanie i psychologia, skłonności i błędy
-Heurystyka - w logice jest to umiejętność wykrywania nowych faktów oraz 
-znajdowania związków między faktami, zwłaszcza z wykorzystaniem hipotez. Na 
+Heurystyka - w logice jest to umiejętność wykrywania nowych faktów oraz
+znajdowania związków między faktami, zwłaszcza z wykorzystaniem hipotez. Na
 podstawie istniejącej wiedzy stawia się hipotezy, których nie trzeba udowadniać.
 
-Heurystyka - w informatycje jest to metoda znajdowania rozwiązań, dla której nie 
-ma gwarancji znalezienia rozwiązania optymalnego, a często nawet prawidłowego. 
-Rozwiązań tych używa się np. wtedy, gdy pełny algorytm jest z przyczyn 
-technicznych zbyt kosztowny lub gdy jest nieznany (np. przy przewidywaniu pogody 
-lub przy wykrywaniu szkodliwego oprogramowania w systemach komputerowych). 
+Heurystyka - w informatycje jest to metoda znajdowania rozwiązań, dla której nie
+ma gwarancji znalezienia rozwiązania optymalnego, a często nawet prawidłowego.
+Rozwiązań tych używa się np. wtedy, gdy pełny algorytm jest z przyczyn
+technicznych zbyt kosztowny lub gdy jest nieznany (np. przy przewidywaniu pogody
+lub przy wykrywaniu szkodliwego oprogramowania w systemach komputerowych).
 Metoda służy także do znajdowania rozwiązań przybliżonych
 
 Lubimy myśleć o sobie, że działamy logicznie, a nasze przekonania są racjonalne,
@@ -718,8 +718,8 @@ skróty myślowe - szybko formułowane opinie zwane heurystykami. Często jest t
 bardzo przydatne, ale może powodować również płapki, w które można wpaść.
 Przykłady takich płapek:
 1. Efekt myślenia wstecznego (ang. *hindsight bias*) - polega na przekonaniu, że
-można było przewidzieć bieg wypadków. Czasem może się wydawać, że skoro 
-potrafimy analizować przeszłość, to równie trafnie potrafimy przewidzieć 
+można było przewidzieć bieg wypadków. Czasem może się wydawać, że skoro
+potrafimy analizować przeszłość, to równie trafnie potrafimy przewidzieć
 przyszłość. Dobrym sposobem, aby zminimalizować efekt myślenia wstecznego jest
 prowadzenie dziennika, w którym notujemy, co naszym zdaniem się wydarzy i
 dlaczego. Następnie kiedy minie wystarczająco dużo czasu to weryfukujemy nasze
@@ -735,7 +735,7 @@ chociaż jest do dużo bardziej bezpieczniejszy środek transportu niż rower.
 
 Wszystko co jest często powtarzane, co jest spektakularne, co przyciąga naszą
 uwagę, wydaje nam się bardziej prawdopodobne, niż jest w rzeczywistości. <br/>
-Aby zminimalizować efekt dostępności należy na spokojnie weryfikować 
+Aby zminimalizować efekt dostępności należy na spokojnie weryfikować
 wiarygodność źródła oraz zawarte w nich informacje.
 3. Płapka potwierdzenie (ang. *confirmation bias*) - jest to jedna z najbardziej
 niebezpiecznych płapek. Polega na takim interpretowaniu docierających do nas
@@ -744,7 +744,7 @@ wierzeniami i przekonanami. Gdy coś czytamy, oglądamy, wolimy szukać w tym
 potwierdzenia tego, co już wiemy i w co wierzymy, zamias szukać ewentualnych
 niezgodności. To co jest niespójne z naszymi przekonaniami, wywołuje poczucie
 dyskomfortu. W zalewie informacji, z którymi mamy do czynienia jesteśmy w stanie
-znaleźć potwierdzenie dowolnej tezy, w którą uwierzymy. Naszą podatność na 
+znaleźć potwierdzenie dowolnej tezy, w którą uwierzymy. Naszą podatność na
 płapki myślenia wykorzystują wróżbici i astrolodzy. <br/>
 Obrona przed płapką potwierdzenia polega na szukaniu wiarygodnych źródeł oraz
 kompetentnych osób formułujących opinie przeciwne do naszej. Następnie trzeba
