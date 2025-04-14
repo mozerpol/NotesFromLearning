@@ -712,3 +712,56 @@ cechy racjonalnego myślenia:
 - jest wolne od stereotypów,
 - jest nieskażone silnymi emocjami.
 
+Gdybyśmy mieli podajmować każdą decyzję po dogłębnej analizie to bylibyśmy
+zmęczeni i pewnie nie robili nic innego tylko myśleli. Z tego powodu stosujemy
+skróty myślowe - szybko formułowane opinie zwane heurystykami. Często jest to
+bardzo przydatne, ale może powodować również płapki, w które można wpaść.
+Przykłady takich płapek:
+1. Efekt myślenia wstecznego (ang. *hindsight bias*) - polega na przekonaniu, że
+można było przewidzieć bieg wypadków. Czasem może się wydawać, że skoro 
+potrafimy analizować przeszłość, to równie trafnie potrafimy przewidzieć 
+przyszłość. Dobrym sposobem, aby zminimalizować efekt myślenia wstecznego jest
+prowadzenie dziennika, w którym notujemy, co naszym zdaniem się wydarzy i
+dlaczego. Następnie kiedy minie wystarczająco dużo czasu to weryfukujemy nasze
+przewidywania.
+2. Efekt dostępności (ang. *availability bias*) - im łatwiejszy dostęp w naszej
+pamięci do jakiegoś zdarzenia tym bardziej wydaje nam się wystąpienie tego
+zdarzenia ponownie niż jest w rzeczywistości. Szczególny wpływ mają na to
+wydarzenia medialne, np.
+- Po informacjach na temat powodzi czy pożarów rośnie liczba sprzedawanych
+polis ubezpieczeniowych.
+- Doniesienia o wypadkach lotniczych sprawiają, że boimy się latać samolotami,
+chociaż jest do dużo bardziej bezpieczniejszy środek transportu niż rower.
+
+Wszystko co jest często powtarzane, co jest spektakularne, co przyciąga naszą
+uwagę, wydaje nam się bardziej prawdopodobne, niż jest w rzeczywistości. <br/>
+Aby zminimalizować efekt dostępności należy na spokojnie weryfikować 
+wiarygodność źródła oraz zawarte w nich informacje.
+3. Płapka potwierdzenie (ang. *confirmation bias*) - jest to jedna z najbardziej
+niebezpiecznych płapek. Polega na takim interpretowaniu docierających do nas
+informacji, aby zgadzały się z zaakceptowanymi już przez nas teoriami,
+wierzeniami i przekonanami. Gdy coś czytamy, oglądamy, wolimy szukać w tym
+potwierdzenia tego, co już wiemy i w co wierzymy, zamias szukać ewentualnych
+niezgodności. To co jest niespójne z naszymi przekonaniami, wywołuje poczucie
+dyskomfortu. W zalewie informacji, z którymi mamy do czynienia jesteśmy w stanie
+znaleźć potwierdzenie dowolnej tezy, w którą uwierzymy. Naszą podatność na 
+płapki myślenia wykorzystują wróżbici i astrolodzy. <br/>
+Obrona przed płapką potwierdzenia polega na szukaniu wiarygodnych źródeł oraz
+kompetentnych osób formułujących opinie przeciwne do naszej. Następnie trzeba
+ocenić jakość i wiarygodność przytaczanych argumentów - i jeżeli są one
+merytorycznie właściwe - na nowo przeanalizować własny pomysł. <br/>
+Warto szukać odpowiedzi na pytanie **A co, jeśli się mylę?**.
+4.  Awersja do strat (ang. *loss aversion*) - Straty bolą nas bardziej, niż
+cieszą zyski tej samej wysokości. W inwestowaniu skłonność do unikaniu strat
+przejawia się na różne sposoby:
+- lokujemy wszystkie pieniądze wyłącznie w najbardziej bezpieczne aktywa i
+lokaty bankowe,
+- rozpoczynając inwestycję, deklarujemy gotowość do ponoszenia strat, ale gdy
+zaczynamy ich doświadczać, natychmiast uciekamy ze swoimi pieniędzmi,
+- analizując swój portfel inwestycyjny, skupiamy się najpierw na tych aktywach,
+które przyniosły straty.
+5. Nadmierna pewność własnych umiejętności i wiedzy (ang. *overconfidence
+bias*) - przkonanie, że jesteśmy w czymś lepsi niż w rzeczywistości.
+
+6.
+7.
