@@ -706,18 +706,18 @@ technicznych zbyt kosztowny lub gdy jest nieznany (np. przy przewidywaniu pogody
 lub przy wykrywaniu szkodliwego oprogramowania w systemach komputerowych).
 Metoda służy także do znajdowania rozwiązań przybliżonych
 
-**Ekonomia behawioralna** - dziedzina nauki, która łączy elementy ekonomii i 
-psychologii, badając, jak czynniki psychologiczne, emocjonalne i społeczne 
-wpływają na decyzje ekonomiczne ludzi. W przeciwieństwie do tradycyjnej 
-ekonomii, która zakłada, że ludzie są racjonalnymi decydentami, ekonomiści 
-behawioralni uznają, że ludzie często podejmują decyzje w sposób irracjonalny, 
+**Ekonomia behawioralna** - dziedzina nauki, która łączy elementy ekonomii i
+psychologii, badając, jak czynniki psychologiczne, emocjonalne i społeczne
+wpływają na decyzje ekonomiczne ludzi. W przeciwieństwie do tradycyjnej
+ekonomii, która zakłada, że ludzie są racjonalnymi decydentami, ekonomiści
+behawioralni uznają, że ludzie często podejmują decyzje w sposób irracjonalny,
 kierując się emocjami, uprzedzeniami i ograniczeniami poznawczymi.
 
-**Teoria racjonalnego wyboru** - teoria badająca i modelująca zachowania 
-społeczne i ekonomiczne. Zakłada, że ludzie podejmują decyzje w sposób 
-racjonalny, dążąc do maksymalizacji swoich korzyści i minimalizacji kosztów. 
-Zgodnie z tą teorią, jednostki analizują dostępne opcje, oceniają ich 
-potencjalne zyski i straty, a następnie wybierają tę, która przyniesie im 
+**Teoria racjonalnego wyboru** - teoria badająca i modelująca zachowania
+społeczne i ekonomiczne. Zakłada, że ludzie podejmują decyzje w sposób
+racjonalny, dążąc do maksymalizacji swoich korzyści i minimalizacji kosztów.
+Zgodnie z tą teorią, jednostki analizują dostępne opcje, oceniają ich
+potencjalne zyski i straty, a następnie wybierają tę, która przyniesie im
 największą wartość lub satysfakcję.
 
 Lubimy myśleć o sobie, że działamy logicznie, a nasze przekonania są racjonalne,
@@ -738,8 +738,8 @@ przyszłość. Dobrym sposobem, aby zminimalizować efekt myślenia wstecznego j
 prowadzenie dziennika, w którym notujemy, co naszym zdaniem się wydarzy i
 dlaczego. Następnie kiedy minie wystarczająco dużo czasu to weryfukujemy nasze
 przewidywania.
-2. **Efekt dostępności** (ang. *availability bias*) - im łatwiejszy dostęp w 
-naszej pamięci do jakiegoś zdarzenia tym bardziej wydaje nam się wystąpienie 
+2. **Efekt dostępności** (ang. *availability bias*) - im łatwiejszy dostęp w
+naszej pamięci do jakiegoś zdarzenia tym bardziej wydaje nam się wystąpienie
 tego zdarzenia ponownie niż jest w rzeczywistości. Szczególny wpływ mają na to
 wydarzenia medialne, np.
 - Po informacjach na temat powodzi czy pożarów rośnie liczba sprzedawanych
@@ -751,13 +751,13 @@ Wszystko co jest często powtarzane, co jest spektakularne, co przyciąga naszą
 uwagę, wydaje nam się bardziej prawdopodobne, niż jest w rzeczywistości. <br/>
 Aby zminimalizować efekt dostępności należy na spokojnie weryfikować
 wiarygodność źródła oraz zawarte w nich informacje.
-3. **Płapka potwierdzenie** (ang. *confirmation bias*) - jest to jedna z 
-najbardziej niebezpiecznych płapek. Polega na takim interpretowaniu 
-docierających do nas informacji, aby zgadzały się z zaakceptowanymi już przez 
-nas teoriami, wierzeniami i przekonanami. Gdy coś czytamy, oglądamy, wolimy 
-szukać w tym potwierdzenia tego, co już wiemy i w co wierzymy, zamias szukać 
-ewentualnych niezgodności. To co jest niespójne z naszymi przekonaniami, 
-wywołuje poczucie dyskomfortu. W zalewie informacji, z którymi mamy do czynienia 
+3. **Płapka potwierdzenie** (ang. *confirmation bias*) - jest to jedna z
+najbardziej niebezpiecznych płapek. Polega na takim interpretowaniu
+docierających do nas informacji, aby zgadzały się z zaakceptowanymi już przez
+nas teoriami, wierzeniami i przekonanami. Gdy coś czytamy, oglądamy, wolimy
+szukać w tym potwierdzenia tego, co już wiemy i w co wierzymy, zamias szukać
+ewentualnych niezgodności. To co jest niespójne z naszymi przekonaniami,
+wywołuje poczucie dyskomfortu. W zalewie informacji, z którymi mamy do czynienia
 jesteśmy w stanie znaleźć potwierdzenie dowolnej tezy, w którą uwierzymy. Naszą 
 podatność na płapki myślenia wykorzystują wróżbici i astrolodzy. <br/>
 Obrona przed płapką potwierdzenia polega na szukaniu wiarygodnych źródeł oraz
@@ -776,39 +776,39 @@ zaczynamy ich doświadczać, natychmiast uciekamy ze swoimi pieniędzmi,
 które przyniosły straty.
 5. **Nadmierna pewność własnych umiejętności i wiedzy** (ang. *overconfidence
 bias*) - przkonanie, że jesteśmy w czymś lepsi niż w rzeczywistości.
-6. **Efekt zakotwiczenia** (ang *anchoring bias*) - polega na tym, że ludzie 
-polegają na pierwszej informacji, jaką otrzymują (tzw. "kotwicy"), przy 
-podejmowaniu decyzji lub ocenianiu wartości innych informacji. Nawet jeśli ta 
-pierwsza informacja jest przypadkowa lub nieistotna, może znacząco wpłynąć na 
-późniejsze osądy i decyzje. Na przykład, jeśli ktoś usłyszy, że cena produktu 
-wynosi 100 zł, a następnie zobaczy ten sam produkt w promocji za 80 zł, może 
-ocenić tę promocję jako bardzo korzystną, ponieważ jego ocena jest 
-"zakotwiczona" na pierwotnej cenie 100 zł. 
-7. **Księgowanie mentalne** (ang. *mental accounting*) - ludzie traktują 
-pieniądze w różnych "kategoriach", co wpływa na ich decyzje wydatkowe i 
-oszczędnościowe. Na przykład, osoba może mieć osobne konto na wydatki na 
-rozrywkę, oszczędności na wakacje i codzienne wydatki. Nawet jeśli całkowita 
-suma pieniędzy jest taka sama, to sposób, w jaki są one "zaksięgowane" w umyśle, 
-może wpływać na to, jak są wydawane. Osoba może być skłonna wydać pieniądze z 
-konta na rozrywkę, nawet jeśli ma trudności finansowe, ponieważ postrzega te 
-pieniądze jako przeznaczone na przyjemności. Księgowanie mentalne może prowadzić 
-do irracjonalnych decyzji finansowych, ponieważ ludzie mogą nie brać pod uwagę 
+6. **Efekt zakotwiczenia** (ang *anchoring bias*) - polega na tym, że ludzie
+polegają na pierwszej informacji, jaką otrzymują (tzw. "kotwicy"), przy
+podejmowaniu decyzji lub ocenianiu wartości innych informacji. Nawet jeśli ta
+pierwsza informacja jest przypadkowa lub nieistotna, może znacząco wpłynąć na
+późniejsze osądy i decyzje. Na przykład, jeśli ktoś usłyszy, że cena produktu
+wynosi 100 zł, a następnie zobaczy ten sam produkt w promocji za 80 zł, może
+ocenić tę promocję jako bardzo korzystną, ponieważ jego ocena jest
+"zakotwiczona" na pierwotnej cenie 100 zł.
+7. **Księgowanie mentalne** (ang. *mental accounting*) - ludzie traktują
+pieniądze w różnych "kategoriach", co wpływa na ich decyzje wydatkowe i
+oszczędnościowe. Na przykład, osoba może mieć osobne konto na wydatki na
+rozrywkę, oszczędności na wakacje i codzienne wydatki. Nawet jeśli całkowita
+suma pieniędzy jest taka sama, to sposób, w jaki są one "zaksięgowane" w umyśle,
+może wpływać na to, jak są wydawane. Osoba może być skłonna wydać pieniądze z
+konta na rozrywkę, nawet jeśli ma trudności finansowe, ponieważ postrzega te
+pieniądze jako przeznaczone na przyjemności. Księgowanie mentalne może prowadzić
+do irracjonalnych decyzji finansowych, ponieważ ludzie mogą nie brać pod uwagę
 całkowitego obrazu swoich finansów.
-8. **Efekt utopionych kosztów** (ang. *sunk cost bias*) - polega na tym, że 
-ludzie kontynuują inwestowanie czasu, pieniędzy lub wysiłku w projekt lub 
-decyzję, nawet gdy nie przynosi to oczekiwanych korzyści, ponieważ już 
-zainwestowali w to zasoby. Efekt utopionych kosztów może prowadzić do 
-podejmowania irracjonalnych decyzji i kontynuowania działań, które są 
+8. **Efekt utopionych kosztów** (ang. *sunk cost bias*) - polega na tym, że
+ludzie kontynuują inwestowanie czasu, pieniędzy lub wysiłku w projekt lub
+decyzję, nawet gdy nie przynosi to oczekiwanych korzyści, ponieważ już
+zainwestowali w to zasoby. Efekt utopionych kosztów może prowadzić do
+podejmowania irracjonalnych decyzji i kontynuowania działań, które są
 niekorzystne, co może skutkować dalszymi stratami.
-9. **Efekt posiadania** (ang. *endowment effect*) - polega na tym, że ludzie 
-mają tendencję do wyceniania przedmiotów wyżej, gdy są ich właścicielami, co 
-może prowadzić do irracjonalnych decyzji dotyczących sprzedaży lub wymiany. Na 
-przykład, jeśli ktoś otrzyma kubek jako prezent, może ocenić jego wartość na 20 
-zł, ale gdyby ten sam kubek był wystawiony na sprzedaż, mógłby być skłonny 
-zapłacić tylko 10 zł za niego. Efekt posiadania może być wynikiem emocjonalnego 
-przywiązania do przedmiotów, a także zjawiska straty, gdzie utrata czegoś, co 
-się posiada, jest postrzegana jako bardziej bolesna niż zysk z nabycia czegoś 
+9. **Efekt posiadania** (ang. *endowment effect*) - polega na tym, że ludzie
+mają tendencję do wyceniania przedmiotów wyżej, gdy są ich właścicielami, co
+może prowadzić do irracjonalnych decyzji dotyczących sprzedaży lub wymiany. Na
+przykład, jeśli ktoś otrzyma kubek jako prezent, może ocenić jego wartość na 20
+zł, ale gdyby ten sam kubek był wystawiony na sprzedaż, mógłby być skłonny
+zapłacić tylko 10 zł za niego. Efekt posiadania może być wynikiem emocjonalnego
+przywiązania do przedmiotów, a także zjawiska straty, gdzie utrata czegoś, co
+się posiada, jest postrzegana jako bardziej bolesna niż zysk z nabycia czegoś
 nowego.
-10. **Efekt status quo** (ang *status quo bias*) - pozostawanie przy aktualnym 
-stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie 
+10. **Efekt status quo** (ang *status quo bias*) - pozostawanie przy aktualnym
+stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie
 działania może się wiązać z jakąś stratą, to wolimy tego nie robić.
