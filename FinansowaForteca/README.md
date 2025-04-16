@@ -745,13 +745,13 @@ wydarzenia medialne, np.
 - Po informacjach na temat powodzi czy pożarów rośnie liczba sprzedawanych
 polis ubezpieczeniowych.
 - Doniesienia o wypadkach lotniczych sprawiają, że boimy się latać samolotami,
-chociaż jest do dużo bardziej bezpieczniejszy środek transportu niż rower.
-
+chociaż jest do dużo bardziej bezpieczniejszy środek transportu niż rower. <br/> <br/>
 Wszystko co jest często powtarzane, co jest spektakularne, co przyciąga naszą
 uwagę, wydaje nam się bardziej prawdopodobne, niż jest w rzeczywistości. <br/>
 Aby zminimalizować efekt dostępności należy na spokojnie weryfikować
 wiarygodność źródła oraz zawarte w nich informacje.
-3. **Płapka potwierdzenie** (ang. *confirmation bias*) - jest to jedna z
+
+3. **Płapka potwierdzenia** (ang. *confirmation bias*) - jest to jedna z
 najbardziej niebezpiecznych płapek. Polega na takim interpretowaniu
 docierających do nas informacji, aby zgadzały się z zaakceptowanymi już przez
 nas teoriami, wierzeniami i przekonanami. Gdy coś czytamy, oglądamy, wolimy
@@ -765,6 +765,7 @@ kompetentnych osób formułujących opinie przeciwne do naszej. Następnie trzeb
 ocenić jakość i wiarygodność przytaczanych argumentów - i jeżeli są one
 merytorycznie właściwe - na nowo przeanalizować własny pomysł. <br/>
 Warto szukać odpowiedzi na pytanie **A co, jeśli się mylę?**.
+
 4. **Awersja do strat** (ang. *loss aversion*) - Straty bolą nas bardziej, niż
 cieszą zyski tej samej wysokości. W inwestowaniu skłonność do unikaniu strat
 przejawia się na różne sposoby:
@@ -812,3 +813,56 @@ nowego.
 10. **Efekt status quo** (ang *status quo bias*) - pozostawanie przy aktualnym
 stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie
 działania może się wiązać z jakąś stratą, to wolimy tego nie robić.
+
+## Jakie ryzyko można ponieść?
+Warren Buffet zaproponował dwie reguły:
+1. Nie trać pieniędzy.
+2. Pamiętaj o zasadzie numer 1.
+
+Nie jest to namowa do unikania ryzyka, ale do próby jego rozproszenia i 
+ograniczenia w swoim portfelu. Jednak przedtem trzeba je dobrze zrozumieć i
+zidentyfikować.
+
+Poniższa tabela pokazuje, jak duże muszą być zyski z inwestycji, aby odrobić
+poniesione wcześniej straty:
+
+| Jeżeli stracisz | To musisz odrobić |
+|:--:|:--:|
+| - 10% | + 11.1% |
+| - 20% | + 25% |
+| - 30% | + 43% |
+| - 40% | + 67% |
+| - 50% | + 100% |
+| - 66% | + 200% |
+| - 90% | + 900% |
+
+Przykład: Początkowy kapitał to 1000, strata to 20%. Wiec kwota po stracie:
+1000-1000*0.2 = 800. <br/>
+Żeby odrobić stracone 200 to trzeba zarobić 25% z 800, bo 800*0.25 = 200. <br/>
+Wzór na procent potrzebny do odrobienia strat: 
+((kapitał*procent_strat)/(kapitał-kapitał*procent_strat))*100 = 
+((1000*20%)/(1000-1000*20%))*100 = 25%
+
+Jak widać, występuje tu zależność, którą na co dzień łatwo przeoczyć. **Jeśli
+stracimy 50%, to aby wyjść na zero, musimy w kolejnym okresie zarobić aż 100%.**
+Dlatego bardzo ważnym ryzykiem w inwestowaniu kapitału jest permanentna strata
+kapitału. <br/>
+Mimo to trzeba pamiętać, że większa zmienność jest ceną, którą zwykle trzeba
+zapłacić za lepsze wyniki w długim okresie. <br/>
+Jeżeli bardzo aktywnie podchodzimy do monitorowania wartości swojego portfela,
+to znaczy, że coś nie gra. Wystarczy zastanowić się przez chwilę, czy równie
+często sprawdzamy cenę domu, który posiadamy. Czy gdyby cena domu spadła o
+kilkanaście procent to czy zaczelibyśmy panikować? Raczej nie i o czymś to
+świadczy.
+
+Kolejnym błędem, który można popełnić jest skupianie się na inwestycjach o
+niskiej zmienności, które kryją w sobie dużo większe ryzyko. Typowym przykładem
+są niektóre fundusze obligacji korporacyjnych. Patrząc na niektóre notowania w 
+krótkim terminie, można zaobserwować rosnącą linię, która prawie nie wykazuje
+wahań. Tymczasem niska zmienność nie ma w tej sytuacji nic wspólnego z niskim
+ryzykiem. Istnieje coś takiego jak **ryzyko kredytowe**. Polega to na tym, że
+emitent obligacji (czyli dłużnik) nie ma pieniędzy, by je odkupić (czyli spłacić
+dług). Być może nawet zbankrutuje i wtedy fundusz nigdy nie odzyska 
+zainwestowanych pieniędzy.
+
+## Rozkład normalny
