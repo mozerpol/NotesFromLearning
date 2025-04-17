@@ -819,7 +819,7 @@ Warren Buffet zaproponował dwie reguły:
 1. Nie trać pieniędzy.
 2. Pamiętaj o zasadzie numer 1.
 
-Nie jest to namowa do unikania ryzyka, ale do próby jego rozproszenia i 
+Nie jest to namowa do unikania ryzyka, ale do próby jego rozproszenia i
 ograniczenia w swoim portfelu. Jednak przedtem trzeba je dobrze zrozumieć i
 zidentyfikować.
 
@@ -839,8 +839,8 @@ poniesione wcześniej straty:
 Przykład: Początkowy kapitał to 1000, strata to 20%. Wiec kwota po stracie:
 1000-1000*0.2 = 800. <br/>
 Żeby odrobić stracone 200 to trzeba zarobić 25% z 800, bo 800*0.25 = 200. <br/>
-Wzór na procent potrzebny do odrobienia strat: 
-((kapitał*procent_strat)/(kapitał-kapitał*procent_strat))*100 = 
+Wzór na procent potrzebny do odrobienia strat:
+((kapitał*procent_strat)/(kapitał-kapitał*procent_strat))*100 =
 ((1000*20%)/(1000-1000*20%))*100 = 25%
 
 Jak widać, występuje tu zależność, którą na co dzień łatwo przeoczyć. **Jeśli
@@ -857,30 +857,30 @@ kilkanaście procent to czy zaczelibyśmy panikować? Raczej nie i o czymś to
 
 Kolejnym błędem, który można popełnić jest skupianie się na inwestycjach o
 niskiej zmienności, które kryją w sobie dużo większe ryzyko. Typowym przykładem
-są niektóre fundusze obligacji korporacyjnych. Patrząc na niektóre notowania w 
+są niektóre fundusze obligacji korporacyjnych. Patrząc na niektóre notowania w
 krótkim terminie, można zaobserwować rosnącą linię, która prawie nie wykazuje
 wahań. Tymczasem niska zmienność nie ma w tej sytuacji nic wspólnego z niskim
 ryzykiem. Istnieje coś takiego jak **ryzyko kredytowe**. Polega to na tym, że
 emitent obligacji (czyli dłużnik) nie ma pieniędzy, by je odkupić (czyli spłacić
-dług). Być może nawet zbankrutuje i wtedy fundusz nigdy nie odzyska 
+dług). Być może nawet zbankrutuje i wtedy fundusz nigdy nie odzyska
 zainwestowanych pieniędzy.
 
 
 ## Statystyka
 ### Miara rozkładu
-**Miara rozkładu** - używana jest do podsumowania zbioru obserwacji, aby 
-przekazać jak najwięcej informacji w możliwie najprostszy sposób. Odnosi się do 
-sposobu, w jaki wartości zmiennej losowej są rozłożone w przestrzeni. Miary 
+**Miara rozkładu** - używana jest do podsumowania zbioru obserwacji, aby
+przekazać jak najwięcej informacji w możliwie najprostszy sposób. Odnosi się do
+sposobu, w jaki wartości zmiennej losowej są rozłożone w przestrzeni. Miary
 rozkładu można podzielić na:
-1. Miary położenia rozkładu - służy do określenia, gdzie znajduje się "środek" 
+1. Miary położenia rozkładu - służy do określenia, gdzie znajduje się "środek"
 rozkładu danych. Pomaga zrozumieć, jakie wartości są typowe, np.:
 - średnia arytmetyczna, geometryczna, harmoniczna, kwadratowa,
 - mediana,
 - kwantyl,
 - moda,
 - dominanta.
-2. Miary zróżnicowania rozkładu - służy do określenia, jak bardzo wartości w 
-zbiorze danych różnią się od siebie. Miary te pomagają zrozumieć, jak 
+2. Miary zróżnicowania rozkładu - służy do określenia, jak bardzo wartości w
+zbiorze danych różnią się od siebie. Miary te pomagają zrozumieć, jak
 rozproszone są dane wokół miar położenia, takich jak średnia czy mediana, np.:
 - odchylenie standardowe,
 - wariancja,
@@ -889,42 +889,42 @@ rozproszone są dane wokół miar położenia, takich jak średnia czy mediana, 
 - rozstęp,
 - rozstęp ćwiartkowy,
 - odchylenie ćwiartkowe.
-3. Miary asymetrii rozkładu - opisuje, w jaki sposób wartości w zbiorze danych 
-są rozłożone wokół średniej. Asymetria odnosi się do tego, czy rozkład jest 
+3. Miary asymetrii rozkładu - opisuje, w jaki sposób wartości w zbiorze danych
+są rozłożone wokół średniej. Asymetria odnosi się do tego, czy rozkład jest
 symetryczny, czy też ma tendencję do "przechylania się" w jedną stronę. np.:
 - współczynnik asymetrii,
 - trzeci moment centralny,
 - współczynnik skośności,
-4. Miary koncentracji rozkładu - służy do oceny, jak bardzo wartości w zbiorze 
-danych są skoncentrowane wokół pewnych punktów, takich jak średnia lub mediana. 
-Miary te pomagają zrozumieć, w jakim stopniu dane są skupione w określonym 
+4. Miary koncentracji rozkładu - służy do oceny, jak bardzo wartości w zbiorze
+danych są skoncentrowane wokół pewnych punktów, takich jak średnia lub mediana.
+Miary te pomagają zrozumieć, w jakim stopniu dane są skupione w określonym
 obszarze, np.:
 - kurtoza,
 - współczynnik Giniego.
 
 
 #### Średnia arytmetyczna, geometryczna, harmoniczna, kwadratowa
-Średnia arytmetyczna – suma liczb podzielona przez ich liczbę. Używa się jej, 
-gdy wszystkie wartości mają równą wagę. Na przykład do obliczania średniej ocen 
+Średnia arytmetyczna – suma liczb podzielona przez ich liczbę. Używa się jej,
+gdy wszystkie wartości mają równą wagę. Na przykład do obliczania średniej ocen
 ucznia czy średniego wynagrodzenia w firmie.
 
 Średnia geometryczna - pierwiastek n-tego stopnia z iloczynu n wartości. Używana
-do danych, które mają charakter proporcjonalny. Jest przydatna w przypadku 
-danych procentowych, o rozkładzie logarytmicznym, analizie średniego wzrostu 
+do danych, które mają charakter proporcjonalny. Jest przydatna w przypadku
+danych procentowych, o rozkładzie logarytmicznym, analizie średniego wzrostu
 inwestycji czy średniej stopy zwrotu z inwestycji.
 
-Średnia harmoniczna - odwrotność średniej arytmetycznej odwrotności wartości. 
-Stosowana w sytuacjach, gdy interesuje nas średnia z wartości odwrotności, na 
-przykład obliczanie średniej prędkości, gdy mamy różne odcinki drogi pokonywane 
+Średnia harmoniczna - odwrotność średniej arytmetycznej odwrotności wartości.
+Stosowana w sytuacjach, gdy interesuje nas średnia z wartości odwrotności, na
+przykład obliczanie średniej prędkości, gdy mamy różne odcinki drogi pokonywane
 z różnymi prędkościami.
 
-Średnia kwadratowa - pierwiastek kwadratowy z średniej arytmetycznej kwadratów 
-wartości. Używana w kontekście analizy rozproszenia i odchyleń. Dobra dla 
-danych, które mogą mieć zarówno wartości dodatnie, jak i ujemne. Na przykład 
-w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - obliczanie 
+Średnia kwadratowa - pierwiastek kwadratowy z średniej arytmetycznej kwadratów
+wartości. Używana w kontekście analizy rozproszenia i odchyleń. Dobra dla
+danych, które mogą mieć zarówno wartości dodatnie, jak i ujemne. Na przykład
+w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - obliczanie
 średniej wartości prądu lub napięcia w obwodach elektrycznych.
- 
- 
+
+
 #### Mediana
 #### Kwantyl
 #### Dominanta
@@ -937,23 +937,23 @@ w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - oblicz
 
 ### Rozkład normalny
 **Rozkład normalny** (inaczej nazywany rozkładem Gaussa) - jest to rozkład
-prawdopodobieństwa. Wykres funkcji tego rozkładu jest krzywą w kształcie dzwonu 
+prawdopodobieństwa. Wykres funkcji tego rozkładu jest krzywą w kształcie dzwonu
 (tak zwaną krzywą dzwonową).
 
 ![Image](https://github.com/user-attachments/assets/5d94fd72-e42f-433d-899a-708b4481956b)
 
-Przyczyną jego znaczenia jest częstość występowania w naturze. Jeśli jakaś 
-wielkość jest sumą lub średnią bardzo wielu losowych czynników, to niezależnie 
-od rozkładu każdego z tych czynników całościowy rozkład będzie zbliżony do 
+Przyczyną jego znaczenia jest częstość występowania w naturze. Jeśli jakaś
+wielkość jest sumą lub średnią bardzo wielu losowych czynników, to niezależnie
+od rozkładu każdego z tych czynników całościowy rozkład będzie zbliżony do
 normalnego. Rozkłady normalne mają następujące cechy:
 - symetryczny kształt dzwonu,
-- średnia i mediana są sobie równe; obie miary zlokalizowane są w środku 
+- średnia i mediana są sobie równe; obie miary zlokalizowane są w środku
 rozkładu,
-- +- 68% danych znajduje się w przedziale do ‍1 odchylenia standardowego od 
+- +- 68% danych znajduje się w przedziale do ‍1 odchylenia standardowego od
 średniej,
-- +- 95% danych znajduje się w przedziale do ‍2 odchyleń standardowych od 
+- +- 95% danych znajduje się w przedziale do ‍2 odchyleń standardowych od
 średniej,
-- +- 99,7% danych znajduje się w przedziale do ‍3 odchyleń standardowych od 
+- +- 99,7% danych znajduje się w przedziale do ‍3 odchyleń standardowych od
 średniej.
 
 ![Image](https://github.com/user-attachments/assets/58d830a5-2c74-484d-ac24-f96559560db4)
@@ -961,4 +961,4 @@ rozkładu,
 
 
 
-**Dystrybuanta** - 
+**Dystrybuanta** -
