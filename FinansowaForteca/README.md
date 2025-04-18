@@ -877,7 +877,6 @@ rozkładu danych. Pomaga zrozumieć, jakie wartości są typowe, np.:
 - średnia arytmetyczna, geometryczna, harmoniczna, kwadratowa,
 - mediana,
 - kwantyl,
-- moda,
 - dominanta.
 2. Miary zróżnicowania rozkładu - służy do określenia, jak bardzo wartości w
 zbiorze danych różnią się od siebie. Miary te pomagają zrozumieć, jak
@@ -925,14 +924,51 @@ w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - oblicz
 średniej wartości prądu lub napięcia w obwodach elektrycznych.
 
 
-#### Mediana
+#### Mediana 
+Mediana - to wartość, która dzieli zbiór danych na dwie równe części. Oznacza 
+to, że połowa wartości jest mniejsza od mediany, a połowa jest większa. Mediana
+jest mniej wrażliwa na wartości odstające niż średnia arytmetyczna. Aby znaleźć 
+medianę należy posortować wszystkie liczby w kolejności od najmniejszej do 
+największej i wyznaczyć wartość, która znajduje się dokładnie w środku.
+
+
 #### Kwantyl
+Kwantyl - dostarcza informacji o tym, jak dane są rozłożone i gdzie znajdują się 
+ich centralne tendencje. Chodzi o to, że kwantyl to mediana dla równych zakresów
+pewnego zbioru wartości. Czyli dzielimy zbiór wartości i dla każdego zbioru 
+osobno liczymy medianę. Inaczje jak to działa... Sortujemy wszystkie liczby od 
+najmniejszej do największej. Następnie dzielimy zbiór danych na równe części, 
+najpopularniejsze podziały to:
+- kwartyla - dzieli zbiór danych na cztery równe części,
+- decyle - dzieli zbiór danych na dziesięć równych części,
+- percentyle - dzielą zbiór danych na 100 równych części.
+Później liczymy medianę dla każdego zbioru.
+
+
 #### Dominanta
+Dominanta - inaczej moda, wskazuje na wartość, która występuje najczęściej w 
+danym zbiorze danych. Dominantą może być więcej niż jedna wartość lub może nie
+być jej w ogóle.
+
+
 #### Odchylenie standardowe
+Odchylenie standardowe -
+
+
 #### Wariancja
+Wariancja -
+
+
 #### Współczynnik zmienności
-#### współczynnik asymetrii
+Współczynnik zmienności - 
+
+
+#### Współczynnik asymetrii
+Współczynnik asymetrii -
+
+
 #### Kurtoza
+Kurtoza - 
 
 
 ### Rozkład normalny
@@ -957,8 +993,6 @@ rozkładu,
 średniej.
 
 ![Image](https://github.com/user-attachments/assets/58d830a5-2c74-484d-ac24-f96559560db4)
-
-
 
 
 **Dystrybuanta** -
