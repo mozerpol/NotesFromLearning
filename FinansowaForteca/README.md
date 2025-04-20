@@ -923,6 +923,7 @@ danych, które mogą mieć zarówno wartości dodatnie, jak i ujemne. Na przykł
 w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - obliczanie
 średniej wartości prądu lub napięcia w obwodach elektrycznych.
 
+![Image](https://github.com/user-attachments/assets/dbdaca0c-2aa8-4816-b943-8eb48d319c43)
 
 #### Mediana
 Mediana - to wartość, która dzieli zbiór danych na dwie równe części. Oznacza
@@ -944,24 +945,41 @@ najpopularniejsze podziały to:
 - percentyle - dzielą zbiór danych na 100 równych części.
 Później liczymy medianę dla każdego zbioru.
 
+![Image](https://github.com/user-attachments/assets/7d13a426-7de9-4471-8005-247db2263fd1)
 
 #### Dominanta
 Dominanta - inaczej moda, wskazuje na wartość, która występuje najczęściej w
 danym zbiorze danych. Dominantą może być więcej niż jedna wartość lub może nie
 być jej w ogóle.
 
+#### Wariancja
+Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej 
+arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala 
+zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja 
+oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja 
+wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być 
+trudniejsza do interpretacji, ponieważ jest wyrażona w jednostkach kwadratowych,
+dlatego lepiej stosować ochylenie standardowe.
 
 #### Odchylenie standardowe
-Odchylenie standardowe -
+Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na 
+przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im 
+mniejsza wartość odchylenia tym obserwacje są bardziej skupione wokół średniej.
+Odchylenie standardowe jest pierwiastkiem kwadratowym z wariancji, mierzy to 
+samo, co wariancja, ale wyrażone jest w tych samych jednostkach, co dane, co 
+czyni je bardziej intuicyjnym.
 
-
-#### Wariancja
-Wariancja -
+![Image](https://github.com/user-attachments/assets/e0d719fb-6a53-4ecd-8cd4-8c9b59724e22)
 
 
 #### Współczynnik zmienności
-Współczynnik zmienności -
+Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej 
+arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich 
+średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet 
+jeśli mają różne jednostki lub różne średnie. Współczynnik zmienności jest 
+wyrażany w procentach.
 
+![Image](https://github.com/user-attachments/assets/113db493-f551-4bf3-ad25-bc5dbb847174)
 
 #### Współczynnik asymetrii
 Współczynnik asymetrii -
