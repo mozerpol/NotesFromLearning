@@ -814,6 +814,7 @@ nowego.
 stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie
 działania może się wiązać z jakąś stratą, to wolimy tego nie robić.
 
+
 ## Jakie ryzyko można ponieść?
 Warren Buffet zaproponował dwie reguły:
 1. Nie trać pieniędzy.
@@ -925,6 +926,7 @@ w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - oblicz
 
 ![Image](https://github.com/user-attachments/assets/dbdaca0c-2aa8-4816-b943-8eb48d319c43)
 
+
 #### Mediana
 Mediana - to wartość, która dzieli zbiór danych na dwie równe części. Oznacza
 to, że połowa wartości jest mniejsza od mediany, a połowa jest większa. Mediana
@@ -947,10 +949,12 @@ Później liczymy medianę dla każdego zbioru.
 
 ![Image](https://github.com/user-attachments/assets/7d13a426-7de9-4471-8005-247db2263fd1)
 
+
 #### Dominanta
 Dominanta - inaczej moda, wskazuje na wartość, która występuje najczęściej w
 danym zbiorze danych. Dominantą może być więcej niż jedna wartość lub może nie
 być jej w ogóle.
+
 
 #### Wariancja
 Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej 
@@ -960,6 +964,7 @@ oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja
 wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być 
 trudniejsza do interpretacji, ponieważ jest wyrażona w jednostkach kwadratowych,
 dlatego lepiej stosować ochylenie standardowe.
+
 
 #### Odchylenie standardowe
 Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na 
@@ -981,12 +986,26 @@ wyrażany w procentach.
 
 ![Image](https://github.com/user-attachments/assets/113db493-f551-4bf3-ad25-bc5dbb847174)
 
+
 #### Współczynnik asymetrii
-Współczynnik asymetrii -
+Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu 
+rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne 
+wartości:
+- skośność równa 0 - rozkład jest symetryczny (np. rozkład normalny).
+- skośność dodatnia -rozkład jest przesunięty w prawo, co oznacza, że ogon 
+rozkładu jest dłuższy po stronie wyższych wartości.
+- skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon 
+rozkładu jest dłuższy po stronie niższych wartości.
+
+
+![Image](https://github.com/user-attachments/assets/31ea51d5-e97f-4ed4-a3eb-15cfa7a8ac30)
 
 
 #### Kurtoza
-Kurtoza -
+Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub 
+"płaskość" w porównaniu do rozkładu normalnego.
+
+![Image](https://github.com/user-attachments/assets/3219ab74-7e47-4154-9043-4278cb6c307f)
 
 
 ### Rozkład normalny
