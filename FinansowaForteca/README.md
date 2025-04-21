@@ -957,44 +957,44 @@ być jej w ogóle.
 
 
 #### Wariancja
-Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej
-arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala
-zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja
-oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja
-wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być
+Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej 
+arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala 
+zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja 
+oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja 
+wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być 
 trudniejsza do interpretacji, ponieważ jest wyrażona w jednostkach kwadratowych,
 dlatego lepiej stosować ochylenie standardowe.
 
 
 #### Odchylenie standardowe
-Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na
-przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im
+Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na 
+przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im 
 mniejsza wartość odchylenia tym obserwacje są bardziej skupione wokół średniej.
-Odchylenie standardowe jest pierwiastkiem kwadratowym z wariancji, mierzy to
-samo, co wariancja, ale wyrażone jest w tych samych jednostkach, co dane, co
+Odchylenie standardowe jest pierwiastkiem kwadratowym z wariancji, mierzy to 
+samo, co wariancja, ale wyrażone jest w tych samych jednostkach, co dane, co 
 czyni je bardziej intuicyjnym.
 
 ![Image](https://github.com/user-attachments/assets/e0d719fb-6a53-4ecd-8cd4-8c9b59724e22)
 
 
 #### Współczynnik zmienności
-Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej
-arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich
-średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet
-jeśli mają różne jednostki lub różne średnie. Współczynnik zmienności jest
+Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej 
+arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich 
+średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet 
+jeśli mają różne jednostki lub różne średnie. Współczynnik zmienności jest 
 wyrażany w procentach.
 
 ![Image](https://github.com/user-attachments/assets/113db493-f551-4bf3-ad25-bc5dbb847174)
 
 
 #### Współczynnik asymetrii
-Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu
-rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne
+Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu 
+rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne 
 wartości:
-- skośność równa 0 - rozkład jest symetryczny (np. rozkład normalny).
-- skośność dodatnia -rozkład jest przesunięty w prawo, co oznacza, że ogon
-rozkładu jest dłuższy po stronie wyższych wartości.
-- skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon
+- skośność równa 0 - rozkład jest symetryczny (np. rozkład normalny),
+- skośność dodatnia -rozkład jest przesunięty w prawo, co oznacza, że ogon 
+rozkładu jest dłuższy po stronie wyższych wartości,
+- skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon 
 rozkładu jest dłuższy po stronie niższych wartości.
 
 
@@ -1002,14 +1002,14 @@ rozkładu jest dłuższy po stronie niższych wartości.
 
 
 #### Kurtoza
-Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub
+Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub 
 "płaskość" w porównaniu do rozkładu normalnego.
 
 ![Image](https://github.com/user-attachments/assets/3219ab74-7e47-4154-9043-4278cb6c307f)
 
 
-### Rozkład normalny
-**Rozkład normalny** (inaczej nazywany rozkładem Gaussa) - jest to rozkład
+#### Rozkład normalny
+Rozkład normalny (inaczej nazywany rozkładem Gaussa) - jest to rozkład
 prawdopodobieństwa. Wykres funkcji tego rozkładu jest krzywą w kształcie dzwonu
 (tak zwaną krzywą dzwonową).
 
@@ -1018,12 +1018,23 @@ prawdopodobieństwa. Wykres funkcji tego rozkładu jest krzywą w kształcie dzw
 Przyczyną jego znaczenia jest częstość występowania w naturze. Jeśli jakaś
 wielkość jest sumą lub średnią bardzo wielu losowych czynników, to niezależnie
 od rozkładu każdego z tych czynników całościowy rozkład będzie zbliżony do
-normalnego. Rozkłady normalne mają następujące cechy:
-- symetryczny kształt dzwonu,
+normalnego. Parametry rozkładu normalnego:
+- średnia (μ) - określa położenie środka rozkładu. To punkt, w którym krzywa 
+osiąga swój maksymalny poziom,
+- odchylenie standardowe (σ) - określa rozproszenie danych wokół średniej. Im 
+większe odchylenie standardowe, tym szersza i bardziej płaska jest krzywa.
+Informuje nas, jak daleko wartości danego zjadwiska odchylają się od średniej,
+- wariancja (σ^2)
+- skośność,
+- kurtoza.
+
+Cechy rozkładu normalnego:
+- idealnie symetryczny kształt dzwonu,
 - średnia i mediana są sobie równe; obie miary zlokalizowane są w środku
-rozkładu,
+rozkładu, czyli wartość średnia leży idealnie po środku,
 - +- 68% danych znajduje się w przedziale do ‍1 odchylenia standardowego od
-średniej,
+średniej. Innymi słowy 68% wszsytkich obserwacji leży w odległóści nie większej
+niż jedno odchylenie standardowe od średniej (w prawo lub lewo),
 - +- 95% danych znajduje się w przedziale do ‍2 odchyleń standardowych od
 średniej,
 - +- 99,7% danych znajduje się w przedziale do ‍3 odchyleń standardowych od
@@ -1031,5 +1042,10 @@ rozkładu,
 
 ![Image](https://github.com/user-attachments/assets/58d830a5-2c74-484d-ac24-f96559560db4)
 
+Przykłady rozkładu normalnego:
+- Inteligencja mierzona testami inteligencji uważana jest za zmienną o 
+rozkładzie normalnym,
+- Wzrost człowieka może być uznany w przybliżeniu za zmienną o rozkładzie 
+normalnym.
 
-**Dystrybuanta** -
+Jak odchylenie standardowe ma się od inwestycji?
