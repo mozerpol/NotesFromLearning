@@ -1048,4 +1048,39 @@ rozkładzie normalnym,
 - Wzrost człowieka może być uznany w przybliżeniu za zmienną o rozkładzie 
 normalnym.
 
-Jak odchylenie standardowe ma się od inwestycji?
+Jak odchylenie standardowe ma się od inwestycji? Przeanalizujmy taki przykład: <br/>
+*Średnia roczna stopa zwrotu z rynku akcji wyniosła 10% z odchyleniem 
+standardowym 15%.* <br/>
+Iterpretacja:
+- 68% rocznych stóp zwrotu znalazło się w przedziale od -5% do +25% (czyli 
+średnia 10% minus jedno odchylenie standardowe 15% oraz średnia 10% plus
+jedno odchylenie standardowe 15%).
+- 95% rocznych stóp zwrotu znalazło się w przedziale od -20% do +40% (czyli
+średnia plus/minus dwa odchylenia standardowe),
+- 99% rocznych stóp zwrotu znalazło się w przedziale od -35% do +55% (czyli
+średnia plus/minus trzy odchylenia standardowe).
+
+Dzięki tym informacjom można oszacować, że prawdopodobieństwo straty 
+przekraczającej 20% jest nie większe niż 2.5%. Fajnie to obrazuje poniższy
+wykres:
+
+![Image](https://github.com/user-attachments/assets/74467474-a2ed-4d8b-a4ea-3b831678288b)
+
+
+#### Rozkład nienormalny
+Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W praktyce stopy
+zwrotu z różnych aktywów nie są normalne. Często mają "grube ogony" (ang. *fat
+tails*), poniżej jest przykład (aby zobrazować o co chodzi) z ogonem w 
+prawą stronę:
+
+![Image](https://github.com/user-attachments/assets/7fee7a94-5373-4d61-804e-89c30132c306)
+
+Ogony w lewą stronę również występują, w kontekscie stóp zwrotu oznaczają one
+straty (bo są z wartościami minus):
+
+![Image](https://github.com/user-attachments/assets/d9c78338-5d2a-406c-a07e-8347bb632c2c)
+
+Odnośnie straty/zysku można to interpretować w taki sposób, że realne ryzyko
+wystąpienia jakiegoś zjawiska jest znacznie wyższe, niż wynikało by to z 
+rozkładu normalnego. <br/>
+Poza grubymi ogonami występują jeszcze długie ogony (ang. *long tails*).
