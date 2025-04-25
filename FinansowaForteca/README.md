@@ -957,44 +957,44 @@ być jej w ogóle.
 
 
 #### Wariancja
-Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej 
-arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala 
-zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja 
-oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja 
-wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być 
+Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej
+arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala
+zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja
+oznacza, że wartości są bardziej rozproszone, podczas gdy niska wariancja
+wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może być
 trudniejsza do interpretacji, ponieważ jest wyrażona w jednostkach kwadratowych,
 dlatego lepiej stosować ochylenie standardowe.
 
 
 #### Odchylenie standardowe
-Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na 
-przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im 
+Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na
+przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im
 mniejsza wartość odchylenia tym obserwacje są bardziej skupione wokół średniej.
-Odchylenie standardowe jest pierwiastkiem kwadratowym z wariancji, mierzy to 
-samo, co wariancja, ale wyrażone jest w tych samych jednostkach, co dane, co 
+Odchylenie standardowe jest pierwiastkiem kwadratowym z wariancji, mierzy to
+samo, co wariancja, ale wyrażone jest w tych samych jednostkach, co dane, co
 czyni je bardziej intuicyjnym.
 
 ![Image](https://github.com/user-attachments/assets/e0d719fb-6a53-4ecd-8cd4-8c9b59724e22)
 
 
 #### Współczynnik zmienności
-Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej 
-arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich 
-średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet 
-jeśli mają różne jednostki lub różne średnie. Współczynnik zmienności jest 
+Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej
+arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich
+średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet
+jeśli mają różne jednostki lub różne średnie. Współczynnik zmienności jest
 wyrażany w procentach.
 
 ![Image](https://github.com/user-attachments/assets/113db493-f551-4bf3-ad25-bc5dbb847174)
 
 
 #### Współczynnik asymetrii
-Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu 
-rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne 
+Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu
+rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne
 wartości:
 - skośność równa 0 - rozkład jest symetryczny (np. rozkład normalny),
-- skośność dodatnia -rozkład jest przesunięty w prawo, co oznacza, że ogon 
+- skośność dodatnia -rozkład jest przesunięty w prawo, co oznacza, że ogon
 rozkładu jest dłuższy po stronie wyższych wartości,
-- skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon 
+- skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon
 rozkładu jest dłuższy po stronie niższych wartości.
 
 
@@ -1002,7 +1002,7 @@ rozkładu jest dłuższy po stronie niższych wartości.
 
 
 #### Kurtoza
-Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub 
+Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub
 "płaskość" w porównaniu do rozkładu normalnego.
 
 ![Image](https://github.com/user-attachments/assets/3219ab74-7e47-4154-9043-4278cb6c307f)
@@ -1019,9 +1019,9 @@ Przyczyną jego znaczenia jest częstość występowania w naturze. Jeśli jaka�
 wielkość jest sumą lub średnią bardzo wielu losowych czynników, to niezależnie
 od rozkładu każdego z tych czynników całościowy rozkład będzie zbliżony do
 normalnego. Parametry rozkładu normalnego:
-- średnia (μ) - określa położenie środka rozkładu. To punkt, w którym krzywa 
+- średnia (μ) - określa położenie środka rozkładu. To punkt, w którym krzywa
 osiąga swój maksymalny poziom,
-- odchylenie standardowe (σ) - określa rozproszenie danych wokół średniej. Im 
+- odchylenie standardowe (σ) - określa rozproszenie danych wokół średniej. Im
 większe odchylenie standardowe, tym szersza i bardziej płaska jest krzywa.
 Informuje nas, jak daleko wartości danego zjadwiska odchylają się od średniej,
 - wariancja (σ^2)
@@ -1043,16 +1043,16 @@ niż jedno odchylenie standardowe od średniej (w prawo lub lewo),
 ![Image](https://github.com/user-attachments/assets/58d830a5-2c74-484d-ac24-f96559560db4)
 
 Przykłady rozkładu normalnego:
-- Inteligencja mierzona testami inteligencji uważana jest za zmienną o 
+- Inteligencja mierzona testami inteligencji uważana jest za zmienną o
 rozkładzie normalnym,
-- Wzrost człowieka może być uznany w przybliżeniu za zmienną o rozkładzie 
+- Wzrost człowieka może być uznany w przybliżeniu za zmienną o rozkładzie
 normalnym.
 
 Jak odchylenie standardowe ma się od inwestycji? Przeanalizujmy taki przykład: <br/>
-*Średnia roczna stopa zwrotu z rynku akcji wyniosła 10% z odchyleniem 
+*Średnia roczna stopa zwrotu z rynku akcji wyniosła 10% z odchyleniem
 standardowym 15%.* <br/>
 Iterpretacja:
-- 68% rocznych stóp zwrotu znalazło się w przedziale od -5% do +25% (czyli 
+- 68% rocznych stóp zwrotu znalazło się w przedziale od -5% do +25% (czyli
 średnia 10% minus jedno odchylenie standardowe 15% oraz średnia 10% plus
 jedno odchylenie standardowe 15%).
 - 95% rocznych stóp zwrotu znalazło się w przedziale od -20% do +40% (czyli
@@ -1060,7 +1060,7 @@ jedno odchylenie standardowe 15%).
 - 99% rocznych stóp zwrotu znalazło się w przedziale od -35% do +55% (czyli
 średnia plus/minus trzy odchylenia standardowe).
 
-Dzięki tym informacjom można oszacować, że prawdopodobieństwo straty 
+Dzięki tym informacjom można oszacować, że prawdopodobieństwo straty
 przekraczającej 20% jest nie większe niż 2.5%. Fajnie to obrazuje poniższy
 wykres:
 
@@ -1068,18 +1068,18 @@ wykres:
 
 
 #### Rozkład nienormalny
-Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W rzeczywistości 
+Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W rzeczywistości
 mogą pojawiać się rzadko wartości ekstremalne, które dalekie są od średniej.
 Przykładem mogą być stopy zwrotu z różnych aktywów. Przedstawiając je za pomocą
-zykłego rozkładu normalnego będzie bardzo dużym uproszczeniem odbiegającym od 
-rzeczywistości. W kontekście stóp zwrotu rozkłady normalne często mają 
+zykłego rozkładu normalnego będzie bardzo dużym uproszczeniem odbiegającym od
+rzeczywistości. W kontekście stóp zwrotu rozkłady normalne często mają
 "grube ogony" (ang. *fat tails*) lub/oraz długie ogony (ang. *long tails*).
 Poniżej jest przykład (aby zobrazować o co chodzi) z ogonem w prawą stronę:
 
 ![Image](https://github.com/user-attachments/assets/7fee7a94-5373-4d61-804e-89c30132c306)
 
-Grube ogony mówią, że prawdopodobieństwo wystąpienia wartości ekstremalnych 
-(czyli wartości znacznie oddalonych od średniej) jest wyższe niż to, co 
+Grube ogony mówią, że prawdopodobieństwo wystąpienia wartości ekstremalnych
+(czyli wartości znacznie oddalonych od średniej) jest wyższe niż to, co
 przewiduje klasyczny rozkład normalny. Poniżej zobrazowanie o co chodzi:
 
 ![Image](https://github.com/user-attachments/assets/c002ffc5-9457-4397-a21d-9e843f8e5008)
@@ -1095,16 +1095,14 @@ straty (bo są z wartościami minus):
 ![Image](https://github.com/user-attachments/assets/d9c78338-5d2a-406c-a07e-8347bb632c2c)
 
 Odnośnie straty/zysku można to interpretować w taki sposób, że realne ryzyko
-wystąpienia jakiegoś zjawiska jest znacznie wyższe, niż wynikało by to z 
+wystąpienia jakiegoś zjawiska jest znacznie wyższe, niż wynikało by to z
 rozkładu normalnego. <br/>
 Poza grubymi ogonami występują jeszcze długie ogony (ang. *long tails*). Długie
-ogony teoretycznie rozciągają się w nieskończoność, ale prawdopodobieństwo 
-wystąpienia wartości ekstremalnych maleje w sposób wykładniczy. W praktyce, 
-"długi ogon" odnosi się do sytuacji, w której ogony rozkładu są dłuższe niż w 
-standardowym rozkładzie normalnym, co oznacza, że wartości dalekie od średniej 
+ogony teoretycznie rozciągają się w nieskończoność, ale prawdopodobieństwo
+wystąpienia wartości ekstremalnych maleje w sposób wykładniczy. W praktyce,
+"długi ogon" odnosi się do sytuacji, w której ogony rozkładu są dłuższe niż w
+standardowym rozkładzie normalnym, co oznacza, że wartości dalekie od średniej
 występują z mniejszą częstotliwością, ale nadal występują...
 :
 
 ![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
-
-
