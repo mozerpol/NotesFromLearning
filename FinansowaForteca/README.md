@@ -1068,12 +1068,26 @@ wykres:
 
 
 #### Rozkład nienormalny
-Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W praktyce stopy
-zwrotu z różnych aktywów nie są normalne. Często mają "grube ogony" (ang. *fat
-tails*), poniżej jest przykład (aby zobrazować o co chodzi) z ogonem w 
-prawą stronę:
+Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W rzeczywistości 
+mogą pojawiać się rzadko wartości ekstremalne, które dalekie są od średniej.
+Przykładem mogą być stopy zwrotu z różnych aktywów. Przedstawiając je za pomocą
+zykłego rozkładu normalnego będzie bardzo dużym uproszczeniem odbiegającym od 
+rzeczywistości. W kontekście stóp zwrotu rozkłady normalne często mają 
+"grube ogony" (ang. *fat tails*) lub/oraz długie ogony (ang. *long tails*).
+Poniżej jest przykład (aby zobrazować o co chodzi) z ogonem w prawą stronę:
 
 ![Image](https://github.com/user-attachments/assets/7fee7a94-5373-4d61-804e-89c30132c306)
+
+Grube ogony mówią, że prawdopodobieństwo wystąpienia wartości ekstremalnych 
+(czyli wartości znacznie oddalonych od średniej) jest wyższe niż to, co 
+przewiduje klasyczny rozkład normalny. Poniżej zobrazowanie o co chodzi:
+
+![Image](https://github.com/user-attachments/assets/c002ffc5-9457-4397-a21d-9e843f8e5008)
+
+
+
+
+
 
 Ogony w lewą stronę również występują, w kontekscie stóp zwrotu oznaczają one
 straty (bo są z wartościami minus):
@@ -1083,4 +1097,14 @@ straty (bo są z wartościami minus):
 Odnośnie straty/zysku można to interpretować w taki sposób, że realne ryzyko
 wystąpienia jakiegoś zjawiska jest znacznie wyższe, niż wynikało by to z 
 rozkładu normalnego. <br/>
-Poza grubymi ogonami występują jeszcze długie ogony (ang. *long tails*).
+Poza grubymi ogonami występują jeszcze długie ogony (ang. *long tails*). Długie
+ogony teoretycznie rozciągają się w nieskończoność, ale prawdopodobieństwo 
+wystąpienia wartości ekstremalnych maleje w sposób wykładniczy. W praktyce, 
+"długi ogon" odnosi się do sytuacji, w której ogony rozkładu są dłuższe niż w 
+standardowym rozkładzie normalnym, co oznacza, że wartości dalekie od średniej 
+występują z mniejszą częstotliwością, ale nadal występują...
+:
+
+![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
+
+
