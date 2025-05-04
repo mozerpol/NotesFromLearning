@@ -102,6 +102,9 @@ STM32F446xC/E - Arm Cortex-M4:
 STM32F446RE Nucleo board top layout taken from user manual:
 ![Image](https://github.com/user-attachments/assets/02a3b22a-872e-47fc-802d-76187688aad4)
 
+Pinout:
+![Image](https://github.com/user-attachments/assets/b39926d8-0e64-4455-b4a8-efbeab5ad3aa)
+
 Memory map for STM32F446RET6, taken from datasheet:
 ![Image](https://github.com/user-attachments/assets/193f1892-1dd6-4f90-8957-b39637d4b976)
 
