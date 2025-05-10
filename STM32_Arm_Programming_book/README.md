@@ -91,21 +91,26 @@ OR can be used to set a bit or bits, and AND can be used to clear a bit or bits.
 ## 2. STM Arm I/O Programming <a name="2"></a>
 
 STM32 Arm Cortex Portfolio:
+
 ![Image](https://github.com/user-attachments/assets/fa189f6b-81ec-4c41-81d6-15492ca08685)
 
 The STM32F4xx is based on Cortex-M4 while STM32F0 uses Cortex-M0+.
 
 STM32F446RE Arm Microcontroller Block Diagram. Can be taken from datasheet -
 STM32F446xC/E - Arm Cortex-M4:
+
 ![Image](https://github.com/user-attachments/assets/9aa5ea88-b8eb-40a0-a742-87f8b02f63f6)
 
 STM32F446RE Nucleo board top layout taken from user manual:
+
 ![Image](https://github.com/user-attachments/assets/02a3b22a-872e-47fc-802d-76187688aad4)
 
 Pinout:
+
 ![Image](https://github.com/user-attachments/assets/b39926d8-0e64-4455-b4a8-efbeab5ad3aa)
 
 Memory map for STM32F446RET6, taken from datasheet:
+
 ![Image](https://github.com/user-attachments/assets/193f1892-1dd6-4f90-8957-b39637d4b976)
 
 As you can notice, the MCU has 4GB (Giga bytes) of memory address space. It
@@ -143,6 +148,7 @@ certain (pol. *pewny*) address space. In the STM32 Arm, the GPIO ports are
 connected to AHB bus via AHB/APB1 and AHP/APB2 bridges. The AHB and memories are
 connected to CPU via what is called Bus Matrix. STM32F446xC/E and Multi-AHB
 matrix:
+
 ![Image](https://github.com/user-attachments/assets/7a8ff66b-d582-40da-ac1c-67fa6d34b3bd)
 
 Each peripheral such as GPIO, Timer, and ADC are assigned a set of addresses.
@@ -175,6 +181,7 @@ MODER register. These two bits need to be a 00 to configure the port pin as
 input and a 01 as output. This register is also used to set the alternative
 function mode for each pin, in addition to deciding if it is used for analog or
 digital I/O:
+
 ![Image](https://github.com/user-attachments/assets/9296afa3-47ba-4eee-9863-7f87ce60bd52)
 
 The output register in STM Arm is called GPIO port output data register
@@ -183,6 +190,7 @@ address of 0x14 from the Base address of that port. In the Reference manual
 (don't confuse with datasheet) RM0390 for STM32F446xx advanced Arm-based 32-bit
 MCUs can be found information about GPIO ODR. GPIO port output data register
 (GPIOx_ODR) (x = A..H)
+
 ![Image](https://github.com/user-attachments/assets/d71205e4-67b0-406b-a413-1c871c18373e)
 
 Bits 15:0 ODRy: Port output data (y = 0..15). These bits can be read and written
@@ -196,6 +204,7 @@ group of registers belonging to RCC (Reset and Clock Control) registers. For the
 STM32F446 chips, the GPIO clock enable is controlled by lower bits of
 RCC_AHB1ENR (AHB1 Enable Register). This is not standard across all STM Arm
 family:
+
 ![Image](https://github.com/user-attachments/assets/77bc3b74-f561-4f2c-b768-bf1c2cd84089)
 
 ![Image](https://github.com/user-attachments/assets/fc65506b-4dae-4ec6-b9f5-8f396e304459)
@@ -276,6 +285,7 @@ According to the electronic diagram for the board the onboard user push button
 is connected to PC13 digital pin through a pull-up resistor. This means when the
 push button is not pressed, we will get an active high signal at the PC13 pin.
 Similarly, when it is pressed, we will get an active low signal on the PC13 pin:
+
 ![Image](https://github.com/user-attachments/assets/67add0a5-c10b-4cef-8cbf-2d44529a8cbc)
 
 2. Enable clock for port A and port C. <br/>
@@ -398,6 +408,7 @@ Some commonly command codes:
 To send any of the commands to the LCD, make pins RS = 0, R/W = 0, and send a
 pulse on the E pin to enable the internal latch of the LCD. Connection of an
 LCD to the microcontroller:
+
 ![Image](https://github.com/user-attachments/assets/2b85ff7b-012f-4714-a069-1c5751ca63c0)
 
 Connection to the MCU:
