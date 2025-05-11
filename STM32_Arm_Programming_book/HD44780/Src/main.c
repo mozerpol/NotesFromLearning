@@ -1,9 +1,9 @@
-/* Using HD47780 with 8-bit mode and delay.
+/* Using HD47780 with 4-bit mode and delay.
 The LCD controller is connected as follows:
-PC0-PC7 for LCD D0-D7, respectively.
-PB5 for LCD R/S
-PB6 for LCD R/W
-PB7 for LCD EN
+LCD D4-D7 --> PD0-PD3
+LCD R/S   --> PB0
+LCD R/W   --> GND
+LCD EN    --> PB1
 */
 #include <stdint.h>
 
@@ -14,29 +14,29 @@ PB7 for LCD EN
 // RCC register
 #define RCC_AHB1ENR    (*(volatile uint32_t *)(RCC_BASE + 0x30))
 // GPIOB registers
-#define GPIOB_MODER    (*(volatile uint32_t *)(GPIOB_BASE + 0x00)) // output
+#define GPIOB_MODER    (*(volatile uint32_t *)(GPIOB_BASE + 0x00))
 #define GPIOB_ODR      (*(volatile uint32_t *)(GPIOB_BASE + 0x14))
 #define GPIOB_BSRR     (*(volatile uint32_t *)(GPIOB_BASE + 0x18))
 // GPIOD registers
-#define GPIOD_MODER    (*(volatile uint32_t *)(GPIOD_BASE + 0x00)) // output
+#define GPIOD_MODER    (*(volatile uint32_t *)(GPIOD_BASE + 0x00))
 #define GPIOD_ODR      (*(volatile uint32_t *)(GPIOD_BASE + 0x14))
+#define GPIOD_BSRR     (*(volatile uint32_t *)(GPIOB_BASE + 0x18))
 // Define masks
-#define RS 0x20 // PB5 mask for reg select, 0x20 = 0b00100000
-#define RW 0x40 // PB6 mask for read/write, 0x40 = 0b01000000
-#define EN 0x80 // PB7 mask for enable, 0x80 = 0b10000000
+#define RS 0x1 // PB0 mask for reg select
+#define EN 0x2 // PB1 mask for enable
 
 
 void delayMs(int n);
+void PORTS_init(void);
+void LCD_nibble_write(char data, unsigned char control);
+void LCD_init(void);
 void LCD_command(unsigned char command);
 void LCD_data(char data);
-void LCD_init(void);
-void PORTS_init(void);
 
 
 int main(void)
 {
    LCD_init(); // Initialize LCD controller
-   delayMs(1000);
    
    while(1)
    {
@@ -46,8 +46,9 @@ int main(void)
       LCD_data('l');
       LCD_data('l');
       LCD_data('o'); 
+      delayMs(1000);
       LCD_command(1); // Clear LCD display 
-      delayMs(500);
+      delayMs(1000);
    }
 }
 
@@ -55,17 +56,21 @@ int main(void)
 // Initialize port pins then initialize LCD controller
 void LCD_init(void)
 {
-   PORTS_init();
-   delayMs(30); // Initialization sequence 
-   LCD_command(0x30);
-   delayMs(10);
-   LCD_command(0x30);
-   delayMs(1);
-   LCD_command(0x30);
-   LCD_command(0x38); // Set 8-bit data, 2-line, 5x7 font
-   LCD_command(0x06); // Move cursor right after each char
-   LCD_command(0x01); // Clear screen, move cursor to home
-   LCD_command(0x0F); // Turn on display, cursor blinking
+    PORTS_init();
+    delayMs(20);
+    // LCD controller reset sequence
+    LCD_nibble_write(0x30, 0);
+    delayMs(5);
+    LCD_nibble_write(0x30, 0);
+    delayMs(1);
+    LCD_nibble_write(0x30, 0);
+    delayMs(1);
+    LCD_nibble_write(0x20, 0); // use 4-bit data mode
+    delayMs(1);
+    LCD_command(0x28); // set 4-bit data, 2-line, 5x7 font
+    LCD_command(0x06); // move cursor right
+    LCD_command(0x01); // clear screen, move cursor to home
+    LCD_command(0x0F); // turn on display, cursor blinking
 }
 
 
@@ -74,49 +79,49 @@ void PORTS_init(void)
    RCC_AHB1ENR |= (1 << 1); // Enable GPIOB clock
    RCC_AHB1ENR |= (1 << 3); // Enable GPIOD clock
    // Command ports
-   //  PB5 for LCD R/S
-   //  PB6 for LCD R/W
-   //  PB7 for LCD EN
-   GPIOB_MODER &= ~0x0000FC00; // Clear pin mode, 0xFC00 = 0b1111110000000000
-   GPIOB_MODER |=  0x00005400; // Set pin output mode, 0x5400 = 0b0101010000000000
-   GPIOB_BSRR  =   0x00C00000; // Turn off EN and R/W, 
-   // 0x00C00000 = 0b00000000110000000000000000000000. Pin PB6, PB7 = 1, it 
-   // means reset PB6 and PB7
+   // LCD R/S --> PB0 
+   // LCD EN  --> PB1
+   GPIOB_MODER |= 0x5; // Set pin output mode, 0x5 = 0b0101
+   GPIOB_BSRR  =  0x30000; // Turn off EN and R/W, 
+   // 0x30000 = 0b11_00000000_00000000. Reset pins PB0, PB1 = 1
    // Data ports
-   //  PD0-PD7 for LCD D0-D7, respectively.
-   GPIOD_MODER &= ~0x0000FFFF; // Clear pin mode 
-   GPIOD_MODER |= 0x00005555; // Set pin output mode
+   // LCD D4-D7 --> PD0-PD3
+   GPIOD_MODER |= 0x00000055; // Set pin output mode
+}
+
+
+void LCD_nibble_write(char data, unsigned char control)
+{
+    GPIOD_BSRR = 0x000F0000;  // populate data bits
+    GPIOD_BSRR = data & 0xF0; // clear data bits
+    /* set data bits */
+    /* set R/S bit */
+    if (control & RS)
+        GPIOB_BSRR = RS;
+    else
+        GPIOB_BSRR = RS << 16;
+    GPIOB_BSRR = EN; // pulse E
+    delayMs(0);
+    GPIOB_BSRR = EN << 16;
 }
 
 
 void LCD_command(unsigned char command)
 {
-   GPIOB_BSRR = (RS | RW) << 16; //  RS = 0, R/W = 0 
-   GPIOD_ODR = command; // Put command on data bus
-   GPIOB_BSRR = EN; // Pulse E high 
-   delayMs(0);
-   GPIOB_BSRR = EN << 16; // Clear E
-   
-   if (command < 4)
-   {
-      delayMs(2); // Command 1 and 2 needs up to 1.64ms
-   }
-   else
-   {
-      delayMs(1); // All others 40 us
-   }
+    LCD_nibble_write(command & 0xF0, 0); // upper nibble first
+    LCD_nibble_write(command << 4, 0); // then lower nibble
+    if (command < 4)
+        delayMs(2); // command 1 and 2 needs up to 1.64ms
+    else
+        delayMs(1); // all others 40 us
 }
 
 
 void LCD_data(char data)
 {
-   GPIOD_ODR = data; // Put data on data bus 
-   GPIOB_BSRR = EN; // Pulse E high 
-   delayMs(0);
-   GPIOB_BSRR = EN << 16; // Clear E
-   GPIOB_BSRR = RS; // RS = 1 
-   GPIOB_BSRR = RW << 16; // R/W = 0
-   delayMs(1); 
+    LCD_nibble_write(data & 0xF0, RS); // upper nibble first
+    LCD_nibble_write(data << 4, RS); // then lower nibble
+    delayMs(1);
 }
 
 
