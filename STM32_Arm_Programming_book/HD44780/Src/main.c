@@ -9,10 +9,14 @@ LCD EN    --> PB1
 
 // Base addresses for peripherals
 #define RCC_BASE        0x40023800
+#define GPIOA_BASE      0x40020000
 #define GPIOB_BASE      0x40020400
 #define GPIOD_BASE      0x40020C00
 // RCC register
 #define RCC_AHB1ENR    (*(volatile uint32_t *)(RCC_BASE + 0x30))
+// GPIOA registers
+#define GPIOA_MODER    (*(volatile uint32_t *)(GPIOA_BASE + 0x00))
+#define GPIOA_ODR      (*(volatile uint32_t *)(GPIOA_BASE + 0x14))
 // GPIOB registers
 #define GPIOB_MODER    (*(volatile uint32_t *)(GPIOB_BASE + 0x00))
 #define GPIOB_ODR      (*(volatile uint32_t *)(GPIOB_BASE + 0x14))
@@ -36,6 +40,21 @@ void LCD_data(char data);
 
 int main(void)
 {
+
+    RCC_AHB1ENR |= (1 << 0); // Enable clock for GPIOA
+    GPIO_MODER  |= (1 << 10); // Set bit 1 to set direction as an output, bit 10 is assigned to PA5
+
+    
+    while(1)
+    {
+            GPIO_ODR = (1 << 5); // Set pin PA5 to high state
+            delay_ms(1000); // 1 sec
+            GPIO_ODR = (0 << 5); // Set pin PA5 to low state
+            delay_ms(1000); // 1 sec
+    }
+    
+
+   /*
    LCD_init(); // Initialize LCD controller
    
    while(1)
@@ -50,6 +69,7 @@ int main(void)
       LCD_command(1); // Clear LCD display 
       delayMs(1000);
    }
+   */
 }
 
 
@@ -131,6 +151,20 @@ void delayMs(int n)
    int i;
    for (; n > 0; n--)
    for (i = 0; i < 3195; i++) ;
+}
+
+void delay_ms(int milliseconds) // 1000 = 1 sec
+{
+    // 180 MHz = 5.56 ns
+    // 1 ms = 1_000_000 ns
+    // 179856 clock cycles = 1 ms
+    
+    volatile int count;
+    for (int i = 0; i < milliseconds; i++) 
+        for (count = 0; count < 179856; count++)
+        {
+            // Empty loop
+        }
 }
 
 
