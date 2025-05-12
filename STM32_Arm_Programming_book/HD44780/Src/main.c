@@ -42,14 +42,14 @@ int main(void)
 {
 
     RCC_AHB1ENR |= (1 << 0); // Enable clock for GPIOA
-    GPIO_MODER  |= (1 << 10); // Set bit 1 to set direction as an output, bit 10 is assigned to PA5
+    GPIOA_MODER |= (1 << 10); // Set bit 1 to set direction as an output, bit 10 is assigned to PA5
 
     
     while(1)
     {
-            GPIO_ODR = (1 << 5); // Set pin PA5 to high state
+            GPIOA_ODR = (1 << 5); // Set pin PA5 to high state
             delay_ms(1000); // 1 sec
-            GPIO_ODR = (0 << 5); // Set pin PA5 to low state
+            GPIOA_ODR = (0 << 5); // Set pin PA5 to low state
             delay_ms(1000); // 1 sec
     }
     
