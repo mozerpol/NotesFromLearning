@@ -36,6 +36,7 @@ void LCD_nibble_write(char data, unsigned char control);
 void LCD_init(void);
 void LCD_command(unsigned char command);
 void LCD_data(char data);
+void delay_ms(int milliseconds);
 
 
 int main(void)
@@ -47,10 +48,10 @@ int main(void)
     
     while(1)
     {
-            GPIOA_ODR = (1 << 5); // Set pin PA5 to high state
-            delay_ms(1000); // 1 sec
-            GPIOA_ODR = (0 << 5); // Set pin PA5 to low state
-            delay_ms(1000); // 1 sec
+        GPIOA_ODR = (1 << 5); // Set pin PA5 to high state
+        delay_ms(1000); // 1 sec
+        GPIOA_ODR = (0 << 5); // Set pin PA5 to low state
+        delay_ms(1000); // 1 sec
     }
     
 
