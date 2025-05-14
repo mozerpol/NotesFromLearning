@@ -1099,3 +1099,15 @@ rozkładzie normalnym, co oznacza, że wartości dalekie od średniej, czyli
 występują z mniejszą częstotliwością, ale nadal występują... Przykład:
 
 ![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
+
+Ważne aby pamiętać, to że zainwestujemy pieniądze w bardziej ryzykowne aktywa,
+pod żadnym pozorem nie znaczy, że zarobimy więcej. Fajnie ilustruje to
+wykres stworzony przez Howarda Marksa, który jest zależnością między zyskami, a
+ryzykiem:
+
+![Image](https://github.com/user-attachments/assets/37e46876-7bf0-408b-a5da-a4da6c8062b7)
+
+Te wybrzuszenia to przekręcone o 90 stopni w lewo rozkłady stóp zwrotu. Widać, 
+że bardziej ryzykowne aktywa nie gwarantują wyższych stóp zwrotu. To wszystko
+można podsumować jako: **Wysokie zyski oznaczają zwykle konieczność podjęcia
+wyższego ryzyka, ale wyższe ryzyko wcale nie musi oznaczać wysokich zysków.**
