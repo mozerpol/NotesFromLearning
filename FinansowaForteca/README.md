@@ -484,11 +484,57 @@ Czyli zysk wynosi: <br/>
 
 
 ## Akcje, dywidenda
+**Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
+w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest 
+podzielony na akcje. Akcjonariusze, którzy posiadają te akcje, są 
+współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki jest 
+ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne działają 
+obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
+- Kapitał zakładowy - spółka akcyjna musi posiadać określony kapitał zakładowy, 
+który jest zawsze podzielony na akcje. Wysokość kapitału zakładowego różni się
+w zależności od kraju. W polsce to 5000 pln. Generalnie właściciel spółki może
+być właścicielem całego kapitału zakładowego (częste jest to w małych spółkach 
+akcyjnych).
+- Akcje reprezentują udział w kapitale spółki. Mogą być one sprzedawane i 
+kupowane na rynku, co umożliwia pozyskiwanie kapitału od inwestorów.
+- Ograniczona odpowiedzialność - akcjonariusze odpowiadają za zobowiązania 
+spółki tylko do wysokości wniesionych wkładów, co oznacza, że ich osobisty 
+majątek jest chroniony przed roszczeniami wierzycieli spółki.
+- Zarządzanie - spółka zarządzana jest przez zarząd, który podejmuje decyzje 
+operacyjne, oraz radę nadzorczą, która kontroluje działalność zarządu. 
+- Publiczność- mogą być publiczne (notowane na giełdzie) lub prywatne. Spółki 
+publiczne mają obowiązek ujawniania informacji finansowych i operacyjnych, co 
+zwiększa przejrzystość dla inwestorów.
+- Dywidendy - spółka akcyjna może wypłacać dywidendy akcjonariuszom z zysków, co 
+stanowi dla nich źródło dochodu.
+
+**Spółka z ograniczoną odpowiedzialnością** (ang. *private limited company*) - 
+sp. z o.o. to forma prawna przedsiębiorstwa utworzonego przez jedną lub więcej 
+osób, zwanych wspólnikami, które odpowiadają za zobowiązania przedsiębiorstwa w 
+ograniczonym zakresie. Spółka z o.o. jest często wybierana przez małe i średnie
+przedsiębiorstwa ze względu na ograniczoną odpowiedzialność oraz możliwość 
+łatwego zarządzania i organizacji działalności gospodarczej.
+
 **Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
 Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
 proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
 zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
 rynku czy ogólna kondycja gospodarki.
+
+**Akcjonariusz** - osoba lub podmiot, który posiada akcje w spółce akcyjnej.
+
+**Walne zgromadzenie** - formalne spotkanie akcjonariuszy spółki akcyjnej, 
+podczas którego podejmowane są kluczowe decyzje dotyczące zarządzania spółką. 
+Walne zgromadzenia mogą być zwyczajne (regularnie odbywające się, zazwyczaj raz 
+w roku) lub nadzwyczajne (zwoływane w szczególnych okolicznościach, gdy zachodzi 
+potrzeba podjęcia pilnych decyzji). Uczestnictwo w walnym zgromadzeniu daje 
+akcjonariuszom możliwość wpływania na kierunek działania spółki oraz ochrony 
+swoich interesów jako inwestorów.
+
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
+akcji.
 
 Jest kilka rodzajów akcji:
 1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
@@ -497,10 +543,29 @@ nie jest gwarantowana.
 2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
 wypłacie dywidend.
 
-**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
-akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
-danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
-akcji.
+Posiadanie akcji wiąże się z wieloma prawami (zwanymi prawami akcjonariusza), 
+które mogą się różnić w zależności od rodzaju akcji (zwykłe, uprzywilejowane) 
+oraz przepisów w danym kraju. Generalnie ich zasada polega na tym, aby zapewnić
+akcjonariuszom ochronę ich kapitału. Niektóre prawa:
+1. Prawo do zysku (dywidendy) - akcjonariusze mają prawo do udziału w zyskach 
+spółki w formie dywidendy, jeśli spółka zdecyduje się ją wypłacić.
+2. Prawo do głosu - akcjonariusze mają prawo do głosowania na walnych 
+zgromadzeniach, co pozwala im wpływać na decyzje dotyczące zarządzania spółką, 
+takie jak wybór członków zarządu czy zatwierdzenie sprawozdań finansowych.
+3. Prawo do informacji - akcjonariusze mają prawo do uzyskiwania informacji o 
+działalności spółki, w tym dostęp do sprawozdań finansowych oraz innych 
+dokumentów korporacyjnych.
+4. Prawo do uczestnictwa w walnym zgromadzeniu - akcjonariusze mają prawo 
+uczestniczyć w walnych zgromadzeniach, gdzie podejmowane są kluczowe decyzje 
+dotyczące spółki.
+5. Prawo do zbycia akcji - akcjonariusze mogą sprzedawać swoje akcje innym 
+inwestorom, co daje im możliwość realizacji zysku lub ograniczenia strat.
+6. Prawo do pierwszeństwa - w przypadku emisji nowych akcji, akcjonariusze mogą 
+mieć prawo do nabycia nowych akcji w proporcji do posiadanych akcji, co pozwala 
+im utrzymać swoje procentowe zaangażowanie w spółce.
+7. Prawo do ochrony przed nieuczciwymi praktykami - akcjonariusze mają prawo do 
+ochrony przed działaniami, które mogą być szkodliwe dla ich interesów, takimi 
+jak nieuczciwe przejęcia czy manipulacje rynkowe.
 
 
 ## Giełda, indeks giełdowy, kapitalizacja rynkowa
@@ -866,6 +931,29 @@ emitent obligacji (czyli dłużnik) nie ma pieniędzy, by je odkupić (czyli sp�
 dług). Być może nawet zbankrutuje i wtedy fundusz nigdy nie odzyska
 zainwestowanych pieniędzy.
 
+Ważne aby pamiętać, to że zainwestujemy pieniądze w bardziej ryzykowne aktywa,
+pod żadnym pozorem nie znaczy, że zarobimy więcej. Fajnie ilustruje to
+wykres stworzony przez Howarda Marksa, który jest zależnością między zyskami, a
+ryzykiem:
+
+![Image](https://github.com/user-attachments/assets/37e46876-7bf0-408b-a5da-a4da6c8062b7)
+
+Te wybrzuszenia to przekręcone o 90 stopni w lewo rozkłady stóp zwrotu. Widać, 
+że bardziej ryzykowne aktywa nie gwarantują wyższych stóp zwrotu. To wszystko
+można podsumować jako: **Wysokie zyski oznaczają zwykle konieczność podjęcia
+wyższego ryzyka, ale wyższe ryzyko wcale nie musi oznaczać wysokich zysków.**
+
+Przed podjęciem inwestycji warto zadać sobie kilka pytań:
+- Jaką część majątku stracę, jeśli ta inwestycja nie wypali?
+- Jak to wpłynie na mój ogólny poziom życia?
+- Na jak długo mogę zamrozić środki w tej inwestycji?
+- Jak się będę czuł, jeśli stracę 10/30/50%?
+- W jakim jestem nastroju, gdy podejmuję tę decyzję?
+
+Zdolność do podejmowania ryzyka oznacza, że możesz sobie na to ryzyko pozwolić.
+Skłonność do podejmowania ryzyka oznacza, że chcesz na to ryzyko sobie pozwolić.
+Jeśli zdolność i skłonność podpowiadają różne rzeczy to warto kierować się 
+zasadą, że o ryzyku powinien decydować element, który jest niższy.
 
 ## Statystyka
 ### Miara rozkładu
@@ -1100,14 +1188,4 @@ występują z mniejszą częstotliwością, ale nadal występują... Przykład:
 
 ![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
 
-Ważne aby pamiętać, to że zainwestujemy pieniądze w bardziej ryzykowne aktywa,
-pod żadnym pozorem nie znaczy, że zarobimy więcej. Fajnie ilustruje to
-wykres stworzony przez Howarda Marksa, który jest zależnością między zyskami, a
-ryzykiem:
 
-![Image](https://github.com/user-attachments/assets/37e46876-7bf0-408b-a5da-a4da6c8062b7)
-
-Te wybrzuszenia to przekręcone o 90 stopni w lewo rozkłady stóp zwrotu. Widać, 
-że bardziej ryzykowne aktywa nie gwarantują wyższych stóp zwrotu. To wszystko
-można podsumować jako: **Wysokie zyski oznaczają zwykle konieczność podjęcia
-wyższego ryzyka, ale wyższe ryzyko wcale nie musi oznaczać wysokich zysków.**
