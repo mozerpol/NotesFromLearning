@@ -1,3 +1,56 @@
+Notes from the book "Finansowa forteca" by Marcin Iwuć.
+_____________
+
+# Spis treści <a name="tof"></a>
+
+1. [Wprowadzenie do finansów](#1)
+    1. Definicja finansów
+    2. Rola finansów w gospodarce
+2. [Makroekonomia](#2)
+    1. Siła nabywcza
+    2. Inflacja i deprecjacja
+    3. PKB i PSN
+    4. Bank centralny i jego rola
+    5. Stopa procentowa
+3. [Cykl gospodarczy](#3)
+    1. Cykliczność gospodarki i rynków
+    2. Cykl kredytowy
+    3. Prognozy w inwestowaniu
+4. [System podatkowy](#4)
+    1. Podatek dochodowy od osób prawnych (CIT)
+    2. Podatek Belki
+    3. Inne podatki związane z inwestowaniem
+    4. Wpływ podatków na inwestycje
+5. [Akcje i spółki](#5)
+    5.1. Spółka akcyjna
+    5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
+    5.3. Akcje
+    5.4. Dywidenda
+6. [Instrumenty finansowe](#6)
+    1. Papiery wartościowe
+        1. Obligacje i ich rodzaje
+    2. Instrumenty pochodne
+    3.  Lokaty i konta oszczędnościowe
+    4. Złoto i srebro
+7. [Giełda i inwestowanie](#7)
+    1. Giełda i jej funkcje
+    2. Indeksy giełdowe
+    3. Kapitalizacja rynkowa
+    4. WIBOR i EURIBOR
+8. [Psychologia inwestowania](#8)
+    1. Inwestowanie i psychologia
+    2. Skłonności i błędy w inwestowaniu
+    3. Ryzyko
+9. [Statystyka w finansach](#9)
+    1. Rola statystyki w analizie finansowej
+    2. Narzędzia statystyczne w inwestowaniu
+10. [Poduszka finansowa](#10)
+    1. Znaczenie poduszki finansowej
+    2. Jak budować poduszkę finansową
+    3. Krótkoterminowy portfel finansowy
+    4. Długoterminowy portfel finansowy
+
+
 ## Siła nabywcza, deprecjacja, inflacja, bank centralny, stopa procentowa
 Spadek **siły nabywczej pieniądza** oznacza, że za tę samą ilość pieniędzy można
 kupić mniej dóbr i usług niż wcześniej. Jest to często związane z inflacją.
