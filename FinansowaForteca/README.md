@@ -51,6 +51,65 @@ _____________
     4. Długoterminowy portfel finansowy
 
 
+# 1. Wprowadzenie do finansów <a name="1"></a>
+## 1.1. Definicja finansów
+## 1.2. Rola finansów w gospodarce
+
+# 2. Makroekonomia <a name="2"></a>
+## 2.1. Siła nabywcza
+## 2.2. Inflacja i deprecjacja
+## 2.3. PKB i PSN
+## 2.4. Bank centralny i jego rola
+## 2.5. Stopa procentowa
+
+# 3. Cykl gospodarczy <a name="3"></a>
+## 3.1. Cykliczność gospodarki i rynków
+## 3.2. Cykl kredytowy
+## 3.3. Prognozy w inwestowaniu
+
+# 4. System podatkowy <a name="4"></a>
+## 4.1. Podatek dochodowy od osób prawnych (CIT)
+## 4.2. Podatek Belki
+## 4.3. Inne podatki związane z inwestowaniem
+## 4.4. Wpływ podatków na inwestycje
+
+# 5. Akcje i spółki <a name="5"></a>
+## 5.1. Spółka akcyjna
+## 5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
+## 5.3. Akcje
+## 5.4. Dywidenda
+
+# 6. Instrumenty finansowe <a name="6"></a>
+## 6.1. Papiery wartościowe
+### 6.1.1. Obligacje i ich rodzaje
+## 6.2. Instrumenty pochodne
+## 6.3.  Lokaty i konta oszczędnościowe
+## 6.4. Złoto i srebro
+
+# 7. Giełda i inwestowanie <a name="7"></a>
+## 7.1. Giełda i jej funkcje
+## 7.2. Indeksy giełdowe
+## 7.3. Kapitalizacja rynkowa
+## 7.4. WIBOR i EURIBOR
+
+# 8. Psychologia inwestowania <a name="8"></a>
+## 8.1. Inwestowanie i psychologia
+## 8.2. Skłonności i błędy w inwestowaniu
+## 8.3. Ryzyko
+
+# 9. Statystyka w finansach <a name="9"></a>
+## 9.1. Rola statystyki w analizie finansowej
+## 9.2. Narzędzia statystyczne w inwestowaniu
+
+# 10. Poduszka finansowa <a name="10"></a>
+## 10.1. Znaczenie poduszki finansowej
+## 10.2. Jak budować poduszkę finansową
+## 10.3. Krótkoterminowy portfel finansowy
+## 10.4. Długoterminowy portfel finansowy
+
+
+
+
 ## Siła nabywcza, deprecjacja, inflacja, bank centralny, stopa procentowa
 Spadek **siły nabywczej pieniądza** oznacza, że za tę samą ilość pieniędzy można
 kupić mniej dóbr i usług niż wcześniej. Jest to często związane z inflacją.
