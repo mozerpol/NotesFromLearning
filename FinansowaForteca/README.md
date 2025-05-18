@@ -8,7 +8,7 @@ _____________
     2. Rola finansów w gospodarce
 2. [Makroekonomia](#2)
     1. Siła nabywcza
-    2. Inflacja i deprecjacja
+    2. Inflacja, CPI, deprecjacja i aprecjacja
     3. PKB i PSN
     4. Bank centralny i jego rola
     5. Stopa procentowa
@@ -30,7 +30,7 @@ _____________
     1. Papiery wartościowe
         1. Obligacje i ich rodzaje
     2. Instrumenty pochodne
-    3.  Lokaty i konta oszczędnościowe
+    3. Lokaty i konta oszczędnościowe
     4. Złoto i srebro
 7. [Giełda i inwestowanie](#7)
     1. Giełda i jej funkcje
@@ -57,60 +57,6 @@ _____________
 
 # 2. Makroekonomia <a name="2"></a>
 ## 2.1. Siła nabywcza
-## 2.2. Inflacja i deprecjacja
-## 2.3. PKB i PSN
-## 2.4. Bank centralny i jego rola
-## 2.5. Stopa procentowa
-
-# 3. Cykl gospodarczy <a name="3"></a>
-## 3.1. Cykliczność gospodarki i rynków
-## 3.2. Cykl kredytowy
-## 3.3. Prognozy w inwestowaniu
-
-# 4. System podatkowy <a name="4"></a>
-## 4.1. Podatek dochodowy od osób prawnych (CIT)
-## 4.2. Podatek Belki
-## 4.3. Inne podatki związane z inwestowaniem
-## 4.4. Wpływ podatków na inwestycje
-
-# 5. Akcje i spółki <a name="5"></a>
-## 5.1. Spółka akcyjna
-## 5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
-## 5.3. Akcje
-## 5.4. Dywidenda
-
-# 6. Instrumenty finansowe <a name="6"></a>
-## 6.1. Papiery wartościowe
-### 6.1.1. Obligacje i ich rodzaje
-## 6.2. Instrumenty pochodne
-## 6.3.  Lokaty i konta oszczędnościowe
-## 6.4. Złoto i srebro
-
-# 7. Giełda i inwestowanie <a name="7"></a>
-## 7.1. Giełda i jej funkcje
-## 7.2. Indeksy giełdowe
-## 7.3. Kapitalizacja rynkowa
-## 7.4. WIBOR i EURIBOR
-
-# 8. Psychologia inwestowania <a name="8"></a>
-## 8.1. Inwestowanie i psychologia
-## 8.2. Skłonności i błędy w inwestowaniu
-## 8.3. Ryzyko
-
-# 9. Statystyka w finansach <a name="9"></a>
-## 9.1. Rola statystyki w analizie finansowej
-## 9.2. Narzędzia statystyczne w inwestowaniu
-
-# 10. Poduszka finansowa <a name="10"></a>
-## 10.1. Znaczenie poduszki finansowej
-## 10.2. Jak budować poduszkę finansową
-## 10.3. Krótkoterminowy portfel finansowy
-## 10.4. Długoterminowy portfel finansowy
-
-
-
-
-## Siła nabywcza, deprecjacja, inflacja, bank centralny, stopa procentowa
 Spadek **siły nabywczej pieniądza** oznacza, że za tę samą ilość pieniędzy można
 kupić mniej dóbr i usług niż wcześniej. Jest to często związane z inflacją.
 Przyczyny spadku siły nabywczej mogą być różnorodne, w tym:
@@ -130,14 +76,7 @@ nabywczej, to znaczy, że za zakupy, za które zapłaciłem w 1999 roku 100 zło
 w roku 2022 zapłaciłem 210, co odpowiada skumulowanej inflacji w ciągu ostatnich
 23 lat na poziomie 110%!
 
-**Deprecjacja** - proces, w którym wartość danej waluty spada w stosunku do
-innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
-mniej jednostek innej waluty.
-
-**Aprecjacja** - proces, w którym wartość danej waluty rośnie w stosunku do
-innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
-więcej jednostek innej waluty.
-
+## 2.2. Inflacja, CPI, deprecjacja i aprecjacja
 **Inflacja** - proces, w którym ogólny poziom cen dóbr i usług w gospodarce
 rośnie w czasie. Oznacza to, że siła nabywcza pieniądza maleje. Inflacja jest
 zazwyczaj mierzona za pomocą wskaźnika cen towarów i usług konsumpcyjnych (CPI)
@@ -158,53 +97,15 @@ Wykres inflacji w Polsce od 1992 do 2025 roku:
 **CPI** (consumer price index) - wskaźnik cen konsumpcyjnych. Średnia ważona cen
 towarów i usług nabywanych przez przeciętne gospodarstwo domowe.
 
-**Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
-gospodarce danego kraju. Jego główne zadania obejmują:
-1. Polityka monetarna - kontrola podaży pieniądza i stopy procentowej w
-gospodarce, aby osiągnąć cele takie jak stabilność cen, niska inflacja oraz
-wspieranie wzrostu gospodarczego.
-2. Stabilność finansowa - monitoruje system finansowy, aby zapobiegać kryzysom
-finansowym i zapewniać stabilność banków komercyjnych. Może działać jako "lender
-of last resort" (pol. *pożyczkodawca ostatniej szansy*), udzielając pożyczek
-bankom w trudnej sytuacji.
-3. Emisja pieniądza - ma wyłączne prawo do emisji banknotów i monet w danym
-kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do obiegu.
-4. Zarządzanie rezerwami walutowymi - zarządzanie rezerwami walutowymi kraju, co
-może wpływać na kurs waluty oraz stabilność finansową.
-5. Regulacja i nadzór - ma również uprawnienia do regulowania i nadzorowania
-instytucji finansowych, aby zapewnić ich stabilność i bezpieczeństwo.
+**Deprecjacja** - proces, w którym wartość danej waluty spada w stosunku do
+innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
+mniej jednostek innej waluty.
 
-Przykłady banków centralnych to:
-- Narodowy Bank Polski (NBP) w Polsce,
-- Federal Reserve (Fed) w Stanach Zjednoczonych,
-- Europejski Bank Centralny (EBC) w strefie euro,
-- Bank Anglii w Wielkiej Brytanii.
+**Aprecjacja** - proces, w którym wartość danej waluty rośnie w stosunku do
+innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
+więcej jednostek innej waluty.
 
-**Stopa procentowa** to wskaźnik, który określa koszt pożyczania pieniędzy lub
-zysk z oszczędności (np. obligacji) wyrażony jako procent kwoty pożyczonej w
-danym okresie, zazwyczaj w skali rocznej. Jak działa stopa procentowa?
-- Pożyczki: Kiedy bierzesz kredyt w banku na rok, to bank nalicza odsetki na
-podstawie ustalonej stopy procentowej. Na przykład, jeśli bierzesz kredyt na
-1000 zł z roczną stopą procentową wynoszącą 5%, to po roku będziesz musiał
-zwrócić 1050 zł (1000 zł + 50 zł odsetek).
-- Oszczędności: Jeśli odkładasz pieniądze na lokacie, to bank wypłaca odsetki.
-Na przykład, jeśli wpłacisz 500 zł na lokatę z roczną stopą procentową wynoszącą
-3%, po roku otrzymasz 15 zł odsetek (500 zł * 0,03).
-
-Rodzaje stóp procentowych:
-1. Stopa nominalna - to ogólna stopa procentowa, która nie uwzględnia inflacji.
-Jest to stawka, którą banki oferują na depozyty lub pobierają na pożyczki.
-2. Stopa realna - to stopa procentowa skorygowana o inflację. Oznacza to, że od
-stopy nominalnej odejmuje się wskaźnik inflacji, co pozwala lepiej ocenić
-rzeczywistą wartość zysków lub kosztów związanych z pożyczkami i
-oszczędnościami.
-
-Stopy procentowe w polsce:
-
-![Image](https://github.com/user-attachments/assets/720a11a4-c240-4d24-bf94-77c0ed9c8e90)
-
-
-## PKB, PSN
+## 2.3. PKB i PSN
 **PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara,
 która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać
 do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju
@@ -256,9 +157,55 @@ dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jes
 wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych
 krajach, uwzględniając różnice w cenach towarów i usług.
 
+## 2.4. Bank centralny i jego rola
+**Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
+gospodarce danego kraju. Jego główne zadania obejmują:
+1. Polityka monetarna - kontrola podaży pieniądza i stopy procentowej w
+gospodarce, aby osiągnąć cele takie jak stabilność cen, niska inflacja oraz
+wspieranie wzrostu gospodarczego.
+2. Stabilność finansowa - monitoruje system finansowy, aby zapobiegać kryzysom
+finansowym i zapewniać stabilność banków komercyjnych. Może działać jako "lender
+of last resort" (pol. *pożyczkodawca ostatniej szansy*), udzielając pożyczek
+bankom w trudnej sytuacji.
+3. Emisja pieniądza - ma wyłączne prawo do emisji banknotów i monet w danym
+kraju. To oznacza, że tylko on może wprowadzać nowe pieniądze do obiegu.
+4. Zarządzanie rezerwami walutowymi - zarządzanie rezerwami walutowymi kraju, co
+może wpływać na kurs waluty oraz stabilność finansową.
+5. Regulacja i nadzór - ma również uprawnienia do regulowania i nadzorowania
+instytucji finansowych, aby zapewnić ich stabilność i bezpieczeństwo.
 
-## Cykliczność gospodarki i rynków, cykl kredytowy
-### Cykliczność gospodarki i rynków
+Przykłady banków centralnych to:
+- Narodowy Bank Polski (NBP) w Polsce,
+- Federal Reserve (Fed) w Stanach Zjednoczonych,
+- Europejski Bank Centralny (EBC) w strefie euro,
+- Bank Anglii w Wielkiej Brytanii.
+
+## 2.5. Stopa procentowa
+**Stopa procentowa** to wskaźnik, który określa koszt pożyczania pieniędzy lub
+zysk z oszczędności (np. obligacji) wyrażony jako procent kwoty pożyczonej w
+danym okresie, zazwyczaj w skali rocznej. Jak działa stopa procentowa?
+- Pożyczki: Kiedy bierzesz kredyt w banku na rok, to bank nalicza odsetki na
+podstawie ustalonej stopy procentowej. Na przykład, jeśli bierzesz kredyt na
+1000 zł z roczną stopą procentową wynoszącą 5%, to po roku będziesz musiał
+zwrócić 1050 zł (1000 zł + 50 zł odsetek).
+- Oszczędności: Jeśli odkładasz pieniądze na lokacie, to bank wypłaca odsetki.
+Na przykład, jeśli wpłacisz 500 zł na lokatę z roczną stopą procentową wynoszącą
+3%, po roku otrzymasz 15 zł odsetek (500 zł * 0,03).
+
+Rodzaje stóp procentowych:
+1. Stopa nominalna - to ogólna stopa procentowa, która nie uwzględnia inflacji.
+Jest to stawka, którą banki oferują na depozyty lub pobierają na pożyczki.
+2. Stopa realna - to stopa procentowa skorygowana o inflację. Oznacza to, że od
+stopy nominalnej odejmuje się wskaźnik inflacji, co pozwala lepiej ocenić
+rzeczywistą wartość zysków lub kosztów związanych z pożyczkami i
+oszczędnościami.
+
+Stopy procentowe w polsce:
+
+![Image](https://github.com/user-attachments/assets/720a11a4-c240-4d24-bf94-77c0ed9c8e90)
+
+# 3. Cykl gospodarczy <a name="3"></a>
+## 3.1. Cykliczność gospodarki i rynków
 Cykliczność gospodarki jest nazywana inaczej cyklem koniunkturalnym. Cykliczność 
 gospodarki i rynków są ze sobą  powiązane, ale opisują różne rzeczy. Generalnie
 cykliczność gospodarki odnosi się do regularnych wahań w gospodarce.
@@ -349,8 +296,7 @@ bezpieczne inwestycje obligacyjne szybko przybywa.
 
 ![Image](https://github.com/user-attachments/assets/3e9ebcc9-4d99-412e-a314-6dc7bcbe1416)
 
-
-### Cykl kredytowy
+## 3.2. Cykl kredytowy
 Cykl kredytowy pokazuje zmienność dostępności do kredytów w czasie trwania cykli
 koniunkturalnych. W pierwszej fazie cyklu kredytowego (fazie wzrostowej) kredyty
 są łatwo dostępne. Cykl ten charakteryzuje się niskim poziomem stóp procentowych
@@ -369,8 +315,10 @@ kredyty,
 wpływać na zdolność banków do udzielania kredytów oraz na kryteria ich
 przyznawania.
 
+## 3.3. Prognozy w inwestowaniu
 
-## CIT i podatek belki
+# 4. System podatkowy <a name="4"></a>
+## 4.1. Podatek dochodowy od osób prawnych (CIT)
 **CIT** (Korporacyjny podatek dochodowy) - podatek płacony przez osoby
 prawne, takie jak spółki, od osiąganych przez nie dochodów. Standardowa stawka
 CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%. <br/>
@@ -379,6 +327,7 @@ w Polsce:
 
 ![Image](https://github.com/user-attachments/assets/23b79195-ee98-42c5-95b4-9dc9afdbd42c)
 
+## 4.2. Podatek Belki
 **Podatek Belki** - potoczna nazwa dla podatku od zysków kapitałowych, który
 wynosi 19%. Jest on pobierany od zysków uzyskanych z inwestycji, takich jak
 odsetki od lokat bankowych, zyski ze sprzedaży akcji czy funduszy
@@ -397,8 +346,113 @@ Zależność opłacalności minimalnego oprocentowania lokaty od inflacji:
 
 ![Image](https://github.com/user-attachments/assets/b3d796a3-dbd4-481f-894d-c5cca8b3dec1)
 
+## 4.3. Inne podatki związane z inwestowaniem
+## 4.4. Wpływ podatków na inwestycje
 
-## Obligacje i ich rodzaje, emitent, nominał, kupon, WIBOR, EURIBOR
+# 5. Akcje i spółki <a name="5"></a>
+## 5.1. Spółka akcyjna
+**Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
+w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest 
+podzielony na akcje. Akcjonariusze, którzy posiadają te akcje, są 
+współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki jest 
+ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne działają 
+obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
+- Kapitał zakładowy - spółka akcyjna musi posiadać określony kapitał zakładowy, 
+który jest zawsze podzielony na akcje. Wysokość kapitału zakładowego różni się
+w zależności od kraju. W polsce to 5000 pln. Generalnie właściciel spółki może
+być właścicielem całego kapitału zakładowego (częste jest to w małych spółkach 
+akcyjnych).
+- Akcje reprezentują udział w kapitale spółki. Mogą być one sprzedawane i 
+kupowane na rynku, co umożliwia pozyskiwanie kapitału od inwestorów.
+- Ograniczona odpowiedzialność - akcjonariusze odpowiadają za zobowiązania 
+spółki tylko do wysokości wniesionych wkładów, co oznacza, że ich osobisty 
+majątek jest chroniony przed roszczeniami wierzycieli spółki.
+- Zarządzanie - spółka zarządzana jest przez zarząd, który podejmuje decyzje 
+operacyjne, oraz radę nadzorczą, która kontroluje działalność zarządu. 
+- Publiczność- mogą być publiczne (notowane na giełdzie) lub prywatne. Spółki 
+publiczne mają obowiązek ujawniania informacji finansowych i operacyjnych, co 
+zwiększa przejrzystość dla inwestorów.
+- Dywidendy - spółka akcyjna może wypłacać dywidendy akcjonariuszom z zysków, co 
+stanowi dla nich źródło dochodu.
+
+## 5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
+**Spółka z ograniczoną odpowiedzialnością** (ang. *private limited company*) - 
+sp. z o.o. to forma prawna przedsiębiorstwa utworzonego przez jedną lub więcej 
+osób, zwanych wspólnikami, które odpowiadają za zobowiązania przedsiębiorstwa w 
+ograniczonym zakresie. Spółka z o.o. jest często wybierana przez małe i średnie
+przedsiębiorstwa ze względu na ograniczoną odpowiedzialność oraz możliwość 
+łatwego zarządzania i organizacji działalności gospodarczej.
+
+## 5.3. Akcje i dywidenda
+**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
+Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
+proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
+zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
+rynku czy ogólna kondycja gospodarki.
+
+**Akcjonariusz** - osoba lub podmiot, który posiada akcje w spółce akcyjnej.
+
+**Walne zgromadzenie** - formalne spotkanie akcjonariuszy spółki akcyjnej, 
+podczas którego podejmowane są kluczowe decyzje dotyczące zarządzania spółką. 
+Walne zgromadzenia mogą być zwyczajne (regularnie odbywające się, zazwyczaj raz 
+w roku) lub nadzwyczajne (zwoływane w szczególnych okolicznościach, gdy zachodzi 
+potrzeba podjęcia pilnych decyzji). Uczestnictwo w walnym zgromadzeniu daje 
+akcjonariuszom możliwość wpływania na kierunek działania spółki oraz ochrony 
+swoich interesów jako inwestorów.
+
+**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
+akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
+danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
+akcji.
+
+Jest kilka rodzajów akcji:
+1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
+akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale
+nie jest gwarantowana.
+2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
+wypłacie dywidend.
+
+Posiadanie akcji wiąże się z wieloma prawami (zwanymi prawami akcjonariusza), 
+które mogą się różnić w zależności od rodzaju akcji (zwykłe, uprzywilejowane) 
+oraz przepisów w danym kraju. Generalnie ich zasada polega na tym, aby zapewnić
+akcjonariuszom ochronę ich kapitału. Niektóre prawa:
+1. Prawo do zysku (dywidendy) - akcjonariusze mają prawo do udziału w zyskach 
+spółki w formie dywidendy, jeśli spółka zdecyduje się ją wypłacić.
+2. Prawo do głosu - akcjonariusze mają prawo do głosowania na walnych 
+zgromadzeniach, co pozwala im wpływać na decyzje dotyczące zarządzania spółką, 
+takie jak wybór członków zarządu czy zatwierdzenie sprawozdań finansowych.
+3. Prawo do informacji - akcjonariusze mają prawo do uzyskiwania informacji o 
+działalności spółki, w tym dostęp do sprawozdań finansowych oraz innych 
+dokumentów korporacyjnych.
+4. Prawo do uczestnictwa w walnym zgromadzeniu - akcjonariusze mają prawo 
+uczestniczyć w walnych zgromadzeniach, gdzie podejmowane są kluczowe decyzje 
+dotyczące spółki.
+5. Prawo do zbycia akcji - akcjonariusze mogą sprzedawać swoje akcje innym 
+inwestorom, co daje im możliwość realizacji zysku lub ograniczenia strat.
+6. Prawo do pierwszeństwa - w przypadku emisji nowych akcji, akcjonariusze mogą 
+mieć prawo do nabycia nowych akcji w proporcji do posiadanych akcji, co pozwala 
+im utrzymać swoje procentowe zaangażowanie w spółce.
+7. Prawo do ochrony przed nieuczciwymi praktykami - akcjonariusze mają prawo do 
+ochrony przed działaniami, które mogą być szkodliwe dla ich interesów, takimi 
+jak nieuczciwe przejęcia czy manipulacje rynkowe.
+
+# 6. Instrumenty finansowe <a name="6"></a>
+**Instrument finansowy** - to umowa, która ma wartość finansową. Instrumenty
+finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
+konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
+waluty na rynku walutowym). <br/>
+
+## 6.1. Papiery wartościowe
+**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
+przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
+głównych kategorii:
+- akcje,
+- obligacje,
+- certyfikaty depozytowe,
+- fundusze inwestycyjne,
+- opcje i kontrakty terminowe.
+
+### 6.1.1. Obligacje i ich rodzaje
 **Obligacja** to jakby umowa, w której pożyczasz pieniądze komuś (np. rządowi
 lub firmie), a oni obiecują oddać ci te pieniądze później i płacić ci za to
 odsetki. <br/>
@@ -530,37 +584,8 @@ stopie kuponowej, ponieważ ich wartość może spaść. Z kolei, jeśli przewid
 spadek stóp procentowych, mogą być bardziej skłonni do zakupu obligacji,
 ponieważ ich wartość może wzrosnąć.
 
-**WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki
-w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np.
-1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać
-oprocentowanie pożyczek i inwestycji, jest często używany jako punkt odniesienia
-do ustalania oprocentowania kredytów i lokat w polskich bankach. Na przykład,
-kredyty hipoteczne mogą być ustalane na podstawie WIBOR + marża banku. WIBOR i
-stopa procentowa to nie to samo. WIBOR jest specyficznym rodzajem stopy
-procentowej, która dotyczy rynku międzybankowego w Polsce. Stopa procentowa to
-szerszy termin, bardziej ogólny. <br/>
-**EURIBOR** - Euro Interbank Offered Rate, referencyjna wysokość oprocentowania
-depozytów i kredytów na rynku międzybankowym strefy euro. Stawki EURIBOR
-wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6, 9
-miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i
-depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji
-pochodnych.
-
-
-## Instrument finansowy, papiery wartościowe, lokata, konto oszczędnościowe
-**Instrument finansowy** - to umowa, która ma wartość finansową. Instrumenty
-finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
-konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
-waluty na rynku walutowym). <br/>
-**Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
-przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
-głównych kategorii:
-- akcje,
-- obligacje,
-- certyfikaty depozytowe,
-- fundusze inwestycyjne,
-- opcje i kontrakty terminowe.
-
+## 6.2. Instrumenty pochodne
+## 6.3.  Lokaty i konta oszczędnościowe
 **Konto oszczędnościowe** - rachunek bankowy, który pozwala na gromadzenie
 oszczędności, z możliwością dokonywania wpłat i wypłat w dowolnym momencie.
 Oprocentowanie kont oszczędnościowych jest zazwyczaj niższe niż w przypadku
@@ -591,93 +616,49 @@ Teraz odejmujemy podatek (19%): <br/>
 Czyli zysk wynosi: <br/>
 250 zł – 47,50 zł = 202,50 zł
 
+## 6.4. Złoto i srebro
 
-## Złoto, srebro
+# 7. Giełda i inwestowanie <a name="7"></a>
+## 7.1. Giełda i jej funkcje
+## 7.2. Indeksy giełdowe
+## 7.3. Kapitalizacja rynkowa
+## 7.4. WIBOR i EURIBOR
+**WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki
+w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np.
+1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać
+oprocentowanie pożyczek i inwestycji, jest często używany jako punkt odniesienia
+do ustalania oprocentowania kredytów i lokat w polskich bankach. Na przykład,
+kredyty hipoteczne mogą być ustalane na podstawie WIBOR + marża banku. WIBOR i
+stopa procentowa to nie to samo. WIBOR jest specyficznym rodzajem stopy
+procentowej, która dotyczy rynku międzybankowego w Polsce. Stopa procentowa to
+szerszy termin, bardziej ogólny. <br/>
+**EURIBOR** - Euro Interbank Offered Rate, referencyjna wysokość oprocentowania
+depozytów i kredytów na rynku międzybankowym strefy euro. Stawki EURIBOR
+wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6, 9
+miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i
+depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji
+pochodnych.
+
+# 8. Psychologia inwestowania <a name="8"></a>
+## 8.1. Inwestowanie i psychologia
+## 8.2. Skłonności i błędy w inwestowaniu
+## 8.3. Ryzyko
+
+# 9. Statystyka w finansach <a name="9"></a>
+## 9.1. Rola statystyki w analizie finansowej
+## 9.2. Narzędzia statystyczne w inwestowaniu
+
+# 10. Poduszka finansowa <a name="10"></a>
+## 10.1. Znaczenie poduszki finansowej
+## 10.2. Jak budować poduszkę finansową
+## 10.3. Krótkoterminowy portfel finansowy
+## 10.4. Długoterminowy portfel finansowy
 
 
-## Akcje, dywidenda
-**Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
-w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest 
-podzielony na akcje. Akcjonariusze, którzy posiadają te akcje, są 
-współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki jest 
-ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne działają 
-obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
-- Kapitał zakładowy - spółka akcyjna musi posiadać określony kapitał zakładowy, 
-który jest zawsze podzielony na akcje. Wysokość kapitału zakładowego różni się
-w zależności od kraju. W polsce to 5000 pln. Generalnie właściciel spółki może
-być właścicielem całego kapitału zakładowego (częste jest to w małych spółkach 
-akcyjnych).
-- Akcje reprezentują udział w kapitale spółki. Mogą być one sprzedawane i 
-kupowane na rynku, co umożliwia pozyskiwanie kapitału od inwestorów.
-- Ograniczona odpowiedzialność - akcjonariusze odpowiadają za zobowiązania 
-spółki tylko do wysokości wniesionych wkładów, co oznacza, że ich osobisty 
-majątek jest chroniony przed roszczeniami wierzycieli spółki.
-- Zarządzanie - spółka zarządzana jest przez zarząd, który podejmuje decyzje 
-operacyjne, oraz radę nadzorczą, która kontroluje działalność zarządu. 
-- Publiczność- mogą być publiczne (notowane na giełdzie) lub prywatne. Spółki 
-publiczne mają obowiązek ujawniania informacji finansowych i operacyjnych, co 
-zwiększa przejrzystość dla inwestorów.
-- Dywidendy - spółka akcyjna może wypłacać dywidendy akcjonariuszom z zysków, co 
-stanowi dla nich źródło dochodu.
 
-**Spółka z ograniczoną odpowiedzialnością** (ang. *private limited company*) - 
-sp. z o.o. to forma prawna przedsiębiorstwa utworzonego przez jedną lub więcej 
-osób, zwanych wspólnikami, które odpowiadają za zobowiązania przedsiębiorstwa w 
-ograniczonym zakresie. Spółka z o.o. jest często wybierana przez małe i średnie
-przedsiębiorstwa ze względu na ograniczoną odpowiedzialność oraz możliwość 
-łatwego zarządzania i organizacji działalności gospodarczej.
 
-**Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
-Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
-proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
-zależności od wielu czynników, takich jak wyniki finansowe spółki, sytuacja na
-rynku czy ogólna kondycja gospodarki.
 
-**Akcjonariusz** - osoba lub podmiot, który posiada akcje w spółce akcyjnej.
 
-**Walne zgromadzenie** - formalne spotkanie akcjonariuszy spółki akcyjnej, 
-podczas którego podejmowane są kluczowe decyzje dotyczące zarządzania spółką. 
-Walne zgromadzenia mogą być zwyczajne (regularnie odbywające się, zazwyczaj raz 
-w roku) lub nadzwyczajne (zwoływane w szczególnych okolicznościach, gdy zachodzi 
-potrzeba podjęcia pilnych decyzji). Uczestnictwo w walnym zgromadzeniu daje 
-akcjonariuszom możliwość wpływania na kierunek działania spółki oraz ochrony 
-swoich interesów jako inwestorów.
-
-**Dywidenda** - część zysku przedsiębiorstwa, która jest wypłacana jego
-akcjonariuszom. Jest to forma wynagrodzenia dla inwestorów za posiadanie akcji
-danej spółki. Dywidendy mogą być wypłacane w gotówce lub w postaci dodatkowych
-akcji.
-
-Jest kilka rodzajów akcji:
-1. Akcje zwykłe - dają prawo do głosowania na walnych zgromadzeniach
-akcjonariuszy oraz prawo do dywidendy, która jest wypłacana z zysku spółki, ale
-nie jest gwarantowana.
-2. Akcje uprzywilejowane - zwykle nie dają prawa głosu, ale mają pierwszeństwo w
-wypłacie dywidend.
-
-Posiadanie akcji wiąże się z wieloma prawami (zwanymi prawami akcjonariusza), 
-które mogą się różnić w zależności od rodzaju akcji (zwykłe, uprzywilejowane) 
-oraz przepisów w danym kraju. Generalnie ich zasada polega na tym, aby zapewnić
-akcjonariuszom ochronę ich kapitału. Niektóre prawa:
-1. Prawo do zysku (dywidendy) - akcjonariusze mają prawo do udziału w zyskach 
-spółki w formie dywidendy, jeśli spółka zdecyduje się ją wypłacić.
-2. Prawo do głosu - akcjonariusze mają prawo do głosowania na walnych 
-zgromadzeniach, co pozwala im wpływać na decyzje dotyczące zarządzania spółką, 
-takie jak wybór członków zarządu czy zatwierdzenie sprawozdań finansowych.
-3. Prawo do informacji - akcjonariusze mają prawo do uzyskiwania informacji o 
-działalności spółki, w tym dostęp do sprawozdań finansowych oraz innych 
-dokumentów korporacyjnych.
-4. Prawo do uczestnictwa w walnym zgromadzeniu - akcjonariusze mają prawo 
-uczestniczyć w walnych zgromadzeniach, gdzie podejmowane są kluczowe decyzje 
-dotyczące spółki.
-5. Prawo do zbycia akcji - akcjonariusze mogą sprzedawać swoje akcje innym 
-inwestorom, co daje im możliwość realizacji zysku lub ograniczenia strat.
-6. Prawo do pierwszeństwa - w przypadku emisji nowych akcji, akcjonariusze mogą 
-mieć prawo do nabycia nowych akcji w proporcji do posiadanych akcji, co pozwala 
-im utrzymać swoje procentowe zaangażowanie w spółce.
-7. Prawo do ochrony przed nieuczciwymi praktykami - akcjonariusze mają prawo do 
-ochrony przed działaniami, które mogą być szkodliwe dla ich interesów, takimi 
-jak nieuczciwe przejęcia czy manipulacje rynkowe.
 
 
 ## Giełda, indeks giełdowy, kapitalizacja rynkowa
