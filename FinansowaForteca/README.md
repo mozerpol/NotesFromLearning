@@ -316,6 +316,33 @@ wpływać na zdolność banków do udzielania kredytów oraz na kryteria ich
 przyznawania.
 
 ## 3.3. Prognozy w inwestowaniu
+Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
+kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
+dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację
+portfela finansowego. Czyli kupno wielu różnych aktywów. Dzięki temu kiedy jedno
+z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od
+2006 do 2015 roku:
+
+![Image](https://github.com/user-attachments/assets/8e7e4373-7745-473a-bafc-9242544945ee)
+
+Jak widać powyżej czasem opłaca się inwestowanie w złoto, a czasem akcje.
+Dlatego kupując wszystkiego po trochę wiemy, że zawsze coś zyskuje, kiedy inne
+aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty
+przeznaczonej na inwestycje złota, a ile akcji.
+
+Często ludzie próbują prognozować co stanie się w przyszłości. Jeżeli prognoza
+się nie sprawdzi i stracą piniądze to próbują sobie to tłumaczyć, racjonalizować
+(np. ja tak mam), częste tłumaczenia (uważam, że to ciekawe):
+1. "Gdyby tylko..." - gdyby tylko bank centralny nie zdecydował się na dodruk
+pieniądza, moja prognoza świetnie by się sprawdziła.
+2. "Ceteris paribus" - wszystko inne takie samo. Gdyby inne okoliczności się nie
+zmieniły to moja prognoza byłaby celna.
+3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale
+nie odbiegały aż tak od moich wyliczeń.
+4. "Jeszcze się nie sprawdziło" - owszem, moja prognoza się nie sprawdziła, ale
+dajmy sobie trochę więcej czasu.
+5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania
+się nie sprawdziły, ale moje inne prognozy są trafne.
 
 # 4. System podatkowy <a name="4"></a>
 ## 4.1. Podatek dochodowy od osób prawnych (CIT)
@@ -620,53 +647,13 @@ Czyli zysk wynosi: <br/>
 
 # 7. Giełda i inwestowanie <a name="7"></a>
 ## 7.1. Giełda i jej funkcje
-## 7.2. Indeksy giełdowe
-## 7.3. Kapitalizacja rynkowa
-## 7.4. WIBOR i EURIBOR
-**WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki
-w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np.
-1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać
-oprocentowanie pożyczek i inwestycji, jest często używany jako punkt odniesienia
-do ustalania oprocentowania kredytów i lokat w polskich bankach. Na przykład,
-kredyty hipoteczne mogą być ustalane na podstawie WIBOR + marża banku. WIBOR i
-stopa procentowa to nie to samo. WIBOR jest specyficznym rodzajem stopy
-procentowej, która dotyczy rynku międzybankowego w Polsce. Stopa procentowa to
-szerszy termin, bardziej ogólny. <br/>
-**EURIBOR** - Euro Interbank Offered Rate, referencyjna wysokość oprocentowania
-depozytów i kredytów na rynku międzybankowym strefy euro. Stawki EURIBOR
-wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6, 9
-miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i
-depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji
-pochodnych.
-
-# 8. Psychologia inwestowania <a name="8"></a>
-## 8.1. Inwestowanie i psychologia
-## 8.2. Skłonności i błędy w inwestowaniu
-## 8.3. Ryzyko
-
-# 9. Statystyka w finansach <a name="9"></a>
-## 9.1. Rola statystyki w analizie finansowej
-## 9.2. Narzędzia statystyczne w inwestowaniu
-
-# 10. Poduszka finansowa <a name="10"></a>
-## 10.1. Znaczenie poduszki finansowej
-## 10.2. Jak budować poduszkę finansową
-## 10.3. Krótkoterminowy portfel finansowy
-## 10.4. Długoterminowy portfel finansowy
-
-
-
-
-
-
-
-
-## Giełda, indeks giełdowy, kapitalizacja rynkowa
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
 kupna/sprzedaży określonych instrumentów (np. samochodów czy owoców). Transakcje
 na giełdach zawierane są zgodnie z obowiązującym regulaminem, między członkami
-giełdy.
+giełdy. Do najważniejszych giełd na świecie zalicza się: 
+TODO: wymienic i opisac
 
+## 7.2. Indeksy giełdowe
 **Indeks giełdowy** - wskaźnik, który mierzy wartość grupy akcji notowanych na
 giełdzie. Indeksy giełdowe są używane do oceny ogólnej kondycji rynku lub
 konkretnego segmentu rynku. Składa się z wybranych akcji, które reprezentują
@@ -680,15 +667,8 @@ wartość indeksu.
 - Indeks ważony ceną - wartość indeksu jest obliczana na podstawie cen akcji, co
 oznacza, że droższe akcje mają większy wpływ na wartość indeksu.
 
-**Kapitalizacja rynkowa** - wartość rynkowa wszystkich akcji danej spółki,
-obliczana jako iloczyn liczby akcji w obiegu i ceny jednej akcji. Jest to
-wskaźnik, który pomaga ocenić wielkość i wartość firmy na rynku. Czyli oblicza
-się to według wzoru: Kapitalizacja rynkowa = Liczba akcji w obiegu ×
-Cena jednej akcji.
-
-**Giełda papierów wartościowych** - to miejsce, gdzie ludzie kupują i sprzedają
-różne instrumenty finansowe (np. akcje czy obligacje). Do najważniejszych giełd
-na świecie zalicza się:
+TODO: wczesniej wymienic i opisac gieldy, a tutaj opisac ich indeksy.
+Do najważniejszych giełd na świecie zalicza się:
 1. NYSE, Nowy Jork - New York Stock Exchange, największa giełda papierów
 wartościowych na świecie (jest na Wall Street). Głównie notuje większe, bardziej
 ustabilizowane firmy, często z długą historią działalności. Notowane są różne
@@ -796,63 +776,32 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 - Meksyk
 - RPA
 
+## 7.3. Kapitalizacja rynkowa
+**Kapitalizacja rynkowa** - wartość rynkowa wszystkich akcji danej spółki,
+obliczana jako iloczyn liczby akcji w obiegu i ceny jednej akcji. Jest to
+wskaźnik, który pomaga ocenić wielkość i wartość firmy na rynku. Czyli oblicza
+się to według wzoru: Kapitalizacja rynkowa = Liczba akcji w obiegu ×
+Cena jednej akcji.
 
-## Poduszka finansowa
-Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
-zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej
-zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy
-przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 =
-28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko
-sugestia, ale przyjmuje się że pół pieniędzy na pół roku to dobra praktyka. <br/>
-Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
-- 25% lokaty/konta oszczędnościowe,
-- 75% Detaliczne obligacje indeksowane inflacją.
+## 7.4. WIBOR i EURIBOR
+**WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki
+w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np.
+1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać
+oprocentowanie pożyczek i inwestycji, jest często używany jako punkt odniesienia
+do ustalania oprocentowania kredytów i lokat w polskich bankach. Na przykład,
+kredyty hipoteczne mogą być ustalane na podstawie WIBOR + marża banku. WIBOR i
+stopa procentowa to nie to samo. WIBOR jest specyficznym rodzajem stopy
+procentowej, która dotyczy rynku międzybankowego w Polsce. Stopa procentowa to
+szerszy termin, bardziej ogólny. <br/>
+**EURIBOR** - Euro Interbank Offered Rate, referencyjna wysokość oprocentowania
+depozytów i kredytów na rynku międzybankowym strefy euro. Stawki EURIBOR
+wyznaczane są dla pożyczek na następujące okresy: 1 i 2 tygodnie, 1, 2, 3, 6, 9
+miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i
+depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji
+pochodnych.
 
-
-## Prognozy
-Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
-kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
-dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację
-portfela finansowego. Czyli kupno wielu różnych aktywów. Dzięki temu kiedy jedno
-z aktywów traci to inne zyskuje. Roczne stopy zwrotu z wybranych klas aktywów od
-2006 do 2015 roku:
-
-![Image](https://github.com/user-attachments/assets/8e7e4373-7745-473a-bafc-9242544945ee)
-
-Jak widać powyżej czasem opłaca się inwestowanie w złoto, a czasem akcje.
-Dlatego kupując wszystkiego po trochę wiemy, że zawsze coś zyskuje, kiedy inne
-aktywo traci. Sztuką jest określenie ile chcemy kupić z danej kwoty
-przeznaczonej na inwestycje złota, a ile akcji.
-
-Często ludzie próbują prognozować co stanie się w przyszłości. Jeżeli prognoza
-się nie sprawdzi i stracą piniądze to próbują sobie to tłumaczyć, racjonalizować
-(np. ja tak mam), częste tłumaczenia (uważam, że to ciekawe):
-1. "Gdyby tylko..." - gdyby tylko bank centralny nie zdecydował się na dodruk
-pieniądza, moja prognoza świetnie by się sprawdziła.
-2. "Ceteris paribus" - wszystko inne takie samo. Gdyby inne okoliczności się nie
-zmieniły to moja prognoza byłaby celna.
-3. "Prawie się sprawdziło" - wprawdzie wyniki były inne od moich prognoz, ale
-nie odbiegały aż tak od moich wyliczeń.
-4. "Jeszcze się nie sprawdziło" - owszem, moja prognoza się nie sprawdziła, ale
-dajmy sobie trochę więcej czasu.
-5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania
-się nie sprawdziły, ale moje inne prognozy są trafne.
-
-
-## Długoterminowy portfel finansowy
-Pieniądze tutaj zgromadzone nie muszą być tak łatwo dostępne jak w poduszczce
-finansowej. Skład długoterminowego portfela finansowego wg autora: <br/>
-- 20% obligacje skarbowe notowane na rynkach,
-- 10% złoto inwestycyjne,
-- 40% obligacje skarbowe notowane inflacją,
-- 30% akcje zagraniczne.
-
-Oczywiście skład naszego portfela może się różnić. Generalnie zasada jest taka,
-żebyśmy się za bardzo nie przejmowali co się tam w środku dzieje, dlatego ja
-mam więcej złota. Głównie ze względu na obecną sytuację geopolityczną.
-
-
-## Inwestowanie i psychologia, skłonności i błędy
+# 8. Psychologia inwestowania <a name="8"></a>
+## 8.1. Inwestowanie i psychologia
 **Heurystyka** - w logice jest to umiejętność wykrywania nowych faktów oraz
 znajdowania związków między faktami, zwłaszcza z wykorzystaniem hipotez. Na
 podstawie istniejącej wiedzy stawia się hipotezy, których nie trzeba udowadniać.
@@ -884,6 +833,7 @@ cechy racjonalnego myślenia:
 - jest wolne od stereotypów,
 - jest nieskażone silnymi emocjami.
 
+## 8.2. Skłonności i błędy w inwestowaniu
 Gdybyśmy mieli podajmować każdą decyzję po dogłębnej analizie to bylibyśmy
 zmęczeni i pewnie nie robili nic innego tylko myśleli. Z tego powodu stosujemy
 skróty myślowe - szybko formułowane opinie zwane heurystykami. Często jest to
@@ -972,8 +922,7 @@ nowego.
 stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie
 działania może się wiązać z jakąś stratą, to wolimy tego nie robić.
 
-
-## Jakie ryzyko można ponieść?
+## 8.3. Ryzyko
 Warren Buffet zaproponował dwie reguły:
 1. Nie trać pieniędzy.
 2. Pamiętaj o zasadzie numer 1.
@@ -1048,8 +997,7 @@ Skłonność do podejmowania ryzyka oznacza, że chcesz na to ryzyko sobie pozwo
 Jeśli zdolność i skłonność podpowiadają różne rzeczy to warto kierować się 
 zasadą, że o ryzyku powinien decydować element, który jest niższy.
 
-## Statystyka
-### Miara rozkładu
+# 9. Statystyka w finansach <a name="9"></a>
 **Miara rozkładu** - używana jest do podsumowania zbioru obserwacji, aby
 przekazać jak najwięcej informacji w możliwie najprostszy sposób. Odnosi się do
 sposobu, w jaki wartości zmiennej losowej są rozłożone w przestrzeni. Miary
@@ -1281,4 +1229,31 @@ występują z mniejszą częstotliwością, ale nadal występują... Przykład:
 
 ![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
 
+## 9.1. Rola statystyki w analizie finansowej
+## 9.2. Narzędzia statystyczne w inwestowaniu
 
+# 10. Poduszka finansowa <a name="10"></a>
+Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
+zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej
+zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy
+przez miesiąc średnio 4800 pln to poduszka finansowa powinna wynosić 4800*6 =
+28800 pln. Jej wielkość oczywiście może odbiegać od tego, to jest tylko
+sugestia, ale przyjmuje się że pół pieniędzy na pół roku to dobra praktyka. <br/>
+Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
+- 25% lokaty/konta oszczędnościowe,
+- 75% Detaliczne obligacje indeksowane inflacją.
+
+## 10.1. Znaczenie poduszki finansowej
+## 10.2. Jak budować poduszkę finansową
+## 10.3. Krótkoterminowy portfel finansowy
+## 10.4. Długoterminowy portfel finansowy
+Pieniądze tutaj zgromadzone nie muszą być tak łatwo dostępne jak w poduszczce
+finansowej. Skład długoterminowego portfela finansowego wg autora: <br/>
+- 20% obligacje skarbowe notowane na rynkach,
+- 10% złoto inwestycyjne,
+- 40% obligacje skarbowe notowane inflacją,
+- 30% akcje zagraniczne.
+
+Oczywiście skład naszego portfela może się różnić. Generalnie zasada jest taka,
+żebyśmy się za bardzo nie przejmowali co się tam w środku dzieje, dlatego ja
+mam więcej złota. Głównie ze względu na obecną sytuację geopolityczną.
