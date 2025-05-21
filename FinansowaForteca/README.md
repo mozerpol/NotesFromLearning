@@ -22,10 +22,10 @@ _____________
     3. Inne podatki związane z inwestowaniem
     4. Wpływ podatków na inwestycje
 5. [Akcje i spółki](#5)
-    5.1. Spółka akcyjna
-    5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
-    5.3. Akcje
-    5.4. Dywidenda
+    1. Spółka akcyjna
+    2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
+    3. Akcje
+    4. Dywidenda
 6. [Instrumenty finansowe](#6)
     1. Papiery wartościowe
         1. Obligacje i ich rodzaje
@@ -51,12 +51,12 @@ _____________
     4. Długoterminowy portfel finansowy
 
 
-# 1. Wprowadzenie do finansów <a name="1"></a>
-## 1.1. Definicja finansów
-## 1.2. Rola finansów w gospodarce
+# 1. Wprowadzenie do finansów <a name="1"></a>  [UP↑](#tof)
+## 1.1. Definicja finansów [UP↑](#tof)
+## 1.2. Rola finansów w gospodarce [UP↑](#tof)
 
-# 2. Makroekonomia <a name="2"></a>
-## 2.1. Siła nabywcza
+# 2. Makroekonomia <a name="2"></a> [UP↑](#tof)
+## 2.1. Siła nabywcza [UP↑](#tof)
 Spadek **siły nabywczej pieniądza** oznacza, że za tę samą ilość pieniędzy można
 kupić mniej dóbr i usług niż wcześniej. Jest to często związane z inflacją.
 Przyczyny spadku siły nabywczej mogą być różnorodne, w tym:
@@ -76,7 +76,7 @@ nabywczej, to znaczy, że za zakupy, za które zapłaciłem w 1999 roku 100 zło
 w roku 2022 zapłaciłem 210, co odpowiada skumulowanej inflacji w ciągu ostatnich
 23 lat na poziomie 110%!
 
-## 2.2. Inflacja, CPI, deprecjacja i aprecjacja
+## 2.2. Inflacja, CPI, deprecjacja i aprecjacja [UP↑](#tof)
 **Inflacja** - proces, w którym ogólny poziom cen dóbr i usług w gospodarce
 rośnie w czasie. Oznacza to, że siła nabywcza pieniądza maleje. Inflacja jest
 zazwyczaj mierzona za pomocą wskaźnika cen towarów i usług konsumpcyjnych (CPI)
@@ -105,7 +105,7 @@ mniej jednostek innej waluty.
 innych walut. Oznacza to, że za tę samą ilość jednostek danej waluty można nabyć
 więcej jednostek innej waluty.
 
-## 2.3. PKB i PSN
+## 2.3. PKB i PSN [UP↑](#tof)
 **PKB** - Produkt Krajowy Brutto (ang. GDP - gross domestic product), to miara,
 która pokazuje, ile pieniędzy wytwarza cały kraj w ciągu roku. Można to porównać
 do tego, jakby zliczać wszystkie pieniądze, które ludzie i firmy w danym kraju
@@ -157,7 +157,7 @@ dolarów możesz kupić tylko napój, to znaczy, że siła nabywcza w Polsce jes
 wyższa. PSN jest używane, aby lepiej porównywać standard życia w różnych
 krajach, uwzględniając różnice w cenach towarów i usług.
 
-## 2.4. Bank centralny i jego rola
+## 2.4. Bank centralny i jego rola [UP↑](#tof)
 **Bank centralny** to instytucja finansowa, która pełni kluczową rolę w
 gospodarce danego kraju. Jego główne zadania obejmują:
 1. Polityka monetarna - kontrola podaży pieniądza i stopy procentowej w
@@ -180,7 +180,7 @@ Przykłady banków centralnych to:
 - Europejski Bank Centralny (EBC) w strefie euro,
 - Bank Anglii w Wielkiej Brytanii.
 
-## 2.5. Stopa procentowa
+## 2.5. Stopa procentowa [UP↑](#tof)
 **Stopa procentowa** to wskaźnik, który określa koszt pożyczania pieniędzy lub
 zysk z oszczędności (np. obligacji) wyrażony jako procent kwoty pożyczonej w
 danym okresie, zazwyczaj w skali rocznej. Jak działa stopa procentowa?
@@ -204,8 +204,8 @@ Stopy procentowe w polsce:
 
 ![Image](https://github.com/user-attachments/assets/720a11a4-c240-4d24-bf94-77c0ed9c8e90)
 
-# 3. Cykl gospodarczy <a name="3"></a>
-## 3.1. Cykliczność gospodarki i rynków
+# 3. Cykl gospodarczy <a name="3"></a> [UP↑](#tof)
+## 3.1. Cykliczność gospodarki i rynków [UP↑](#tof)
 Cykliczność gospodarki jest nazywana inaczej cyklem koniunkturalnym. Cykliczność 
 gospodarki i rynków są ze sobą  powiązane, ale opisują różne rzeczy. Generalnie
 cykliczność gospodarki odnosi się do regularnych wahań w gospodarce.
@@ -296,7 +296,7 @@ bezpieczne inwestycje obligacyjne szybko przybywa.
 
 ![Image](https://github.com/user-attachments/assets/3e9ebcc9-4d99-412e-a314-6dc7bcbe1416)
 
-## 3.2. Cykl kredytowy
+## 3.2. Cykl kredytowy [UP↑](#tof)
 Cykl kredytowy pokazuje zmienność dostępności do kredytów w czasie trwania cykli
 koniunkturalnych. W pierwszej fazie cyklu kredytowego (fazie wzrostowej) kredyty
 są łatwo dostępne. Cykl ten charakteryzuje się niskim poziomem stóp procentowych
@@ -315,7 +315,7 @@ kredyty,
 wpływać na zdolność banków do udzielania kredytów oraz na kryteria ich
 przyznawania.
 
-## 3.3. Prognozy w inwestowaniu
+## 3.3. Prognozy w inwestowaniu [UP↑](#tof)
 Wszystkie klasy aktywów podlegają wachaniom ich opłacalności. Czasem warto je
 kupić, a czasem nie. Nikt nie jest w stanie tego przewidzieć z 100%
 dokładnością co będzie w przyszłości, dlatego autor zaleca dywersyfikację
@@ -344,8 +344,8 @@ dajmy sobie trochę więcej czasu.
 5. "To tylko prognoza" - owszem w tym konkretnym przypadku moje przewidywania
 się nie sprawdziły, ale moje inne prognozy są trafne.
 
-# 4. System podatkowy <a name="4"></a>
-## 4.1. Podatek dochodowy od osób prawnych (CIT)
+# 4. System podatkowy <a name="4"></a> [UP↑](#tof)
+## 4.1. Podatek dochodowy od osób prawnych (CIT) [UP↑](#tof)
 **CIT** (Korporacyjny podatek dochodowy) - podatek płacony przez osoby
 prawne, takie jak spółki, od osiąganych przez nie dochodów. Standardowa stawka
 CIT wynosi 19%, a dla małych podatników oraz nowych firm może wynosić 9%. <br/>
@@ -354,7 +354,7 @@ w Polsce:
 
 ![Image](https://github.com/user-attachments/assets/23b79195-ee98-42c5-95b4-9dc9afdbd42c)
 
-## 4.2. Podatek Belki
+## 4.2. Podatek Belki [UP↑](#tof)
 **Podatek Belki** - potoczna nazwa dla podatku od zysków kapitałowych, który
 wynosi 19%. Jest on pobierany od zysków uzyskanych z inwestycji, takich jak
 odsetki od lokat bankowych, zyski ze sprzedaży akcji czy funduszy
@@ -373,11 +373,11 @@ Zależność opłacalności minimalnego oprocentowania lokaty od inflacji:
 
 ![Image](https://github.com/user-attachments/assets/b3d796a3-dbd4-481f-894d-c5cca8b3dec1)
 
-## 4.3. Inne podatki związane z inwestowaniem
-## 4.4. Wpływ podatków na inwestycje
+## 4.3. Inne podatki związane z inwestowaniem [UP↑](#tof)
+## 4.4. Wpływ podatków na inwestycje [UP↑](#tof)
 
-# 5. Akcje i spółki <a name="5"></a>
-## 5.1. Spółka akcyjna
+# 5. Akcje i spółki <a name="5"></a> [UP↑](#tof)
+## 5.1. Spółka akcyjna [UP↑](#tof)
 **Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
 w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest
 podzielony na akcje. Akcjonariusze, którzy posiadają te akcje, są
@@ -402,7 +402,7 @@ zwiększa przejrzystość dla inwestorów.
 - Dywidendy - spółka akcyjna może wypłacać dywidendy akcjonariuszom z zysków, co
 stanowi dla nich źródło dochodu.
 
-## 5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.)
+## 5.2. Spółka z ograniczoną odpowiedzialnością (sp. z o.o.) [UP↑](#tof)
 **Spółka z ograniczoną odpowiedzialnością** (ang. *private limited company*) -
 sp. z o.o. to forma prawna przedsiębiorstwa utworzonego przez jedną lub więcej
 osób, zwanych wspólnikami, które odpowiadają za zobowiązania przedsiębiorstwa w
@@ -410,7 +410,7 @@ ograniczonym zakresie. Spółka z o.o. jest często wybierana przez małe i śre
 przedsiębiorstwa ze względu na ograniczoną odpowiedzialność oraz możliwość
 łatwego zarządzania i organizacji działalności gospodarczej.
 
-## 5.3. Akcje i dywidenda
+## 5.3. Akcje i dywidenda [UP↑](#tof)
 **Akcje** - papiery wartościowe, które reprezentują udział w kapitale fimry.
 Kiedy inwestor kupuje akcje danej firmy, staje się jej współwłaścicielem w
 proporcji do liczby posiadanych akcji. Wartość akcji może się zmieniać w
@@ -463,13 +463,13 @@ im utrzymać swoje procentowe zaangażowanie w spółce.
 ochrony przed działaniami, które mogą być szkodliwe dla ich interesów, takimi
 jak nieuczciwe przejęcia czy manipulacje rynkowe.
 
-# 6. Instrumenty finansowe <a name="6"></a>
+# 6. Instrumenty finansowe <a name="6"></a> [UP↑](#tof)
 **Instrument finansowy** - to umowa, która ma wartość finansową. Instrumenty
 finansowe można podzielić na różne kategorie, na przykład akcje, obligacje,
 konta oszczędnościowe, lokaty czy waluty (waluty mogą być wymieniane na inne
 waluty na rynku walutowym). <br/>
 
-## 6.1. Papiery wartościowe
+## 6.1. Papiery wartościowe [UP↑](#tof)
 **Papiery wartościowe** - instrumenty finansowe, które mają wartość i mogą być
 przedmiotem obrotu na rynku. Papiery wartościowe można podzielić na kilka
 głównych kategorii:
@@ -479,7 +479,7 @@ głównych kategorii:
 - fundusze inwestycyjne,
 - opcje i kontrakty terminowe.
 
-### 6.1.1. Obligacje i ich rodzaje
+### 6.1.1. Obligacje i ich rodzaje [UP↑](#tof)
 **Obligacja** to jakby umowa, w której pożyczasz pieniądze komuś (np. rządowi
 lub firmie), a oni obiecują oddać ci te pieniądze później i płacić ci za to
 odsetki. <br/>
@@ -611,8 +611,8 @@ stopie kuponowej, ponieważ ich wartość może spaść. Z kolei, jeśli przewid
 spadek stóp procentowych, mogą być bardziej skłonni do zakupu obligacji,
 ponieważ ich wartość może wzrosnąć.
 
-## 6.2. Instrumenty pochodne
-## 6.3.  Lokaty i konta oszczędnościowe
+## 6.2. Instrumenty pochodne [UP↑](#tof)
+## 6.3.  Lokaty i konta oszczędnościowe [UP↑](#tof)
 **Konto oszczędnościowe** - rachunek bankowy, który pozwala na gromadzenie
 oszczędności, z możliwością dokonywania wpłat i wypłat w dowolnym momencie.
 Oprocentowanie kont oszczędnościowych jest zazwyczaj niższe niż w przypadku
@@ -643,17 +643,17 @@ Teraz odejmujemy podatek (19%): <br/>
 Czyli zysk wynosi: <br/>
 250 zł – 47,50 zł = 202,50 zł
 
-## 6.4. Złoto i srebro
+## 6.4. Złoto i srebro [UP↑](#tof)
 
-# 7. Giełda i inwestowanie <a name="7"></a>
-## 7.1. Giełda i jej funkcje
+# 7. Giełda i inwestowanie <a name="7"></a> [UP↑](#tof)
+## 7.1. Giełda i jej funkcje [UP↑](#tof)
 **Giełda** - miejsce, gdzie w ustalonym czasie dokonywane są transakcje
 kupna/sprzedaży określonych instrumentów (np. samochodów czy owoców). Transakcje
 na giełdach zawierane są zgodnie z obowiązującym regulaminem, między członkami
 giełdy. Do najważniejszych giełd na świecie zalicza się:
 TODO: wymienic i opisac
 
-## 7.2. Indeksy giełdowe
+## 7.2. Indeksy giełdowe [UP↑](#tof)
 **Indeks giełdowy** - wskaźnik, który mierzy wartość grupy akcji notowanych na
 giełdzie. Indeksy giełdowe są używane do oceny ogólnej kondycji rynku lub
 konkretnego segmentu rynku. Składa się z wybranych akcji, które reprezentują
@@ -776,14 +776,14 @@ porównaniu do rynków rozwiniętych. Przykłady rynków wschodzących:
 - Meksyk
 - RPA
 
-## 7.3. Kapitalizacja rynkowa
+## 7.3. Kapitalizacja rynkowa [UP↑](#tof)
 **Kapitalizacja rynkowa** - wartość rynkowa wszystkich akcji danej spółki,
 obliczana jako iloczyn liczby akcji w obiegu i ceny jednej akcji. Jest to
 wskaźnik, który pomaga ocenić wielkość i wartość firmy na rynku. Czyli oblicza
 się to według wzoru: Kapitalizacja rynkowa = Liczba akcji w obiegu ×
 Cena jednej akcji.
 
-## 7.4. WIBOR i EURIBOR
+## 7.4. WIBOR i EURIBOR [UP↑](#tof)
 **WIBOR** - Warsaw Interbank Offered Rate, to stopa procentowa, po jakiej banki
 w Polsce są skłonne pożyczać sobie nawzajem pieniądze na różnych okresach (np.
 1 tydzień, 1 miesiąc, 3 miesiące, 6 miesięcy, 1 rok). Pomaga ustalać
@@ -800,8 +800,8 @@ miesięcy i 1 rok. O jego wartości oparte jest oprocentowanie wielu kredytów i
 depozytów w euro, a także stanowi on wartość referencyjną dla wielu transakcji
 pochodnych.
 
-# 8. Psychologia inwestowania <a name="8"></a>
-## 8.1. Inwestowanie i psychologia
+# 8. Psychologia inwestowania <a name="8"></a> [UP↑](#tof)
+## 8.1. Inwestowanie i psychologia [UP↑](#tof)
 **Heurystyka** - w logice jest to umiejętność wykrywania nowych faktów oraz
 znajdowania związków między faktami, zwłaszcza z wykorzystaniem hipotez. Na
 podstawie istniejącej wiedzy stawia się hipotezy, których nie trzeba udowadniać.
@@ -833,7 +833,7 @@ cechy racjonalnego myślenia:
 - jest wolne od stereotypów,
 - jest nieskażone silnymi emocjami.
 
-## 8.2. Skłonności i błędy w inwestowaniu
+## 8.2. Skłonności i błędy w inwestowaniu [UP↑](#tof)
 Gdybyśmy mieli podajmować każdą decyzję po dogłębnej analizie to bylibyśmy
 zmęczeni i pewnie nie robili nic innego tylko myśleli. Z tego powodu stosujemy
 skróty myślowe - szybko formułowane opinie zwane heurystykami. Często jest to
@@ -922,7 +922,7 @@ nowego.
 stanie rzeczy na skutek awersji do strat. Jeżeli obawiamy się, że podjęcie
 działania może się wiązać z jakąś stratą, to wolimy tego nie robić.
 
-## 8.3. Ryzyko
+## 8.3. Ryzyko [UP↑](#tof)
 Warren Buffet zaproponował dwie reguły:
 1. Nie trać pieniędzy.
 2. Pamiętaj o zasadzie numer 1.
@@ -997,7 +997,7 @@ Skłonność do podejmowania ryzyka oznacza, że chcesz na to ryzyko sobie pozwo
 Jeśli zdolność i skłonność podpowiadają różne rzeczy to warto kierować się
 zasadą, że o ryzyku powinien decydować element, który jest niższy.
 
-# 9. Statystyka w finansach <a name="9"></a>
+# 9. Statystyka w finansach <a name="9"></a> [UP↑](#tof)
 **Miara rozkładu** - używana jest do podsumowania zbioru obserwacji, aby
 przekazać jak najwięcej informacji w możliwie najprostszy sposób. Odnosi się do
 sposobu, w jaki wartości zmiennej losowej są rozłożone w przestrzeni. Miary
@@ -1032,7 +1032,7 @@ obszarze, np.:
 - współczynnik Giniego.
 
 
-#### Średnia arytmetyczna, geometryczna, harmoniczna, kwadratowa
+#### Średnia arytmetyczna, geometryczna, harmoniczna, kwadratowa [UP↑](#tof)
 Średnia arytmetyczna – suma liczb podzielona przez ich liczbę. Używa się jej,
 gdy wszystkie wartości mają równą wagę. Na przykład do obliczania średniej ocen
 ucznia czy średniego wynagrodzenia w firmie.
@@ -1055,16 +1055,14 @@ w kontekście analizy sygnałów, gdzie istotne są odchylenia od  zera - oblicz
 
 ![Image](https://github.com/user-attachments/assets/dbdaca0c-2aa8-4816-b943-8eb48d319c43)
 
-
-#### Mediana
+#### Mediana [UP↑](#tof)
 Mediana - to wartość, która dzieli zbiór danych na dwie równe części. Oznacza
 to, że połowa wartości jest mniejsza od mediany, a połowa jest większa. Mediana
 jest mniej wrażliwa na wartości odstające niż średnia arytmetyczna. Aby znaleźć
 medianę należy posortować wszystkie liczby w kolejności od najmniejszej do
 największej i wyznaczyć wartość, która znajduje się dokładnie w środku.
 
-
-#### Kwantyl
+#### Kwantyl [UP↑](#tof)
 Kwantyl - dostarcza informacji o tym, jak dane są rozłożone i gdzie znajdują się
 ich centralne tendencje. Chodzi o to, że kwantyl to mediana dla równych zakresów
 pewnego zbioru wartości. Czyli dzielimy zbiór wartości i dla każdego zbioru
@@ -1078,14 +1076,12 @@ Później liczymy medianę dla każdego zbioru.
 
 ![Image](https://github.com/user-attachments/assets/7d13a426-7de9-4471-8005-247db2263fd1)
 
-
-#### Dominanta
+#### Dominanta [UP↑](#tof)
 Dominanta - inaczej moda, wskazuje na wartość, która występuje najczęściej w
 danym zbiorze danych. Dominantą może być więcej niż jedna wartość lub może nie
 być jej w ogóle.
 
-
-#### Wariancja
+#### Wariancja [UP↑](#tof)
 Wariancja - opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej
 arytmetycznej tego zbioru. Jest to kwadrat odchylenia standardowego. Pozwala
 zrozumieć, jak bardzo dane są rozproszone wokół średniej. Wysoka wariancja
@@ -1094,8 +1090,7 @@ wskazuje, że wartości są bardziej zbliżone do średniej. Wariancja może by�
 trudniejsza do interpretacji, ponieważ jest wyrażona w jednostkach kwadratowych,
 dlatego lepiej stosować ochylenie standardowe.
 
-
-#### Odchylenie standardowe
+#### Odchylenie standardowe [UP↑](#tof)
 Odchylenie standardowe - wskazuje jak szeroko wartości jakiejś wielkości (na
 przykład wieku, inflacji, kursu walutowego) są rozrzucone wokół jej średniej. Im
 mniejsza wartość odchylenia tym obserwacje są bardziej skupione wokół średniej.
@@ -1105,8 +1100,7 @@ czyni je bardziej intuicyjnym.
 
 ![Image](https://github.com/user-attachments/assets/e0d719fb-6a53-4ecd-8cd4-8c9b59724e22)
 
-
-#### Współczynnik zmienności
+#### Współczynnik zmienności [UP↑](#tof)
 Współczynnik zmienności - wyraża stosunek odchylenia standardowego do średniej
 arytmetycznej. Jest używany do oceny rozproszenia danych w stosunku do ich
 średniej, co pozwala na porównanie zmienności różnych zbiorów danych, nawet
@@ -1115,8 +1109,7 @@ wyrażany w procentach.
 
 ![Image](https://github.com/user-attachments/assets/113db493-f551-4bf3-ad25-bc5dbb847174)
 
-
-#### Współczynnik asymetrii
+#### Współczynnik asymetrii [UP↑](#tof)
 Współczynnik asymetrii - inaczje współczynnik skośności. Mierzy, w jakim stopniu
 rozkład danych jest asymetryczny w stosunku do średniej. Może przyjmować różne
 wartości:
@@ -1126,18 +1119,16 @@ rozkładu jest dłuższy po stronie wyższych wartości,
 - skośność ujemna - rozkład jest przesunięty w lewo, co oznacza, że ogon
 rozkładu jest dłuższy po stronie niższych wartości.
 
-
 ![Image](https://github.com/user-attachments/assets/31ea51d5-e97f-4ed4-a3eb-15cfa7a8ac30)
 
-
-#### Kurtoza
+#### Kurtoza [UP↑](#tof)
 Kurtoza - opisuje kształt rozkładu danych, a szczególnie jego "spiczastość" lub
 "płaskość" w porównaniu do rozkładu normalnego.
 
 ![Image](https://github.com/user-attachments/assets/3219ab74-7e47-4154-9043-4278cb6c307f)
 
 
-#### Rozkład normalny
+#### Rozkład normalny [UP↑](#tof)
 Rozkład normalny (inaczej nazywany rozkładem Gaussa) - jest to rozkład
 prawdopodobieństwa. Wykres funkcji tego rozkładu jest krzywą w kształcie dzwonu
 (tak zwaną krzywą dzwonową).
@@ -1195,8 +1186,7 @@ wykres:
 
 ![Image](https://github.com/user-attachments/assets/74467474-a2ed-4d8b-a4ea-3b831678288b)
 
-
-#### Rozkład nienormalny
+#### Rozkład nienormalny [UP↑](#tof)
 Należy pamiętać, że rozkład normalny jest dużym uproszczeniem. W rzeczywistości
 mogą pojawiać się rzadko wartości ekstremalne, które dalekie są od średniej.
 Przykładem mogą być stopy zwrotu z różnych aktywów, ich rozkłady normalne
@@ -1229,10 +1219,10 @@ występują z mniejszą częstotliwością, ale nadal występują... Przykład:
 
 ![Image](https://github.com/user-attachments/assets/e8e82b8d-7d96-428e-b31e-46bc149f3ac9)
 
-## 9.1. Rola statystyki w analizie finansowej
-## 9.2. Narzędzia statystyczne w inwestowaniu
+## 9.1. Rola statystyki w analizie finansowej [UP↑](#tof)
+## 9.2. Narzędzia statystyczne w inwestowaniu [UP↑](#tof)
 
-# 10. Poduszka finansowa <a name="10"></a>
+# 10. Poduszka finansowa <a name="10"></a> [UP↑](#tof)
 Jej założeniem (według autora) jest łatwy i szybki dostęp do pieniędzy w niej
 zgromadzonych. Nie powinno to przkraczać kilku dni. Minimalne pieniądze w niej
 zgromadzone powinny być sumą naszych półrocznych wydatków. Więc jeżeli wydajemy
@@ -1243,10 +1233,10 @@ Skład finansowej poduszki bezpieczeństwa wg. autora: <br/>
 - 25% lokaty/konta oszczędnościowe,
 - 75% Detaliczne obligacje indeksowane inflacją.
 
-## 10.1. Znaczenie poduszki finansowej
-## 10.2. Jak budować poduszkę finansową
-## 10.3. Krótkoterminowy portfel finansowy
-## 10.4. Długoterminowy portfel finansowy
+## 10.1. Znaczenie poduszki finansowej [UP↑](#tof)
+## 10.2. Jak budować poduszkę finansową [UP↑](#tof)
+## 10.3. Krótkoterminowy portfel finansowy [UP↑](#tof)
+## 10.4. Długoterminowy portfel finansowy [UP↑](#tof)
 Pieniądze tutaj zgromadzone nie muszą być tak łatwo dostępne jak w poduszczce
 finansowej. Skład długoterminowego portfela finansowego wg autora: <br/>
 - 20% obligacje skarbowe notowane na rynkach,
