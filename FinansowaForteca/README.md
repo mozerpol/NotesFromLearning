@@ -116,9 +116,9 @@ kraju. <br/>
 Wzrost gospodarczy to po prostu procentowy przyrost PKB w stosunku do roku
 poprzedniego. <br/>
 Istnieją trzy **metody obliczania wartości PKB**:
-1. **Metoda wydatkowa** (ang. expenditure approach) - polega na zliczaniu 
-wszystkich wydatków koncowych w gospodarce. Można to porównać do zliczania 
-wszystkich pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od 
+1. **Metoda wydatkowa** (ang. expenditure approach) - polega na zliczaniu
+wszystkich wydatków koncowych w gospodarce. Można to porównać do zliczania
+wszystkich pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od
 strony popytowej oblicza się według następującego wzoru: <br/>
 PKB = konsumpcja (wydatki gospodarstw domowych) + inwestycje + wydatki rządowe +
 eksport netto (eksport - import). <br/> <br/>
@@ -140,8 +140,8 @@ tym wyższe PKB.
 źródła dochodów, które generują ludzie i firmy. Jej główne składniki to:
 wynagrodzenia, zyski firm i podatki. Wzór: <br/>
 PKB = dochody z pracy + dochody z kapitału + dochody państwa + amortyzacja.
-3. **Metoda produkcyjna** (ang. production approach) - oblicza się odejmując 
-wartość wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr 
+3. **Metoda produkcyjna** (ang. production approach) - oblicza się odejmując
+wartość wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr
 i usług zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według
 następującego wzoru: <br/>
 PKB = produkcja globalna kraju – zużycie pośrednie = suma wartości dodanej ze
@@ -380,9 +380,9 @@ Zależność opłacalności minimalnego oprocentowania lokaty od inflacji:
 ## 5.1. Spółka akcyjna [UP↑](#tof)
 **Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
 w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest
-podzielony na akcje (opisane później). Akcjonariusze, którzy posiadają te akcje, 
-są współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki 
-jest ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne 
+podzielony na akcje (opisane później). Akcjonariusze, którzy posiadają te akcje,
+są współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki
+jest ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne
 działają obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
 - Kapitał zakładowy - spółka akcyjna musi posiadać określony kapitał zakładowy,
 który jest zawsze podzielony na akcje. Wysokość kapitału zakładowego różni się
@@ -586,7 +586,7 @@ ryzykiem niewypłacalności.
 - Charakterystyka: Oprocentowanie jest dostosowywane do wskaźnika inflacji, co
 chroni inwestorów przed spadkiem wartości nabywczej ich inwestycji.
 
-**Stopy procentowe** odgrywają kluczową rolę w cenach obligacji. Oto jak to 
+**Stopy procentowe** odgrywają kluczową rolę w cenach obligacji. Oto jak to
 działa:
 1. Ustalanie stopy kuponowej: Kiedy obligacja jest emitowana, ustalana jest
 stopa kuponowa, która określa, ile odsetek inwestorzy otrzymają w zamian za
