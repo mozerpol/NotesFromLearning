@@ -115,14 +115,14 @@ możliwości. PKB pomaga zrozumieć, jak dobrze radzi sobie gospodarka danego
 kraju. <br/>
 Wzrost gospodarczy to po prostu procentowy przyrost PKB w stosunku do roku
 poprzedniego. <br/>
-Istnieją trzy metody obliczania wartości PKB:
-1. Metoda wydatkowa (ang. expenditure approach) - polega na zliczaniu wszystkich
-wydatków koncowych w gospodarce. Można to porównać do zliczania wszystkich
-pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od strony
-popytowej oblicza się według następującego wzoru: <br/>
+Istnieją trzy **metody obliczania wartości PKB**:
+1. **Metoda wydatkowa** (ang. expenditure approach) - polega na zliczaniu 
+wszystkich wydatków koncowych w gospodarce. Można to porównać do zliczania 
+wszystkich pieniędzy, które ludzie i firmy wydają na różne rzeczy. Zatem PKB od 
+strony popytowej oblicza się według następującego wzoru: <br/>
 PKB = konsumpcja (wydatki gospodarstw domowych) + inwestycje + wydatki rządowe +
-eksport netto (eksport - import). <br/>
-**Wydatki koncowe** to wszystkie wydatki, które są dokonywane na dobra i usługi,
+eksport netto (eksport - import). <br/> <br/>
+Wydatki koncowe to wszystkie wydatki, które są dokonywane na dobra i usługi,
 które są ostatecznie konsumowane przez ludzi, firmy lub rząd. Na przyklad:
 - wydatki konsumpcyjne - to pieniądze, które gospodarstwa domowe wydają na
 codzienne zakupy, takie jak jedzenie, ubrania, usługi (np. fryzjer).
@@ -136,13 +136,13 @@ takie jak edukacja, zdrowie, infrastruktura, socjal (np. budowa dróg, mostów,
 Wydatki końcowe są ważne, ponieważ pokazują, jak pieniądze krążą w gospodarce i
 jak są wykorzystywane do zakupu dóbr i usług. Im wyższe wydatki końcowe,
 tym wyższe PKB.
-2. Metoda dochodowa (ang. income approach) - w tej metodzie zliczamy różne
+2. **Metoda dochodowa** (ang. income approach) - w tej metodzie zliczamy różne
 źródła dochodów, które generują ludzie i firmy. Jej główne składniki to:
 wynagrodzenia, zyski firm i podatki. Wzór: <br/>
 PKB = dochody z pracy + dochody z kapitału + dochody państwa + amortyzacja.
-3. Metoda produkcyjna (ang. production approach) - oblicza się odejmując wartość
-wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr i usług
-zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według
+3. **Metoda produkcyjna** (ang. production approach) - oblicza się odejmując 
+wartość wytworzonych usług i dóbr finalnych od produkcji całkowitej wartość dóbr 
+i usług zużytych do tej produkcji. PKB od strony produkcyjnej oblicza się według
 następującego wzoru: <br/>
 PKB = produkcja globalna kraju – zużycie pośrednie = suma wartości dodanej ze
 wszystkich gałęzi gospodarki krajowej.
@@ -220,7 +220,7 @@ następnie faza ożywienia oraz rozkwitu:
 
 ![Image](https://github.com/user-attachments/assets/470b9748-f777-4e27-b4cb-f9004b161229)
 
-Opis poszczególnych faz:
+**Opis poszczególnych faz**:
 - Faza depresji - to najniższy punkt cyklu gospodarczego, charakteryzujący się
 długotrwałym spadkiem aktywności gospodarczej, wysokim bezrobociem i niskim
 poziomem produkcji.
@@ -232,7 +232,7 @@ na korzystnym poziomie, z ewentualnymi, drobnymi zmianami.
 prowadzić do recesji. Maleje produkcja, co prowadzi do zahamowania inflacji i
 spadku cen akcji na giełdach.
 
-Terminy związane z cyklem gospodarczym:
+**Terminy związane z cyklem gospodarczym**:
 - Przegrzanie - to sytuacja, w której gospodarka rośnie zbyt szybko, co prowadzi
 do inflacji, wzrostu cen i nadmiernego popytu. Może to wystąpić w fazie
 rozkwitu.
@@ -380,10 +380,10 @@ Zależność opłacalności minimalnego oprocentowania lokaty od inflacji:
 ## 5.1. Spółka akcyjna [UP↑](#tof)
 **Spółka akcyjna** (ang. *joint-stock company*) - w skrócie SA lub S.A. to forma
 w gospodarce wolnorynkowej przedsiębiorstwa, w której kapitał zakładowy jest
-podzielony na akcje. Akcjonariusze, którzy posiadają te akcje, są
-współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki jest
-ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne działają
-obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
+podzielony na akcje (opisane później). Akcjonariusze, którzy posiadają te akcje, 
+są współwłaścicielami spółki, ale ich odpowiedzialność za zobowiązania spółki 
+jest ograniczona do wysokości wniesionych wkładów. W Polsce spółki akcyjne 
+działają obecnie na podstawie Kodeksu spółek handlowych. Cechy spółki akcyjnej:
 - Kapitał zakładowy - spółka akcyjna musi posiadać określony kapitał zakładowy,
 który jest zawsze podzielony na akcje. Wysokość kapitału zakładowego różni się
 w zależności od kraju. W polsce to 5000 pln. Generalnie właściciel spółki może
@@ -442,7 +442,7 @@ wypłacie dywidend.
 Posiadanie akcji wiąże się z wieloma prawami (zwanymi prawami akcjonariusza),
 które mogą się różnić w zależności od rodzaju akcji (zwykłe, uprzywilejowane)
 oraz przepisów w danym kraju. Generalnie ich zasada polega na tym, aby zapewnić
-akcjonariuszom ochronę ich kapitału. Niektóre prawa:
+akcjonariuszom ochronę ich kapitału. Niektóre **prawa akcjonariuszy**:
 1. Prawo do zysku (dywidendy) - akcjonariusze mają prawo do udziału w zyskach
 spółki w formie dywidendy, jeśli spółka zdecyduje się ją wypłacić.
 2. Prawo do głosu - akcjonariusze mają prawo do głosowania na walnych
@@ -479,7 +479,7 @@ głównych kategorii:
 - fundusze inwestycyjne,
 - opcje i kontrakty terminowe.
 
-### 6.1.1. Obligacje i ich rodzaje [UP↑](#tof)
+### 6.1.1. Obligacje, ich rodzaje i wpływ stóp procentowych [UP↑](#tof)
 **Obligacja** to jakby umowa, w której pożyczasz pieniądze komuś (np. rządowi
 lub firmie), a oni obiecują oddać ci te pieniądze później i płacić ci za to
 odsetki. <br/>
@@ -520,7 +520,7 @@ wykupi się w kwietniu 2025 roku. Różnice między TS, WZ i OS dotyczą główn
 terminu wykupu, sposobu oprocentowania oraz grupy docelowej inwestorów.
 Obligacje wieczyste to instrument finansowy dość rzadko spotykany.
 
-Można też kupić obligacje innych krajów np. niemieckie. Rodzaje obligacji
+Można też kupić **obligacje innych krajów** np. niemieckie. Rodzaje obligacji
 niemieckich:
 - Bundesanleihen: To długoterminowe obligacje skarbowe emitowane przez rząd
 niemiecki. Mają zazwyczaj okres wykupu od 10 do 30 lat i oferują stałe
@@ -586,7 +586,8 @@ ryzykiem niewypłacalności.
 - Charakterystyka: Oprocentowanie jest dostosowywane do wskaźnika inflacji, co
 chroni inwestorów przed spadkiem wartości nabywczej ich inwestycji.
 
-Stopy procentowe odgrywają kluczową rolę w cenach obligacji. Oto jak to działa:
+**Stopy procentowe** odgrywają kluczową rolę w cenach obligacji. Oto jak to 
+działa:
 1. Ustalanie stopy kuponowej: Kiedy obligacja jest emitowana, ustalana jest
 stopa kuponowa, która określa, ile odsetek inwestorzy otrzymają w zamian za
 pożyczkę. Na przykład, jeśli obligacja ma wartość nominalną 1000 zł i stopę
