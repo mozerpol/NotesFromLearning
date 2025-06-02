@@ -31,7 +31,7 @@ Modify Debug option.
 # 2. Timers
 ## 2.1. Set timers
 How to calculate prescaler and counter period? <br/>
-Timer4 is connected to APB1 bus (screen taken from datasheet for STM32F446xC/E - 
+Timer4 is connected to APB1 bus (screen taken from datasheet for STM32F446xC/E -
 Arm Cortex-M4):
 
 ![Image](https://github.com/user-attachments/assets/069cd9c7-e27b-4506-a4fb-f9e827eee95f)
@@ -40,7 +40,7 @@ So, look on the Clock Configuration tab:
 
 ![Image](https://github.com/user-attachments/assets/f4a4a557-7cda-4121-a9fb-52483d2fdc8f)
 
-Clock source is HSI (it's internal clokc), HSE cannot be selected coz it comes 
+Clock source is HSI (it's internal clokc), HSE cannot be selected coz it comes
 from an external crystal which the dev board doesn't have. In Clock Config tab
 APB1 Timer clocks is set to 90 MHz. So... <br/>
 90 MHz = 90 000 000 Hz <br/>
@@ -54,7 +54,7 @@ If I need 0.1 HZ (it's 10 sec) then: <br/>
 (90 000 000 / 45000-1) / 20000-1 = 0.1
 
 ## 2.2. TIM4
-Set tick Internal Clock, modify Prescaler and Coutner Period. Parameter 
+Set tick Internal Clock, modify Prescaler and Coutner Period. Parameter
 Settings:
 
 ![Image](https://github.com/user-attachments/assets/6162e7d4-6140-4fb3-a6ec-8f56628cf207)
