@@ -1,33 +1,36 @@
 # Pinout & Configuration tab
-## 1. Edit GPIO tab
-### 1.1. Set LD2, it's connected to PA5 and also edit NVIC tab:
+
+# 1. System Core
+## 1.2. Set LD2, it's connected to PA5
 
 ![Image](https://github.com/user-attachments/assets/72c46a01-cfe9-4ded-b5c9-ad71786c103f)
 
+### 1.2.1. Edit GPIO tab and also edit NVIC tab:
+
 ![Image](https://github.com/user-attachments/assets/5d9f2fd5-f7b2-42d3-b861-e3eab0de5bb1)
 
-### 1.2. Set B1 USER button, it's connected to PC13
+## 1.2. Set B1 USER button, it's connected to PC13
 
 ![Image](https://github.com/user-attachments/assets/1667ca12-90fb-4efb-9fb0-2021e464cf14)
 
-## 2. Edit NVIC tab
+## 1.3. Edit NVIC tab
 
 ![Image](https://github.com/user-attachments/assets/1697d1d0-37ae-4745-8660-ec1ada2f5d43)
 
-## 3. Edit RCC tab
+## 1.3. Edit RCC tab
 Modify HSE option, but I'm not thinks so it's important, coz I'm not using HSE
 in this project.
 
 ![Image](https://github.com/user-attachments/assets/06ade53b-e249-4f52-814a-4395b6a30e45)
 
-## 4. Edit SYS tab
+# 1.4. Edit SYS tab
 Modify Debug option.
 
 ![Image](https://github.com/user-attachments/assets/f905a0c9-334c-4695-aad9-2043cf4c740f)
 
-## 5. Set timers
-Set tick Internal Clock, modify Prescaler and Coutner Period. How to calculate
-prescaler and counter period? <br/>
+# 2. Timers
+## 2.1. Set timers
+How to calculate prescaler and counter period? <br/>
 Timer4 is connected to APB1 bus (screen taken from datasheet for STM32F446xC/E - 
 Arm Cortex-M4):
 
@@ -50,10 +53,21 @@ If I need 0.1 HZ (it's 10 sec) then: <br/>
 (APB1 bus clock / prescaler-1 ) / counter period-1 <br/>
 (90 000 000 / 45000-1) / 20000-1 = 0.1
 
+## 2.2. TIM4
+Set tick Internal Clock, modify Prescaler and Coutner Period. Parameter 
+Settings:
+
 ![Image](https://github.com/user-attachments/assets/6162e7d4-6140-4fb3-a6ec-8f56628cf207)
 
-### 5.1. TIM4
-## 6. Set connectivity
-### 6.1. USART2
+NVIC Settings:
+
+![Image](https://github.com/user-attachments/assets/5439fd72-c578-415b-afc0-fa476d436597)
+
+# 3. Connectivity
+## 3.1. USART2
+
+![Image](https://github.com/user-attachments/assets/4b6c4850-a05a-4225-a727-7ed6f3038dad)
 
 # Clock Configutation tab
+
+![Image](https://github.com/user-attachments/assets/7e21c0c1-9db3-433a-a4fa-6f17b08ee4d8)
