@@ -1,7 +1,9 @@
 # Pinout & Configuration tab
+___
 
 # 1. System Core
 ## 1.2. Set LD2, it's connected to PA5
+Why PA5? Because it's connected on board to user led LD2.
 
 ![Image](https://github.com/user-attachments/assets/72c46a01-cfe9-4ded-b5c9-ad71786c103f)
 
@@ -10,6 +12,7 @@
 ![Image](https://github.com/user-attachments/assets/5d9f2fd5-f7b2-42d3-b861-e3eab0de5bb1)
 
 ## 1.2. Set B1 USER button, it's connected to PC13
+Why PC13? Because it's connected on board to user button.
 
 ![Image](https://github.com/user-attachments/assets/1667ca12-90fb-4efb-9fb0-2021e464cf14)
 
@@ -65,9 +68,13 @@ NVIC Settings:
 
 # 3. Connectivity
 ## 3.1. USART2
+From datasheet of Nucleo board *The USART2 interface available on PA2 and PA3 of
+the STM32 microcontroller can be connected to ST-LINK MCU*, it means that
+USART2 shoudl be selected.
 
 ![Image](https://github.com/user-attachments/assets/4b6c4850-a05a-4225-a727-7ed6f3038dad)
 
 # Clock Configutation tab
+___
 
 ![Image](https://github.com/user-attachments/assets/7e21c0c1-9db3-433a-a4fa-6f17b08ee4d8)
