@@ -6,7 +6,8 @@ Playlist:
 https://www.youtube.com/watch?v=EZqwBuRpdns&list=PLVfOnriB1RjWT_fBzzqsrNaZRPnDgboNI
 
 Folders content:
-1. UART, button interrupt, timer interrupt <br/>
+1. UART, button interrupt, timer interrupt, LED <br/>
 Video numbers: #1, #2, #3, #4, #5, #6, #7, #8
 
-2. PWM
+2. PWM, UART, LED
+Video numbers: #9, #10

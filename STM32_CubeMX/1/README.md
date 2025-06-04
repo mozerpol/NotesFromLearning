@@ -1,24 +1,19 @@
 # Pinout & Configuration tab
 ___
 
+Firstly open CubeIDE and create a new project with a right MCU. Save and then
+open CubeMX. In CubeMX follow with below steps.
+
 # 1. System Core
 ## 1.2. Set LD2, it's connected to PA5
 Why PA5? Because it's connected on board to user led LD2.
 
 ![Image](https://github.com/user-attachments/assets/72c46a01-cfe9-4ded-b5c9-ad71786c103f)
 
-### 1.2.1. Edit GPIO tab and also edit NVIC tab:
-
-![Image](https://github.com/user-attachments/assets/5d9f2fd5-f7b2-42d3-b861-e3eab0de5bb1)
-
 ## 1.2. Set B1 USER button, it's connected to PC13
 Why PC13? Because it's connected on board to user button.
 
 ![Image](https://github.com/user-attachments/assets/1667ca12-90fb-4efb-9fb0-2021e464cf14)
-
-## 1.3. Edit NVIC tab
-
-![Image](https://github.com/user-attachments/assets/1697d1d0-37ae-4745-8660-ec1ada2f5d43)
 
 ## 1.3. Edit RCC tab
 Modify HSE option, but I'm not thinks so it's important, coz I'm not using HSE
@@ -65,6 +60,12 @@ Settings:
 NVIC Settings:
 
 ![Image](https://github.com/user-attachments/assets/5439fd72-c578-415b-afc0-fa476d436597)
+
+### 2.2.1. Edit NVIC tab:
+
+![Image](https://github.com/user-attachments/assets/5d9f2fd5-f7b2-42d3-b861-e3eab0de5bb1)
+
+![Image](https://github.com/user-attachments/assets/1697d1d0-37ae-4745-8660-ec1ada2f5d43)
 
 # 3. Connectivity
 ## 3.1. USART2
