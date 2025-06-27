@@ -9,5 +9,8 @@ Folders content:
 1. UART, button interrupt, timer interrupt, LED <br/>
 Video numbers: #1, #2, #3, #4, #5, #6, #7, #8
 
-2. PWM, UART, LED
+2. PWM, UART, LED <br/>
 Video numbers: #9, #10
+
+3. DAC with DMA <br/>
+Video number: #15
