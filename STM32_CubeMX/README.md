@@ -14,3 +14,11 @@ Video numbers: #9, #10
 
 3. DAC with DMA <br/>
 Video number: #15
+
+4. UART using DMA or interrupts <br/>
+Video number: #16 <br/>
+For me, this episode was not sufficient, so I used another one to describe UART, 
+link to yt: <br/>
+https://www.youtube.com/playlist?list=PLfIJKC1ud8gjmw-l5eDYfzzX5JI19lwhx <br/>
+Link to article: <br/>
+https://controllerstech.com/stm32-uart-2-use-interrupt-dma-to-transmit-data/#info_box
