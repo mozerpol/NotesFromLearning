@@ -23,6 +23,7 @@
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart2_tx;
+DMA_HandleTypeDef hdma_usart2_rx;
 
 /* USER CODE BEGIN PV */
 /* USER CODE END PV */
@@ -38,18 +39,26 @@ static void MX_USART2_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-#define TxBuf_SIZE 12 // Make sure the size is sufficient
+#define TX_BUFF_SIZE 12 // Make sure the size is sufficient
+#define RX_BUFF_SIZE 12
 
-uint8_t TxBuf[TxBuf_SIZE] = "ala ma kota\n";
-uint8_t isSent = 1;
+uint8_t tx_buff[TX_BUFF_SIZE] = "ala ma kota\n";
+uint8_t rx_buff[RX_BUFF_SIZE] = "kot ma ale\n";
+uint8_t is_sent_flag = 1;
 
 
 // The callback function is called automatically by the system interrupt when
 // the UART data transfer is successful.
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
-	isSent = 1; // Variable is indicating that the data has been transferred
-	strcpy((char *)TxBuf, "a new text\n"); // Casting to char*, copy text to TxBuf
+	is_sent_flag = 1; // Flag is indicating that the data has been transferred
+
+	// To modify value of tx_buff:
+	//strcpy((char *)tx_buff, "a new text\n"); // Casting to char*, copy text to
+	// the tx_buff
+
+	// Assign received text from rx_buff:
+	memcpy(tx_buff, rx_buff, sizeof(rx_buff));
 }
 
 
@@ -85,29 +94,31 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-
-  HAL_UART_Transmit_DMA(&huart2, TxBuf, TxBuf_SIZE);
   /* USER CODE END 2 */
 
-	/* Infinite loop */
-	/* USER CODE BEGIN WHILE */
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
 	while (1)
 	{
 		// Sending data using DMA
-//		if (isSent == 1)
+//		if (is_sent_flag == 1)
 //		{
-//			HAL_UART_Transmit_DMA(&huart2, TxBuf, 12);
-//			isSent = 0;
+//			HAL_UART_Transmit_DMA(&huart2, tx_buff, TX_BUFF_SIZE);
+//			is_sent_flag = 0;
 //		}
 
 		// Sending data using interrupts
-		if (isSent == 1)
+		if (is_sent_flag == 1)
 		{
-			HAL_UART_Transmit_IT(&huart2, TxBuf, 12); // Transfer the data
-			// in the interrupt mode. The function only runs if the previous
-			// data has been transmitted.
-			isSent = 0;
+			HAL_UART_Transmit_IT(&huart2, tx_buff, TX_BUFF_SIZE);
+			is_sent_flag = 0;
 		}
+
+		// Receive data using interrupts:
+		// HAL_UART_Receive_IT(&huart2, rx_buff, RX_BUFF_SIZE);
+
+		// Receive data using DMA:
+		HAL_UART_Receive_DMA(&huart2, rx_buff, RX_BUFF_SIZE);
 		HAL_Delay(500);
 	}
 	
@@ -204,6 +215,9 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Stream5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
   /* DMA1_Stream6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
