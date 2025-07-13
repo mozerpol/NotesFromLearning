@@ -59,6 +59,9 @@ Firstly run Debug, then
 1. Go to SWV Data Trace Timeline Graph and click *Configure trace*:
 <img width="2097" height="588" alt="Image" src="https://github.com/user-attachments/assets/8277fe22-02f8-4df9-9cc6-cec689db6514" />
 
+And Enable Prescaler, enable Comparator 0 and add variable, also enable port 0:
+<img width="1019" height="677" alt="Image" src="https://github.com/user-attachments/assets/1b3614a7-0cbb-4aa9-a8ab-2a64594af43d" />
+
 2. Click on *Start Trace*:
 <img width="362" height="231" alt="Image" src="https://github.com/user-attachments/assets/39114fd1-8076-4660-9c90-5e830a693be0" />
 
