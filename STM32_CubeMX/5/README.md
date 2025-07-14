@@ -54,6 +54,7 @@ ITM_SendChar('T');
 ITM_SendChar('N');
 ITM_SendChar('\n');
 ```
+
 ## 5. Configure SWV Data Trace Timeline Graph
 Firstly run Debug, then
 1. Go to SWV Data Trace Timeline Graph and click *Configure trace*:
@@ -77,3 +78,18 @@ And Enable Prescaler, enable Comparator 0 and add variable, also enable port 0:
 
 3. UART monitor
 <img width="229" height="528" alt="Image" src="https://github.com/user-attachments/assets/4cfac2ff-ea9d-4694-a152-7895411e4769" />
+
+## 6. Pinout & Configuration
+<img width="602" height="580" alt="Image" src="https://github.com/user-attachments/assets/d23b0ddb-3b68-4f2a-b030-6430445d870f" />
+
+### 6.1. GPIO
+<img width="1138" height="364" alt="Image" src="https://github.com/user-attachments/assets/9394ffc7-aab9-4634-a62e-d395e7bf1380" />
+
+### 6.2. NVIC
+<img width="1147" height="437" alt="Image" src="https://github.com/user-attachments/assets/b6bbce0b-ef48-47e5-a3c1-9c0cb9629b6d" />
+
+### 6.3. RCC
+<img width="1139" height="224" alt="Image" src="https://github.com/user-attachments/assets/9821d91f-71dd-496f-8afd-555df1d6d919" />
+
+### 6.4. Connectivity
+<img width="1139" height="300" alt="Image" src="https://github.com/user-attachments/assets/4d3446b6-7beb-4f6d-b38e-446f09e85518" />
