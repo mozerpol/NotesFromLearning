@@ -22,3 +22,6 @@ link to yt: <br/>
 https://www.youtube.com/playlist?list=PLfIJKC1ud8gjmw-l5eDYfzzX5JI19lwhx <br/>
 Link to article: <br/>
 https://controllerstech.com/stm32-uart-2-use-interrupt-dma-to-transmit-data/#info_box
+
+5. Debugging <br/>
+Video numbers: #5 and #17

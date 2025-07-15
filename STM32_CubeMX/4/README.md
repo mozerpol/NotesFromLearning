@@ -1,4 +1,3 @@
-
 For my Nucleo board I have to use USART2.
 
 # 1. Difference in data transmission: DMA vs Interrupts vs Polling
@@ -31,6 +30,8 @@ avoid this task.
 ## 3.1. Connectivity
 ### 3.1.1. USART2
 <img width="1132" height="818" alt="Image" src="https://github.com/user-attachments/assets/d4cf7832-e810-4a1d-be9e-c5ac9ead3366" />
+
+<img width="1143" height="565" alt="Image" src="https://github.com/user-attachments/assets/4808cf68-dab6-4fa7-9097-0e3faab094af" />
 
 # 3. Clock Configuration
 <img width="1138" height="1003" alt="Image" src="https://github.com/user-attachments/assets/2e41da58-dbe2-4bf2-9b60-b5899c1ac016" />

@@ -30,5 +30,5 @@
 ### 4.1. USART2
 <img width="1261" height="953" alt="Image" src="https://github.com/user-attachments/assets/0ed44ad0-9d3a-4864-8ddf-ee93245a4b7a" />
 
-# 2. Clock Configuration
+# 4.2. Clock Configuration
 <img width="1143" height="1002" alt="Image" src="https://github.com/user-attachments/assets/4ffa5321-a3cb-4887-8132-c60f85335339" />
