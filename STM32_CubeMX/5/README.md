@@ -1,3 +1,31 @@
+# Video number 5
+____
+
+## 1. Step Into (F5) vs. Step Over (F6)
+First, click *Debug*. The program will stop at the first statement executed in 
+the *main()*:
+<img width="952" height="592" alt="Image" src="https://github.com/user-attachments/assets/fa6f987c-008a-488f-81c9-f823cc7065a5" />
+
+Clicking *Step Into* ...
+<img width="497" height="116" alt="Image" src="https://github.com/user-attachments/assets/09e07e95-e025-4020-927f-bac59e93fc65" />
+
+... enters to the body of the function pointed to by the arrow:
+<img width="1151" height="451" alt="Image" src="https://github.com/user-attachments/assets/0941eaf7-7dfa-4db5-b47e-067439891aaf" />
+
+Clicking on *Step Over* moves execution arrow between lines inside of the 
+currently running function: 
+<img width="694" height="673" alt="Image" src="https://github.com/user-attachments/assets/a58e0942-7fbe-455a-b632-85f9232db39c" />
+
+## 2. Resume (F8)
+The *Resume* option resumes (pol. *wznawiać*) normal program execution from 
+where it was paused, continuing until the next breakpoint or stop (for example 
+the next breakpoint, program termination, or a manual pause):
+<img width="638" height="305" alt="Image" src="https://github.com/user-attachments/assets/eee7a106-e19a-428c-820b-d05a925d1cce" />
+
+
+# Video number 17
+_____
+
 ## 1. Turn on *debug* option
 1. Go to `Run` -> `Debug Configurations...` -> `Debugger` tab. Set core clock
 for the same which is in *Clock Configuration* tab:
