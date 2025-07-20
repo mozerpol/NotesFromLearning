@@ -25,3 +25,9 @@ https://controllerstech.com/stm32-uart-2-use-interrupt-dma-to-transmit-data/#inf
 
 5. Debugging <br/>
 Video numbers: #5 and #17
+
+6.  Rotary Encoder <br/>
+Video number: #18
+
+7. I2C <br/>
+Video numbers: #20 and #21
