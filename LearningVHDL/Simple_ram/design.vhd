@@ -1,49 +1,45 @@
 library ieee;
-  use ieee.std_logic_1164.all;
-  use ieee.numeric_std.ALL; -- Thanks to this we can use "to_integer"
+   use ieee.std_logic_1164.all;
+
 
 entity simpleram is
-  generic (
-    wordsize    : integer := 8;
-    addresssize : integer := 32;
-    w           : integer := 5
-  );
-  port (
-    clk  : in    std_logic;
-    we   : in    std_logic; -- Write enable
-    re   : in    std_logic; -- Read enable
-    addr : in    std_logic_vector(w - 1 downto 0);
-    data : inout std_logic_vector(7 downto 0)
-  );
+   generic (
+      data_size   : integer := 8;
+      data_depth  : integer := 5
+  ); port (
+      clk      : in std_logic;
+      we       : in std_logic;
+      addr     : in integer range 0 to data_depth - 1;
+      data_in  : in std_logic_vector(data_size - 1 downto 0);
+      data_out : out std_logic_vector(data_size - 1 downto 0)
+   );
 end entity simpleram;
+
 
 architecture rtl of simpleram is
 
-  type mem_type is array (0 to addresssize - 1) of
-  std_logic_vector(wordsize - 1 downto 0);
 
-  signal memory   : mem_type := (others => x"00");
-  signal addr_int : integer := 0;
+  type mem_type is array (0 to data_depth - 1) of
+                                       std_logic_vector(data_size - 1 downto 0);
+  signal memory : mem_type;
+  signal q : std_logic_vector(data_size - 1 downto 0);
 
-  -- We can initialize simple array in a different way, but the result will be
-  -- (i hope) the same:
-  -- signal memory : std_logic_vector(0 to addressize - 1) := (others => '0');
 
 begin
 
-  simpleram_process : process (clk) is
-  begin
 
-    if (clk'event and clk = '1') then
-      if ((re and not(we)) = '1') then
-        data <= memory(to_integer(unsigned(addr)));
-      elsif ((we and not(re)) = '1') then
-        memory(to_integer(unsigned(addr))) <= data;
-      else
-        data <= "ZZZZZZZZ";
+   data_out <= q;
+
+   ram_process : process (clk) is
+   begin
+      if (clk'event and clk = '1') then
+         if (we = '1') then
+            memory(addr) <= data_in;
+         else
+            q <= memory(addr);
+         end if;
       end if;
-    end if;
+  end process ram_process;
 
-  end process simpleram_process;
 
 end architecture rtl;
