@@ -1,0 +1,54 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mozerpol/Documents/git_repos/NotesFromLearning/LearningVHDL/Pointers
+Etestbench
+Z1 w1763560725
+Z2 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8/tmp/nvim.mozerpol/qi42Ng/2/testbench.vhdl
+Z6 F/tmp/nvim.mozerpol/qi42Ng/2/testbench.vhdl
+l0
+L6 1
+V6LDKc^M?aGk3S5]Fo1]b72
+!s100 [f;Q7Zm;`?=VmK_]_3@Ca0
+Z7 OL;C;2021.2;73
+33
+Z8 !s110 1763560725
+!i10b 1
+Z9 !s108 1763560725.000000
+Z10 !s90 -2008|-quiet|-lint|/tmp/nvim.mozerpol/qi42Ng/2/testbench.vhdl|
+!s107 /tmp/nvim.mozerpol/qi42Ng/2/testbench.vhdl|
+!i113 0
+Z11 o-quiet -2008 -lint
+Z12 tExplicit 1 CvgOpt 0
+Atb
+R2
+R3
+R4
+Z13 DEx4 work 9 testbench 0 22 6LDKc^M?aGk3S5]Fo1]b72
+!i122 2
+l65
+Z14 L10 98
+Z15 VBPhQS_JEKnK0mdmQWbRLW2
+Z16 !s100 5fm[`cB4h8<mILCNZF_d12
+R7
+33
+R8
+!i10b 1
+R9
+R10
+Z17 !s107 /tmp/nvim.mozerpol/qi42Ng/2/testbench.vhdl|
+!i113 0
+R11
+R12
