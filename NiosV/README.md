@@ -175,7 +175,10 @@ the following:
 ![Image](https://github.com/user-attachments/assets/36ebc99a-b828-4a1c-8cbd-7b8eed2cc674)
 
 4. *Debbuger* tab, add the generated cfg configuration file with the *-f* flag
-and add commands for GDB: *set arch riscv:rv32* and *set can-use-hw-watchpoints:
+and add commands for GDB: <br/>
+*set mem inaccessible-by-default off* <br/>
+*set arch riscv:rv32* <br/>
+*set can-use-hw-watchpoints 0* <br/>
 
 ![Image](https://github.com/user-attachments/assets/e890f11d-4815-4b67-9ad1-5bb07593bf28)
 
